@@ -1,20 +1,21 @@
-# 项目规矩 · Louvre Before You Go
+# Project rules · Louvre Before You Go
 
-给在这个仓库里工作的 AI 和人看。AGENTS.md 和 CLAUDE.md 内容相同，改一个就同步改另一个。
+For the AI and the people working in this repo. AGENTS.md and CLAUDE.md have the same content; if you change one, change the other too.
 
-1. **每次先读 PRODUCT.md。** 开始任何任务前，先读一遍产品说明，以它为准。
-2. **大改动先给计划。** 新页面、改结构、加依赖、改数据格式这类改动，先写计划，等产品负责人说「可以」再动手。
-3. **只改和任务相关的文件。** 不顺手重构、不顺手改样式；设计上犹豫的地方先问，不要自己改。
-4. **不编造事实。** 艺术史内容每个事实都要有出处，记在 `sources` 里；查不到的写「待补充」。不编造艺术家说过的话。
-5. **需求变了先改 PRODUCT.md。** 先更新产品说明，再改代码。
-6. **每做完一步 commit 并 push。** 提交前自己跑起来检查一遍。
+1. **Read PRODUCT.md first, every time.** Before any task, read the product spec and treat it as the source of truth.
+2. **Plan big changes first.** For changes like a new page, a new structure, a new dependency or a new data format, write a plan and wait for the product owner to say "go" before starting.
+3. **Only change files related to the task.** No drive-by refactors or style tweaks; if a design choice is unclear, ask instead of changing it yourself.
+4. **Never invent facts.** Every art-history fact needs a source, recorded in `sources`; anything you can't find is written as "TBD". Never invent quotes from artists.
+5. **When requirements change, update PRODUCT.md first.** Update the product spec, then change the code.
+6. **Commit and push after each step.** Run it yourself and check it before committing.
+7. **Everything is in English.** Code, content, UI, docs and replies to the product owner.
 
-## 当前范围
+## Current scope
 
-只做 PRODUCT.md 里的 0.5 版本：卢浮宫 5 件作品，每件 1 关，共 25 题，4 个页面。1.0 和之后的一律不做。
+Only version 0.5 from PRODUCT.md: 5 Louvre works, 1 level each, 25 questions in total, 4 pages. Nothing from 1.0 or later.
 
-## 硬性限制
+## Hard limits
 
-- 不接数据库；进度只存在浏览器 localStorage。
-- 运行时不调用任何 AI。
-- 技术栈：Next.js（App Router）+ TypeScript + Tailwind CSS，静态导出，GitHub Actions 发布到 GitHub Pages。
+- No database; progress is stored only in the browser's localStorage.
+- No AI calls at runtime.
+- Stack: Next.js (App Router) + TypeScript + Tailwind CSS, static export, published to GitHub Pages with GitHub Actions.
