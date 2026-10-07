@@ -136,7 +136,8 @@ Louvre Before You Go 是一个「艺术史版的多邻国」网站。你要去�
 
 ### 怎么写
 
-- 像朋友在画前跟你讲故事：用「你」，短句，口语。一段话不超过 60 字。
+- 0.5 的内容用英文写。
+- 像朋友在画前跟你讲故事：用「you」，短句，口语。主线一段不超过 45 个英文单词，支线不超过 40 个，问题不超过 15 个。
 - 一关只讲一件事。宁可讲透一个细节，不要罗列五个知识点。
 - 专业词第一次出现时，用一句大白话解释。
 - 每个事实都要能查到出处，记在这一关的 `sources` 里。有争议的说法，写「一种说法是」。
@@ -150,27 +151,28 @@ Louvre Before You Go 是一个「艺术史版的多邻国」网站。你要去�
 
 ### 数据格式
 
-一件作品一个 JSON 文件。一关是一组节点，每个节点是一段话或一道题，用 `next` 连起来。下面是《蒙娜丽莎》这一关的开头，也是语气的样板：
+一件作品一个 JSON 文件。一关是一组节点，每个节点是一段话或一道题，用 `next` 连起来。下面是《蒙娜丽莎》这一关的开头（取自内容样板的第 1 题），也是语气的样板：
 
 ```json
 {
-  "museum": { "id": "louvre", "name": "卢浮宫", "city": "巴黎" },
+  "museum": { "id": "louvre", "name": "The Louvre", "city": "Paris" },
   "artwork": {
-    "id": "mona-lisa", "title": "蒙娜丽莎", "artist": "列奥纳多·达芬奇", "year": "约 1503–1519",
+    "id": "mona-lisa", "title": "Mona Lisa", "artist": "Leonardo da Vinci", "year": "c. 1503–1519",
     "image": "/images/mona-lisa.jpg", "imageCredit": "Wikimedia Commons · Public Domain"
   },
   "lessons": [{
-    "id": "mona-lisa-1", "order": 1, "title": "她笑了吗", "start": "n1",
+    "id": "mona-lisa-1", "order": 1, "title": "A face that seems to think", "start": "n1",
     "nodes": {
-      "n1": { "type": "story", "text": "先别急着看她的嘴。盯着她的眼睛看几秒，再用余光扫一眼嘴角。", "next": "q1" },
-      "q1": { "type": "question", "text": "这样看，她是在笑，还是没笑？",
-              "choices": [ { "label": "在笑", "next": "b1" }, { "label": "没在笑", "next": "b2" } ] },
-      "b1": { "type": "branch", "text": "很多人都这么觉得。可你直接盯着嘴角看，笑意好像又淡了。", "next": "n2" },
-      "b2": { "type": "branch", "text": "直接盯着嘴角，确实不太像笑。可视线一移开，笑意又回来了。", "next": "n2" },
-      "n2": { "type": "story", "text": "这是达芬奇故意的。他把嘴角和眼角用极薄的颜料一层层叠上去，边缘像烟一样散开，没有一条清楚的线。这种画法叫晕涂法（sfumato）。", "next": "q2" }
+      "n1": { "type": "story", "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.", "next": "q1" },
+      "q1": { "type": "question", "text": "Where did your eye land first?",
+              "choices": [ { "label": "Her eyes", "next": "b1a" }, { "label": "Her mouth", "next": "b1b" }, { "label": "Her hands", "next": "b1c" } ] },
+      "b1a": { "type": "branch", "text": "Most people start there. Her eyes are on you, but her body hasn't finished turning. It's as if she sat down, then turned to hear what you were saying.", "next": "n2" },
+      "b1b": { "type": "branch", "text": "The famous smile. Keep it in mind: in a minute you'll try to find exactly where it starts, and you won't be able to.", "next": "n2" },
+      "b1c": { "type": "branch", "text": "Good eye; few people start there. Her hands rest one on the other, calm and heavy. They'll come back later, because they hide one of Leonardo's techniques.", "next": "n2" },
+      "n2": { "type": "story", "text": "Here's why she feels alive: her face and body don't turn quite the same way. Now try something. Point to the exact spot where the shadow at the corner of her mouth ends.", "next": "q2" }
     },
-    "takeaway": "她的笑似有似无，是因为嘴角没有清楚的线。",
-    "sources": ["待补充：每个事实的出处链接"]
+    "takeaway": "Chiaroscuro makes her solid; sfumato keeps her edges soft. Together they make a face that seems to be thinking.",
+    "sources": ["https://collections.louvre.fr/ark:/53355/cl010062370"]
   }]
 }
 ```
@@ -228,7 +230,7 @@ Louvre Before You Go 是一个「艺术史版的多邻国」网站。你要去�
 | 代码仓库 | GitHub | 用 | 用 |
 | 托管与部署 | GitHub Pages（0.5）→ Vercel（1.0），都是推送代码自动上线 | GitHub Pages | Vercel |
 | 内容 | `content/` 下的 JSON 文件 | 用 | 用脚本导入 Supabase |
-| 语音 | 文字定稿后用中文 TTS 工具离线生成 mp3（如 ElevenLabs 或 OpenAI TTS），全程用同一个声音 | 不用 | 放 Supabase Storage |
+| 语音 | 文字定稿后用英文 TTS 工具离线生成 mp3（如 ElevenLabs 或 OpenAI TTS），全程用同一个声音 | 不用 | 放 Supabase Storage |
 | 进度 | 浏览器 localStorage | 用 | 登录后存 Supabase，未登录仍用 localStorage |
 | 数据库、登录、文件存储 | Supabase | 不用 | 用 |
 | 画作图片 | Wikimedia Commons 公有领域图 | 放 `public/images/` | 放 Supabase Storage |
@@ -334,9 +336,10 @@ Louvre Before You Go 是一个「艺术史版的多邻国」网站。你要去�
 - 正式名字叫什么？（暂定：Louvre Before You Go，以后加其他博物馆时再定总名）
 - 每件作品第一关讲哪个故事？（默认：「五关，五件作品」表里的选题）
 - 5 件镇馆之宝选哪五件？（已定：蒙娜丽莎、米洛的维纳斯、萨莫色雷斯的胜利女神、自由引导人民、梅杜萨之筏）
-- 0.5 的内容用中文还是英文？剧本样板是英文。（待产品负责人确认）
+- 0.5 的内容用中文还是英文？（已定：英文）
+- 字体：现在的 Noto Serif SC / Noto Sans SC 是为中文选的，内容改成英文后要不要换？（待产品负责人确认）
 - 两件雕塑的照片：雕塑照片的版权属于拍摄者，需要找标注 Public Domain 或 CC0 的照片。（待补充）
-- 1.0 的语音用哪个声音？（默认：温和的普通话女声，先生成第一关试听再定）
+- 1.0 的语音用哪个声音？（默认：温和的英文女声，先生成第一关试听再定）
 - 1.0 是否必须登录？（默认：不必须，登录只用来同步进度）
 
 ---
