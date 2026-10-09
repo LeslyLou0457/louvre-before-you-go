@@ -55,11 +55,31 @@ export type StoryNode = {
   voice?: Voice;
 };
 
+/**
+ * Optional correction on a wrong-answer branch, shown as a card under the
+ * branch text: a clear "not quite", why the idea is tempting, what is
+ * actually true, and the evidence that settles it. Never shown in red.
+ */
+export type Correction = {
+  /** "near-miss": a real neighbouring idea; "myth": a popular but wrong idea. Sets the default heading. */
+  kind?: "near-miss" | "myth";
+  /** Short heading in handwriting; defaults from `kind`. */
+  verdict?: string;
+  /** Why the wrong idea is tempting. */
+  tempting: string;
+  /** What is actually true. */
+  truth: string;
+  /** The detail in the work, or the documented fact, that settles it. */
+  evidence: string;
+};
+
 export type BranchNode = {
   type: "branch";
   text: string;
   next?: string;
   voice?: Voice;
+  /** Wrong-answer branches only. */
+  correction?: Correction;
 };
 
 export type Choice = {

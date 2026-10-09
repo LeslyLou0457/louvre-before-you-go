@@ -26,17 +26,17 @@
     {
       "id": "venus-de-milo-1",
       "order": 2,
-      "title": "The missing action",
+      "title": "An old ideal, made new",
       "start": "n1",
       "narrator": "venus",
       "nodes": {
         "n1": {
           "type": "story",
-          "text": "Everyone looks at the missing arms first. Walk round her slowly instead, from the front to the side. She stands just over two metres tall.",
+          "text": "Forget the missing arms for a minute. Walk round her: just over two metres of marble, a goddess bare to the hips, a heavy cloak slipping down her legs. She changes as you move.",
           "voice": {
             "speaker": "venus",
             "kind": "imagined",
-            "text": "Walk round me slowly. I'm a little over two metres of marble, and the name of my sculptor is unknown."
+            "text": "Walk round me slowly. Two metres of Parian marble. And my sculptor's name? Even that is still argued over."
           },
           "next": "q1"
         },
@@ -49,7 +49,7 @@
               "next": "b1a"
             },
             {
-              "label": "The heavy drapery",
+              "label": "The slipping cloak",
               "next": "b1b"
             },
             {
@@ -60,22 +60,22 @@
         },
         "b1a": {
           "type": "branch",
-          "text": "Her chest and belly are carved so gently they read as soft. Notice how much of that softness depends on what sits right below it.",
+          "text": "Her chest and belly are carved soft, with almost no hard edges. The Louvre traces that modelling of flesh, and her hairstyle, back to Praxiteles, the sculptor of the famous Aphrodite of Knidos.",
           "next": "n2"
         },
         "b1b": {
           "type": "branch",
-          "text": "The cloth bunches at her hips and falls in heavy folds. Light runs along the ridges and pools in the hollows.",
+          "text": "The cloak is cut deep on her right side, so its folds throw strong shadows. On her left the carving is broader and flatter, as the archaeologist Rachel Kousser points out.",
           "next": "n2"
         },
         "b1c": {
           "type": "branch",
-          "text": "Everyone's eyes go there. We'll come back to them, because what she was doing with those arms is still an open question.",
+          "text": "Everyone's eye goes there. Hold on to that question of what they were doing: it's one of the longest-running arguments about any statue in the Louvre, and we'll get to it.",
           "next": "n2"
         },
         "n2": {
           "type": "story",
-          "text": "The trick is contrast: smooth skin above, deep-cut cloth below, one stone reading as two materials. Now picture a line across her shoulders, and another across her hips.",
+          "text": "Here's the design trick: smooth skin above, deeply cut cloth below. One stone reads as two materials, and light behaves differently on each. Now picture one line across her shoulders, another across her hips.",
           "next": "q2"
         },
         "q2": {
@@ -95,12 +95,19 @@
         },
         "b2a": {
           "type": "branch",
-          "text": "Look again. Her weight isn't shared evenly between her legs, so her hips tilt one way and her shoulders answer the other way. She's calm, but she's no column.",
+          "text": "Not quite. From the front she looks perfectly upright, but her body is quietly working.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Look again: they tilt",
+            "tempting": "She's calm and still, and calm statues feel symmetrical, like columns. From straight in front, the tilt is easy to miss.",
+            "truth": "One leg takes her weight while the other relaxes, so her hips tip one way and her shoulders answer the other way. That's contrapposto.",
+            "evidence": "The Louvre describes her pose as a spiral: hips, chest and head each turn a little further. Walk to her side and you can watch it happen."
+          },
           "next": "n3"
         },
         "b2b": {
           "type": "branch",
-          "text": "Exactly. One leg bears the weight, the other relaxes, and every part of the body adjusts. Art historians call this contrapposto, roughly \"opposed balance\".",
+          "text": "Exactly. One leg carries the weight, the other relaxes, and the whole body answers: hips tilt, shoulders tilt back. Art historians call it contrapposto, roughly \"counterpose\".",
           "voice": {
             "speaker": "venus",
             "kind": "imagined",
@@ -110,76 +117,119 @@
         },
         "n3": {
           "type": "story",
-          "text": "That's contrapposto: one leg takes the weight and the body answers. Walk to her side and it becomes a slow spiral. Now, something you can't see from here.",
+          "text": "Contrapposto goes back to Classical Greece: Polykleitos's Spear-Bearer, around 450–440 BCE, is the textbook case. It's tension against relaxation, and it makes a statue look as if it could step forward.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "Her sculptor pushes it further. The pose winds up like a spiral, and her proportions are long: her head is about an eighth of her height, a canon the Louvre traces to the sculptor Lysippos. So when was she made?",
           "next": "q3"
         },
         "q3": {
           "type": "question",
-          "text": "Was she carved from one solid block of marble?",
+          "text": "When was she carved?",
           "choices": [
             {
-              "label": "Yes, one block",
+              "label": "Around 430 BCE, Greece's Classical age",
               "next": "b3a"
             },
             {
-              "label": "No, she's assembled",
+              "label": "Around 150–125 BCE",
               "next": "b3b",
               "correct": true
+            },
+            {
+              "label": "Under the Romans, as a copy",
+              "next": "b3c"
             }
           ]
         },
         "b3a": {
           "type": "branch",
-          "text": "That's the romantic image: one genius, one block. In fact she's two main blocks joined at the hips, and her left arm was carved separately and attached.",
-          "voice": {
-            "speaker": "venus",
-            "kind": "imagined",
-            "text": "Not one block. I'm two main blocks, joined at the hips, and my left arm was made separately."
+          "text": "That's exactly what France hoped in 1821. But no: she's later, and the story of why people wanted her older is half the fun.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "The 1821 story, but no",
+            "tempting": "She looks calm and ideal, like Classical gods. And the Louvre's director, Forbin, wanted a work by the hand, or school, of Phidias or Praxiteles.",
+            "truth": "She's Hellenistic: the Louvre dates her to about 150–125 BCE. An artist of that later age looked back at Classical models and remade them.",
+            "evidence": "A base found with her was drawn in 1821 bearing a signature: \"…andros, son of Menides, of Antioch on the Maeander\". Its letter shapes date to about 150–50 BCE."
           },
           "next": "n4"
         },
         "b3b": {
           "type": "branch",
-          "text": "Right. Two main blocks meet at the hips, the join hidden near the folds, and her left arm was made separately too.",
+          "text": "Right. The Louvre dates her to about 150–125 BCE, the Hellenistic period: centuries after the Classical sculptors whose style she seems to quote.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Good instinct, wrong case. Plenty of \"Greek\" statues are Roman copies, but she isn't one.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many famous Greek statues survive only as Roman marble copies of lost originals. The Spear-Bearer you just met is one.",
+            "truth": "She's a Hellenistic Greek work of about 150–125 BCE, found on the island of Melos, not a later Roman copy.",
+            "evidence": "She was found on Melos in 1820 with a signed base naming a sculptor from Antioch on the Maeander, its lettering dated to about 150–50 BCE."
+          },
           "next": "n4"
         },
         "n4": {
           "type": "story",
-          "text": "Ancient sculpture could be a chain of specialists, not one person alone with a stone. Small fixing holes show she once wore a metal headpiece and a bracelet on her right arm.",
+          "text": "So she's Hellenistic, not Classical. Kousser calls her \"a creative, but also deliberately retrospective\" image: a new statue that quotes an older type, the Aphrodite of Capua, then changes the arms and what they hold.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "And that signed base? A drawing shows it fitted to her plinth in 1821. Then it vanished inside the Louvre. Was it hidden because it spoiled the Classical story? Some suspect so. Nobody has proved it.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "My signed base was drawn in 1821, then lost. Whether it truly belonged to me is still argued."
+          },
           "next": "q4"
         },
         "q4": {
           "type": "question",
-          "text": "A goddess of love. Where do you think she first stood?",
+          "text": "What were her arms most likely doing?",
           "choices": [
             {
-              "label": "In a temple of love",
-              "next": "b4a"
+              "label": "Holding up an apple",
+              "next": "b4a",
+              "correct": true
             },
             {
-              "label": "In the city's gymnasium",
-              "next": "b4b",
-              "correct": true
+              "label": "Holding a shield, like her model",
+              "next": "b4b"
             }
           ]
         },
         "b4a": {
           "type": "branch",
-          "text": "That's most people's guess. But archaeologist Rachel Kousser argues for somewhere less expected: the public gymnasium of Melos.",
+          "text": "That's where the evidence points. A left hand holding an apple was found with her in 1820, in the same marble, at the same scale, with the same weathering.",
           "next": "n5"
         },
         "b4b": {
           "type": "branch",
-          "text": "Sharp guess. That's exactly what archaeologist Rachel Kousser argues: the public gymnasium of Melos.",
+          "text": "A clever guess, because her model really did hold one. But the best evidence points somewhere else.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her pose echoes the Aphrodite of Capua type, a goddess shown with a shield. Borrowing the shield too would make sense.",
+            "truth": "The Melos sculptor changed the arms and attributes. The strongest candidate is an apple, held out in her raised left hand.",
+            "evidence": "A left hand holding an apple turned up with her in 1820, matching her marble, scale and weathering. Even so, the exact pose is reconstructed, not known."
+          },
           "next": "n5"
         },
         "n5": {
           "type": "story",
-          "text": "A Greek gymnasium wasn't a gym. It mixed sport, education and civic life, and its users were mostly young men. There, a goddess linked to love and marriage meant something local. It's a strong argument, but still a theory.",
+          "text": "An apple fits twice: it's the prize Aphrodite won in the Judgment of Paris, and the emblem on Melos's coins. Still, not everyone agrees. The scholar Salomon Reinach rejected the hand as work too poor to be hers.",
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "Where did she stand? Witnesses in 1820 described a niche, her in the middle, herms on either side, near an inscription in which a gymnasium official dedicated a hall. Kousser argues she stood in Melos's civic gymnasium, among young men.",
           "voice": {
             "speaker": "venus",
             "kind": "imagined",
-            "text": "Where did I first stand? That isn't known. The gymnasium is a strong argument, but still a theory."
+            "text": "Where did I first stand? A niche, with herms beside me. The gymnasium is a strong argument, but still a theory."
           },
           "next": "q5"
         },
@@ -188,7 +238,7 @@
           "text": "Why didn't the Louvre give her new arms?",
           "choices": [
             {
-              "label": "Nobody knew what she held",
+              "label": "Nobody agreed what she held",
               "next": "b5a"
             },
             {
@@ -200,17 +250,28 @@
         },
         "b5a": {
           "type": "branch",
-          "text": "That's part of the puzzle. A hand holding an apple was found nearby, but the arms are lost. The museum's own reason was different: it decided not to change the nature of the work.",
+          "text": "Fair thinking, and true that nobody agreed. But that's not the reason the Louvre gives.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The arms were argued over from day one, and even now nobody can prove her pose. Leaving them off sounds like the safe choice.",
+            "truth": "Restoring her arms was proposed when she arrived, then dropped \"for fear of changing the nature of the work\", in the Louvre's words.",
+            "evidence": "That's the Louvre's own account of her arrival. The scholar Quatremère de Quincy also argued at the time that the arms should not be restored."
+          },
           "next": "n6"
         },
         "b5b": {
           "type": "branch",
-          "text": "Right. Found on Melos in 1820, she reached the Louvre the next year. The museum considered adding arms, then decided not to change the nature of the work.",
+          "text": "Right. Restoring the arms was proposed when she arrived, then abandoned \"for fear of changing the nature of the work\", as the Louvre puts it.",
           "next": "n6"
         },
         "n6": {
           "type": "story",
-          "text": "Her losses: the left arm, most of the right arm, the left foot. Her hair bun was rejoined, and the tip of her nose is plaster. \"Broken beauty\" is our taste. The lost gesture is the real question.",
+          "text": "Timing made her famous. After Napoleon's defeat, France had to send the Medici Venus back to Florence. She reached the Louvre in 1821 and was hailed in France as better than the statue it had lost.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "Casts spread to Berlin and London. What survives: two blocks joined at the hips, holes for a metal headband and bracelet, a plaster nose tip. What's lost: the arms, the left foot, and the gesture that told her story.",
           "voice": {
             "speaker": "venus",
             "kind": "imagined",
@@ -218,12 +279,16 @@
           }
         }
       },
-      "takeaway": "Contrapposto: one leg carries the weight and the whole body answers. Her missing arms took her story with them.",
+      "takeaway": "Not a Classical original but a Hellenistic remake of one: a spiralling contrapposto, a lost signature, and arms that most likely held an apple.",
       "sources": [
         "https://collections.louvre.fr/ark:/53355/cl010277627",
         "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty",
         "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html",
-        "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf"
+        "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf",
+        "https://www.smithsonianmag.com/arts-culture/base-deception-91910975/",
+        "https://royalacademy.org.uk/art-artists/work-of-art/venus-de-milo",
+        "https://penelope.uchicago.edu/encyclopaedia_romana/miscellanea/venus/venusdemilo.html",
+        "https://smarthistory.org/polykleitos-doryphoros-spear-bearer/"
       ]
     }
   ]

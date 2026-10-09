@@ -75,7 +75,7 @@
         },
         "n2": {
           "type": "story",
-          "text": "Here's why she feels alive: her face and body don't turn quite the same way. Now try something. Point to the exact spot where the shadow at the corner of her mouth ends.",
+          "text": "Here's why she feels alive: her face and body don't turn quite the same way. The three-quarter pose with a landscape behind echoes Flemish portraits, like Memling's. Now try this: point to where the shadow at the corner of her mouth ends.",
           "next": "q2"
         },
         "q2": {
@@ -109,18 +109,30 @@
         },
         "b2b": {
           "type": "branch",
-          "text": "Good instinct, different job. Chiaroscuro builds volume with light and dark, and Leonardo does use it here: look at her knuckles. But it rounds a form; it doesn't dissolve an edge.",
+          "text": "Good instinct, but not quite. Leonardo does use chiaroscuro here; it just does a different job.",
           "voice": {
             "speaker": "leonardo",
             "kind": "imagined",
             "text": "Light and shade give her volume; look at her knuckles. But rounding a form and softening its edge are different jobs."
           },
-          "next": "n3"
+          "next": "n3",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Chiaroscuro, modelling with light and dark, is everywhere in this painting: look how her knuckles and cheeks turn into shadow.",
+            "truth": "Chiaroscuro rounds a form; sfumato dissolves its edges. The missing line at her mouth is sfumato: neighbouring tones melting into each other.",
+            "evidence": "The Louvre describes her sfumato as built from thin glazes of paint, and Leonardo's own treatise advised painting \"without lines\", as the National Gallery notes."
+          }
         },
         "b2c": {
           "type": "branch",
-          "text": "Fair suspicion: the varnish really has yellowed. But the soft edges are a technique, not damage. It's called sfumato: tones melt together so no line can be found.",
-          "next": "n3"
+          "text": "Fair suspicion, but no. The varnish is real, yet it isn't what hides the line.",
+          "next": "n3",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The varnish really has yellowed and thickened over the centuries, so it's natural to blame it for the haze.",
+            "truth": "The soft edges are Leonardo's technique, sfumato, painted on purpose. The varnish only tints the whole surface.",
+            "evidence": "The Louvre's record says her sfumato is built from thin glazes, while the thick yellowed varnish was added after Leonardo's death."
+          }
         },
         "n3": {
           "type": "story",
@@ -144,8 +156,14 @@
         },
         "b3a": {
           "type": "branch",
-          "text": "That's linear perspective: floor tiles and buildings shrinking toward one point. Look again. There are no such lines here. Leonardo used something softer.",
-          "next": "n4"
+          "text": "Not quite. That's a real Renaissance tool, but it isn't the one at work here.",
+          "next": "n4",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Linear perspective, lines converging on a vanishing point, was the great Renaissance invention for showing depth.",
+            "truth": "Here distance comes from air: the further away something is, the paler and softer it gets. That's atmospheric perspective.",
+            "evidence": "There are no floor tiles or buildings to converge. Compare her crisp sleeves with the hazy mountains behind: depth made by colour and focus, not by lines."
+          }
         },
         "b3b": {
           "type": "branch",
@@ -154,7 +172,7 @@
         },
         "n4": {
           "type": "story",
-          "text": "Up close, her sleeves are crisp; far off, the hills soften and cool. That's atmospheric perspective. And the woman? Lisa Gherardini of Florence. Her husband traded in silk and very probably commissioned the portrait for their home.",
+          "text": "Up close, her sleeves are crisp; far off, the hills soften and cool. That's atmospheric perspective. And the woman? Lisa Gherardini of Florence, wife of Francesco del Giocondo, who traded in silk.",
           "voice": {
             "speaker": "leonardo",
             "kind": "quote",
@@ -162,6 +180,11 @@
             "cite": "Leonardo's notebooks, §14, tr. J. P. Richter (1888)",
             "source": "https://www.gutenberg.org/ebooks/5000"
           },
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "How do we know it's her? In 2005 a note turned up in Heidelberg: in October 1503, Agostino Vespucci wrote that Leonardo was painting her portrait. Vasari later said her husband commissioned it.",
           "next": "q4"
         },
         "q4": {
@@ -181,7 +204,7 @@
         },
         "b4a": {
           "type": "branch",
-          "text": "Right. Leonardo held on to it and kept revising it for years. Later it entered the French royal collection. A family portrait became a court treasure.",
+          "text": "Right. Leonardo held on to it and kept revising it for years. A visitor in 1517 linked it to Giuliano de' Medici instead, so who it was really for is still discussed.",
           "voice": {
             "speaker": "leonardo",
             "kind": "imagined",
@@ -191,12 +214,18 @@
         },
         "b4b": {
           "type": "branch",
-          "text": "It was stolen, but four centuries later; hold that thought. What actually happened: Leonardo kept it and kept revising it, and it later entered the French royal collection.",
-          "next": "n5"
+          "text": "It was stolen, but four centuries later; hold that thought. That's not why the family never got it.",
+          "next": "n5",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The 1911 theft is the most famous thing that ever happened to her, so it's the first explanation that comes to mind.",
+            "truth": "Leonardo kept the portrait himself and went on working on it. It then passed to the French king, not to the Giocondo family.",
+            "evidence": "The Louvre says he kept the panel. It very probably went to François I in 1518, when a payment of 2,604 livres was made to Salaì, Leonardo's assistant."
+          }
         },
         "n5": {
           "type": "story",
-          "text": "She wears no jewels. Her status is quiet: a decorated neckline, full sleeves, a veil so thin it nearly disappears. But look at the whole picture now. Everything glows a yellowish brown.",
+          "text": "She wears no jewels; her status is quiet: a decorated neckline, full sleeves, a veil so thin it nearly vanishes. Is the veil a sign of pregnancy? The Louvre thinks probably not. Now step back: everything glows yellowish brown.",
           "next": "q5"
         },
         "q5": {
@@ -216,20 +245,26 @@
         },
         "b5a": {
           "type": "branch",
-          "text": "Not all of it. Varnish added later has aged and yellowed, changing how we read her sky and her clothes. Some of that glow is time, not Leonardo.",
-          "next": "n6"
+          "text": "Not all of it. Some of that glow is time, not Leonardo.",
+          "next": "n6",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The glow is so even and harmonious that it looks like part of the design.",
+            "truth": "Thick layers of varnish, added after Leonardo's death, have oxidised and yellowed, shifting every colour underneath.",
+            "evidence": "The Louvre notes that the yellowed varnish turns the blue of her sky greenish and darkens the lower part of the picture."
+          }
         },
         "b5b": {
           "type": "branch",
-          "text": "Right. Later varnish has yellowed, so we see the sky and her dress through it. The wood has warped and cracked too, which is why she now sits in a case that controls temperature and humidity.",
+          "text": "Right. Later varnish has yellowed, turning her blue sky greenish. The poplar panel has warped too, with a crack running down to her forehead, which is why she sits in a climate-controlled case.",
           "next": "n6"
         },
         "n6": {
           "type": "story",
-          "text": "Time touched her one more way. In 1911, Vincenzo Peruggia, who had worked at the Louvre, stole her; she came back in 1913. The theft put her in the newspapers. The smile is what keeps you looking."
+          "text": "Time touched her one more way. In 1911 Vincenzo Peruggia, a glazier who had worked at the Louvre, stole her; she came back in 1913, more famous than ever. More than a hundred copies exist. The smile keeps you looking."
         }
       },
-      "takeaway": "Chiaroscuro makes her solid; sfumato keeps her edges soft. Together they make a face that seems to be thinking.",
+      "takeaway": "Chiaroscuro makes her solid, sfumato keeps her edges soft, and air pushes the hills away. The rest of her story is Leonardo keeping her, and time yellowing her.",
       "sources": [
         "https://collections.louvre.fr/ark:/53355/cl010062370",
         "https://mini-site.louvre.fr/trimestriel/2019/dossier_pedagogique_leonard/16/",

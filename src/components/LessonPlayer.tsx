@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Artwork from "./Artwork";
+import Correction from "./Correction";
 import MuseumLabel from "./MuseumLabel";
 import ProgressBar from "./ProgressBar";
 import Stage from "./Stage";
@@ -156,6 +157,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
               </span>
             )}
             <p>{node.text}</p>
+            {node.type === "branch" && node.correction && <Correction correction={node.correction} />}
             <span className="btn-primary mt-auto self-end">{node.next ? "Continue →" : "Finish level"}</span>
           </button>
         )}

@@ -32,7 +32,7 @@
       "nodes": {
         "n1": {
           "type": "story",
-          "text": "This canvas is almost a storey high and more than seven metres wide. Bodies lie at the bottom left. At the top right, a man waves a cloth at something far away.",
+          "text": "Nearly five metres high, more than seven wide. The raft's corner points straight at you, low in the middle, as if you could step aboard. Bodies at the bottom left; at the top right, a man waves a cloth.",
           "next": "q1"
         },
         "q1": {
@@ -55,26 +55,31 @@
         },
         "b1a": {
           "type": "branch",
-          "text": "He's at the top of a pyramid of bodies: a Black man waving a cloth toward a ship you can barely see.",
+          "text": "He tops a human ladder: a Black man waving a red and white cloth at a ship you can barely see. Géricault posed him on Joseph, a professional model of Haitian descent.",
           "next": "n2"
         },
         "b1b": {
           "type": "branch",
-          "text": "Bodies lying, hanging, propped up. Some may be dead; others exhausted or unconscious. It's hard to tell them apart, and that difficulty is the weight of the painting.",
+          "text": "Lying, hanging, propped up: some dead, some exhausted, and it's hard to tell which. At the left an older man sits holding a young man's body, possibly his son.",
           "next": "n2"
         },
         "b1c": {
           "type": "branch",
-          "text": "A huge sea, a huge sky, and on the horizon a ship so small it's unsettling. You can see every muscle on the raft. The rescuers may not see them at all.",
+          "text": "A huge sea, a huge sky, and on the horizon a ship so small it's unsettling. That speck is the Argus, the brig that finally found them.",
           "next": "n2"
         },
         "n2": {
           "type": "story",
-          "text": "This really happened. In 1816 the French navy ship Méduse ran aground on the way to Senegal. People were put on a raft, the tow was cut, and they were abandoned. Only fifteen survived.",
+          "text": "This happened. On 2 July 1816 the frigate Méduse, bound for Senegal, ran aground off the West African coast. About 150 people were put on a raft and the tow ropes were cut. After twelve days, fifteen were alive.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "Why a scandal? France's monarchy had just been restored, and the captain owed his command to royal patronage. In November 1817 two survivors, the surgeon Savigny and the engineer Corréard, published their account. The scandal exploded.",
           "voice": {
             "speaker": "gericault",
             "kind": "imagined",
-            "text": "I met two of the survivors, Corréard and Savigny. Their published account had made the wreck a scandal."
+            "text": "I met Savigny and Corréard. They dared to write what happened. After their account, the wreck became a scandal."
           },
           "next": "q2"
         },
@@ -99,7 +104,13 @@
         },
         "b2a": {
           "type": "branch",
-          "text": "Dramatic, but he skipped it. He chose the moment they spot a tiny ship and start waving, before anyone knows if they'll be saved.",
+          "text": "Dramatic, but no. He left the wreck out entirely.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "A ship breaking up is the obvious drama, and his sketchbooks are full of violence: murders, struggles, battles.",
+            "truth": "He painted the raft, not the wreck: the moment the Argus is first seen, before anyone knows whether it will come.",
+            "evidence": "There's no frigate in the picture, only the tiny Argus on the horizon. The real Argus passed by and came back about two hours later."
+          },
           "voice": {
             "speaker": "gericault",
             "kind": "imagined",
@@ -109,12 +120,18 @@
         },
         "b2b": {
           "type": "branch",
-          "text": "He didn't show the rescue as done. He chose the moment just before: a tiny ship, men waving, and no way to tell if help is coming.",
+          "text": "Close, but not quite. He stopped just before the ending.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Argus really did rescue them, and a rescue gives the story a satisfying ending.",
+            "truth": "He painted the moment just before: men waving at a ship that may not have seen them.",
+            "evidence": "The Argus is a speck on the horizon, not alongside the raft. In reality it passed by and only returned about two hours later: hope that couldn't yet be trusted."
+          },
           "next": "n3"
         },
         "b2c": {
           "type": "branch",
-          "text": "That's his choice. A tiny ship on the horizon, men starting to wave, and no way to tell yet whether they'll be saved.",
+          "text": "That's his choice. A tiny ship on the horizon, men starting to wave, and no way to tell yet whether they'll be saved. The real Argus sailed past, then came back two hours later.",
           "voice": {
             "speaker": "gericault",
             "kind": "imagined",
@@ -124,12 +141,17 @@
         },
         "n3": {
           "type": "story",
-          "text": "That uncertainty is the point: the gap between seeing rescue and being rescued. Now trace the shapes. Bodies climb from the bottom left toward the waving man, forming a pyramid.",
+          "text": "Hope you can't trust yet: that's the subject. To get there he made over a hundred studies, interviewed survivors, got a miniature raft from the ship's carpenter, and studied how ships move on the coast.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "He rented a big studio near the Beaujon hospital and borrowed body parts to study the colour of death. Legend says he shaved his head to keep himself indoors; the Louvre's curator says such stories are hard to verify.",
           "next": "q3"
         },
         "q3": {
           "type": "question",
-          "text": "What forms a second triangle beside that pyramid?",
+          "text": "Bodies climb in one pyramid. What forms the second?",
           "choices": [
             {
               "label": "The mast, ropes and sail",
@@ -137,24 +159,30 @@
               "correct": true
             },
             {
-              "label": "The waves",
+              "label": "The big wave",
               "next": "b3b"
             }
           ]
         },
         "b3a": {
           "type": "branch",
-          "text": "Right. Mast, ropes and sail make a second triangle. Side by side, the two make the raft feel held together and pulled apart at once.",
+          "text": "Right. The ropes and sail make a second pyramid, like a tent, and the wave behind echoes the sail's shape. Two pyramids, pulling against each other.",
           "next": "n4"
         },
         "b3b": {
           "type": "branch",
-          "text": "The waves do another job: they make this last scrap of floor feel unsafe. The second triangle is the mast, ropes and sail.",
+          "text": "Good eye, but not quite. The wave echoes the second shape; it isn't the shape.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A huge wave rises at the left, and it really does make a peaked shape against the sky.",
+            "truth": "The second pyramid is the mast with its ropes and sail. The wave behind it repeats the sail's form, like an echo.",
+            "evidence": "Follow the ropes down from the top of the mast to the raft's edges: a tent shape. The Louvre's curator Côme Fabre describes exactly these two pyramids."
+          },
           "next": "n4"
         },
         "n4": {
           "type": "story",
-          "text": "Two triangles: one of bodies rising, one of mast and sail. Low means close to death; high means trying to be seen. Now look at those bodies again.",
+          "text": "Two pyramids: bodies climbing toward hope, and the rigging as a second, steadier peak. Low means close to death; high means trying to be seen. And because the raft tilts toward you, the dying are almost in your space.",
           "next": "q4"
         },
         "q4": {
@@ -174,12 +202,18 @@
         },
         "b4a": {
           "type": "branch",
-          "text": "Yes. Muscular, twisting nudes at this scale belong to the art of heroes and saints; the Louvre links them to Michelangelo. It gave nameless victims public weight.",
+          "text": "Yes. Muscular, twisting nudes at this scale recall the saints and the damned of Michelangelo's Last Judgment. Giving them to nameless victims from the news gave those victims public weight.",
           "next": "n5"
         },
         "b4b": {
           "type": "branch",
-          "text": "He did use survivors' accounts. But the waving man was posed by a professional model, Joseph, not a survivor. And the heroic strength is deliberate.",
+          "text": "He did meet survivors, but no: the bodies you see came from studio models, not from the raft.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He really did interview survivors and research the facts with a reporter's care, so painting them from life sounds right.",
+            "truth": "His figures are posed models and studies, given heroic, muscular bodies on purpose.",
+            "evidence": "The Louvre owns his study for the waving man, painted from \"the model Joseph\". Delacroix posed for the figure lying face down. Neither was on the raft."
+          },
           "voice": {
             "speaker": "gericault",
             "kind": "imagined",
@@ -189,7 +223,12 @@
         },
         "n5": {
           "type": "story",
-          "text": "Heroic bodies, borrowed from paintings of saints and heroes, given to ordinary people from the news. And now look at the colour: the whole painting is very dark.",
+          "text": "Why heroic? Géricault came back from Rome struck by Michelangelo; the Louvre's curator says he wanted to be \"the new Michelangelo\". The waving man's back recalls the ancient Belvedere Torso.",
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "Compare David's Oath of the Horatii: clear light, heroes sacrificing for the state. Here the light is dark and dramatic, like Caravaggio, and the father with his son recalls Dante's Ugolino. Heroism, without a happy ending.",
           "next": "q5"
         },
         "q5": {
@@ -209,29 +248,45 @@
         },
         "b5a": {
           "type": "branch",
-          "text": "Not all of it. As early as 1881, the Louvre worried that the painting kept darkening, and linked it to bituminous materials and the oil medium.",
+          "text": "Not all of it. Some of that darkness was added by time, not by Géricault.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The subject is death and despair, and he really did chase the colour of death, so a dark painting feels intended.",
+            "truth": "Much of the gloom is his drama, but the painting has also darkened since, partly because of the materials he used.",
+            "evidence": "In 1881 a Louvre curator wrote that it was \"blackening more and more\" from bitumen and fatty oils, and urged that an engraving be made quickly."
+          },
           "next": "n6"
         },
         "b5b": {
           "type": "branch",
-          "text": "Right. Louvre records from 1881 already worried about the darkening, linking it to bituminous materials and the oil medium. The concern led to a reproduction print.",
+          "text": "Right. By 1881 a Louvre curator warned it was blackening more and more because of bitumen and fatty oils. The worry led the state to order an engraving of it.",
           "next": "n6"
         },
         "n6": {
           "type": "story",
-          "text": "Nobody commissioned it. Géricault made it for the 1819 Salon, possibly hoping the state would buy; it entered the royal collection only after his death in 1824. There's no goddess here. Survivors have to lift themselves and wave.",
+          "text": "Nobody commissioned it. At the 1819 Salon it was called simply Scene of a Shipwreck, but everyone knew what it meant. Conservative critics were appalled; progressive writers admired its raw power.",
           "voice": {
             "speaker": "gericault",
             "kind": "imagined",
             "text": "Nobody asked me for it. I showed it at the 1819 Salon under a quieter title: Scene of a Shipwreck."
-          }
+          },
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "Readings still divide. The historian Michelet saw France itself sinking; today's Louvre curator warns against that lyrical reading. Others stress the Black figures: the voyage was tied to colonisation and a covert slave trade.",
+          "next": "n6c"
+        },
+        "n6c": {
+          "type": "story",
+          "text": "It toured London and Dublin in 1820–21, unsold. After his death in 1824, it was bought for the Crown at his estate sale for 6,005 francs. There's no goddess here: survivors have to lift themselves and wave."
         }
       },
-      "takeaway": "Géricault painted the moment hope appears but isn't yet real. Two triangles, heroic bodies, and a darkness that is partly time.",
+      "takeaway": "Géricault turned a political scandal into the moment hope appears but can't be trusted: two pyramids, heroic bodies from Michelangelo, and a darkness that is partly time.",
       "sources": [
         "https://collections.louvre.fr/ark:/53355/cl010059199",
-        "https://www.louvre.fr/decouvrir/les-parcours-de-visite/sur-les-pas-de-beyonce-et-de-jay-z/le-radeau-de-la-meduse",
         "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf",
+        "https://smarthistory.org/theodore-gericault-raft-of-the-medusa/",
         "https://collections.louvre.fr/en/ark:/53355/cl010052762",
         "https://arts-graphiques.louvre.fr/detail/oeuvres/0/531367-Le-Radeau-de-la-Meduse"
       ]

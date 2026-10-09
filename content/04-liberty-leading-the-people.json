@@ -32,7 +32,7 @@
       "nodes": {
         "n1": {
           "type": "story",
-          "text": "Smoke, a barricade, and a woman with a flag climbing over fallen bodies, a crowd surging behind her. The canvas is over three metres wide.",
+          "text": "Smoke, a barricade, and a woman with a flag stepping over the dead, a crowd surging behind her. The canvas is over three metres wide. Delacroix painted it in about four months, September to December 1830.",
           "next": "q1"
         },
         "q1": {
@@ -48,33 +48,33 @@
               "next": "b1b"
             },
             {
-              "label": "The boy with the pistol",
+              "label": "The boy with the pistols",
               "next": "b1c"
             }
           ]
         },
         "b1a": {
           "type": "branch",
-          "text": "The flag is the peak of a big triangle whose base is the barricade. Guns, arms and the flagpole cut across it in diagonals: order and momentum at once.",
+          "text": "The flag tops a triangle: Liberty's raised arm and the flagpole form its peak, the barricade its base. Guns, arms and the pole cut across it in diagonals: order and momentum at once.",
           "next": "n2"
         },
         "b1b": {
           "type": "branch",
-          "text": "That's where you're standing: at the barricade's edge, where the dead meet the living. The crowd is about to step into your space.",
+          "text": "That's where you stand: at the barricade's edge. Two dead soldiers and a half-dressed man lie almost at your feet. Delacroix drew this foreground of the dead from Gros and from Géricault's Raft of the Medusa.",
           "next": "n2"
         },
         "b1c": {
           "type": "branch",
-          "text": "He strides forward with a pistol and an ammunition bag. People often call him Gavroche. Keep that name in mind.",
+          "text": "A schoolboy turned fighter, a pistol in each hand and a Royal Guard cartridge pouch. The Louvre says he inspired Gavroche, the street boy in Victor Hugo's Les Misérables.",
           "next": "n2"
         },
         "n2": {
           "type": "story",
-          "text": "However you came in, the picture leads you upward: from the dead in front, through the crowd, to the flag. The force of revolution and its cost arrive at the same moment.",
+          "text": "Every route leads upward: from the dead, through the crowd, to the flag. And the canvas splits on a diagonal: a dark lower half, and a lit upper half where Liberty stands haloed against the light.",
           "voice": {
             "speaker": "delacroix",
             "kind": "imagined",
-            "text": "Feel the rush, then look at the order: the dead, the crowd, the flag. Every line climbs."
+            "text": "Feel the rush, then look at the order: the dead, the crowd, the flag. Every line climbs toward the light."
           },
           "next": "q2"
         },
@@ -90,35 +90,61 @@
               "label": "1830, the July Revolution",
               "next": "b2b",
               "correct": true
+            },
+            {
+              "label": "1848, the February Revolution",
+              "next": "b2c"
             }
           ]
         },
         "b2a": {
           "type": "branch",
-          "text": "That's everyone's first guess, but no. This is July 1830, when Parisians rose up and overthrew King Charles X.",
-          "voice": {
-            "speaker": "delacroix",
-            "kind": "imagined",
-            "text": "Not 1789. This is July 1830, when Paris overthrew Charles X. I signed the canvas that same year."
+          "text": "That's everyone's first guess, but no: this is a later revolution.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "Liberty, the tricolour and the Phrygian cap all look like 1789, the Revolution everyone learns about at school.",
+            "truth": "This is July 1830: three days of street fighting, 27 to 29 July, that drove out King Charles X.",
+            "evidence": "The Louvre's full title is \"The 28th of July 1830. Liberty Leading the People\", and the canvas is signed and dated in red paint, on the right: \"Eug. Delacroix. 1830\"."
           },
           "next": "n3"
         },
         "b2b": {
           "type": "branch",
-          "text": "Right. In July 1830, Parisians overthrew Charles X, and the July Monarchy under Louis-Philippe followed.",
+          "text": "Right. In July 1830, Paris fought for three days and drove out Charles X. The Louvre's full title even names the day: \"The 28th of July 1830\".",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "imagined",
+            "text": "July 1830, not 1789. I began the canvas that September and signed it that same year."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Close in spirit, but no. Paris rose again in 1848; this painting shows the uprising before it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "1848 was another Paris revolution, and this very painting is tied up with that year: it came out of hiding then.",
+            "truth": "It shows July 1830 and was painted that autumn, eighteen years before 1848.",
+            "evidence": "It's signed \"Eug. Delacroix. 1830\". In March 1848, after the new revolution, the state reclaimed it from Delacroix, who had kept it at relatives' since about 1839."
+          },
           "next": "n3"
         },
         "n3": {
           "type": "story",
-          "text": "The July Revolution of 1830, not 1789. Through the smoke on the right you can make out the two towers of Notre-Dame. Now, the woman with the flag.",
+          "text": "July 1830. Charles X issued ordinances against the spirit of the 1814 Charter; Paris fought for three days, the \"Three Glorious Days\". He abdicated, and Louis-Philippe became \"king of the French\".",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "That's why the flag matters. The restored Bourbon kings flew plain royal white. In July 1830 the blue-white-red tricolour came back on the barricades. Look far right, through the smoke: another one flies on Notre-Dame's towers.",
           "next": "q3"
         },
         "q3": {
           "type": "question",
-          "text": "Is she a real woman who fought that day?",
+          "text": "Is the woman with the flag a real fighter?",
           "choices": [
             {
-              "label": "Yes, a real fighter",
+              "label": "Yes, a real woman from that day",
               "next": "b3a"
             },
             {
@@ -130,7 +156,18 @@
         },
         "b3a": {
           "type": "branch",
-          "text": "Nobody can name her, and that's the point. She's Liberty itself, an idea given a body: an allegory.",
+          "text": "Not quite, though it's easy to see why she feels real. She's something else.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "Everyone around her is a recognisable Parisian type in real clothes with real weapons, and she carries a real musket with a bayonet.",
+            "truth": "She's an allegory: an abstract idea, Liberty, given a human body and recognised by her attributes.",
+            "evidence": "Her attributes give her away: the Phrygian cap, an ancient sign of freedom, and the tricolour. Her bare breast and perfect Greek profile come from ancient art, not from the street."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Right. She's Liberty, an idea given a body: an allegory. You know her by the Phrygian cap, an ancient sign of freedom, and the tricolour.",
           "voice": {
             "speaker": "delacroix",
             "kind": "imagined",
@@ -138,66 +175,79 @@
           },
           "next": "n4"
         },
-        "b3b": {
-          "type": "branch",
-          "text": "Right. She's Liberty, an idea given a body: an allegory. You know her by the Phrygian cap and the tricolour flag.",
-          "next": "n4"
-        },
         "n4": {
           "type": "story",
-          "text": "A goddess-like body with a classical profile, yet she walks barefoot over rubble carrying a musket with a bayonet. An ideal stepping into the street.",
+          "text": "That's the shock of the picture: an ancient ideal, bare-breasted with a Greek profile, walking barefoot through a modern street fight. Delacroix had already tried out this antique woman in Greece on the Ruins of Missolonghi, in 1826.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "He changed his mind about her, too. X-rays show her face was first painted from the front, then turned into a perfect profile. A change the artist makes while painting is called a repentir.",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "imagined",
+            "text": "I first set her face towards you, then turned it into profile. A painter's second thought."
+          },
           "next": "q4"
         },
         "q4": {
           "type": "question",
-          "text": "X-rays show Delacroix changed her head. What changed?",
+          "text": "Top hat, waistcoat, hunting gun. Who does the Louvre say he is?",
           "choices": [
             {
-              "label": "Which way she faces",
-              "next": "b4a",
-              "correct": true
+              "label": "A rich gentleman",
+              "next": "b4a"
             },
             {
-              "label": "Her cap",
-              "next": "b4b"
+              "label": "A craftsman or workshop foreman",
+              "next": "b4b",
+              "correct": true
             }
           ]
         },
         "b4a": {
           "type": "branch",
-          "text": "Right. Her face was first more frontal; Delacroix turned it into a profile. An artist's own change of mind like this is called a repentir.",
-          "voice": {
-            "speaker": "delacroix",
-            "kind": "imagined",
-            "text": "I first set her face more towards you, then turned it into profile. A painter's second thought."
+          "text": "That's not how the Louvre reads him, though the top hat makes it a natural guess.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "To us a top hat means a gentleman, and he looks smarter than the man in the beret beside him.",
+            "truth": "The Louvre's teaching dossier reads him as a journeyman, craftsman or workshop foreman, carrying a double-barrelled shotgun. Readings of the crowd's classes do vary.",
+            "evidence": "Look at his red flannel belt, beside the factory worker with a sabre and the kneeling labourer: the dossier reads them as different kinds of working Paris, side by side."
           },
           "next": "n5"
         },
         "b4b": {
           "type": "branch",
-          "text": "The documented change is somewhere else: the direction of her face. It was first more frontal, and Delacroix turned it into a profile. That's called a repentir.",
-          "voice": {
-            "speaker": "delacroix",
-            "kind": "imagined",
-            "text": "I first set her face more towards you, then turned it into profile. A painter's second thought."
-          },
+          "text": "Right. The Louvre's teaching dossier reads him as a journeyman, craftsman or workshop foreman, with a double-barrelled shotgun and a red flannel belt.",
           "next": "n5"
         },
         "n5": {
           "type": "story",
-          "text": "A repentir is the artist's own correction, not a later repaint. Keep that difference in mind. From 2023 to 2024, restorers thinned the painting's yellowed, dirty varnish, and it returned in May 2024.",
+          "text": "Factory worker, craftsman, countryside labourer, schoolboy: Delacroix packs Paris into one surge behind an idea. As Smarthistory puts it, he would have us believe everyone can be a revolutionary. And Delacroix himself?",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "quote",
+            "text": "I have undertaken a modern subject, a barricade, and although I may not have fought for my country, at least I shall have painted for her.",
+            "cite": "Letter to his brother Charles, 28 October 1830 (English translation: Smarthistory)",
+            "source": "https://smarthistory.org/delacroix-liberty-leading-the-people"
+          },
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "Now look at how he paints. The palette is mostly coloured greys. Blue, white and red flicker in small touches all over the canvas, so the whole picture rhymes with the flag. He leaves out green, orange and violet.",
           "next": "q5"
         },
         "q5": {
           "type": "question",
-          "text": "People said Liberty's dress changed colour. Did restorers repaint it?",
+          "text": "Since 2024, Liberty's dress looks different. Did restorers repaint it?",
           "choices": [
             {
-              "label": "Yes, they redesigned it",
+              "label": "Yes, they changed it",
               "next": "b5a"
             },
             {
-              "label": "No, they removed a repaint",
+              "label": "No, they removed a 1949 repaint",
               "next": "b5b",
               "correct": true
             }
@@ -205,35 +255,52 @@
         },
         "b5a": {
           "type": "branch",
-          "text": "The opposite. A 1949 treatment with varnish and orange retouching made the dress read as solid yellow. Removing it revealed Delacroix's grey underlayer with sparse yellow strokes.",
+          "text": "No, it's the opposite. The restorers took paint away; they didn't add a new design.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "After cleaning, her dress went from solid yellow to grey and gold, a change big enough to look like a redesign.",
+            "truth": "Restorers thinned yellowed varnish and removed retouching from 1949. What reappeared is Delacroix's own paint.",
+            "evidence": "The 1949 repaints were very soluble and sat on top. Underneath: Delacroix's grey dress, with yellow laid on densely at the bodice and thinning toward her legs."
+          },
           "next": "n6"
         },
         "b5b": {
           "type": "branch",
-          "text": "Exactly. Orange retouching from 1949 had made the dress look solid yellow. Underneath: a grey layer with sparse yellow strokes, as Delacroix left it.",
+          "text": "Exactly. Orange retouching from 1949 had made the dress read as solid yellow. Underneath: a grey dress with yellow dense at the bodice, thinning toward the legs, as Delacroix left it.",
           "next": "n6"
         },
         "n6": {
           "type": "story",
-          "text": "One more surprise: no king ordered this painting. Delacroix made it on his own, showed it at the 1831 Salon, and the government bought it for 3,000 francs. And Gavroche? Victor Hugo's character came later.",
+          "text": "The cleaning brought back more: a worn shoe at bottom left, lost in the varnish, and the cool overall colour. The Louvre's curator Côme Fabre said the aim was to do justice to the work of \"a colourist of genius\".",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "No king ordered this painting. Delacroix made it on his own and showed it at the 1831 Salon, to mixed reviews. The state bought it for 3,000 francs, then took it down, fearing it would encourage riots.",
+          "next": "n6c"
+        },
+        "n6c": {
+          "type": "story",
+          "text": "Stored, handed back to Delacroix around 1839, reclaimed in 1848, it reached the Louvre only in 1874. One more link: Delacroix had posed for Géricault's Raft of the Medusa, face down among the dying.",
           "voice": {
             "speaker": "delacroix",
-            "kind": "quote",
-            "text": "I have undertaken a modern subject, a barricade, and although I may not have fought for my country, at least I shall have painted for her.",
-            "cite": "Letter to his brother Charles, 28 October 1830 (English translation: Smarthistory)",
-            "source": "https://smarthistory.org/delacroix-liberty-leading-the-people"
+            "kind": "imagined",
+            "text": "I posed for Géricault's raft, face down among the dying. You'll meet that painting next."
           }
         }
       },
-      "takeaway": "1830, not 1789. Liberty is an idea in human form, and a repentir is the artist's own change of mind.",
+      "takeaway": "July 1830, not 1789: an ancient allegory walks into a modern street fight, built on a pyramid and coloured like the flag.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010065872",
         "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
         "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
         "https://mini-site.louvre.fr/trimestriel/2021/Dossier_images_Louvre/245/",
-        "https://presse.louvre.fr/retour-en-salle-de-la-liberte-guidant-le-peuple-restauree/?lang=fr",
         "https://smarthistory.org/delacroix-liberty-leading-the-people",
-        "https://pedagogie.ac-nantes.fr/medias/fichier/1-louvre-la-liberte-guidant-le-peuple-dossier-documentaire-2018_1621952484053-pdf"
+        "https://pedagogie.ac-nantes.fr/medias/fichier/1-louvre-la-liberte-guidant-le-peuple-dossier-documentaire-2018_1621952484053-pdf",
+        "https://www.britannica.com/event/July-Revolution",
+        "https://www.britannica.com/topic/Liberty-Leading-the-People",
+        "https://www.elysee.fr/la-presidence/le-drapeau-francais",
+        "https://smarthistory.org/theodore-gericault-raft-of-the-medusa/"
       ]
     }
   ]

@@ -2,11 +2,13 @@
 // `npm run check-content` (scripts/check-content.ts).
 // Keep this file free of runtime imports so Node can run it directly.
 
-import type { ContentFile, LessonNode, Voice as LessonNodeVoice } from "./types";
+import type { Correction, ContentFile, LessonNode, Voice as LessonNodeVoice } from "./types";
 
 export const QUESTIONS_PER_LEVEL = 5;
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
 export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;
+export const CORRECTION_WORD_LIMITS = { verdict: 6, tempting: 30, truth: 35, evidence: 35 } as const;
+const CORRECTION_KINDS = ["near-miss", "myth"];
 const SPEAKER_KINDS = ["artist", "artwork", "person"];
 
 export type Report = { errors: string[]; warnings: string[] };
@@ -108,6 +110,29 @@ export function validateContent(data: unknown, file: string): Report {
           }
         }
       }
+      const correction = (node as { correction?: unknown }).correction as Correction | undefined;
+      if (correction !== undefined) {
+        if (node.type !== "branch") warn(`${at}: correction only shows on a branch`);
+        if (!correction || typeof correction !== "object") {
+          err(`${at}: correction must be an object`);
+        } else {
+          for (const k of ["tempting", "truth", "evidence"] as const) {
+            if (!isNonEmptyString(correction[k])) err(`${at}: correction.${k} is missing`);
+          }
+          if (correction.verdict !== undefined && !isNonEmptyString(correction.verdict)) {
+            err(`${at}: correction.verdict must be a non-empty string`);
+          }
+          if (correction.kind !== undefined && !CORRECTION_KINDS.includes(correction.kind)) {
+            err(`${at}: correction.kind must be one of ${CORRECTION_KINDS.join(", ")}`);
+          }
+          for (const k of ["verdict", "tempting", "truth", "evidence"] as const) {
+            const v = correction[k];
+            if (isNonEmptyString(v) && words(v) > CORRECTION_WORD_LIMITS[k]) {
+              warn(`${at}: correction.${k} has ${words(v)} words (limit ${CORRECTION_WORD_LIMITS[k]})`);
+            }
+          }
+        }
+      }
       const limit = WORD_LIMITS[node.type];
       if (isNonEmptyString(node.text) && words(node.text) > limit) {
         warn(`${at}: ${words(node.text)} words (limit ${limit})`);
@@ -118,9 +143,21 @@ export function validateContent(data: unknown, file: string): Report {
           err(`${at}: needs 2–3 choices`);
           continue;
         }
+        const hasRight = node.choices.some((c) => c?.correct === true);
         node.choices.forEach((c, ci) => {
           if (!isNonEmptyString(c?.label)) err(`${at}: choice ${ci + 1} has no label`);
-          if (!(c?.next in nodes)) err(`${at}: choice ${ci + 1} next "${c?.next}" is not a node`);
+          if (!(c?.next in nodes)) {
+            err(`${at}: choice ${ci + 1} next "${c?.next}" is not a node`);
+            return;
+          }
+          // A wrong pick should be corrected; a right pick needs no correction.
+          const target = nodes[c.next] as { correction?: unknown };
+          if (hasRight && c.correct !== true && target.correction === undefined) {
+            warn(`${at}: wrong choice ${ci + 1} ("${c.label}") leads to a branch with no correction`);
+          }
+          if (c.correct === true && target.correction !== undefined) {
+            warn(`${at}: right choice ${ci + 1} leads to a branch with a correction`);
+          }
         });
       } else if (node.next === undefined) {
         ends++;

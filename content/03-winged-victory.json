@@ -32,11 +32,11 @@
       "nodes": {
         "n1": {
           "type": "story",
-          "text": "A winged woman leans into the wind above you. The goddess alone is more than three metres tall, and she has no head.",
+          "text": "At the top of a grand staircase, a winged woman leans into the wind. The goddess alone is 3.28 metres tall; with her stone ship, the monument reaches 5.64. Her head and arms are gone.",
           "voice": {
             "speaker": "victory",
             "kind": "imagined",
-            "text": "Look down before you look up. My head is lost, and so is my sculptor's name."
+            "text": "Look down before you look up. My head, my arms, my sculptor's name: all lost."
           },
           "next": "q1"
         },
@@ -60,12 +60,12 @@
         },
         "b1a": {
           "type": "branch",
-          "text": "The wings give her a huge silhouette you can read from far away. Hold that thought, though: not every feather up there is ancient.",
+          "text": "The wings give her a huge silhouette you can read from far below. Hold that thought, though: not every feather up there is ancient.",
           "next": "n2"
         },
         "b1b": {
           "type": "branch",
-          "text": "The cloth clings to her front and swings out behind. Remember it: that's how the sculptor shows a wind you can't see.",
+          "text": "Thin cloth presses against her belly and legs while a heavier cloak whips out behind. Remember it: that's how a sculptor shows a wind you can't see.",
           "next": "n2"
         },
         "b1c": {
@@ -80,7 +80,7 @@
         },
         "n2": {
           "type": "story",
-          "text": "Look down: she stands on the prow of a stone warship. She's Nike, victory in person. The wings say she can fly; the ship says this victory has to do with the sea.",
+          "text": "She's Nike, Victory in person, landing on the prow of a warship. The wings say she flies; the ship says this victory was won at sea. She's white marble from Paros; her ship is grey marble from Lartos, on Rhodes.",
           "next": "q2"
         },
         "q2": {
@@ -100,29 +100,40 @@
         },
         "b2a": {
           "type": "branch",
-          "text": "Exactly. Thin cloth presses against her chest and legs while a heavier mantle billows out behind. You read the wind from how the fabric reacts.",
+          "text": "Exactly. Thin cloth presses flat against her front while the heavier cloak billows out behind. You read the wind from how the fabric reacts.",
           "next": "n3"
         },
         "b2b": {
           "type": "branch",
-          "text": "Partly. The wings carry the motion too. But the clearest clue is the fabric: pressed flat in front, billowing out behind.",
+          "text": "Good instinct, but not quite. The wings carry the motion; the wind itself is somewhere else.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Spread wings feel like flight, and flight feels like wind. They're the biggest, most dramatic shapes on her.",
+            "truth": "Wings show she's moving, but they'd look the same in still air. The wind is in the cloth, pushed flat against her front and flying out behind.",
+            "evidence": "Look at her belly and thighs: the thin tunic clings so tightly the body shows through, while her cloak billows backwards. Two fabrics, reacting to one wind."
+          },
           "next": "n3"
         },
         "n3": {
           "type": "story",
-          "text": "Cloth that clings to show the body beneath is called wet drapery. It's a sculptor's language, not proof she was splashed by the sea. Now compare the goddess with her ship.",
+          "text": "Cloth carved as if soaked, so the body shows through, is called wet drapery. It's a sculptor's language, not proof of sea spray. Archaeologists describe her as full of movement: Victory caught at the instant of landing.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "Now the viewpoint. The Louvre says she was designed to be seen in three-quarter view from her left, where the cloak billows most. In antiquity she stood at the highest point of a sanctuary, set at an angle in a niche cut into the hillside.",
           "next": "q3"
         },
         "q3": {
           "type": "question",
-          "text": "Are the goddess and the ship the same stone?",
+          "text": "Was she the centrepiece of a fountain?",
           "choices": [
             {
-              "label": "Yes, same marble",
+              "label": "Yes, sailing on a pool",
               "next": "b3a"
             },
             {
-              "label": "No, two marbles",
+              "label": "No, that idea was disproved",
               "next": "b3b",
               "correct": true
             }
@@ -130,57 +141,92 @@
         },
         "b3a": {
           "type": "branch",
-          "text": "Look at the colours: a white figure, a greyer ship. The goddess is Parian marble; the ship and base come from Lartos on Rhodes.",
-          "voice": {
-            "speaker": "victory",
-            "kind": "imagined",
-            "text": "Two marbles: white Parian for me, greyer stone from Lartos on Rhodes for my ship and base."
+          "text": "That was the scholars' answer for decades, so you're in good company. But it has been ruled out.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Once the theory, now ruled out",
+            "tempting": "A ship belongs on water. Excavators Karl Lehmann and Alec Daykin reconstructed a fountain with basins, and Smarthistory still repeated it in 2015.",
+            "truth": "Re-examining the site, the current excavation team found the fountain reading impossible. She stood in a niche cut into the hillside, high above the sanctuary.",
+            "evidence": "The water pipes there fed a neighbouring stoa, not her monument, and the boulders taken for \"rocky shoals\" sit below the original floor level."
           },
           "next": "n4"
         },
         "b3b": {
           "type": "branch",
-          "text": "Right. Parian marble for her, greyer marble from Lartos on Rhodes for the ship and base.",
+          "text": "Right. The fountain idea was popular for decades, but the excavation team re-examined the site and ruled it out. The pipes served a nearby stoa, not her.",
           "next": "n4"
         },
         "n4": {
           "type": "story",
-          "text": "She's engineering as much as carving: torso and wings made separately and assembled, the hull pieced from many blocks. She first stood high in the Sanctuary of the Great Gods on Samothrace.",
+          "text": "So no pool. A ship on a hilltop in the Sanctuary of the Great Gods, where people prayed for protection at sea. Whether her niche had a roof, like a small shrine, or was an open walled precinct is still debated.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "She's engineering as much as carving: torso and wings made separately and attached; a base of 16 blocks in three courses, slabs marked with Greek letters for assembly. The whole monument weighs about 32 tonnes.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Alpha, beta, gamma: letters on my slabs told the builders where each one went. All of me weighs about thirty-two tonnes."
+          },
           "next": "q4"
         },
         "q4": {
           "type": "question",
-          "text": "Who paid for this victory monument?",
+          "text": "Who set up this victory monument?",
           "choices": [
             {
-              "label": "A king, after a famous sea battle",
+              "label": "Rhodes, after a sea battle",
               "next": "b4a"
             },
             {
+              "label": "Rome, after defeating Macedon",
+              "next": "b4b"
+            },
+            {
               "label": "Nobody knows for sure",
-              "next": "b4b",
+              "next": "b4c",
               "correct": true
             }
           ]
         },
         "b4a": {
           "type": "branch",
-          "text": "Tempting, given the ship. But which battle, and which ruler or city paid, can't be named. Even her sculptor is unknown.",
-          "voice": {
-            "speaker": "victory",
-            "kind": "imagined",
-            "text": "Which battle? Which ruler or city paid? I can't tell you, and nobody can yet."
+          "text": "That's a serious scholarly theory, but it isn't proven, so it can't be the answer.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Possible, but not proven",
+            "tempting": "The ship and base are Rhodian marble, and Rhodes was a naval power. Antonio Corso links her to a Rhodian win over a Syrian fleet in 190 BCE.",
+            "truth": "It's a strong hypothesis, not a fact. Other scholars argue for different victories and donors.",
+            "evidence": "Even the Louvre's record hedges: it gives her place of making as \"Rhodes (?)\", with a question mark, and dates her only to about 200–175 BCE."
           },
           "next": "n5"
         },
         "b4b": {
           "type": "branch",
-          "text": "Right. The prow points to a naval victory and the Rhodian stone to a regional link, but the battle, the sponsor and the sculptor are all unknown.",
+          "text": "That theory exists too, but it's unproven and strongly contested.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Argued, but contested",
+            "tempting": "The defeated Macedonian king Perseus was captured on Samothrace, and the archaeologist Eugenio La Rocca argued in 2018 that she celebrates Rome's victory.",
+            "truth": "Critics reply that the decisive battle, Pydna, was fought on land, and that Rome had no reason to import Rhodian marble for its ship.",
+            "evidence": "Those objections come from Antonio Corso's 2019 review of La Rocca's book. Nobody's case is settled, which is why \"nobody knows\" is the honest answer."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Right. Rhodes around 190 BCE, Rome after its victory over Macedon, a defeat of Philip V of Macedon: each idea has defenders. The Louvre writes \"Rhodes (?)\" and c. 200–175 BCE.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Which battle? Which city or king paid for me? Scholars still argue, and I can't settle it."
+          },
           "next": "n5"
         },
         "n5": {
           "type": "story",
-          "text": "What we do know: pilgrims and visitors came to the sanctuary, so a military victory was shown again and again in a shared sacred place. Now, about those magnificent wings.",
+          "text": "Battle, donor and sculptor: all unknown. What's certain is the message. Victory lands on a warship at the top of a sacred hill, above every pilgrim. Now, about those magnificent wings.",
           "next": "q5"
         },
         "q5": {
@@ -200,22 +246,33 @@
         },
         "b5a": {
           "type": "branch",
-          "text": "Less than it looks. She was found broken. The fully spread right wing is plaster, parts of the torso are restored, and a metal frame holds the wings.",
-          "voice": {
-            "speaker": "victory",
-            "kind": "imagined",
-            "text": "Don't trust every feather. My right wing is plaster, and a metal frame holds my wings up."
+          "text": "No, and that surprises almost everyone. A good part of what you see was rebuilt.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The wings look like one piece with her body, with the same feathers and the same energy, and nothing in the gallery tells you otherwise.",
+            "truth": "The left wing is ancient, reattached; the right wing was remade in plaster. A metal frame holds both up. Her left breast and belt area are plaster too.",
+            "evidence": "The Louvre's own record lists the plaster parts and the \"armature métallique\". When she was first shown in Paris, she had no wings at all."
           },
           "next": "n6"
         },
         "b5b": {
           "type": "branch",
-          "text": "Right. The right wing is a plaster replacement, parts of the torso are restored, and a metal structure holds the wings up.",
+          "text": "Right. The right wing was remade in plaster, the left wing reattached, parts of her chest are plaster, and a metal frame holds the wings up.",
           "next": "n6"
         },
         "n6": {
           "type": "story",
-          "text": "In the 19th century, researchers realised scattered grey blocks were the ship. A 2013 to 2014 restoration then reconnected goddess and ship directly. Take the ship away and she still means victory, but not where it was won.",
+          "text": "In 1863 the French diplomat Charles Champoiseau found her in pieces. He even took the prow blocks for an Egyptian-style tomb. First shown in Paris without wings, she drew little interest.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "About ten years later, archaeologists realised the grey blocks were a ship. Rebuilt with wings and prow at the top of the Daru staircase, she became a star. Old reconstructions gave her a trumpet; that idea is largely abandoned.",
+          "next": "n6c"
+        },
+        "n6c": {
+          "type": "story",
+          "text": "In 1950 the palm of her right hand turned up on Samothrace. The 2013–14 restoration cleaned her and set her directly on her ship again. Take the ship away and she still means victory, but not where it was won.",
           "voice": {
             "speaker": "victory",
             "kind": "imagined",
@@ -223,11 +280,15 @@
           }
         }
       },
-      "takeaway": "Look down first: the ship makes it a victory at sea. The cloth shows you the wind, and the right wing is plaster.",
+      "takeaway": "Look down first: a goddess landing on a Rhodian-marble warship, built to be seen from her left, wind read in the cloth. Who set her up is still argued.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010252531",
         "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/an-uplifting-sight",
-        "https://www.samothracemuseum.gr/en/hall-d/"
+        "https://www.samothracemuseum.gr/en/hall-d/",
+        "https://www.samothrace.emory.edu/nike-monument/",
+        "https://www.archaeology.wiki/blog/2019/06/04/book-review-la-nike-di-samotracia-tra-macedoni-e-romani/",
+        "https://ajaonline.org/node/4173",
+        "https://human.libretexts.org/Bookshelves/Art/Art_History_and_Theory/SmartHistory_of_Art_2e/02%3A_SmartHistory_of_Art_II-_Ancient_Mediterranean/10%3A_Ancient_Greece/10.07%3A_Hellenistic/10.7.04%3A_Nike_(Winged_Victory)_of_Samothrace"
       ]
     }
   ]
