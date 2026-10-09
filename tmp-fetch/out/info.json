@@ -101,5 +101,396 @@
    "hasIcc": true
   }
  },
- "crops": []
+ "crops": [
+  {
+   "dest": "public/images/challenge/mona-lisa/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    7854,
+    11498
+   ],
+   "outPx": [
+    683,
+    1000
+   ],
+   "quality": 88,
+   "bytes": 112952
+  },
+  {
+   "dest": "public/images/challenge/mona-lisa/c1.jpg",
+   "srcPx": [
+    2749,
+    2300,
+    1649,
+    862
+   ],
+   "outPx": [
+    1200,
+    627
+   ],
+   "quality": 88,
+   "bytes": 157935
+  },
+  {
+   "dest": "public/images/challenge/mona-lisa/c2.jpg",
+   "srcPx": [
+    2592,
+    1725,
+    2356,
+    2529
+   ],
+   "outPx": [
+    1118,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 308137
+  },
+  {
+   "dest": "public/images/challenge/mona-lisa/c3.jpg",
+   "srcPx": [
+    942,
+    7934,
+    4870,
+    2644
+   ],
+   "outPx": [
+    1200,
+    651
+   ],
+   "quality": 88,
+   "bytes": 159485
+  },
+  {
+   "dest": "public/images/challenge/mona-lisa/c4.jpg",
+   "srcPx": [
+    0,
+    1955,
+    7854,
+    3449
+   ],
+   "outPx": [
+    1200,
+    527
+   ],
+   "quality": 88,
+   "bytes": 126617
+  },
+  {
+   "dest": "public/images/challenge/mona-lisa/c5.jpg",
+   "srcPx": [
+    5655,
+    4829,
+    2120,
+    2070
+   ],
+   "outPx": [
+    1200,
+    1172
+   ],
+   "quality": 88,
+   "bytes": 388329
+  },
+  {
+   "dest": "public/images/challenge/mona-lisa/c6.jpg",
+   "srcPx": [
+    0,
+    5519,
+    1257,
+    1725
+   ],
+   "outPx": [
+    874,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 261476
+  },
+  {
+   "dest": "public/images/challenge/venus-de-milo/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    6124,
+    10349
+   ],
+   "outPx": [
+    592,
+    1000
+   ],
+   "quality": 88,
+   "bytes": 126464
+  },
+  {
+   "dest": "public/images/challenge/venus-de-milo/c1.jpg",
+   "srcPx": [
+    1960,
+    362,
+    1224,
+    1346
+   ],
+   "outPx": [
+    1091,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 188293
+  },
+  {
+   "dest": "public/images/challenge/venus-de-milo/c2.jpg",
+   "srcPx": [
+    3368,
+    1345,
+    858,
+    1242
+   ],
+   "outPx": [
+    829,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 129908
+  },
+  {
+   "dest": "public/images/challenge/venus-de-milo/c3.jpg",
+   "srcPx": [
+    1837,
+    4450,
+    3062,
+    5071
+   ],
+   "outPx": [
+    725,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 155428
+  },
+  {
+   "dest": "public/images/challenge/winged-victory/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    3606,
+    3953
+   ],
+   "outPx": [
+    912,
+    1000
+   ],
+   "quality": 88,
+   "bytes": 142451
+  },
+  {
+   "dest": "public/images/challenge/winged-victory/c2.jpg",
+   "srcPx": [
+    1298,
+    158,
+    1082,
+    514
+   ],
+   "outPx": [
+    1082,
+    514
+   ],
+   "quality": 88,
+   "bytes": 92551
+  },
+  {
+   "dest": "public/images/challenge/winged-victory/c3.jpg",
+   "srcPx": [
+    1046,
+    2095,
+    1622,
+    633
+   ],
+   "outPx": [
+    1200,
+    468
+   ],
+   "quality": 88,
+   "bytes": 152381
+  },
+  {
+   "dest": "public/images/challenge/liberty-leading-the-people/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    10128,
+    8103
+   ],
+   "outPx": [
+    1000,
+    800
+   ],
+   "quality": 88,
+   "bytes": 183086
+  },
+  {
+   "dest": "public/images/challenge/liberty-leading-the-people/c1.jpg",
+   "srcPx": [
+    8406,
+    2674,
+    1722,
+    2107
+   ],
+   "outPx": [
+    981,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 225118
+  },
+  {
+   "dest": "public/images/challenge/liberty-leading-the-people/c2.jpg",
+   "srcPx": [
+    5672,
+    567,
+    1114,
+    1054
+   ],
+   "outPx": [
+    1114,
+    1054
+   ],
+   "quality": 88,
+   "bytes": 201410
+  },
+  {
+   "dest": "public/images/challenge/liberty-leading-the-people/c3.jpg",
+   "srcPx": [
+    4963,
+    405,
+    2228,
+    2593
+   ],
+   "outPx": [
+    1031,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 263004
+  },
+  {
+   "dest": "public/images/challenge/liberty-leading-the-people/c4.jpg",
+   "srcPx": [
+    4659,
+    486,
+    3849,
+    5672
+   ],
+   "outPx": [
+    814,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 212499
+  },
+  {
+   "dest": "public/images/challenge/raft-of-the-medusa/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    10244,
+    6924
+   ],
+   "outPx": [
+    1000,
+    676
+   ],
+   "quality": 88,
+   "bytes": 159109
+  },
+  {
+   "dest": "public/images/challenge/raft-of-the-medusa/c2.jpg",
+   "srcPx": [
+    6146,
+    969,
+    2049,
+    3462
+   ],
+   "outPx": [
+    710,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 212310
+  },
+  {
+   "dest": "public/images/challenge/raft-of-the-medusa/c3.jpg",
+   "srcPx": [
+    1024,
+    0,
+    4098,
+    4570
+   ],
+   "outPx": [
+    1076,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 264732
+  },
+  {
+   "dest": "tmp-fetch/out/inspect/venus-shoulder.jpg",
+   "srcPx": [
+    3368,
+    1345,
+    858,
+    1242
+   ],
+   "outPx": [
+    858,
+    1242
+   ],
+   "quality": 88,
+   "bytes": 139554
+  },
+  {
+   "dest": "tmp-fetch/out/inspect/liberty-farright.jpg",
+   "srcPx": [
+    8406,
+    2674,
+    1722,
+    2107
+   ],
+   "outPx": [
+    1722,
+    2107
+   ],
+   "quality": 88,
+   "bytes": 625791
+  },
+  {
+   "dest": "tmp-fetch/out/inspect/ml-leftedge.jpg",
+   "srcPx": [
+    0,
+    5749,
+    471,
+    1150
+   ],
+   "outPx": [
+    471,
+    1150
+   ],
+   "quality": 88,
+   "bytes": 136745
+  },
+  {
+   "dest": "tmp-fetch/out/inspect/wv-wings.jpg",
+   "srcPx": [
+    1298,
+    158,
+    1082,
+    514
+   ],
+   "outPx": [
+    1082,
+    514
+   ],
+   "quality": 88,
+   "bytes": 92551
+  }
+ ]
 }
