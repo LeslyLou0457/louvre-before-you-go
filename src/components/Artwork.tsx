@@ -82,7 +82,7 @@ export default function Artwork({ image, title, artist, available, maxHeightClas
               className={actualSize ? "block max-w-none" : "block max-h-[calc(100dvh-2rem)] max-w-full object-contain"}
             />
           </div>
-          <p className="fixed bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-mat px-3 font-hand text-base text-muted">
+          <p className="fixed bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-mat px-3 font-hand text-base text-muted">
             {actualSize ? "tap photo to fit screen" : "pinch to zoom · tap photo for actual size"}
           </p>
         </div>
