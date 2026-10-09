@@ -41,7 +41,10 @@ export default async function DonePage({ params }: Params) {
         <p className="mt-2">{level.lesson.takeaway}</p>
       </section>
 
-      <MuseumLabel artwork={level.artwork} museumUrl={museumLink(level)} />
+      {/* Wrapped so the label keeps its own height instead of stretching to fill the column. */}
+      <div>
+        <MuseumLabel artwork={level.artwork} museumUrl={museumLink(level)} />
+      </div>
 
       <div className="mt-auto flex flex-col items-center gap-3">
         {next ? (
