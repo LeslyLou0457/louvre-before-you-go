@@ -125,7 +125,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 - Tapping a locked level shows a light hint, "Finish the previous level first", not a pop-up.
 - Leaving mid-level restarts that level next time (it's 5 minutes; no need to remember the question number). Finished levels can be replayed.
-- Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti.
+- Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti. No character animation in 0.5.
 
 ---
 
@@ -181,16 +181,18 @@ There are only three node types: `story` (main line), `question` and `branch`. A
 
 ---
 
-## 03 · DESIGN — doodles on the walls, real art in the frames
+## 03 · DESIGN — painted heads, real artworks
 
-Fresh, light and playful, like a child's notebook: the interface is hand-drawn doodles and childlike handwriting (references: the hand-drawn museum videos Steven shared, and HeyTea posters). The artworks stay exactly as they are: always the official photograph, never drawn. Lots of white space; readable at a glance.
+Fresh, light and playful. The main reference is "After Hours" (a MoMA project by @llleahb, from the screen recording Steven shared): a clean white page where flat, painted artist heads talk about real artwork photos. HeyTea posters are a second reference for the relaxed, childlike tone. The artworks stay exactly as they are: always the official photograph, never drawn.
 
 **Two layers, never mixed:**
 
-- **Doodle layer (the website):** buttons, the level route, icons, small stickers, headlines and a simple doodle head of each artist as the narrator. One black ink line plus a little crayon colour, so it sits comfortably next to any art style (Renaissance, Romantic, and later modern art).
-- **Artwork layer:** the public-domain photo of the work, straight edges, no filters, no doodles drawn over it. Zoom-ins are crops of the same original photo, never redrawn.
+- **Character layer (the website):** each artist is a flat painted head: blocks of colour, no black outlines, playful colours (a pink face, an orange or blue nose). Heads sit in white circles on a light grey "stage" under the artwork and speak in plain speech bubbles. Everything else on the page stays quiet so the heads and the art carry the colour.
+- **Artwork layer:** the public-domain photo of the work, straight edges, no filters, nothing drawn over it. Next to it, a small museum-style label: artist, title, date, medium, and "View at the Louvre →". Zoom-ins are crops of the same original photo, never redrawn.
 
-> **Don't:** draw, trace or "cute-ify" an artwork; let a doodle overlap an artwork; use AI-generated illustrations (doodles are drawn by a person); glossy gradients, stacked shadows, screens full of emoji.
+> **Don't:** draw, trace or "cute-ify" an artwork; put a head or bubble on top of an artwork; copy After Hours' own drawings (ours are drawn for this project); use AI-generated illustrations; glossy gradients, stacked shadows, screens full of emoji.
+
+Works with no known maker (Venus de Milo, Winged Victory of Samothrace) get no artist head; their levels use a neutral narrator for now.
 
 Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
@@ -198,30 +200,32 @@ Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
 | Use | Colour | Value |
 |---|---|---|
-| Background | Off-white | `#F7F5F0` |
-| Body text | Ink | `#1F1F1F` |
-| Secondary text | Grey | `#6B6B6B` |
-| Accent, buttons, current level | Ultramarine | `#2A3F8F` |
-| Done, streaks | Gold-brown | `#B08D57` |
-| Dividers, card borders | Light grey | `#E4E1DA` |
+| Background | White | `#FFFFFF` |
+| Stage under the artwork, where heads sit | Light warm grey | `#F2F1EE` |
+| Body text | Ink | `#1C1C1E` |
+| Secondary text | Grey | `#7A7A80` |
+| Accent: main button, current level, selection | Blue | `#2D5BE3` |
+| Dividers, card and label borders | Light grey | `#E7E6E3` |
 
-The ultramarine accent has a story: in the Renaissance it was ground from lapis lazuli, cost more than gold, and was often used for the Virgin's robe. Wrong answers are never shown in red; plain text explains them.
+Wrong answers are never shown in red; plain text explains them.
 
 ### Type and layout
 
-- Handwriting for voice: questions, options, buttons, headlines and the artist's speech bubble use a childlike hand font (default: Gaegu, Google Fonts). Later it can be replaced by real children's handwriting, as HeyTea does.
-- Print for reading: story and branch text in a clean rounded sans-serif (default: Nunito, Google Fonts), so longer passages stay easy to read.
+- One clean sans-serif for everything (default: Figtree, Google Fonts). Headlines bold and tight; story text regular.
 - Designed for a 375px-wide phone; on desktop, content is at most 640px wide, centred.
-- Body text 17px, line height 1.7; buttons at least 48px tall for one-handed use.
-- Artworks get no rounded corners and no filters, just a plain mat of white space. Doodle shapes may be wobbly and slightly rounded; artworks never are.
-- Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Artist heads are friendly sketches, not portraits pretending to be accurate.
+- Body text 17px, line height 1.6; buttons at least 48px tall for one-handed use.
+- Buttons and answer options are rounded pills: the main action filled blue, others white with a thin border.
+- Artworks get no rounded corners and no filters. Heads, bubbles and buttons may be rounded; artworks never are.
+- Heads are drawn by a person as flat SVG shapes, friendly rather than accurate portraits.
+- No animation in 0.5 beyond the soft fade between screens.
 
 ### Reference products
 
 | Reference | Learn from | Don't copy |
 |---|---|---|
 | Duolingo | Level route, a little every day, small celebration on clearing a level | Saturated colours, a single mascot |
-| HeyTea posters | Childlike handwriting and loose doodles; fresh and relaxed | Drawing over the product itself (for us: the artwork) |
+| After Hours (@llleahb, MoMA artists project) | Painted artist heads, clean white page, label card beside the real artwork, artists talking in bubbles | Their drawings themselves, and the live AI chat mode (we don't use AI at runtime) |
+| HeyTea posters | A fresh, relaxed, childlike tone | Drawing over the product itself (for us: the artwork) |
 | Google Arts & Culture | Large artwork images, zooming into details | Pages that are too dense |
 | Louvre collections site<br>`collections.louvre.fr` | Restrained layout, how artwork information is written | Archive-style stacks of fields |
 | 2–3 website screenshots from the product owner | Overall feel and colours | To be added |
@@ -326,6 +330,7 @@ Once the 0.5 template works, 1.0 only changes content and adds features. It stil
 | Hosting | GitHub Pages, public link | Move to Vercel (for login and database) | Custom domain |
 | Audio | None, text only | Main line and branches read aloud, auto-play, with pause, replay and mute; questions and options not read | — |
 | Artwork card | None | Unlocked after an artwork's 5 levels: large image + 2–3 tappable info points | — |
+| Animation and effects | None (soft fades only) | Heads and page effects animated in the style of the After Hours reference | — |
 | Progress | Saved in the browser | Optional email login, progress across devices; daily streak | Daily reminders |
 | Database | Not needed | Supabase | Supabase |
 
@@ -347,7 +352,7 @@ Five levels are five angles on the same work. 5 questions per level, each level 
 - Which story does each artwork's first level tell? (Default: the topics in the "Five levels, five artworks" table)
 - Which five masterpieces? (Decided: Mona Lisa, Venus de Milo, Winged Victory of Samothrace, Liberty Leading the People, The Raft of the Medusa)
 - Is 0.5 in Chinese or English? (Decided: English, for content, interface and this spec)
-- Fonts and look? (Decided 2026-10-09: doodle interface with real artwork photos; fonts default to Gaegu for handwriting and Nunito for reading)
+- Fonts and look? (Decided 2026-10-09: After Hours-style painted heads with real artwork photos; one sans-serif, default Figtree)
 - Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (To be added)
 - Which voice for 1.0 audio? (Default: a warm English female voice; generate the first level as a test before deciding)
 - Is login required in 1.0? (Default: no; login only syncs progress)
