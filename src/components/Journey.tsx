@@ -3,14 +3,15 @@
 // The level route: a squiggly ink line with one node per level. Each node is
 // the level's narrator in an ink circle (a numbered circle when there is no
 // narrator). Done: gold-brown tick, replayable. Current: ultramarine ring and
-// "Continue". Locked: faded, with a quiet hint instead of a pop-up.
+// "Start". Any open level left mid-way gets "Continue" and how far it got.
+// Locked: faded, with a quiet hint instead of a pop-up.
 
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { CheckDoodle, LockDoodle, RouteDoodle } from "@/doodles";
 import { Avatar } from "@/doodles/avatars";
 import type { JourneyItem } from "@/lib/content";
-import { getCompleted, statuses, type LevelStatus } from "@/lib/progress";
+import { getCompleted, getPlace, statuses, type LevelStatus, type SavedPlace } from "@/lib/progress";
 
 function Node({ item, index, status }: { item: JourneyItem; index: number; status: LevelStatus }) {
   const face = item.narrator ? (
@@ -43,9 +44,13 @@ function Node({ item, index, status }: { item: JourneyItem; index: number; statu
 
 export default function Journey({ items }: { items: JourneyItem[] }) {
   const [completed, setCompleted] = useState<string[]>([]);
+  const [places, setPlaces] = useState<Record<string, SavedPlace | null>>({});
   const [hintFor, setHintFor] = useState<string | null>(null);
 
-  useEffect(() => setCompleted(getCompleted()), []);
+  useEffect(() => {
+    setCompleted(getCompleted());
+    setPlaces(Object.fromEntries(items.map((i) => [i.id, getPlace(i.id, i.nodeIds, i.questionCount)])));
+  }, [items]);
 
   const state = statuses(items.map((i) => i.id), completed);
   const allDone = state.every((s) => s === "done");
@@ -54,6 +59,7 @@ export default function Journey({ items }: { items: JourneyItem[] }) {
     <ol className="flex flex-col">
       {items.map((item, i) => {
         const s = state[i];
+        const place = s === "locked" ? null : places[item.id];
         const label = (
           <span className="min-w-0 flex-1">
             <span className={`block font-hand text-2xl font-bold leading-tight ${s === "locked" ? "text-muted" : ""}`}>
@@ -61,7 +67,8 @@ export default function Journey({ items }: { items: JourneyItem[] }) {
             </span>
             <span className="block text-sm text-muted">
               {item.title}
-              {s === "done" && <span className="sr-only"> (finished, tap to play again)</span>}
+              {s === "done" && !place && <span className="sr-only"> (finished, tap to play again)</span>}
+              {place && <span className="sr-only"> (in progress, tap to continue)</span>}
               {s === "locked" && <span className="sr-only"> (locked)</span>}
             </span>
           </span>
@@ -90,12 +97,23 @@ export default function Journey({ items }: { items: JourneyItem[] }) {
                   {label}
                 </Link>
               )}
-              {s === "current" && (
-                <div className="mt-3 pl-[84px]">
+              {place ? (
+                <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 pl-[84px]">
                   <Link href={`/lesson/${item.id}/`} className="btn-primary">
                     Continue
                   </Link>
+                  <span className="font-hand text-lg text-muted">
+                    {place.answered} of {item.questionCount} answered
+                  </span>
                 </div>
+              ) : (
+                s === "current" && (
+                  <div className="mt-3 pl-[84px]">
+                    <Link href={`/lesson/${item.id}/`} className="btn-primary">
+                      Start
+                    </Link>
+                  </div>
+                )
               )}
               <p id={`hint-${item.id}`} aria-live="polite" className="pl-[84px] font-hand text-lg text-muted">
                 {hintFor === item.id ? "Finish the previous level first" : ""}
