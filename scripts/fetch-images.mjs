@@ -6,6 +6,7 @@
 //   images:     [{ id, dest, file }]  downloaded to dest (a path under public/)
 //   candidates: ["File:..."]          metadata printed only, to choose a file
 //   categories: ["Category:..."]      files listed with size and licence
+//   previews:   ["File:..."]          250px copies printed to the log
 // Writes scripts/image-credits.json with author, licence and source page of
 // every downloaded file. Refuses any file whose licence is not Public
 // Domain, CC0, CC BY or CC BY-SA.
@@ -92,7 +93,20 @@ function print(i) {
   console.log(`   description: ${i.description}`);
 }
 
-async function listCategory(category, depth) {
+// Small previews printed into the job log as base64 (lines "B64 <n> ..."),
+// so files can be looked at before choosing, without committing them.
+const toPreview = [...(config.previews ?? [])];
+
+async function preview(n, file) {
+  const i = await info(file, 250);
+  const res = await fetch(i.thumb ?? i.original, { headers: { "User-Agent": UA } });
+  if (!res.ok) throw new Error(`${res.status} downloading preview`);
+  const b64 = Buffer.from(await res.arrayBuffer()).toString("base64");
+  console.log(`PREVIEW ${n} ${i.width}x${i.height} ${i.licence} | ${i.title}`);
+  for (let k = 0; k < b64.length; k += 3000) console.log(`B64 ${n} ${b64.slice(k, k + 3000)}`);
+}
+
+async function listCategory(category, depth, previewMinEdge) {
   let cont = {};
   const subcats = [];
   console.log(`\n#### ${category}`);
@@ -118,10 +132,14 @@ async function listCategory(category, depth) {
       const lic = strip(ii.extmetadata?.LicenseShortName?.value);
       const who = strip(ii.extmetadata?.Artist?.value).slice(0, 60);
       console.log(`${ii.width}x${ii.height}\t${lic}\t${who}\t${p.title}`);
+      const free = /^(public domain|cc0)/i.test(lic);
+      if (previewMinEdge && free && Math.max(ii.width, ii.height) >= previewMinEdge && !toPreview.includes(p.title)) {
+        toPreview.push(p.title);
+      }
     }
     cont = data.continue ?? null;
   } while (cont);
-  if (depth > 0) for (const s of subcats) await listCategory(s, depth - 1);
+  if (depth > 0) for (const s of subcats) await listCategory(s, depth - 1, previewMinEdge);
   else if (subcats.length) console.log(`   (subcategories not listed: ${subcats.join(" | ")})`);
 }
 
@@ -133,7 +151,15 @@ for (const file of config.candidates ?? []) {
   }
 }
 
-for (const c of config.categories ?? []) await listCategory(c.title ?? c, c.depth ?? 0);
+for (const c of config.categories ?? []) await listCategory(c.title ?? c, c.depth ?? 0, c.previewMinEdge);
+
+for (const [n, file] of toPreview.entries()) {
+  try {
+    await preview(n + 1, file);
+  } catch (e) {
+    console.log(`PREVIEW ${n + 1} FAILED ${file}: ${e.message}`);
+  }
+}
 
 const credits = {};
 let failed = 0;
