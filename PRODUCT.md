@@ -118,13 +118,13 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 | Page | What it does |
 |---|---|
-| Level route (home) | A vertical route of 5 level nodes in three states: done, current, locked; the current level has a "Continue" button |
+| Level route (home) | A vertical route of 5 level nodes in three states: done, current, locked; the current level has a "Start" button, and any level left mid-way has a "Continue" button that resumes it |
 | Lesson page | Top half: the artwork (tap to zoom). Bottom half: one passage or one question. Progress bar at the top ("Question 3 of 5") and an exit button |
 | Level cleared page | "One thing to remember today": a one-sentence summary of the level; unlock the next level, back to the route |
 | About and sources | Image sources and references |
 
 - Tapping a locked level shows a light hint, "Finish the previous level first", not a pop-up.
-- Leaving mid-level restarts that level next time (it's 5 minutes; no need to remember the question number). Finished levels can be replayed.
+- Leaving mid-level saves your place in the browser: reopening the level (or reloading the page) picks up at the same passage or question, with a small "Start over" link to replay it from the beginning. The saved place is cleared when the level is finished. Finished levels can be replayed.
 - Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti. No character animation in 0.5.
 
 ---
@@ -241,7 +241,7 @@ Ultramarine is the only accent, so it always means "this is the thing to tap" or
 - Designed for a 375px-wide phone; on desktop, content is at most 640px wide, centred.
 - Body text 17px, line height 1.7; buttons at least 48px tall for one-handed use.
 - Buttons and answer options are hand-drawn ink pills with handwriting labels: the main action filled ultramarine with white text, others paper white with the ink line; the selected option gets an ultramarine line.
-- The level route is a squiggly ink line; each level node is its narrator's painted head in an ink circle. Done gets a gold-brown tick, the current level an ultramarine ring and "Continue", locked levels are faded.
+- The level route is a squiggly ink line; each level node is its narrator's painted head in an ink circle. Done gets a gold-brown tick, the current level an ultramarine ring and "Start" ("Continue" once it has been left mid-way), locked levels are faded.
 - Artworks and their labels get no rounded corners and no filters. Doodle shapes, heads and bubbles may be wobbly and rounded; artworks never are.
 - Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Heads are flat SVG shapes drawn by a person, friendly rather than accurate portraits.
 - No animation in 0.5 beyond the soft fade between screens.
@@ -310,6 +310,7 @@ Every item can be ticked, no gut feeling. When all are ticked, the version is do
 - [ ] All 5 artworks, 5 levels and 25 questions live; every fact checked and sourced
 - [ ] On a phone, each level finishes in under 5 minutes
 - [ ] Close the browser and reopen it: progress is still there
+- [ ] Leave a level mid-way and reopen it: it continues from the same question
 - [ ] 3 people who didn't help build it play it; at least 2 finish all 5 levels without prompting
 - [ ] Published on GitHub Pages with a public link that opens on a phone, with page screenshots good enough to show
 - [ ] Adding one new JSON file, without changing code, adds one more artwork

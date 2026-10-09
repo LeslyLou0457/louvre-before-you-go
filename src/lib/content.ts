@@ -65,6 +65,9 @@ export type JourneyItem = {
   artworkTitle: string;
   artist: string;
   narrator?: Speaker;
+  /** For checking a saved mid-level spot against the current content. */
+  nodeIds: string[];
+  questionCount: number;
 };
 
 export function getJourney(): JourneyItem[] {
@@ -74,6 +77,8 @@ export function getJourney(): JourneyItem[] {
     artworkTitle: l.artwork.title,
     artist: l.artwork.artist,
     narrator: narratorOf(l),
+    nodeIds: Object.keys(l.lesson.nodes),
+    questionCount: l.questionCount,
   }));
 }
 
