@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BackDoodle, UnderlineDoodle } from "@/doodles";
 import { getLevels, museumLink } from "@/lib/content";
-import { INTENDED_IMAGE_SOURCE } from "@/lib/image-sources";
+import { IMAGE_SOURCE } from "@/lib/image-sources";
 
 export const metadata: Metadata = { title: "About & sources · Louvre Before You Go" };
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       <ol className="mt-8 flex flex-col gap-6">
         {levels.map((l) => {
-          const intended = INTENDED_IMAGE_SOURCE[l.artwork.id];
+          const photoSource = IMAGE_SOURCE[l.artwork.id];
           const louvre = museumLink(l);
           return (
             <li key={l.lesson.id} className="wobbly-alt border-2 border-ink bg-mat px-5 py-4">
@@ -53,14 +53,21 @@ export default function AboutPage() {
 
               <h3 className="mt-3 font-hand text-xl font-bold">Image</h3>
               <p className="text-sm">{l.artwork.imageCredit}</p>
+              {l.imageAvailable && photoSource && (
+                <p className="text-sm">
+                  <a href={photoSource} className="text-ultramarine underline" target="_blank" rel="noopener noreferrer">
+                    Photo on Wikimedia Commons
+                  </a>
+                </p>
+              )}
               {!l.imageAvailable && (
                 <p className="text-sm text-muted">
                   Photo not added yet (placeholder shown).{" "}
-                  {intended && intended !== "TBD" ? (
+                  {photoSource ? (
                     <>
                       Intended source:{" "}
-                      <a href={intended} className="break-all text-ultramarine underline" target="_blank" rel="noopener noreferrer">
-                        {decodeURIComponent(intended)}
+                      <a href={photoSource} className="break-all text-ultramarine underline" target="_blank" rel="noopener noreferrer">
+                        {decodeURIComponent(photoSource)}
                       </a>
                     </>
                   ) : (

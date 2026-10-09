@@ -27,7 +27,9 @@ Optional fields the site understands (see PRODUCT.md "Data format"; files withou
 
 ## Add the artwork photos
 
-Put each photo at the path in its JSON's `artwork.image`, under `public/` (for example `public/images/mona-lisa.jpg`). The "Photo placeholder" box disappears on the next build. Intended sources are listed in `src/lib/image-sources.ts`; use only Public Domain or CC0 images and keep `imageCredit` accurate.
+All five photos are in `public/images/`, from Wikimedia Commons: public-domain reproductions of the paintings and CC0 photos of the sculptures. Each one's Commons page (author and licence) is listed in `src/lib/image-sources.ts`, and its credit is the JSON's `imageCredit`.
+
+For a new artwork, put its photo at the path in its JSON's `artwork.image`, under `public/` (for example `public/images/mona-lisa.jpg`); until then a "Photo placeholder" box is shown. Use only Public Domain or CC0 images, keep files under about 600 KB with no crops or filters, add the Commons page to `src/lib/image-sources.ts` and keep `imageCredit` accurate.
 
 ## Swap in hand-drawn art
 
