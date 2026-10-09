@@ -1,18 +1,17 @@
 {
   "candidates": [
     "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
-    "File:Mona Lisa, by Leonardo da Vinci, from C2RMF natural color.jpg",
-    "File:Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg",
-    "File:Eugène Delacroix - Le 28 Juillet. La Liberté guidant le peuple.jpg",
-    "File:JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 2004-05).jpg",
     "File:Venus de Milo Louvre Ma399 n4.jpg",
-    "File:Front views of the Venus de Milo.jpg",
-    "File:Nike of Samothrake Louvre Ma2369 n4.jpg",
-    "File:Nike of Samothrake Louvre Ma2369 n2.jpg"
+    "File:Venus de Milo Louvre Ma399 n5.jpg",
+    "File:Venus de Milo Louvre Ma399 n7.jpg"
   ],
   "categories": [
-    { "title": "Category:Venus de Milo", "depth": 1 },
-    { "title": "Category:Winged Victory of Samothrace", "depth": 1 }
+    { "title": "Category:The Raft of the Medusa", "depth": 0 },
+    { "title": "Category:Raft of the Medusa", "depth": 0 },
+    { "title": "Category:Liberty Leading the People", "depth": 0 },
+    { "title": "Category:Nike of Samothrace", "depth": 0 },
+    { "title": "Category:Victory of Samothrace", "depth": 0 },
+    { "title": "Category:Front views of the Venus de Milo", "depth": 0 }
   ],
   "images": []
 }
