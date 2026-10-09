@@ -181,18 +181,22 @@ There are only three node types: `story` (main line), `question` and `branch`. A
 
 ---
 
-## 03 · DESIGN — painted heads, real artworks
+## 03 · DESIGN — doodles and painted heads on a beige page, real art in the frames
 
-Fresh, light and playful. The main reference is "After Hours" (a MoMA project by @llleahb, from the screen recording Steven shared): a clean white page where flat, painted artist heads talk about real artwork photos. HeyTea posters are a second reference for the relaxed, childlike tone. The artworks stay exactly as they are: always the official photograph, never drawn.
+Fresh, light and playful, like a child's sketchbook left open in a museum. Two references work together:
 
-**Two layers, never mixed:**
+- **Doodles and handwriting** (the hand-drawn museum videos and HeyTea posters Steven shared): the interface is drawn with one black ink line, a little crayon colour and childlike handwriting.
+- **After Hours** (a MoMA artists project by @llleahb, from the screen recording Steven shared): flat painted artist heads, a warm page, one ultramarine accent, and the real artwork photo beside a museum-style label.
 
-- **Character layer (the website):** each artist is a flat painted head: blocks of colour, no black outlines, playful colours (a pink face, an orange or blue nose). Heads sit in white circles on a light grey "stage" under the artwork and speak in plain speech bubbles. Everything else on the page stays quiet so the heads and the art carry the colour.
-- **Artwork layer:** the public-domain photo of the work, straight edges, no filters, nothing drawn over it. Next to it, a small museum-style label: artist, title, date, medium, and "View at the Louvre →". Zoom-ins are crops of the same original photo, never redrawn.
+They don't compete because each has its own job: **ink doodles and handwriting are the chrome, painted heads are the characters, photos and labels are the museum.** The artworks stay exactly as they are: always the official photograph, never drawn.
 
-> **Don't:** draw, trace or "cute-ify" an artwork; put a head or bubble on top of an artwork; copy After Hours' own drawings (ours are drawn for this project); use AI-generated illustrations; glossy gradients, stacked shadows, screens full of emoji.
+**Three layers, never mixed:**
 
-Works with no known maker (Venus de Milo, Winged Victory of Samothrace) get no artist head; their levels use a neutral narrator for now.
+- **Doodle layer (the chrome):** buttons, the level route, icons, small stickers, headlines, speech bubbles and frames. One black ink line, one stroke weight, slightly wobbly, plus a little crayon colour. Text that is "spoken" (headlines, questions, options, buttons, speech bubbles) is in handwriting.
+- **Character layer (the narrators):** each artist is a flat painted head: blocks of colour with no outlines, playful colours (a pink face, an orange or blue nose), features as a few small dark marks. A head sits inside a hand-drawn ink circle on the beige "stage" under the artwork and talks in a hand-drawn ink speech bubble. This is where ink meets paint: the line belongs to the frame and the bubble, never to the head. Living artists (from later museums) get a doodled object instead of a face. When the artwork itself speaks (a statue with no known maker), its avatar is a doodled object (default: a marble block on a plinth), never a drawing of the artwork.
+- **Artwork layer (the museum):** the public-domain photo of the work on a plain white mat, straight edges, no filters, nothing drawn over it. Beside or under it, a small museum-style label in print type with straight edges: artist, title, year, medium, size, and "View at the Louvre →" linking to the work's page on collections.louvre.fr. Zoom-ins are crops of the same original photo, never redrawn.
+
+> **Don't:** draw, trace or "cute-ify" an artwork; let a doodle, head or bubble overlap an artwork or its label; outline the painted heads; copy After Hours' own drawings (ours are drawn for this project); use AI-generated illustrations (doodles and heads are drawn by a person); glossy gradients, stacked shadows, screens full of emoji.
 
 Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
@@ -200,23 +204,28 @@ Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
 | Use | Colour | Value |
 |---|---|---|
-| Background | White | `#FFFFFF` |
-| Stage under the artwork, where heads sit | Light warm grey | `#F2F1EE` |
-| Body text | Ink | `#1C1C1E` |
-| Secondary text | Grey | `#7A7A80` |
-| Accent: main button, current level, selection | Blue | `#2D5BE3` |
-| Dividers, card and label borders | Light grey | `#E7E6E3` |
+| Page background | Warm beige off-white | `#F5F0E6` |
+| Stage under the artwork, where heads sit | Deeper beige | `#ECE4D3` |
+| Mat around the artwork, label card, speech bubbles | Paper white | `#FFFDF8` |
+| Doodle line and body text | Ink | `#1F1F1F` |
+| Secondary text | Warm grey | `#6E6A63` |
+| The one accent: main button, current level, selection | Ultramarine | `#2A3F8F` |
+| Done, streaks | Gold-brown | `#B08D57` |
+| Dividers, card and label borders | Light warm grey | `#E2DACB` |
+| Crayon touches inside doodles only (stickers, a scribble under a headline) | Crayon yellow, crayon coral | `#F2C14E`, `#E8836B` |
 
-Wrong answers are never shown in red; plain text explains them.
+Ultramarine is the only accent, so it always means "this is the thing to tap" or "you are here". It has a story: in the Renaissance it was ground from lapis lazuli, cost more than gold, and was often used for the Virgin's robe. Crayon colours stay inside doodles and never mark a state. The painted heads may use their own playful colours. Wrong answers are never shown in red; plain text explains them.
 
 ### Type and layout
 
-- One clean sans-serif for everything (default: Figtree, Google Fonts). Headlines bold and tight; story text regular.
+- Handwriting for voice: headlines, questions, answer options, buttons, route labels and speech bubbles use a childlike hand font (default: Gaegu, Google Fonts). Later it can be replaced by real children's handwriting, as HeyTea does.
+- Print for reading: story and branch text, the museum label, the "imagined voice" tag and sources use a clean rounded sans-serif (default: Nunito, Google Fonts), so longer passages stay easy to read.
 - Designed for a 375px-wide phone; on desktop, content is at most 640px wide, centred.
-- Body text 17px, line height 1.6; buttons at least 48px tall for one-handed use.
-- Buttons and answer options are rounded pills: the main action filled blue, others white with a thin border.
-- Artworks get no rounded corners and no filters. Heads, bubbles and buttons may be rounded; artworks never are.
-- Heads are drawn by a person as flat SVG shapes, friendly rather than accurate portraits.
+- Body text 17px, line height 1.7; buttons at least 48px tall for one-handed use.
+- Buttons and answer options are hand-drawn ink pills with handwriting labels: the main action filled ultramarine with white text, others paper white with the ink line; the selected option gets an ultramarine line.
+- The level route is a squiggly ink line; each level node is its narrator's painted head in an ink circle. Done gets a gold-brown tick, the current level an ultramarine ring and "Continue", locked levels are faded.
+- Artworks and their labels get no rounded corners and no filters. Doodle shapes, heads and bubbles may be wobbly and rounded; artworks never are.
+- Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Heads are flat SVG shapes drawn by a person, friendly rather than accurate portraits.
 - No animation in 0.5 beyond the soft fade between screens.
 
 ### Reference products
@@ -224,10 +233,10 @@ Wrong answers are never shown in red; plain text explains them.
 | Reference | Learn from | Don't copy |
 |---|---|---|
 | Duolingo | Level route, a little every day, small celebration on clearing a level | Saturated colours, a single mascot |
-| After Hours (@llleahb, MoMA artists project) | Painted artist heads, clean white page, label card beside the real artwork, artists talking in bubbles | Their drawings themselves, and the live AI chat mode (we don't use AI at runtime) |
-| HeyTea posters | A fresh, relaxed, childlike tone | Drawing over the product itself (for us: the artwork) |
+| After Hours (@llleahb, MoMA artists project) | Flat painted artist heads, warm quiet page, one blue accent, label card beside the real artwork, artists talking in bubbles | Their drawings themselves, and the live AI chat mode (we don't use AI at runtime; our artist voices are scripted and sourced in advance) |
+| HeyTea posters | Childlike handwriting and loose doodles; fresh and relaxed | Drawing over the product itself (for us: the artwork) |
 | Google Arts & Culture | Large artwork images, zooming into details | Pages that are too dense |
-| Louvre collections site<br>`collections.louvre.fr` | Restrained layout, how artwork information is written | Archive-style stacks of fields |
+| Louvre collections site<br>`collections.louvre.fr` | Restrained layout, how artwork information and labels are written | Archive-style stacks of fields |
 | 2–3 website screenshots from the product owner | Overall feel and colours | To be added |
 
 When building pages, the screenshots take precedence over this text. Where they conflict, follow the screenshots.
@@ -352,7 +361,7 @@ Five levels are five angles on the same work. 5 questions per level, each level 
 - Which story does each artwork's first level tell? (Default: the topics in the "Five levels, five artworks" table)
 - Which five masterpieces? (Decided: Mona Lisa, Venus de Milo, Winged Victory of Samothrace, Liberty Leading the People, The Raft of the Medusa)
 - Is 0.5 in Chinese or English? (Decided: English, for content, interface and this spec)
-- Fonts and look? (Decided 2026-10-09: After Hours-style painted heads with real artwork photos; one sans-serif, default Figtree)
+- Fonts and look? (Decided 2026-10-09: doodle chrome and handwriting combined with After Hours-style flat painted heads, a beige page, one ultramarine accent, and real artwork photos with museum labels; fonts default to Gaegu for handwriting and Nunito for reading)
 - Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (To be added)
 - Which voice for 1.0 audio? (Default: a warm English female voice; generate the first level as a test before deciding)
 - Is login required in 1.0? (Default: no; login only syncs progress)
