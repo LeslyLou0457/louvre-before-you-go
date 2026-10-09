@@ -193,8 +193,10 @@ let failed = 0;
 for (const img of config.images ?? []) {
   try {
     const first = await info(img.file);
-    // Standard Wikimedia thumbnail widths; the long edge ends up near 2000 px.
-    const width = first.width >= first.height ? 1920 : 1280;
+    // The largest standard Wikimedia thumbnail width that keeps the long
+    // edge at or under 2200 px: big enough to zoom, small enough for phones.
+    const scale = (w) => Math.max(w, Math.round((first.height * w) / first.width));
+    const width = [1920, 1280, 960].find((w) => scale(w) <= 2200) ?? 960;
     const i = width < first.width ? await info(img.file, width) : first;
     print(i);
     if (!ALLOWED.test(i.licence)) throw new Error(`licence "${i.licence}" is not allowed`);

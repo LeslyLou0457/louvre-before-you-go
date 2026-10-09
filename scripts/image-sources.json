@@ -1,11 +1,29 @@
 {
-  "candidates": [
-    "File:Nike of Samothrace, Paris, Louvre.jpg",
-    "File:Winged Victory of Samothrace - March 2015 by kHo.jpg"
-  ],
-  "searches": [
-    { "query": "intitle:\"Liberté guidant le peuple\"", "previewMinEdge": 4000 },
-    { "query": "Delacroix Liberté \"RF 129\"", "previewMinEdge": 4000 }
-  ],
-  "images": []
+  "images": [
+    {
+      "id": "mona-lisa",
+      "dest": "public/images/mona-lisa.jpg",
+      "file": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg"
+    },
+    {
+      "id": "venus-de-milo",
+      "dest": "public/images/venus-de-milo.jpg",
+      "file": "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg"
+    },
+    {
+      "id": "winged-victory",
+      "dest": "public/images/winged-victory.jpg",
+      "file": "File:Nike of Samothrace, Paris, Louvre.jpg"
+    },
+    {
+      "id": "liberty-leading-the-people",
+      "dest": "public/images/liberty-leading-the-people.jpg",
+      "file": "File:La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg"
+    },
+    {
+      "id": "raft-of-the-medusa",
+      "dest": "public/images/raft-of-the-medusa.jpg",
+      "file": "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg"
+    }
+  ]
 }
