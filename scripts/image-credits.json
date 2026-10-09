@@ -1,0 +1,57 @@
+{
+  "mona-lisa": {
+    "file": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+    "author": "Leonardo da Vinci",
+    "credit": "Cropped and relevelled from File:Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg . Originally C2RMF: Galerie de tableaux en très haute définition : image page",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "original": "7479x11146",
+    "downloaded": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "dest": "public/images/mona-lisa.jpg"
+  },
+  "venus-de-milo": {
+    "file": "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg",
+    "author": "Shonagon",
+    "credit": "Own work",
+    "licence": "CC0",
+    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "original": "6124x10349",
+    "downloaded": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg/1280px-V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "dest": "public/images/venus-de-milo.jpg"
+  },
+  "winged-victory": {
+    "file": "File:Nike of Samothrace, Paris, Louvre.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nike_of_Samothrace,_Paris,_Louvre.jpg",
+    "author": "Wilfredor",
+    "credit": "Own work",
+    "licence": "CC0",
+    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "original": "3606x3953",
+    "downloaded": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Nike_of_Samothrace%2C_Paris%2C_Louvre.jpg/1920px-Nike_of_Samothrace%2C_Paris%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "dest": "public/images/winged-victory.jpg"
+  },
+  "liberty-leading-the-people": {
+    "file": "File:La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg",
+    "author": "Eugène Delacroix",
+    "credit": "photo Shonagon 2024-05-02",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "original": "10128x8103",
+    "downloaded": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/1920px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "dest": "public/images/liberty-leading-the-people.jpg"
+  },
+  "raft-of-the-medusa": {
+    "file": "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Le_Radeau_de_la_M%C3%A9duse_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4884_;_C_51.jpg",
+    "author": "Théodore Géricault",
+    "credit": "photo Shonagon 2025-03-29",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "original": "10244x6924",
+    "downloaded": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Le_Radeau_de_la_M%C3%A9duse_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4884_%3B_C_51.jpg/1920px-Le_Radeau_de_la_M%C3%A9duse_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4884_%3B_C_51.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "dest": "public/images/raft-of-the-medusa.jpg"
+  }
+}
