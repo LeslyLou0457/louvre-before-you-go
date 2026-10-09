@@ -163,7 +163,7 @@
         },
         "n4b": {
           "type": "story",
-          "text": "She's engineering as much as carving: torso and wings made separately and attached; a base of 16 blocks in three courses, slabs marked with Greek letters for assembly. The whole monument weighs about 32 tonnes.",
+          "text": "She's engineering as much as carving: torso and wings made separately and attached; a base of 17 blocks in three courses (one never left Samothrace), slabs marked with Greek letters for assembly. The whole monument weighs about 32 tonnes.",
           "voice": {
             "speaker": "victory",
             "kind": "imagined",
@@ -283,6 +283,7 @@
       "takeaway": "Look down first: a goddess landing on a Rhodian-marble warship, built to be seen from her left, wind read in the cloth. Who set her up is still argued.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+        "https://focus.louvre.fr/en/node/185",
         "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/an-uplifting-sight",
         "https://www.samothracemuseum.gr/en/hall-d/",
         "https://www.samothrace.emory.edu/nike-monument/",
