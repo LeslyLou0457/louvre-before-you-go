@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Values follow PRODUCT.md "Design" (doodle + handwriting UI,
+ * flat painted artist heads, real artwork photos). Change them here only.
+ */
+@theme {
+  --color-paper: #f6f0e4;      /* page background: beige / warm off-white */
+  --color-mat: #ffffff;        /* plain white mat around an artwork photo */
+  --color-ink: #1f1f1f;        /* body text, doodle ink line */
+  --color-muted: #6b6b6b;      /* secondary text */
+  --color-ultramarine: #2a3f8f;/* accent: main button, current level, selection */
+  --color-gold: #b08d57;       /* done levels */
+  --color-line: #e2d9c7;       /* dividers, card and label borders */
+  --color-crayon: #f2c94c;     /* small crayon accent only */
+
+  --font-hand: var(--font-gaegu), "Comic Sans MS", cursive;
+  --font-read: var(--font-nunito), system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-paper);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-read);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The only motion allowed in 0.5: a soft fade between screens. */
+@keyframes soft-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.soft-fade {
+  animation: soft-fade 220ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .soft-fade { animation: none; }
+}
