@@ -5,6 +5,7 @@
 >
 > Transcribed to Markdown from the product owner's PDF (PRODUCT BRIEF · v0.5).
 > Revised 2026-10-07 at the product owner's request: the five artworks now match the story playbook, which is the content sample (see "Five levels, five artworks" and "Content sample"); the product, its content and this spec are in English.
+> Revised 2026-10-09 (content depth): after playtest feedback, every level must carry professional art-history analysis in conversational language (see "Depth standard"), and every wrong answer gets a clear correction (optional `correction` field on branches, see "Data format").
 
 **Duolingo for art history. See it before you go; recognise it when you're there.**
 Five minutes a day, one level, one small story about one artwork.
@@ -28,7 +29,7 @@ Louvre Before You Go is "Duolingo for art history". When you are planning to vis
 > **See it before you go; recognise it when you're there.**
 > When you stand in front of the work, you know it, and you know what happened behind it, like meeting an old friend.
 
-How it differs from what exists: a full video lecture is too long and your mind wanders; an encyclopedia is too dry and nothing sticks. Here, knowledge is cut into 5-minute stories, and questions pull you back in. Storytelling comes first; technique and analysis only when they're worth it.
+How it differs from what exists: a full video lecture is too long and your mind wanders; an encyclopedia is too dry and nothing sticks. Here, knowledge is cut into 5-minute stories, and questions pull you back in. Storytelling comes first, but the knowledge is real: every level carries professional art-history analysis (context, form, technique, sources, reception, open debates), told the way a friend who is an art historian would tell it.
 
 ### Product logic: the whole product does one thing, before the trip
 
@@ -77,11 +78,11 @@ Start with the best-known, the Mona Lisa. Each level tells only the most interes
 
 | | Artwork | Artist | What the level is about | A sample question |
 |---|---|---|---|---|
-| 1 | Mona Lisa | Leonardo da Vinci | How sfumato and chiaroscuro make a face seem to think | You can't find the edge of the shadow at her mouth. What is that trick called? |
-| 2 | Venus de Milo | Unknown | Contrapposto, and the action she has lost | Are the lines across her shoulders and hips parallel? |
-| 3 | Winged Victory of Samothrace | Unknown | Look down first: the ship under her feet | No wind was carved. So how do you know it's blowing? |
-| 4 | Liberty Leading the People | Eugène Delacroix | Who is the woman with the flag? | Is she a real woman who fought that day? |
-| 5 | The Raft of the Medusa | Théodore Géricault | A real shipwreck, and the moment the painter chose | You're Géricault. Which moment do you paint? |
+| 1 | Mona Lisa | Leonardo da Vinci | How sfumato, chiaroscuro and atmospheric perspective make a face seem to think; who she was, who kept her, and what time has done to her | You can't find the edge of the shadow at her mouth. What is that trick called? |
+| 2 | Venus de Milo | Unknown | A Hellenistic remake of a Classical ideal: contrapposto and spiral pose, the lost signature and the dating fight, what her arms held, where she stood | Are the lines across her shoulders and hips parallel? |
+| 3 | Winged Victory of Samothrace | Unknown | Look down first: the ship, the wind in the drapery, the hilltop setting (and the disproved fountain), who dedicated her and why nobody can say, how much is restored | No wind was carved. So how do you know it's blowing? |
+| 4 | Liberty Leading the People | Eugène Delacroix | July 1830, allegory meets street fight: pyramid and colour, the crowd's classes, the repentir, the 2024 restoration, and a painting the state kept hiding | Is she a real woman who fought that day? |
+| 5 | The Raft of the Medusa | Théodore Géricault | A real political scandal, the moment the painter chose, two pyramids, heroic bodies from Michelangelo, the darkening, and how readings still divide | You're Géricault. Which moment do you paint? |
 
 Venus de Milo and Winged Victory are sculptures, so their lesson pages show a photograph of the work.
 
@@ -101,14 +102,14 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 ### Rules for one level
 
-1. The main line tells a short story (2–4 sentences).
+1. The main line tells a short story: one to three screens between questions, each 2–4 sentences.
 2. A question appears, with 2–3 options.
 3. The choice leads to a short branch (1–3 sentences), then back to the main line.
 4. Repeat 5 times, clear the level, unlock the next.
 
 ### Three details
 
-- **A wrong answer never blocks you.** A wrong pick also opens a branch, which gives the right answer and one sentence of why. A wrong answer is another chance to tell a story.
+- **A wrong answer never blocks you, and it is always corrected.** A wrong pick opens its own branch. The branch says plainly that the answer isn't right, then a correction card explains why the idea is tempting, what is actually true, and the evidence (a detail in the work or a documented fact) that settles it. Never shown in red. A wrong answer is another chance to tell a story.
 - **Some questions have no right answer.** For example, "Where did your eye land first?": each option leads to a different branch.
 - **A level takes under 5 minutes.** One screen shows one passage or one question; tap to move on.
 
@@ -138,12 +139,20 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 - 0.5 content is written in English.
 - Talk like a friend telling you a story in front of the artwork: "you", short sentences, spoken style. A main-line passage is at most 45 words, a branch at most 40, a question at most 15.
-- One level, one thing. Explain one detail well rather than listing five facts.
+- One level, one through-line. Each level follows one question about the work, and goes deep on it rather than listing facts.
+- **Depth standard.** Conversational doesn't mean shallow. "Observe and describe" is the starting point, never the whole level. Across its five rounds, every level must cover, in plain spoken language:
+  1. Context: the historical and political moment, and who commissioned, paid for or bought the work (or that nobody knows).
+  2. Form, explained as why it matters: composition, space, light, colour, line, scale, viewpoint. Not "there is a triangle" but what the triangle does to you.
+  3. Technique and materials: how it was physically made, and what that tells us.
+  4. Iconography and sources: what the symbols mean and which earlier works or models it borrows from.
+  5. Reception and afterlife: how it was received, displayed, restored, and how scholars' readings have changed.
+  6. Real debates and open questions, presented as debates: name the positions (and a scholar or institution where possible), say what evidence each side has, and say what is still unknown.
+  Shallow vs deep, for example: "Her hips tilt" (shallow) vs "Her weight sits on one leg so hips and shoulders tilt against each other: contrapposto, a Classical invention that makes stone look ready to step forward; her sculptor winds it into a spiral" (deep). The playbook has more examples and a depth check in its QA checklist.
 - The first time a technical term appears, explain it in one plain sentence.
 - Every fact must be traceable to a source, listed in the level's `sources`. For disputed claims, write "one theory is".
 - Never invent things an artist said. Every quote needs a source.
 - Artist voices (optional, a few per level): a short line in a speaker's speech bubble, at most 25 words for an imagined line and 30 for a quote. Each voice must match the speaker's documented personality and must never step outside the sourced facts of the level. A line written for them is marked as an imagined voice; a real quote is used only when it is documented, word for word in a published translation, with its source cited. Anything that can't be sourced is written "TBD", never invented. An artist only speaks about what they could have known in their lifetime (Leonardo can't comment on the 1911 theft). Wrong-answer branches can be voiced by another fitting person with a documented link to the work. When the maker is unknown, the artwork itself speaks, limited to its documented history. The voices are scripted and checked in advance; there is no live AI conversation. Rules and personas: see the playbook.
-- Each question's options play three roles: the right answer, a near miss (a real neighbouring idea, e.g. chiaroscuro next to sfumato) and a common myth. No filler or joke options. A wrong-answer branch first credits the instinct, then says what that idea really is.
+- Each question's options play three roles: the right answer, a near miss (a real neighbouring idea, e.g. chiaroscuro next to sfumato) and a common myth. No filler or joke options. A wrong-answer branch first credits the instinct, then says plainly that it isn't right, and carries a `correction`: why the idea is tempting, what is actually true, and the evidence that settles it. Contested points are never turned into right/wrong questions unless the evidence clearly favours one answer; otherwise the right answer is "nobody knows for sure" and the branches explain the positions.
 - After the branches, every path rejoins the same main-line passage (the merge line). Anything everyone must remember goes there, so every player sees it whatever they picked.
 
 ### Content sample
@@ -193,6 +202,7 @@ Optional fields (added 2026-10-09; a file without them still works, and the app 
 | `artwork` | `medium`, `dimensions`, `museumUrl` | The museum label next to the photo: medium, size as the Louvre records it, and the work's page on collections.louvre.fr ("View at the Louvre →") |
 | top level | `speakers` | Who can speak in this file, by id: `name` (shown under the head), `kind` (`artist`, `artwork` when a statue with no known maker speaks, or `person` for another documented figure), `avatar` (id of the hand-drawn SVG: a painted head, or a doodled object for artworks and living artists) |
 | `lessons[]` | `narrator` | Speaker id of the level's main narrator, shown on the route and the level page. Missing means no head |
+| `branch` node | `correction` | Added 2026-10-09 for wrong-answer branches: `tempting` (why the idea is tempting, at most 30 words), `truth` (what is actually true, at most 35), `evidence` (the detail in the work or the documented fact that settles it, at most 35), optional `kind` (`near-miss` or `myth`, which sets the default heading "Close, but not quite" or "Not quite: a popular idea, but wrong") and optional `verdict` (a custom heading, at most 6 words). Shown as an ink-lined paper card under the branch text, with handwriting labels "Why it's tempting", "What's actually true", "How we know"; never red. The content check warns when a wrong choice (in a question that has a right answer) leads to a branch without one |
 | `story` / `branch` node | `voice` | One line in a speech bubble beside the speaker's head: `speaker` (an id from `speakers`), `text` (at most 25 words; a quote at most 30), `kind` (`imagined` or `quote`). A `quote` also needs `cite` (short attribution shown under the bubble, e.g. "Letter to his brother, 28 Oct 1830") and `source` (URL, also listed in the level's `sources`) |
 
 The node's `text` stays the friendly narration shown in print; `voice.text` is the speaker's own line, shown in handwriting in the bubble. An `imagined` voice always shows a small tag under the speaker's name, "Imagined voice, built from sourced facts"; a `quote` shows quotation marks and its `cite`. Nodes without `voice` show the narrator's head with no bubble. In 1.0, `story` and `branch` nodes gain an `audio` field pointing to that passage's audio. This structure maps one-to-one onto the 1.0 database tables, so upgrading is an import, not a rewrite.
@@ -338,7 +348,7 @@ One principle covers most boundaries: content is written in advance and checked 
 | Talking with the artist (AI playing Leonardo) | Uses lots of tokens and easily invents things that never happened; to be tested separately later. Scripted artist voices, written and source-checked in advance, are fine (see "How to write") |
 | Museum maps, 3D or virtual tours | The product is only for before the trip: knowing an artwork doesn't require knowing its room |
 | Museums other than the Louvre | Coming, but 0.5 and 1.0 do one museum thoroughly first |
-| An in-depth academic edition | Target users are beginners, not scholars |
+| An in-depth academic edition | Target users are beginners, not scholars. Professional depth in plain language is in scope (see "Depth standard"); footnotes, jargon and exhaustive coverage are not |
 | App, payments, comments and community | Not needed now |
 
 > **Image rights:** use only public-domain images of artworks (e.g. those marked Public Domain on Wikimedia Commons), and credit the source on the "About and sources" page. No AI-generated "copies" of artworks.
