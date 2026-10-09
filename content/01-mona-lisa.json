@@ -1,0 +1,243 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "mona-lisa",
+    "title": "Mona Lisa",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1503–1519",
+    "image": "/images/mona-lisa.jpg",
+    "imageCredit": "C2RMF scan via Wikimedia Commons (cropped and relevelled) · Public Domain",
+    "medium": "Oil on poplar panel",
+    "dimensions": "79.4 × 53.4 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010062370"
+  },
+  "speakers": {
+    "leonardo": {
+      "name": "Leonardo da Vinci",
+      "kind": "artist",
+      "avatar": "leonardo"
+    }
+  },
+  "lessons": [
+    {
+      "id": "mona-lisa-1",
+      "order": 1,
+      "title": "A face that seems to think",
+      "start": "n1",
+      "narrator": "leonardo",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Before you judge her, look. Her body turns one way, and her eyes come round to you. Living people move like that."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where did your eye land first?",
+          "choices": [
+            {
+              "label": "Her eyes",
+              "next": "b1a"
+            },
+            {
+              "label": "Her mouth",
+              "next": "b1b"
+            },
+            {
+              "label": "Her hands",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Most people start there. Her eyes are on you, but her body hasn't finished turning. It's as if she sat down, then turned to hear what you were saying.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "The famous smile. Keep it in mind: in a minute you'll try to find exactly where it starts, and you won't be able to.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Good eye; few people start there. Her hands rest one on the other, calm and heavy. They'll come back later, because they hide one of Leonardo's techniques.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Here's why she feels alive: her face and body don't turn quite the same way. Now try something. Point to the exact spot where the shadow at the corner of her mouth ends.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "You can't find the line. What is that trick called?",
+          "choices": [
+            {
+              "label": "Sfumato",
+              "next": "b2a",
+              "correct": true
+            },
+            {
+              "label": "Chiaroscuro",
+              "next": "b2b"
+            },
+            {
+              "label": "It's just old varnish",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Yes. Sfumato, often translated as \"smoky\": neighbouring tones melt into each other, so edges look as if seen through thin air. But it isn't blur. Her mouth and cheeks are still perfectly solid.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Search for my line at the corner of her mouth. You won't find one. Light and shadow meet there softly, like smoke."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Good instinct, different job. Chiaroscuro builds volume with light and dark, and Leonardo does use it here: look at her knuckles. But it rounds a form; it doesn't dissolve an edge.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Light and shade give her volume; look at her knuckles. But rounding a form and softening its edge are different jobs."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Fair suspicion: the varnish really has yellowed. But the soft edges are a technique, not damage. It's called sfumato: tones melt together so no line can be found.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "So one face holds two techniques. Chiaroscuro builds the volume; sfumato softens its borders. Now look past her shoulder: mountains, water, a winding road, a bridge.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "There are no floor tiles or buildings here. What makes those mountains feel far away?",
+          "choices": [
+            {
+              "label": "Lines meeting at a vanishing point",
+              "next": "b3a"
+            },
+            {
+              "label": "The air: far things go soft and cool",
+              "next": "b3b",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "That's linear perspective: floor tiles and buildings shrinking toward one point. Look again. There are no such lines here. Leonardo used something softer.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Exactly. The further away something is, the more air sits between you and it, dulling its colour and blurring its edges. It's called atmospheric perspective.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Up close, her sleeves are crisp; far off, the hills soften and cool. That's atmospheric perspective. And the woman? Lisa Gherardini of Florence. Her husband traded in silk and very probably commissioned the portrait for their home.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "quote",
+            "text": "There are three branches of perspective.",
+            "cite": "Leonardo's notebooks, §14, tr. J. P. Richter (1888)",
+            "source": "https://www.gutenberg.org/ebooks/5000"
+          },
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Yet the family never got the painting. Why?",
+          "choices": [
+            {
+              "label": "Leonardo kept it",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "It was stolen",
+              "next": "b4b"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Right. Leonardo held on to it and kept revising it for years. Later it entered the French royal collection. A family portrait became a court treasure.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "I kept her with me, and kept working on her, for years."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "It was stolen, but four centuries later; hold that thought. What actually happened: Leonardo kept it and kept revising it, and it later entered the French royal collection.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "She wears no jewels. Her status is quiet: a decorated neckline, full sleeves, a veil so thin it nearly disappears. But look at the whole picture now. Everything glows a yellowish brown.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Is that golden glow Leonardo's choice?",
+          "choices": [
+            {
+              "label": "Yes, he painted it that way",
+              "next": "b5a"
+            },
+            {
+              "label": "Partly; time added some of it",
+              "next": "b5b",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Not all of it. Varnish added later has aged and yellowed, changing how we read her sky and her clothes. Some of that glow is time, not Leonardo.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Right. Later varnish has yellowed, so we see the sky and her dress through it. The wood has warped and cracked too, which is why she now sits in a case that controls temperature and humidity.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Time touched her one more way. In 1911, Vincenzo Peruggia, who had worked at the Louvre, stole her; she came back in 1913. The theft put her in the newspapers. The smile is what keeps you looking."
+        }
+      },
+      "takeaway": "Chiaroscuro makes her solid; sfumato keeps her edges soft. Together they make a face that seems to be thinking.",
+      "sources": [
+        "https://collections.louvre.fr/ark:/53355/cl010062370",
+        "https://mini-site.louvre.fr/trimestriel/2019/dossier_pedagogique_leonard/16/",
+        "https://www.museodelprado.es/en/learn/research/studies-and-restorations/resource/study-of-the-prado-museums-copy-of-la-gioconda/504eace0-d54e-49b1-a16b-7afd17f756d3",
+        "https://www.nationalgallery.org.uk/paintings/glossary/sfumato",
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+        "https://www.gutenberg.org/ebooks/5000"
+      ]
+    }
+  ]
+}

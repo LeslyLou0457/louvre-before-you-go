@@ -380,7 +380,7 @@ Five levels are five angles on the same work. 5 questions per level, each level 
 - Which five masterpieces? (Decided: Mona Lisa, Venus de Milo, Winged Victory of Samothrace, Liberty Leading the People, The Raft of the Medusa)
 - Is 0.5 in Chinese or English? (Decided: English, for content, interface and this spec)
 - Fonts and look? (Decided 2026-10-09: doodle chrome and handwriting combined with After Hours-style flat painted heads, a beige page, one ultramarine accent, and real artwork photos with museum labels; fonts default to Gaegu for handwriting and Nunito for reading)
-- Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (To be added)
+- Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (Done 2026-10-09: CC0 photos from Wikimedia Commons, Venus de Milo by Shonagon and Winged Victory by Wilfredor)
 - Which voice for 1.0 audio? (Default: a warm English female voice; generate the first level as a test before deciding)
 - Is login required in 1.0? (Default: no; login only syncs progress)
 

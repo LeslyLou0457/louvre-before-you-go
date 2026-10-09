@@ -1,0 +1,230 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "venus-de-milo",
+    "title": "Venus de Milo",
+    "artist": "Unknown",
+    "year": "c. 150–125 BCE",
+    "image": "/images/venus-de-milo.jpg",
+    "imageCredit": "Photo: Shonagon, 2024, via Wikimedia Commons · CC0",
+    "medium": "Parian marble",
+    "dimensions": "Height 204 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010277627"
+  },
+  "speakers": {
+    "venus": {
+      "name": "Venus de Milo",
+      "kind": "artwork",
+      "avatar": "marble-block"
+    }
+  },
+  "lessons": [
+    {
+      "id": "venus-de-milo-1",
+      "order": 2,
+      "title": "The missing action",
+      "start": "n1",
+      "narrator": "venus",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Everyone looks at the missing arms first. Walk round her slowly instead, from the front to the side. She stands just over two metres tall.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Walk round me slowly. I'm a little over two metres of marble, and the name of my sculptor is unknown."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What strikes you first?",
+          "choices": [
+            {
+              "label": "Her smooth skin",
+              "next": "b1a"
+            },
+            {
+              "label": "The heavy drapery",
+              "next": "b1b"
+            },
+            {
+              "label": "The missing arms",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Her chest and belly are carved so gently they read as soft. Notice how much of that softness depends on what sits right below it.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "The cloth bunches at her hips and falls in heavy folds. Light runs along the ridges and pools in the hollows.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Everyone's eyes go there. We'll come back to them, because what she was doing with those arms is still an open question.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "The trick is contrast: smooth skin above, deep-cut cloth below, one stone reading as two materials. Now picture a line across her shoulders, and another across her hips.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Are those two lines parallel?",
+          "choices": [
+            {
+              "label": "Yes, she stands straight",
+              "next": "b2a"
+            },
+            {
+              "label": "No, they tilt against each other",
+              "next": "b2b",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Look again. Her weight isn't shared evenly between her legs, so her hips tilt one way and her shoulders answer the other way. She's calm, but she's no column.",
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Exactly. One leg bears the weight, the other relaxes, and every part of the body adjusts. Art historians call this contrapposto, roughly \"opposed balance\".",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "One leg holds my weight; the other rests. Everything above answers that choice, right up to my shoulders."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "That's contrapposto: one leg takes the weight and the body answers. Walk to her side and it becomes a slow spiral. Now, something you can't see from here.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Was she carved from one solid block of marble?",
+          "choices": [
+            {
+              "label": "Yes, one block",
+              "next": "b3a"
+            },
+            {
+              "label": "No, she's assembled",
+              "next": "b3b",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "That's the romantic image: one genius, one block. In fact she's two main blocks joined at the hips, and her left arm was carved separately and attached.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Not one block. I'm two main blocks, joined at the hips, and my left arm was made separately."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Right. Two main blocks meet at the hips, the join hidden near the folds, and her left arm was made separately too.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Ancient sculpture could be a chain of specialists, not one person alone with a stone. Small fixing holes show she once wore a metal headpiece and a bracelet on her right arm.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "A goddess of love. Where do you think she first stood?",
+          "choices": [
+            {
+              "label": "In a temple of love",
+              "next": "b4a"
+            },
+            {
+              "label": "In the city's gymnasium",
+              "next": "b4b",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "That's most people's guess. But archaeologist Rachel Kousser argues for somewhere less expected: the public gymnasium of Melos.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Sharp guess. That's exactly what archaeologist Rachel Kousser argues: the public gymnasium of Melos.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "A Greek gymnasium wasn't a gym. It mixed sport, education and civic life, and its users were mostly young men. There, a goddess linked to love and marriage meant something local. It's a strong argument, but still a theory.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Where did I first stand? That isn't known. The gymnasium is a strong argument, but still a theory."
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Why didn't the Louvre give her new arms?",
+          "choices": [
+            {
+              "label": "Nobody knew what she held",
+              "next": "b5a"
+            },
+            {
+              "label": "Not to change the work",
+              "next": "b5b",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "That's part of the puzzle. A hand holding an apple was found nearby, but the arms are lost. The museum's own reason was different: it decided not to change the nature of the work.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Right. Found on Melos in 1820, she reached the Louvre the next year. The museum considered adding arms, then decided not to change the nature of the work.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Her losses: the left arm, most of the right arm, the left foot. Her hair bun was rejoined, and the tip of her nose is plaster. \"Broken beauty\" is our taste. The lost gesture is the real question.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Found on Melos in 1820, in the Louvre by 1821. My arms are lost, and with them, whatever I was doing."
+          }
+        }
+      },
+      "takeaway": "Contrapposto: one leg carries the weight and the whole body answers. Her missing arms took her story with them.",
+      "sources": [
+        "https://collections.louvre.fr/ark:/53355/cl010277627",
+        "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty",
+        "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html",
+        "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf"
+      ]
+    }
+  ]
+}

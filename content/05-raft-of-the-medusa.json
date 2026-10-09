@@ -1,0 +1,240 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "raft-of-the-medusa",
+    "title": "The Raft of the Medusa",
+    "artist": "Théodore Géricault",
+    "year": "1818–1819",
+    "image": "/images/raft-of-the-medusa.jpg",
+    "imageCredit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "491 × 716 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010059199"
+  },
+  "speakers": {
+    "gericault": {
+      "name": "Théodore Géricault",
+      "kind": "artist",
+      "avatar": "gericault"
+    }
+  },
+  "lessons": [
+    {
+      "id": "raft-of-the-medusa-1",
+      "order": 5,
+      "title": "Hope without a goddess",
+      "start": "n1",
+      "narrator": "gericault",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "This canvas is almost a storey high and more than seven metres wide. Bodies lie at the bottom left. At the top right, a man waves a cloth at something far away.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Which part pulls you in first?",
+          "choices": [
+            {
+              "label": "The man waving",
+              "next": "b1a"
+            },
+            {
+              "label": "The bodies",
+              "next": "b1b"
+            },
+            {
+              "label": "The sea and sky",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "He's at the top of a pyramid of bodies: a Black man waving a cloth toward a ship you can barely see.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Bodies lying, hanging, propped up. Some may be dead; others exhausted or unconscious. It's hard to tell them apart, and that difficulty is the weight of the painting.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "A huge sea, a huge sky, and on the horizon a ship so small it's unsettling. You can see every muscle on the raft. The rescuers may not see them at all.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "This really happened. In 1816 the French navy ship Méduse ran aground on the way to Senegal. People were put on a raft, the tow was cut, and they were abandoned. Only fifteen survived.",
+          "voice": {
+            "speaker": "gericault",
+            "kind": "imagined",
+            "text": "I met two of the survivors, Corréard and Savigny. Their published account had made the wreck a scandal."
+          },
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "You're Géricault. Which moment do you paint?",
+          "choices": [
+            {
+              "label": "The shipwreck",
+              "next": "b2a"
+            },
+            {
+              "label": "The rescue",
+              "next": "b2b"
+            },
+            {
+              "label": "The moment they spot a ship",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Dramatic, but he skipped it. He chose the moment they spot a tiny ship and start waving, before anyone knows if they'll be saved.",
+          "voice": {
+            "speaker": "gericault",
+            "kind": "imagined",
+            "text": "The wreck was only the beginning. I wanted the moment they see the ship, before anyone knows if they'll be saved."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "He didn't show the rescue as done. He chose the moment just before: a tiny ship, men waving, and no way to tell if help is coming.",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "That's his choice. A tiny ship on the horizon, men starting to wave, and no way to tell yet whether they'll be saved.",
+          "voice": {
+            "speaker": "gericault",
+            "kind": "imagined",
+            "text": "Yes. The ship is there, tiny. Nobody on the raft knows yet whether it will come."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "That uncertainty is the point: the gap between seeing rescue and being rescued. Now trace the shapes. Bodies climb from the bottom left toward the waving man, forming a pyramid.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "What forms a second triangle beside that pyramid?",
+          "choices": [
+            {
+              "label": "The mast, ropes and sail",
+              "next": "b3a",
+              "correct": true
+            },
+            {
+              "label": "The waves",
+              "next": "b3b"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Right. Mast, ropes and sail make a second triangle. Side by side, the two make the raft feel held together and pulled apart at once.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "The waves do another job: they make this last scrap of floor feel unsafe. The second triangle is the mast, ropes and sail.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Two triangles: one of bodies rising, one of mast and sail. Low means close to death; high means trying to be seen. Now look at those bodies again.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "The real survivors were starving. Why do these bodies look so strong?",
+          "choices": [
+            {
+              "label": "He idealised them on purpose",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "He painted the survivors themselves",
+              "next": "b4b"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Yes. Muscular, twisting nudes at this scale belong to the art of heroes and saints; the Louvre links them to Michelangelo. It gave nameless victims public weight.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "He did use survivors' accounts. But the waving man was posed by a professional model, Joseph, not a survivor. And the heroic strength is deliberate.",
+          "voice": {
+            "speaker": "gericault",
+            "kind": "imagined",
+            "text": "I listened to survivors, yes. But the man waving was posed by Joseph, a professional model."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Heroic bodies, borrowed from paintings of saints and heroes, given to ordinary people from the news. And now look at the colour: the whole painting is very dark.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Is all that darkness Géricault's choice?",
+          "choices": [
+            {
+              "label": "Yes, all of it",
+              "next": "b5a"
+            },
+            {
+              "label": "No, it has darkened",
+              "next": "b5b",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Not all of it. As early as 1881, the Louvre worried that the painting kept darkening, and linked it to bituminous materials and the oil medium.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Right. Louvre records from 1881 already worried about the darkening, linking it to bituminous materials and the oil medium. The concern led to a reproduction print.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Nobody commissioned it. Géricault made it for the 1819 Salon, possibly hoping the state would buy; it entered the royal collection only after his death in 1824. There's no goddess here. Survivors have to lift themselves and wave.",
+          "voice": {
+            "speaker": "gericault",
+            "kind": "imagined",
+            "text": "Nobody asked me for it. I showed it at the 1819 Salon under a quieter title: Scene of a Shipwreck."
+          }
+        }
+      },
+      "takeaway": "Géricault painted the moment hope appears but isn't yet real. Two triangles, heroic bodies, and a darkness that is partly time.",
+      "sources": [
+        "https://collections.louvre.fr/ark:/53355/cl010059199",
+        "https://www.louvre.fr/decouvrir/les-parcours-de-visite/sur-les-pas-de-beyonce-et-de-jay-z/le-radeau-de-la-meduse",
+        "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf",
+        "https://collections.louvre.fr/en/ark:/53355/cl010052762",
+        "https://arts-graphiques.louvre.fr/detail/oeuvres/0/531367-Le-Radeau-de-la-Meduse"
+      ]
+    }
+  ]
+}
