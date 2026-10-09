@@ -39,12 +39,13 @@ jobs:
       - run: python tmp-fetch/fetch.py $(cat tmp-fetch/run.txt 2>/dev/null)
       - name: Commit results
         run: |
+          set +e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A tmp-fetch/out
+          echo "::warning::out: $(ls -R tmp-fetch/out 2>&1 | tr '\n' ' ' | head -c 900)"
+          git add -A tmp-fetch/out 2>/tmp/add.err || echo "::warning::add failed: $(cat /tmp/add.err | tr '\n' ' ')"
           if [ -d public/images/challenge ]; then git add -A public/images/challenge; fi
-          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
-          git commit -q -m "Temporary: challenge fetch results" -m "Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
-          Claude-Session: https://claude.ai/code/session_0184qQRNq3EDUeoBUs6ASDUG"
-          git pull --rebase -q || true
-          git push
+          if git diff --cached --quiet; then echo "::warning::nothing new"; exit 0; fi
+          git commit -q -m "Temporary: challenge fetch results" > /tmp/c.out 2>&1 || echo "::warning::commit failed: $(cat /tmp/c.out | tr '\n' ' ')"
+          git push > /tmp/p.out 2>&1 || echo "::warning::push failed: $(cat /tmp/p.out | tr '\n' ' ' | head -c 900)"
+          echo "::warning::done $(git log --oneline -1)"
