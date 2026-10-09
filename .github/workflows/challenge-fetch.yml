@@ -43,7 +43,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           echo "::warning::out: $(ls -R tmp-fetch/out 2>&1 | tr '\n' ' ' | head -c 900)"
-          git add -A tmp-fetch/out 2>/tmp/add.err || echo "::warning::add failed: $(cat /tmp/add.err | tr '\n' ' ')"
+          git add -f -A tmp-fetch/out 2>/tmp/add.err || echo "::warning::add failed: $(cat /tmp/add.err | tr '\n' ' ')"
           if [ -d public/images/challenge ]; then git add -A public/images/challenge; fi
           if git diff --cached --quiet; then echo "::warning::nothing new"; exit 0; fi
           git commit -q -m "Temporary: challenge fetch results" > /tmp/c.out 2>&1 || echo "::warning::commit failed: $(cat /tmp/c.out | tr '\n' ' ')"
