@@ -6,6 +6,7 @@
 > Transcribed to Markdown from the product owner's PDF (PRODUCT BRIEF · v0.5).
 > Revised 2026-10-07 at the product owner's request: the five artworks now match the story playbook, which is the content sample (see "Five levels, five artworks" and "Content sample"); the product, its content and this spec are in English.
 > Revised 2026-10-09 (content depth): after playtest feedback, every level must carry professional art-history analysis in conversational language (see "Depth standard"), and every wrong answer gets a clear correction (optional `correction` field on branches, see "Data format").
+> Revised 2026-10-09 (Close-Up Challenge): after all 5 levels, a Close-Up Challenge unlocks, with one 2-question round per artwork built on zoomed crops of high-resolution photos (see "Close-Up Challenge" and "Challenge files"). Time per level: about 5 minutes, never more than 7; one work, level plus close-up round, within 10.
 
 **Duolingo for art history. See it before you go; recognise it when you're there.**
 Five minutes a day, one level, one small story about one artwork.
@@ -111,7 +112,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 - **A wrong answer never blocks you, and it is always corrected.** A wrong pick opens its own branch. The branch says plainly that the answer isn't right, then a correction card explains why the idea is tempting, what is actually true, and the evidence (a detail in the work or a documented fact) that settles it. Never shown in red. A wrong answer is another chance to tell a story.
 - **Some questions have no right answer.** For example, "Where did your eye land first?": each option leads to a different branch.
-- **A level takes about 5 minutes, at most about 6–7.** Since the 2026-10-09 depth revision a level is about 17–21 short screens: roughly 4–5 minutes when your answers are right, 6 or so when you get them wrong and read the corrections. One screen shows one passage or one question; tap to move on.
+- **A level takes about 5 minutes, never more than 7.** Since the 2026-10-09 depth revision a level is about 17–21 short screens: roughly 4–5 minutes when your answers are right, a little more when you get them wrong and read the corrections. One screen shows one passage or one question; tap to move on. Everything about one work, its level plus its close-up round (see "Close-Up Challenge"), stays within 10 minutes.
 
 > **Audio waits for 1.0:** 0.5 is text only; get the story and pacing right first. Write it the way people speak, so the 1.0 voice-over needs no rewrite.
 
@@ -119,7 +120,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 | Page | What it does |
 |---|---|
-| Level route (home) | A vertical route of 5 level nodes in three states: done, current, locked; the current level has a "Start" button, and any level left mid-way has a "Continue" button that resumes it |
+| Level route (home) | A vertical route of 5 level nodes in three states: done, current, locked; the current level has a "Start" button, and any level left mid-way has a "Continue" button that resumes it. Below it, the Close-Up Challenge (locked until all 5 levels are done) |
 | Lesson page | Top half: the artwork (tap to zoom). Bottom half: one passage or one question. Progress bar at the top ("Question 3 of 5") and an exit button |
 | Level cleared page | "One thing to remember today": a one-sentence summary of the level; unlock the next level, back to the route |
 | About and sources | Image sources and references |
@@ -127,6 +128,66 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 - Tapping a locked level shows a light hint, "Finish the previous level first", not a pop-up.
 - Leaving mid-level saves your place in the browser: reopening the level (or reloading the page) picks up at the same passage or question, with a small "Start over" link to replay it from the beginning. The saved place is cleared when the level is finished. Finished levels can be replayed.
 - Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti. No character animation in 0.5.
+
+---
+
+## 02 · 0.5 · Close-Up Challenge — zoom in once all five levels are done
+
+Added 2026-10-09, from the approved design (project files, `challenge/DESIGN.md`) and the product owner's decisions on it.
+
+After a player has finished all 5 levels, a **Close-Up Challenge** unlocks below the level route: one short round per artwork. Each question zooms into one region of the real artwork, a crop of a high-resolution photo, and asks a harder question built on something the level taught. "Challenge" means advanced; nothing is paid.
+
+### Rules for the challenge
+
+1. **Unlock:** all 5 levels finished. Before that, the challenge is shown locked with one line saying why ("Finish all five levels to unlock the close-ups"), not a pop-up.
+2. **One round per artwork,** in route order, like the levels: the first unfinished round is current, later ones are locked, finished rounds can be replayed.
+3. **2 questions per round.** Each artwork keeps an ordered **pool** of fully sourced questions. Play *k* (0, 1, 2, …) shows pool items 2*k* and 2*k*+1, counted round the pool (indices modulo the pool size), so the first play is always the first two and a replay shows the next pair. One play counter per artwork in localStorage; it moves on when a round is finished. A pool of 3 repeats a question on the third play; a pool of 2 shows the same pair every time.
+4. **One question is 4 screens,** the usual loop: an intro with the zoomed crop, the question with 3 options, the branch (a wrong pick gets the usual correction card), and the merge line every player sees. The crop stays on screen for the whole question, with a small "see where" thumbnail of the whole work with the region outlined, so the player knows where they are; tapping the crop opens it full screen, tapping the thumbnail opens the whole work with the outline. After the second merge line, the round's cleared page repeats both merge lines.
+5. **Sources on screen:** each question's merge screen lists its sources in small print, with links.
+6. **Saved like a level:** leaving or reloading mid-round picks up at the same screen of the same pair, with "Start over"; the place is cleared when the round is finished.
+
+### Options: one right answer, two near misses
+
+- Exactly **3 options**: one right and **two near misses**. A near miss is a real alternative from the work's own world: a technique, device or reading genuinely used in the period (another Renaissance shading recipe, a Hellenistic way of holding up marble, a Flemish parapet), or a documented fact about this very object (the yellowed varnish, the 1949 retouching, the 1848 tear). Picked and corrected, it still teaches something true. Never silly, obviously wrong or irrelevant.
+- Every wrong option leads to a branch with a `correction` card, and the source of what the card says.
+- **"Nobody can tell"** counts as a near miss only where a source shows the evidence does exist.
+- **Approved exception:** the Mona Lisa horizon question keeps the documented "uneven horizon" misreading as its second wrong option (role `myth`).
+- Live debates are never right/wrong. If a fact is settled but its meaning is open, the right answer states the fact and the merge line says what's unknown.
+- Every question extends the level: a new place in the work, the physical mechanism, the reason, or the correction of a common misreading. It never repeats a level question with a new picture. Where a source gives the reason a feature sits in that exact place, ask **why it is there**.
+
+### Accuracy rule (non-negotiable)
+
+- **A zoom region is used only if a source explicitly places that technique, feature or condition in that exact area of the work.** No source locating it, no question.
+- Every quoted passage and fact is checked against the source text, and every crop is checked by eye against the region the source describes, before a question ships. A question whose crop can't show its feature clearly, or whose source is not yet strong enough, is kept out of the rotation in `held`, with the reason.
+- Preferred sources: the museum (collections.louvre.fr, the Louvre's Focus guides and teaching files, curators' statements), the C2RMF and peer-reviewed technical studies, primary sources, then established scholarship and reference works. Page numbers or editions not yet checked stay "TBD" in the review notes and are never shown to players as claims.
+
+### Time budget
+
+The whole challenge, all 5 rounds, takes at most **12 minutes** (720 s), so a round takes at most **144 s**, even when every answer is wrong and every correction card is read.
+
+Model (also used by the content check): reading at 200 words per minute (0.3 s a word, the low end of adult silent reading; Brysbaert 2019, *Journal of Memory and Language* 109, 104047); per question 6 s looking at the zoom, 5 s choosing and 4 taps of 1 s (15 s); per round, the title and the cleared page's two merge lines plus 2 taps.
+
+Word caps per question (tighter than a level's):
+
+| Screen | Cap |
+|---|---|
+| Intro (with the zoom) | 30 |
+| Question | 12 |
+| Options | 15 in total, each at most 7 |
+| Right branch | 30 |
+| Wrong branch | 15 |
+| Correction card | tempting 20 · truth 25 · evidence 25 |
+| Merge line | 18 |
+| Round title | 8 |
+
+At the caps the worst path is 160 words (63 s) and the right path 105 words (46.5 s) per question, so 2 questions fit (141 s a round, 11.8 minutes for all five) and 3 don't. The content check computes every pair the rotation can show and fails any round over 144 s.
+
+### Images
+
+- Zooms come from a high-resolution reference image, never from the app's ~1150–2000 px photos: for the Mona Lisa the uncropped C2RMF scan on Wikimedia Commons ("Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg"), for the other four the same Commons files the app photos come from. Public domain or CC0 only; credits as for the app photos, and the About page links the reference file.
+- Regions are normalized boxes `{ x, y, w, h }`: fractions 0–1 of the full reference image, top-left origin, measured on the full image.
+- Crops are cut once, offline, at about 1200 px on the long side (never upscaled) into `public/images/challenge/<artwork id>/<question id>.jpg`, plus `overview.jpg`, a small copy of the whole reference image for the "see where" thumbnail. The multi-megabyte originals are not kept in the repo.
+- Crops are never redrawn, filtered or drawn on. The only outline is drawn by the page over the overview thumbnail, around the region; the image file itself stays untouched.
 
 ---
 
@@ -206,6 +267,27 @@ Optional fields (added 2026-10-09; a file without them still works, and the app 
 | `story` / `branch` node | `voice` | One line in a speech bubble beside the speaker's head: `speaker` (an id from `speakers`), `text` (at most 25 words; a quote at most 30), `kind` (`imagined` or `quote`). A `quote` also needs `cite` (short attribution shown under the bubble, e.g. "Letter to his brother, 28 Oct 1830") and `source` (URL, also listed in the level's `sources`) |
 
 The node's `text` stays the friendly narration shown in print; `voice.text` is the speaker's own line, shown in handwriting in the bubble. An `imagined` voice always shows a small tag under the speaker's name, "Imagined voice, built from sourced facts"; a `quote` shows quotation marks and its `cite`. Nodes without `voice` show the narrator's head with no bubble. In 1.0, `story` and `branch` nodes gain an `audio` field pointing to that passage's audio. This structure maps one-to-one onto the 1.0 database tables, so upgrading is an import, not a rewrite.
+
+### Challenge files
+
+One file per artwork in `content/challenge/`, named like the level files (`01-mona-lisa.json`). It uses the same lesson and node format as a level, with these differences:
+
+| Where | Field | What it holds |
+|---|---|---|
+| top level | `artworkId` | The level file's `artwork.id`; title, museum label, credit and speakers come from that file |
+| top level | `zoomImage` | The reference image: `file` (Commons file name), `commons` (its file page), `width` and `height` in pixels, `licence`, `credit`, and `overview` (path of the "see where" image under `public/`) |
+| `lessons[]` | `kind`, `unlock` | `"challenge"` and `"all-base-levels"` |
+| `lessons[]` | `roundSize` | `2` |
+| `lessons[]` | `pool` | Ordered intro-node ids of the questions in the rotation. Replaces `start` |
+| `lessons[]` | `held` | `[{ "start", "why" }]`: sourced questions kept out of the rotation, with the reason |
+| `lessons[]` | (no `takeaway`) | The cleared page shows the round's two merge lines instead |
+| `story` / `question` node | `zoom` | `{ x, y, w, h, label, image }`: the normalized box, a description that doubles as alt text, and the crop's path under `public/`. The same on a question's intro and question node |
+| `question` node | `sources` | `[{ "title", "url" }]`: the question's sources as players see them under the merge line |
+| `choices[]` | `role` | `"right"`, `"near-miss"`, or `"myth"` for an approved exception |
+| merge node | (no `next`) | The player goes on to the round's next question, or the cleared page |
+| top level | `review` | Per question node id (`c1q`, …): `extends` (`nodes` in the level file, `concept`), `framing`, `what_you_learn`, `regionSources` and `choiceSources` (title, URL, the exact quoted passage, a translation marked "our translation" if not English, what it supports; `choiceSources` keyed by wrong-branch id), `confidence`, `notes`, `quoteCheck` and `cropCheck` (when and how quotes and crop were checked), and `exception` where an approved exception (a `myth` option) applies. Ignored by the app: it is the audit trail |
+
+Node ids per question: `cN` intro, `cNq` question, `cNa`/`cNb`/`cNc` branches in option order, `cNm` merge. `npm run check-content` also checks challenge files: 3 options with one `right` and two wrong (`near-miss`, or `myth` where approved); a `correction` and a `choiceSources` entry for every wrong option; at least one `regionSources` quote; a `zoom` inside 0–1 on intro and question, the same on both, and its crop file in `public/`; every branch leads to the question's merge line; the word caps; every round the rotation can show within 144 s; and every node named in `review.extends` exists in the level file.
 
 ---
 
@@ -318,7 +400,7 @@ Every item can be ticked, no gut feeling. When all are ticked, the version is do
 ### 0.5 acceptance
 
 - [ ] All 5 artworks, 5 levels and 25 questions live; every fact checked and sourced
-- [ ] On a phone, each level finishes in about 5 minutes, and never more than 7 (the target was "under 5" before the 2026-10-09 depth revision; the product owner decides)
+- [ ] On a phone, each level finishes in about 5 minutes, and never more than 7; one work (level plus close-up round) within 10 minutes; the whole Close-Up Challenge (5 rounds) within 12 minutes
 - [ ] Close the browser and reopen it: progress is still there
 - [ ] Leave a level mid-way and reopen it: it continues from the same question
 - [ ] 3 people who didn't help build it play it; at least 2 finish all 5 levels without prompting

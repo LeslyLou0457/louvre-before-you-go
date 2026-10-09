@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BackDoodle, UnderlineDoodle } from "@/doodles";
+import { closeUpSources, getRounds } from "@/lib/challenge";
 import { getLevels, museumLink } from "@/lib/content";
 import { IMAGE_SOURCE } from "@/lib/image-sources";
 
@@ -8,6 +9,7 @@ export const metadata: Metadata = { title: "About & sources · Louvre Before You
 
 export default function AboutPage() {
   const levels = getLevels();
+  const rounds = getRounds();
   return (
     <main className="soft-fade py-6">
       <Link href="/" className="inline-flex min-h-12 items-center gap-2 font-hand text-lg">
@@ -41,6 +43,7 @@ export default function AboutPage() {
         {levels.map((l) => {
           const photoSource = IMAGE_SOURCE[l.artwork.id];
           const louvre = museumLink(l);
+          const round = rounds.find((r) => r.levelId === l.lesson.id);
           return (
             <li key={l.lesson.id} className="wobbly-alt border-2 border-ink bg-mat px-5 py-4">
               <h2 className="font-hand text-2xl font-bold leading-tight">
@@ -75,6 +78,14 @@ export default function AboutPage() {
                   )}
                 </p>
               )}
+              {round && (
+                <p className="text-sm">
+                  Close-ups: {round.zoomImage.credit} ·{" "}
+                  <a href={round.zoomImage.commons} className="text-ultramarine underline" target="_blank" rel="noopener noreferrer">
+                    full-resolution file on Wikimedia Commons
+                  </a>
+                </p>
+              )}
               {louvre && (
                 <p className="text-sm">
                   <a href={louvre} className="font-hand text-base text-ultramarine underline" target="_blank" rel="noopener noreferrer">
@@ -97,6 +108,21 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
+
+              {round && (
+                <>
+                  <h3 className="mt-3 font-hand text-xl font-bold">Sources for the close-ups</h3>
+                  <ul className="mt-1 flex list-disc flex-col gap-1 pl-5 text-sm">
+                    {closeUpSources(round).map((src) => (
+                      <li key={src.url}>
+                        <a href={src.url} className="text-ultramarine underline" target="_blank" rel="noopener noreferrer">
+                          {src.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </li>
           );
         })}
