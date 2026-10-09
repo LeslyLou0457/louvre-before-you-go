@@ -1,0 +1,195 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "liberty-leading-the-people",
+    "title": "Liberty Leading the People",
+    "artist": "Eugène Delacroix",
+    "year": "1830",
+    "image": "/images/liberty-leading-the-people.jpg",
+    "imageCredit": "Wikimedia Commons · Public Domain"
+  },
+  "lessons": [
+    {
+      "id": "liberty-leading-the-people-1",
+      "order": 4,
+      "title": "An idea with bare feet",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Smoke, a barricade, and a woman with a flag climbing over fallen bodies, a crowd surging behind her. The canvas is over three metres wide.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where does your eye go first?",
+          "choices": [
+            {
+              "label": "The flag",
+              "next": "b1a"
+            },
+            {
+              "label": "The bodies in front",
+              "next": "b1b"
+            },
+            {
+              "label": "The boy with the pistol",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "The flag is the peak of a big triangle whose base is the barricade. Guns, arms and the flagpole cut across it in diagonals: order and momentum at once.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "That's where you're standing: at the barricade's edge, where the dead meet the living. The crowd is about to step into your space.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "He strides forward with a pistol and an ammunition bag. People often call him Gavroche. Keep that name in mind.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "However you came in, the picture leads you upward: from the dead in front, through the crowd, to the flag. The force of revolution and its cost arrive at the same moment.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Which revolution is this?",
+          "choices": [
+            {
+              "label": "1789, the French Revolution",
+              "next": "b2a"
+            },
+            {
+              "label": "1830, the July Revolution",
+              "next": "b2b",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "That's everyone's first guess, but no. This is July 1830, when Parisians rose up and overthrew King Charles X.",
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Right. In July 1830, Parisians overthrew Charles X, and the July Monarchy under Louis-Philippe followed.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "The July Revolution of 1830, not 1789. Through the smoke on the right you can make out the two towers of Notre-Dame. Now, the woman with the flag.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Is she a real woman who fought that day?",
+          "choices": [
+            {
+              "label": "Yes, a real fighter",
+              "next": "b3a"
+            },
+            {
+              "label": "No, she's an idea",
+              "next": "b3b",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Nobody can name her, and that's the point. She's Liberty itself, an idea given a body: an allegory.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Right. She's Liberty, an idea given a body: an allegory. You know her by the Phrygian cap and the tricolour flag.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "A goddess-like body with a classical profile, yet she walks barefoot over rubble carrying a musket with a bayonet. An ideal stepping into the street.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "X-rays show Delacroix changed her head. What changed?",
+          "choices": [
+            {
+              "label": "Which way she faces",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "Her cap",
+              "next": "b4b"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Right. Her face was first more frontal; Delacroix turned it into a profile. An artist's own change of mind like this is called a repentir.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "The documented change is somewhere else: the direction of her face. It was first more frontal, and Delacroix turned it into a profile. That's called a repentir.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "A repentir is the artist's own correction, not a later repaint. Keep that difference in mind. From 2023 to 2024, restorers thinned the painting's yellowed, dirty varnish, and it returned in May 2024.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "People said Liberty's dress changed colour. Did restorers repaint it?",
+          "choices": [
+            {
+              "label": "Yes, they redesigned it",
+              "next": "b5a"
+            },
+            {
+              "label": "No, they removed a repaint",
+              "next": "b5b",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "The opposite. A 1949 treatment with varnish and orange retouching made the dress read as solid yellow. Removing it revealed Delacroix's grey underlayer with sparse yellow strokes.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Exactly. Orange retouching from 1949 had made the dress look solid yellow. Underneath: a grey layer with sparse yellow strokes, as Delacroix left it.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "One more surprise: no king ordered this painting. Delacroix made it on his own, showed it at the 1831 Salon, and the government bought it for 3,000 francs. And Gavroche? Victor Hugo's character came later."
+        }
+      },
+      "takeaway": "1830, not 1789. Liberty is an idea in human form, and a repentir is the artist's own change of mind.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+        "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+        "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+        "https://mini-site.louvre.fr/trimestriel/2021/Dossier_images_Louvre/245/",
+        "https://presse.louvre.fr/retour-en-salle-de-la-liberte-guidant-le-peuple-restauree/?lang=fr"
+      ]
+    }
+  ]
+}

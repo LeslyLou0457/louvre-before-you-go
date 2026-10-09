@@ -1,0 +1,193 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "winged-victory",
+    "title": "Winged Victory of Samothrace",
+    "artist": "Unknown",
+    "year": "c. 200–175 BCE",
+    "image": "/images/winged-victory.jpg",
+    "imageCredit": "TO CHECK: needs a Public Domain or CC0 photo"
+  },
+  "lessons": [
+    {
+      "id": "winged-victory-1",
+      "order": 3,
+      "title": "Look down first",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A winged woman leans into the wind above you. The goddess alone is more than three metres tall, and she has no head.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What do you notice first?",
+          "choices": [
+            {
+              "label": "The wings",
+              "next": "b1a"
+            },
+            {
+              "label": "The flying cloth",
+              "next": "b1b"
+            },
+            {
+              "label": "What she stands on",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "The wings give her a huge silhouette you can read from far away. Hold that thought, though: not every feather up there is ancient.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "The cloth clings to her front and swings out behind. Remember it: that's how the sculptor shows a wind you can't see.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Sharp eye. Most visitors never look down, and what's down there is the key to the whole monument.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Look down: she stands on the prow of a stone warship. She's Nike, victory in person. The wings say she can fly; the ship says this victory has to do with the sea.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "No wind was carved. So how do you know it's blowing?",
+          "choices": [
+            {
+              "label": "From the cloth",
+              "next": "b2a",
+              "correct": true
+            },
+            {
+              "label": "From the wings",
+              "next": "b2b"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Exactly. Thin cloth presses against her chest and legs while a heavier mantle billows out behind. You read the wind from how the fabric reacts.",
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Partly. The wings carry the motion too. But the clearest clue is the fabric: pressed flat in front, billowing out behind.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Cloth that clings to show the body beneath is called wet drapery. It's a sculptor's language, not proof she was splashed by the sea. Now compare the goddess with her ship.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Are the goddess and the ship the same stone?",
+          "choices": [
+            {
+              "label": "Yes, same marble",
+              "next": "b3a"
+            },
+            {
+              "label": "No, two marbles",
+              "next": "b3b",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Look at the colours: a white figure, a greyer ship. The goddess is Parian marble; the ship and base come from Lartos on Rhodes.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Right. Parian marble for her, greyer marble from Lartos on Rhodes for the ship and base.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "She's engineering as much as carving: torso and wings made separately and assembled, the hull pieced from many blocks. She first stood high in the Sanctuary of the Great Gods on Samothrace.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Who paid for this victory monument?",
+          "choices": [
+            {
+              "label": "A king, after a famous sea battle",
+              "next": "b4a"
+            },
+            {
+              "label": "Nobody knows for sure",
+              "next": "b4b",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Tempting, given the ship. But which battle, and which ruler or city paid, can't be named. Even her sculptor is unknown.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Right. The prow points to a naval victory and the Rhodian stone to a regional link, but the battle, the sponsor and the sculptor are all unknown.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "What we do know: pilgrims and visitors came to the sanctuary, so a military victory was shown again and again in a shared sacred place. Now, about those magnificent wings.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "How much of those spread wings is ancient marble?",
+          "choices": [
+            {
+              "label": "All of it",
+              "next": "b5a"
+            },
+            {
+              "label": "Less than it looks",
+              "next": "b5b",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Less than it looks. She was found broken. The fully spread right wing is plaster, parts of the torso are restored, and a metal frame holds the wings.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Right. The right wing is a plaster replacement, parts of the torso are restored, and a metal structure holds the wings up.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "In the 19th century, researchers realised scattered grey blocks were the ship. A 2013 to 2014 restoration then reconnected goddess and ship directly. Take the ship away and she still means victory, but not where it was won."
+        }
+      },
+      "takeaway": "Look down first: the ship makes it a victory at sea. The cloth shows you the wind, and the right wing is plaster.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+        "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/an-uplifting-sight",
+        "https://www.samothracemuseum.gr/en/hall-d/"
+      ]
+    }
+  ]
+}
