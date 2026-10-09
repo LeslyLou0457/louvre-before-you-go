@@ -181,11 +181,18 @@ There are only three node types: `story` (main line), `question` and `branch`. A
 
 ---
 
-## 03 · DESIGN — like a gallery wall
+## 03 · DESIGN — doodles on the walls, real art in the frames
 
-Quiet, lots of white space; the artwork is the star and the interface steps back. Simple, direct, readable at a glance.
+Fresh, light and playful, like a child's notebook: the interface is hand-drawn doodles and childlike handwriting (references: the hand-drawn museum videos Steven shared, and HeyTea posters). The artworks stay exactly as they are: always the official photograph, never drawn. Lots of white space; readable at a glance.
 
-> **Don't:** glossy rounded AI illustrations, large gradients, stacked shadows, cartoon mascots, screens full of emoji.
+**Two layers, never mixed:**
+
+- **Doodle layer (the website):** buttons, the level route, icons, small stickers, headlines and a simple doodle head of each artist as the narrator. One black ink line plus a little crayon colour, so it sits comfortably next to any art style (Renaissance, Romantic, and later modern art).
+- **Artwork layer:** the public-domain photo of the work, straight edges, no filters, no doodles drawn over it. Zoom-ins are crops of the same original photo, never redrawn.
+
+> **Don't:** draw, trace or "cute-ify" an artwork; let a doodle overlap an artwork; use AI-generated illustrations (doodles are drawn by a person); glossy gradients, stacked shadows, screens full of emoji.
+
+Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
 ### Colours (suggested, can change)
 
@@ -202,16 +209,19 @@ The ultramarine accent has a story: in the Renaissance it was ground from lapis 
 
 ### Type and layout
 
-- Story text in a serif: Noto Serif. Buttons, labels and numbers in a sans-serif: Noto Sans. Both from Google Fonts.
+- Handwriting for voice: questions, options, buttons, headlines and the artist's speech bubble use a childlike hand font (default: Gaegu, Google Fonts). Later it can be replaced by real children's handwriting, as HeyTea does.
+- Print for reading: story and branch text in a clean rounded sans-serif (default: Nunito, Google Fonts), so longer passages stay easy to read.
 - Designed for a 375px-wide phone; on desktop, content is at most 640px wide, centred.
 - Body text 17px, line height 1.7; buttons at least 48px tall for one-handed use.
-- Artworks get no rounded corners and no filters, just a thin border or white space.
+- Artworks get no rounded corners and no filters, just a plain mat of white space. Doodle shapes may be wobbly and slightly rounded; artworks never are.
+- Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Artist heads are friendly sketches, not portraits pretending to be accurate.
 
 ### Reference products
 
 | Reference | Learn from | Don't copy |
 |---|---|---|
-| Duolingo | Level route, a little every day, small celebration on clearing a level | Cartoon style, saturated colours, mascots |
+| Duolingo | Level route, a little every day, small celebration on clearing a level | Saturated colours, a single mascot |
+| HeyTea posters | Childlike handwriting and loose doodles; fresh and relaxed | Drawing over the product itself (for us: the artwork) |
 | Google Arts & Culture | Large artwork images, zooming into details | Pages that are too dense |
 | Louvre collections site<br>`collections.louvre.fr` | Restrained layout, how artwork information is written | Archive-style stacks of fields |
 | 2–3 website screenshots from the product owner | Overall feel and colours | To be added |
@@ -337,7 +347,7 @@ Five levels are five angles on the same work. 5 questions per level, each level 
 - Which story does each artwork's first level tell? (Default: the topics in the "Five levels, five artworks" table)
 - Which five masterpieces? (Decided: Mona Lisa, Venus de Milo, Winged Victory of Samothrace, Liberty Leading the People, The Raft of the Medusa)
 - Is 0.5 in Chinese or English? (Decided: English, for content, interface and this spec)
-- Fonts: Noto Serif SC / Noto Sans SC were chosen for Chinese. (Default: Noto Serif / Noto Sans, the Latin versions of the same families)
+- Fonts and look? (Decided 2026-10-09: doodle interface with real artwork photos; fonts default to Gaegu for handwriting and Nunito for reading)
 - Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (To be added)
 - Which voice for 1.0 audio? (Default: a warm English female voice; generate the first level as a test before deciding)
 - Is login required in 1.0? (Default: no; login only syncs progress)
