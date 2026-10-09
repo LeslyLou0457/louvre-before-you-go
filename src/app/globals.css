@@ -94,3 +94,6 @@ body {
   outline: 3px solid var(--color-crayon);
   outline-offset: 2px;
 }
+.wobbly-circle {
+  border-radius: 52% 46% 50% 48% / 47% 53% 46% 52%;
+}
