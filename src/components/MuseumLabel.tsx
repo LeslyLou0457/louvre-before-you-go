@@ -16,8 +16,8 @@ export default function MuseumLabel({ artwork, museumUrl, small = false }: Props
       <p className="text-muted">{artwork.medium ?? "Medium TBD"}</p>
       <p className="text-muted">{artwork.dimensions ?? "Size TBD"}</p>
       {museumUrl ? (
-        <a href={museumUrl} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap text-ultramarine underline">
-          View at the Louvre →
+        <a href={museumUrl} target="_blank" rel="noopener noreferrer" className="text-ultramarine underline">
+          View at the Louvre&nbsp;→
         </a>
       ) : (
         <p className="text-muted">Louvre link TBD</p>
