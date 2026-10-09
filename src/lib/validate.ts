@@ -2,10 +2,12 @@
 // `npm run check-content` (scripts/check-content.ts).
 // Keep this file free of runtime imports so Node can run it directly.
 
-import type { ContentFile, LessonNode } from "./types";
+import type { ContentFile, LessonNode, Voice as LessonNodeVoice } from "./types";
 
 export const QUESTIONS_PER_LEVEL = 5;
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
+export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;
+const SPEAKER_KINDS = ["artist", "artwork", "person"];
 
 export type Report = { errors: string[]; warnings: string[] };
 
@@ -37,6 +39,18 @@ export function validateContent(data: unknown, file: string): Report {
     const v = d.artwork?.[k];
     if (v !== undefined && typeof v !== "string") err(`artwork.${k} must be a string`);
   }
+  // Optional speakers map.
+  const speakers = d.speakers ?? {};
+  if (d.speakers !== undefined && (typeof d.speakers !== "object" || Array.isArray(d.speakers))) {
+    err("speakers must be an object keyed by speaker id");
+  } else {
+    for (const [id, sp] of Object.entries(speakers)) {
+      if (!isNonEmptyString(sp?.name)) err(`speakers.${id}.name is missing`);
+      if (!isNonEmptyString(sp?.avatar)) err(`speakers.${id}.avatar is missing`);
+      if (!SPEAKER_KINDS.includes(sp?.kind)) err(`speakers.${id}.kind must be one of ${SPEAKER_KINDS.join(", ")}`);
+    }
+  }
+
   if (!Array.isArray(d.lessons) || d.lessons.length === 0) {
     err("lessons must be a non-empty array");
     return { errors, warnings };
@@ -50,6 +64,9 @@ export function validateContent(data: unknown, file: string): Report {
     if (!isNonEmptyString(lesson?.takeaway)) err(`${where}: takeaway is missing`);
     if (!Array.isArray(lesson?.sources) || lesson.sources.filter(isNonEmptyString).length === 0) {
       err(`${where}: sources must not be empty`);
+    }
+    if (lesson?.narrator !== undefined && !(lesson.narrator in speakers)) {
+      err(`${where}: narrator "${lesson.narrator}" is not in speakers`);
     }
     const nodes = lesson?.nodes;
     if (!nodes || typeof nodes !== "object") {
@@ -71,8 +88,25 @@ export function validateContent(data: unknown, file: string): Report {
         continue;
       }
       if (!isNonEmptyString(node.text)) err(`${at}: text is missing`);
-      if (node.speaker !== undefined && !isNonEmptyString(node.speaker)) {
-        err(`${at}: speaker must be a non-empty string when present`);
+      const voice = (node as { voice?: unknown }).voice as LessonNodeVoice | undefined;
+      if (voice !== undefined) {
+        if (node.type === "question") warn(`${at}: voice on a question is ignored`);
+        if (!isNonEmptyString(voice?.speaker) || !(voice.speaker in speakers)) {
+          err(`${at}: voice.speaker "${voice?.speaker}" is not in speakers`);
+        }
+        if (!isNonEmptyString(voice?.text)) err(`${at}: voice.text is missing`);
+        if (voice?.kind !== "imagined" && voice?.kind !== "quote") {
+          err(`${at}: voice.kind must be "imagined" or "quote"`);
+        } else {
+          if (isNonEmptyString(voice.text) && words(voice.text) > VOICE_WORD_LIMITS[voice.kind]) {
+            warn(`${at}: voice has ${words(voice.text)} words (limit ${VOICE_WORD_LIMITS[voice.kind]})`);
+          }
+          if (voice.kind === "quote") {
+            if (!isNonEmptyString(voice.cite)) err(`${at}: a quote needs voice.cite`);
+            if (!isNonEmptyString(voice.source)) err(`${at}: a quote needs voice.source`);
+            else if (!lesson.sources?.includes(voice.source)) err(`${at}: quote source is not in the level's sources`);
+          }
+        }
       }
       const limit = WORD_LIMITS[node.type];
       if (isNonEmptyString(node.text) && words(node.text) > limit) {

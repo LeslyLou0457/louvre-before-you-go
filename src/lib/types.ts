@@ -22,24 +22,44 @@ export type Artwork = {
   museumUrl?: string;
 };
 
-/**
- * Optional: who voices a line. When present, the line is shown in that
- * speaker's speech bubble next to their head; when absent, it is plain
- * narration. Free text (e.g. "Leonardo da Vinci"); matched to a head by name.
- */
-type Spoken = { speaker?: string };
+/** Someone who can speak in a content file (optional `speakers` map). */
+export type Speaker = {
+  /** Shown under the head. */
+  name: string;
+  /** "artwork" when a statue with no known maker speaks; "person" for another documented figure. */
+  kind: "artist" | "artwork" | "person";
+  /** Id of the drawing in src/doodles/avatars.tsx. */
+  avatar: string;
+};
 
-export type StoryNode = Spoken & {
+/**
+ * Optional line in a speech bubble beside the speaker's head. The node's own
+ * `text` stays the narration in print; this is the speaker's line.
+ */
+export type Voice = {
+  /** Id from the file's `speakers`. */
+  speaker: string;
+  kind: "imagined" | "quote";
+  text: string;
+  /** Quotes only: short attribution shown under the bubble. */
+  cite?: string;
+  /** Quotes only: URL, also listed in the level's sources. */
+  source?: string;
+};
+
+export type StoryNode = {
   type: "story";
   text: string;
   /** Missing on the last node of a level. */
   next?: string;
+  voice?: Voice;
 };
 
-export type BranchNode = Spoken & {
+export type BranchNode = {
   type: "branch";
   text: string;
   next?: string;
+  voice?: Voice;
 };
 
 export type Choice = {
@@ -48,7 +68,7 @@ export type Choice = {
   correct?: boolean;
 };
 
-export type QuestionNode = Spoken & {
+export type QuestionNode = {
   type: "question";
   text: string;
   choices: Choice[];
@@ -61,6 +81,8 @@ export type Lesson = {
   order: number;
   title: string;
   start: string;
+  /** Speaker id of the level's main narrator. Missing means no head. */
+  narrator?: string;
   nodes: Record<string, LessonNode>;
   takeaway: string;
   sources: string[];
@@ -69,6 +91,7 @@ export type Lesson = {
 export type ContentFile = {
   museum: Museum;
   artwork: Artwork;
+  speakers?: Record<string, Speaker>;
   lessons: Lesson[];
 };
 
@@ -79,6 +102,8 @@ export type Level = {
   lesson: Lesson;
   artwork: Artwork;
   museum: Museum;
+  /** The file's speakers (empty when it has none). */
+  speakers: Record<string, Speaker>;
   /** Number of question nodes in the level. */
   questionCount: number;
   /** True when the image file exists under public/; false shows a placeholder. */

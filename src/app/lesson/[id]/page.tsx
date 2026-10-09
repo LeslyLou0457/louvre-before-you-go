@@ -24,6 +24,7 @@ export default async function LessonPage({ params }: Params) {
     <LessonPlayer
       lesson={level.lesson}
       artwork={level.artwork}
+      speakers={level.speakers}
       imageAvailable={level.imageAvailable}
       museumUrl={museumLink(level)}
       questionCount={level.questionCount}

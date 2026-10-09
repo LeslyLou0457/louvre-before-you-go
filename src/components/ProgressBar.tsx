@@ -1,4 +1,5 @@
-// "Question n / 5" with one hand-drawn segment per question.
+// "Question n / 5" with one hand-drawn segment per question: answered ones
+// gold-brown (done), the current one ringed in ultramarine (you are here).
 
 type Props = { current: number; answered: number; total: number };
 
@@ -9,7 +10,9 @@ export default function ProgressBar({ current, answered, total }: Props) {
         {Array.from({ length: total }, (_, i) => (
           <span
             key={i}
-            className={`wobbly h-3 flex-1 border-2 border-ink ${i < answered ? "bg-ultramarine" : "bg-mat"}`}
+            className={`wobbly h-3 flex-1 border-2 ${
+              i < answered ? "border-ink bg-gold" : i === current - 1 ? "border-ultramarine bg-mat" : "border-ink bg-mat"
+            }`}
           />
         ))}
       </div>

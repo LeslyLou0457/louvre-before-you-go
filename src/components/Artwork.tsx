@@ -17,9 +17,17 @@ type Props = {
   available: boolean;
   /** Tailwind max-height for the inline photo. */
   maxHeightClass?: string;
+  className?: string;
 };
 
-export default function Artwork({ image, title, artist, available, maxHeightClass = "max-h-[34dvh]" }: Props) {
+export default function Artwork({
+  image,
+  title,
+  artist,
+  available,
+  maxHeightClass = "max-h-[30dvh]",
+  className = "",
+}: Props) {
   const [open, setOpen] = useState(false);
   const [actualSize, setActualSize] = useState(false);
   const alt = `${title}, ${artist === "Unknown" ? "unknown artist" : artist}`;
@@ -36,7 +44,7 @@ export default function Artwork({ image, title, artist, available, maxHeightClas
     };
   }, [open]);
 
-  if (!available) return <Placeholder title={title} image={image} />;
+  if (!available) return <Placeholder title={title} image={image} className={className} />;
 
   const src = withBase(image);
 
@@ -48,12 +56,12 @@ export default function Artwork({ image, title, artist, available, maxHeightClas
           setActualSize(false);
           setOpen(true);
         }}
-        className="group relative mx-auto block bg-mat p-3"
+        className={`block bg-mat p-2.5 ${className}`}
         aria-label={`Open ${title} full screen to zoom`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt} className={`mx-auto block w-auto ${maxHeightClass}`} />
-        <span className="mt-1 flex items-center justify-center gap-1 font-hand text-base text-muted">
+        <img src={src} alt={alt} className={`mx-auto block h-auto max-w-full ${maxHeightClass}`} />
+        <span className="mt-1 flex items-center justify-center gap-1 font-hand text-base leading-none text-muted">
           <ZoomDoodle className="h-4 w-4" /> tap to zoom
         </span>
       </button>
@@ -92,16 +100,16 @@ export default function Artwork({ image, title, artist, available, maxHeightClas
 }
 
 /** Clearly marked stand-in until the real photo is added to public/images/. */
-function Placeholder({ title, image }: { title: string; image: string }) {
+function Placeholder({ title, image, className }: { title: string; image: string; className: string }) {
   return (
     <div
-      className="mx-auto flex aspect-[3/4] max-h-[34dvh] w-full max-w-[260px] flex-col items-center justify-center gap-1 border-2 border-dashed border-muted bg-mat p-4 text-center"
+      className={`flex aspect-[3/4] max-h-[30dvh] flex-col items-center justify-center gap-1 border-2 border-dashed border-muted bg-mat p-3 text-center ${className}`}
       role="img"
       aria-label={`Photo placeholder for ${title}`}
     >
       <span className="font-hand text-xl font-bold">Photo placeholder</span>
       <span className="text-sm text-muted">{title}</span>
-      <span className="text-xs text-muted">
+      <span className="break-all text-xs text-muted">
         Real photo goes in <code>public{image}</code>
       </span>
     </div>

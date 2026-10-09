@@ -6,7 +6,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import type { ContentFile, Level } from "./types";
+import type { ContentFile, Level, Speaker } from "./types";
 import { sortContentFiles, validateContent } from "./validate";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -34,6 +34,7 @@ export function getLevels(): Level[] {
         lesson,
         artwork: data.artwork,
         museum: data.museum,
+        speakers: data.speakers ?? {},
         questionCount: Object.values(lesson.nodes).filter((n) => n.type === "question").length,
         imageAvailable,
         file,
@@ -63,6 +64,7 @@ export type JourneyItem = {
   title: string;
   artworkTitle: string;
   artist: string;
+  narrator?: Speaker;
 };
 
 export function getJourney(): JourneyItem[] {
@@ -71,7 +73,13 @@ export function getJourney(): JourneyItem[] {
     title: l.lesson.title,
     artworkTitle: l.artwork.title,
     artist: l.artwork.artist,
+    narrator: narratorOf(l),
   }));
+}
+
+/** The level's main narrator, if the content names one. */
+export function narratorOf(level: Level): Speaker | undefined {
+  return level.lesson.narrator ? level.speakers[level.lesson.narrator] : undefined;
 }
 
 /**

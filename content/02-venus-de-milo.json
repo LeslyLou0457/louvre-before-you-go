@@ -10,7 +10,17 @@
     "artist": "Unknown",
     "year": "c. 150–125 BCE",
     "image": "/images/venus-de-milo.jpg",
-    "imageCredit": "TO CHECK: needs a Public Domain or CC0 photo"
+    "imageCredit": "TO CHECK: needs a Public Domain or CC0 photo",
+    "medium": "Parian marble",
+    "dimensions": "Height 204 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010277627"
+  },
+  "speakers": {
+    "venus": {
+      "name": "Venus de Milo",
+      "kind": "artwork",
+      "avatar": "marble-block"
+    }
   },
   "lessons": [
     {
@@ -18,10 +28,16 @@
       "order": 2,
       "title": "The missing action",
       "start": "n1",
+      "narrator": "venus",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "Everyone looks at the missing arms first. Walk round her slowly instead, from the front to the side. She stands just over two metres tall.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Walk round me slowly. I'm a little over two metres of marble, and the name of my sculptor is unknown."
+          },
           "next": "q1"
         },
         "q1": {
@@ -85,6 +101,11 @@
         "b2b": {
           "type": "branch",
           "text": "Exactly. One leg bears the weight, the other relaxes, and every part of the body adjusts. Art historians call this contrapposto, roughly \"opposed balance\".",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "One leg holds my weight; the other rests. Everything above answers that choice, right up to my shoulders."
+          },
           "next": "n3"
         },
         "n3": {
@@ -110,6 +131,11 @@
         "b3a": {
           "type": "branch",
           "text": "That's the romantic image: one genius, one block. In fact she's two main blocks joined at the hips, and her left arm was carved separately and attached.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Not one block. I'm two main blocks, joined at the hips, and my left arm was made separately."
+          },
           "next": "n4"
         },
         "b3b": {
@@ -150,6 +176,11 @@
         "n5": {
           "type": "story",
           "text": "A Greek gymnasium wasn't a gym. It mixed sport, education and civic life, and its users were mostly young men. There, a goddess linked to love and marriage meant something local. It's a strong argument, but still a theory.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Where did I first stand? That isn't known. The gymnasium is a strong argument, but still a theory."
+          },
           "next": "q5"
         },
         "q5": {
@@ -179,7 +210,12 @@
         },
         "n6": {
           "type": "story",
-          "text": "Her losses: the left arm, most of the right arm, the left foot. Her hair bun was rejoined, and the tip of her nose is plaster. \"Broken beauty\" is our taste. The lost gesture is the real question."
+          "text": "Her losses: the left arm, most of the right arm, the left foot. Her hair bun was rejoined, and the tip of her nose is plaster. \"Broken beauty\" is our taste. The lost gesture is the real question.",
+          "voice": {
+            "speaker": "venus",
+            "kind": "imagined",
+            "text": "Found on Melos in 1820, in the Louvre by 1821. My arms are lost, and with them, whatever I was doing."
+          }
         }
       },
       "takeaway": "Contrapposto: one leg carries the weight and the whole body answers. Her missing arms took her story with them.",

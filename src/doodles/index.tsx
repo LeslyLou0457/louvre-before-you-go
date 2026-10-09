@@ -94,7 +94,7 @@ export function StarDoodle(p: DoodleProps) {
 export function UnderlineDoodle(p: DoodleProps) {
   return (
     <Svg viewBox="0 0 200 12" {...p}>
-      <path d="M3 8 Q50 3 100 6.5 T197 5" {...stroke} stroke="var(--color-ultramarine)" strokeWidth={3} />
+      <path d="M3 8 Q50 3 100 6.5 T197 5" {...stroke} stroke="var(--color-coral)" strokeWidth={3} />
     </Svg>
   );
 }

@@ -37,7 +37,7 @@ export default async function DonePage({ params }: Params) {
       </div>
 
       <section className="wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4">
-        <h2 className="font-hand text-2xl font-bold text-ultramarine">One thing to remember today</h2>
+        <h2 className="font-hand text-2xl font-bold">One thing to remember today</h2>
         <p className="mt-2">{level.lesson.takeaway}</p>
       </section>
 

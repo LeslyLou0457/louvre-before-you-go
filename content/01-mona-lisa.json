@@ -10,7 +10,17 @@
     "artist": "Leonardo da Vinci",
     "year": "c. 1503–1519",
     "image": "/images/mona-lisa.jpg",
-    "imageCredit": "Wikimedia Commons · Public Domain"
+    "imageCredit": "Wikimedia Commons · Public Domain",
+    "medium": "Oil on poplar panel",
+    "dimensions": "79.4 × 53.4 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010062370"
+  },
+  "speakers": {
+    "leonardo": {
+      "name": "Leonardo da Vinci",
+      "kind": "artist",
+      "avatar": "leonardo"
+    }
   },
   "lessons": [
     {
@@ -18,10 +28,16 @@
       "order": 1,
       "title": "A face that seems to think",
       "start": "n1",
+      "narrator": "leonardo",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Before you judge her, look. Her body turns one way, and her eyes come round to you. Living people move like that."
+          },
           "next": "q1"
         },
         "q1": {
@@ -84,11 +100,21 @@
         "b2a": {
           "type": "branch",
           "text": "Yes. Sfumato, often translated as \"smoky\": neighbouring tones melt into each other, so edges look as if seen through thin air. But it isn't blur. Her mouth and cheeks are still perfectly solid.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Search for my line at the corner of her mouth. You won't find one. Light and shadow meet there softly, like smoke."
+          },
           "next": "n3"
         },
         "b2b": {
           "type": "branch",
           "text": "Good instinct, different job. Chiaroscuro builds volume with light and dark, and Leonardo does use it here: look at her knuckles. But it rounds a form; it doesn't dissolve an edge.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Light and shade give her volume; look at her knuckles. But rounding a form and softening its edge are different jobs."
+          },
           "next": "n3"
         },
         "b2c": {
@@ -129,6 +155,13 @@
         "n4": {
           "type": "story",
           "text": "Up close, her sleeves are crisp; far off, the hills soften and cool. That's atmospheric perspective. And the woman? Lisa Gherardini of Florence. Her husband traded in silk and very probably commissioned the portrait for their home.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "quote",
+            "text": "There are three branches of perspective.",
+            "cite": "Leonardo's notebooks, §14, tr. J. P. Richter (1888)",
+            "source": "https://www.gutenberg.org/ebooks/5000"
+          },
           "next": "q4"
         },
         "q4": {
@@ -149,6 +182,11 @@
         "b4a": {
           "type": "branch",
           "text": "Right. Leonardo held on to it and kept revising it for years. Later it entered the French royal collection. A family portrait became a court treasure.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "I kept her with me, and kept working on her, for years."
+          },
           "next": "n5"
         },
         "b4b": {
@@ -197,7 +235,8 @@
         "https://mini-site.louvre.fr/trimestriel/2019/dossier_pedagogique_leonard/16/",
         "https://www.museodelprado.es/en/learn/research/studies-and-restorations/resource/study-of-the-prado-museums-copy-of-la-gioconda/504eace0-d54e-49b1-a16b-7afd17f756d3",
         "https://www.nationalgallery.org.uk/paintings/glossary/sfumato",
-        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+        "https://www.gutenberg.org/ebooks/5000"
       ]
     }
   ]

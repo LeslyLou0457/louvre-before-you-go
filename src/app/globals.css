@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 /*
- * Design tokens. Values follow PRODUCT.md "Design" (doodle + handwriting UI,
- * flat painted artist heads, real artwork photos). Change them here only.
+ * Design tokens from PRODUCT.md "Design": doodle chrome, painted heads,
+ * real artwork photos. Change colours here only.
  */
 @theme {
-  --color-paper: #f6f0e4;      /* page background: beige / warm off-white */
-  --color-mat: #ffffff;        /* plain white mat around an artwork photo */
-  --color-ink: #1f1f1f;        /* body text, doodle ink line */
-  --color-muted: #6b6b6b;      /* secondary text */
-  --color-ultramarine: #2a3f8f;/* accent: main button, current level, selection */
-  --color-gold: #b08d57;       /* done levels */
-  --color-line: #e2d9c7;       /* dividers, card and label borders */
-  --color-crayon: #f2c94c;     /* small crayon accent only */
+  --color-paper: #f5f0e6;      /* page background: warm beige off-white */
+  --color-stage: #ece4d3;      /* deeper beige stage under the artwork, where heads sit */
+  --color-mat: #fffdf8;        /* paper white: artwork mat, label card, speech bubbles */
+  --color-ink: #1f1f1f;        /* doodle line and body text */
+  --color-muted: #6e6a63;      /* secondary text, warm grey */
+  --color-ultramarine: #2a3f8f;/* the one accent: main button, current level, selection */
+  --color-gold: #b08d57;       /* done */
+  --color-line: #e2dacb;       /* dividers, card and label borders */
+  --color-crayon: #f2c14e;     /* crayon yellow, inside doodles only */
+  --color-coral: #e8836b;      /* crayon coral, inside doodles only */
 
   --font-hand: var(--font-gaegu), "Comic Sans MS", cursive;
   --font-read: var(--font-nunito), system-ui, sans-serif;
@@ -43,57 +45,60 @@ body {
   .soft-fade { animation: none; }
 }
 
-/* Hand-drawn look for UI shapes (buttons, cards, nodes). Never on artworks. */
-.wobbly {
-  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
-}
-.wobbly-alt {
-  border-radius: 18px 225px 18px 255px / 255px 18px 225px 18px;
-}
+/* Component classes sit in a layer so Tailwind utilities can override them. */
+@layer components {
+  /* Hand-drawn look for UI shapes (buttons, cards, nodes). Never on artworks. */
+  .wobbly {
+    border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  }
+  .wobbly-alt {
+    border-radius: 18px 225px 18px 255px / 255px 18px 225px 18px;
+  }
 
-/* Main action: filled ultramarine pill with an ink line. */
-.btn-primary {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.35rem 1.4rem;
-  border: 2.5px solid var(--color-ink);
-  background: var(--color-ultramarine);
-  color: #fff;
-  font-family: var(--font-hand);
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
-}
-/* Secondary action / answer option: white with a thin ink line. */
-.btn-option {
-  display: flex;
-  width: 100%;
-  min-height: 52px;
-  align-items: center;
-  padding: 0.5rem 1.1rem;
-  border: 2px solid var(--color-ink);
-  background: #fff;
-  color: var(--color-ink);
-  font-family: var(--font-hand);
-  font-size: 1.35rem;
-  line-height: 1.2;
-  text-align: left;
-  border-radius: 18px 225px 18px 255px / 255px 18px 225px 18px;
-}
-.btn-option:active,
-.btn-option:focus-visible {
-  border-color: var(--color-ultramarine);
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-ultramarine);
-}
-.btn-primary:focus-visible {
-  outline: 3px solid var(--color-crayon);
-  outline-offset: 2px;
-}
-.wobbly-circle {
-  border-radius: 52% 46% 50% 48% / 47% 53% 46% 52%;
+  /* Main action: filled ultramarine pill with an ink line. */
+  .btn-primary {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.35rem 1.4rem;
+    border: 2.5px solid var(--color-ink);
+    background: var(--color-ultramarine);
+    color: #fff;
+    font-family: var(--font-hand);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  }
+  /* Secondary action / answer option: white with a thin ink line. */
+  .btn-option {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    align-items: center;
+    padding: 0.5rem 1.1rem;
+    border: 2px solid var(--color-ink);
+    background: var(--color-mat);
+    color: var(--color-ink);
+    font-family: var(--font-hand);
+    font-size: 1.35rem;
+    line-height: 1.2;
+    text-align: left;
+    border-radius: 18px 225px 18px 255px / 255px 18px 225px 18px;
+  }
+  .btn-option:active,
+  .btn-option:focus-visible {
+    border-color: var(--color-ultramarine);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-ultramarine);
+  }
+  .btn-primary:focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+  .wobbly-circle {
+    border-radius: 52% 46% 50% 48% / 47% 53% 46% 52%;
+  }
 }

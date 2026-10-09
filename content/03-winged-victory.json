@@ -10,7 +10,17 @@
     "artist": "Unknown",
     "year": "c. 200–175 BCE",
     "image": "/images/winged-victory.jpg",
-    "imageCredit": "TO CHECK: needs a Public Domain or CC0 photo"
+    "imageCredit": "TO CHECK: needs a Public Domain or CC0 photo",
+    "medium": "Parian marble (figure); Lartos marble from Rhodes (ship and base)",
+    "dimensions": "Figure 328 cm high; whole monument 564 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010252531"
+  },
+  "speakers": {
+    "victory": {
+      "name": "Winged Victory of Samothrace",
+      "kind": "artwork",
+      "avatar": "marble-block"
+    }
   },
   "lessons": [
     {
@@ -18,10 +28,16 @@
       "order": 3,
       "title": "Look down first",
       "start": "n1",
+      "narrator": "victory",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "A winged woman leans into the wind above you. The goddess alone is more than three metres tall, and she has no head.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Look down before you look up. My head is lost, and so is my sculptor's name."
+          },
           "next": "q1"
         },
         "q1": {
@@ -55,6 +71,11 @@
         "b1c": {
           "type": "branch",
           "text": "Sharp eye. Most visitors never look down, and what's down there is the key to the whole monument.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Yes, look down. I stand on the prow of a warship, carved in stone."
+          },
           "next": "n2"
         },
         "n2": {
@@ -110,6 +131,11 @@
         "b3a": {
           "type": "branch",
           "text": "Look at the colours: a white figure, a greyer ship. The goddess is Parian marble; the ship and base come from Lartos on Rhodes.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Two marbles: white Parian for me, greyer stone from Lartos on Rhodes for my ship and base."
+          },
           "next": "n4"
         },
         "b3b": {
@@ -140,6 +166,11 @@
         "b4a": {
           "type": "branch",
           "text": "Tempting, given the ship. But which battle, and which ruler or city paid, can't be named. Even her sculptor is unknown.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Which battle? Which ruler or city paid? I can't tell you, and nobody can yet."
+          },
           "next": "n5"
         },
         "b4b": {
@@ -170,6 +201,11 @@
         "b5a": {
           "type": "branch",
           "text": "Less than it looks. She was found broken. The fully spread right wing is plaster, parts of the torso are restored, and a metal frame holds the wings.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "Don't trust every feather. My right wing is plaster, and a metal frame holds my wings up."
+          },
           "next": "n6"
         },
         "b5b": {
@@ -179,7 +215,12 @@
         },
         "n6": {
           "type": "story",
-          "text": "In the 19th century, researchers realised scattered grey blocks were the ship. A 2013 to 2014 restoration then reconnected goddess and ship directly. Take the ship away and she still means victory, but not where it was won."
+          "text": "In the 19th century, researchers realised scattered grey blocks were the ship. A 2013 to 2014 restoration then reconnected goddess and ship directly. Take the ship away and she still means victory, but not where it was won.",
+          "voice": {
+            "speaker": "victory",
+            "kind": "imagined",
+            "text": "I was dug up on Samothrace in 1863. Only later did anyone see that the grey blocks nearby were my ship."
+          }
         }
       },
       "takeaway": "Look down first: the ship makes it a victory at sea. The cloth shows you the wind, and the right wing is plaster.",

@@ -19,10 +19,11 @@ Pushing to `main` builds and publishes the site (`.github/workflows/deploy.yml`)
 
 Add one JSON file to `content/` named `NN-name.json` (the number sets its place on the journey), in the format described in PRODUCT.md. Run `npm run check-content`. No code changes.
 
-Optional fields the site understands:
+Optional fields the site understands (see PRODUCT.md "Data format"; files without them still work):
 
-- `artwork.medium`, `artwork.dimensions`, `artwork.museumUrl`: shown on the museum label. Missing ones show "TBD"; without `museumUrl`, the label links to the level's first `collections.louvre.fr` source.
-- `speaker` on a node: that line is shown in a speech bubble next to the speaker's head (for example `"speaker": "Leonardo da Vinci"`). Without it, the line is plain narration.
+- `artwork.medium`, `artwork.dimensions`, `artwork.museumUrl`: the museum label. Missing ones show "TBD"; without `museumUrl`, the label links to the level's first `collections.louvre.fr` source.
+- `speakers` (top level) and `lessons[].narrator`: who can speak, and the level's narrator, shown on the route and the level page.
+- `voice` on a story or branch node: the speaker's line in a speech bubble beside their head. `imagined` lines get an "Imagined voice" tag; `quote` lines show quotation marks and their `cite`, and their `source` must be in the level's `sources`.
 
 ## Add the artwork photos
 
@@ -33,6 +34,6 @@ Put each photo at the path in its JSON's `artwork.image`, under `public/` (for e
 Every doodle and every artist head is a placeholder in `src/doodles/`:
 
 - `src/doodles/index.tsx`: buttons' icons, route line, stars, underline.
-- `src/doodles/heads.tsx`: flat painted artist heads, matched to `artwork.artist` or a node's `speaker` by name.
+- `src/doodles/avatars.tsx`: flat painted artist heads and the doodled marble block, one per `avatar` id used in `speakers`.
 
 Replace the shapes inside a component with the hand-drawn SVG and keep its name; nothing else needs to change.

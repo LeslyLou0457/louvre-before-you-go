@@ -8,23 +8,23 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Artwork from "./Artwork";
-import Line from "./Line";
 import MuseumLabel from "./MuseumLabel";
 import ProgressBar from "./ProgressBar";
+import Stage from "./Stage";
 import { CloseDoodle } from "@/doodles";
-import { ArtistHead, findHead } from "@/doodles/heads";
 import { markComplete } from "@/lib/progress";
-import type { Artwork as ArtworkT, Lesson } from "@/lib/types";
+import type { Artwork as ArtworkT, Lesson, Speaker } from "@/lib/types";
 
 type Props = {
   lesson: Lesson;
   artwork: ArtworkT;
+  speakers: Record<string, Speaker>;
   imageAvailable: boolean;
   museumUrl?: string;
   questionCount: number;
 };
 
-export default function LessonPlayer({ lesson, artwork, imageAvailable, museumUrl, questionCount }: Props) {
+export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable, museumUrl, questionCount }: Props) {
   const router = useRouter();
   const [nodeId, setNodeId] = useState(lesson.start);
   const [answered, setAnswered] = useState(0);
@@ -56,7 +56,7 @@ export default function LessonPlayer({ lesson, artwork, imageAvailable, museumUr
     go(next);
   }
 
-  const questionHead = onQuestion ? findHead(node.speaker) : null;
+  const narrator = lesson.narrator ? speakers[lesson.narrator] : undefined;
 
   return (
     <main className="flex min-h-dvh flex-col pb-6">
@@ -71,14 +71,16 @@ export default function LessonPlayer({ lesson, artwork, imageAvailable, museumUr
         <ProgressBar current={current} answered={answered} total={questionCount} />
       </header>
 
-      <section aria-label="Artwork" className="flex flex-col gap-3">
+      {/* The museum: photo on its mat, printed label beside it. */}
+      <section aria-label="Artwork" className="flex items-start gap-3">
         <Artwork
           image={artwork.image}
           title={artwork.title}
           artist={artwork.artist}
           available={imageAvailable}
+          className="w-[56%] shrink-0"
         />
-        <MuseumLabel artwork={artwork} museumUrl={museumUrl} compact />
+        <MuseumLabel artwork={artwork} museumUrl={museumUrl} small />
       </section>
 
       <section
@@ -86,14 +88,12 @@ export default function LessonPlayer({ lesson, artwork, imageAvailable, museumUr
         ref={cardRef}
         tabIndex={-1}
         aria-live="polite"
-        className="soft-fade mt-5 flex flex-1 flex-col gap-4 outline-none"
+        className="soft-fade mt-4 flex flex-1 flex-col gap-4 outline-none"
       >
         {node.type === "question" ? (
           <>
-            <div className="flex items-start gap-3">
-              {questionHead && <ArtistHead head={questionHead} size={48} />}
-              <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
-            </div>
+            <Stage narrator={narrator} speakers={speakers} />
+            <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
             <div className="flex flex-col gap-3">
               {node.choices.map((c) => (
                 <button key={c.next + c.label} type="button" className="btn-option" onClick={() => choose(c.label, c.next)}>
@@ -103,15 +103,15 @@ export default function LessonPlayer({ lesson, artwork, imageAvailable, museumUr
             </div>
           </>
         ) : (
-          <button
-            type="button"
-            onClick={() => go(node.next)}
-            className="flex flex-1 flex-col gap-4 text-left"
-          >
+          <button type="button" onClick={() => go(node.next)} className="flex flex-1 flex-col gap-4 text-left">
+            <Stage narrator={narrator} voice={node.voice} speakers={speakers} />
             {node.type === "branch" && picked && (
-              <span className="font-hand text-lg text-muted">You picked: {picked}</span>
+              <span className="flex flex-wrap items-center gap-2 font-hand text-lg text-muted">
+                You picked
+                <span className="btn-option min-h-0 w-auto border-ultramarine py-0.5 text-lg">{picked}</span>
+              </span>
             )}
-            <Line text={node.text} speaker={node.speaker} />
+            <p>{node.text}</p>
             <span className="btn-primary mt-auto self-end">{node.next ? "Continue →" : "Finish level"}</span>
           </button>
         )}
