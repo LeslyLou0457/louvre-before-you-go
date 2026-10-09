@@ -153,6 +153,33 @@ for (const file of config.candidates ?? []) {
 
 for (const c of config.categories ?? []) await listCategory(c.title ?? c, c.depth ?? 0, c.previewMinEdge);
 
+for (const s of config.searches ?? []) {
+  console.log(`\n#### search: ${s.query}`);
+  const data = await api({
+    action: "query",
+    generator: "search",
+    gsrsearch: s.query,
+    gsrnamespace: "6",
+    gsrlimit: "50",
+    prop: "imageinfo",
+    iiprop: "size|extmetadata",
+    iiextmetadatafilter: "LicenseShortName|Artist|Credit|DateTimeOriginal",
+  });
+  for (const p of data.query?.pages ?? []) {
+    const ii = p.imageinfo?.[0];
+    if (!ii) continue;
+    const m = ii.extmetadata ?? {};
+    const lic = strip(m.LicenseShortName?.value);
+    console.log(
+      `${ii.width}x${ii.height}\t${lic}\t${strip(m.Credit?.value).slice(0, 70)}\t${strip(m.DateTimeOriginal?.value).slice(0, 20)}\t${p.title}`,
+    );
+    const free = /^(public domain|cc0)/i.test(lic);
+    if (s.previewMinEdge && free && Math.max(ii.width, ii.height) >= s.previewMinEdge && !toPreview.includes(p.title)) {
+      toPreview.push(p.title);
+    }
+  }
+}
+
 for (const [n, file] of toPreview.entries()) {
   try {
     await preview(n + 1, file);

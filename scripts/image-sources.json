@@ -1,34 +1,11 @@
 {
   "candidates": [
-    "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg",
-    "File:Le Radeau de La Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884.jpg",
-    "File:JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 1818-19).jpg",
-    "File:Théodore Géricault - Le Radeau de La Méduse.jpg",
-    "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg",
-    "File:Vénus de Milo - Musée du Louvre AGER LL 299, Ma 399.jpg",
-    "File:Venus de Milo from Paris Project, 44.jpg"
+    "File:Nike of Samothrace, Paris, Louvre.jpg",
+    "File:Winged Victory of Samothrace - March 2015 by kHo.jpg"
   ],
-  "categories": [
-    { "title": "Category:Front views of the Nike of Samothrace", "depth": 0, "previewMinEdge": 2000 },
-    { "title": "Category:La Liberté guidant le peuple", "depth": 0 },
-    { "title": "Category:Liberty Leading the People (Delacroix)", "depth": 0 },
-    { "title": "Category:La Liberté guidant le peuple by Eugène Delacroix", "depth": 0 }
-  ],
-  "previews": [
-    "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
-    "File:Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg",
-    "File:Eugène Delacroix - Le 28 Juillet. La Liberté guidant le peuple.jpg",
-    "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg",
-    "File:Le Radeau de La Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884.jpg",
-    "File:JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 1818-19).jpg",
-    "File:Théodore Géricault - Le Radeau de La Méduse.jpg",
-    "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg",
-    "File:Vénus de Milo - Musée du Louvre AGER LL 299, Ma 399.jpg",
-    "File:Venus de Milo from Paris Project, 44.jpg",
-    "File:Venus de Milo Louvre Ma399 n4.jpg",
-    "File:Louvre Venus de Milo (9811956244).jpg",
-    "File:Nike of Samothrake Louvre Ma2369 n4.jpg",
-    "File:Nike of Samothrake Louvre Ma2369 n2.jpg"
+  "searches": [
+    { "query": "intitle:\"Liberté guidant le peuple\"", "previewMinEdge": 4000 },
+    { "query": "Delacroix Liberté \"RF 129\"", "previewMinEdge": 4000 }
   ],
   "images": []
 }
