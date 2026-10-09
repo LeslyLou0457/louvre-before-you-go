@@ -37,12 +37,12 @@ UA = "LouvreBeforeYouGo-ChallengeFetch/1.0 (https://github.com/LeslyLou0457/louv
 BROWSER_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 
 
-def get(url, ua=UA, tries=3):
+def get(url, ua=UA, tries=3, timeout=120):
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Language": "en,fr;q=0.8"})
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.status, r.headers.get("Content-Type", ""), r.read(), r.geturl()
         except urllib.error.HTTPError as e:
             last = e
@@ -162,7 +162,7 @@ def sources():
     os.makedirs(d, exist_ok=True)
     status_list = []
     for s in cfg.get("sources", []):
-        status, ctype, body, final = get(s["url"], ua=BROWSER_UA)
+        status, ctype, body, final = get(s["url"], ua=BROWSER_UA, tries=2, timeout=25)
         name = s["name"]
         entry = {"name": name, "url": s["url"], "final": final, "status": status, "type": ctype, "bytes": len(body)}
         try:
