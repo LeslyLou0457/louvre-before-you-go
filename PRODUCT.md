@@ -157,7 +157,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 ### Content sample
 
-The full scripts for all 5 artworks are in the [Branching Story Playbook](https://claude.ai/code/artifact/ff9f143f-3ac4-458a-8037-1c68ebbee5a8): how a level plays, writing rules, the production workflow and QA checklist, a script template, a batch-production prompt, and 5 levels with 25 questions. Write new content in its format and by its rules. The [revised playbook with artist voices](https://claude.ai/artifact/HmaiNoKUVeHwC2YBZ8AZox) (2026-10-09) merges scripted artist voices, persona cards and the optional voice fields into the same workflow, template, prompt and levels.
+The full scripts for all 5 artworks are in the [Branching Story Playbook](https://claude.ai/code/artifact/ff9f143f-3ac4-458a-8037-1c68ebbee5a8): how a level plays, writing rules, the production workflow and QA checklist, a script template, a batch-production prompt, and 5 levels with 25 questions. Write new content in its format and by its rules. The [revised playbook with artist voices](https://claude.ai/artifact/HmaiNoKUVeHwC2YBZ8AZox) (2026-10-09) merges scripted artist voices, persona cards and the optional voice fields into the same workflow, template, prompt and levels. Its depth revision (same link, 2026-10-09) adds the depth standard with shallow-vs-deep examples, the wrong-answer correction rules and a depth check in the QA checklist, and carries the rewritten levels.
 
 ### Data format
 
