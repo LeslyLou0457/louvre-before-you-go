@@ -142,12 +142,13 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 - The first time a technical term appears, explain it in one plain sentence.
 - Every fact must be traceable to a source, listed in the level's `sources`. For disputed claims, write "one theory is".
 - Never invent things an artist said. Every quote needs a source.
+- Artist voices (optional, a few per level): a short line in a speaker's speech bubble, at most 25 words for an imagined line and 30 for a quote. Each voice must match the speaker's documented personality and must never step outside the sourced facts of the level. A line written for them is marked as an imagined voice; a real quote is used only when it is documented, word for word in a published translation, with its source cited. Anything that can't be sourced is written "TBD", never invented. An artist only speaks about what they could have known in their lifetime (Leonardo can't comment on the 1911 theft). Wrong-answer branches can be voiced by another fitting person with a documented link to the work. When the maker is unknown, the artwork itself speaks, limited to its documented history. The voices are scripted and checked in advance; there is no live AI conversation. Rules and personas: see the playbook.
 - Each question's options play three roles: the right answer, a near miss (a real neighbouring idea, e.g. chiaroscuro next to sfumato) and a common myth. No filler or joke options. A wrong-answer branch first credits the instinct, then says what that idea really is.
 - After the branches, every path rejoins the same main-line passage (the merge line). Anything everyone must remember goes there, so every player sees it whatever they picked.
 
 ### Content sample
 
-The full scripts for all 5 artworks are in the [Branching Story Playbook](https://claude.ai/code/artifact/ff9f143f-3ac4-458a-8037-1c68ebbee5a8): how a level plays, writing rules, the production workflow and QA checklist, a script template, a batch-production prompt, and 5 levels with 25 questions. Write new content in its format and by its rules.
+The full scripts for all 5 artworks are in the [Branching Story Playbook](https://claude.ai/code/artifact/ff9f143f-3ac4-458a-8037-1c68ebbee5a8): how a level plays, writing rules, the production workflow and QA checklist, a script template, a batch-production prompt, and 5 levels with 25 questions. Write new content in its format and by its rules. The [revised playbook with artist voices](https://claude.ai/artifact/HmaiNoKUVeHwC2YBZ8AZox) (2026-10-09) merges scripted artist voices, persona cards and the optional voice fields into the same workflow, template, prompt and levels.
 
 ### Data format
 
@@ -158,12 +159,18 @@ One JSON file per artwork. A level is a set of nodes; each node is one passage o
   "museum": { "id": "louvre", "name": "The Louvre", "city": "Paris" },
   "artwork": {
     "id": "mona-lisa", "title": "Mona Lisa", "artist": "Leonardo da Vinci", "year": "c. 1503–1519",
-    "image": "/images/mona-lisa.jpg", "imageCredit": "Wikimedia Commons · Public Domain"
+    "image": "/images/mona-lisa.jpg", "imageCredit": "Wikimedia Commons · Public Domain",
+    "medium": "Oil on poplar panel", "dimensions": "79.4 × 53.4 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010062370"
+  },
+  "speakers": {
+    "leonardo": { "name": "Leonardo da Vinci", "kind": "artist", "avatar": "leonardo" }
   },
   "lessons": [{
-    "id": "mona-lisa-1", "order": 1, "title": "A face that seems to think", "start": "n1",
+    "id": "mona-lisa-1", "order": 1, "title": "A face that seems to think", "start": "n1", "narrator": "leonardo",
     "nodes": {
-      "n1": { "type": "story", "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.", "next": "q1" },
+      "n1": { "type": "story", "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.", "next": "q1",
+              "voice": { "speaker": "leonardo", "kind": "imagined", "text": "Before you judge her, look. Her body turns one way, and her eyes come round to you. Living people move like that." } },
       "q1": { "type": "question", "text": "Where did your eye land first?",
               "choices": [ { "label": "Her eyes", "next": "b1a" }, { "label": "Her mouth", "next": "b1b" }, { "label": "Her hands", "next": "b1c" } ] },
       "b1a": { "type": "branch", "text": "Most people start there. Her eyes are on you, but her body hasn't finished turning. It's as if she sat down, then turned to hear what you were saying.", "next": "n2" },
@@ -177,7 +184,18 @@ One JSON file per artwork. A level is a set of nodes; each node is one passage o
 }
 ```
 
-There are only three node types: `story` (main line), `question` and `branch`. An option can carry `"correct": true`; questions with no right answer leave it out. In 1.0, `story` and `branch` nodes gain an `audio` field pointing to that passage's audio. This structure maps one-to-one onto the 1.0 database tables, so upgrading is an import, not a rewrite.
+There are only three node types: `story` (main line), `question` and `branch`. An option can carry `"correct": true`; questions with no right answer leave it out.
+
+Optional fields (added 2026-10-09; a file without them still works, and the app must not require them):
+
+| Where | Field | What it holds |
+|---|---|---|
+| `artwork` | `medium`, `dimensions`, `museumUrl` | The museum label next to the photo: medium, size as the Louvre records it, and the work's page on collections.louvre.fr ("View at the Louvre →") |
+| top level | `speakers` | Who can speak in this file, by id: `name` (shown under the head), `kind` (`artist`, `artwork` when a statue with no known maker speaks, or `person` for another documented figure), `avatar` (id of the hand-drawn SVG: a painted head, or a doodled object for artworks and living artists) |
+| `lessons[]` | `narrator` | Speaker id of the level's main narrator, shown on the route and the level page. Missing means no head |
+| `story` / `branch` node | `voice` | One line in a speech bubble beside the speaker's head: `speaker` (an id from `speakers`), `text` (at most 25 words; a quote at most 30), `kind` (`imagined` or `quote`). A `quote` also needs `cite` (short attribution shown under the bubble, e.g. "Letter to his brother, 28 Oct 1830") and `source` (URL, also listed in the level's `sources`) |
+
+The node's `text` stays the friendly narration shown in print; `voice.text` is the speaker's own line, shown in handwriting in the bubble. An `imagined` voice always shows a small tag under the speaker's name, "Imagined voice, built from sourced facts"; a `quote` shows quotation marks and its `cite`. Nodes without `voice` show the narrator's head with no bubble. In 1.0, `story` and `branch` nodes gain an `audio` field pointing to that passage's audio. This structure maps one-to-one onto the 1.0 database tables, so upgrading is an import, not a rewrite.
 
 ---
 
@@ -316,7 +334,7 @@ One principle covers most boundaries: content is written in advance and checked 
 |---|---|
 | On-site guiding, identifying artworks from photos | The product is only for before the trip; general AI chat can already identify artworks from photos |
 | Real-time AI-generated content or audio | Every use calls an API, which is costly, and the content can't be checked in advance |
-| Talking with the artist (AI playing Leonardo) | Uses lots of tokens and easily invents things that never happened; to be tested separately later |
+| Talking with the artist (AI playing Leonardo) | Uses lots of tokens and easily invents things that never happened; to be tested separately later. Scripted artist voices, written and source-checked in advance, are fine (see "How to write") |
 | Museum maps, 3D or virtual tours | The product is only for before the trip: knowing an artwork doesn't require knowing its room |
 | Museums other than the Louvre | Coming, but 0.5 and 1.0 do one museum thoroughly first |
 | An in-depth academic edition | Target users are beginners, not scholars |
