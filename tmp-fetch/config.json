@@ -1,50 +1,27 @@
 {
-  "measure": true,
-  "images": [
-    { "id": "mona-lisa", "file": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg" },
-    { "id": "venus-de-milo", "file": "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg" },
-    { "id": "winged-victory", "file": "File:Nike of Samothrace, Paris, Louvre.jpg" },
-    { "id": "liberty-leading-the-people", "file": "File:La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg" },
-    { "id": "raft-of-the-medusa", "file": "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg" }
-  ],
-  "crops": [],
-  "inspect": [],
-  "sources": [
-    { "name": "louvre-rec-monalisa", "url": "https://collections.louvre.fr/ark:/53355/cl010062370" },
-    { "name": "louvre-rec-monalisa-json", "url": "https://collections.louvre.fr/ark:/53355/cl010062370.json" },
-    { "name": "louvre-rec-venus", "url": "https://collections.louvre.fr/ark:/53355/cl010277627" },
-    { "name": "louvre-rec-venus-json", "url": "https://collections.louvre.fr/ark:/53355/cl010277627.json" },
-    { "name": "louvre-rec-victory", "url": "https://collections.louvre.fr/ark:/53355/cl010252531" },
-    { "name": "louvre-rec-victory-json", "url": "https://collections.louvre.fr/ark:/53355/cl010252531.json" },
-    { "name": "louvre-rec-victory-en", "url": "https://collections.louvre.fr/en/ark:/53355/cl010252531" },
-    { "name": "louvre-rec-raft", "url": "https://collections.louvre.fr/ark:/53355/cl010059199" },
-    { "name": "louvre-rec-raft-json", "url": "https://collections.louvre.fr/ark:/53355/cl010059199.json" },
-    { "name": "louvre-rec-liberty-json", "url": "https://collections.louvre.fr/ark:/53355/cl010065872.json" },
-    { "name": "focus-ml-37", "url": "https://focus.louvre.fr/en/node/37" },
-    { "name": "focus-ml-42", "url": "https://focus.louvre.fr/en/node/42" },
-    { "name": "focus-wv-ship", "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/base-form-ship" },
-    { "name": "focus-wv-battleship", "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/battleship" },
-    { "name": "focus-wv-goddess", "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/statue-winged-goddess" },
-    { "name": "focus-wv-structure", "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument" },
-    { "name": "focus-wv-previous", "url": "https://focus.louvre.fr/en/winged-victory-samothrace/restaurations/previous-restorations" },
-    { "name": "louvre-liberty-fabre", "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie" },
-    { "name": "louvre-ideal-greek-beauty", "url": "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty" },
-    { "name": "louvre-liberty-dossier", "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf" },
-    { "name": "louvre-raft-podcast", "url": "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf" },
-    { "name": "praxitele-1741", "url": "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html" },
-    { "name": "kousser-aja", "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf" },
-    { "name": "smarthistory-doryphoros", "url": "https://smarthistory.org/polykleitos-doryphoros-spear-bearer/" },
-    { "name": "britannica-hellenistic", "url": "https://www.britannica.com/art/Western-sculpture/Hellenistic-period" },
-    { "name": "esrf-faces", "url": "https://www.esrf.fr/news/general-old/general-2010/new-light-on-leonardo-da-vinci2019s-faces" },
-    { "name": "gutenberg-11772", "url": "https://www.gutenberg.org/cache/epub/11772/pg11772.txt" },
-    { "name": "larousse-raft", "url": "https://www.larousse.fr/encyclopedie/oeuvre/le_Radeau_de_%C2%AB_la_M%C3%A9duse_%C2%BB/181410" },
-    { "name": "ng-aerial", "url": "https://www.nationalgallery.org.uk/paintings/glossary/aerial-perspective" },
-    { "name": "ng-chiaroscuro", "url": "https://www.nationalgallery.org.uk/paintings/glossary/chiaroscuro" },
-    { "name": "ng-glaze", "url": "https://www.nationalgallery.org.uk/paintings/glossary/glaze" },
-    { "name": "ng-raphael", "url": "https://www.nationalgallery.org.uk/paintings/catalogues/plazzotta-and-henry-2022/saint-john-the-baptist-preaching" },
-    { "name": "phaidon-gombrich", "url": "https://www.phaidon.com/agenda/art/articles/2017/november/16/why-leonardo-has-always-kept-us-guessing/" },
-    { "name": "academia-deviguerie", "url": "https://www.academia.edu/9069753/" },
-    { "name": "wiley-deviguerie-abs", "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201001116" },
-    { "name": "wiley-deviguerie-full", "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/anie.201001116" }
-  ]
+ "measure": true,
+ "images": [
+  {
+   "id": "mona-lisa",
+   "file": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg"
+  },
+  {
+   "id": "venus-de-milo",
+   "file": "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg"
+  },
+  {
+   "id": "winged-victory",
+   "file": "File:Nike of Samothrace, Paris, Louvre.jpg"
+  },
+  {
+   "id": "liberty-leading-the-people",
+   "file": "File:La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg"
+  },
+  {
+   "id": "raft-of-the-medusa",
+   "file": "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg"
+  }
+ ],
+ "crops": [],
+ "inspect": []
 }
