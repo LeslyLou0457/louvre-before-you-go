@@ -1,0 +1,105 @@
+{
+ "images": {
+  "mona-lisa": {
+   "title": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg",
+   "width": 7854,
+   "height": 11498,
+   "bytes": 60066200,
+   "mime": "image/jpeg",
+   "sha1": "9dd1ef62e956756ac03c33b373d9d839c4894a3d",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF.jpg",
+   "author": "Leonardo da Vinci",
+   "licence": "Public domain",
+   "credit": "C2RMF: Galerie de tableaux en très haute définition : image page",
+   "date": "between 1503 and 1505 date QS:P571,+1503-00-00T00:00:00Z/8,P1319,+1503-00-00T00:00:00Z/9,P1326,+1505-00-00T00:00:00Z/9",
+   "exifOrientation": 1,
+   "orientedSize": [
+    7854,
+    11498
+   ],
+   "hasIcc": false
+  },
+  "venus-de-milo": {
+   "title": "File:Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg",
+   "width": 6124,
+   "height": 10349,
+   "bytes": 15624559,
+   "mime": "image/jpeg",
+   "sha1": "925171c8b501e327cec29fcd9604cc6b727dc9a0",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_%3B_N_527_%3B_Ma_399.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg",
+   "author": "Shonagon",
+   "licence": "CC0",
+   "credit": "Own work",
+   "date": "2024-02-15",
+   "exifOrientation": 1,
+   "orientedSize": [
+    6124,
+    10349
+   ],
+   "hasIcc": true
+  },
+  "winged-victory": {
+   "title": "File:Nike of Samothrace, Paris, Louvre.jpg",
+   "width": 3606,
+   "height": 3953,
+   "bytes": 8262350,
+   "mime": "image/jpeg",
+   "sha1": "0a0fb9316074e1e337f6a6a3f30f7648fd3d9585",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Nike_of_Samothrace%2C_Paris%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:Nike_of_Samothrace,_Paris,_Louvre.jpg",
+   "author": "Wilfredor",
+   "licence": "CC0",
+   "credit": "Own work",
+   "date": "2024-01-29 08:31:41",
+   "exifOrientation": 1,
+   "orientedSize": [
+    3606,
+    3953
+   ],
+   "hasIcc": true
+  },
+  "liberty-leading-the-people": {
+   "title": "File:La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg",
+   "width": 10128,
+   "height": 8103,
+   "bytes": 31186221,
+   "mime": "image/jpeg",
+   "sha1": "5dad3e8c4c37a2bc5c4e3ae56e172e5622374805",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg",
+   "author": "Eugène Delacroix",
+   "licence": "Public domain",
+   "credit": "photo Shonagon 2024-05-02",
+   "date": "between October 1830 and December 1830 date QS:P,+1830-00-00T00:00:00Z/9,P1319,+1830-10-00T00:00:00Z/10,P1326,+1830-12-00T00:00:00Z/10 Romanticism (second half of 18 th century date QS:P,+1750-00-00T00:00:00Z/7,P4241,Q40719707 –first half of 19 th century date QS:P,+1850-00-00T00:00:00Z/7,P4241,Q40719687 )",
+   "exifOrientation": 1,
+   "orientedSize": [
+    10128,
+    8103
+   ],
+   "hasIcc": true
+  },
+  "raft-of-the-medusa": {
+   "title": "File:Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg",
+   "width": 10244,
+   "height": 6924,
+   "bytes": 27344570,
+   "mime": "image/jpeg",
+   "sha1": "b6bb16b5cee0ba221bd7f35b2e52a84c5ef6f212",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Le_Radeau_de_la_M%C3%A9duse_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4884_%3B_C_51.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:Le_Radeau_de_la_M%C3%A9duse_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4884_;_C_51.jpg",
+   "author": "Théodore Géricault",
+   "licence": "Public domain",
+   "credit": "photo Shonagon 2025-03-29",
+   "date": "1819",
+   "exifOrientation": 1,
+   "orientedSize": [
+    10244,
+    6924
+   ],
+   "hasIcc": true
+  }
+ },
+ "crops": []
+}
