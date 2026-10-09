@@ -1,0 +1,566 @@
+{
+  "artworkId": "liberty-leading-the-people",
+  "zoomImage": {
+    "file": "La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg",
+    "width": 10128,
+    "height": 8103,
+    "licence": "Public domain",
+    "credit": "Photo: Shonagon, 2024, after the restoration, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/liberty-leading-the-people/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "liberty-leading-the-people-challenge",
+      "kind": "challenge",
+      "order": 4,
+      "title": "Close-up: what the cleaning brought back",
+      "narrator": "delacroix",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.83,
+            "y": 0.33,
+            "w": 0.17,
+            "h": 0.26,
+            "label": "Far right background: house fronts in the smoke and the towers of Notre-Dame",
+            "image": "/images/challenge/liberty-leading-the-people/c1.jpg"
+          },
+          "text": "Far right, past the crowd: house fronts in the smoke, and Notre-Dame's towers flying the tricolour. Since the 2024 cleaning, tiny pink streaks show in the smoke here.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.83,
+            "y": 0.33,
+            "w": 0.17,
+            "h": 0.26,
+            "label": "Far right background: house fronts in the smoke and the towers of Notre-Dame",
+            "image": "/images/challenge/liberty-leading-the-people/c1.jpg"
+          },
+          "text": "What are those tiny pink streaks?",
+          "choices": [
+            {
+              "label": "Flag colours, echoed in touches",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Gunfire from the windows",
+              "role": "right",
+              "correct": true,
+              "next": "c1b"
+            },
+            {
+              "label": "Leftover 1949 retouching",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, interview with curator Côme Fabre on the restoration of Liberty (30 April 2024, in French)",
+              "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie"
+            },
+            {
+              "title": "Louvre, teaching file 'La Liberté guidant le peuple' (2024, in French)",
+              "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Good memory: the flag's colours are everywhere. These are something else.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one: blue, white and red recur in small touches all over the canvas, rhyming with the flag.",
+            "truth": "Those touches are real. But these pink streaks, by the windows, are shots: exchanges of fire with the troops.",
+            "evidence": "Louvre teaching file: colours \"distribuées en petites touches dans toute la toile\". Fabre: the firefights are shown \"par de minuscules stries roses\"."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Shots come from the windows. The Louvre's curator Côme Fabre: the firefights with the troops are \"tiny pink streaks in the confusion of smoke\".",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Old retouching was removed in 2024, so a fair suspicion. But no.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The 2024 restorers removed retouching from 1949. A few leftover dabs could look like stray streaks.",
+            "truth": "These streaks are Delacroix's own detail, readable again after the cleaning. He neglected nothing, even at the picture's edge.",
+            "evidence": "Fabre (Louvre, 2024): \"Delacroix n'a rien négligé, jusqu'à la périphérie du tableau\"; the buildings at far right show the firefight."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "The whole city is fighting, down to its windows. Delacroix painted it all, even at the edge."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.56,
+            "y": 0.07,
+            "w": 0.11,
+            "h": 0.13,
+            "label": "Liberty's head and red Phrygian cap",
+            "image": "/images/challenge/liberty-leading-the-people/c2.jpg"
+          },
+          "text": "The French museums' lab X-rayed this canvas and studied its paint layers. Look at Liberty's red Phrygian cap, level one's ancient sign of freedom.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.56,
+            "y": 0.07,
+            "w": 0.11,
+            "h": 0.13,
+            "label": "Liberty's head and red Phrygian cap",
+            "image": "/images/challenge/liberty-leading-the-people/c2.jpg"
+          },
+          "text": "How did Delacroix build that red?",
+          "choices": [
+            {
+              "label": "One coat of pure red",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Red deepened with brown earth",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Five stacked layers, ending orange",
+              "role": "right",
+              "correct": true,
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, teaching file 'La Liberté guidant le peuple' (2024, in French)",
+              "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "That's where he started, not where he stopped.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The cap reads as one bold red, so one coat of red paint seems enough.",
+            "truth": "A bright red is only the first layer. Over it come a reddish-beige glaze, a violet glaze, then two orange layers.",
+            "evidence": "The Louvre's teaching file: the cap's colour \"telle que nous la percevons, est constituée de la superposition\" of those five layers."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Brown earth was on his palette. The depth comes from layers.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Brown earth was on Delacroix's palette, and the cap's red looks deep and warm.",
+            "truth": "The cap's depth comes from stacking: a bright red under translucent glazes, beige-red then violet, finished with orange.",
+            "evidence": "The teaching file names \"la terre brune\" among his pigments, and describes the cap as built by \"superposition\" of layers."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. The lab found a bright red, then a reddish-beige glaze, a violet glaze, then two orange layers, the last a glaze. Colour built up step by step.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Delacroix sketched thinly, then built the picture up layer by layer: even one red cap is a stack."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.49,
+            "y": 0.05,
+            "w": 0.22,
+            "h": 0.32,
+            "label": "Liberty's head, bust and yellow bodice, with the golden glow behind her head",
+            "image": "/images/challenge/liberty-leading-the-people/c3.jpg"
+          },
+          "text": "Level one: since the 2024 cleaning her dress reads grey again, with pure yellow at the bodice. Now notice the golden glow just behind her head.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.49,
+            "y": 0.05,
+            "w": 0.22,
+            "h": 0.32,
+            "label": "Liberty's head, bust and yellow bodice, with the golden glow behind her head",
+            "image": "/images/challenge/liberty-leading-the-people/c3.jpg"
+          },
+          "text": "Why gather the yellow around her bust and head?",
+          "choices": [
+            {
+              "label": "To make the warmest point",
+              "role": "right",
+              "correct": true,
+              "next": "c3a"
+            },
+            {
+              "label": "Her dress is simply yellow",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "To repeat the flag's colours",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, interview with curator Côme Fabre on the restoration of Liberty (30 April 2024, in French)",
+              "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes. Fabre: the yellow gradient is made \"to exalt Liberty's bust\"; with bodice and golden halo, it is \"the warmest point of the whole painting\" (our translation).",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "That's what everyone thought before 2024.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "For decades the dress looked solid yellow, so the yellow seems to be just the colour of her dress.",
+            "truth": "Delacroix painted the dress grey. The pure yellow is concentrated at the bodice and thins toward her legs.",
+            "evidence": "Fabre (Louvre, 2024): the tunic \"que l'on croyait uniformément jaune\" was painted grey; 1949 retouches had evened it out."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Good instinct: the flag rhymes everywhere. But yellow isn't on the flag.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one showed blue, white and red echoing across the canvas, so every strong colour might be a flag echo.",
+            "truth": "The flag has no yellow. Delacroix adds it as the third primary, completing the blue and red that run through the picture.",
+            "evidence": "Fabre: the gold is \"complément aux deux autres couleurs primaires omniprésentes, le bleu et le rouge\"."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Blue and red everywhere, and one point of hot yellow: Liberty's bust, where Delacroix wants your eye."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.46,
+            "y": 0.06,
+            "w": 0.38,
+            "h": 0.7,
+            "label": "Liberty and the boy with two pistols (viewer's right)",
+            "image": "/images/challenge/liberty-leading-the-people/c4.jpg"
+          },
+          "text": "Level one met the boy with two pistols. Before 2024 he seemed to run beside Liberty. After the cleaning, he clearly runs ahead of her.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.46,
+            "y": 0.06,
+            "w": 0.38,
+            "h": 0.7,
+            "label": "Liberty and the boy with two pistols (viewer's right)",
+            "image": "/images/challenge/liberty-leading-the-people/c4.jpg"
+          },
+          "text": "Why did he once seem to run beside her?",
+          "choices": [
+            {
+              "label": "1949 repaints blurred them",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Thick varnish flattened the depth",
+              "role": "right",
+              "correct": true,
+              "next": "c4b"
+            },
+            {
+              "label": "Delacroix first painted him there",
+              "role": "near-miss",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, interview with curator Côme Fabre on the restoration of Liberty (30 April 2024, in French)",
+              "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie"
+            },
+            {
+              "title": "Louvre, teaching file 'La Liberté guidant le peuple' (2024, in French)",
+              "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "There were 1949 retouches, but on her dress.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The 2024 restorers did remove 1949 retouching, so it could have smudged the boy into Liberty.",
+            "truth": "The 1949 retouches went into her dress, evening out its colour. The flattening came from the thick, darkened varnish.",
+            "evidence": "Fabre: in 1949 restorers sought \"à uniformiser la teinte de la robe\"; thinning the varnish made figures separate again."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. Thinning the yellowed varnish brought back strong contrasts, and the figures separate again \"according to the planes the artist assigned them\", Fabre says (our translation).",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "Delacroix did change his mind once. Not about the boy.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one: X-rays show he turned Liberty's face from frontal to profile. Maybe he moved the boy too.",
+            "truth": "The boy's place is Delacroix's plan, hidden by varnish. The repentir the Louvre's file cites is her face.",
+            "evidence": "Fabre: figures separate \"selon les plans que leur a assignés l'artiste\". The teaching file's repentir example is Liberty's face."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "Varnish yellows a picture and flattens it. Cleaned, the boy runs ahead of Liberty, where Delacroix put him."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n3b",
+          "n5b",
+          "q5",
+          "b5b",
+          "n6"
+        ],
+        "concept": "Notre-Dame's towers at far right; blue, white and red in small touches; the 2024 cleaning"
+      },
+      "framing": "what",
+      "what_you_learn": "At far right, shots from the windows are painted as tiny pink streaks in the smoke: Delacroix detailed the fighting even at the edge; the cleaning made it readable.",
+      "regionSources": [
+        {
+          "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+          "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+          "quote": "Idem pour les immeubles visibles à l'extrémité droite : chaque façade se différencie de la voisine, des coups de feu partent des fenêtres, les échanges de tirs avec la troupe sont matérialisés par de minuscules stries roses dans la confusion des fumées.",
+          "translation": "The same goes for the buildings visible at the far right: each façade differs from its neighbour, shots come from the windows, the exchanges of fire with the troops are shown by tiny pink streaks in the confusion of smoke. (our translation)",
+          "supports": "Places the pink streaks at the far-right buildings.",
+          "readVia": "WebFetch, short quotations given in consecutive segments"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Louvre, dossier pédagogique 'La Liberté guidant le peuple' (PDF, 2024), p. 4 (approx.)",
+            "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+            "quote": "Au sommet de la composition se trouvent les plus grandes surfaces de couleurs vives, bleu, blanc et rouge qui sont distribuées en petites touches dans toute la toile.",
+            "translation": "At the top of the composition are the largest areas of bright colour, blue, white and red, which are distributed in small touches across the whole canvas. (our translation)",
+            "supports": "The flag-colour touches are real.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+            "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+            "quote": "la dernière restauration, en 1949, avait-elle cherché à uniformiser la teinte de la robe [...] Delacroix n'a rien négligé, jusqu'à la périphérie du tableau.",
+            "translation": "the last restoration, in 1949, had sought to even out the colour of the dress [...] Delacroix neglected nothing, right to the edges of the picture. (our translation)",
+            "supports": "1949 retouching was real (on the dress); the edge details are Delacroix's.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ]
+      },
+      "confidence": "High for the reading (the museum's curator after the restoration). Exactly where in the far-right smoke the streaks sit is not specified; the crop covers the whole far-right building group.",
+      "notes": "2026-10-09 crop check: on the full-resolution photo, small pink-orange streaks show in the smoke at the lower left of the far-right buildings, and soldiers fire at the bottom right of the crop. The sentence before Fabre's 'Idem pour les immeubles' says the varnish had optically merged a detail into the paving: the buildings' details were likewise hidden by varnish, not by retouching.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n4b",
+          "b3b",
+          "n5b"
+        ],
+        "concept": "X-rays show a repentir in her face; the Phrygian cap as attribute; Delacroix's colour"
+      },
+      "framing": "how",
+      "what_you_learn": "The Laboratoire de recherche des musées de France found the cap built from five superposed layers: bright red, reddish-beige glaze, violet glaze, then two orange layers ending in a glaze. Colour as a stack, not a single mix.",
+      "regionSources": [
+        {
+          "title": "Louvre, dossier pédagogique 'La Liberté guidant le peuple' (PDF, 2024), p. 5 (approx.)",
+          "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+          "quote": "Par exemple, la couleur du bonnet phrygien, telle que nous la percevons, est constituée de la superposition d'un rouge initial vif, d'un glacis beige rougeâtre, d'un glacis violacé, puis de deux couches orangées dont un glacis final.",
+          "translation": "For example, the colour of the Phrygian cap as we perceive it is made of the superposition of an initial bright red, a reddish-beige glaze, a violet glaze, then two orange layers including a final glaze. (our translation)",
+          "supports": "Places the layer structure in the Phrygian cap.",
+          "readVia": "WebFetch, short quotations given in consecutive segments"
+        },
+        {
+          "title": "Louvre, dossier pédagogique 'La Liberté guidant le peuple' (PDF, 2024), p. 5",
+          "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+          "quote": "L'examen radiographique de «La Liberté guidant le peuple » au Laboratoire de recherche des musées de France renseigne sur l'élaboration du tableau et le métier du peintre : le support, les différentes couches picturales, les pigments, l'écriture picturale et les hésitations de Delacroix… Sur une toile assez grosse constituée de trois lais cousus horizontalement et préparée, Delacroix a d'abord esquissé au pinceau une ébauche avec une peinture maigre riche en térébenthine puis a «monté » progressivement le tableau en épaisseur et en couleur, superposant des couches de peintures dont la couleur évolue progressivement.",
+          "translation": "The X-ray examination of Liberty Leading the People at the Laboratoire de recherche des musées de France tells us how the picture was built up and about the painter's craft: the support, the paint layers, the pigments, the brushwork and Delacroix's hesitations… On a fairly coarse canvas of three strips sewn together horizontally and primed, Delacroix first sketched with the brush in a lean paint rich in turpentine, then gradually 'built up' the picture in thickness and colour, superposing layers of paint whose colour changes step by step. (our translation)",
+          "supports": "The intro (the lab's X-ray study of the layers) and the merge line (thin sketch, then built up layer by layer)."
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Louvre, dossier pédagogique 'La Liberté guidant le peuple' (PDF, 2024), p. 5 (approx.)",
+            "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+            "quote": "d'un rouge initial vif",
+            "translation": "an initial bright red (our translation)",
+            "supports": "The bright red is only the first layer.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Louvre, dossier pédagogique 'La Liberté guidant le peuple' (PDF, 2024), p. 5 (approx.)",
+            "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+            "quote": "Delacroix utilise des pigments traditionnels comme le blanc de plomb ou la terre brune et aussi des pigments modernes pour l'époque, comme le bleu de cobalt.",
+            "translation": "Delacroix uses traditional pigments such as lead white or brown earth, and also pigments modern for the time, such as cobalt blue. (our translation)",
+            "supports": "Brown earth really was on his palette.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ]
+      },
+      "confidence": "High (Louvre teaching file, reporting the lab study). The file doesn't say which pigments are in each cap layer, so the script names layer colours only.",
+      "notes": "The dossier calls the lab the 'Laboratoire de recherche des musées de France'. The 'one coat' near miss is plausible rather than documented as a common belief; it is kept because the correction teaches the real layer stack.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "q5",
+          "b5b",
+          "n5b",
+          "n2"
+        ],
+        "concept": "Grey dress with yellow dense at the bodice; colours rhyming with the flag; Liberty lit against the light"
+      },
+      "framing": "why-there",
+      "what_you_learn": "Delacroix concentrates pure yellow at Liberty's bust and in a golden halo behind her head, the third primary beside the ever-present blue and red, to make her the warmest point of the picture.",
+      "regionSources": [
+        {
+          "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+          "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+          "quote": "Une fois ces repeints, très solubles, retirés, on a pris conscience que ce dégradé jaune est fait pour sublimer le buste de la Liberté. Sa poitrine est encadrée par le jaune pur de son bustier, en bas, et par le nimbe doré placé juste derrière sa tête, désormais bien distinct de la fumée blanche présente ailleurs. C'est le point le plus chaud de tout le tableau, complément aux deux autres couleurs primaires omniprésentes, le bleu et le rouge.",
+          "translation": "Once these very soluble repaints were removed, it became clear that this yellow gradient is made to exalt Liberty's bust. Her chest is framed by the pure yellow of her bodice below and by the golden halo placed just behind her head, now clearly distinct from the white smoke elsewhere. It is the warmest point of the whole painting, complementing the two other ever-present primary colours, blue and red. (our translation)",
+          "supports": "Places the yellow at the bust and the golden halo behind her head, and gives the reason.",
+          "readVia": "WebFetch, short quotations given in consecutive segments"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+            "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+            "quote": "la tunique de la Liberté, que l'on croyait uniformément jaune [...] Delacroix avait effectivement peint toute cette robe en gris",
+            "translation": "Liberty's tunic, which was thought to be uniformly yellow [...] Delacroix had in fact painted this whole dress grey (our translation)",
+            "supports": "The 'yellow dress' belief was real, and wrong.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+            "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+            "quote": "complément aux deux autres couleurs primaires omniprésentes, le bleu et le rouge",
+            "translation": "complementing the two other ever-present primary colours, blue and red (our translation)",
+            "supports": "Yellow completes the primaries; it isn't a flag colour.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ]
+      },
+      "confidence": "High (curator's statement after the restoration).",
+      "notes": "'Complément' here means completing the set of primaries, not 'complementary colour' in the colour-theory sense; the script avoids the word.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "b1c",
+          "q5",
+          "b5b",
+          "n6",
+          "n4b"
+        ],
+        "concept": "The boy with pistols; the 2024 cleaning; the repentir"
+      },
+      "framing": "why",
+      "what_you_learn": "Thick, darkened varnish flattens depth as well as colour; after thinning, the figures sit again on the planes Delacroix gave them, and the boy runs ahead of Liberty.",
+      "regionSources": [
+        {
+          "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+          "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+          "quote": "L'amincissement des vernis a d'abord rendu à l'œuvre son tonus : les contrastes sont vigoureux, la froideur générale revient, l'illusion tridimensionnelle est restituée. Les personnages se détachent à nouveau les uns des autres selon les plans que leur a assignés l'artiste. Par exemple, on prend conscience que le gamin armé de pistolets (souvent surnommé « Gavroche », bien que ce personnage hugolien soit bien postérieur) court en avant de la Liberté, et non à côté d'elle.",
+          "translation": "Thinning the varnishes first gave the work back its vigour: the contrasts are strong, the overall coolness returns, the three-dimensional illusion is restored. The figures stand out from one another again according to the planes the artist assigned them. For example, one realises that the boy armed with pistols (often nicknamed 'Gavroche', although Hugo's character is much later) runs ahead of Liberty, and not beside her. (our translation)",
+          "supports": "Places the change at the boy and Liberty; gives the cause (varnish thinning).",
+          "readVia": "WebFetch, short quotations given in consecutive segments"
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Louvre, 'La restauration de la Liberté « rend justice au travail d'un coloriste de génie »', interview with curator Côme Fabre by Olivier Saretta (30 April 2024)",
+            "url": "https://www.louvre.fr/decouvrir/vie-du-musee/la-restauration-de-la-liberte-rend-justice-au-travail-d-un-coloriste-de-genie",
+            "quote": "la dernière restauration, en 1949, avait-elle cherché à uniformiser la teinte de la robe, en maintenant une couche épaisse de vernis sur toute sa surface, et en ajoutant des rehauts orangés dans les plis et les contours",
+            "translation": "the last restoration, in 1949, had sought to even out the colour of the dress, keeping a thick layer of varnish over its whole surface and adding orange highlights in the folds and contours (our translation)",
+            "supports": "The 1949 retouching was real, and on the dress.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Louvre, dossier pédagogique 'La Liberté guidant le peuple' (PDF, 2024), p. 5 (approx.)",
+            "url": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf",
+            "quote": "comme le repentir du visage de la Victoire d'abord représentée de face et que Delacroix a modifié pour en faire un profil parfait.",
+            "translation": "such as the repentir of the face of Victory [Liberty], first shown from the front, which Delacroix changed into a perfect profile. (our translation)",
+            "supports": "The documented repentir is in her face.",
+            "readVia": "WebFetch, short quotations given in consecutive segments"
+          }
+        ]
+      },
+      "confidence": "High for the observation and its cause (the curator ties the separation of planes to the varnish thinning in the same passage).",
+      "notes": "2026-10-09: the 1949 restoration also kept a thick varnish over the dress (now in the c4a quote); the right answer stays the varnish, as Fabre ties the separation of planes to thinning it. Fabre also speaks of 'l'assombrissement et le jaunissement d'épais vernis' (darkening and yellowing of thick varnish).",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    }
+  }
+}
