@@ -111,7 +111,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 - **A wrong answer never blocks you, and it is always corrected.** A wrong pick opens its own branch. The branch says plainly that the answer isn't right, then a correction card explains why the idea is tempting, what is actually true, and the evidence (a detail in the work or a documented fact) that settles it. Never shown in red. A wrong answer is another chance to tell a story.
 - **Some questions have no right answer.** For example, "Where did your eye land first?": each option leads to a different branch.
-- **A level takes under 5 minutes.** One screen shows one passage or one question; tap to move on.
+- **A level takes about 5 minutes, at most about 6–7.** Since the 2026-10-09 depth revision a level is about 17–21 short screens: roughly 4–5 minutes when your answers are right, 6 or so when you get them wrong and read the corrections. One screen shows one passage or one question; tap to move on.
 
 > **Audio waits for 1.0:** 0.5 is text only; get the story and pacing right first. Write it the way people speak, so the 1.0 voice-over needs no rewrite.
 
@@ -193,7 +193,7 @@ One JSON file per artwork. A level is a set of nodes; each node is one passage o
 }
 ```
 
-There are only three node types: `story` (main line), `question` and `branch`. An option can carry `"correct": true`; questions with no right answer leave it out.
+There are only three node types: `story` (main line), `question` and `branch`. A `story` may lead to another `story` (up to three screens of main line between questions); the merge line is the first story after the branches. An option can carry `"correct": true`; questions with no right answer leave it out.
 
 Optional fields (added 2026-10-09; a file without them still works, and the app must not require them):
 
@@ -318,7 +318,7 @@ Every item can be ticked, no gut feeling. When all are ticked, the version is do
 ### 0.5 acceptance
 
 - [ ] All 5 artworks, 5 levels and 25 questions live; every fact checked and sourced
-- [ ] On a phone, each level finishes in under 5 minutes
+- [ ] On a phone, each level finishes in about 5 minutes, and never more than 7 (the target was "under 5" before the 2026-10-09 depth revision; the product owner decides)
 - [ ] Close the browser and reopen it: progress is still there
 - [ ] Leave a level mid-way and reopen it: it continues from the same question
 - [ ] 3 people who didn't help build it play it; at least 2 finish all 5 levels without prompting
