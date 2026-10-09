@@ -1,0 +1,49 @@
+name: Challenge fetch (temporary)
+
+# TEMPORARY: only on branch claude/challenge-fetch-tmp, deleted when the
+# close-up challenge PR is final. Downloads the Commons originals (cached,
+# never committed), writes measuring copies and crops, fetches the source
+# pages (committed only encrypted), and commits the results to this branch.
+# Pushes made with GITHUB_TOKEN never start workflows, so it can't loop.
+
+on:
+  push:
+    branches: [claude/challenge-fetch-tmp]
+    paths:
+      - tmp-fetch/config.json
+      - tmp-fetch/fetch.py
+      - tmp-fetch/run.txt
+      - .github/workflows/challenge-fetch.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: challenge-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: originals
+          key: commons-originals-v1
+      - run: pip install pillow beautifulsoup4 pdfminer.six
+      - run: sudo apt-get install -y poppler-utils >/dev/null 2>&1 || true
+      - run: python tmp-fetch/fetch.py $(cat tmp-fetch/run.txt 2>/dev/null)
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-fetch/out public/images/challenge 2>/dev/null || true
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -q -m "Temporary: challenge fetch results" -m "Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+          Claude-Session: https://claude.ai/code/session_0184qQRNq3EDUeoBUs6ASDUG"
+          git pull --rebase -q || true
+          git push
