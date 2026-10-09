@@ -4,9 +4,13 @@
 //   players keep their ticks).
 // - PLACE_KEY: where the player is inside each unfinished level, so leaving
 //   or reloading mid-level picks up at the same passage or question.
+// - PLAYS_KEY: Close-Up Challenge only, how many times each round has been
+//   finished; it picks the pair of questions the next play shows.
+// Challenge rounds use KEY and PLACE_KEY too, under their own lesson ids.
 
 const KEY = "louvre-before-you-go:progress:v1";
 const PLACE_KEY = "louvre-before-you-go:place:v1";
+const PLAYS_KEY = "louvre-before-you-go:challenge-plays:v1";
 
 type Stored = { completed: string[] };
 
@@ -106,4 +110,36 @@ export function clearPlace(lessonId: string): void {
   if (!(lessonId in places)) return;
   delete places[lessonId];
   writePlaces(places);
+}
+
+function readPlays(): Record<string, number> {
+  try {
+    const raw = window.localStorage.getItem(PLAYS_KEY);
+    const data: unknown = raw ? JSON.parse(raw) : null;
+    if (!data || typeof data !== "object" || Array.isArray(data)) return {};
+    return Object.fromEntries(
+      Object.entries(data as Record<string, unknown>).filter(
+        (e): e is [string, number] => typeof e[1] === "number" && Number.isFinite(e[1]) && e[1] >= 0,
+      ),
+    );
+  } catch {
+    return {};
+  }
+}
+
+/** How many times a challenge round has been finished (its play number for the next play). */
+export function getPlays(roundId: string): number {
+  return Math.floor(readPlays()[roundId] ?? 0);
+}
+
+/** Finish a challenge round: tick it, clear its place, and move its rotation on by one. */
+export function finishRound(roundId: string): void {
+  const plays = readPlays();
+  plays[roundId] = Math.floor(plays[roundId] ?? 0) + 1;
+  try {
+    window.localStorage.setItem(PLAYS_KEY, JSON.stringify(plays));
+  } catch {
+    // Storage blocked: the round still plays; the next play shows the first pair again.
+  }
+  markComplete(roundId);
 }
