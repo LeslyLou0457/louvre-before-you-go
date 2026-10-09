@@ -125,7 +125,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 
 - Tapping a locked level shows a light hint, "Finish the previous level first", not a pop-up.
 - Leaving mid-level restarts that level next time (it's 5 minutes; no need to remember the question number). Finished levels can be replayed.
-- Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti.
+- Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti. No character animation in 0.5.
 
 ---
 
@@ -142,12 +142,13 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 - The first time a technical term appears, explain it in one plain sentence.
 - Every fact must be traceable to a source, listed in the level's `sources`. For disputed claims, write "one theory is".
 - Never invent things an artist said. Every quote needs a source.
+- Artist voices (optional, a few per level): a short line in a speaker's speech bubble, at most 25 words for an imagined line and 30 for a quote. Each voice must match the speaker's documented personality and must never step outside the sourced facts of the level. A line written for them is marked as an imagined voice; a real quote is used only when it is documented, word for word in a published translation, with its source cited. Anything that can't be sourced is written "TBD", never invented. An artist only speaks about what they could have known in their lifetime (Leonardo can't comment on the 1911 theft). Wrong-answer branches can be voiced by another fitting person with a documented link to the work. When the maker is unknown, the artwork itself speaks, limited to its documented history. The voices are scripted and checked in advance; there is no live AI conversation. Rules and personas: see the playbook.
 - Each question's options play three roles: the right answer, a near miss (a real neighbouring idea, e.g. chiaroscuro next to sfumato) and a common myth. No filler or joke options. A wrong-answer branch first credits the instinct, then says what that idea really is.
 - After the branches, every path rejoins the same main-line passage (the merge line). Anything everyone must remember goes there, so every player sees it whatever they picked.
 
 ### Content sample
 
-The full scripts for all 5 artworks are in the [Branching Story Playbook](https://claude.ai/code/artifact/ff9f143f-3ac4-458a-8037-1c68ebbee5a8): how a level plays, writing rules, the production workflow and QA checklist, a script template, a batch-production prompt, and 5 levels with 25 questions. Write new content in its format and by its rules.
+The full scripts for all 5 artworks are in the [Branching Story Playbook](https://claude.ai/code/artifact/ff9f143f-3ac4-458a-8037-1c68ebbee5a8): how a level plays, writing rules, the production workflow and QA checklist, a script template, a batch-production prompt, and 5 levels with 25 questions. Write new content in its format and by its rules. The [revised playbook with artist voices](https://claude.ai/artifact/HmaiNoKUVeHwC2YBZ8AZox) (2026-10-09) merges scripted artist voices, persona cards and the optional voice fields into the same workflow, template, prompt and levels.
 
 ### Data format
 
@@ -158,12 +159,18 @@ One JSON file per artwork. A level is a set of nodes; each node is one passage o
   "museum": { "id": "louvre", "name": "The Louvre", "city": "Paris" },
   "artwork": {
     "id": "mona-lisa", "title": "Mona Lisa", "artist": "Leonardo da Vinci", "year": "c. 1503–1519",
-    "image": "/images/mona-lisa.jpg", "imageCredit": "Wikimedia Commons · Public Domain"
+    "image": "/images/mona-lisa.jpg", "imageCredit": "Wikimedia Commons · Public Domain",
+    "medium": "Oil on poplar panel", "dimensions": "79.4 × 53.4 cm",
+    "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010062370"
+  },
+  "speakers": {
+    "leonardo": { "name": "Leonardo da Vinci", "kind": "artist", "avatar": "leonardo" }
   },
   "lessons": [{
-    "id": "mona-lisa-1", "order": 1, "title": "A face that seems to think", "start": "n1",
+    "id": "mona-lisa-1", "order": 1, "title": "A face that seems to think", "start": "n1", "narrator": "leonardo",
     "nodes": {
-      "n1": { "type": "story", "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.", "next": "q1" },
+      "n1": { "type": "story", "text": "Forget she's famous for a moment. A woman sits close to you, nearly life-size, her body turned slightly away. No crown, no halo. Then her eyes come round to meet yours.", "next": "q1",
+              "voice": { "speaker": "leonardo", "kind": "imagined", "text": "Before you judge her, look. Her body turns one way, and her eyes come round to you. Living people move like that." } },
       "q1": { "type": "question", "text": "Where did your eye land first?",
               "choices": [ { "label": "Her eyes", "next": "b1a" }, { "label": "Her mouth", "next": "b1b" }, { "label": "Her hands", "next": "b1c" } ] },
       "b1a": { "type": "branch", "text": "Most people start there. Her eyes are on you, but her body hasn't finished turning. It's as if she sat down, then turned to hear what you were saying.", "next": "n2" },
@@ -177,20 +184,37 @@ One JSON file per artwork. A level is a set of nodes; each node is one passage o
 }
 ```
 
-There are only three node types: `story` (main line), `question` and `branch`. An option can carry `"correct": true`; questions with no right answer leave it out. In 1.0, `story` and `branch` nodes gain an `audio` field pointing to that passage's audio. This structure maps one-to-one onto the 1.0 database tables, so upgrading is an import, not a rewrite.
+There are only three node types: `story` (main line), `question` and `branch`. An option can carry `"correct": true`; questions with no right answer leave it out.
+
+Optional fields (added 2026-10-09; a file without them still works, and the app must not require them):
+
+| Where | Field | What it holds |
+|---|---|---|
+| `artwork` | `medium`, `dimensions`, `museumUrl` | The museum label next to the photo: medium, size as the Louvre records it, and the work's page on collections.louvre.fr ("View at the Louvre →") |
+| top level | `speakers` | Who can speak in this file, by id: `name` (shown under the head), `kind` (`artist`, `artwork` when a statue with no known maker speaks, or `person` for another documented figure), `avatar` (id of the hand-drawn SVG: a painted head, or a doodled object for artworks and living artists) |
+| `lessons[]` | `narrator` | Speaker id of the level's main narrator, shown on the route and the level page. Missing means no head |
+| `story` / `branch` node | `voice` | One line in a speech bubble beside the speaker's head: `speaker` (an id from `speakers`), `text` (at most 25 words; a quote at most 30), `kind` (`imagined` or `quote`). A `quote` also needs `cite` (short attribution shown under the bubble, e.g. "Letter to his brother, 28 Oct 1830") and `source` (URL, also listed in the level's `sources`) |
+
+The node's `text` stays the friendly narration shown in print; `voice.text` is the speaker's own line, shown in handwriting in the bubble. An `imagined` voice always shows a small tag under the speaker's name, "Imagined voice, built from sourced facts"; a `quote` shows quotation marks and its `cite`. Nodes without `voice` show the narrator's head with no bubble. In 1.0, `story` and `branch` nodes gain an `audio` field pointing to that passage's audio. This structure maps one-to-one onto the 1.0 database tables, so upgrading is an import, not a rewrite.
 
 ---
 
-## 03 · DESIGN — doodles on the walls, real art in the frames
+## 03 · DESIGN — doodles and painted heads on a beige page, real art in the frames
 
-Fresh, light and playful, like a child's notebook: the interface is hand-drawn doodles and childlike handwriting (references: the hand-drawn museum videos Steven shared, and HeyTea posters). The artworks stay exactly as they are: always the official photograph, never drawn. Lots of white space; readable at a glance.
+Fresh, light and playful, like a child's sketchbook left open in a museum. Two references work together:
 
-**Two layers, never mixed:**
+- **Doodles and handwriting** (the hand-drawn museum videos and HeyTea posters Steven shared): the interface is drawn with one black ink line, a little crayon colour and childlike handwriting.
+- **After Hours** (a MoMA artists project by @llleahb, from the screen recording Steven shared): flat painted artist heads, a warm page, one ultramarine accent, and the real artwork photo beside a museum-style label.
 
-- **Doodle layer (the website):** buttons, the level route, icons, small stickers, headlines and a simple doodle head of each artist as the narrator. One black ink line plus a little crayon colour, so it sits comfortably next to any art style (Renaissance, Romantic, and later modern art).
-- **Artwork layer:** the public-domain photo of the work, straight edges, no filters, no doodles drawn over it. Zoom-ins are crops of the same original photo, never redrawn.
+They don't compete because each has its own job: **ink doodles and handwriting are the chrome, painted heads are the characters, photos and labels are the museum.** The artworks stay exactly as they are: always the official photograph, never drawn.
 
-> **Don't:** draw, trace or "cute-ify" an artwork; let a doodle overlap an artwork; use AI-generated illustrations (doodles are drawn by a person); glossy gradients, stacked shadows, screens full of emoji.
+**Three layers, never mixed:**
+
+- **Doodle layer (the chrome):** buttons, the level route, icons, small stickers, headlines, speech bubbles and frames. One black ink line, one stroke weight, slightly wobbly, plus a little crayon colour. Text that is "spoken" (headlines, questions, options, buttons, speech bubbles) is in handwriting.
+- **Character layer (the narrators):** each artist is a flat painted head: blocks of colour with no outlines, playful colours (a pink face, an orange or blue nose), features as a few small dark marks. A head sits inside a hand-drawn ink circle on the beige "stage" under the artwork and talks in a hand-drawn ink speech bubble. This is where ink meets paint: the line belongs to the frame and the bubble, never to the head. Living artists (from later museums) get a doodled object instead of a face. When the artwork itself speaks (a statue with no known maker), its avatar is a doodled object (default: a marble block on a plinth), never a drawing of the artwork.
+- **Artwork layer (the museum):** the public-domain photo of the work on a plain white mat, straight edges, no filters, nothing drawn over it. Beside or under it, a small museum-style label in print type with straight edges: artist, title, year, medium, size, and "View at the Louvre →" linking to the work's page on collections.louvre.fr. Zoom-ins are crops of the same original photo, never redrawn.
+
+> **Don't:** draw, trace or "cute-ify" an artwork; let a doodle, head or bubble overlap an artwork or its label; outline the painted heads; copy After Hours' own drawings (ours are drawn for this project); use AI-generated illustrations (doodles and heads are drawn by a person); glossy gradients, stacked shadows, screens full of emoji.
 
 Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
@@ -198,32 +222,39 @@ Style mockup: https://claude.ai/artifact/4bXH7X41KuFCAuQ1L4D49x
 
 | Use | Colour | Value |
 |---|---|---|
-| Background | Off-white | `#F7F5F0` |
-| Body text | Ink | `#1F1F1F` |
-| Secondary text | Grey | `#6B6B6B` |
-| Accent, buttons, current level | Ultramarine | `#2A3F8F` |
+| Page background | Warm beige off-white | `#F5F0E6` |
+| Stage under the artwork, where heads sit | Deeper beige | `#ECE4D3` |
+| Mat around the artwork, label card, speech bubbles | Paper white | `#FFFDF8` |
+| Doodle line and body text | Ink | `#1F1F1F` |
+| Secondary text | Warm grey | `#6E6A63` |
+| The one accent: main button, current level, selection | Ultramarine | `#2A3F8F` |
 | Done, streaks | Gold-brown | `#B08D57` |
-| Dividers, card borders | Light grey | `#E4E1DA` |
+| Dividers, card and label borders | Light warm grey | `#E2DACB` |
+| Crayon touches inside doodles only (stickers, a scribble under a headline) | Crayon yellow, crayon coral | `#F2C14E`, `#E8836B` |
 
-The ultramarine accent has a story: in the Renaissance it was ground from lapis lazuli, cost more than gold, and was often used for the Virgin's robe. Wrong answers are never shown in red; plain text explains them.
+Ultramarine is the only accent, so it always means "this is the thing to tap" or "you are here". It has a story: in the Renaissance it was ground from lapis lazuli, cost more than gold, and was often used for the Virgin's robe. Crayon colours stay inside doodles and never mark a state. The painted heads may use their own playful colours. Wrong answers are never shown in red; plain text explains them.
 
 ### Type and layout
 
-- Handwriting for voice: questions, options, buttons, headlines and the artist's speech bubble use a childlike hand font (default: Gaegu, Google Fonts). Later it can be replaced by real children's handwriting, as HeyTea does.
-- Print for reading: story and branch text in a clean rounded sans-serif (default: Nunito, Google Fonts), so longer passages stay easy to read.
+- Handwriting for voice: headlines, questions, answer options, buttons, route labels and speech bubbles use a childlike hand font (default: Gaegu, Google Fonts). Later it can be replaced by real children's handwriting, as HeyTea does.
+- Print for reading: story and branch text, the museum label, the "imagined voice" tag and sources use a clean rounded sans-serif (default: Nunito, Google Fonts), so longer passages stay easy to read.
 - Designed for a 375px-wide phone; on desktop, content is at most 640px wide, centred.
 - Body text 17px, line height 1.7; buttons at least 48px tall for one-handed use.
-- Artworks get no rounded corners and no filters, just a plain mat of white space. Doodle shapes may be wobbly and slightly rounded; artworks never are.
-- Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Artist heads are friendly sketches, not portraits pretending to be accurate.
+- Buttons and answer options are hand-drawn ink pills with handwriting labels: the main action filled ultramarine with white text, others paper white with the ink line; the selected option gets an ultramarine line.
+- The level route is a squiggly ink line; each level node is its narrator's painted head in an ink circle. Done gets a gold-brown tick, the current level an ultramarine ring and "Continue", locked levels are faded.
+- Artworks and their labels get no rounded corners and no filters. Doodle shapes, heads and bubbles may be wobbly and rounded; artworks never are.
+- Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Heads are flat SVG shapes drawn by a person, friendly rather than accurate portraits.
+- No animation in 0.5 beyond the soft fade between screens.
 
 ### Reference products
 
 | Reference | Learn from | Don't copy |
 |---|---|---|
 | Duolingo | Level route, a little every day, small celebration on clearing a level | Saturated colours, a single mascot |
+| After Hours (@llleahb, MoMA artists project) | Flat painted artist heads, warm quiet page, one blue accent, label card beside the real artwork, artists talking in bubbles | Their drawings themselves, and the live AI chat mode (we don't use AI at runtime; our artist voices are scripted and sourced in advance) |
 | HeyTea posters | Childlike handwriting and loose doodles; fresh and relaxed | Drawing over the product itself (for us: the artwork) |
 | Google Arts & Culture | Large artwork images, zooming into details | Pages that are too dense |
-| Louvre collections site<br>`collections.louvre.fr` | Restrained layout, how artwork information is written | Archive-style stacks of fields |
+| Louvre collections site<br>`collections.louvre.fr` | Restrained layout, how artwork information and labels are written | Archive-style stacks of fields |
 | 2–3 website screenshots from the product owner | Overall feel and colours | To be added |
 
 When building pages, the screenshots take precedence over this text. Where they conflict, follow the screenshots.
@@ -303,7 +334,7 @@ One principle covers most boundaries: content is written in advance and checked 
 |---|---|
 | On-site guiding, identifying artworks from photos | The product is only for before the trip; general AI chat can already identify artworks from photos |
 | Real-time AI-generated content or audio | Every use calls an API, which is costly, and the content can't be checked in advance |
-| Talking with the artist (AI playing Leonardo) | Uses lots of tokens and easily invents things that never happened; to be tested separately later |
+| Talking with the artist (AI playing Leonardo) | Uses lots of tokens and easily invents things that never happened; to be tested separately later. Scripted artist voices, written and source-checked in advance, are fine (see "How to write") |
 | Museum maps, 3D or virtual tours | The product is only for before the trip: knowing an artwork doesn't require knowing its room |
 | Museums other than the Louvre | Coming, but 0.5 and 1.0 do one museum thoroughly first |
 | An in-depth academic edition | Target users are beginners, not scholars |
@@ -326,6 +357,7 @@ Once the 0.5 template works, 1.0 only changes content and adds features. It stil
 | Hosting | GitHub Pages, public link | Move to Vercel (for login and database) | Custom domain |
 | Audio | None, text only | Main line and branches read aloud, auto-play, with pause, replay and mute; questions and options not read | — |
 | Artwork card | None | Unlocked after an artwork's 5 levels: large image + 2–3 tappable info points | — |
+| Animation and effects | None (soft fades only) | Heads and page effects animated in the style of the After Hours reference | — |
 | Progress | Saved in the browser | Optional email login, progress across devices; daily streak | Daily reminders |
 | Database | Not needed | Supabase | Supabase |
 
@@ -347,7 +379,7 @@ Five levels are five angles on the same work. 5 questions per level, each level 
 - Which story does each artwork's first level tell? (Default: the topics in the "Five levels, five artworks" table)
 - Which five masterpieces? (Decided: Mona Lisa, Venus de Milo, Winged Victory of Samothrace, Liberty Leading the People, The Raft of the Medusa)
 - Is 0.5 in Chinese or English? (Decided: English, for content, interface and this spec)
-- Fonts and look? (Decided 2026-10-09: doodle interface with real artwork photos; fonts default to Gaegu for handwriting and Nunito for reading)
+- Fonts and look? (Decided 2026-10-09: doodle chrome and handwriting combined with After Hours-style flat painted heads, a beige page, one ultramarine accent, and real artwork photos with museum labels; fonts default to Gaegu for handwriting and Nunito for reading)
 - Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (To be added)
 - Which voice for 1.0 audio? (Default: a warm English female voice; generate the first level as a test before deciding)
 - Is login required in 1.0? (Default: no; login only syncs progress)
