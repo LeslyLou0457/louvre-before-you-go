@@ -1,0 +1,895 @@
+{
+  "artworkId": "mona-lisa",
+  "zoomImage": {
+    "file": "Mona Lisa, by Leonardo da Vinci, from C2RMF.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF.jpg",
+    "width": 7854,
+    "height": 11498,
+    "licence": "Public domain (faithful reproduction of a 2D public-domain work)",
+    "credit": "C2RMF scan via Wikimedia Commons (uncropped) · Public Domain",
+    "overview": "/images/challenge/mona-lisa/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "mona-lisa-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: where Leonardo hid his decisions",
+      "narrator": "leonardo",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c4",
+        "c2",
+        "c3",
+        "c5",
+        "c6"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.35,
+            "y": 0.2,
+            "w": 0.21,
+            "h": 0.075,
+            "label": "Both eyes and their corners",
+            "image": "/images/challenge/mona-lisa/c1.jpg"
+          },
+          "text": "Level one: sfumato melts the shadow at her mouth, so no edge shows. Now look at the corners of her eyes. Leonardo melted those too.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.35,
+            "y": 0.2,
+            "w": 0.21,
+            "h": 0.075,
+            "label": "Both eyes and their corners",
+            "image": "/images/challenge/mona-lisa/c1.jpg"
+          },
+          "text": "Why soften exactly the corners of her eyes?",
+          "choices": [
+            {
+              "label": "To push them back in space",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "That's where mood shows",
+              "role": "right",
+              "correct": true,
+              "next": "c1b"
+            },
+            {
+              "label": "To round the eye sockets",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "E. H. Gombrich, The Story of Art, as quoted by Phaidon (2017)",
+              "url": "https://www.phaidon.com/agenda/art/articles/2017/november/16/why-leonardo-has-always-kept-us-guessing/"
+            },
+            {
+              "title": "National Gallery, London, glossary: aerial perspective",
+              "url": "https://www.nationalgallery.org.uk/paintings/glossary/aerial-perspective"
+            },
+            {
+              "title": "National Gallery, London, glossary: chiaroscuro",
+              "url": "https://www.nationalgallery.org.uk/paintings/glossary/chiaroscuro"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Good link: air softens edges too. But that trick is for distance.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Leonardo really does soften with distance: in level one, the far hills behind her went pale and blurred.",
+            "truth": "Aerial perspective imitates the air between you and far things. Her eyes are at arm's length; their softness is chosen for expression.",
+            "evidence": "The National Gallery: as a landscape recedes, \"its colours and tones alter due to the nature of the atmosphere\". Her eyes are close."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Gombrich: a face's expression rests mainly in the corners of the mouth and eyes, and Leonardo left exactly those indistinct. So her mood stays open.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Fair: her eye sockets are shaded. But shading isn't what removes the edge.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Chiaroscuro, light against dark, models her cheeks and knuckles, and her eye sockets are clearly in shadow.",
+            "truth": "Chiaroscuro gives the sockets depth and could keep a crisp corner. Leonardo dissolved the corners on purpose, where expression lives.",
+            "evidence": "The National Gallery: Leonardo used chiaroscuro for \"the three-dimensionality of his figures\". Gombrich: the corners are \"deliberately indistinct\"."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Sfumato isn't spread evenly. Leonardo gathers it where feeling shows, so we're never sure of her mood."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.33,
+            "y": 0.15,
+            "w": 0.3,
+            "h": 0.22,
+            "label": "Her face, from the light area by the nose to the shadow beside the hair",
+            "image": "/images/challenge/mona-lisa/c2.jpg"
+          },
+          "text": "In 2010 the French museums' lab, the C2RMF, measured her face with X-rays, without touching it: from a light spot by her nose into the shadow by her hair.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.33,
+            "y": 0.15,
+            "w": 0.3,
+            "h": 0.22,
+            "label": "Her face, from the light area by the nose to the shadow beside the hair",
+            "image": "/images/challenge/mona-lisa/c2.jpg"
+          },
+          "text": "How did Leonardo build this shadow?",
+          "choices": [
+            {
+              "label": "Opaque dark paint",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Copper added to the dark",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Glazes, thicker as it darkens",
+              "role": "right",
+              "correct": true,
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "L. de Viguerie et al., X-ray fluorescence study of Leonardo's sfumato, Angewandte Chemie International Edition (2010)",
+              "url": "https://doi.org/10.1002/anie.201001116"
+            },
+            {
+              "title": "ESRF, 'New light on Leonardo da Vinci's faces' (2010)",
+              "url": "https://www.esrf.fr/news/general-old/general-2010/new-light-on-leonardo-da-vinci2019s-faces"
+            },
+            {
+              "title": "National Gallery, London, glossary: glaze",
+              "url": "https://www.nationalgallery.org.uk/paintings/glossary/glaze"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "A real Leonardo recipe, just from earlier. Not here.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Mixing dark pigment into ordinary oil paint is the classic way to shade, and Leonardo did it himself.",
+            "truth": "In two earlier works, including La Belle Ferronnière, he shaded with opaque dark paint. Here the shadow is translucent glaze.",
+            "evidence": "De Viguerie et al. (2010): in those two works Leonardo \"did not use the glaze technique but instead applied paint containing dark pigments\"."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Another real Leonardo recipe, from a different painting.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The same study caught Leonardo adding copper to his dark colours, so it sounds like part of his toolkit.",
+            "truth": "Copper turned up in the Virgin of the Rocks. In the Mona Lisa's glazes, the study found unusually high manganese.",
+            "evidence": "De Viguerie et al.: copper \"was detected in the Virgin of the Rocks\"; the Mona Lisa's glazes show \"unusual high\" manganese oxide."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. Near-transparent glazes, each a micrometre or two thick, stacked more thickly as the shadow deepens. Still under a tenth of a millimetre in all.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Sfumato has a measurable recipe: a gradient of glaze, with \"neither brushstroke nor contour\" visible."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.12,
+            "y": 0.69,
+            "w": 0.62,
+            "h": 0.23,
+            "label": "Both hands and the rounded armrest beneath them",
+            "image": "/images/challenge/mona-lisa/c3.jpg"
+          },
+          "text": "Level one said her pose echoes Flemish portraits like Memling's, which often set folded hands in the foreground. Now look at what's under Lisa's hands.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.12,
+            "y": 0.69,
+            "w": 0.62,
+            "h": 0.23,
+            "label": "Both hands and the rounded armrest beneath them",
+            "image": "/images/challenge/mona-lisa/c3.jpg"
+          },
+          "text": "What are her hands resting on?",
+          "choices": [
+            {
+              "label": "A ledge at the picture's edge",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "The terrace balustrade",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "The arm of her chair",
+              "role": "right",
+              "correct": true,
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, collection record: the Mona Lisa (text by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010062370"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Good eye for the Flemish model. But Leonardo gives them a real support.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Flemish portraits often did exactly this, and a rounded rail runs along the bottom of this picture too.",
+            "truth": "Leonardo keeps the Flemish folded hands but makes them natural: they rest on the armrest of the chair she sits in.",
+            "evidence": "The Louvre: the hands are \"no longer placed artificially on the edge of the composition, on a sort of parapet\" (our translation)."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "There is a balustrade here, so it's a fair guess. Wrong place, though.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A low terrace wall really does run through the painting, ending in two small columns at the edges.",
+            "truth": "The balustrade runs behind her chair, opening onto the landscape. Her hands are in front of her, on the chair.",
+            "evidence": "The Louvre: her chair stands \"in front of a small balustrade\" with \"two small columns\" at its ends (our translation)."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Yes. She sits in a round-backed chair called \"a pozzetto\", her hands on its armrest, the right hand just come to rest on the left.",
+          "next": "c3m"
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Flemish devices, made natural. Alberti wanted an open window; Leonardo, the Louvre says, seems to open a door."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.17,
+            "w": 1.0,
+            "h": 0.3,
+            "label": "A full-width band of landscape from her eyes to her shoulders: lakes on both sides, the bridge at right",
+            "image": "/images/challenge/mona-lisa/c4.jpg"
+          },
+          "text": "Behind her, lakes lie at the foot of the mountains on both sides. Her head hides the middle. Follow the far water line from right to left.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.17,
+            "w": 1.0,
+            "h": 0.3,
+            "label": "A full-width band of landscape from her eyes to her shoulders: lakes on both sides, the bridge at right",
+            "image": "/images/challenge/mona-lisa/c4.jpg"
+          },
+          "text": "Where does that far horizon meet her figure?",
+          "choices": [
+            {
+              "label": "Level with her shoulders",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Level with her eyes",
+              "role": "right",
+              "correct": true,
+              "next": "c4b"
+            },
+            {
+              "label": "Two heights: lower on the left",
+              "role": "myth",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Mona Lisa (landscape)",
+              "url": "https://focus.louvre.fr/en/node/42"
+            },
+            {
+              "title": "Louvre, collection record: the Mona Lisa (text by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010062370"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "Something lines up with her shoulder, but it isn't the horizon.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "There is a line at shoulder height: the little arched bridge on the right carries on from her shoulder.",
+            "truth": "The bridge continues the line of her left shoulder. The far horizon, the lakes' line, runs higher, level with her eyes.",
+            "evidence": "The Louvre's Focus guide: \"A bridge continues the line of Mona Lisa's left shoulder\"; the lakes' line is \"level with Mona Lisa's gaze\"."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. The right-hand lake's line carries on at the left at the same height, level with her gaze. Her body breaks the horizon; her eyes hold it.",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "A popular claim, and her hair makes it hard to check. But no.",
+          "next": "c4m",
+          "correction": {
+            "kind": "myth",
+            "tempting": "It has often been written that the landscape's two halves don't match, the horizon lower on the left.",
+            "truth": "There's no difference in height. The water line on the right continues on the left, partly hidden by the mountains.",
+            "evidence": "The Louvre's record (Delieuvin, 2021): contrary to what has sometimes been written, the horizon is the same height on both sides."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "One horizon runs behind her at eye level, broken by her body, tied to her gaze."
+        },
+        "c5": {
+          "type": "story",
+          "zoom": {
+            "x": 0.72,
+            "y": 0.42,
+            "w": 0.27,
+            "h": 0.18,
+            "label": "Right side, behind her shoulder: the arched bridge and the reddish-brown slope below it",
+            "image": "/images/challenge/mona-lisa/c5.jpg"
+          },
+          "text": "Leonardo kept working on her for years. On the right, below the little arched bridge, a reddish-brown slope sits behind her shoulder. Compare its brushwork with the mountains.",
+          "next": "c5q"
+        },
+        "c5q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.72,
+            "y": 0.42,
+            "w": 0.27,
+            "h": 0.18,
+            "label": "Right side, behind her shoulder: the arched bridge and the reddish-brown slope below it",
+            "image": "/images/challenge/mona-lisa/c5.jpg"
+          },
+          "text": "Why does this slope look rougher than the rest?",
+          "choices": [
+            {
+              "label": "It's less finished, like a sketch",
+              "role": "right",
+              "correct": true,
+              "next": "c5a"
+            },
+            {
+              "label": "Distance blurs it",
+              "role": "near-miss",
+              "next": "c5b"
+            },
+            {
+              "label": "Yellowed varnish muddied it",
+              "role": "near-miss",
+              "next": "c5c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Mona Lisa (landscape)",
+              "url": "https://focus.louvre.fr/en/node/42"
+            },
+            {
+              "title": "Louvre, collection record: the Mona Lisa (text by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010062370"
+            },
+            {
+              "title": "National Gallery, London, glossary: aerial perspective",
+              "url": "https://www.nationalgallery.org.uk/paintings/glossary/aerial-perspective"
+            }
+          ]
+        },
+        "c5a": {
+          "type": "branch",
+          "text": "Yes. The Louvre calls this slope \"far less finished than the rest of the landscape\", so fluid it may have been left as a sketch on purpose.",
+          "next": "c5m"
+        },
+        "c5b": {
+          "type": "branch",
+          "text": "You met aerial perspective in level one. But this is brushwork, not distance.",
+          "next": "c5m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Aerial perspective softens Leonardo's whole landscape, and this slope looks soft too.",
+            "truth": "Air makes far things pale, cool and blurred. This slope is warm, brown and near; its looseness is in the paint handling.",
+            "evidence": "The Louvre's Focus guide: this area \"is far less finished than the rest of the landscape\". The air doesn't explain unfinished brushwork."
+          }
+        },
+        "c5c": {
+          "type": "branch",
+          "text": "Fair suspicion: varnish has darkened her. But it can't roughen a patch.",
+          "next": "c5m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In level one you learned the yellowed varnish darkens the picture, mainly in its lower parts.",
+            "truth": "Varnish tints and darkens, but it can't change how paint was put on. This slope was brushed in loosely and never worked up.",
+            "evidence": "The Louvre says varnish darkens \"mainly the bottom\", but separately names this \"sketch of terrain at the bottom of the landscape on the right\"."
+          }
+        },
+        "c5m": {
+          "type": "story",
+          "text": "Still unfinished at Leonardo's death in 1519; this slope shows it. Whether he meant to stop, nobody knows."
+        },
+        "c6": {
+          "type": "story",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.48,
+            "w": 0.16,
+            "h": 0.15,
+            "label": "Far left edge: the base of a small column, the edge of the paint and the bare panel",
+            "image": "/images/challenge/mona-lisa/c6.jpg"
+          },
+          "text": "Far left: the base of a small column, one of two the Louvre sees at the balustrade's ends. The painted edge cuts right through it.",
+          "next": "c6q"
+        },
+        "c6q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.48,
+            "w": 0.16,
+            "h": 0.15,
+            "label": "Far left edge: the base of a small column, the edge of the paint and the bare panel",
+            "image": "/images/challenge/mona-lisa/c6.jpg"
+          },
+          "text": "Was the panel cut down, slicing off the columns?",
+          "choices": [
+            {
+              "label": "Yes, like many old panels",
+              "role": "near-miss",
+              "next": "c6a"
+            },
+            {
+              "label": "Nobody can tell any more",
+              "role": "near-miss",
+              "next": "c6b"
+            },
+            {
+              "label": "No: its edges prove it",
+              "role": "right",
+              "correct": true,
+              "next": "c6c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Mona Lisa (the barbe)",
+              "url": "https://focus.louvre.fr/en/node/37"
+            },
+            {
+              "title": "Louvre, collection record: the Mona Lisa (text by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010062370"
+            },
+            {
+              "title": "National Gallery, London, catalogue: Raphael, Saint John the Baptist Preaching (2022)",
+              "url": "https://www.nationalgallery.org.uk/paintings/catalogues/plazzotta-and-henry-2022/saint-john-the-baptist-preaching"
+            },
+            {
+              "title": "Yale University Art Gallery, Italian Paintings catalogue, vol. 1, Florentine school no. 13",
+              "url": "https://publications.artgallery.yale.edu/italian-paintings/catalogue/volume-1/the-florentine-school/13"
+            }
+          ]
+        },
+        "c6a": {
+          "type": "branch",
+          "text": "Many panels were trimmed. Not this one.",
+          "next": "c6m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old panels were often cut down, and columns sliced at the very edge look exactly like that.",
+            "truth": "This panel was never cut. Its bare edges still carry the barbe, the paint ridge left where the original frame stopped it.",
+            "evidence": "Louvre record: never cut, as its bare edges and barbe prove. A Yale panel, \"cut all around its perimeter\", shows \"no gesso barb\"."
+          }
+        },
+        "c6b": {
+          "type": "branch",
+          "text": "Caution is wise after 500 years. But this panel keeps its own proof.",
+          "next": "c6m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "After five centuries of warping, repairs and reframing, a panel's original size sounds impossible to know.",
+            "truth": "A barbe marks where the paint first stopped. Found on all four edges, it shows the complete composition survives.",
+            "evidence": "The Louvre's Focus guide: the barbe \"is visible on all four edges\" and \"is proof that the complete composition has been preserved\"."
+          }
+        },
+        "c6c": {
+          "type": "branch",
+          "text": "Right. All four edges keep a \"barbe\", a ridge where the paint stopped against the frame the panel was fixed in before Leonardo began. Nothing was cut.",
+          "next": "c6m"
+        },
+        "c6m": {
+          "type": "story",
+          "text": "Hidden under frames, the barbe was partly spared later varnish: its colours are closer to Leonardo's original hues."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "q2",
+          "b2a",
+          "b2b",
+          "n3",
+          "q3",
+          "b3b"
+        ],
+        "concept": "Sfumato at the corners of the mouth; chiaroscuro vs sfumato; atmospheric perspective"
+      },
+      "framing": "why-there",
+      "what_you_learn": "Sfumato is concentrated where expression lives, the corners of the eyes as well as the mouth, which is why her mood stays open. Aerial perspective (distance) and chiaroscuro (volume) are different tools with different jobs.",
+      "regionSources": [
+        {
+          "title": "E. H. Gombrich, The Story of Art (chapter on Leonardo; edition and page TBD), as quoted by its publisher Phaidon, 'Why Leonardo has always kept us guessing' (2017)",
+          "url": "https://www.phaidon.com/agenda/art/articles/2017/november/16/why-leonardo-has-always-kept-us-guessing/",
+          "quote": "Everyone who has ever tried to draw or scribble a face knows [...] that what we call its expression rests mainly in two features: the corners of the mouth, and the corners of the eyes. Now it is precisely these parts which Leonardo has left deliberately indistinct, by letting them merge into a soft shadow. That is why we are never quite certain in what mood Mona Lisa is really looking at us.",
+          "supports": "Locates the deliberate softening at the corners of the eyes, and gives the reason (expression).",
+          "readVia": "Phaidon's article quotes Gombrich and interrupts the first sentence with 'Gombrich continues' (marked [...])."
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "National Gallery, London, glossary: 'Aerial perspective'",
+            "url": "https://www.nationalgallery.org.uk/paintings/glossary/aerial-perspective",
+            "quote": "its colours and tones alter due to the nature of the atmosphere",
+            "supports": "What aerial perspective is: an effect of distance.",
+            "readVia": "WebFetch, short quotations only"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "National Gallery, London, glossary: 'Chiaroscuro'",
+            "url": "https://www.nationalgallery.org.uk/paintings/glossary/chiaroscuro",
+            "quote": "Leonardo employed it to give a vivid impression of the three-dimensionality of his figures",
+            "supports": "What chiaroscuro does: volume, not edge.",
+            "readVia": "WebFetch, short quotations only"
+          }
+        ]
+      },
+      "confidence": "High for the fact (a classic, widely cited passage); Gombrich edition and page TBD until checked in a physical copy.",
+      "notes": "Reframed as 'why there' (Steven, 2026-10-09). Both wrong options are real Renaissance tools that Leonardo uses in this very painting, so each correction teaches what the tool is for. 2026-10-09: intro says 'corners of her eyes' (Gombrich), not 'outer corners'; c1a evidence now quotes the NG's 'as a landscape recedes' context.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "b2b",
+          "b2c"
+        ],
+        "concept": "The base corrections say the Louvre describes the sfumato as built from thin glazes; this shows how, with measurements"
+      },
+      "framing": "how",
+      "what_you_learn": "Sfumato is a measurable stack of near-transparent glazes (each 1–2 µm), thicker as the shadow deepens, with unusually high manganese oxide. Leonardo had other shadow recipes: opaque dark paint in earlier works, copper in the Virgin of the Rocks.",
+      "regionSources": [
+        {
+          "title": "L. de Viguerie, P. Walter, E. Laval, B. Mottin, V. A. Solé, 'Revealing the sfumato Technique of Leonardo da Vinci by X-Ray Fluorescence Spectroscopy', Angewandte Chemie International Edition 49 (2010), pages TBD",
+          "url": "https://doi.org/10.1002/anie.201001116",
+          "quote": "XRF spectra obtained on the face of Mona Lisa from the lightest zone to the shadow close to the hair [...] The glaze thickness increases progressively from a few micrometers in the light areas to 30–55 μm in the dark areas [...] We have observed an unusual high concentration of manganese oxide in the glazes of the Mona Lisa",
+          "supports": "Locates the measurement on her face, from the light zone to the shadow by the hair; thickness and composition.",
+          "readVia": "Author text on academia.edu (https://www.academia.edu/9069753/), checked 2026-10-09; its text layer reads '30–55 mm', clearly µm. Pages TBD (the German edition is Angew. Chem. 122 (2010), 6261–6264 per that text)."
+        },
+        {
+          "title": "ESRF press release, 'New light on Leonardo da Vinci's faces' (2010)",
+          "url": "https://www.esrf.fr/news/general-old/general-2010/new-light-on-leonardo-da-vinci2019s-faces",
+          "quote": "Representation of the superposition of layers in paintings in the face of Mona Lisa, on one light zone near the nose and the darker shadow of the hair. [...] thin layers of 1 to 2 micrometres were applied to obtain a total thickness of no more than 30 to 40 micrometres.",
+          "supports": "Places the light end near the nose; layer thickness."
+        },
+        {
+          "title": "L. de Viguerie, P. Walter, E. Laval, B. Mottin, V. A. Solé, 'Revealing the sfumato Technique of Leonardo da Vinci by X-Ray Fluorescence Spectroscopy', Angewandte Chemie International Edition 49 (2010), pages TBD (abstract)",
+          "url": "https://doi.org/10.1002/anie.201001116",
+          "quote": "Neither brushstroke nor contour is visible",
+          "supports": "The merge line's quotation.",
+          "readVia": "Author text on academia.edu, checked 2026-10-09"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "L. de Viguerie, P. Walter, E. Laval, B. Mottin, V. A. Solé, 'Revealing the sfumato Technique of Leonardo da Vinci by X-Ray Fluorescence Spectroscopy', Angewandte Chemie International Edition 49 (2010), pages TBD",
+            "url": "https://doi.org/10.1002/anie.201001116",
+            "quote": "For two earlier works, Leonardo did not use the glaze technique but instead applied paint containing dark pigments. [...] Leonardo probably used opaque paint (dark pigments and a classical oil technique) instead of translucent glazes for the shadow effects.",
+            "supports": "Opaque dark paint is a real, documented Leonardo recipe (the Annunciation's Virgin and La Belle Ferronnière).",
+            "readVia": "Author text on academia.edu (https://www.academia.edu/9069753/), checked 2026-10-09. The two earlier works are the Virgin of the Annunciation and La Belle Ferronnière."
+          }
+        ],
+        "c2b": [
+          {
+            "title": "L. de Viguerie, P. Walter, E. Laval, B. Mottin, V. A. Solé, 'Revealing the sfumato Technique of Leonardo da Vinci by X-Ray Fluorescence Spectroscopy', Angewandte Chemie International Edition 49 (2010), pages TBD",
+            "url": "https://doi.org/10.1002/anie.201001116",
+            "quote": "An addition of copper in the dark color was detected in the Virgin of the Rocks.",
+            "supports": "Copper in the dark colour is a real, documented Leonardo recipe, in a different painting (analysed in the Louvre).",
+            "readVia": "Author text on academia.edu (https://www.academia.edu/9069753/), checked 2026-10-09. The two earlier works are the Virgin of the Annunciation and La Belle Ferronnière."
+          }
+        ],
+        "c2c": [
+          {
+            "title": "National Gallery, London, glossary: 'Glaze'",
+            "url": "https://www.nationalgallery.org.uk/paintings/glossary/glaze",
+            "quote": "By varying the thickness of the glaze, tonal variation and an illusion of relief can be obtained.",
+            "supports": "Definition of a glaze, for the right branch.",
+            "readVia": "WebFetch, short quotations only"
+          }
+        ]
+      },
+      "confidence": "High. Two numbers differ between sources: the paper gives 30–55 µm in the darkest areas, the ESRF summary 'no more than 30 to 40'. The script therefore says 'under a tenth of a millimetre'. Which side of the face the line ran on is shown only in the paper's Fig. 1b (TBD); the crop covers the whole face so it doesn't guess.",
+      "notes": "Now three options: both near misses are Leonardo's own documented recipes from the same paper (Table 1), so a wrong pick still teaches something true and exact. 2026-10-09: c2b no longer says the Mona Lisa has manganese 'instead' of copper (the paper doesn't say it has none); the MnO2/Fe2O3 figures were dropped from the review quote as not re-checked.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n2",
+          "b1c"
+        ],
+        "concept": "Her pose echoes Flemish portraits like Memling's; 'her hands ... hide one of Leonardo's techniques'"
+      },
+      "framing": "what",
+      "what_you_learn": "Leonardo takes Flemish devices (three-quarter pose, balustrade with landscape, folded hands on a ledge) and makes them natural: the hands rest on a pozzetto chair's armrest.",
+      "regionSources": [
+        {
+          "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+          "quote": "Les mains jointes apparaissent aussi régulièrement dans les effigies flamandes, souvent posées au premier plan. [...] De fait, les mains ne sont plus posées artificiellement sur le bord de la composition, sur une sorte de parapet, mais sont appuyées naturellement sur l'accoudoir du siège à pozzetto, le main droite venant de rejoindre la gauche.",
+          "translation": "Folded hands also appear regularly in Flemish portraits, often placed in the foreground. [...] In fact, the hands are no longer placed artificially on the edge of the composition, on a sort of parapet, but rest naturally on the armrest of the pozzetto chair, the right hand having just joined the left. (our translation)",
+          "supports": "Locates the armrest under the hands; gives the Flemish contrast."
+        },
+        {
+          "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+          "quote": "Monna Lisa est assise sur un siège au dossier arrondi tenu par des balustres, que l'on appelle « a pozzetto ». [...] Si pour le théoricien de l'art Alberti, la peinture doit être une fenêtre ouverte, Léonard semble vouloir donner ici l'impression d'une porte ouverte",
+          "translation": "Mona Lisa sits on a chair with a rounded back held by balusters, called 'a pozzetto'. [...] If for the art theorist Alberti a painting should be an open window, Leonardo here seems to want to give the impression of an open door (our translation)",
+          "supports": "The chair; the merge line."
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+            "quote": "les mains ne sont plus posées artificiellement sur le bord de la composition, sur une sorte de parapet",
+            "translation": "the hands are no longer placed artificially on the edge of the composition, on a sort of parapet (our translation)",
+            "supports": "The Flemish parapet is a real period device, named by the Louvre as the alternative Leonardo avoided."
+          }
+        ],
+        "c3b": [
+          {
+            "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+            "quote": "Le siège est disposé presque perpendiculairement à nous, devant une petite balustrade décorée de moulurations rectangulaires. Aux extrémités de la balustrade, on distingue deux colonnettes",
+            "translation": "The chair is set almost perpendicular to us, in front of a small balustrade decorated with rectangular mouldings. At the ends of the balustrade two small columns can be made out (our translation)",
+            "supports": "The balustrade is real but stands behind the chair."
+          }
+        ]
+      },
+      "confidence": "High (the museum's own record).",
+      "notes": "The Louvre says the chair is better understood in infrared reflectography; the armrest itself is visible in the photo.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "n3",
+          "q3",
+          "b3b",
+          "n4"
+        ],
+        "concept": "The landscape behind her and atmospheric perspective"
+      },
+      "framing": "where",
+      "what_you_learn": "There is one horizon, set level with her gaze and interrupted by her figure; the 'mismatched horizon' is a misreading. The bridge, not the horizon, continues her shoulder line.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Mona Lisa, 'The lakes' and 'The bridge'",
+          "url": "https://focus.louvre.fr/en/node/42",
+          "quote": "There are lakes at the foot of the mountains, on either side of the background scene. One is clearly visible on the right of the painting. The line of this right-hand lake is extended by that of another on the left, level with Mona Lisa's gaze. This is the horizon line; although physically interrupted by the figure of Mona Lisa, it is artificially maintained by its alignment with her gaze. [...] A bridge continues the line of Mona Lisa's left shoulder.",
+          "supports": "Locates the horizon at eye level on both sides, and the bridge at her left shoulder."
+        },
+        {
+          "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+          "quote": "Contrairement à ce qui a parfois été écrit, il n'y a pas de différence de hauteur de ligne d'horizon entre les parties droite et gauche : la ligne horizontale constituée par le point d'eau à droite se poursuit à gauche, en partie cachée par les montagnes.",
+          "translation": "Contrary to what has sometimes been written, there is no difference in the height of the horizon line between the right and left parts: the horizontal line formed by the water on the right continues on the left, partly hidden by the mountains. (our translation)",
+          "supports": "Names the uneven-horizon claim as a misreading."
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Louvre, Focus: The Mona Lisa, 'The bridge'",
+            "url": "https://focus.louvre.fr/en/node/42",
+            "quote": "A bridge continues the line of Mona Lisa's left shoulder.",
+            "supports": "The shoulder-height line is real: it's the bridge."
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+            "quote": "Contrairement à ce qui a parfois été écrit, il n'y a pas de différence de hauteur de ligne d'horizon",
+            "translation": "Contrary to what has sometimes been written, there is no difference in the height of the horizon line (our translation)",
+            "supports": "The museum names the claim and corrects it."
+          }
+        ]
+      },
+      "confidence": "High for what the Louvre says (two independent Louvre texts agree).",
+      "notes": "Approved exception to the two-near-miss rule (Steven, 2026-10-09: 'Keep Q4 as right/wrong'): the second wrong option is the documented 'uneven horizon' misreading, kept as role 'myth'. 2026-10-09 crop: the band runs from her eyes to her shoulders so both lines can be compared; the bridge sits at its lower right.",
+      "exception": "Steven, 2026-10-09: keep Q4 as right/wrong; the second wrong option is the documented 'uneven horizon' misreading (role myth).",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c5q": {
+      "extends": {
+        "nodes": [
+          "q4",
+          "b4a",
+          "b4b",
+          "q5",
+          "b5a"
+        ],
+        "concept": "Leonardo kept the portrait and kept working on it for years; the yellowed varnish"
+      },
+      "framing": "why",
+      "what_you_learn": "The painting was still unfinished at Leonardo's death; the reddish-brown slope below the bridge is the visible proof, whether or not he meant it.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Mona Lisa, 'The area of earth' and 'The bridge'",
+          "url": "https://focus.louvre.fr/en/node/42",
+          "quote": "An area of reddish-brown earth suggests a gently sloping hill. In terms of technique, this section is far less finished than the rest of the landscape. The fluidity of execution suggests that this part of the painting may have been deliberately left in sketch form. [...] Placed above the area of brown earth, it [the bridge] testifies to a human presence",
+          "supports": "Locates the less finished area below the bridge."
+        },
+        {
+          "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+          "quote": "Elle a d'ailleurs dû constituer pour lui une sorte d'expérimentation qu'il a poussée le plus loin possible, laissant son œuvre en partie inachevée, comme cela est visible dans l'ébauche de terrain en bas du paysage à droite.",
+          "translation": "It must indeed have been a kind of experiment for him, which he pushed as far as possible, leaving his work partly unfinished, as can be seen in the sketch of terrain at the bottom of the landscape on the right. (our translation)",
+          "supports": "Same location, independently."
+        },
+        {
+          "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+          "quote": "l'exécution picturale toujours inachevée à sa mort",
+          "translation": "the painting still unfinished at his death (our translation)",
+          "supports": "Unfinished at his death (merge line)."
+        }
+      ],
+      "choiceSources": {
+        "c5b": [
+          {
+            "title": "National Gallery, London, glossary: 'Aerial perspective'",
+            "url": "https://www.nationalgallery.org.uk/paintings/glossary/aerial-perspective",
+            "quote": "its colours and tones alter due to the nature of the atmosphere",
+            "supports": "What aerial perspective is.",
+            "readVia": "WebFetch, short quotations only"
+          }
+        ],
+        "c5c": [
+          {
+            "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+            "quote": "assombrissant plusieurs parties de la composition, principalement le bas",
+            "translation": "darkening several parts of the composition, mainly the bottom (our translation)",
+            "supports": "The varnish really darkens mainly the bottom: why the option is tempting."
+          }
+        ]
+      },
+      "confidence": "High for location and 'less finished'. Whether it was left as a sketch on purpose is open (Focus says 'may have been'), so the merge line says nobody knows.",
+      "notes": "The varnish option was labelled 'myth' in step 1 without a source that anyone made the claim; it is now a near miss (a real, documented condition of this painting). Full 'en partie inachevée' sentence now read in context (2026-10-09). Check the box against the high-res scan so the slope, not her drapery, fills the crop.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c6q": {
+      "extends": {
+        "nodes": [
+          "b5b",
+          "q5",
+          "b5a"
+        ],
+        "concept": "The poplar panel and its condition; the yellowed varnish"
+      },
+      "framing": "how-we-know",
+      "what_you_learn": "The barbe on all four edges proves the panel was never cut, and its paint, partly spared the varnish, is closer to the original colours.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Mona Lisa, condition ('The barbe')",
+          "url": "https://focus.louvre.fr/en/node/37",
+          "quote": "A \"barbe\" is visible on all four edges of the poplar panel on which the Mona Lisa was painted. This is the ridge of paint that was revealed on the panel's unpainted edges when it was removed from the frame to which it must have been fixed before the artist began his work. The existence of the barbe is proof that the complete composition has been preserved. The paint colors in the barbe are closer to the painting's original hues, having been partly spared the successive coats of varnish applied after Leonardo's death.",
+          "supports": "The edges, what the barbe proves, the colours."
+        },
+        {
+          "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+          "quote": "Contrairement à ce qui a parfois été écrit, le support n'a jamais été coupé comme le prouvent les bords nus du panneau et une « barbe » [...] Aux extrémités de la balustrade, on distingue deux colonnettes",
+          "translation": "Contrary to what has sometimes been written, the support has never been cut, as the bare edges of the panel and a 'barbe' prove [...] At the ends of the balustrade, two small columns can be seen (our translation)",
+          "supports": "The columns at the edges; the panel never cut."
+        }
+      ],
+      "choiceSources": {
+        "c6a": [
+          {
+            "title": "National Gallery, London, Raphael, Saint John the Baptist Preaching (C. Plazzotta and T. Henry, 2022)",
+            "url": "https://www.nationalgallery.org.uk/paintings/catalogues/plazzotta-and-henry-2022/saint-john-the-baptist-preaching",
+            "quote": "There is an unpainted border at top and bottom with a barbe at the edge of the painted field where the gesso formerly met and covered the original engaged frame. [...] The left edge has been cut (the other three have probably been at least slightly trimmed).",
+            "supports": "Panels really were cut down; conservators read a barbe as the original edge of the paint."
+          },
+          {
+            "title": "Yale University Art Gallery, Italian Paintings, vol. 1, the Florentine school, no. 13 (Virgin and Child, attributed to Nardo di Cione)",
+            "url": "https://publications.artgallery.yale.edu/italian-paintings/catalogue/volume-1/the-florentine-school/13",
+            "quote": "It has been cut all around its perimeter, however, and no gesso barb is apparent at any edge.",
+            "supports": "A panel cut all round has no barb: the absence of a barbe is the sign of a cut."
+          },
+          {
+            "title": "Louvre, collection record INV 779, text by Vincent Delieuvin (2021)",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010062370",
+            "quote": "le support n'a jamais été coupé comme le prouvent les bords nus du panneau et une « barbe »",
+            "translation": "the support has never been cut, as the bare edges of the panel and a 'barbe' prove (our translation)",
+            "supports": "This panel was never cut."
+          }
+        ],
+        "c6b": [
+          {
+            "title": "Louvre, Focus: The Mona Lisa, condition ('The barbe')",
+            "url": "https://focus.louvre.fr/en/node/37",
+            "quote": "The existence of the barbe is proof that the complete composition has been preserved.",
+            "supports": "Why 'nobody can tell' is wrong here."
+          }
+        ]
+      },
+      "confidence": "High. Region caveat: the barbe is on the bare edges, which the current app photo does not show; the crop must come from the uncropped C2RMF scan.",
+      "notes": "Moved from reserve into the pool (Steven, 2026-10-09). The second near miss is the cautious 'nobody can tell' answer, which is the right answer in other rounds (e.g. who set up the Winged Victory), so it tests whether the player knows the evidence exists. The Yale catalogue sentence was read in step 1; its URL is TBD. 2026-10-09 crop check: on the uncropped scan the left column base, the painted edge and the bare panel edge with its ridge are all visible; the right-hand column is not clearly visible, so the intro no longer mentions it. Yale catalogue URL found and the quote checked.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    }
+  }
+}

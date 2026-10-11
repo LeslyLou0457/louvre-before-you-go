@@ -12,7 +12,7 @@ For the AI and the people working in this repo. AGENTS.md and CLAUDE.md have the
 
 ## Current scope
 
-Only version 0.5 from PRODUCT.md: 5 Louvre works, 1 level each, 25 questions in total, 4 pages. Nothing from 1.0 or later.
+Only version 0.5 from PRODUCT.md: 5 Louvre works, 1 level each, 25 questions in total, 4 pages, plus the Close-Up Challenge (one 2-question round per work, unlocked after the 5 levels). Nothing from 1.0 or later.
 
 ## Hard limits
 

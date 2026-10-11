@@ -4,7 +4,7 @@
 // filters, nothing drawn over it. Tapping it opens the same photo full screen,
 // where the browser's own pinch-zoom works; tapping the photo there switches
 // between "fit the screen" and "actual size" (scroll to look around).
-// No preset detail crops in 0.5.
+// The Close-Up Challenge passes a detail crop of the same photo, with its own alt text.
 
 import { useEffect, useState } from "react";
 import { CloseDoodle, ZoomDoodle } from "@/doodles";
@@ -15,6 +15,8 @@ type Props = {
   title: string;
   artist: string;
   available: boolean;
+  /** Alt text; defaults to "title, artist". */
+  alt?: string;
   /** Tailwind max-height for the inline photo. */
   maxHeightClass?: string;
   className?: string;
@@ -25,12 +27,13 @@ export default function Artwork({
   title,
   artist,
   available,
+  alt: altText,
   maxHeightClass = "max-h-[30dvh]",
   className = "",
 }: Props) {
   const [open, setOpen] = useState(false);
   const [actualSize, setActualSize] = useState(false);
-  const alt = `${title}, ${artist === "Unknown" ? "unknown artist" : artist}`;
+  const alt = altText ?? `${title}, ${artist === "Unknown" ? "unknown artist" : artist}`;
 
   useEffect(() => {
     if (!open) return;

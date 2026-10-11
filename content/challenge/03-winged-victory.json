@@ -1,0 +1,603 @@
+{
+  "artworkId": "winged-victory",
+  "zoomImage": {
+    "file": "Nike of Samothrace, Paris, Louvre.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Nike_of_Samothrace,_Paris,_Louvre.jpg",
+    "width": 3606,
+    "height": 3953,
+    "licence": "CC0",
+    "credit": "Photo: Wilfredor, 2024, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/winged-victory/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "winged-victory-challenge",
+      "kind": "challenge",
+      "order": 3,
+      "title": "Close-up: marble that flies",
+      "narrator": "victory",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c3",
+        "c2"
+      ],
+      "held": [
+        {
+          "start": "c1",
+          "why": "Crop check 2026-10-09: the feathered bracket the wings slot into is 'sculpted at the back of the main block' (Louvre Focus), out of view in the frontal reference photo. Needs a CC0 or public-domain photo from behind or from her left."
+        },
+        {
+          "start": "c4",
+          "why": "Region (behind her left thigh) is not visible in the reference photo; needs a three-quarter-left photo."
+        }
+      ],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.03,
+            "w": 0.3,
+            "h": 0.16,
+            "label": "Both wings where they leave her shoulders and back",
+            "image": "/images/challenge/winged-victory/c1.jpg"
+          },
+          "text": "Level one: today a metal frame holds up her wings. Each wing is a big slab of marble. Look where they meet her back.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.03,
+            "w": 0.3,
+            "h": 0.16,
+            "label": "Both wings where they leave her shoulders and back",
+            "image": "/images/challenge/winged-victory/c1.jpg"
+          },
+          "text": "How did the ancient sculptor hold them up?",
+          "choices": [
+            {
+              "label": "An iron frame, like today's",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Propped by a marble strut",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "Slotted into her back, balanced",
+              "role": "right",
+              "correct": true,
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument"
+            },
+            {
+              "title": "Louvre, collection record: Winged Victory of Samothrace",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010252531"
+            },
+            {
+              "title": "Smarthistory, 'Polykleitos, Doryphoros (Spear-Bearer)'",
+              "url": "https://smarthistory.org/polykleitos-doryphoros-spear-bearer/"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "That's how she stands today. Not how she was built.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one told you a metal frame holds her wings up today, so ancient builders might have done the same.",
+            "truth": "The frame is modern. The ancient wings needed no outside support: they slotted into a feathered bracket on her back.",
+            "evidence": "The Louvre's Focus guide: the wings were \"attached to the back of the statue with no external support\"."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "A real trick for marble. She didn't need it.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Marble is heavy and brittle; marble copies of bronzes often needed bridges and props, like the Spear-Bearer's.",
+            "truth": "No strut. Each wing rested on a surface sloping slightly down into the body, a balance \"normally only possible in bronze\".",
+            "evidence": "The Focus guide: \"a slight downward slope in the horizontal surface on which the wings rested\"; \"the technique was normally only possible in bronze\"."
+          }
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Yes. Each wing slotted into a feathered bracket on her back, its resting surface sloping slightly down so her body took the weight. No outside support.",
+          "next": "c1m"
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Huge marble wings, held by balance alone: a trick, the Louvre says, \"normally only possible in bronze\"."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.04,
+            "w": 0.3,
+            "h": 0.13,
+            "label": "Both wings; her right wing, on the viewer's left, is the plaster one",
+            "image": "/images/challenge/winged-victory/c2.jpg"
+          },
+          "text": "Level one: her right wing is plaster, recreated in 1880–84. But fragments of the original marble wing survive. Compare the two wings as you see them now.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.04,
+            "w": 0.3,
+            "h": 0.13,
+            "label": "Both wings; her right wing, on the viewer's left, is the plaster one",
+            "image": "/images/challenge/winged-victory/c2.jpg"
+          },
+          "text": "Did the lost right wing match the left?",
+          "choices": [
+            {
+              "label": "Yes, a mirror image",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "No: higher, swept further back",
+              "role": "right",
+              "correct": true,
+              "next": "c2b"
+            },
+            {
+              "label": "No one can tell",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The statue of a winged goddess'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/statue-winged-goddess"
+            },
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'Previous restorations'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/restaurations/previous-restorations"
+            },
+            {
+              "title": "Louvre, collection record: Winged Victory of Samothrace",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010252531"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "That's how it looks today. Not how it was.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Wings come in pairs, and the two you see today look like a matching set.",
+            "truth": "The plaster is a 19th-century reconstruction. The ancient fragments show a wing raised higher and angled further back than the left.",
+            "evidence": "The Louvre's Focus guide: the right wing \"was not symmetrical to the left wing\". The plaster dates from 1880–84 (F. Ravaisson-Mollien)."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. The Louvre: fragments show the right wing \"was not symmetrical to the left wing but raised higher and pointing slightly more to the rear\".",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Caution is fair: it is lost. But pieces survive.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The whole right wing you see is plaster, so the original might seem gone without a trace.",
+            "truth": "Fragments of the original right wing survive, enough to show its angle. Restorers still add pieces: two feather fragments went back in 2014.",
+            "evidence": "Focus guide: \"Fragments of the original wing indicate\" its position. The record: \"2 fragments de plume\" were reintegrated in 2014."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "The right wing you see is a restorer's version; the ancient one rose higher and swept further back."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.29,
+            "y": 0.53,
+            "w": 0.45,
+            "h": 0.16,
+            "label": "The ship seen from the prow: the oar boxes jutting from both sides",
+            "image": "/images/challenge/winged-victory/c3.jpg"
+          },
+          "text": "Look down again, at her ship. Two big boxes jut from its sides. Their outer faces, out of view here, carry oval openings in two staggered rows.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.29,
+            "y": 0.53,
+            "w": 0.45,
+            "h": 0.16,
+            "label": "The ship seen from the prow: the oar boxes jutting from both sides",
+            "image": "/images/challenge/winged-victory/c3.jpg"
+          },
+          "text": "What were these boxes on a warship for?",
+          "choices": [
+            {
+              "label": "Mounting the ship's ram",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "Balancing the statue's weight",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "Holding tiers of oars",
+              "role": "right",
+              "correct": true,
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The base in the form of a ship'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/base-form-ship"
+            },
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'A battleship'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/battleship"
+            },
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "The ram was the warship's weapon. Wrong place.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A Greek warship's main weapon was its ram, and these boxes sit near the front of the ship.",
+            "truth": "The great ram sat on the prow at the waterline, with a smaller one higher on the stem. Both are lost here.",
+            "evidence": "The Louvre's Focus guide: the ram was \"attached to the prow at the waterline\"; \"Both the ship's rams are missing.\""
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Balance mattered here, but the boxes were the problem.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The monument is a feat of balance, and these heavy boxes stick out on both sides. They could be counterweights.",
+            "truth": "The boxes copy a real ship. In the monument they needed balancing themselves, by a rear block weighing over two tonnes.",
+            "evidence": "The Focus guide: that missing rear block, \"weighing more than two metric tons, originally acted as a counterbalance for the oar boxes\"."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Yes. Oar boxes were a new feature of Hellenistic warships: wooden boxes jutting from the hull to carry several tiers of longer, more powerful oars. The ovals are oar slots.",
+          "next": "c3m"
+        },
+        "c3m": {
+          "type": "story",
+          "text": "She lands on an up-to-date warship of her day, oar boxes and all, carved in marble."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 1.0,
+            "h": 1.0,
+            "label": "Behind her left thigh: the short length of cloak flapping at the rear (needs a three-quarter-left reference photo; not visible in the frontal app photo)",
+            "image": "/images/challenge/winged-victory/c4.jpg"
+          },
+          "text": "Walk to her left, the side she was made to be seen from. Behind her left thigh, a short length of cloak flaps in the wind.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 1.0,
+            "h": 1.0,
+            "label": "Behind her left thigh: the short length of cloak flapping at the rear (needs a three-quarter-left reference photo; not visible in the frontal app photo)",
+            "image": "/images/challenge/winged-victory/c4.jpg"
+          },
+          "text": "How was this flapping cloth made?",
+          "choices": [
+            {
+              "label": "Undercut from her main block",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Carved apart, then attached",
+              "role": "right",
+              "correct": true,
+              "next": "c4b"
+            },
+            {
+              "label": "1880s plaster, like her chest",
+              "role": "near-miss",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The statue of a winged goddess'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/statue-winged-goddess"
+            },
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument"
+            },
+            {
+              "title": "Louvre, Focus: The Winged Victory of Samothrace, 'Previous restorations'",
+              "url": "https://focus.louvre.fr/en/winged-victory-samothrace/restaurations/previous-restorations"
+            },
+            {
+              "title": "Louvre, collection record: Winged Victory of Samothrace",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010252531"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "Deep undercutting is real, as on the Venus. Not here.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "You saw the Venus's cloak undercut deep into one block. A sculptor this skilled could do the same.",
+            "truth": "Here the wind-raised cloth at the rear was a separate piece. Hellenistic sculptors began assembling the body itself from blocks.",
+            "evidence": "Focus guide: separate blocks, long used \"for the head and other protruding parts\", \"began to be used for the body itself in the Hellenistic period\"."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. The Louvre: \"Several pieces of drapery were carved separately, including the drapery raised by the wind at the rear.\"",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "Plaster patches exist, but not here.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her belt area and left breast are plaster, so other parts that jut out could be too.",
+            "truth": "The rear drapery is ancient. It was already shown with her body in Paris before the 1880s plaster work.",
+            "evidence": "Focus guide: from 1866 to 1880 \"only the Victory's body, with several fragments and the rear drapery added, was exhibited\"."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "She was assembled from many carved parts: torso, wings, arms, feet and windblown cloth."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n4b",
+          "q5",
+          "b5b"
+        ],
+        "concept": "Torso and wings made separately and attached; a metal frame holds the wings today"
+      },
+      "framing": "how",
+      "what_you_learn": "The ancient wings were cantilevered marble slabs, slotted into a feathered bracket and balanced on a slight downward slope, without external support; the iron armature is modern.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument",
+          "quote": "The wings, carved from two large marble slabs and attached to the back of the statue with no external support (the reinforcements are modern), created a tricky problem of balance. The sculptor solved the problem by carving the outer face of each wing in one tier and slotting them into a sort of console decorated with feathers sculpted at the back of the main block forming the body. Moreover, a slight downward slope in the horizontal surface on which the wings rested meant that their weight was borne by the body. This remarkably ingenious solution meant that the sculptor was able to use cantilevering in a large marble work, although the technique was normally only possible in bronze.",
+          "supports": "Places the wing attachment on her back; how it worked.",
+          "readVia": "WebFetch, short quotations"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Louvre, collection record Ma 2369 (Victoire de Samothrace), last updated 08.04.2026",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010252531",
+            "quote": "Les ailes sont maintenues par une armature métallique.",
+            "translation": "The wings are held by a metal armature. (our translation)",
+            "supports": "The modern metal frame is real."
+          }
+        ],
+        "c1b": [
+          {
+            "title": "Smarthistory, 'Polykleitos, Doryphoros (Spear-Bearer)' (Dr. Steven Zucker and Dr. Beth Harris)",
+            "url": "https://smarthistory.org/polykleitos-doryphoros-spear-bearer/",
+            "quote": "Marble is heavy and it cracks much more easily, so it has to be supported in a way that bronze sculptures do not.",
+            "supports": "Struts and props for marble are real.",
+            "readVia": "WebFetch, short quotations"
+          }
+        ]
+      },
+      "confidence": "High (Louvre Focus guide, written with the 2013–2015 restoration team's findings; author TBD).",
+      "notes": "Region caveat: the 'console decorated with feathers' is on her back; the frontal app photo shows only where the wings leave the shoulders. Final crop needs a reference photo from behind or from her left (TBD). HELD 2026-10-09 after the crop check: Focus places the feathered console 'at the back of the main block', which the frontal photo can't show. Zoom box not re-measured on the full image (question held); no crop file.",
+      "quoteCheck": "Not re-checked on 2026-10-09 (question held)."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "b1a",
+          "q5",
+          "b5b"
+        ],
+        "concept": "'Not every feather up there is ancient'; the right wing is plaster"
+      },
+      "framing": "what-was-it-like",
+      "what_you_learn": "The plaster right wing (Ravaisson-Mollien, 1880–84) is a reconstruction; surviving fragments show the ancient right wing was not symmetrical, but higher and angled further back.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The statue of a winged goddess'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/statue-winged-goddess",
+          "quote": "The statue's right wing is entirely in plaster. [...] Fragments of the original wing indicate that the right wing was not symmetrical to the left wing but raised higher and pointing slightly more to the rear.",
+          "supports": "Places the plaster and the evidence in the right wing.",
+          "readVia": "WebFetch, short quotations"
+        },
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'Previous restorations'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/restaurations/previous-restorations",
+          "quote": "The principal missing parts of the statue were recreated in plaster: the right wing, the left part of the torso and the area around the belt. The parts recreated in plaster by F. Ravaisson-Mollien (1880–1884)",
+          "supports": "Date and maker of the plaster wing.",
+          "readVia": "WebFetch, short quotations"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The statue of a winged goddess'",
+            "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/statue-winged-goddess",
+            "quote": "not symmetrical to the left wing",
+            "supports": "Corrects the mirror-image assumption.",
+            "readVia": "WebFetch, short quotations"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Louvre, collection record Ma 2369 (Victoire de Samothrace), last updated 08.04.2026",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010252531",
+            "quote": "2 fragments de plume et 9 fragments de la base ont été réintégrés lors de la dernière restauration en 2014.",
+            "translation": "2 feather fragments and 9 base fragments were reintegrated during the last restoration in 2014. (our translation)",
+            "supports": "Fragments survive and are still being reintegrated."
+          }
+        ]
+      },
+      "confidence": "High for the asymmetry (Louvre). The record doesn't say which wing the 2014 feather fragments belong to, so the script doesn't say either.",
+      "notes": "In the frontal app photo the right (plaster) wing is on the viewer's left; check the box on the original.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "b1c",
+          "n2"
+        ],
+        "concept": "She lands on the prow of a warship; the ship says the victory was won at sea"
+      },
+      "framing": "what-for",
+      "what_you_learn": "Oar boxes were a Hellenistic innovation carrying tiers of longer oars; the rams (lost here) sat at the prow's waterline; and in the monument the heavy oar boxes themselves had to be counterbalanced.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The base in the form of a ship'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/base-form-ship",
+          "quote": "The oar boxes jutting from the ship's sides are particularly well preserved. On the outer side, we can even make out the oval openings used as oar slots, arranged in two unaligned rows positioned one above the other.",
+          "supports": "Places the oar boxes and slots on the ship's sides.",
+          "readVia": "WebFetch, short quotations"
+        },
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'A battleship'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/battleship",
+          "quote": "The best-known of these developments was the addition of large oar boxes jutting from the ship's sides. These wooden structures could support several tiers of longer, more powerful oars.",
+          "supports": "What the boxes were for.",
+          "readVia": "WebFetch, short quotations"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The base in the form of a ship'",
+            "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/base-form-ship",
+            "quote": "Both the ship's rams are missing. The most important weapon on a Greek battleship was its great ram, attached to the prow at the waterline, along with a smaller ram higher on the stem.",
+            "supports": "The ram is real, and elsewhere.",
+            "readVia": "WebFetch, short quotations"
+          }
+        ],
+        "c3b": [
+          {
+            "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+            "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument",
+            "quote": "The central block at the rear of the ship's deck is missing. [...] weighing more than two metric tons, originally acted as a counterbalance for the oar boxes",
+            "supports": "Balance was a real problem, caused by the boxes.",
+            "readVia": "WebFetch, short quotations"
+          }
+        ]
+      },
+      "confidence": "High (Louvre Focus guide).",
+      "notes": "Discrepancy to settle before release: the Focus guide counts 'seventeen blocks' in three courses; the Louvre record (and base node n4b) say 16. Possibly the missing rear block left on Samothrace; TBD. 2026-10-09: the intro no longer says the boxes sit 'near the front' (Focus only says 'the ship's sides') or calls the openings oar slots before the answer; the outer faces aren't visible from the prow, so the intro says so. c3b's 'keel block barely touches the base' was not in the checked sources and was replaced.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "b1b",
+          "n3",
+          "n3b",
+          "n4b"
+        ],
+        "concept": "The cloak whips out behind; designed to be seen from her left; torso and wings made separately"
+      },
+      "framing": "how",
+      "what_you_learn": "Hellenistic sculptors pieced the body itself from separately carved blocks; the wind-raised cloth at the rear is one such piece, and it is ancient, not plaster.",
+      "regionSources": [
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The statue of a winged goddess'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/statue-winged-goddess",
+          "quote": "At the rear, another, much shorter length of cloth is flapping in the wind behind the left thigh.",
+          "supports": "Places the flapping cloth behind the left thigh.",
+          "readVia": "WebFetch, short quotations"
+        },
+        {
+          "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+          "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument",
+          "quote": "The arms and feet were carved separately then added to the statue. Several pieces of drapery were carved separately, including the drapery raised by the wind at the rear.",
+          "supports": "The rear drapery was a separate piece.",
+          "readVia": "WebFetch, short quotations"
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Louvre, Focus: The Winged Victory of Samothrace, 'The structure of the monument'",
+            "url": "https://focus.louvre.fr/en/winged-victory-samothrace/la-victoire-de-samothrace/structure-monument",
+            "quote": "used by Greek sculptors for the head and other protruding parts of the statue as early as the Archaic period [...] began to be used for the body itself in the Hellenistic period",
+            "supports": "Piecing is the period's method.",
+            "readVia": "WebFetch, short quotations"
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Louvre, Focus: The Winged Victory of Samothrace, 'Previous restorations'",
+            "url": "https://focus.louvre.fr/en/winged-victory-samothrace/restaurations/previous-restorations",
+            "quote": "From 1866 to 1880, only the Victory's body, with several fragments and the rear drapery added, was exhibited in the Roman Sculpture galleries.",
+            "supports": "The rear drapery is ancient (shown before the plaster campaign).",
+            "readVia": "WebFetch, short quotations"
+          },
+          {
+            "title": "Louvre, collection record Ma 2369 (Victoire de Samothrace), last updated 08.04.2026",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010252531",
+            "quote": "Le sein gauche, la zone de la ceinture, le dos du buste, l'aile droite ont été refaits en plâtre.",
+            "translation": "The left breast, the belt area, the back of the bust and the right wing were remade in plaster. (our translation)",
+            "supports": "What is plaster."
+          }
+        ]
+      },
+      "confidence": "Medium-high: two Focus pages describe 'the drapery raised by the wind at the rear' and 'cloth flapping ... behind the left thigh'; that these are the same piece is our reading (TBD: confirm with the 2014 restoration publication).",
+      "notes": "HELD, not in the pool: the region is behind her left thigh, invisible in the frontal app photo and its Commons original. Needs a three-quarter-left reference photo (TBD). Placeholder box covers the whole image. Zoom box not re-measured on the full image (question held); no crop file.",
+      "quoteCheck": "Not re-checked on 2026-10-09 (question held)."
+    }
+  }
+}

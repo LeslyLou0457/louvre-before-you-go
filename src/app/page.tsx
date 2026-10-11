@@ -1,9 +1,12 @@
 import Link from "next/link";
+import ChallengeRoute from "@/components/ChallengeRoute";
 import Journey from "@/components/Journey";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
+import { getChallenge } from "@/lib/challenge";
 import { getJourney } from "@/lib/content";
 
 export default function Home() {
+  const journey = getJourney();
   return (
     <main className="soft-fade py-8">
       <header className="mb-8">
@@ -21,7 +24,9 @@ export default function Home() {
         </p>
       </header>
 
-      <Journey items={getJourney()} />
+      <Journey items={journey} />
+
+      <ChallengeRoute items={getChallenge()} levelIds={journey.map((j) => j.id)} />
 
       <footer className="mt-12 border-t border-line pt-4 text-sm">
         <Link href="/about/" className="font-hand text-lg text-ultramarine underline">

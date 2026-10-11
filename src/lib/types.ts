@@ -47,12 +47,32 @@ export type Voice = {
   source?: string;
 };
 
+/**
+ * Close-Up Challenge only: the region of the reference image a question
+ * zooms into, as fractions (0–1) of the full image, top-left origin.
+ */
+export type Zoom = {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  /** What the region shows; also the crop's alt text. */
+  label: string;
+  /** Path of the crop under public/, e.g. "/images/challenge/mona-lisa/c1.jpg" (no basePath). */
+  image: string;
+};
+
+/** A source as players see it (Close-Up Challenge questions). */
+export type SourceRef = { title: string; url: string };
+
 export type StoryNode = {
   type: "story";
   text: string;
   /** Missing on the last node of a level. */
   next?: string;
   voice?: Voice;
+  /** Close-Up Challenge intro nodes only. */
+  zoom?: Zoom;
 };
 
 /**
@@ -86,12 +106,18 @@ export type Choice = {
   label: string;
   next: string;
   correct?: boolean;
+  /** Close-Up Challenge only: "myth" is an approved exception to two near misses. */
+  role?: "right" | "near-miss" | "myth";
 };
 
 export type QuestionNode = {
   type: "question";
   text: string;
   choices: Choice[];
+  /** Close-Up Challenge only: the same zoom as the question's intro. */
+  zoom?: Zoom;
+  /** Close-Up Challenge only: shown under the question's merge line. */
+  sources?: SourceRef[];
 };
 
 export type LessonNode = StoryNode | BranchNode | QuestionNode;
@@ -129,5 +155,58 @@ export type Level = {
   /** True when the image file exists under public/; false shows a placeholder. */
   imageAvailable: boolean;
   /** Content file the level came from, for error messages and the about page. */
+  file: string;
+};
+
+/**
+ * Close-Up Challenge (PRODUCT.md "Close-Up Challenge" and "Challenge
+ * files"): one file per artwork in content/challenge/.
+ */
+export type ZoomImage = {
+  /** Commons file name of the high-resolution reference image. */
+  file: string;
+  /** Its Commons file page. */
+  commons: string;
+  width: number;
+  height: number;
+  licence: string;
+  credit: string;
+  /** Small copy of the whole reference image, for the "see where" thumbnail. */
+  overview: string;
+};
+
+export type ChallengeLesson = {
+  id: string;
+  kind: "challenge";
+  order: number;
+  title: string;
+  narrator?: string;
+  unlock: "all-base-levels";
+  roundSize: number;
+  /** Ordered intro-node ids of the questions in the rotation. */
+  pool: string[];
+  /** Sourced questions kept out of the rotation, with the reason. */
+  held?: { start: string; why: string }[];
+  nodes: Record<string, LessonNode>;
+};
+
+export type ChallengeFile = {
+  /** The level file's artwork.id. */
+  artworkId: string;
+  zoomImage: ZoomImage;
+  lessons: ChallengeLesson[];
+  /** Audit trail per question node id; ignored by the app. */
+  review: Record<string, unknown>;
+};
+
+/** One playable challenge round as the app sees it, in route order. */
+export type Round = {
+  index: number;
+  lesson: ChallengeLesson;
+  artwork: Artwork;
+  speakers: Record<string, Speaker>;
+  zoomImage: ZoomImage;
+  /** Lesson id of the artwork's level. */
+  levelId: string;
   file: string;
 };

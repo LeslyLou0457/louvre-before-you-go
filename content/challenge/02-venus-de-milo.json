@@ -1,0 +1,483 @@
+{
+  "artworkId": "venus-de-milo",
+  "zoomImage": {
+    "file": "Vénus de Milo - Musée du Louvre AGER LL 299 ; N 527 ; Ma 399.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg",
+    "width": 6124,
+    "height": 10349,
+    "licence": "CC0",
+    "credit": "Photo: Shonagon, 2024, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/venus-de-milo/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "venus-de-milo-challenge",
+      "kind": "challenge",
+      "order": 2,
+      "title": "Close-up: an old ideal, carved in pieces",
+      "narrator": "venus",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c3"
+      ],
+      "held": [
+        {
+          "start": "c2",
+          "why": "Crop check 2026-10-09: the mounting hole at her left shoulder faces sideways and does not show in the frontal reference photo (the crop shows only the top of the shoulder). Needs a CC0 or public-domain side view of her left shoulder."
+        }
+      ],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.32,
+            "y": 0.035,
+            "w": 0.2,
+            "h": 0.13,
+            "label": "Her head and face",
+            "image": "/images/challenge/venus-de-milo/c1.jpg"
+          },
+          "text": "Level one traced her soft flesh and hairstyle to Praxiteles. Now look at her face: calm, even, giving nothing away. She was carved around 150–125 BCE.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.32,
+            "y": 0.035,
+            "w": 0.2,
+            "h": 0.13,
+            "label": "Her head and face",
+            "image": "/images/challenge/venus-de-milo/c1.jpg"
+          },
+          "text": "Why is her face so calm and blank?",
+          "choices": [
+            {
+              "label": "Her era's fashion for calm",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Wear has erased her expression",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "It quotes older Classical faces",
+              "role": "right",
+              "correct": true,
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre 'Praxitèle' mini-site, teaching page on the female figure (Maryvonne Cassan)",
+              "url": "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html"
+            },
+            {
+              "title": "Britannica, 'Western sculpture: Hellenistic period'",
+              "url": "https://www.britannica.com/art/Western-sculpture/Hellenistic-period"
+            },
+            {
+              "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005)",
+              "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf"
+            },
+            {
+              "title": "Louvre, collection record: Aphrodite, known as the Venus de Milo",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010277627"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "She is Hellenistic, so a fair guess. But her age loved drama.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one dated her to the Hellenistic age, so her calm might simply be the fashion of her time.",
+            "truth": "Hellenistic sculptors were famous for emotion. Her blankness is a deliberate look back to the Classical 5th century BCE.",
+            "evidence": "Britannica on Hellenistic sculpture: Pergamene works show \"vigorous action and emotion—triumph, fury, despair\". Kousser calls her \"deliberately retrospective\"."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "She is damaged, true. But the calm was carved.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her nose is chipped and its tip is plaster. Two thousand years could have worn away a smile.",
+            "truth": "The damage is small and local. The calm, idealised face is the sculptor's choice, a Classical trait.",
+            "evidence": "The Louvre's record: the nose is chipped and its tip \"remade in plaster\". Its teaching page names \"the absence of expression\" as Classical (our translations)."
+          }
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Yes. A Louvre teaching page links her \"idealised beauty of the face, the absence of expression\" to 5th-century classicism (our translation). A Hellenistic sculptor looking back.",
+          "next": "c1m"
+        },
+        "c1m": {
+          "type": "story",
+          "text": "One statue, two ages: a Classical face above, a Hellenistic sculptor's skill everywhere else."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.55,
+            "y": 0.13,
+            "w": 0.14,
+            "h": 0.12,
+            "label": "Her left shoulder, where the raised left arm began (viewer's right)",
+            "image": "/images/challenge/venus-de-milo/c2.jpg"
+          },
+          "text": "Level one asked what her lost arms held: probably an apple, in the left hand. Now look at her left shoulder, where that arm began.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.55,
+            "y": 0.13,
+            "w": 0.14,
+            "h": 0.12,
+            "label": "Her left shoulder, where the raised left arm began (viewer's right)",
+            "image": "/images/challenge/venus-de-milo/c2.jpg"
+          },
+          "text": "How was her raised left arm held on?",
+          "choices": [
+            {
+              "label": "Carved apart, then fixed on",
+              "role": "right",
+              "correct": true,
+              "next": "c2a"
+            },
+            {
+              "label": "Braced by a marble strut",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Cast in bronze, then attached",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre, 'Ideal Greek beauty'",
+              "url": "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty"
+            },
+            {
+              "title": "Louvre, collection record: Aphrodite, known as the Venus de Milo",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010277627"
+            },
+            {
+              "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005)",
+              "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf"
+            },
+            {
+              "title": "Smarthistory, 'Polykleitos, Doryphoros (Spear-Bearer)'",
+              "url": "https://smarthistory.org/polykleitos-doryphoros-spear-bearer/"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Yes. A mounting hole at the left shoulder shows the arm was carved separately and fixed on. Kousser reads the holes: the arm reached outward and slightly down.",
+          "next": "c2m"
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "A real technique for marble limbs. Not hers, though.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Marble arms are heavy and brittle. Level one's Spear-Bearer copy has a marble bridge from wrist to hip.",
+            "truth": "A strut is marble left joining limb to body. Here there's a socket instead: the arm was a separate piece.",
+            "evidence": "Smarthistory: marble \"has to be supported in a way that bronze sculptures do not\". The Louvre: a mounting hole shows the arms were \"carved separately\"."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "She did wear bronze. Just not as an arm.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Holes in her hair and right arm held bronze jewellery, a diadem and a bracelet, so bronze parts are plausible.",
+            "truth": "The bronze was jewellery. The arms were marble, carved separately; the hand with the apple found with her is Parian marble too.",
+            "evidence": "The Louvre's record: holes \"pour un diadème, et un bracelet au bras droit\". Its page: the apple hand is \"carved from the same Parian marble\"."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Like many statues, she was built from separate marble pieces. Her arms were fixed on, and lost."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.43,
+            "w": 0.5,
+            "h": 0.49,
+            "label": "The cloak from her hips to her feet, deep-cut folds on her right side (viewer's left)",
+            "image": "/images/challenge/venus-de-milo/c3.jpg"
+          },
+          "text": "Level one: her cloak is cut deep on her right side, flatter on her left. Look at the folds: dark, deep shadows between ridges of marble.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.43,
+            "w": 0.5,
+            "h": 0.49,
+            "label": "The cloak from her hips to her feet, deep-cut folds on her right side (viewer's left)",
+            "image": "/images/challenge/venus-de-milo/c3.jpg"
+          },
+          "text": "Whose style is this deeply cut cloak?",
+          "choices": [
+            {
+              "label": "Clinging \"wet drapery\"",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "Her own Hellenistic age's",
+              "role": "right",
+              "correct": true,
+              "next": "c3b"
+            },
+            {
+              "label": "Praxiteles', like her hair",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005)",
+              "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf"
+            },
+            {
+              "title": "Louvre, collection record: Winged Victory of Samothrace",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010252531"
+            },
+            {
+              "title": "Louvre 'Praxitèle' mini-site, teaching page on the female figure (Maryvonne Cassan)",
+              "url": "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "A real sculptor's style, but it does the opposite.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "You met wet drapery on the Winged Victory: cloth carved as if soaked, so the body shows through.",
+            "truth": "Wet drapery reveals the body beneath. This cloak hides her legs in heavy, deep-cut folds built for light and shadow.",
+            "evidence": "Kousser describes \"deeply undercut folds of cloth that create a richly varied play of light and shadow\": a heavy cloak, not a clinging veil."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Yes. Kousser: the cloak \"is carved in a bravura Hellenistic style, with deeply undercut folds\" that make \"a richly varied play of light and shadow\".",
+          "next": "c3m"
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Praxiteles shaped her hair and flesh. Not this cloth.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one: the Louvre traces her soft flesh and her hairstyle to Praxiteles, so the cloak might follow.",
+            "truth": "The Louvre credits Praxiteles with the hair and the modelling of the nude. The bravura cloak belongs to her own Hellenistic age.",
+            "evidence": "Louvre teaching page: the hair and \"le modelé du nu sont inspirés de Praxitèle\". Kousser: the drapery is \"bravura Hellenistic\"."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Praxitelean skin, a Classical face, a Hellenistic cloak: Kousser's \"creative, but also deliberately retrospective\" statue."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "b1a",
+          "n3b",
+          "n4"
+        ],
+        "concept": "Praxitelean flesh and hair; Lysippan proportions; Kousser's 'creative, but also deliberately retrospective'"
+      },
+      "framing": "why",
+      "what_you_learn": "Her blank, idealised face is a deliberate Classical quotation by a Hellenistic sculptor, at a time when sculptors were famous for emotion; the damage to the nose is real but small.",
+      "regionSources": [
+        {
+          "title": "Louvre mini-site 'Praxitèle', teaching page on the female figure in Greek sculpture (Maryvonne Cassan)",
+          "url": "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html",
+          "quote": "Par l'équilibre des formes, la beauté idéalisée du visage, l'absence d'expression, elle se rattache au classicisme du Ve siècle tandis que le traitement de la coiffure et le modelé du nu sont inspirés de Praxitèle.",
+          "translation": "Through the balance of its forms, the idealised beauty of the face and the absence of expression, it belongs to the classicism of the 5th century, while the treatment of the hair and the modelling of the nude are inspired by Praxiteles. (our translation)",
+          "supports": "Places the Classical trait in the face (idealised beauty, no expression).",
+          "readVia": "WebFetch, checked segment by segment 2026-10-09"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Britannica, 'Western sculpture: Hellenistic period'",
+            "url": "https://www.britannica.com/art/Western-sculpture/Hellenistic-period",
+            "quote": "masterful displays of vigorous action and emotion—triumph, fury, despair",
+            "supports": "Hellenistic sculpture is known for emotion: the near miss is a real alternative, and wrong here. (Britannica names the Pergamon altar reliefs, the Gauls and the Winged Victory itself as such works.)",
+            "readVia": "WebFetch, short quotation"
+          },
+          {
+            "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005) (quoted in base node n4)",
+            "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf",
+            "quote": "a creative, but also deliberately retrospective",
+            "supports": "Her classicism is deliberate."
+          }
+        ],
+        "c1b": [
+          {
+            "title": "Louvre, collection record Ma 399 (Aphrodite, dite Vénus de Milo), last updated 17.04.2026",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010277627",
+            "quote": "Le nez présente des éclats. [...] Le chignon a été recollé et l'extrémité du nez a été refaite en plâtre.",
+            "translation": "The nose is chipped. [...] The bun has been re-glued and the tip of the nose remade in plaster. (our translation)",
+            "supports": "The real damage to the face: chipped nose, plaster nose tip."
+          }
+        ]
+      },
+      "confidence": "High for the Louvre's reading of the face. The Britannica passage summarises Pergamene sculpture (author shown as Arthur Voyce; section by John Boardman per the page footer, TBD).",
+      "notes": "The crop needs a reference photo where the face is sharp; the Louvre's nose-tip restoration is visible at this scale only in the high-res file.",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "q4",
+          "b4a",
+          "b4b",
+          "n6b"
+        ],
+        "concept": "What her lost arms held (the apple hand); what survives and what is lost"
+      },
+      "framing": "how",
+      "what_you_learn": "Her left arm was carved separately and fixed into a socket at the shoulder (the Louvre and Kousser), not braced by a strut and not bronze; bronze was used only for her jewellery.",
+      "regionSources": [
+        {
+          "title": "Louvre, 'Ideal Greek beauty' (Explore the palace)",
+          "url": "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty",
+          "quote": "We know from a mounting hole at the left shoulder that the arms were also carved separately then added to the torso.",
+          "supports": "Places the mounting hole at the left shoulder.",
+          "readVia": "WebFetch, given in two consecutive segments"
+        },
+        {
+          "title": "Louvre, collection record Ma 399 (Aphrodite, dite Vénus de Milo), last updated 17.04.2026",
+          "url": "https://collections.louvre.fr/ark:/53355/cl010277627",
+          "quote": "Le bras gauche était rapporté (présence d'une mortaise).",
+          "translation": "The left arm was attached separately (a mortise is present). (our translation)",
+          "supports": "Same, in the museum record."
+        },
+        {
+          "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005), p. 239 n. 68",
+          "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf",
+          "quote": "On the left shoulder, the oval dowel hole shows that the arm was worked separately and attached [...] Judging from the orientation of the dowel holes, the arm extended outward and slightly down from the shoulder",
+          "supports": "Same location; the arm's direction.",
+          "readVia": "WebFetch, short quotations"
+        },
+        {
+          "title": "Louvre, 'Ideal Greek beauty' (Explore the palace)",
+          "url": "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty",
+          "quote": "Like many classical statues, the Venus de Milo was carved from separate blocks of Parian marble.",
+          "supports": "The merge line."
+        }
+      ],
+      "choiceSources": {
+        "c2b": [
+          {
+            "title": "Smarthistory, 'Polykleitos, Doryphoros (Spear-Bearer)' (video transcript, Dr. Steven Zucker and Dr. Beth Harris)",
+            "url": "https://smarthistory.org/polykleitos-doryphoros-spear-bearer/",
+            "quote": "Marble is heavy and it cracks much more easily, so it has to be supported in a way that bronze sculptures do not. [...] there's a bridge that attaches the right wrist to the right hip",
+            "supports": "Struts are a real way of holding marble limbs (on the Spear-Bearer copy met in base n3).",
+            "readVia": "WebFetch, short quotations"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Louvre, collection record Ma 399 (Aphrodite, dite Vénus de Milo), last updated 17.04.2026",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010277627",
+            "quote": "Des éléments en bronze étaient rapportés : présence de trous pour un diadème, et un bracelet au bras droit.",
+            "translation": "Bronze elements were attached: there are holes for a diadem, and for a bracelet on the right arm. (our translation)",
+            "supports": "Bronze parts were really attached to her: jewellery."
+          },
+          {
+            "title": "Louvre, 'Ideal Greek beauty' (Explore the palace)",
+            "url": "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty",
+            "quote": "Another possible clue was found near the statue: a hand holding an apple – an attribute of Aphrodite – carved from the same Parian marble.",
+            "supports": "The hand found with her is marble."
+          }
+        ]
+      },
+      "confidence": "High: the Louvre (record and page) and Kousser agree on the separately carved arm and the hole at the left shoulder.",
+      "notes": "Visibility: the app photo is nearly frontal; the socket faces outward and may not show. The crop box is provisional, and the final crop needs a reference photo from her left that shows the shoulder's joint surface (TBD). HELD 2026-10-09 after the crop check: the hole faces sideways and is invisible in the frontal photo.",
+      "quoteCheck": "Not re-checked on 2026-10-09 (question held)."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "b1b",
+          "n2",
+          "n4"
+        ],
+        "concept": "Smooth skin above, deeply cut cloth below; Kousser on the right and left sides of the cloak"
+      },
+      "framing": "whose-style",
+      "what_you_learn": "The deep-cut cloak is the sculptor's own Hellenistic bravura, set against a Classical face and Praxitelean flesh and hair; wet drapery does the opposite (it reveals the body).",
+      "regionSources": [
+        {
+          "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005), p. 239",
+          "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf",
+          "quote": "carved in a bravura Hellenistic style, with deeply undercut folds of cloth that create a richly varied play of light and shadow",
+          "supports": "The drapery and its style.",
+          "readVia": "WebFetch, short quotation"
+        },
+        {
+          "title": "R. Kousser, 'Creating the Past: The Vénus de Milo and the Hellenistic Reception of Classical Greece', American Journal of Archaeology 109 (2005), p. 239 n. 68",
+          "url": "https://ajaonline.org/wp-content/uploads/2013/09/1092_Kousser.pdf",
+          "quote": "In the case of the Aphrodite of Melos, a pillar might usefully have shielded the left side of the statue from close viewing; the drapery on this side is executed in a much more summary fashion than that of the right side, with broad flat swathes of fabric interrupted only by a few sketchy folds (fig. 12).",
+          "supports": "Right side elaborate, left side summary: where in the cloak the deep cutting is.",
+          "readVia": "WebFetch, given in three consecutive segments"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Base level, Winged Victory n3 (content/03-winged-victory.json), which cites the Louvre and Smarthistory",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+            "quote": "Cloth carved as if soaked, so the body shows through, is called wet drapery.",
+            "supports": "Wet drapery is a real sculptor's style the player already met."
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Louvre mini-site 'Praxitèle', teaching page on the female figure in Greek sculpture (Maryvonne Cassan)",
+            "url": "https://mini-site.louvre.fr/praxitele/html/1.7.4.1_fr.html",
+            "quote": "le traitement de la coiffure et le modelé du nu sont inspirés de Praxitèle",
+            "translation": "the treatment of the hair and the modelling of the nude are inspired by Praxiteles (our translation)",
+            "supports": "The Louvre credits Praxiteles with hair and nude, not drapery."
+          }
+        ]
+      },
+      "confidence": "High (Kousser, peer-reviewed). Kousser's pillar idea for the left side is a 'might', so the script doesn't use it.",
+      "notes": "The c3a evidence reuses the base level's own definition; a museum source for 'wet drapery' as a term (e.g. the Louvre's Victory pages) should be added before release (TBD).",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    }
+  }
+}

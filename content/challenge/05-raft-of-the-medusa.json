@@ -1,0 +1,443 @@
+{
+  "artworkId": "raft-of-the-medusa",
+  "zoomImage": {
+    "file": "Le Radeau de la Méduse - Théodore Géricault - Musée du Louvre Peintures INV 4884 ; C 51.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Le_Radeau_de_la_M%C3%A9duse_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4884_;_C_51.jpg",
+    "width": 10244,
+    "height": 6924,
+    "licence": "Public domain",
+    "credit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/raft-of-the-medusa/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "raft-of-the-medusa-challenge",
+      "kind": "challenge",
+      "order": 5,
+      "title": "Close-up: the raft's hard facts",
+      "narrator": "gericault",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c2",
+        "c3"
+      ],
+      "held": [
+        {
+          "start": "c1",
+          "why": "Deferred by Steven (2026-10-09): the region and the reason rest on one unsigned encyclopedia entry (Larousse). Hold until Charles Clément (1868) or Lorenz Eitner is checked."
+        }
+      ],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.58,
+            "y": 0.7,
+            "w": 0.42,
+            "h": 0.3,
+            "label": "Front right corner: a body, half flesh and half cloth, trailing in the waves",
+            "image": "/images/challenge/raft-of-the-medusa/c1.jpg"
+          },
+          "text": "Bottom right: a body, half flesh, half cloth, its right thigh bent over a beam, trailing in the waves. Géricault added it after the canvas was finished.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.58,
+            "y": 0.7,
+            "w": 0.42,
+            "h": 0.3,
+            "label": "Front right corner: a body, half flesh and half cloth, trailing in the waves",
+            "image": "/images/challenge/raft-of-the-medusa/c1.jpg"
+          },
+          "text": "Why did he add this figure?",
+          "choices": [
+            {
+              "label": "To hide a canvas tear",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "To use a morgue study",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "A gap unbalanced the composition",
+              "role": "right",
+              "correct": true,
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Larousse encyclopedia, 'le Radeau de « la Méduse »' (in French)",
+              "url": "https://www.larousse.fr/encyclopedie/oeuvre/le_Radeau_de_%C2%AB_la_M%C3%A9duse_%C2%BB/181410"
+            },
+            {
+              "title": "Louvre, collection record: The Raft of the Medusa",
+              "url": "https://collections.louvre.fr/ark:/53355/cl010059199"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "The canvas was torn once, but much later.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Louvre's record notes a tear in this canvas, repaired by restorers. A figure painted over it sounds plausible.",
+            "truth": "That tear came in 1848, from a falling ladder, 24 years after Géricault died. He added this figure himself.",
+            "evidence": "The Louvre's record: restored in late 1848, \"réparation d'une déchirure de la toile provoquée par la chute d'une échelle\"."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "He did study real bodies. Not for this one.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one: he borrowed body parts from a hospital to study the colour of death, so a study seems likely.",
+            "truth": "This figure had no model at all. Géricault invented it on the spot, to rebalance the composition.",
+            "evidence": "Larousse: \"Sur place, sans modèle, il invente une figure supplémentaire de naufragé\" (on the spot, without a model, he invents an extra figure)."
+          }
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Yes. Seeing the finished canvas hung in a Paris hall, he found \"an empty space that unbalances it\" at front right, and invented this figure there, without a model.",
+          "next": "c1m"
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Even this documentary picture is a composition: one body is there to balance the whole."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.6,
+            "y": 0.14,
+            "w": 0.2,
+            "h": 0.5,
+            "label": "Near the top of the human pyramid: the barrel the climbers stand on",
+            "image": "/images/challenge/raft-of-the-medusa/c2.jpg"
+          },
+          "text": "Follow the human pyramid up: near the top, three men boost each other from a barrel. The two survivors who wrote the account listed what the raft carried.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.6,
+            "y": 0.14,
+            "w": 0.2,
+            "h": 0.5,
+            "label": "Near the top of the human pyramid: the barrel the climbers stand on",
+            "image": "/images/challenge/raft-of-the-medusa/c2.jpg"
+          },
+          "text": "What did the raft's barrels mostly hold?",
+          "choices": [
+            {
+              "label": "Fresh water",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Wine",
+              "role": "right",
+              "correct": true,
+              "next": "c2b"
+            },
+            {
+              "label": "Ship's biscuit",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre podcast 'Les Enquêtes du Louvre': The Raft of the Medusa, with curator Côme Fabre (transcript, in French)",
+              "url": "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf"
+            },
+            {
+              "title": "J. B. H. Savigny and A. Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, 1818)",
+              "url": "https://www.gutenberg.org/ebooks/11772"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "There was water, a little. It didn't last.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "On an open raft under the sun, water is what you'd load first.",
+            "truth": "Only two small casks of water came aboard, and mutineers threw both into the sea, with two barrels of wine.",
+            "evidence": "Savigny and Corréard (1818): the rebels \"had thrown into the sea two barrels of wine, and the only two casks of water\"."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. Savigny and Corréard list \"six barrels of wine and two small casks of water\" on the raft, and \"not a single barrel of biscuit\".",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Food would make sense. None came aboard in barrels.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A raft for about 150 people surely carried bread or biscuit as well as drink.",
+            "truth": "No barrel of biscuit was aboard. A 25-pound bag thrown to them fell into the sea, and was kept only as a paste.",
+            "evidence": "Savigny and Corréard: \"not a single barrel of biscuit\"; \"a bag with twenty-five pounds of biscuit was thrown us, which fell into the sea\"."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "The pyramid of hope rises from a barrel: wine, the raft's main supply, with no barrel of food."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.1,
+            "y": 0.0,
+            "w": 0.4,
+            "h": 0.66,
+            "label": "The mast, its ropes and the swelling sail",
+            "image": "/images/challenge/raft-of-the-medusa/c3.jpg"
+          },
+          "text": "Level one: the mast, ropes and sail form the second pyramid. The survivors' account says what this rig was made from, and what it did.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.1,
+            "y": 0.0,
+            "w": 0.4,
+            "h": 0.66,
+            "label": "The mast, its ropes and the swelling sail",
+            "image": "/images/challenge/raft-of-the-medusa/c3.jpg"
+          },
+          "text": "Did this sail help them reach land?",
+          "choices": [
+            {
+              "label": "Barely, only downwind",
+              "role": "right",
+              "correct": true,
+              "next": "c3a"
+            },
+            {
+              "label": "Yes, it carried them coastward",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "A tent, not a sail",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre podcast 'Les Enquêtes du Louvre': The Raft of the Medusa, with curator Côme Fabre (transcript, in French)",
+              "url": "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf"
+            },
+            {
+              "title": "J. B. H. Savigny and A. Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, 1818)",
+              "url": "https://www.gutenberg.org/ebooks/11772"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes. They rigged a top-gallant sail from the frigate on a cut-down mast pole. The survivors: it was \"of very little use\", working only with the wind behind.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "A sail suggests a voyage. This one went nowhere useful.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A full sail, swelling in the wind, is the picture of a ship under way toward somewhere.",
+            "truth": "The raft drifted. Its sail trimmed well, the survivors say, but helped only when the wind came from behind.",
+            "evidence": "Savigny and Corréard: \"The sail trimmed very well, but the effect of it was of very little use to us\"."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Good eye: the rigging does look like a tent. But it's a sail.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Level one: ropes and sail make a tent-like pyramid, and the curator says it shelters other figures.",
+            "truth": "The tent shape is Géricault's composition, his second pyramid. On the real raft this was a sail, rigged to catch wind.",
+            "evidence": "Fabre: the rigging forms \"comme une sorte de tente\". The survivors: \"we employed the main-top-gallant sail\"."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "The rig was real, salvaged from the wreck; its tent shape is Géricault's design."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n3",
+          "n3b",
+          "q3",
+          "n4"
+        ],
+        "concept": "Over a hundred studies and borrowed body parts; the two pyramids: a composed picture"
+      },
+      "framing": "why-there",
+      "what_you_learn": "After finishing, Géricault saw the hung canvas, found an empty space at front right that unbalanced it, and invented this half-body, half-cloth figure on the spot without a model; the canvas's 1848 tear came long after his death.",
+      "regionSources": [
+        {
+          "title": "Larousse encyclopédie, 'le Radeau de « la Méduse »' (unsigned, Éditions Larousse), section 'Du sujet à l'œuvre'",
+          "url": "https://www.larousse.fr/encyclopedie/oeuvre/le_Radeau_de_%C2%AB_la_M%C3%A9duse_%C2%BB/181410",
+          "quote": "L'œuvre une fois terminée, le peintre a la possibilité, pour la voir avec le plus de recul possible, de l'accrocher quelques jours salle Favart à Paris. Là, sur le côté avant droit de la composition, lui apparaît un espace vide qui la déséquilibre. Sur place, sans modèle, il invente une figure supplémentaire de naufragé qui, moitié corps, moitié linge, la cuisse droite repliée sur une poutre, semble traîner dans les vagues.",
+          "translation": "Once the work was finished, the painter was able, to see it from as far back as possible, to hang it for a few days in the salle Favart in Paris. There, on the front right side of the composition, he noticed an empty space that unbalanced it. On the spot, without a model, he invented an extra castaway figure who, half body, half linen, right thigh bent over a beam, seems to trail in the waves. (our translation)",
+          "supports": "Places the added figure at front right and gives the reason.",
+          "readVia": "WebFetch, given in consecutive segments"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Louvre, collection record INV 4884 (Le Radeau de la Méduse), last updated 24.04.2026",
+            "url": "https://collections.louvre.fr/ark:/53355/cl010059199",
+            "quote": "restauré à la fin de l'année 1848 (réparation d'une déchirure de la toile provoquée par la chute d'une échelle)",
+            "translation": "restored at the end of 1848 (repair of a tear in the canvas caused by a falling ladder) (our translation)",
+            "supports": "The tear is real, and dated 1848 (Géricault died in 1824, base n6c)."
+          }
+        ],
+        "c1b": [
+          {
+            "title": "Larousse encyclopédie, 'le Radeau de « la Méduse »' (unsigned, Éditions Larousse), section 'Du sujet à l'œuvre'",
+            "url": "https://www.larousse.fr/encyclopedie/oeuvre/le_Radeau_de_%C2%AB_la_M%C3%A9duse_%C2%BB/181410",
+            "quote": "Sur place, sans modèle, il invente une figure supplémentaire de naufragé",
+            "translation": "On the spot, without a model, he invents an extra castaway figure (our translation)",
+            "supports": "No model for this figure."
+          }
+        ]
+      },
+      "confidence": "Medium: one source (an unsigned encyclopedia entry). Before release, confirm in Charles Clément's Géricault (1868) or Lorenz Eitner's studies (TBD), and check whether the salle Favart showing preceded the 1819 Salon.",
+      "notes": "Where the 1848 tear was is not located in the record, so the correction argues from the date only. HELD (Steven, 2026-10-09): not shipped until a second source is checked. Zoom box not re-measured on the full image (question held); no crop file.",
+      "quoteCheck": "Not re-checked on 2026-10-09 (question held)."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n2",
+          "q3",
+          "b3a"
+        ],
+        "concept": "About 150 people on the raft, 12 days, 15 alive; the human pyramid"
+      },
+      "framing": "what",
+      "what_you_learn": "The raft carried six barrels of wine and two small casks of water, but no barrel of biscuit; mutineers threw both water casks and two wine barrels into the sea. The pyramid of hope rises from a barrel.",
+      "regionSources": [
+        {
+          "title": "Louvre podcast 'Les Enquêtes du Louvre', episode 1, 'Le Radeau de la Méduse' (transcript, 2022), curator Côme Fabre",
+          "url": "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf",
+          "quote": "Puis, ensuite, de loin en loin, de corps en corps, on grimpe sur une sorte de pyramide qui culmine au-dessus d'un tonneau, avec trois personnages qui font une sorte de courte échelle.",
+          "translation": "Then, little by little, from body to body, you climb a kind of pyramid that culminates above a barrel, with three figures giving each other a leg-up. (our translation)",
+          "supports": "Places the barrel at the top of the human pyramid.",
+          "readVia": "WebFetch, given in consecutive segments"
+        },
+        {
+          "title": "J. B. Henry Savigny and Alexander Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, London 1818), Project Gutenberg eBook #11772",
+          "url": "https://www.gutenberg.org/ebooks/11772",
+          "quote": "six barrels of wine and two small casks of water, which had been put there for the use of the people [...] but not a single barrel of biscuit",
+          "supports": "What the raft carried.",
+          "readVia": "Project Gutenberg plain text (https://www.gutenberg.org/cache/epub/11772/pg11772.txt), checked segment by segment 2026-10-09; not yet checked against a scan of the 1818 edition"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "J. B. Henry Savigny and Alexander Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, London 1818), Project Gutenberg eBook #11772",
+            "url": "https://www.gutenberg.org/ebooks/11772",
+            "quote": "the rebels, during the tumult, had thrown into the sea two barrels of wine, and the only two casks of water that we had on the raft",
+            "supports": "Water was aboard, briefly.",
+            "readVia": "Project Gutenberg plain text (https://www.gutenberg.org/cache/epub/11772/pg11772.txt), checked segment by segment 2026-10-09; not yet checked against a scan of the 1818 edition"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "J. B. Henry Savigny and Alexander Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, London 1818), Project Gutenberg eBook #11772",
+            "url": "https://www.gutenberg.org/ebooks/11772",
+            "quote": "a bag with twenty-five pounds of biscuit was thrown us, which fell into the sea [...] it was converted into a paste, but we preserved it in that condition",
+            "supports": "No biscuit barrels; the bag fell into the sea.",
+            "readVia": "Project Gutenberg plain text (https://www.gutenberg.org/cache/epub/11772/pg11772.txt), checked segment by segment 2026-10-09; not yet checked against a scan of the 1818 edition"
+          }
+        ]
+      },
+      "confidence": "High for the survivors' list (a primary source). The painting doesn't tell us what its barrel holds, so the question asks about the raft's barrels, not this one.",
+      "notes": "Quotations read through WebFetch from the Gutenberg HTML; check them against a scan of the 1818 edition before release (TBD).",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "q3",
+          "b3a",
+          "b3b",
+          "n4"
+        ],
+        "concept": "The mast, ropes and sail form the second pyramid"
+      },
+      "framing": "what-for",
+      "what_you_learn": "The raft's mast was a cut-down pole from the frigate, its sail the main top-gallant sail; it trimmed well but helped only with the wind behind. The tent shape is Géricault's composition.",
+      "regionSources": [
+        {
+          "title": "Louvre podcast 'Les Enquêtes du Louvre', episode 1, 'Le Radeau de la Méduse' (transcript, 2022), curator Côme Fabre",
+          "url": "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf",
+          "quote": "Puis, il y a une deuxième pyramide qui, elle, est tracée en fait par les cordages et les voiles. Elle forme comme une sorte de tente qui abrite d'autres personnages. Puis, derrière cette tente, au-dessus d'elle, disons qu'il y a une grande voile gonflée par le vent.",
+          "translation": "Then there is a second pyramid, traced in fact by the ropes and the sails. It forms a kind of tent sheltering other figures. Then, behind this tent, above it, let's say there is a large sail swollen by the wind. (our translation)",
+          "supports": "Places the rigging and sail.",
+          "readVia": "WebFetch, given in consecutive segments"
+        },
+        {
+          "title": "J. B. Henry Savigny and Alexander Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, London 1818), Project Gutenberg eBook #11772",
+          "url": "https://www.gutenberg.org/ebooks/11772",
+          "quote": "he caused the pole of one of the frigate's masts to be cut in two [...] we employed the main-top-gallant sail [...] the mast was kept up by the rope which had served to tow us [...] The sail trimmed very well, but the effect of it was of very little use to us [...] it served only when the wind came from behind",
+          "supports": "What the rig was and what it did.",
+          "readVia": "Project Gutenberg plain text (https://www.gutenberg.org/cache/epub/11772/pg11772.txt), checked segment by segment 2026-10-09; not yet checked against a scan of the 1818 edition"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "J. B. Henry Savigny and Alexander Corréard, Narrative of a Voyage to Senegal in 1816 (English translation, London 1818), Project Gutenberg eBook #11772",
+            "url": "https://www.gutenberg.org/ebooks/11772",
+            "quote": "The sail trimmed very well, but the effect of it was of very little use to us",
+            "supports": "The sail didn't carry them anywhere useful.",
+            "readVia": "Project Gutenberg plain text (https://www.gutenberg.org/cache/epub/11772/pg11772.txt), checked segment by segment 2026-10-09; not yet checked against a scan of the 1818 edition"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Louvre podcast 'Les Enquêtes du Louvre', episode 1, 'Le Radeau de la Méduse' (transcript, 2022), curator Côme Fabre",
+            "url": "https://api-www.louvre.fr/sites/default/files/2022-06/TRANSCRIPTION-podcast-les-enquetes-du-louvre-le-radeau-de-la-meduse.pdf",
+            "quote": "Elle forme comme une sorte de tente qui abrite d'autres personnages.",
+            "translation": "It forms a kind of tent sheltering other figures. (our translation)",
+            "supports": "The tent is a reading of the composition.",
+            "readVia": "WebFetch, short quotations"
+          }
+        ]
+      },
+      "confidence": "High for the account (primary source, 1818 translation). That Géricault's painted rig follows the account is implied by RMG ('based on the 1817 survivors' account and discussion with its authors'), not stated for the sail specifically.",
+      "notes": "The account's words come from the raft-building passage; confirm the exact sentences and their order in the 1818 edition (TBD).",
+      "quoteCheck": "2026-10-09: each quoted passage re-read in the source and checked segment by segment for an exact match (WebFetch); fixes noted in notes.",
+      "cropCheck": "2026-10-09: box measured on the full reference image; crop checked by eye against the region the sources describe."
+    }
+  }
+}
