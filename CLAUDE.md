@@ -12,7 +12,7 @@ For the AI and the people working in this repo. AGENTS.md and CLAUDE.md have the
 
 ## Current scope
 
-Only version 0.5 from PRODUCT.md: 5 Louvre works, 1 level each, 25 questions in total, 4 pages, plus the Close-Up Challenge (one 2-question round per work, unlocked after the 5 levels), plus the restrained motion in PRODUCT.md "Motion" (step 4). Nothing from 1.0 or later.
+Version 0.6 from PRODUCT.md, "0.6 · Museum framework": a cover, a contents page, 15 modules and an appendix (100 works from `content/modules.json`) and a schematic map, built one step at a time from its build steps, on top of everything in 0.5 (5 Louvre works, 1 level each, 25 questions, the Close-Up Challenge and the restrained motion in "Motion"). No new levels until build step 8. Nothing from 1.0 or later.
 
 ## Hard limits
 
