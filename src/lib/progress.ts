@@ -6,11 +6,17 @@
 //   or reloading mid-level picks up at the same passage or question.
 // - PLAYS_KEY: Close-Up Challenge only, how many times each round has been
 //   finished; it picks the pair of questions the next play shows.
+// - MOMENTS_KEY (added with motion, PRODUCT.md "Motion"): the two one-shot
+//   moments on the route: `justCompleted` (the level or round finished for the
+//   first time, set by markComplete, read and cleared by the route) and
+//   `challengeUnlockSeen` (the "Close-ups unlocked" moment has played). Losing
+//   it only replays or skips a small animation; progress never depends on it.
 // Challenge rounds use KEY and PLACE_KEY too, under their own lesson ids.
 
 const KEY = "louvre-before-you-go:progress:v1";
 const PLACE_KEY = "louvre-before-you-go:place:v1";
 const PLAYS_KEY = "louvre-before-you-go:challenge-plays:v1";
+const MOMENTS_KEY = "louvre-before-you-go:moments:v1";
 
 type Stored = { completed: string[] };
 
@@ -27,7 +33,11 @@ export function getCompleted(): string[] {
 export function markComplete(lessonId: string): void {
   try {
     const completed = getCompleted();
-    if (!completed.includes(lessonId)) completed.push(lessonId);
+    if (!completed.includes(lessonId)) {
+      completed.push(lessonId);
+      // First finish only: the route plays its tick-and-unlock moment once.
+      writeMoments({ ...readMoments(), justCompleted: lessonId });
+    }
     window.localStorage.setItem(KEY, JSON.stringify({ completed } satisfies Stored));
   } catch {
     // Storage blocked (private mode etc.): the level still plays, it just isn't remembered.
@@ -142,4 +152,53 @@ export function finishRound(roundId: string): void {
     // Storage blocked: the round still plays; the next play shows the first pair again.
   }
   markComplete(roundId);
+}
+
+/** One-shot moments on the route (PRODUCT.md "Motion"). */
+type Moments = { justCompleted?: string; challengeUnlockSeen?: boolean };
+
+function readMoments(): Moments {
+  try {
+    const raw = window.localStorage.getItem(MOMENTS_KEY);
+    const data: unknown = raw ? JSON.parse(raw) : null;
+    if (!data || typeof data !== "object" || Array.isArray(data)) return {};
+    const m = data as Record<string, unknown>;
+    return {
+      ...(typeof m.justCompleted === "string" ? { justCompleted: m.justCompleted } : {}),
+      ...(m.challengeUnlockSeen === true ? { challengeUnlockSeen: true } : {}),
+    };
+  } catch {
+    return {};
+  }
+}
+
+function writeMoments(m: Moments): void {
+  try {
+    if (Object.keys(m).length === 0) window.localStorage.removeItem(MOMENTS_KEY);
+    else window.localStorage.setItem(MOMENTS_KEY, JSON.stringify(m));
+  } catch {
+    // Storage blocked: the moment simply doesn't play.
+  }
+}
+
+/**
+ * The level or round just finished for the first time, if it is one of `ids`;
+ * it is cleared as it is read, so its moment plays on one visit only.
+ */
+export function takeJustCompleted(ids: string[]): string | null {
+  const m = readMoments();
+  if (!m.justCompleted || !ids.includes(m.justCompleted)) return null;
+  const id = m.justCompleted;
+  delete m.justCompleted;
+  writeMoments(m);
+  return id;
+}
+
+/** Whether the "Close-ups unlocked" moment has already played. */
+export function challengeUnlockSeen(): boolean {
+  return readMoments().challengeUnlockSeen === true;
+}
+
+export function markChallengeUnlockSeen(): void {
+  writeMoments({ ...readMoments(), challengeUnlockSeen: true });
 }

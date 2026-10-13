@@ -3,24 +3,37 @@
 // (handwriting); an imagined line is tagged as such, a quote shows quotation
 // marks and its citation. A node without a voice shows the level's narrator
 // with no bubble. No narrator and no voice: no stage.
+//
+// Motion (PRODUCT.md "Motion"): the head rises in on the first screen of a
+// visit or when the speaker changes (`enter`), reacts to the answer (`mood`),
+// lifts and chatters while its line is new, and floats; the bubble pops from
+// its tail with the whole line already in it. Nothing here waits.
 
-import { Avatar } from "@/doodles/avatars";
+import type { CSSProperties } from "react";
+import { Head, type Mood } from "@/doodles/avatars";
 import type { Speaker, Voice } from "@/lib/types";
 
 type Props = {
   narrator?: Speaker;
   voice?: Voice;
   speakers: Record<string, Speaker>;
+  enter?: boolean;
+  mood?: Mood;
 };
 
-export default function Stage({ narrator, voice, speakers }: Props) {
+/** Who is on the stage for this node: the voice's speaker, else the narrator. */
+export function stageSpeakerId(narratorId: string | undefined, voice: Voice | undefined): string | undefined {
+  return voice ? voice.speaker : narratorId;
+}
+
+export default function Stage({ narrator, voice, speakers, enter, mood }: Props) {
   const speaker = voice ? speakers[voice.speaker] : narrator;
   if (!speaker) return null;
 
   if (!voice) {
     return (
       <div className="flex items-center gap-3 bg-stage px-3 py-2">
-        <Avatar speaker={speaker} size={44} />
+        <Head speaker={speaker} size={44} enter={enter} mood={mood} />
         <span className="font-hand text-lg leading-tight text-muted">{speaker.name}</span>
       </div>
     );
@@ -30,8 +43,11 @@ export default function Stage({ narrator, voice, speakers }: Props) {
   return (
     <figure className="flex flex-col gap-1.5 bg-stage px-3 py-3">
       <div className="flex items-start gap-2">
-        <Avatar speaker={speaker} size={56} className="mt-1" />
-        <div className="relative flex-1 pl-2">
+        <Head speaker={speaker} size={56} boxClassName="mt-1" enter={enter} mood={mood} talk={voice.text} />
+        <div
+          className="m-bubble relative flex-1 pl-2"
+          style={{ "--bubble-delay": enter ? "200ms" : mood ? "120ms" : "80ms" } as CSSProperties}
+        >
           {/* Bubble tail, drawn in the same ink line as the bubble. */}
           <svg viewBox="0 0 14 20" className="absolute left-0 top-5 h-5 w-3.5" aria-hidden="true">
             <path d="M14 2 Q6 8 0.8 10.5 Q6.5 12.5 14 18" fill="var(--color-mat)" stroke="var(--color-ink)" strokeWidth="2" strokeLinejoin="round" />

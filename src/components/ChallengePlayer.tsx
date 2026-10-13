@@ -9,13 +9,14 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import Artwork from "./Artwork";
 import Correction from "./Correction";
 import Locator from "./Locator";
 import ProgressBar from "./ProgressBar";
 import Stage from "./Stage";
 import { CloseDoodle } from "@/doodles";
+import { moodFor, useScreenMotion } from "@/lib/motion";
 import { clearPlace, finishRound, getPlace, getPlays, savePlace } from "@/lib/progress";
 import { roundPair } from "@/lib/rotation";
 import type { Artwork as ArtworkT, ChallengeLesson, LessonNode, Speaker, StoryNode, ZoomImage } from "@/lib/types";
@@ -86,6 +87,10 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
   const question = lesson.nodes[`${start}q`];
   const sources = question?.type === "question" ? (question.sources ?? []) : [];
   const narrator = lesson.narrator ? speakers[lesson.narrator] : undefined;
+  // Motion (PRODUCT.md "Motion"): the same head motion as a level; the crops stay still.
+  // (The challenge stage shows the narrator only, never a voice line.)
+  const motion = useScreenMotion(ready, nodeId, lesson.narrator, answered);
+  const mood = moodFor(lesson.nodes, nodeId);
 
   // Crop shape decides the layout: wide crops get the full width.
   const cropAspect = (zoom.w * zoomImage.width) / (zoom.h * zoomImage.height);
@@ -161,7 +166,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
           <CloseDoodle className="h-6 w-6" />
         </Link>
         <div className={`flex flex-1 ${ready ? "" : "invisible"}`}>
-          <ProgressBar current={current} answered={answered} total={total} />
+          <ProgressBar current={current} answered={answered} total={total} filled={motion.filled} />
         </div>
       </header>
 
@@ -204,11 +209,17 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
       >
         {node.type === "question" ? (
           <>
-            <Stage narrator={narrator} speakers={speakers} />
+            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} />
             <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
             <div className="flex flex-col gap-3">
-              {node.choices.map((c) => (
-                <button key={c.next + c.label} type="button" className="btn-option" onClick={() => choose(c.label, c.next)}>
+              {node.choices.map((c, i) => (
+                <button
+                  key={c.next + c.label}
+                  type="button"
+                  className="btn-option m-rise"
+                  style={{ "--i": i } as CSSProperties}
+                  onClick={() => choose(c.label, c.next)}
+                >
                   {c.label}
                 </button>
               ))}
@@ -217,14 +228,14 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
         ) : (
           <>
             <button type="button" onClick={() => go(node.next)} className="flex flex-col gap-4 text-left">
-              <Stage narrator={narrator} speakers={speakers} />
+              <Stage narrator={narrator} speakers={speakers} enter={motion.enter} mood={mood} />
               {qIndex === 0 && nodeId === start && (
                 <span className="font-hand text-xl font-bold leading-tight text-muted">{lesson.title}</span>
               )}
               {node.type === "branch" && picked && (
                 <span className="flex flex-wrap items-center gap-2 font-hand text-lg text-muted">
                   You picked
-                  <span className="btn-option min-h-0 w-auto border-ultramarine py-0.5 text-lg">{picked}</span>
+                  <span className="m-chip btn-option min-h-0 w-auto border-ultramarine py-0.5 text-lg">{picked}</span>
                 </span>
               )}
               <p>{node.text}</p>
