@@ -210,3 +210,82 @@ export type Round = {
   levelId: string;
   file: string;
 };
+
+/**
+ * The 0.6 catalogue (PRODUCT.md "0.6 · Museum framework" and "Catalogue
+ * file"): content/modules.json, with the wings, the 15 modules, the
+ * "Beyond the 15" appendix and every work's place and display status.
+ */
+export type WingId = "denon" | "sully" | "richelieu";
+
+export type Wing = {
+  id: WingId;
+  name: string;
+  /** The Louvre's levels (−1 to 2) that the catalogue uses in this wing. */
+  floors: number[];
+};
+
+/** PRODUCT.md "Status": the last four count as "not on view" and are listed last in a module. */
+export type DisplayStatus =
+  | "on-display"
+  | "restricted"
+  | "tbd"
+  | "room-closed"
+  | "not-on-display"
+  | "on-loan"
+  | "appointment-only";
+
+export type WorkLocation = {
+  wing: WingId;
+  floor: number;
+  /** The Louvre's room number as a string ("711"), or null for a spot with no number. */
+  room: string | null;
+  /** The room's name, when it has one ("Salle des États"). */
+  roomName?: string;
+  /** Required when `room` is null ("Escalier Mollien (upper)"). */
+  place?: string;
+};
+
+export type CatalogueWork = {
+  /** Unique in the file; for a work with a level, the level file's artwork.id. */
+  id: string;
+  title: string;
+  /** The maker, or the culture when the maker is unknown. */
+  artist: string;
+  date: string;
+  department: string;
+  inventory: string;
+  /** Null when the work is not on display, on loan or by appointment only. */
+  location: WorkLocation | null;
+  display: DisplayStatus;
+  /** The reason, for any display other than "on-display". */
+  displayNote?: string;
+  /** When the record was checked, YYYY-MM-DD. */
+  checkedOn: string;
+  /** The collections.louvre.fr record, or null when there is none. */
+  museumUrl: string | null;
+  /** Lesson id of the work's level. Missing means "Coming soon". */
+  levelId?: string;
+  /** Editorial note on the placement, for people; not shown to players. */
+  note?: string;
+};
+
+export type CatalogueModule = {
+  /** "01" … "15": the module number, also its route. */
+  id: string;
+  slug: string;
+  title: string;
+  status: "open" | "rooms-closed";
+  /** With "rooms-closed": what is closed, and when it was checked. */
+  closedNote?: string;
+  checkedOn?: string;
+  /** In module order: on view by room number, on view without a number, then not on view. */
+  works: CatalogueWork[];
+};
+
+export type Catalogue = {
+  museum: string;
+  wings: Wing[];
+  modules: CatalogueModule[];
+  appendix: { id: "beyond"; slug: string; title: string; works: CatalogueWork[] };
+};

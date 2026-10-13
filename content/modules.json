@@ -1,0 +1,1761 @@
+{
+  "museum": "louvre",
+  "wings": [
+    {
+      "id": "denon",
+      "name": "Denon",
+      "floors": [-1, 0, 1]
+    },
+    {
+      "id": "sully",
+      "name": "Sully",
+      "floors": [-1, 0, 1, 2]
+    },
+    {
+      "id": "richelieu",
+      "name": "Richelieu",
+      "floors": [-1, 0, 1, 2]
+    }
+  ],
+  "modules": [
+    {
+      "id": "01",
+      "slug": "ancient-mesopotamia-assyria",
+      "title": "Ancient Mesopotamia & Assyria",
+      "status": "open",
+      "works": [
+        {
+          "id": "law-code-of-hammurabi",
+          "title": "Law Code of Hammurabi",
+          "artist": "Babylonian, reign of Hammurabi",
+          "date": "1792–1750 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "SB 8",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": "227"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010174436"
+        },
+        {
+          "id": "victory-stele-of-naram-sin",
+          "title": "Victory Stele of Naram-Sin",
+          "artist": "Akkadian, reign of Naram-Sin",
+          "date": "2254–2218 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "SB 4",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": "228"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010123450"
+        },
+        {
+          "id": "winged-human-headed-bull-lamassu",
+          "title": "Winged Human-Headed Bull (Lamassu)",
+          "artist": "Neo-Assyrian, reign of Sargon II",
+          "date": "721–705 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AO 19857",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": "229",
+            "roomName": "Cour Khorsabad"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010122557"
+        },
+        {
+          "id": "statue-of-ebih-il",
+          "title": "Statue of Ebih-Il",
+          "artist": "Mari, Early Dynastic IIIB",
+          "date": "c. 2500–2340 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AO 17551 A",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": "234"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010120528"
+        },
+        {
+          "id": "stele-of-the-vultures",
+          "title": "Stele of the Vultures",
+          "artist": "Sumerian, Lagash, reign of Eannatum",
+          "date": "2450–2425 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AO 50",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": "236"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010121794"
+        },
+        {
+          "id": "gudea-with-the-flowing-vase",
+          "title": "Gudea with the Flowing Vase",
+          "artist": "Neo-Sumerian, Gudea of Lagash",
+          "date": "2120–2110 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AO 22126",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010119651"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "ancient-persia-the-levant",
+      "title": "Ancient Persia & the Levant",
+      "status": "open",
+      "works": [
+        {
+          "id": "baal-with-thunderbolt-stele",
+          "title": "Baal with Thunderbolt Stele",
+          "artist": "Ugarit (Ras Shamra), Bronze Age",
+          "date": "c. 2000–1150 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AO 15775",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "301"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010140542"
+        },
+        {
+          "id": "mesha-stele",
+          "title": "Mesha Stele",
+          "artist": "Moabite, 9th century BC",
+          "date": "c. 830–805 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AO 5066",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "303"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010120339"
+        },
+        {
+          "id": "frieze-of-archers",
+          "title": "Frieze of Archers",
+          "artist": "Achaemenid Persian, reign of Darius I",
+          "date": "522–486 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AOD 488",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "307"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010170854"
+        },
+        {
+          "id": "capital-from-the-apadana-of-darius-i-susa",
+          "title": "Capital from the Apadana of Darius I, Susa",
+          "artist": "Achaemenid Persian, reign of Darius I",
+          "date": "522–486 BC",
+          "department": "Near Eastern Antiquities",
+          "inventory": "AOD 1",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "307"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010170688"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "ancient-egypt-life-death-afterlife",
+      "title": "Ancient Egypt: Life, Death & Afterlife",
+      "status": "open",
+      "works": [
+        {
+          "id": "dendera-zodiac",
+          "title": "Dendera Zodiac",
+          "artist": "Egyptian, reign of Cleopatra VII",
+          "date": "June–August 50 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 13482",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "325"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010028871"
+        },
+        {
+          "id": "mastaba-chapel-of-akhethetep",
+          "title": "Mastaba Chapel of Akhethetep",
+          "artist": "Egyptian, 5th Dynasty (reigns of Niuserre to Djedkare)",
+          "date": "c. 2490–2432 BC (?)",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 10958 A",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "333"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010077681"
+        },
+        {
+          "id": "great-sphinx-of-tanis",
+          "title": "Great Sphinx of Tanis",
+          "artist": "Egyptian; inscribed for Amenemhat II, possibly 4th Dynasty (record)",
+          "date": "TBD (record: reign of Amenemhat II named; 4th Dynasty?)",
+          "department": "Egyptian Antiquities",
+          "inventory": "N 23 (A 23)",
+          "location": {
+            "wing": "sully",
+            "floor": -1,
+            "room": "338",
+            "roomName": "Crypte du sphinx"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010010062",
+          "note": "Crypt one level below its room-number neighbours (Level -1)."
+        },
+        {
+          "id": "gebel-el-arak-knife",
+          "title": "Gebel el-Arak Knife",
+          "artist": "Egyptian, Naqada II C–D",
+          "date": "c. 3600–3200 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 11517",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "633"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010007467"
+        },
+        {
+          "id": "stele-of-the-serpent-king-djet",
+          "title": "Stele of the Serpent King (Djet)",
+          "artist": "Egyptian, reign of Djet",
+          "date": "c. 3100–2900 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 11007",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "634"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010012035"
+        },
+        {
+          "id": "seated-scribe",
+          "title": "The Seated Scribe",
+          "artist": "Egyptian, 4th Dynasty (by style)",
+          "date": "c. 2675–2545 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 3023",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "635"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010006582"
+        },
+        {
+          "id": "head-of-djedefre",
+          "title": "Head of Djedefre",
+          "artist": "Egyptian, reign of Djedefre",
+          "date": "c. 2605–2597 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 12626",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "635"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010007230"
+        },
+        {
+          "id": "stele-of-nefertiabet",
+          "title": "Stele of Nefertiabet",
+          "artist": "Egyptian, 4th Dynasty (Khufu–Khafre)",
+          "date": "c. 2636–2573 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 15591",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "635"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010005261"
+        },
+        {
+          "id": "colossal-bust-of-akhenaten",
+          "title": "Colossal Bust of Akhenaten",
+          "artist": "Egyptian, reign of Amenhotep IV / Akhenaten",
+          "date": "c. 1349–1333 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 27112",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "638"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010003776"
+        },
+        {
+          "id": "statue-of-karomama",
+          "title": "Statue of Karomama",
+          "artist": "Egyptian, reigns of Osorkon II–Takelot II",
+          "date": "c. 865–809 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "N 500",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "643"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010007975"
+        },
+        {
+          "id": "mummy-portrait-known-as-leuropeenne",
+          "title": "Mummy Portrait known as 'L'Européenne'",
+          "artist": "Roman Egypt (Antinoé, by comparison)",
+          "date": "AD 100–150",
+          "department": "Egyptian Antiquities",
+          "inventory": "MND 2047 (P 217)",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "644"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010451181",
+          "note": "Roman Egypt; kept with the Egyptian rooms where it is shown."
+        },
+        {
+          "id": "triad-of-osorkon",
+          "title": "Triad of Osorkon",
+          "artist": "Egyptian, reign of Osorkon II",
+          "date": "c. 865–830 BC",
+          "department": "Egyptian Antiquities",
+          "inventory": "E 6204",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010006343"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "ancient-greece-gods-mythology",
+      "title": "Ancient Greece: Gods & Mythology",
+      "status": "open",
+      "works": [
+        {
+          "id": "head-from-keros-cycladic-idol",
+          "title": "Head from Keros (Cycladic idol)",
+          "artist": "Cycladic, Syros group",
+          "date": "c. 2600–2400 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 2709",
+          "location": {
+            "wing": "denon",
+            "floor": -1,
+            "room": "170"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276544"
+        },
+        {
+          "id": "lady-of-auxerre",
+          "title": "Lady of Auxerre",
+          "artist": "Greek, Daedalic style",
+          "date": "c. 640–620 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 3098",
+          "location": {
+            "wing": "denon",
+            "floor": -1,
+            "room": "170"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+        },
+        {
+          "id": "rampin-head",
+          "title": "Rampin Head",
+          "artist": "Greek, Archaic, Athens",
+          "date": "c. 560–540 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 3104",
+          "location": {
+            "wing": "denon",
+            "floor": -1,
+            "room": "170"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+        },
+        {
+          "id": "kore-of-samos-hera-of-samos",
+          "title": "Kore of Samos (Hera of Samos)",
+          "artist": "Greek, Archaic",
+          "date": "c. 570–560 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 686",
+          "location": {
+            "wing": "denon",
+            "floor": -1,
+            "room": "170"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+        },
+        {
+          "id": "venus-de-milo",
+          "title": "Venus de Milo",
+          "artist": "Greek, Hellenistic period",
+          "date": "c. 150–125 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 399 (entry no. LL 299)",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "345"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010277627",
+          "levelId": "venus-de-milo-1"
+        },
+        {
+          "id": "plaque-of-the-ergastines-parthenon-frieze",
+          "title": "Plaque of the Ergastines (Parthenon frieze)",
+          "artist": "Greek, Classical; Phidias (record)",
+          "date": "445–438 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 738",
+          "location": {
+            "wing": "denon",
+            "floor": 0,
+            "room": "347",
+            "roomName": "Salle de Diane"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279036",
+          "note": "Record lists the wing as Denon; room 347 sits between Sully 345 and 348."
+        },
+        {
+          "id": "winged-victory",
+          "title": "Winged Victory of Samothrace",
+          "artist": "Greek, Hellenistic period",
+          "date": "c. 200–175 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 2369",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "703",
+            "roomName": "Palier Samothrace"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+          "levelId": "winged-victory-1"
+        },
+        {
+          "id": "antaios-krater",
+          "title": "Antaios Krater",
+          "artist": "Euphronios (painter)",
+          "date": "c. 515–510 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "G 103",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010269994"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "slug": "ancient-rome-etruscan-civilizations",
+      "title": "Ancient Rome & Etruscan Civilizations",
+      "status": "open",
+      "works": [
+        {
+          "id": "diana-of-versailles",
+          "title": "Diana of Versailles",
+          "artist": "Roman, after a Greek original attributed to Leochares (?)",
+          "date": "c. AD 125–150",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 589",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "348"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010278930",
+          "note": "Roman copy of a Greek original; kept with its room 348 neighbours (open question: Greece or Rome)."
+        },
+        {
+          "id": "sleeping-hermaphroditus",
+          "title": "Sleeping Hermaphroditus",
+          "artist": "Roman Imperial",
+          "date": "AD 100–150",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 231",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "348"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010250571"
+        },
+        {
+          "id": "borghese-gladiator",
+          "title": "Borghese Gladiator",
+          "artist": "Agasias of Ephesus",
+          "date": "c. 100 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Ma 527",
+          "location": {
+            "wing": "sully",
+            "floor": 0,
+            "room": "348"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+          "note": "Signed by a Greek sculptor (Agasias of Ephesus); kept with its room 348 neighbours (open question: Greece or Rome)."
+        },
+        {
+          "id": "sarcophagus-of-the-spouses",
+          "title": "Sarcophagus of the Spouses",
+          "artist": "Etruscan, Cerveteri (Caere)",
+          "date": "c. 520–510 BC",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Cp 5194.2",
+          "location": {
+            "wing": "sully",
+            "floor": 1,
+            "room": "663",
+            "roomName": "Salle des Séances"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010298047"
+        },
+        {
+          "id": "boscoreale-treasure-skeleton-cup",
+          "title": "Boscoreale Treasure: Skeleton Cup",
+          "artist": "Roman Imperial, Italy",
+          "date": "c. 25 BC–AD 25",
+          "department": "Greek, Etruscan and Roman Antiquities",
+          "inventory": "Bj 1924",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010256165",
+          "note": "Roman galleries under renovation per louvre.fr."
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "slug": "islam-byzantium-cross-cultural-exchange",
+      "title": "Islam, Byzantium & Cross-Cultural Exchange",
+      "status": "open",
+      "works": [
+        {
+          "id": "barberini-ivory-the-emperor-triumphant",
+          "title": "Barberini Ivory (The Emperor Triumphant)",
+          "artist": "Constantinople",
+          "date": "525–550",
+          "department": "Byzantine and Eastern Christian Art",
+          "inventory": "OA 9063",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "501"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010114082",
+          "note": "Byzantine; moved in from 'no module' so the chapter has works on view."
+        },
+        {
+          "id": "harbaville-triptych",
+          "title": "Harbaville Triptych",
+          "artist": "Romanos group workshop, Constantinople",
+          "date": "940–960",
+          "department": "Byzantine and Eastern Christian Art",
+          "inventory": "OA 3247",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "501"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010112515",
+          "note": "Byzantine; moved in from 'no module' so the chapter has works on view."
+        },
+        {
+          "id": "pyxis-of-al-mughira",
+          "title": "Pyxis of al-Mughira",
+          "artist": "Al-Andalus, Madinat al-Zahra",
+          "date": "968 (AH 357)",
+          "department": "Islamic Art",
+          "inventory": "OA 4068",
+          "location": null,
+          "display": "on-loan",
+          "displayNote": "Record's current location is outside the Louvre in Paris.",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010329109",
+          "note": "Islamic galleries: no room in the record."
+        },
+        {
+          "id": "lion-of-monzon",
+          "title": "Lion of Monzón",
+          "artist": "Al-Andalus, Córdoba (?)",
+          "date": "975–1100",
+          "department": "Islamic Art",
+          "inventory": "OA 7883",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010330266",
+          "note": "Islamic galleries under renovation per louvre.fr."
+        },
+        {
+          "id": "panel-with-a-poetic-contest",
+          "title": "Panel with a Poetic Contest",
+          "artist": "Safavid Iran, Isfahan",
+          "date": "17th century",
+          "department": "Islamic Art",
+          "inventory": "OA 3340",
+          "location": null,
+          "display": "on-loan",
+          "displayNote": "Record's current location is outside the Louvre in Paris.",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010327350"
+        },
+        {
+          "id": "christ-and-abbot-mena",
+          "title": "Christ and Abbot Mena",
+          "artist": "Bawit, Egypt",
+          "date": "700–799",
+          "department": "Byzantine and Eastern Christian Art",
+          "inventory": "E 11565",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010048163",
+          "note": "Byzantine (Coptic Egypt)."
+        },
+        {
+          "id": "basin-known-as-the-baptistere-de-saint-louis",
+          "title": "Basin known as the 'Baptistère de Saint Louis'",
+          "artist": "Muhammad ibn al-Zayn (Mamluk Syria or Egypt)",
+          "date": "1325–1340",
+          "department": "Islamic Art",
+          "inventory": "LP 16",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010318774",
+          "note": "Islamic galleries under renovation per louvre.fr."
+        },
+        {
+          "id": "mantes-carpet",
+          "title": "Mantes Carpet",
+          "artist": "North-west Iran",
+          "date": "1530–1550",
+          "department": "Islamic Art",
+          "inventory": "OA 6610",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010329405",
+          "note": "Islamic galleries under renovation per louvre.fr."
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "slug": "medieval-renaissance-sculpture",
+      "title": "Medieval & Renaissance Sculpture",
+      "status": "open",
+      "works": [
+        {
+          "id": "saint-mary-magdalene",
+          "title": "Saint Mary Magdalene",
+          "artist": "Gregor Erhart",
+          "date": "c. 1515–1520",
+          "department": "Sculptures",
+          "inventory": "RF 1338",
+          "location": {
+            "wing": "denon",
+            "floor": -1,
+            "room": "169"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010093565"
+        },
+        {
+          "id": "tomb-of-philippe-pot",
+          "title": "Tomb of Philippe Pot",
+          "artist": "Attributed to Antoine Le Moiturier",
+          "date": "1477–1483 (record: 1475–1500)",
+          "department": "Sculptures",
+          "inventory": "RF 795",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": "210"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010093252"
+        },
+        {
+          "id": "dying-slave",
+          "title": "Dying Slave",
+          "artist": "Michelangelo",
+          "date": "1513–1515",
+          "department": "Sculptures",
+          "inventory": "MR 1590",
+          "location": {
+            "wing": "denon",
+            "floor": 0,
+            "room": "403",
+            "roomName": "Galerie Michel-Ange"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010091872"
+        },
+        {
+          "id": "rebellious-slave",
+          "title": "Rebellious Slave",
+          "artist": "Michelangelo",
+          "date": "1513–1515",
+          "department": "Sculptures",
+          "inventory": "MR 1589",
+          "location": {
+            "wing": "denon",
+            "floor": 0,
+            "room": "403",
+            "roomName": "Galerie Michel-Ange"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010091871"
+        },
+        {
+          "id": "psyche-revived-by-cupids-kiss",
+          "title": "Psyche Revived by Cupid's Kiss",
+          "artist": "Antonio Canova",
+          "date": "1787–1793",
+          "department": "Sculptures",
+          "inventory": "MR 1777",
+          "location": {
+            "wing": "denon",
+            "floor": 0,
+            "room": "403",
+            "roomName": "Galerie Michel-Ange"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010091976",
+          "note": "Neoclassical (1787–1793); kept with its room 403 neighbours (open question: 07 or 10)."
+        },
+        {
+          "id": "nymph-of-fontainebleau",
+          "title": "The Nymph of Fontainebleau",
+          "artist": "Benvenuto Cellini",
+          "date": "1542–1543",
+          "department": "Sculptures",
+          "inventory": "MR 1706",
+          "location": {
+            "wing": "denon",
+            "floor": 0,
+            "room": null,
+            "place": "Escalier Mollien (upper)"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010091932",
+          "note": "No room number in the record (Escalier Mollien); listed after numbered rooms."
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "slug": "italian-early-renaissance",
+      "title": "Italian Early Renaissance",
+      "status": "open",
+      "works": [
+        {
+          "id": "venus-and-the-three-graces-presenting-gifts-to-a-young-woman",
+          "title": "Venus and the Three Graces Presenting Gifts to a Young Woman",
+          "artist": "Sandro Botticelli",
+          "date": "1475–1500",
+          "department": "Paintings",
+          "inventory": "RF 321",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "706",
+            "roomName": "Percier et Fontaine"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064994"
+        },
+        {
+          "id": "coronation-of-the-virgin",
+          "title": "The Coronation of the Virgin",
+          "artist": "Fra Angelico",
+          "date": "1425–1450",
+          "department": "Paintings",
+          "inventory": "INV 314",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "708",
+            "roomName": "Salon Carré"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064473"
+        },
+        {
+          "id": "maesta-virgin-and-child-in-majesty-with-six-angels",
+          "title": "Maestà (Virgin and Child in Majesty with Six Angels)",
+          "artist": "Cimabue",
+          "date": "1275–1300",
+          "department": "Paintings",
+          "inventory": "INV 254",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "708",
+            "roomName": "Salon Carré"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064463",
+          "note": "Late 13th century: the chapter's prologue."
+        },
+        {
+          "id": "battle-of-san-romano",
+          "title": "The Battle of San Romano",
+          "artist": "Paolo Uccello",
+          "date": "1450–1475",
+          "department": "Paintings",
+          "inventory": "MI 469",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "708",
+            "roomName": "Salon Carré"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065339"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "slug": "italian-high-renaissance-venetian-masters",
+      "title": "Italian High Renaissance & Venetian Masters",
+      "status": "open",
+      "works": [
+        {
+          "id": "virgin-and-child-with-saint-anne",
+          "title": "The Virgin and Child with Saint Anne",
+          "artist": "Leonardo da Vinci",
+          "date": "1503–1519",
+          "department": "Paintings",
+          "inventory": "INV 776",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "710",
+            "roomName": "Grande Galerie"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066107"
+        },
+        {
+          "id": "virgin-of-the-rocks",
+          "title": "The Virgin of the Rocks",
+          "artist": "Leonardo da Vinci",
+          "date": "c. 1483–1494",
+          "department": "Paintings",
+          "inventory": "INV 777",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "710",
+            "roomName": "Grande Galerie"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062373"
+        },
+        {
+          "id": "mona-lisa",
+          "title": "Mona Lisa",
+          "artist": "Leonardo da Vinci",
+          "date": "1503–1519",
+          "department": "Paintings",
+          "inventory": "INV 779",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "711",
+            "roomName": "Salle des États"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062370",
+          "levelId": "mona-lisa-1"
+        },
+        {
+          "id": "wedding-feast-at-cana",
+          "title": "The Wedding Feast at Cana",
+          "artist": "Paolo Caliari, called Veronese",
+          "date": "16th century",
+          "department": "Paintings",
+          "inventory": "INV 142",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "711",
+            "roomName": "Salle des États"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064382"
+        },
+        {
+          "id": "woman-with-a-mirror",
+          "title": "Woman with a Mirror",
+          "artist": "Titian",
+          "date": "1525–1550",
+          "department": "Paintings",
+          "inventory": "INV 755",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "711",
+            "roomName": "Salle des États"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062292"
+        },
+        {
+          "id": "death-of-the-virgin",
+          "title": "The Death of the Virgin",
+          "artist": "Caravaggio",
+          "date": "c. 1601–1606",
+          "department": "Paintings",
+          "inventory": "INV 54",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "712",
+            "roomName": "Grande Galerie"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062304",
+          "note": "Baroque (c. 1601–1606), not Renaissance; kept here because it hangs in Room 712."
+        },
+        {
+          "id": "portrait-of-baldassare-castiglione",
+          "title": "Portrait of Baldassare Castiglione",
+          "artist": "Raphael",
+          "date": "c. 1514–1515",
+          "department": "Paintings",
+          "inventory": "INV 611",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "712",
+            "roomName": "Grande Galerie, Tribune"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066418"
+        },
+        {
+          "id": "la-belle-ferronniere",
+          "title": "La Belle Ferronnière",
+          "artist": "Leonardo da Vinci",
+          "date": "c. 1490–1497",
+          "department": "Paintings",
+          "inventory": "INV 778",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062372"
+        },
+        {
+          "id": "pastoral-concert",
+          "title": "Pastoral Concert",
+          "artist": "Titian (long attributed to Giorgione)",
+          "date": "1500–1525",
+          "department": "Paintings",
+          "inventory": "INV 71",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062281"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "slug": "french-neoclassicism-romanticism",
+      "title": "French Neoclassicism & Romanticism",
+      "status": "open",
+      "works": [
+        {
+          "id": "liberty-leading-the-people",
+          "title": "Liberty Leading the People",
+          "artist": "Eugène Delacroix",
+          "date": "1830",
+          "department": "Paintings",
+          "inventory": "RF 129",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "700",
+            "roomName": "Salle Mollien"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+          "levelId": "liberty-leading-the-people-1"
+        },
+        {
+          "id": "raft-of-the-medusa",
+          "title": "The Raft of the Medusa",
+          "artist": "Théodore Géricault",
+          "date": "1818–1819",
+          "department": "Paintings",
+          "inventory": "INV 4884",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "700",
+            "roomName": "Salle Mollien"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+          "levelId": "raft-of-the-medusa-1"
+        },
+        {
+          "id": "death-of-sardanapalus",
+          "title": "The Death of Sardanapalus",
+          "artist": "Eugène Delacroix",
+          "date": "1827",
+          "department": "Paintings",
+          "inventory": "RF 2346",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "700",
+            "roomName": "Salle Mollien"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065757"
+        },
+        {
+          "id": "coronation-of-napoleon",
+          "title": "The Coronation of Napoleon",
+          "artist": "Jacques-Louis David",
+          "date": "1807",
+          "department": "Paintings",
+          "inventory": "INV 3699",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "702",
+            "roomName": "Salle Daru"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065720"
+        },
+        {
+          "id": "la-grande-odalisque",
+          "title": "La Grande Odalisque",
+          "artist": "Jean-Auguste-Dominique Ingres",
+          "date": "1814",
+          "department": "Paintings",
+          "inventory": "RF 1158",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "702",
+            "roomName": "Salle Daru"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065566"
+        },
+        {
+          "id": "oath-of-the-horatii",
+          "title": "The Oath of the Horatii",
+          "artist": "Jacques-Louis David",
+          "date": "1784",
+          "department": "Paintings",
+          "inventory": "INV 3692",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "702",
+            "roomName": "Salle Daru"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062239"
+        },
+        {
+          "id": "intervention-of-the-sabine-women",
+          "title": "The Intervention of the Sabine Women",
+          "artist": "Jacques-Louis David",
+          "date": "1799",
+          "department": "Paintings",
+          "inventory": "INV 3691",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "702",
+            "roomName": "Salle Daru"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065426"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "slug": "spanish-painting",
+      "title": "Spanish Painting",
+      "status": "rooms-closed",
+      "closedNote": "Spanish rooms 720–734 listed closed on the louvre.fr open-rooms page",
+      "checkedOn": "2026-10-13",
+      "works": []
+    },
+    {
+      "id": "12",
+      "slug": "flemish-dutch-masters",
+      "title": "Flemish & Dutch Masters",
+      "status": "open",
+      "works": [
+        {
+          "id": "virgin-of-chancellor-rolin",
+          "title": "The Virgin of Chancellor Rolin",
+          "artist": "Jan van Eyck",
+          "date": "1430–1435",
+          "department": "Paintings",
+          "inventory": "INV 1271",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "818"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010061856"
+        },
+        {
+          "id": "lacemaker",
+          "title": "The Lacemaker",
+          "artist": "Johannes Vermeer",
+          "date": "1669–1670",
+          "department": "Paintings",
+          "inventory": "MI 1448",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "837"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064918"
+        },
+        {
+          "id": "bathsheba-at-her-bath",
+          "title": "Bathsheba at Her Bath",
+          "artist": "Rembrandt",
+          "date": "1654",
+          "department": "Paintings",
+          "inventory": "MI 957",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "844"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010060453"
+        },
+        {
+          "id": "disembarkation-of-marie-de-medici-at-marseilles",
+          "title": "The Disembarkation of Marie de' Medici at Marseilles",
+          "artist": "Peter Paul Rubens",
+          "date": "1600–1625",
+          "department": "Paintings",
+          "inventory": "INV 1774",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "801",
+            "roomName": "Galerie Médicis"
+          },
+          "display": "room-closed",
+          "displayNote": "Record says on display, but the louvre.fr 'Open rooms' page (checked 13 Oct 2026) lists the Galerie Médicis as currently closed.",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010060820",
+          "note": "Galerie Médicis listed closed on louvre.fr (13 Oct 2026)."
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "slug": "french-northern-european-painting",
+      "title": "French & Northern European Painting",
+      "status": "open",
+      "works": [
+        {
+          "id": "gabrielle-destrees-and-one-of-her-sisters",
+          "title": "Gabrielle d'Estrées and One of Her Sisters",
+          "artist": "Anonymous, School of Fontainebleau",
+          "date": "1575–1600",
+          "department": "Paintings",
+          "inventory": "RF 1937 1",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "824"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065402"
+        },
+        {
+          "id": "arcadian-shepherds-et-in-arcadia-ego",
+          "title": "The Arcadian Shepherds (Et in Arcadia ego)",
+          "artist": "Nicolas Poussin",
+          "date": "c. 1638",
+          "department": "Paintings",
+          "inventory": "INV 7300",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "825"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062528"
+        },
+        {
+          "id": "pieta-of-villeneuve-les-avignon",
+          "title": "Pietà of Villeneuve-lès-Avignon",
+          "artist": "Attributed to Enguerrand Quarton",
+          "date": "1450–1475",
+          "department": "Paintings",
+          "inventory": "RF 1569",
+          "location": {
+            "wing": "richelieu",
+            "floor": 2,
+            "room": "833"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010063345"
+        },
+        {
+          "id": "cheat-with-the-ace-of-diamonds",
+          "title": "The Cheat with the Ace of Diamonds",
+          "artist": "Georges de La Tour",
+          "date": "c. 1636–1640",
+          "department": "Paintings",
+          "inventory": "RF 1972 8",
+          "location": {
+            "wing": "sully",
+            "floor": 2,
+            "room": "912"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066276"
+        },
+        {
+          "id": "pilgrimage-to-cythera",
+          "title": "Pilgrimage to Cythera",
+          "artist": "Jean-Antoine Watteau",
+          "date": "1717",
+          "department": "Paintings",
+          "inventory": "INV 8525",
+          "location": {
+            "wing": "sully",
+            "floor": 2,
+            "room": "917"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010061995"
+        },
+        {
+          "id": "louis-xiv",
+          "title": "Louis XIV",
+          "artist": "Hyacinthe Rigaud",
+          "date": "1701",
+          "department": "Paintings",
+          "inventory": "INV 7492",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066115"
+        },
+        {
+          "id": "self-portrait-with-a-thistle",
+          "title": "Self-Portrait with a Thistle",
+          "artist": "Albrecht Dürer",
+          "date": "1493",
+          "department": "Paintings",
+          "inventory": "RF 2382",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065609",
+          "note": "German; Northern European painting."
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "slug": "french-sculpture-royal-patronage",
+      "title": "French Sculpture & Royal Patronage",
+      "status": "open",
+      "works": [
+        {
+          "id": "horse-restrained-by-a-groom-marly-horse",
+          "title": "Horse Restrained by a Groom (Marly Horse)",
+          "artist": "Guillaume Coustou",
+          "date": "1745",
+          "department": "Sculptures",
+          "inventory": "MR 1802",
+          "location": {
+            "wing": "richelieu",
+            "floor": -1,
+            "room": "102",
+            "roomName": "Cour Marly"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010091992"
+        },
+        {
+          "id": "milo-of-croton",
+          "title": "Milo of Croton",
+          "artist": "Pierre Puget",
+          "date": "1672–1682",
+          "department": "Sculptures",
+          "inventory": "MR 2075",
+          "location": {
+            "wing": "richelieu",
+            "floor": -1,
+            "room": "105",
+            "roomName": "Cour Puget"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010092130"
+        },
+        {
+          "id": "lion-with-serpent",
+          "title": "Lion with Serpent",
+          "artist": "Antoine-Louis Barye",
+          "date": "1832",
+          "department": "Sculptures",
+          "inventory": "LP 1184",
+          "location": {
+            "wing": "richelieu",
+            "floor": -1,
+            "room": "105",
+            "roomName": "Cour Puget"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010091396"
+        },
+        {
+          "id": "diana",
+          "title": "Diana",
+          "artist": "Jean-Antoine Houdon",
+          "date": "1790",
+          "department": "Sculptures",
+          "inventory": "CC 204",
+          "location": {
+            "wing": "richelieu",
+            "floor": 0,
+            "room": null,
+            "place": "Galerie des Grands Hommes (ex-salle 29)"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010089223",
+          "note": "No current room number in the record (Galerie des Grands Hommes, ex-salle 29); listed after numbered rooms."
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "slug": "decorative-arts-royal-collections",
+      "title": "Decorative Arts & Royal Collections",
+      "status": "open",
+      "works": [
+        {
+          "id": "sugers-eagle",
+          "title": "Suger's Eagle",
+          "artist": "Anonymous, Île-de-France (Saint-Denis)",
+          "date": "before 1147 (mount)",
+          "department": "Decorative Arts",
+          "inventory": "MR 422",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "502"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010113063"
+        },
+        {
+          "id": "eleanor-of-aquitaines-vase",
+          "title": "Eleanor of Aquitaine's Vase",
+          "artist": "Sasanian vase; Saint-Denis mount",
+          "date": "500–700 (vase); before 1147 (mount)",
+          "department": "Decorative Arts",
+          "inventory": "MR 340",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "502"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010096614"
+        },
+        {
+          "id": "canopy-of-charles-vii",
+          "title": "Canopy of Charles VII",
+          "artist": "Jacob de Littemont (?)",
+          "date": "1425–1450",
+          "department": "Decorative Arts",
+          "inventory": "OA 12281",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "505"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010114435"
+        },
+        {
+          "id": "hunts-of-maximilian-december",
+          "title": "Hunts of Maximilian: December",
+          "artist": "Guillaume Dermoyen after Bernard van Orley",
+          "date": "c. 1531",
+          "department": "Decorative Arts",
+          "inventory": "OA 7323",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "507"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010099561"
+        },
+        {
+          "id": "palissy-basin-with-rustic-figulines",
+          "title": "Palissy Basin with 'Rustic Figulines'",
+          "artist": "Bernard Palissy",
+          "date": "1550–1560",
+          "department": "Decorative Arts",
+          "inventory": "MR 2295",
+          "location": {
+            "wing": "richelieu",
+            "floor": 1,
+            "room": "507"
+          },
+          "display": "on-display",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010116968"
+        },
+        {
+          "id": "crown-of-louis-xv",
+          "title": "Crown of Louis XV",
+          "artist": "Augustin Duflos; Laurent and Claude Rondé",
+          "date": "1722",
+          "department": "Decorative Arts",
+          "inventory": "MS 61",
+          "location": {
+            "wing": "denon",
+            "floor": 1,
+            "room": "705",
+            "roomName": "Galerie d'Apollon"
+          },
+          "display": "restricted",
+          "displayNote": "Record says on display; its location line adds \"Accès réservé\". Check before visiting.",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010097015",
+          "note": "Galerie d'Apollon, Denon; record adds 'Accès réservé'. Check before visiting."
+        },
+        {
+          "id": "regent-diamond",
+          "title": "The Regent Diamond",
+          "artist": "Cut by Joseph Cope, England",
+          "date": "1704–1706",
+          "department": "Decorative Arts",
+          "inventory": "MV 1017",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010103121"
+        },
+        {
+          "id": "sceptre-of-charles-v",
+          "title": "Sceptre of Charles V",
+          "artist": "Attributed to Hennequin du Vivier; altered by Biennais",
+          "date": "before 1380",
+          "department": "Decorative Arts",
+          "inventory": "MS 83",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010113393"
+        },
+        {
+          "id": "jewel-coffer-of-louis-xiv",
+          "title": "Jewel Coffer of Louis XIV",
+          "artist": "Jakob Blanck, goldsmith",
+          "date": "1677",
+          "department": "Decorative Arts",
+          "inventory": "MS 159",
+          "location": null,
+          "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".",
+          "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010097019"
+        }
+      ]
+    }
+  ],
+  "appendix": {
+    "id": "beyond",
+    "slug": "beyond-the-15",
+    "title": "Beyond the 15",
+    "works": [
+      {
+        "id": "monumental-head-moai",
+        "title": "Monumental Head (Moai)",
+        "artist": "Rapanui sculptors, Anakena, Rapa Nui (Easter Island)",
+        "date": "10th–15th century",
+        "department": "Arts of Africa, Asia, Oceania and the Americas",
+        "inventory": "71.1935.61.1 (Musée du quai Branly)",
+        "location": {
+          "wing": "denon",
+          "floor": 0,
+          "room": null,
+          "place": "Gallery of Five Continents"
+        },
+        "display": "tbd",
+        "displayNote": "No collections.louvre.fr record (Musée du quai Branly inventory). Shown on the louvre.fr Gallery of Five Continents page; current display not verified.",
+        "checkedOn": "2026-10-13",
+        "museumUrl": null,
+        "note": "Gallery of Five Continents: fits no chapter; room and display TBD."
+      },
+      {
+        "id": "maternity-figure",
+        "title": "Maternity Figure",
+        "artist": "Attributed to the Master of Tintam, Mali (Dogon)",
+        "date": "14th century",
+        "department": "Arts of Africa, Asia, Oceania and the Americas",
+        "inventory": "70.1999.9.3 (Musée du quai Branly)",
+        "location": {
+          "wing": "denon",
+          "floor": 0,
+          "room": null,
+          "place": "Gallery of Five Continents"
+        },
+        "display": "tbd",
+        "displayNote": "No collections.louvre.fr record (Musée du quai Branly inventory). Shown on the louvre.fr Gallery of Five Continents page; current display not verified.",
+        "checkedOn": "2026-10-13",
+        "museumUrl": null,
+        "note": "Gallery of Five Continents: fits no chapter; room and display TBD."
+      },
+      {
+        "id": "turu-kuru-grade-figure-trrou-korrou-the-blue-man",
+        "title": "Turu kuru Grade Figure, 'Trrou Körrou' (the 'Blue Man')",
+        "artist": "Ni-Vanuatu sculptors, Asakavasa village, Malo island, Vanuatu",
+        "date": "19th century",
+        "department": "Arts of Africa, Asia, Oceania and the Americas",
+        "inventory": "71.1938.42.8 (Musée du quai Branly)",
+        "location": {
+          "wing": "denon",
+          "floor": 0,
+          "room": null,
+          "place": "Gallery of Five Continents"
+        },
+        "display": "tbd",
+        "displayNote": "No collections.louvre.fr record (Musée du quai Branly inventory). Shown on the louvre.fr Gallery of Five Continents page; current display not verified.",
+        "checkedOn": "2026-10-13",
+        "museumUrl": null,
+        "note": "Gallery of Five Continents: fits no chapter; room and display TBD."
+      },
+      {
+        "id": "full-length-portrait-of-the-marquise-de-pompadour",
+        "title": "Full-length Portrait of the Marquise de Pompadour",
+        "artist": "Maurice-Quentin de La Tour",
+        "date": "1752–1755",
+        "department": "Prints and Drawings",
+        "inventory": "INV 27614",
+        "location": null,
+        "display": "appointment-only",
+        "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "checkedOn": "2026-10-13",
+        "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020213445",
+        "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
+      },
+      {
+        "id": "drapery-for-a-seated-figure",
+        "title": "Drapery for a Seated Figure",
+        "artist": "Leonardo da Vinci",
+        "date": "c. 1475–1482",
+        "department": "Prints and Drawings",
+        "inventory": "INV 2255",
+        "location": null,
+        "display": "appointment-only",
+        "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "checkedOn": "2026-10-13",
+        "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020003018",
+        "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
+      },
+      {
+        "id": "view-of-the-val-darco",
+        "title": "View of the Val d'Arco",
+        "artist": "Albrecht Dürer",
+        "date": "c. 1495",
+        "department": "Prints and Drawings",
+        "inventory": "INV 18579",
+        "location": null,
+        "display": "appointment-only",
+        "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "checkedOn": "2026-10-13",
+        "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020108533",
+        "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
+      },
+      {
+        "id": "portrait-of-isabella-deste",
+        "title": "Portrait of Isabella d'Este",
+        "artist": "Leonardo da Vinci",
+        "date": "c. 1499–1500",
+        "department": "Prints and Drawings",
+        "inventory": "MI 753",
+        "location": null,
+        "display": "appointment-only",
+        "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "checkedOn": "2026-10-13",
+        "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020111146",
+        "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
+      }
+    ]
+  }
+}

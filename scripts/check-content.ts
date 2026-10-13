@@ -4,12 +4,14 @@
 // and whether each artwork's image file is in public/.
 // Then the Close-Up Challenge files in content/challenge/ (see
 // src/lib/validate-challenge.ts), with each round's reading time.
+// Then the 0.6 catalogue, content/modules.json (see src/lib/validate-modules.ts).
 // Runs with plain Node (type stripping), no extra packages.
 
 import fs from "node:fs";
 import path from "node:path";
 import { sortContentFiles, validateContent } from "../src/lib/validate.ts";
 import { validateChallenge, type BaseInfo } from "../src/lib/validate-challenge.ts";
+import { validateCatalogue } from "../src/lib/validate-modules.ts";
 
 const root = process.cwd();
 const contentDir = path.join(root, "content");
@@ -19,6 +21,8 @@ let errors = 0;
 let warnings = 0;
 const ids = new Set<string>();
 const base = new Map<string, BaseInfo>();
+/** Level lesson id -> its file's artwork.id, for the catalogue's levelId links. */
+const levelArtwork = new Map<string, string>();
 
 for (const file of files) {
   let data: unknown;
@@ -45,6 +49,7 @@ for (const file of files) {
   for (const l of d.lessons ?? []) {
     if (ids.has(l.id)) report.errors.push(`${file}: duplicate lesson id "${l.id}"`);
     ids.add(l.id);
+    if (d.artwork?.id) levelArtwork.set(l.id, d.artwork.id);
   }
   if (d.artwork?.image && !fs.existsSync(path.join(root, "public", d.artwork.image))) {
     report.warnings.push(`${file}: image ${d.artwork.image} not in public/ (placeholder shown)`);
@@ -104,5 +109,31 @@ if (challengeFiles.length) {
   }
 }
 
-console.log(`\n${files.length + challengeFiles.length} files, ${errors} errors, ${warnings} warnings`);
+// The 0.6 catalogue.
+const catalogueFile = "modules.json";
+let catalogueCount = 0;
+if (fs.existsSync(path.join(contentDir, catalogueFile))) {
+  catalogueCount = 1;
+  let data: unknown;
+  try {
+    data = JSON.parse(fs.readFileSync(path.join(contentDir, catalogueFile), "utf8"));
+  } catch (e) {
+    console.log(`ERROR ${catalogueFile}: invalid JSON (${(e as Error).message})`);
+    errors++;
+  }
+  if (data !== undefined) {
+    const report = validateCatalogue(data, catalogueFile, levelArtwork);
+    report.errors.forEach((m) => console.log(`ERROR ${m}`));
+    report.warnings.forEach((m) => console.log(`warn  ${m}`));
+    errors += report.errors.length;
+    warnings += report.warnings.length;
+    if (!report.errors.length) console.log(`\nok    ${catalogueFile}`);
+    const s = report.summary;
+    console.log(
+      `        ${s.modules} modules + appendix, ${s.works} works (${s.appendix} in the appendix), ${s.withLevel} with a level, ${s.notOnView} not on view`,
+    );
+  }
+}
+
+console.log(`\n${files.length + challengeFiles.length + catalogueCount} files, ${errors} errors, ${warnings} warnings`);
 process.exit(errors ? 1 : 0);
