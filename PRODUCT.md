@@ -7,6 +7,7 @@
 > Revised 2026-10-07 at the product owner's request: the five artworks now match the story playbook, which is the content sample (see "Five levels, five artworks" and "Content sample"); the product, its content and this spec are in English.
 > Revised 2026-10-09 (content depth): after playtest feedback, every level must carry professional art-history analysis in conversational language (see "Depth standard"), and every wrong answer gets a clear correction (optional `correction` field on branches, see "Data format").
 > Revised 2026-10-09 (Close-Up Challenge): after all 5 levels, a Close-Up Challenge unlocks, with one 2-question round per artwork built on zoomed crops of high-resolution photos (see "Close-Up Challenge" and "Challenge files"). Time per level: about 5 minutes, never more than 7; one work, level plus close-up round, within 10.
+> Revised 2026-10-13 (motion): narrator heads and doodle chrome get restrained motion in the style of After Hours; the artwork never moves (see "Motion" under 03 · DESIGN). The product owner also confirmed the Close-Up Challenge defaults already built: rounds unlock one at a time in route order, a pool of 2 repeats the same pair on every play, and "10 minutes per work" means its level plus its close-up round.
 
 **Duolingo for art history. See it before you go; recognise it when you're there.**
 Five minutes a day, one level, one small story about one artwork.
@@ -122,12 +123,12 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 |---|---|
 | Level route (home) | A vertical route of 5 level nodes in three states: done, current, locked; the current level has a "Start" button, and any level left mid-way has a "Continue" button that resumes it. Below it, the Close-Up Challenge (locked until all 5 levels are done) |
 | Lesson page | Top half: the artwork (tap to zoom). Bottom half: one passage or one question. Progress bar at the top ("Question 3 of 5") and an exit button |
-| Level cleared page | "One thing to remember today": a one-sentence summary of the level; unlock the next level, back to the route |
+| Level cleared page | The level's narrator above the stars, then "One thing to remember today": a one-sentence summary of the level; unlock the next level, back to the route |
 | About and sources | Image sources and references |
 
 - Tapping a locked level shows a light hint, "Finish the previous level first", not a pop-up.
 - Leaving mid-level saves your place in the browser: reopening the level (or reloading the page) picks up at the same passage or question, with a small "Start over" link to replay it from the beginning. The saved place is cleared when the level is finished. Finished levels can be replayed.
-- Restrained motion: a soft fade between screens, a small celebration when a level is cleared, no full-screen confetti. No character animation in 0.5.
+- Restrained motion (see "Motion"): the narrator rises into place, floats, talks and reacts to right and wrong answers; bubbles, options, correction cards, stars and the route move a little. Nothing ever waits for an animation, and the artwork never moves. No full-screen confetti.
 
 ---
 
@@ -336,7 +337,21 @@ Ultramarine is the only accent, so it always means "this is the thing to tap" or
 - The level route is a squiggly ink line; each level node is its narrator's painted head in an ink circle. Done gets a gold-brown tick, the current level an ultramarine ring and "Start" ("Continue" once it has been left mid-way), locked levels are faded.
 - Artworks and their labels get no rounded corners and no filters. Doodle shapes, heads and bubbles may be wobbly and rounded; artworks never are.
 - Doodles are simple SVG line drawings, hand-drawn, one stroke weight. Heads are flat SVG shapes drawn by a person, friendly rather than accurate portraits.
-- No animation in 0.5 beyond the soft fade between screens.
+
+### Motion
+
+Added 2026-10-13, from the approved plan (project files, `animation/PLAN.md`, and its demo) and the product owner's decisions on it.
+
+Motion copies the language of After Hours (heads that rise into place, a quiet idle float, the speaker lifting while it talks, a bubble that comes from the speaker), never its drawings and never its streamed text.
+
+- **Only the doodle chrome and the narrator heads move.** The artwork photo, the close-up crops, the "see where" thumbnail and the museum label never move, scale, pan, re-render, change filter or get anything drawn over them.
+- **Nothing waits for motion.** Text appears complete, the whole line at once (no typing effect, no "typing…" dots); buttons work from the first frame; screen changes happen on tap. Added waiting time per level: 0 s.
+- **Right and wrong are told by the narrator, never by red:** a small hop and three ink strokes for a right answer, a thoughtful head tilt for a wrong one (then the correction card rises as one block), and the progress segment fills gold either way. Questions with no right answer get no reaction.
+- **Where it moves:** on a level or challenge screen, the narrator rises into place on the first screen of a visit (or when a new speaker takes over), floats 2 px while you read, and lifts and chatters while its bubble is new; options rise in quickly one after another. Challenge rounds use exactly the same head motion; the crops stay as still as the photos. On the level-cleared page the narrator hops once above the stars, which pop in, and the underline draws itself. On the route, the level just finished gets its tick and the route to the next level draws itself once; only the current level's head floats; a tapped locked level wiggles its padlock. On the first home visit after all five levels, the Close-Up Challenge unlocks once: the magnifier turns ultramarine, the padlock opens and the line reads "Close-ups unlocked."; on later visits that line is gone.
+- **Small and calm:** 2 px idle float, moves of at most 7 px, 150–700 ms one-shots; at most one looping movement per screen (plus a blink); no confetti, shake or flashing.
+- **Reduced motion:** the app follows the device's "reduce motion" setting (no in-app switch in 0.5). Then nothing moves; things that appear fade in 150 ms at most, and drawn lines are shown already drawn. Everything reads and works the same.
+- **Built with CSS** (`transform`, `opacity` and the stroke drawing of ink lines), no animation library. Heads animate through named layers (`head`, optional `eyes`, `mouth-closed`/`mouth-open`), so a hand-drawn head drops in without code changes. The layer contract is in `animation/PLAN.md` §4 in the project files: artist heads come with closed and open mouths; doodled objects (statues, later living artists) need no eyes or mouth.
+- **Saved progress is untouched.** The two one-shot home moments are remembered in one extra localStorage key, `louvre-before-you-go:moments:v1`; losing it only replays or skips a moment.
 
 ### Reference products
 
@@ -450,7 +465,7 @@ Once the 0.5 template works, 1.0 only changes content and adds features. It stil
 | Hosting | GitHub Pages, public link | Move to Vercel (for login and database) | Custom domain |
 | Audio | None, text only | Main line and branches read aloud, auto-play, with pause, replay and mute; questions and options not read | — |
 | Artwork card | None | Unlocked after an artwork's 5 levels: large image + 2–3 tappable info points | — |
-| Animation and effects | None (soft fades only) | Heads and page effects animated in the style of the After Hours reference | — |
+| Animation and effects | Narrator heads and doodle chrome, restrained (see "Motion") | Lip-sync to audio, artwork cards | — |
 | Progress | Saved in the browser | Optional email login, progress across devices; daily streak | Daily reminders |
 | Database | Not needed | Supabase | Supabase |
 
