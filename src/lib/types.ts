@@ -250,9 +250,13 @@ export type CatalogueWork = {
   /** Unique in the file; for a work with a level, the level file's artwork.id. */
   id: string;
   title: string;
+  /** The record's own (French) title, when it differs from the English one. */
+  titleFr?: string;
   /** The maker, or the culture when the maker is unknown. */
   artist: string;
   date: string;
+  /** Materials and technique, in English, from the record; "TBD" when not confirmed. */
+  medium: string;
   department: string;
   inventory: string;
   /** Null when the work is not on display, on loan or by appointment only. */

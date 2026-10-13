@@ -56,10 +56,15 @@ export default function LabelSheet({ work, eyebrow, onClose }: Props) {
             <h2 id="sheet-title" className="text-base font-extrabold italic">
               {work.title}
             </h2>
+            {work.titleFr && (
+              <p lang="fr" className="text-muted">
+                {work.titleFr}
+              </p>
+            )}
             <p>{work.date}</p>
             <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-2.5 gap-y-0.5">
               <dt className="text-muted">Medium</dt>
-              <dd className="min-w-0">{work.level?.medium ?? "TBD"}</dd>
+              <dd className="min-w-0">{work.medium}</dd>
               <dt className="text-muted">Where</dt>
               <dd className="min-w-0">
                 <Where work={work} />

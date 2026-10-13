@@ -458,7 +458,7 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
       "title": "Italian High Renaissance & Venetian Masters", "status": "open",
       "works": [
         {
-          "id": "mona-lisa", "title": "Mona Lisa", "artist": "Leonardo da Vinci", "date": "1503–1519",
+          "id": "mona-lisa", "title": "Mona Lisa", "artist": "Leonardo da Vinci", "date": "1503–1519", "medium": "Oil on poplar panel",
           "department": "Paintings", "inventory": "INV 779",
           "location": { "wing": "denon", "floor": 1, "room": "711", "roomName": "Salle des États" },
           "display": "on-display", "checkedOn": "2026-10-13",
@@ -466,7 +466,7 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
           "levelId": "mona-lisa-1"
         },
         {
-          "id": "la-belle-ferronniere", "title": "La Belle Ferronnière", "artist": "Leonardo da Vinci", "date": "c. 1490–1497",
+          "id": "la-belle-ferronniere", "title": "La Belle Ferronnière", "artist": "Leonardo da Vinci", "date": "c. 1490–1497", "medium": "Oil on walnut panel",
           "department": "Paintings", "inventory": "INV 778",
           "location": null, "display": "not-on-display",
           "displayNote": "Record: current location \"non exposé\".", "checkedOn": "2026-10-13",
@@ -486,7 +486,8 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
 | `modules[]` | `status` | `"open"`, or `"rooms-closed"` with `closedNote` and `checkedOn` (module 11) |
 | `modules[]`, `appendix` | `works` | The works, already in module order (see "Order") |
 | work | `id` | Unique across the file; for a work with a level, the level file's `artwork.id` |
-| work | `title`, `artist`, `date`, `department`, `inventory` | The museum label, as the record gives it (`artist` holds the culture when the maker is unknown) |
+| work | `title`, `artist`, `date`, `medium`, `department`, `inventory` | The museum label, as the record gives it (`artist` holds the culture when the maker is unknown; `medium` is the record's materials and technique in English, or "TBD" when not confirmed) |
+| work | `titleFr` | Optional: the record's own French title, when it differs from `title`; shown on the label sheet with `lang="fr"` |
 | work | `location` | `{ wing, floor, room, roomName? }`; `room` is a string ("711"), or `null` with `place` for a spot with no room number ("Escalier Mollien (upper)"). `null` when the work is not on display, on loan or by appointment only; kept for `room-closed` |
 | work | `display` | `on-display`, `restricted`, `tbd`, `room-closed`, `not-on-display`, `on-loan` or `appointment-only` |
 | work | `displayNote` | For any `display` other than `on-display`: the reason, in the record's own words where it has them |
@@ -495,7 +496,7 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
 | work | `levelId` | Optional: the lesson id of the work's level (`"mona-lisa-1"`). Missing means "Coming soon" |
 | work | `note` | Optional editorial note on the placement, for people; not shown to players |
 
-`npm run check-content` also checks the catalogue: every work in exactly one module or the appendix (ids unique); every `levelId` names an existing lesson whose `artwork.id` equals the work's `id`, and every level file's artwork is in the catalogue; module ids `01`–`15` in order, each once; `location` well formed (a known wing, a floor that wing lists, a room of digits or `null` with a `place`; `null` only for off-view works); works in module order (on view by room number, then on view without a room number, then not on view); `display` from the list, with `displayNote` when not `on-display`; `checkedOn` a real date, with a warning when it is more than 90 days old.
+`npm run check-content` also checks the catalogue: every work in exactly one module or the appendix (ids unique); every label field present (`medium` may be "TBD"), and `titleFr`, when given, different from `title`; every `levelId` names an existing lesson whose `artwork.id` equals the work's `id`, and every level file's artwork is in the catalogue; module ids `01`–`15` in order, each once; `location` well formed (a known wing, a floor that wing lists, a room of digits or `null` with a `place`; `null` only for off-view works); works in module order (on view by room number, then on view without a room number, then not on view); `display` from the list, with `displayNote` when not `on-display`; `checkedOn` a real date, with a warning when it is more than 90 days old.
 
 ---
 

@@ -26,7 +26,7 @@ export const MODULE_COUNT = 15;
 export const RECHECK_DAYS = 90;
 
 const WORK_KEYS = new Set([
-  "id", "title", "artist", "date", "department", "inventory", "location",
+  "id", "title", "titleFr", "artist", "date", "medium", "department", "inventory", "location",
   "display", "displayNote", "checkedOn", "museumUrl", "levelId", "note",
 ]);
 const LOCATION_KEYS = new Set(["wing", "floor", "room", "roomName", "place"]);
@@ -157,8 +157,11 @@ export function validateCatalogue(
       if (!isText(w.id) || !SLUG.test(w.id)) err(`${at}: id is missing or not URL-safe`);
       else if (seen.has(w.id)) err(`${at}: also in ${seen.get(w.id)}; every work belongs to exactly one module or the appendix`);
       else seen.set(w.id, g.at);
-      for (const k of ["title", "artist", "date", "department", "inventory"] as const) {
-        if (!isText(w[k])) err(`${at}: ${k} is missing`);
+      for (const k of ["title", "artist", "date", "medium", "department", "inventory"] as const) {
+        if (!isText(w[k])) err(`${at}: ${k} is missing (write "TBD" when the record doesn't confirm it)`);
+      }
+      if (w.titleFr !== undefined && (!isText(w.titleFr) || w.titleFr === w.title)) {
+        err(`${at}: titleFr is empty or the same as title; leave it out instead`);
       }
 
       // Display status and the date checked.
