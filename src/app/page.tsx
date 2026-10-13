@@ -28,7 +28,11 @@ export default function Home() {
 
       <ChallengeRoute items={getChallenge()} levelIds={journey.map((j) => j.id)} />
 
-      <footer className="mt-12 border-t border-line pt-4 text-sm">
+      <footer className="mt-12 flex flex-wrap items-center gap-x-6 border-t border-line pt-4 text-sm">
+        {/* 0.6 build step 2: the contents page, linked here for testing until the cover becomes home (step 3). */}
+        <Link href="/contents/" className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
+          Contents: all 100 works
+        </Link>
         <Link href="/about/" className="font-hand text-lg text-ultramarine underline">
           About &amp; sources
         </Link>

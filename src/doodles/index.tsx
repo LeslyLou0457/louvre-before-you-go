@@ -155,3 +155,53 @@ export function ZoomDoodle(p: DoodleProps) {
     </Svg>
   );
 }
+
+/** Little clock on the "Coming soon" chip. */
+export function ClockDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path d="M12 4 Q20 4.2 20 12 Q19.8 20 12 20 Q4 19.8 4 12 Q4.2 4 12 4 Z M12 7.5 L12 12.4 L15 14.2" {...stroke} stroke="currentColor" />
+    </Svg>
+  );
+}
+
+/** Play triangle on the "Play" and "Continue" chips. */
+export function PlayDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path d="M8 5.5 Q8.3 12 8 18.5 Q13.5 15.5 18.5 12 Q13.4 8.4 8 5.5 Z" {...stroke} stroke="currentColor" />
+    </Svg>
+  );
+}
+
+/** Crossed-out eye on the "not on view" chips. */
+export function EyeOffDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path d="M3 12 Q12 4 21 12 Q12 20 3 12 Z M5 19 L19 5" {...stroke} stroke="currentColor" />
+    </Svg>
+  );
+}
+
+/** Small arrow for "Next up". */
+export function NextDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path d="M8.5 5 Q13 9 16 12 Q13 15 8.6 19" {...stroke} stroke="currentColor" />
+    </Svg>
+  );
+}
+
+/** Empty picture frame on the "Photo comes with the level" placeholder tile. Never a drawing of an artwork. */
+export function PictureDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path
+        d="M4 5.5 Q12 5 20 5.6 Q20.4 12 19.8 18.6 Q12 19 4.2 18.5 Q3.7 12 4 5.5 Z M7.5 15.5 L10.5 11.5 L13 14 L15 12 L17 15.5"
+        {...stroke}
+        strokeWidth={1.8}
+        stroke="currentColor"
+      />
+    </Svg>
+  );
+}
