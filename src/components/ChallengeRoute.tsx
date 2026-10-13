@@ -159,10 +159,10 @@ export default function ChallengeRoute({ items, levelIds }: { items: ChallengeIt
         <p className="mt-2 flex items-center gap-2 font-hand text-xl">
           <LockDoodle className="h-5 w-5 shrink-0" opening />
           <span className="inline-grid">
-            <span className="m-unlock-was [grid-area:1/1]" aria-hidden="true">
+            <span className="m-unlock-was self-center [grid-area:1/1]" aria-hidden="true">
               Finish all five levels to unlock the close-ups.
             </span>
-            <span className="m-unlock-now [grid-area:1/1]">Close-ups unlocked.</span>
+            <span className="m-unlock-now self-center [grid-area:1/1]">Close-ups unlocked.</span>
           </span>
         </p>
       )}
