@@ -8,6 +8,7 @@
 > Revised 2026-10-09 (content depth): after playtest feedback, every level must carry professional art-history analysis in conversational language (see "Depth standard"), and every wrong answer gets a clear correction (optional `correction` field on branches, see "Data format").
 > Revised 2026-10-09 (Close-Up Challenge): after all 5 levels, a Close-Up Challenge unlocks, with one 2-question round per artwork built on zoomed crops of high-resolution photos (see "Close-Up Challenge" and "Challenge files"). Time per level: about 5 minutes, never more than 7; one work, level plus close-up round, within 10.
 > Revised 2026-10-13 (motion): narrator heads and doodle chrome get restrained motion in the style of After Hours; the artwork never moves (see "Motion" under 03 · DESIGN). The product owner also confirmed the Close-Up Challenge defaults already built: rounds unlock one at a time in route order, a pool of 2 repeats the same pair on every play, and "10 minutes per work" means its level plus its close-up round.
+> Revised 2026-10-13 (0.6, museum framework): the Louvre's content becomes a book: a cover, a contents page, 15 modules and an appendix holding 100 works, and a schematic map of the three wings, from the approved framework design and the product owner's decisions (modules free to open with "Next up", a close-up round opens per work, works not on view stay in their module, listed last). See "0.6 · Museum framework" and "Catalogue file"; "Museum maps" moves out of "Not doing" for a schematic map used to find modules.
 
 **Duolingo for art history. See it before you go; recognise it when you're there.**
 Five minutes a day, one level, one small story about one artwork.
@@ -190,6 +191,155 @@ At the caps the worst path is 160 words (63 s) and the right path 105 words (46.
 - Crops are cut once, offline, at about 1200 px on the long side (never upscaled) into `public/images/challenge/<artwork id>/<question id>.jpg`, plus `overview.jpg`, a small copy of the whole reference image for the "see where" thumbnail. The multi-megabyte originals are not kept in the repo.
 - Crops are never redrawn, filtered or drawn on. The only outline is drawn by the page over the overview thumbnail, around the region; the image file itself stays untouched.
 
+## 02 · 0.6 · Museum framework — a cover, a contents page, 15 modules and a map
+
+Added 2026-10-13, from the approved framework design (project files: `framework/DESIGN.html`, its clickable `framework/prototype.html`, and the mapping `catalogue/modules.csv` with `catalogue/top-100.csv` and `catalogue/module-candidates.csv`) and the product owner's decisions on it. Version name: **0.6**.
+
+0.6 turns the five-level route into a book for the whole museum: a cover, a contents page, **15 modules** and an appendix, "Beyond the 15", and a map of the three wings. The book holds **100 Louvre works** (`catalogue/top-100.csv`), each in exactly one module or the appendix, whether or not its level exists yet. 0.6 adds no levels: the five existing levels and their Close-Up Challenge stay the playable content, and new levels arrive later, one work at a time, each with a record recheck, a rights-checked photo, its level and its close-up round.
+
+### Words used in this section
+
+- **Module:** a group of neighbouring rooms of one region or period, in the product owner's own curatorial structure, not an official Louvre route. On screen it is called a chapter ("Chapter 09"), as in the design's book: the cover, the contents page and room numbers used as page numbers.
+- **Floor:** one of the Louvre's levels, −1 to 2. On screen it is labelled the way the Louvre labels it ("Level 1"); this spec and the data say "floor" so it is never confused with a game level.
+- **Level:** as in 0.5, the 5-question game about one work.
+
+### Structure and navigation
+
+```
+Cover → Map → Wing → Floor → Module → Work → Close-up round
+Cover → Contents → Module
+Cover → "Start here" trail → the 5 existing levels (today's route, unchanged)
+```
+
+| Page | Route | What it does |
+|---|---|---|
+| Cover (home) | `/` | The title, the cover copy (below), "Open the map", "Contents", the "Start here" card (continue where you left off), and the sticker book: one mark per work, module by module. Replaces the level route as home |
+| Start here | `/start/` | Today's level route and Close-Up Challenge, unchanged, moved from `/` |
+| Map | `/map/` | The three wings, tappable (see "The map") |
+| Wing | `/map/denon/`, `/map/sully/`, `/map/richelieu/` | The map zoomed to one wing and its floors, top floor first, each with its module and work counts and room range. Picking a floor (page state, with a `#level-1` anchor) lists the modules with works on that floor, with "also on Sully, Level 0"-style notes when a module continues elsewhere. Static pages, so they can be linked |
+| Contents | `/contents/` | All 15 modules and the appendix: number, title, wings and floors, progress, and the room range on the right like page numbers in a book; a wing filter |
+| Module | `/chapter/01/` … `/chapter/15/`, `/chapter/beyond/` | Number, title, wings and floors, room range, progress dots, the "not a walking route" line, then the works under room headings ("Room 711") in module order, works not on view last under "Not on view right now", and the module's close-up rounds at the bottom. Generated from `content/modules.json` |
+| Work | label sheet on the module page | The work's museum label: artist, title, date, where (wing, floor, room), display status with the date checked, and "View at the Louvre →". A work with a level opens its level |
+| Lesson, challenge, about | unchanged | A level or round finished from a module returns to that module |
+
+- A tab bar with **Cover, Map, Contents** reaches any module in two taps. Back always returns to where the module was opened from.
+- Cover copy, exactly: "The Louvre is home to treasures from across the world and across thousands of years. Meet 100 of its masterpieces, and the stories behind them, before you go."
+- Page numbers: module number plus room number ("Chapter 09, room 711"). Room numbers are the Louvre's own, so they stay stable when works are added; positions like "4 of 9" are computed, never stored.
+
+### The map
+
+- **Behaviour:** the three wings, Denon, Sully and Richelieu, are tappable buttons; the Cour Carrée, the Pyramid, rue de Rivoli and the Seine are drawn only to orient. Tapping a wing zooms the map to it, fades the other wings and shows its floors, top floor first, like a cross-section of the building. Picking a floor lists its modules; picking a module opens it.
+- **Honest:** labelled "Schematic, not to scale". It draws no rooms, no routes, no walking times and no artworks, so it can never send anyone the wrong way. It is for finding modules before the trip, not for guiding on site.
+- **Visual style:** an illustrated doodle map, style TBD in prototype (an illustrated version is being explored). Whatever the style, the drawing lives in one swappable component, like the other doodles, so a person's illustration drops in without code changes, and it follows the three-layer rule in "03 · DESIGN".
+- **A list for every map:** the contents page and the wing's floor list hold everything the map does; the map is never the only way in. Each wing is a real button with a spoken name built from the data, like "Denon wing: 6 chapters, 29 works on view, levels −1 to 1", reachable by keyboard, with tap targets of at least 48 px.
+
+### The 15 modules
+
+From `catalogue/modules.csv` (records checked 13 Oct 2026). "On view" counts works whose record says on display; the restricted Crown of Louis XV and the closed Galerie Médicis are not counted.
+
+| No. | Module | Wing · floors | Rooms | On view / all |
+|---|---|---|---|---|
+| 01 | Ancient Mesopotamia & Assyria | Richelieu 0 | 227–236 | 5 / 6 |
+| 02 | Ancient Persia & the Levant | Sully 0 | 301–307 | 4 / 4 |
+| 03 | Ancient Egypt: Life, Death & Afterlife | Sully −1, 0, 1 | 325–644 | 11 / 12 |
+| 04 | Ancient Greece: Gods & Mythology | Denon −1, 0, 1; Sully 0 | 170–703 | 7 / 8 |
+| 05 | Ancient Rome & Etruscan Civilizations | Sully 0, 1 | 348–663 | 4 / 5 |
+| 06 | Islam, Byzantium & Cross-Cultural Exchange | Richelieu 1 | 501 | 2 / 8 |
+| 07 | Medieval & Renaissance Sculpture | Denon −1, 0; Richelieu 0 | 169–403 | 6 / 6 |
+| 08 | Italian Early Renaissance | Denon 1 | 706–708 | 4 / 4 |
+| 09 | Italian High Renaissance & Venetian Masters | Denon 1 | 710–712 | 7 / 9 |
+| 10 | French Neoclassicism & Romanticism | Denon 1 | 700–702 | 7 / 7 |
+| 11 | Spanish Painting | — | rooms closed | 0 / 0 |
+| 12 | Flemish & Dutch Masters | Richelieu 2 | 801–844 | 3 / 4 |
+| 13 | French & Northern European Painting | Richelieu 2; Sully 2 | 824–917 | 5 / 7 |
+| 14 | French Sculpture & Royal Patronage | Richelieu −1, 0 | 102–105 | 4 / 4 |
+| 15 | Decorative Arts & Royal Collections | Richelieu 1; Denon 1 | 502–705 | 5 / 9 |
+| + | Beyond the 15 (appendix) | Denon 0 | — | 0 / 7 |
+
+- **93 works in modules, 7 in the appendix.** The appendix holds three Gallery of Five Continents works (room and display not confirmed) and four drawings seen by appointment only; they fit no module and stay in the book after module 15.
+- **Module 11 keeps its number** and shows "rooms closed": the Spanish rooms 720–734 were listed closed on the louvre.fr open-rooms page when checked (13 Oct 2026), and no work on the list hangs there. Module numbers never change.
+- **Only verified works.** A work enters the catalogue only from a verified row; the candidates in `catalogue/module-candidates.csv` stay out until each one's collections.louvre.fr record (room, display) has been checked. Short modules are filled later, one checked candidate at a time.
+- **Placement calls (defaults from the design):** room 348's three statues stay together in Rome (05); Canova's Psyche sits in 07 with Michelangelo's room 403; Caravaggio's Death of the Virgin sits in 09 because it hangs in room 712; the two Byzantine ivories of room 501 sit in 06.
+
+### Order: by room number, not a walking route
+
+Inside a module, works are ordered by the Louvre's room number, computed from the data, never typed by hand:
+
+1. works on view (on display, restricted or not yet confirmed) with a room number, by room number;
+2. then works on view whose place has no room number (e.g. "Escalier Mollien (upper)"), in catalogue order;
+3. then works **not on view**, last, in catalogue order.
+
+Room order is not a walking route: stairs, passages and room closures change the way. Every module page carries one line saying so and telling people to check on the day.
+
+### Status: what each work says it is
+
+Every work is shown and says what it is. Two independent facts make up its status: whether its level exists, and whether you can see it in the museum.
+
+**Level state** (derived from the existing progress, nothing new stored):
+
+| State | When | Shown as | Tap |
+|---|---|---|---|
+| Coming soon | No level yet (`levelId` missing) | Dashed placeholder tile "Photo comes with the level"; dashed "Coming soon" chip | The museum label and "This level isn't written yet" |
+| Ready | `levelId` names a level, not started | The real photo on a white mat; ultramarine "Play" | Opens the level |
+| In progress | A saved place in the level | "Continue · 3 of 5" | Resumes the level |
+| Met | The level is finished | Gold "Met" (ink on gold) | Opens the level to replay |
+| Close-up done | Its close-up round is finished too | A second mark beside "Met" | Opens the round to replay |
+
+**Display state** (from the work's collections.louvre.fr record, always with the date checked):
+
+| `display` | Shown as |
+|---|---|
+| `on-display` | Room and place, no chip |
+| `restricted` | "Coming soon, check first"-style note: access is restricted (the Crown of Louis XV's record adds "Accès réservé") |
+| `tbd` | Note: room and display not confirmed (the Gallery of Five Continents works) |
+| `not-on-display` | Grey chip "Not on display" |
+| `on-loan` | Grey chip "On loan" |
+| `room-closed` | Grey chip "Room closed" (the room is kept) |
+| `appointment-only` | Grey chip "By appointment only" |
+
+- The last four are **not on view**: the work keeps its place in its module, is listed last, and its label gives the reason (the record's own words, `displayNote`) and the date checked. Off-view works are written last.
+- Every status carries the date it was checked. Never red: these are facts, not errors. State is never colour alone: each chip has a word and a mark.
+- No fake levels and no drawn stand-ins: a work gets its photo only when its level ships, after the same rights check as the first five.
+- Room data is soft: the Louvre's own records warn room data may be out of date. Every work's record is rechecked before its level ships, and a work checked more than 90 days ago is flagged by the content check.
+
+### Progress, "Next up" and seals
+
+- **Modules are free to open,** none is locked: people prepare for the wing they will visit. Inside a module, the first work in module order that has a level and isn't met yet is marked **"Next up"**. Any ready level in a module can be played.
+- **Module progress:** "2 met · 1 ready · 6 coming soon · 2 not on view", plus one dot per work. A module earns a gold seal when every ready level in it and each one's close-up round are done; a new level later adds a dot, and the seal waits for it. A module with no ready level has no seal to earn.
+- **Museum progress:** the sticker book on the cover shows all 100 works with honest counts, e.g. "2 met · 1 in progress · 2 ready · 73 coming soon · 22 not on view"; it never pretends unwritten works are playable.
+- **The "Start here" trail** keeps the five existing levels in their route order, with the Close-Up Challenge as today. The same level can also be opened from its module at any time; it is the same level with the same progress key, so finishing it in either place counts in both.
+- **Storage:** no new progress key. Work and module states are derived from the existing `progress:v1` and `place:v1` keys and the challenge progress; progress keys are lesson ids, which don't change, so existing players keep every tick. The existing `louvre-before-you-go:moments:v1` key gains `sealSeen` (modules whose seal has played) and `mapDrawn` (the map has drawn itself this session).
+
+### Close-ups per work
+
+Each work keeps one close-up round, in the current format (two questions on real crops; see "Close-Up Challenge"). In a module, **a work's round opens as soon as that work's level is done**, not behind a gate for the whole module (a growing module would re-lock). The module page lists its rounds in module order. The "all five levels" gate stays only on the "Start here" trail, so nothing changes for current players.
+
+### Motion and accessibility
+
+- Motion follows "Motion": the map's ink lines draw themselves once per session (about 1.3 s, tappable from the first frame), the map zooms to a tapped wing while the other wings fade, floors and rows rise in, a module's gold seal stamps once, the work's label sheet slides up. CSS `transform`, `opacity` and stroke drawing only; at most one loop per screen; nothing waits for motion; artwork photos never move, scale or pan. Reduced motion follows the device setting, as in 0.5.
+- Real buttons, tap targets of at least 48 px (module and work rows 64 px or more, the whole row is the button), a visible ultramarine focus ring; rooms are headings; the label sheet is a dialog that takes focus and closes with Escape; the sticker book is one button with a spoken summary; French room names carry `lang="fr"`. "Met" chips use ink on gold, since white on gold is too faint.
+
+### Build steps
+
+Small PRs, each run and checked on a 375 px phone before committing.
+
+| Step | What | Visible change |
+|---|---|---|
+| 0 | This spec, the "Boundaries" edit, the scope line in AGENTS.md and CLAUDE.md | None (docs) |
+| 1 | `content/modules.json` generated from `catalogue/modules.csv`, its types, and the content-check rules in "Catalogue file" | None |
+| 2 | Contents and module pages: status chips, placeholder tiles, the museum label sheet, "View at the Louvre"; linked from today's home for testing | New pages |
+| 3 | Cover as home: today's route moves to `/start/`; the tab bar; the sticker book; a finished level returns to its module. Old progress still shows | New home |
+| 4 | The map, static: one swappable map drawing, the wing pages and their floors | Map |
+| 5 | Motion for the new screens, with reduced motion; the `moments:v1` additions | Motion |
+| 6 | Close-ups per work in modules; the trail keeps its all-five gate | Close-ups |
+| 7 | Recheck routine: a script lists works whose `checkedOn` is older than 90 days; a person rechecks the records before a release | None |
+| 8 | Content in batches: first modules 09 and 10 (the same Denon level 1 rooms as four existing levels), then 04 and 03. Each work: record recheck, rights-checked photo, level, close-up round | New levels |
+
+### Not in 0.6
+
+- **A visit planner** waits: a "1-hour route" would promise walking times and open rooms we can't verify. Once about 20 levels exist, a "My visit list" sorted by wing, floor and room, with "check on the day", is the honest version.
+- No turn-by-turn routes, no live open-room data, no in-app reduce-motion switch, no new levels beyond the five.
+
 ---
 
 ## 02 · CONTENT — content rules and data format
@@ -289,6 +439,63 @@ One file per artwork in `content/challenge/`, named like the level files (`01-mo
 | top level | `review` | Per question node id (`c1q`, …): `extends` (`nodes` in the level file, `concept`), `framing`, `what_you_learn`, `regionSources` and `choiceSources` (title, URL, the exact quoted passage, a translation marked "our translation" if not English, what it supports; `choiceSources` keyed by wrong-branch id), `confidence`, `notes`, `quoteCheck` and `cropCheck` (when and how quotes and crop were checked), and `exception` where an approved exception (a `myth` option) applies. Ignored by the app: it is the audit trail |
 
 Node ids per question: `cN` intro, `cNq` question, `cNa`/`cNb`/`cNc` branches in option order, `cNm` merge. `npm run check-content` also checks challenge files: 3 options with one `right` and two wrong (`near-miss`, or `myth` where approved); a `correction` and a `choiceSources` entry for every wrong option; at least one `regionSources` quote; a `zoom` inside 0–1 on intro and question, the same on both, and its crop file in `public/`; every branch leads to the question's merge line; the word caps; every round the rotation can show within 144 s; and every node named in `review.extends` exists in the level file.
+
+### Catalogue file
+
+Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue: the wings, the 15 modules, the appendix, and for every work its place, display status and the date checked. Level files don't change: a work is linked to its level by `levelId`, and the level file's `artwork.id` equals the work's `id`. It is generated once from `catalogue/modules.csv` (verified rows only; display notes from `catalogue/top-100.csv`) and from then on edited by hand.
+
+```json
+{
+  "museum": "louvre",
+  "wings": [
+    { "id": "denon", "name": "Denon", "floors": [-1, 0, 1] },
+    { "id": "sully", "name": "Sully", "floors": [-1, 0, 1, 2] },
+    { "id": "richelieu", "name": "Richelieu", "floors": [-1, 0, 1, 2] }
+  ],
+  "modules": [
+    {
+      "id": "09", "slug": "italian-high-renaissance-venetian-masters",
+      "title": "Italian High Renaissance & Venetian Masters", "status": "open",
+      "works": [
+        {
+          "id": "mona-lisa", "title": "Mona Lisa", "artist": "Leonardo da Vinci", "date": "1503–1519",
+          "department": "Paintings", "inventory": "INV 779",
+          "location": { "wing": "denon", "floor": 1, "room": "711", "roomName": "Salle des États" },
+          "display": "on-display", "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062370",
+          "levelId": "mona-lisa-1"
+        },
+        {
+          "id": "la-belle-ferronniere", "title": "La Belle Ferronnière", "artist": "Leonardo da Vinci", "date": "c. 1490–1497",
+          "department": "Paintings", "inventory": "INV 778",
+          "location": null, "display": "not-on-display",
+          "displayNote": "Record: current location \"non exposé\".", "checkedOn": "2026-10-13",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062372"
+        }
+      ]
+    }
+  ],
+  "appendix": { "id": "beyond", "slug": "beyond-the-15", "title": "Beyond the 15", "works": [] }
+}
+```
+
+| Where | Field | What it holds |
+|---|---|---|
+| top level | `wings` | `id`, `name`, and the `floors` the catalogue uses in that wing |
+| `modules[]` | `id`, `slug`, `title` | `"01"` … `"15"` (the module number, also its route), a URL-safe name and the title |
+| `modules[]` | `status` | `"open"`, or `"rooms-closed"` with `closedNote` and `checkedOn` (module 11) |
+| `modules[]`, `appendix` | `works` | The works, already in module order (see "Order") |
+| work | `id` | Unique across the file; for a work with a level, the level file's `artwork.id` |
+| work | `title`, `artist`, `date`, `department`, `inventory` | The museum label, as the record gives it (`artist` holds the culture when the maker is unknown) |
+| work | `location` | `{ wing, floor, room, roomName? }`; `room` is a string ("711"), or `null` with `place` for a spot with no room number ("Escalier Mollien (upper)"). `null` when the work is not on display, on loan or by appointment only; kept for `room-closed` |
+| work | `display` | `on-display`, `restricted`, `tbd`, `room-closed`, `not-on-display`, `on-loan` or `appointment-only` |
+| work | `displayNote` | For any `display` other than `on-display`: the reason, in the record's own words where it has them |
+| work | `checkedOn` | The date the record was checked, `YYYY-MM-DD` |
+| work | `museumUrl` | The collections.louvre.fr record, or `null` for a work with no Louvre record (the Gallery of Five Continents works carry Musée du quai Branly inventory numbers) |
+| work | `levelId` | Optional: the lesson id of the work's level (`"mona-lisa-1"`). Missing means "Coming soon" |
+| work | `note` | Optional editorial note on the placement, for people; not shown to players |
+
+`npm run check-content` also checks the catalogue: every work in exactly one module or the appendix (ids unique); every `levelId` names an existing lesson whose `artwork.id` equals the work's `id`, and every level file's artwork is in the catalogue; module ids `01`–`15` in order, each once; `location` well formed (a known wing, a floor that wing lists, a room of digits or `null` with a `place`; `null` only for off-view works); works in module order (on view by room number, then on view without a room number, then not on view); `display` from the list, with `displayNote` when not `on-display`; `checkedOn` a real date, with a warning when it is more than 90 days old.
 
 ---
 
@@ -422,6 +629,15 @@ Every item can be ticked, no gut feeling. When all are ticked, the version is do
 - [ ] Published on GitHub Pages with a public link that opens on a phone, with page screenshots good enough to show
 - [ ] Adding one new JSON file, without changing code, adds one more artwork
 
+### 0.6 acceptance
+
+- [ ] All 100 works in the catalogue appear, each in exactly one module or the appendix, and `npm run check-content` passes
+- [ ] Every module opens from the contents page within two taps, and every module with works on view also from the map
+- [ ] Every work not on view shows its reason and the date checked, and is listed last in its module
+- [ ] A player with 0.5 progress keeps every tick and saved place
+- [ ] The five existing levels play both from their modules and from the "Start here" trail
+- [ ] On a 375 px phone every new page works without horizontal scrolling, and the map is never the only way in
+
 ### 1.0 acceptance
 
 - [ ] Each of the 5 artworks deepened to 5 levels, 25 levels live, all checked and voiced
@@ -443,7 +659,7 @@ One principle covers most boundaries: content is written in advance and checked 
 | On-site guiding, identifying artworks from photos | The product is only for before the trip; general AI chat can already identify artworks from photos |
 | Real-time AI-generated content or audio | Every use calls an API, which is costly, and the content can't be checked in advance |
 | Talking with the artist (AI playing Leonardo) | Uses lots of tokens and easily invents things that never happened; to be tested separately later. Scripted artist voices, written and source-checked in advance, are fine (see "How to write") |
-| Museum maps, 3D or virtual tours | The product is only for before the trip: knowing an artwork doesn't require knowing its room |
+| 3D or virtual tours, turn-by-turn routes, live open-room data | The product is for before the trip. A schematic map for finding modules is in scope from 0.6 (see "0.6 · Museum framework"); on-site guiding is not |
 | Museums other than the Louvre | Coming, but 0.5 and 1.0 do one museum thoroughly first |
 | An in-depth academic edition | Target users are beginners, not scholars. Professional depth in plain language is in scope (see "Depth standard"); footnotes, jargon and exhaustive coverage are not |
 | App, payments, comments and community | Not needed now |
@@ -491,6 +707,11 @@ Five levels are five angles on the same work. 5 questions per level, each level 
 - Photos of the two sculptures: the photographer owns the copyright of a sculpture photo, so find ones marked Public Domain or CC0. (Done 2026-10-09: CC0 photos from Wikimedia Commons, Venus de Milo by Shonagon and Winged Victory by Wilfredor)
 - Which voice for 1.0 audio? (Default: a warm English female voice; generate the first level as a test before deciding)
 - Is login required in 1.0? (Default: no; login only syncs progress)
+- Version name for the museum framework? (Decided 2026-10-13: 0.6)
+- Modules locked or free? (Decided 2026-10-13: free, with "Next up" inside each module)
+- Close-ups per work or one gate per module? (Decided 2026-10-13: per work, when that work's level is done; the "Start here" trail keeps its all-five gate)
+- Works not on view: stay in their module or move to the appendix? (Decided 2026-10-13: stay, listed last)
+- The map's art style? (Open: an illustrated doodle map is being explored in the prototype; the behaviour in "The map" holds whatever the style)
 
 ---
 
