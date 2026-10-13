@@ -1,0 +1,182 @@
+/*
+ * Motion (PRODUCT.md "Motion", plan: project files animation/PLAN.md).
+ *
+ * Only the doodle chrome and the narrator heads move. Nothing here may ever be
+ * put on the artwork layer (Artwork, Locator, MuseumLabel): the photo, the
+ * crops, the "see where" thumbnail and the label never move.
+ *
+ * Rules for this file:
+ * - Keyframes animate only `transform`, `opacity` or `stroke-dashoffset`, so
+ *   nothing changes layout (no layout shift) and it all runs on the compositor.
+ * - Nothing waits for an animation: text is complete and buttons work from the
+ *   first frame. One-shots are 150–700 ms; the only loops are the idle float
+ *   and the blink of the one head that floats.
+ * - The reduced-motion block at the bottom turns every movement off and leaves
+ *   150 ms fades at most. The app follows the device setting only.
+ *
+ * Tune durations and easing here; the components only add class names.
+ */
+
+:root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-pop: cubic-bezier(0.34, 1.45, 0.64, 1); /* small overshoot, for pops */
+  --ease-io: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+@keyframes m-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes m-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes m-enter { from { opacity: 0; transform: translateY(14px) scale(0.9); } to { opacity: 1; transform: none; } }
+@keyframes m-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+@keyframes m-blink { 0%, 95%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+/* Talking: lift 3 px, chatter, settle. Its length follows the line (0.8 to 1.8 s). */
+@keyframes m-talk {
+  0% { transform: none; }
+  10% { transform: translateY(-3px); }
+  22% { transform: translateY(-5px) scaleY(1.02); }
+  34% { transform: translateY(-3px); }
+  46% { transform: translateY(-5px) rotate(1.5deg); }
+  58% { transform: translateY(-3px); }
+  70% { transform: translateY(-4.5px) rotate(-1deg); }
+  82% { transform: translateY(-3px); }
+  100% { transform: none; }
+}
+/* Mouth layers (when a drawing has them): open and shut about 6 times a second. */
+@keyframes m-mouth-open { 0% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes m-mouth-closed { 0% { opacity: 0; } 50% { opacity: 1; } }
+/* Right answer: two small hops. Wrong answer: a thoughtful tilt. Never a shake. */
+@keyframes m-hop {
+  0% { transform: none; }
+  28% { transform: translateY(-7px) rotate(-3deg); }
+  52% { transform: none; }
+  74% { transform: translateY(-3px) rotate(2deg); }
+  100% { transform: none; }
+}
+@keyframes m-tilt {
+  0% { transform: none; }
+  30%, 72% { transform: rotate(-7deg) translateX(-1px); }
+  100% { transform: none; }
+}
+@keyframes m-pop { from { opacity: 0; transform: scale(0.88); } to { opacity: 1; transform: none; } }
+@keyframes m-rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes m-card { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes m-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes m-fill { from { transform: scaleX(0); } to { transform: none; } }
+@keyframes m-sparkle { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes m-star {
+  0% { opacity: 0; transform: scale(0) rotate(-30deg); }
+  65% { opacity: 1; transform: scale(1.15) rotate(4deg); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes m-wiggle { 0%, 100% { transform: none; } 25% { transform: rotate(-12deg); } 60% { transform: rotate(9deg); } }
+@keyframes m-shackle { from { transform: none; } to { transform: translateY(-3px) rotate(-28deg); } }
+@keyframes m-flip { 0% { transform: scale(1); } 45% { transform: scale(0, 1); } 100% { transform: scale(1); } }
+
+/* ---------- Heads: three nested boxes, one transform each ----------
+ * .hd       entrance (m-enter)
+ * .hd-mood  reaction (hop / tilt) and talking
+ * .hd-idle  idle float
+ * Inside the SVG only the `eyes` and mouth layers move. */
+.hd { position: relative; display: inline-block; flex: none; line-height: 0; }
+.hd-mood, .hd-idle { display: inline-block; line-height: 0; }
+.hd-mood { transform-origin: 50% 92%; }
+
+.m-enter { animation: m-enter 360ms var(--ease-pop) both; }
+.m-float { animation: m-float 3.6s var(--ease-io) infinite; }
+.m-float [data-part="eyes"] {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: m-blink 5.2s linear infinite;
+  animation-delay: var(--blink-delay, 0s);
+}
+
+.hd[data-mood="hop"] > .hd-mood { animation: m-hop 520ms var(--ease-out); }
+.hd[data-mood="tilt"] > .hd-mood { animation: m-tilt 700ms var(--ease-io); }
+.hd[data-talk] > .hd-mood { animation: m-talk var(--talk) var(--ease-io) var(--talk-delay, 80ms); }
+/* A reaction plays first, then the talk starts right after it. */
+.hd[data-mood="hop"][data-talk] > .hd-mood {
+  animation: m-hop 520ms var(--ease-out), m-talk var(--talk) var(--ease-io) 560ms;
+}
+.hd[data-mood="tilt"][data-talk] > .hd-mood {
+  animation: m-tilt 700ms var(--ease-io), m-talk var(--talk) var(--ease-io) 720ms;
+}
+[data-part="mouth-open"] { opacity: 0; }
+.hd[data-talk] [data-part="mouth-open"] {
+  animation: m-mouth-open 166ms steps(1) var(--talk-delay, 80ms) var(--talk-n, 6);
+}
+.hd[data-talk] [data-part="mouth-closed"] {
+  animation: m-mouth-closed 166ms steps(1) var(--talk-delay, 80ms) var(--talk-n, 6);
+}
+
+/* Right answer: three short ink strokes and a crayon dot beside the head. */
+.m-sparkle {
+  position: absolute;
+  right: -14px;
+  top: -10px;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  animation: m-sparkle 800ms linear 120ms both;
+}
+
+/* ---------- Doodle chrome ---------- */
+.m-bubble { transform-origin: 0 30px; animation: m-pop 220ms var(--ease-pop) var(--bubble-delay, 80ms) both; }
+/* `backwards`, not `both`: once in, the pill must keep its own :active squash. */
+.m-rise { animation: m-rise 180ms var(--ease-out) calc(var(--i, 0) * 40ms) backwards; }
+.m-chip { animation: m-pop 180ms var(--ease-pop) both; }
+.m-card { animation: m-card 240ms var(--ease-out) 100ms both; }
+.m-draw { stroke-dasharray: 1; animation: m-draw var(--d, 400ms) var(--ease-out) var(--dl, 0ms) both; }
+.m-fill { transform-origin: left center; animation: m-fill 260ms var(--ease-out) 60ms both; }
+.m-star { animation: m-star 420ms var(--ease-out) calc(var(--i, 0) * 120ms) both; }
+.m-takeaway { animation: m-rise 220ms var(--ease-out) 150ms both; }
+.m-tick { animation: m-pop 300ms var(--ease-pop) 100ms both; }
+.m-wiggle { animation: m-wiggle 300ms var(--ease-io); }
+.m-hint { animation: m-fade 180ms ease-out both; }
+
+/* Press: the pill squashes a little; the next screen still comes at once. */
+.btn-option, .btn-primary { transition: transform 90ms var(--ease-out); }
+button.btn-option:active,
+.btn-primary:active,
+button:active > .btn-primary { transform: scale(0.97); }
+
+/* ---------- Close-ups unlock (home, once) ---------- */
+.m-unlock-mag { animation: m-pop 360ms var(--ease-pop) 150ms both; }
+.m-unlock-mag-on { animation: m-fade 200ms ease-out 150ms both; }
+.m-unlock-shackle { transform-box: fill-box; transform-origin: 100% 100%; animation: m-shackle 400ms var(--ease-out) 200ms both; }
+.m-unlock-was { animation: m-out 180ms ease-out 600ms both; }
+.m-unlock-now { animation: m-fade 180ms ease-out 700ms both; }
+.m-unlock-flip { animation: m-flip 260ms var(--ease-out) 300ms both; }
+.m-unlock-flip-out { animation: m-out 1ms linear 417ms both; }
+.m-unlock-flip-in { animation: m-fade 1ms linear 417ms both; }
+.m-unlock-face { animation: m-fade 260ms ease-out 300ms both; }
+
+/* ---------- Reduced motion: nothing moves; things that appear fade, 150 ms at most ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .m-float,
+  .m-float [data-part="eyes"],
+  .hd-mood,
+  .hd [data-part="mouth-open"],
+  .hd [data-part="mouth-closed"],
+  .m-wiggle,
+  .m-unlock-mag,
+  .m-unlock-shackle,
+  .m-unlock-flip { animation: none !important; }
+  .m-sparkle { display: none; }
+  .m-enter,
+  .m-bubble,
+  .m-rise,
+  .m-chip,
+  .m-card,
+  .m-star,
+  .m-takeaway,
+  .m-tick,
+  .m-hint,
+  .m-unlock-mag-on,
+  .m-unlock-now,
+  .m-unlock-face { animation: m-fade 150ms ease-out both !important; }
+  .m-unlock-was { animation: m-out 150ms ease-out both !important; }
+  .m-unlock-flip-out { animation: m-out 150ms linear both !important; }
+  .m-unlock-flip-in { animation: m-fade 150ms linear both !important; }
+  .m-draw,
+  .m-fill { animation: none !important; stroke-dashoffset: 0; }
+  .btn-option, .btn-primary { transition: none; }
+}

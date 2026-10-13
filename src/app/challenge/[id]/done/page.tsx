@@ -31,6 +31,7 @@ export default async function ChallengeDonePage({ params }: Params) {
       artwork={round.artwork}
       museumUrl={level ? museumLink(level) : undefined}
       next={next ? { id: next.lesson.id, title: next.artwork.title } : undefined}
+      narrator={round.lesson.narrator ? round.speakers[round.lesson.narrator] : undefined}
     />
   );
 }

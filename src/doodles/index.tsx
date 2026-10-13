@@ -7,8 +7,16 @@
 // weight, a little crayon colour.
 //
 // To swap one: keep the component name and props, replace the <svg> inside.
+//
+// Motion (PRODUCT.md "Motion"): lines that "draw themselves" (underline,
+// route, ring, wavy mark) are open stroked paths with pathLength="1" and the
+// `m-draw` class from src/app/motion.css. A hand-drawn replacement keeps them
+// as open stroked paths; a filled shape still works, it just fades instead.
+// The padlock's shackle is its own path (data-part="shackle") so it can swing open.
 
-type DoodleProps = { className?: string; title?: string };
+import type { CSSProperties } from "react";
+
+type DoodleProps = { className?: string; title?: string; style?: CSSProperties };
 
 const ink = "var(--color-ink)";
 const stroke = {
@@ -21,6 +29,7 @@ const stroke = {
 
 function Svg({
   className,
+  style,
   title,
   viewBox,
   children,
@@ -29,6 +38,7 @@ function Svg({
     <svg
       viewBox={viewBox}
       className={className}
+      style={style}
       role={title ? "img" : undefined}
       aria-hidden={title ? undefined : true}
       aria-label={title}
@@ -65,11 +75,18 @@ export function CheckDoodle(p: DoodleProps) {
   );
 }
 
-/** Small padlock for a locked level. */
-export function LockDoodle(p: DoodleProps) {
+/** Small padlock for a locked level. `opening`: the shackle swings open once. */
+export function LockDoodle(p: DoodleProps & { opening?: boolean }) {
+  const { opening, ...rest } = p;
   return (
-    <Svg viewBox="0 0 24 24" {...p}>
-      <path d="M8 11 V8.2 Q8 4.6 12 4.5 Q16 4.6 16.1 8.3 V11" {...stroke} stroke="currentColor" />
+    <Svg viewBox="0 0 24 24" {...rest}>
+      <path
+        data-part="shackle"
+        className={opening ? "m-unlock-shackle" : undefined}
+        d="M8 11 V8.2 Q8 4.6 12 4.5 Q16 4.6 16.1 8.3 V11"
+        {...stroke}
+        stroke="currentColor"
+      />
       <path d="M6 11.2 Q12 10.6 18.2 11 Q18.6 15.5 18 19.6 Q12 20.2 5.8 19.5 Q5.5 15 6 11.2 Z" {...stroke} stroke="currentColor" />
     </Svg>
   );
@@ -90,26 +107,41 @@ export function StarDoodle(p: DoodleProps) {
   );
 }
 
-/** Hand-drawn underline under a headline. */
-export function UnderlineDoodle(p: DoodleProps) {
+/** Hand-drawn underline under a headline. `draw`: it draws itself once, left to right. */
+export function UnderlineDoodle(p: DoodleProps & { draw?: boolean }) {
+  const { draw, ...rest } = p;
   return (
-    <Svg viewBox="0 0 200 12" {...p}>
-      <path d="M3 8 Q50 3 100 6.5 T197 5" {...stroke} stroke="var(--color-coral)" strokeWidth={3} />
+    <Svg viewBox="0 0 200 12" {...rest}>
+      <path
+        d="M3 8 Q50 3 100 6.5 T197 5"
+        {...stroke}
+        stroke="var(--color-coral)"
+        strokeWidth={3}
+        {...(draw ? { pathLength: 1, className: "m-draw", style: { "--d": "450ms", "--dl": "250ms" } as CSSProperties } : {})}
+      />
     </Svg>
   );
 }
 
-/** Squiggly vertical route segment between two journey nodes. */
-export function RouteDoodle(p: DoodleProps & { dashed?: boolean }) {
-  const { dashed, ...rest } = p;
+/**
+ * Squiggly vertical route segment between two journey nodes. `draw`: the
+ * dashed (locked) line redraws itself as solid ink, once, when the level
+ * below has just been unlocked.
+ */
+export function RouteDoodle(p: DoodleProps & { dashed?: boolean; draw?: boolean }) {
+  const { dashed, draw, ...rest } = p;
+  const d = "M12 2 Q4 14 12 28 T12 54";
   return (
     <Svg viewBox="0 0 24 56" {...rest}>
       <path
-        d="M12 2 Q4 14 12 28 T12 54"
+        d={d}
         {...stroke}
-        strokeDasharray={dashed ? "2 7" : undefined}
-        stroke={dashed ? "var(--color-muted)" : ink}
+        strokeDasharray={dashed || draw ? "2 7" : undefined}
+        stroke={dashed || draw ? "var(--color-muted)" : ink}
       />
+      {draw && (
+        <path d={d} {...stroke} pathLength={1} className="m-draw" style={{ "--d": "450ms", "--dl": "200ms" } as CSSProperties} />
+      )}
     </Svg>
   );
 }

@@ -7,13 +7,14 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import Artwork from "./Artwork";
 import Correction from "./Correction";
 import MuseumLabel from "./MuseumLabel";
 import ProgressBar from "./ProgressBar";
-import Stage from "./Stage";
+import Stage, { stageSpeakerId } from "./Stage";
 import { CloseDoodle } from "@/doodles";
+import { moodFor, useScreenMotion } from "@/lib/motion";
 import { clearPlace, getPlace, markComplete, savePlace } from "@/lib/progress";
 import type { Artwork as ArtworkT, Lesson, Speaker } from "@/lib/types";
 
@@ -91,6 +92,10 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
   }
 
   const narrator = lesson.narrator ? speakers[lesson.narrator] : undefined;
+  // Motion (PRODUCT.md "Motion"): head entrance, reaction and the progress fill.
+  const voice = node.type === "question" ? undefined : node.voice;
+  const motion = useScreenMotion(ready, nodeId, stageSpeakerId(lesson.narrator, voice), answered);
+  const mood = moodFor(lesson.nodes, nodeId);
 
   return (
     <main className="flex min-h-dvh flex-col pb-6">
@@ -103,7 +108,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
           <CloseDoodle className="h-6 w-6" />
         </Link>
         <div className={`flex flex-1 ${ready ? "" : "invisible"}`}>
-          <ProgressBar current={current} answered={answered} total={questionCount} />
+          <ProgressBar current={current} answered={answered} total={questionCount} filled={motion.filled} />
         </div>
       </header>
 
@@ -137,11 +142,17 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
       >
         {node.type === "question" ? (
           <>
-            <Stage narrator={narrator} speakers={speakers} />
+            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} />
             <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
             <div className="flex flex-col gap-3">
-              {node.choices.map((c) => (
-                <button key={c.next + c.label} type="button" className="btn-option" onClick={() => choose(c.label, c.next)}>
+              {node.choices.map((c, i) => (
+                <button
+                  key={c.next + c.label}
+                  type="button"
+                  className="btn-option m-rise"
+                  style={{ "--i": i } as CSSProperties}
+                  onClick={() => choose(c.label, c.next)}
+                >
                   {c.label}
                 </button>
               ))}
@@ -149,11 +160,11 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
           </>
         ) : (
           <button type="button" onClick={() => go(node.next)} className="flex flex-1 flex-col gap-4 text-left">
-            <Stage narrator={narrator} voice={node.voice} speakers={speakers} />
+            <Stage narrator={narrator} voice={node.voice} speakers={speakers} enter={motion.enter} mood={mood} />
             {node.type === "branch" && picked && (
               <span className="flex flex-wrap items-center gap-2 font-hand text-lg text-muted">
                 You picked
-                <span className="btn-option min-h-0 w-auto border-ultramarine py-0.5 text-lg">{picked}</span>
+                <span className="m-chip btn-option min-h-0 w-auto border-ultramarine py-0.5 text-lg">{picked}</span>
               </span>
             )}
             <p>{node.text}</p>

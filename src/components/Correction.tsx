@@ -2,7 +2,10 @@
 // the answer isn't right, then why it's tempting, what's actually true and
 // the evidence that settles it. Doodle layer: ink line, handwriting labels,
 // never red (PRODUCT.md "Design"). Content field: branch `correction`.
+// Motion: the card rises as one block (rows not staggered, so it can be read
+// whole) and the wavy mark draws itself (PRODUCT.md "Motion").
 
+import type { CSSProperties } from "react";
 import type { Correction as CorrectionT } from "@/lib/types";
 
 const DEFAULT_VERDICT = {
@@ -21,7 +24,7 @@ export default function Correction({ correction }: { correction: CorrectionT }) 
   return (
     <span
       role="note"
-      className="block border-2 border-ink bg-mat px-4 py-3"
+      className="m-card block border-2 border-ink bg-mat px-4 py-3"
       style={{ borderRadius: "14px 24px 12px 26px / 24px 12px 26px 14px" }}
     >
       <span className="flex items-center gap-2 font-hand text-[1.45rem] font-bold leading-tight">
@@ -33,6 +36,9 @@ export default function Correction({ correction }: { correction: CorrectionT }) 
             stroke="var(--color-ink)"
             strokeWidth="2.5"
             strokeLinecap="round"
+            pathLength={1}
+            className="m-draw"
+            style={{ "--d": "400ms", "--dl": "220ms" } as CSSProperties}
           />
         </svg>
         {verdict}

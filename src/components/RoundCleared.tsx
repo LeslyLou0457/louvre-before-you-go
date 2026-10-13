@@ -5,12 +5,13 @@
 // moved on when the round was finished), then points to the next round.
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { type CSSProperties, useEffect, useState } from "react";
 import MuseumLabel from "./MuseumLabel";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
+import { Head } from "@/doodles/avatars";
 import { getPlays } from "@/lib/progress";
 import { roundPair } from "@/lib/rotation";
-import type { Artwork } from "@/lib/types";
+import type { Artwork, Speaker } from "@/lib/types";
 
 type Props = {
   id: string;
@@ -21,9 +22,11 @@ type Props = {
   artwork: Artwork;
   museumUrl?: string;
   next?: { id: string; title: string };
+  /** The round's narrator, who hops once above the stars. */
+  narrator?: Speaker;
 };
 
-export default function RoundCleared({ id, pool, roundSize, merges, artwork, museumUrl, next }: Props) {
+export default function RoundCleared({ id, pool, roundSize, merges, artwork, museumUrl, next, narrator }: Props) {
   const [pair, setPair] = useState<string[] | null>(null);
 
   useEffect(() => {
@@ -32,17 +35,24 @@ export default function RoundCleared({ id, pool, roundSize, merges, artwork, mus
 
   return (
     <main className="soft-fade flex min-h-dvh flex-col gap-6 py-8">
+      {/* Same small celebration as a level (PRODUCT.md "Motion"). */}
+      {narrator && (
+        <div className="flex justify-center">
+          <Head speaker={narrator} size={52} mood="hop" />
+        </div>
+      )}
       <div className="flex items-end justify-center gap-2" aria-hidden="true">
-        <StarDoodle className="h-10 w-10 -rotate-12" />
-        <StarDoodle className="h-16 w-16" />
-        <StarDoodle className="h-10 w-10 rotate-12" />
+        <StarDoodle className="m-star h-10 w-10 -rotate-12" style={{ "--i": 1 } as CSSProperties} />
+        <StarDoodle className="m-star h-16 w-16" style={{ "--i": 0 } as CSSProperties} />
+        <StarDoodle className="m-star h-10 w-10 rotate-12" style={{ "--i": 2 } as CSSProperties} />
       </div>
       <div className="text-center">
         <h1 className="font-hand text-[2.4rem] font-bold leading-none">Close-up cleared!</h1>
-        <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" />
+        <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" draw />
       </div>
 
-      <section className={`wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4 ${pair ? "" : "invisible"}`}>
+      {/* The merge lines arrive with the card. */}
+      <section className={`wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4 ${pair ? "m-takeaway" : "invisible"}`}>
         <h2 className="font-hand text-2xl font-bold">What you saw up close</h2>
         <ul className="mt-2 flex flex-col gap-3">
           {(pair ?? []).map((q) => (

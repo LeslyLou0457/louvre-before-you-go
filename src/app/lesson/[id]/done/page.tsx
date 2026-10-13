@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MuseumLabel from "@/components/MuseumLabel";
+import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
-import { getLevel, getLevels, museumLink } from "@/lib/content";
+import { Head } from "@/doodles/avatars";
+import { getLevel, getLevels, museumLink, narratorOf } from "@/lib/content";
 
 export const dynamicParams = false;
 
@@ -22,21 +24,28 @@ export default async function DonePage({ params }: Params) {
   const level = getLevel((await params).id);
   if (!level) notFound();
   const next = getLevels()[level.index + 1];
+  const narrator = narratorOf(level);
 
   return (
     <main className="soft-fade flex min-h-dvh flex-col gap-6 py-8">
-      {/* The small, still celebration: stickers, no motion, no confetti. */}
+      {/* The small celebration (PRODUCT.md "Motion"): the narrator hops once,
+          the stars pop in, the underline draws itself. No confetti. Buttons work at once. */}
+      {narrator && (
+        <div className="flex justify-center">
+          <Head speaker={narrator} size={52} mood="hop" />
+        </div>
+      )}
       <div className="flex items-end justify-center gap-2" aria-hidden="true">
-        <StarDoodle className="h-10 w-10 -rotate-12" />
-        <StarDoodle className="h-16 w-16" />
-        <StarDoodle className="h-10 w-10 rotate-12" />
+        <StarDoodle className="m-star h-10 w-10 -rotate-12" style={{ "--i": 1 } as CSSProperties} />
+        <StarDoodle className="m-star h-16 w-16" style={{ "--i": 0 } as CSSProperties} />
+        <StarDoodle className="m-star h-10 w-10 rotate-12" style={{ "--i": 2 } as CSSProperties} />
       </div>
       <div className="text-center">
         <h1 className="font-hand text-[2.4rem] font-bold leading-none">Level cleared!</h1>
-        <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" />
+        <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" draw />
       </div>
 
-      <section className="wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4">
+      <section className="m-takeaway wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4">
         <h2 className="font-hand text-2xl font-bold">One thing to remember today</h2>
         <p className="mt-2">{level.lesson.takeaway}</p>
       </section>
