@@ -4,6 +4,8 @@
 // times. A wrong pick is never shown as wrong (no red); it simply opens its
 // branch. The player's spot is saved to localStorage as they go (lib/progress),
 // so leaving or reloading mid-level resumes it, with a "Start over" link.
+// Leaving or finishing goes back to where the level was opened from: its
+// chapter, the cover, or (by default) the "Start here" trail (lib/origin).
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -15,6 +17,7 @@ import ProgressBar from "./ProgressBar";
 import Stage, { stageSpeakerId } from "./Stage";
 import { CloseDoodle } from "@/doodles";
 import { moodFor, useScreenMotion } from "@/lib/motion";
+import { originHref, originLabel, originQuery, readOrigin, TRAIL, type Origin } from "@/lib/origin";
 import { clearPlace, getPlace, markComplete, savePlace } from "@/lib/progress";
 import type { Artwork as ArtworkT, Lesson, Speaker } from "@/lib/types";
 
@@ -36,11 +39,13 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
   // doesn't flash before jumping to the saved one.
   const [ready, setReady] = useState(false);
   const [resumed, setResumed] = useState(false);
+  const [origin, setOrigin] = useState<Origin>(TRAIL);
   const cardRef = useRef<HTMLDivElement>(null);
 
   // Pick up where the player left off. A spot whose node no longer exists in
   // the content is ignored (getPlace returns null) and the level starts over.
   useEffect(() => {
+    setOrigin(readOrigin());
     const place = getPlace(lesson.id, Object.keys(lesson.nodes), questionCount);
     if (place && (place.node !== lesson.start || place.answered > 0)) {
       setNodeId(place.node);
@@ -82,7 +87,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
       return;
     }
     markComplete(lesson.id);
-    router.push(`/lesson/${lesson.id}/done/`);
+    router.push(`/lesson/${lesson.id}/done/${originQuery(origin)}`);
   }
 
   function choose(label: string, next: string) {
@@ -101,8 +106,8 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
     <main className="flex min-h-dvh flex-col pb-6">
       <header className="sticky top-0 z-10 flex items-center gap-3 bg-paper py-3">
         <Link
-          href="/"
-          aria-label="Exit level"
+          href={originHref(origin)}
+          aria-label={`Exit level: ${originLabel(origin).toLowerCase()}`}
           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-mat"
         >
           <CloseDoodle className="h-6 w-6" />
@@ -115,7 +120,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
       {resumed && (
         <p className="-mt-1 mb-3 flex flex-wrap items-baseline gap-x-3 font-hand text-lg text-muted">
           Picked up where you left off.
-          <button type="button" onClick={startOver} className="font-hand text-lg text-ultramarine underline">
+          <button type="button" onClick={startOver} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
             Start over
           </button>
         </p>

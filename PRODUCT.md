@@ -328,8 +328,8 @@ Small PRs, each run and checked on a 375 px phone before committing.
 | 0 | This spec, the "Boundaries" edit, the scope line in AGENTS.md and CLAUDE.md | None (docs) |
 | 1 | `content/modules.json` generated from `catalogue/modules.csv`, its types, and the content-check rules in "Catalogue file" | None |
 | 2 | Contents and module pages: status chips, placeholder tiles, the museum label sheet, "View at the Louvre"; linked from today's home for testing | New pages |
-| 3 | Cover as home: today's route moves to `/start/`; the tab bar; the sticker book; a finished level returns to its module. Old progress still shows | New home |
-| 4 | The map, static: one swappable map drawing, the wing pages and their floors | Map |
+| 3 | Cover as home: today's route moves to `/start/`; the tab bar (Cover and Contents); the sticker book; a finished level returns to its module. Old progress still shows | New home |
+| 4 | The map, static: one swappable map drawing, the wing pages and their floors; the Map tab and the cover's "Open the map" arrive with it, never before | Map |
 | 5 | Motion for the new screens, with reduced motion; the `moments:v1` additions | Motion |
 | 6 | Close-ups per work in modules; the trail keeps its all-five gate | Close-ups |
 | 7 | Recheck routine: a script lists works whose `checkedOn` is older than 90 days; a person rechecks the records before a release | None |

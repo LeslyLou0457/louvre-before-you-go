@@ -10,6 +10,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import LabelSheet from "./LabelSheet";
+import { TAB_BAR_SPACE } from "./TabBar";
 import { PhotoTile, ProgressDots, StatusChip } from "./WorkBits";
 import { BackDoodle, NextDoodle } from "@/doodles";
 import { floorLabel, formatDate, isOffView, nextUpId, summary, workState, type Progress } from "@/lib/book";
@@ -49,11 +50,11 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
     .join(" · ");
 
   const row = (w: BookWork) => (
-    <WorkRow key={w.id} work={w} progress={progress} nextUp={w.id === nextUp} onOpen={() => setOpen(w)} />
+    <WorkRow key={w.id} chapterId={chapter.id} work={w} progress={progress} nextUp={w.id === nextUp} onOpen={() => setOpen(w)} />
   );
 
   return (
-    <main className="soft-fade pb-10">
+    <main className={`soft-fade ${TAB_BAR_SPACE}`}>
       <div className="sticky top-0 z-10 -mx-4 flex min-h-[52px] items-center gap-1.5 bg-paper px-2 py-1">
         <Link href="/contents/" aria-label="Back to contents" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
           <BackDoodle className="h-[26px] w-[26px]" />
@@ -138,7 +139,9 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
   );
 }
 
-function WorkRow({ work, progress, nextUp, onOpen }: { work: BookWork; progress: Progress; nextUp: boolean; onOpen: () => void }) {
+type RowProps = { chapterId: string; work: BookWork; progress: Progress; nextUp: boolean; onOpen: () => void };
+
+function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
   const state = workState(work, progress);
   const body = (
     <>
@@ -164,7 +167,8 @@ function WorkRow({ work, progress, nextUp, onOpen }: { work: BookWork; progress:
   return (
     <li className="border-b-[1.5px] border-line">
       {work.level ? (
-        <Link href={`/lesson/${work.level.id}/`} className={cls}>
+        // The level returns here when it is finished or left (lib/origin).
+        <Link href={`/lesson/${work.level.id}/?from=${chapterId}`} className={cls}>
           {body}
         </Link>
       ) : (

@@ -159,7 +159,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
     <main className="flex min-h-dvh flex-col pb-6">
       <header className="sticky top-0 z-10 flex items-center gap-3 bg-paper py-3">
         <Link
-          href="/"
+          href="/start/"
           aria-label="Exit round"
           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-mat"
         >
@@ -173,7 +173,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
       {resumed && (
         <p className="-mt-1 mb-3 flex flex-wrap items-baseline gap-x-3 font-hand text-lg text-muted">
           Picked up where you left off.
-          <button type="button" onClick={startOver} className="font-hand text-lg text-ultramarine underline">
+          <button type="button" onClick={startOver} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
             Start over
           </button>
         </p>
