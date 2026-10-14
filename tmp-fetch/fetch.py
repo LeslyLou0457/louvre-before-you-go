@@ -97,6 +97,7 @@ def resized(img, long_side):
 
 def images():
     os.makedirs(ORIG, exist_ok=True)
+    os.makedirs(OUT, exist_ok=True)
     info = {}
     opened = {}
     for item in cfg["images"]:
