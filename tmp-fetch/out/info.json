@@ -41,5 +41,156 @@
    "hasIcc": false
   }
  },
- "crops": []
+ "crops": [
+  {
+   "dest": "public/images/virgin-of-the-rocks.jpg",
+   "srcPx": [
+    0,
+    0,
+    3460,
+    5487
+   ],
+   "outPx": [
+    1211,
+    1920
+   ],
+   "quality": 88,
+   "bytes": 528856
+  },
+  {
+   "dest": "public/images/virgin-and-child-with-saint-anne.jpg",
+   "srcPx": [
+    168,
+    54,
+    13287,
+    17834
+   ],
+   "outPx": [
+    1430,
+    1920
+   ],
+   "quality": 88,
+   "bytes": 405623
+  },
+  {
+   "dest": "public/images/challenge/virgin-of-the-rocks/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    3460,
+    5487
+   ],
+   "outPx": [
+    631,
+    1000
+   ],
+   "quality": 88,
+   "bytes": 154766
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    13972,
+    18032
+   ],
+   "outPx": [
+    775,
+    1000
+   ],
+   "quality": 88,
+   "bytes": 122886
+  },
+  {
+   "dest": "public/images/challenge/virgin-of-the-rocks/c1.jpg",
+   "srcPx": [
+    1834,
+    2853,
+    1142,
+    1043
+   ],
+   "outPx": [
+    1142,
+    1043
+   ],
+   "quality": 88,
+   "bytes": 344078
+  },
+  {
+   "dest": "public/images/challenge/virgin-of-the-rocks/c2.jpg",
+   "srcPx": [
+    1176,
+    1811,
+    1108,
+    1097
+   ],
+   "outPx": [
+    1108,
+    1097
+   ],
+   "quality": 88,
+   "bytes": 371237
+  },
+  {
+   "dest": "public/images/challenge/virgin-of-the-rocks/c3.jpg",
+   "srcPx": [
+    1661,
+    2908,
+    899,
+    1482
+   ],
+   "outPx": [
+    728,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 226744
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/c1.jpg",
+   "srcPx": [
+    7405,
+    8295,
+    5030,
+    6491
+   ],
+   "outPx": [
+    930,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 156956
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/c2.jpg",
+   "srcPx": [
+    3074,
+    6131,
+    5589,
+    5409
+   ],
+   "outPx": [
+    1200,
+    1161
+   ],
+   "quality": 88,
+   "bytes": 206049
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/c3.jpg",
+   "srcPx": [
+    1118,
+    9918,
+    5868,
+    6311
+   ],
+   "outPx": [
+    1116,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 175091
+  }
+ ]
 }
