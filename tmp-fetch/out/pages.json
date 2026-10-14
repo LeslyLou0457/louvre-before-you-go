@@ -1,0 +1,1308 @@
+{
+ "File:The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg": {
+  "parse": {
+   "title": "File:The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg",
+   "pageid": 146673520,
+   "categories": [
+    {
+     "sortkey": "All medias supported by Wikimedia Canada|The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub",
+     "hidden": true
+    },
+    {
+     "sortkey": "The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg",
+     "category": "CC-Zero",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Self-published_work",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Images_from_Paris_Project",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci_(Louvre)"
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_paintings_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Musée_du_Louvre_by_Wilfredor",
+     "hidden": true
+    }
+   ],
+   "wikitext": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Leonardo da Vinci, The Virgin and Child with Saint Anne, oil on panel, begun about 1503 and left unfinished at his death in 1519. The Virgin sits on her mother's lap and leans towards the Child, who holds a lamb, the animal of sacrifice, so that three generations and the destiny of the fourth figure are held in a single pyramid. Louvre, Paris.}}\n|date=2024-01-29 08:43:54\n|source={{own}}\n|author={{Creator:Wilfredo Rafael Rodriguez Hernandez}}\n|permission=\n|other versions=\n}}\n\n{{QCWC-Z7II}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:Images from Paris Project]]\n[[Category:The Virgin and Child with Saint Anne by Leonardo da Vinci (Louvre)]]\n[[Category:Photographs of paintings by Wilfredor]][[Category:Musée du Louvre by Wilfredor]][[Category:Photographs of paintings by Wilfredor]]"
+  },
+  "query": {
+   "pages": [
+    {
+     "pageid": 146673520,
+     "ns": 6,
+     "title": "File:The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg",
+     "imagerepository": "local",
+     "imageinfo": [
+      {
+       "timestamp": "2024-03-23T03:57:17Z",
+       "user": "Wilfredor",
+       "size": 49134172,
+       "width": 7716,
+       "height": 11375,
+       "comment": "Uploaded own work with UploadWizard",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci,_Louvre.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146673520",
+       "sha1": "1950aeae40ad34a73882f8c793d76e42e2c0804b",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2024-03-23 03:57:17",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "CC-Zero|Self-published work|Images from Paris Project|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Musée du Louvre by Wilfredor|The Virgin and Child with Saint Anne by Leonardo da Vinci (Louvre)",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Leonardo da Vinci, The Virgin and Child with Saint Anne, oil on panel, begun about 1503 and left unfinished at his death in 1519. The Virgin sits on her mother's lap and leans towards the Child, who holds a lamb, the animal of sacrifice, so that three generations and the destiny of the fourth figure are held in a single pyramid. Louvre, Paris.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2024-01-29 08:43:54",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "File:Holy Family with Saint Anne and the infant Saint John, Pinacoteca Capitolina.jpg": {
+  "parse": {
+   "title": "File:Holy Family with Saint Anne and the infant Saint John, Pinacoteca Capitolina.jpg",
+   "pageid": 145680456,
+   "categories": [
+    {
+     "sortkey": "All medias supported by Wikimedia Canada|Holy Family with Saint Anne and the infant Saint John, Pinacoteca Capitolina.jpg",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub",
+     "hidden": true
+    },
+    {
+     "sortkey": "Holy Family with Saint Anne and the infant Saint John, Pinacoteca Capitolina.jpg",
+     "category": "CC-Zero",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Self-published_work",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Images_from_Roma_Project",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_paintings_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Musei_Capitolini_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Religious_paintings_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Rome_photographs_taken_on_2024-02-11",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Museums_in_Italy_photographed_in_2024"
+    },
+    {
+     "sortkey": "",
+     "category": "Paintings_in_the_Musei_Capitolini_(Rome)"
+    }
+   ],
+   "wikitext": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Painting of the Virgin and Child with Saint Anne, the infant Saint John the Baptist and two male saints, before an architectural setting opening on a landscape. Pinacoteca Capitolina, Musei Capitolini, Rome.}}\n|date=2024-02-11 10:51:54\n|source={{own}}\n|author={{Creator:Wilfredo Rafael Rodriguez Hernandez}}\n|permission=\n|other versions=\n}}\n\n{{QCWC-Z7II}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n[[Category:Images from Roma Project]][[Category:Photographs of paintings by Wilfredor]][[Category:Musei Capitolini by Wilfredor]][[Category: Religious paintings by Wilfredor]]\n[[Category:Rome photographs taken on 2024-02-11]]\n[[Category:Museums in Italy photographed in 2024]]\n[[Category:Paintings in the Musei Capitolini (Rome)]]"
+  },
+  "query": {
+   "pages": [
+    {
+     "pageid": 145680456,
+     "ns": 6,
+     "title": "File:Holy Family with Saint Anne and the infant Saint John, Pinacoteca Capitolina.jpg",
+     "imagerepository": "local",
+     "imageinfo": [
+      {
+       "timestamp": "2024-02-22T14:04:43Z",
+       "user": "Wilfredor",
+       "size": 20022402,
+       "width": 6614,
+       "height": 5055,
+       "comment": "Uploaded own work with UploadWizard",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Holy_Family_with_Saint_Anne_and_the_infant_Saint_John%2C_Pinacoteca_Capitolina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Holy_Family_with_Saint_Anne_and_the_infant_Saint_John,_Pinacoteca_Capitolina.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=145680456",
+       "sha1": "88b04d7ed437ce88dd1df8a023e1de75c8e0c88f",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2024-02-22 14:04:43",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Holy Family with Saint Anne and the infant Saint John, Pinacoteca Capitolina",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "CC-Zero|Paintings in the Musei Capitolini (Rome)|Self-published work|Museums in Italy photographed in 2024|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Religious paintings by Wilfredor|Images from Roma Project|Musei Capitolini by Wilfredor|Rome photographs taken on 2024-02-11",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Painting of the Virgin and Child with Saint Anne, the infant Saint John the Baptist and two male saints, before an architectural setting opening on a landscape. Pinacoteca Capitolina, Musei Capitolini, Rome.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2024-02-11 10:51:54",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "File:Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016.jpg": {
+  "parse": {
+   "title": "File:Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016.jpg",
+   "pageid": 120079371,
+   "categories": [
+    {
+     "sortkey": " 00013929",
+     "category": "Heritage_properties_in_Canada_with_known_IDs",
+     "hidden": true
+    },
+    {
+     "sortkey": "All medias supported by Wikimedia Canada|Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016.jpg",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "WikiClub_Québec:_Registre_des_églises_et_objets_historiques_2022",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Paintings_of_the_Basilica_of_Sainte-Anne-de-Beaupré"
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_Basilica_of_Sainte-Anne-de-Beaupré_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Images_of_Basilica_of_Sainte-Anne-de-Beaupré_from_Discovery_of_our_ancestral_heritage_Project"
+    },
+    {
+     "sortkey": "Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016.jpg",
+     "category": "CC-Zero",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Self-published_work",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Unassessed_QI_candidates",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub_in_2022",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "2022_in_Quebec"
+    },
+    {
+     "sortkey": "",
+     "category": "Images_of_Canada_by_User:Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Madonna_and_child_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Christianity_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_paintings_by_Wilfredor",
+     "hidden": true
+    }
+   ],
+   "wikitext": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.}}\n{{es|1=Fresco de Jesús, la Virgen María y José en la Capilla de la Inmaculada Concepción por Marcus Dubois. La Basílica de Santa Ana de Beaupré (en francés: Sainte-Anne-de-Beaupré) es una basílica junto al Río San Lorenzo, 30 km al este de la ciudad de Quebec. Está acreditada por la Iglesia Católica con muchos milagros de curas de enfermedades. Es un importante santuario del catolicismo, con cerca de medio millón de peregrinos que la visitan cada año. El periodo de mayor número de visitas es el 26 de julio, el día de la fiesta de Santa Ana, santa patrona de Quebec, junto con San Juan Bautista.}}\n{{fr|1=Fresque de Jesus, la vierge Marie et Joseph dans la chapelle de l'Immaculée Conception par Marcus Dubois- Basilique de Sainte-Anne-de-Beaupré. La basilique Sainte-Anne-de-Beaupré est une église catholique située à Sainte-Anne-de-Beaupré, non loin de la ville de Québec (Canada). Lieu de pèlerinage, le principal rassemblement survient le 26 juillet, lors de la fête de sainte Anne, patronne civile et ecclésiastique du Québec, et point culminant de la neuvaine. Elle possède trois reliques insignes de la sainte Mère de la Vierge Marie. Cette basilique a aussi été désignée sanctuaire national par la Conférence des évêques catholiques du Canada, comme seulement une poignée d'autres sites.}}{{Historic Places in Canada|13929}}\n|date=2022-04-18 11:33:24\n|source={{own}}\n|author=Marcus Dubois. Photography by {{Creator:Wilfredo Rafael Rodriguez Hernandez}}\n|permission     = \n|other versions=\n}}\n{{Location|47.023976|-70.928607}}\n{{QCWC-Z7II}}\n[[Category:WikiClub Québec: Registre des églises et objets historiques 2022]]\n[[Category:Paintings of the Basilica of Sainte-Anne-de-Beaupré]]\n[[Category:Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor]]\n[[Category:Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project]]\n=={{int:license-header}}==\n{{self|cc-zero}}\n[[Category:Unassessed QI candidates]][[Category:Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022]]\n[[Category:2022 in Quebec]][[Category:Images of Canada by User:Wilfredor]][[Category:Madonna and child by Wilfredor]]\n[[Category:Christianity by Wilfredor]]\n[[Category:Photographs of paintings by Wilfredor]]"
+  },
+  "query": {
+   "pages": [
+    {
+     "pageid": 120079371,
+     "ns": 6,
+     "title": "File:Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016.jpg",
+     "imagerepository": "local",
+     "imageinfo": [
+      {
+       "timestamp": "2025-11-30T22:24:15Z",
+       "user": "Wilfredor",
+       "size": 15704516,
+       "width": 5073,
+       "height": 5125,
+       "comment": "Adding geolocation",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_1016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_1016.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120079371",
+       "sha1": "4164671612777ca14ea37dc9c994ca1776ea6ed1",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2025-11-30 22:24:15",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Self-published work|Unassessed QI candidates|Heritage properties in Canada with known IDs|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:33:24",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      },
+      {
+       "timestamp": "2022-07-04T13:24:08Z",
+       "user": "Wilfredor",
+       "size": 15704418,
+       "width": 5073,
+       "height": 5125,
+       "comment": "Uploaded own work with UploadWizard",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/archive/5/51/20251130222413%21Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_1016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_1016.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120079371",
+       "sha1": "979bb0074889100d091f26e58961ff9da7c19200",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2022-07-04 13:24:08",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1016",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Self-published work|Unassessed QI candidates|Heritage properties in Canada with known IDs|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:33:24",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "File:Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017.jpg": {
+  "parse": {
+   "title": "File:Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017.jpg",
+   "pageid": 120079384,
+   "categories": [
+    {
+     "sortkey": " 00013929",
+     "category": "Heritage_properties_in_Canada_with_known_IDs",
+     "hidden": true
+    },
+    {
+     "sortkey": "All medias supported by Wikimedia Canada|Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017.jpg",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "WikiClub_Québec:_Registre_des_églises_et_objets_historiques_2022",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Paintings_of_the_Basilica_of_Sainte-Anne-de-Beaupré"
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_Basilica_of_Sainte-Anne-de-Beaupré_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Images_of_Basilica_of_Sainte-Anne-de-Beaupré_from_Discovery_of_our_ancestral_heritage_Project"
+    },
+    {
+     "sortkey": "Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017.jpg",
+     "category": "CC-Zero",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Self-published_work",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Unassessed_QI_candidates",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub_in_2022",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "2022_in_Quebec"
+    },
+    {
+     "sortkey": "",
+     "category": "Images_of_Canada_by_User:Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Madonna_and_child_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Christianity_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_paintings_by_Wilfredor",
+     "hidden": true
+    }
+   ],
+   "wikitext": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.}}\n{{es|1=Fresco de Jesús, la Virgen María y José en la Capilla de la Inmaculada Concepción por Marcus Dubois. La Basílica de Santa Ana de Beaupré (en francés: Sainte-Anne-de-Beaupré) es una basílica junto al Río San Lorenzo, 30 km al este de la ciudad de Quebec. Está acreditada por la Iglesia Católica con muchos milagros de curas de enfermedades. Es un importante santuario del catolicismo, con cerca de medio millón de peregrinos que la visitan cada año. El periodo de mayor número de visitas es el 26 de julio, el día de la fiesta de Santa Ana, santa patrona de Quebec, junto con San Juan Bautista.}}\n{{fr|1=Fresque de Jesus, la vierge Marie et Joseph dans la chapelle de l'Immaculée Conception par Marcus Dubois- Basilique de Sainte-Anne-de-Beaupré. La basilique Sainte-Anne-de-Beaupré est une église catholique située à Sainte-Anne-de-Beaupré, non loin de la ville de Québec (Canada). Lieu de pèlerinage, le principal rassemblement survient le 26 juillet, lors de la fête de sainte Anne, patronne civile et ecclésiastique du Québec, et point culminant de la neuvaine. Elle possède trois reliques insignes de la sainte Mère de la Vierge Marie. Cette basilique a aussi été désignée sanctuaire national par la Conférence des évêques catholiques du Canada, comme seulement une poignée d'autres sites.}}{{Historic Places in Canada|13929}}\n|date=2022-04-18 11:33:39\n|source={{own}}\n|author=Marcus Dubois. Photography by {{Creator:Wilfredo Rafael Rodriguez Hernandez}}\n|permission     = \n|other versions=\n}}\n{{Location|47.023976|-70.928607}}\n{{QCWC-Z7II}}\n[[Category:WikiClub Québec: Registre des églises et objets historiques 2022]]\n[[Category:Paintings of the Basilica of Sainte-Anne-de-Beaupré]]\n[[Category:Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor]]\n[[Category:Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project]]\n=={{int:license-header}}==\n{{self|cc-zero}}\n[[Category:Unassessed QI candidates]][[Category:Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022]]\n[[Category:2022 in Quebec]][[Category:Images of Canada by User:Wilfredor]][[Category:Madonna and child by Wilfredor]]\n[[Category:Christianity by Wilfredor]]\n[[Category:Photographs of paintings by Wilfredor]]"
+  },
+  "query": {
+   "pages": [
+    {
+     "pageid": 120079384,
+     "ns": 6,
+     "title": "File:Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017.jpg",
+     "imagerepository": "local",
+     "imageinfo": [
+      {
+       "timestamp": "2025-11-30T17:47:29Z",
+       "user": "Wilfredor",
+       "size": 12647558,
+       "width": 3981,
+       "height": 4815,
+       "comment": "Adding geolocation",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_1017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_1017.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120079384",
+       "sha1": "6c8234f8f2bebe287dede54c53d26a493790fb24",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2025-11-30 17:47:29",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Self-published work|Unassessed QI candidates|Heritage properties in Canada with known IDs|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:33:39",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      },
+      {
+       "timestamp": "2022-07-04T13:24:24Z",
+       "user": "Wilfredor",
+       "size": 12647460,
+       "width": 3981,
+       "height": 4815,
+       "comment": "Uploaded own work with UploadWizard",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/archive/8/83/20251130174727%21Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_1017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_de_la_Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_1017.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120079384",
+       "sha1": "d3e5f5f88fe588b66f469a721adbf173340a3fbf",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2022-07-04 13:24:24",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Intérieur de la Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 1017",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Self-published work|Unassessed QI candidates|Heritage properties in Canada with known IDs|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:33:39",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "File:Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg": {
+  "parse": {
+   "title": "File:Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg",
+   "pageid": 119891572,
+   "categories": [
+    {
+     "sortkey": "",
+     "category": "Files_with_coordinates_missing_SDC_location_of_creation",
+     "hidden": true
+    },
+    {
+     "sortkey": "All medias supported by Wikimedia Canada|Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub",
+     "hidden": true
+    },
+    {
+     "sortkey": "Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg",
+     "category": "CC-Zero",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Self-published_work",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "WikiClub_Québec:_Registre_des_églises_et_objets_historiques_2022",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_Basilica_of_Sainte-Anne-de-Beaupré_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Images_of_Basilica_of_Sainte-Anne-de-Beaupré_from_Discovery_of_our_ancestral_heritage_Project"
+    },
+    {
+     "sortkey": "",
+     "category": "Paintings_of_the_Basilica_of_Sainte-Anne-de-Beaupré"
+    },
+    {
+     "sortkey": "",
+     "category": "Holy_Family_in_art"
+    },
+    {
+     "sortkey": "",
+     "category": "Quality_images_supported_by_Wikimedia_Canada",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Quality_images_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg",
+     "category": "Quality_images",
+     "hidden": true
+    },
+    {
+     "sortkey": "1657412280",
+     "category": "Valued_images_sorted_by_promotion_date",
+     "hidden": true
+    },
+    {
+     "sortkey": "1657412280",
+     "category": "Valued_images_promoted_2022-07",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Media_created_with_Nikon_Z7ii_provided_by_the_Quebec_WikiClub_in_2022",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "2022_in_Quebec"
+    },
+    {
+     "sortkey": "",
+     "category": "Images_of_Canada_by_User:Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Quality_images_of_paintings_in_Canada",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Madonna_and_child_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Christianity_by_Wilfredor",
+     "hidden": true
+    },
+    {
+     "sortkey": "",
+     "category": "Photographs_of_paintings_by_Wilfredor",
+     "hidden": true
+    }
+   ],
+   "wikitext": "=={{int:filedesc}}==\n{{Information\n|description={{Multilingual description|en=Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.|es=Fresco de Jesús, la Virgen María y José en la Capilla de la Inmaculada Concepción por Marcus Dubois. La Basílica de Santa Ana de Beaupré (en francés: Sainte-Anne-de-Beaupré) es una basílica junto al Río San Lorenzo, 30 km al este de la ciudad de Quebec. Está acreditada por la Iglesia Católica con muchos milagros de curas de enfermedades. Es un importante santuario del catolicismo, con cerca de medio millón de peregrinos que la visitan cada año. El periodo de mayor número de visitas es el 26 de julio, el día de la fiesta de Santa Ana, santa patrona de Quebec, junto con San Juan Bautista.|fr=Fresque de Jesus, la vierge Marie et Joseph dans la chapelle de l'Immaculée Conception par Marcus Dubois- Basilique de Sainte-Anne-de-Beaupré. La basilique Sainte-Anne-de-Beaupré est une église catholique située à Sainte-Anne-de-Beaupré, non loin de la ville de Québec (Canada). Lieu de pèlerinage, le principal rassemblement survient le 26 juillet, lors de la fête de sainte Anne, patronne civile et ecclésiastique du Québec, et point culminant de la neuvaine. Elle possède trois reliques insignes de la sainte Mère de la Vierge Marie. Cette basilique a aussi été désignée sanctuaire national par la Conférence des évêques catholiques du Canada, comme seulement une poignée d'autres sites.|pt=Fresco de Jesus Virgem Maria e José na Capela da Imaculada Conceição por Marcus Dubois. A Basílica de Sainte-Anne-de-Beaupré é uma basílica situada ao longo do rio Saint Lawrence, em Quebec, Canadá, 30 quilômetros (19 mi) a leste da cidade de Quebec, e um dos cinco santuários nacionais do Canadá. Foi creditado pela Igreja Católica com muitos milagres de curar doentes e deficientes. É um importante santuário católico, que recebe anualmente cerca de meio milhão de peregrinos. Desde 1933 incluem membros da Peregrinação Anna Fusco de Connecticut, Estados Unidos da América. O pico do período de peregrinação é por volta de 26 de julho, a festa de Santa Ana, padroeira dos marinheiros.|ru=Фреска Иисуса Девы Марии и Иосифа в часовне Непорочного зачатия Маркуса Дюбуа. Базилика Сент-Анн-де-Бопре — базилика, расположенная вдоль реки Святого Лаврентия в Квебеке, Канада, в 30 километрах (19 миль) к востоку от Квебека и одна из пяти национальных святынь Канады. Католическая церковь приписывает ему множество чудес исцеления больных и инвалидов. Это важное католическое святилище, которое ежегодно принимает около полумиллиона паломников. С 1933 года в их число входят члены паломничества Анны Фуско из Коннектикута, Соединенные Штаты Америки. Пик паломничества приходится на 26 июля, праздник Святой Анны, покровительницы моряков.|zh=马库斯·杜波依斯在圣母玛利亚耶稣和约瑟夫圣殿的圣堂中饰演的弗雷斯科. 圣安内-德-博普雷的巴西利卡(Basilica of Sainte-Anne-de-Beaupré)是加拿大魁北克省圣劳伦斯河沿岸的一座巴西利卡地块,位于魁北克市以东30公里(19米),也是加拿大五座国家圣殿之一. 它被天主教会誉为许多治愈病人和残疾人的奇迹. 它是一个重要的天主教圣地,每年接待约50万朝圣者. 从1933年起,他们包括了来自美国康涅狄格州的安娜·弗斯科朝圣会的成员. 朝圣的高峰期为7月26日左右,是水手的守护圣人圣安的宴会.|de=Fresco von Jesus die Jungfrau Maria und Joseph in der Kapelle der Unbefleckten Empfängnis von Marcus Dubois. Die Basilika Sainte-Anne-de-Beaupré ist eine Basilika entlang des Flusses Saint Lawrence in Quebec, Kanada, 30 km östlich von Quebec City, und einer der fünf nationalen Heiligtümer Kanadas. Es wurde von der katholischen Kirche mit vielen Wundern der Heilung der Kranken und Behinderten gutgeschrieben. Es ist ein wichtiges katholisches Heiligtum, das jährlich etwa eine halbe Million Pilger erhält. Seit 1933 haben sie Mitglieder der Anna Fusco Pilgerfahrt aus Connecticut, USA, aufgenommen. Die höchste Zeit der Pilgerfahrt ist um den 26. Juli, das Fest der Heiligen Anne, der Schutzpatron der Seeleute.}}\n|date=2022-04-18 11:31:33\n|source={{own}}\n|Author=Marcus Dubois. Photography by {{Creator:Wilfredo Rafael Rodriguez Hernandez}}\n|Permission=\n}}\n{{Location|47.023976|-70.928607}}\n{{QCWC-Z7II}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:WikiClub Québec: Registre des églises et objets historiques 2022]]\n[[Category:Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor]]\n[[Category:Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project]]\n[[Category:Paintings of the Basilica of Sainte-Anne-de-Beaupré]]\n[[Category:Holy Family in art]]\n[[Category:Quality images supported by Wikimedia Canada]]\n[[Category:Quality images by Wilfredor]]\n{{QualityImage}}\n{{VI|[[:Category:Mosaics of the Basilica of Sainte-Anne-de-Beaupré|Mosaics of the Basilica of Sainte-Anne-de-Beaupré]]|00:18, 10 July 2022 (UTC)|\nsubpage=Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg}}[[Category:Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022]]\n[[Category:2022 in Quebec]][[Category:Images of Canada by User:Wilfredor]]\n[[Category:Quality images of paintings in Canada]]\n[[Category:Madonna and child by Wilfredor]]\n[[Category:Christianity by Wilfredor]]\n[[Category:Photographs of paintings by Wilfredor]]"
+  },
+  "query": {
+   "pages": [
+    {
+     "pageid": 119891572,
+     "ns": 6,
+     "title": "File:Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07.jpg",
+     "imagerepository": "local",
+     "imageinfo": [
+      {
+       "timestamp": "2025-11-28T23:18:30Z",
+       "user": "Wilfredor",
+       "size": 11464944,
+       "width": 3529,
+       "height": 4950,
+       "comment": "Adding geolocation",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_07.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=119891572",
+       "sha1": "a734908326e1cc1276a607587745ed54884ae0d9",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2025-11-28 23:18:30",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Holy Family in art|Self-published work|Files with coordinates missing SDC location of creation|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "quality|valued",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:31:33",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      },
+      {
+       "timestamp": "2022-07-04T18:53:37Z",
+       "user": "Wilfredor",
+       "size": 11464846,
+       "width": 3529,
+       "height": 4950,
+       "comment": "remove noise reduction and fix exposition",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20251128231828%21Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_07.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=119891572",
+       "sha1": "17f017c8616c5be51d5c04482837ac675fb038b3",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2022-07-04 18:53:37",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Holy Family in art|Self-published work|Files with coordinates missing SDC location of creation|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "quality|valued",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:31:33",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      },
+      {
+       "timestamp": "2022-06-29T12:01:04Z",
+       "user": "Wilfredor",
+       "size": 12462519,
+       "width": 3529,
+       "height": 4950,
+       "comment": "Uploaded own work with UploadWizard",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20220704185335%21Basilique_Sainte-Anne-de-Beaupr%C3%A9%2C_Queb%C3%A9c%2C_Canada_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+       "descriptionurl": "https://commons.wikimedia.org/wiki/File:Basilique_Sainte-Anne-de-Beaupr%C3%A9,_Queb%C3%A9c,_Canada_07.jpg",
+       "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=119891572",
+       "sha1": "8e22757b102462d11991b0619a5341bb59642341",
+       "extmetadata": {
+        "DateTime": {
+         "value": "2022-06-29 12:01:04",
+         "source": "mediawiki-metadata",
+         "hidden": ""
+        },
+        "ObjectName": {
+         "value": "Basilique Sainte-Anne-de-Beaupré, Quebéc, Canada 07",
+         "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+         "value": 1.2,
+         "source": "extension",
+         "hidden": ""
+        },
+        "Categories": {
+         "value": "2022 in Quebec|CC-Zero|Holy Family in art|Self-published work|Files with coordinates missing SDC location of creation|Media created with Nikon Z7ii provided by the Quebec WikiClub in 2022|Paintings of the Basilica of Sainte-Anne-de-Beaupré|Media created with Nikon Z7ii provided by the Quebec WikiClub|Photographs of paintings by Wilfredor|Christianity by Wilfredor|Images of Canada by User:Wilfredor|Images of Basilica of Sainte-Anne-de-Beaupré from Discovery of our ancestral heritage Project|Photographs of Basilica of Sainte-Anne-de-Beaupré by Wilfredor|WikiClub Québec: Registre des églises et objets historiques 2022|Madonna and child by Wilfredor",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "Assessments": {
+         "value": "quality|valued",
+         "source": "commons-categories",
+         "hidden": ""
+        },
+        "GPSLatitude": {
+         "value": "47.023976",
+         "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+         "value": "-70.928607",
+         "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+         "value": "WGS-84",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "ImageDescription": {
+         "value": "Fresco of Jesus the Virgin Mary and Joseph in the Chapel of the Immaculate Conception by Marcus Dubois. The Basilica of Sainte-Anne-de-Beaupré is a basilica set along the Saint Lawrence River in Quebec, Canada, 30 kilometres (19 mi) east of Quebec City, and one of the five national shrines of Canada. It has been credited by the Catholic Church with many miracles of curing the sick and disabled. It is an important Catholic sanctuary, which receives about a half-million pilgrims each year. Since 1933 they have included members of the Anna Fusco Pilgrimage from Connecticut, United States of America. The peak period of pilgrimage is around July 26, the feast of Saint Anne, the patron saint of sailors.",
+         "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+         "value": "2022-04-18 11:31:33",
+         "source": "commons-desc-page"
+        },
+        "Credit": {
+         "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+         "source": "commons-desc-page"
+        },
+        "Artist": {
+         "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+         "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+         "value": "CC0",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "UsageTerms": {
+         "value": "Creative Commons Zero, Public Domain Dedication",
+         "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+         "value": "false",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "LicenseUrl": {
+         "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+         "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+         "value": "True",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "Restrictions": {
+         "value": "",
+         "source": "commons-desc-page",
+         "hidden": ""
+        },
+        "License": {
+         "value": "cc0",
+         "source": "commons-templates",
+         "hidden": ""
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
