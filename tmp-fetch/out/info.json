@@ -1,0 +1,45 @@
+{
+ "images": {
+  "virgin-of-the-rocks": {
+   "title": "File:Leonardo Da Vinci - Vergine delle Rocce (Louvre).jpg",
+   "width": 3460,
+   "height": 5487,
+   "bytes": 7057896,
+   "mime": "image/jpeg",
+   "sha1": "14d3eed789e4a45c1de84deac587e9b1ac41d172",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg",
+   "author": "Leonardo da Vinci",
+   "licence": "Public domain",
+   "credit": "gallerix.ru",
+   "date": "between 1483 and 1486 date QS:P571,+1483-00-00T00:00:00Z/8,P1319,+1483-00-00T00:00:00Z/9,P1326,+1486-00-00T00:00:00Z/9",
+   "exifOrientation": 1,
+   "orientedSize": [
+    3460,
+    5487
+   ],
+   "hasIcc": false
+  },
+  "virgin-and-child-with-saint-anne": {
+   "title": "File:La Vierge, l'Enfant Jésus et sainte Anne, by Leonardo da Vinci, from C2RMF.jpg",
+   "width": 13972,
+   "height": 18032,
+   "bytes": 81519134,
+   "mime": "image/jpeg",
+   "sha1": "13a31805a2a5407cf8b29a9358446da4c71624bc",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/La_Vierge%2C_l%27Enfant_J%C3%A9sus_et_sainte_Anne%2C_by_Leonardo_da_Vinci%2C_from_C2RMF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:La_Vierge,_l%27Enfant_J%C3%A9sus_et_sainte_Anne,_by_Leonardo_da_Vinci,_from_C2RMF.jpg",
+   "author": "Centre de recherche et de restauration des musées de France (C2RMF)",
+   "licence": "Public domain",
+   "credit": "C2RMF: Galerie de tableaux en très haute définition : image page",
+   "date": "",
+   "exifOrientation": 1,
+   "orientedSize": [
+    13972,
+    18032
+   ],
+   "hasIcc": false
+  }
+ },
+ "crops": []
+}
