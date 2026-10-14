@@ -22,4 +22,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg",
   "virgin-and-child-with-saint-anne":
     "https://commons.wikimedia.org/wiki/File:The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci,_Louvre.jpg",
+  "wedding-feast-at-cana":
+    "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg",
 };

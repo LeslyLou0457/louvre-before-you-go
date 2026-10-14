@@ -87,6 +87,22 @@ const AVATARS: Record<string, Drawing> = {
       </>
     ),
   },
+  veronese: {
+    head: (
+      <>
+        <ellipse cx="32" cy="31" rx="13" ry="15" fill="#f7b89a" />
+        <path d="M18 26 Q18 12 32 12 Q46 12 46 26 Q40 19 32 19.5 Q24 19 18 26 Z" fill="#3a2a20" />
+        <path d="M19 33 Q20 55 32 57 Q44 55 45 33 Q41 43 32 43 Q23 43 19 33 Z" fill="#3a2a20" />
+        <ellipse cx="32" cy="32" rx="2.8" ry="4.3" fill="#7b62c9" />
+      </>
+    ),
+    eyes: (
+      <>
+        <circle cx="26.5" cy="27" r="1.7" fill={INK} />
+        <circle cx="37.5" cy="27" r="1.7" fill={INK} />
+      </>
+    ),
+  },
   // Doodled object (ink line + a crayon touch), for an artwork that speaks.
   // Only a `head` layer: the whole object lifts and chatters when it speaks.
   "marble-block": {

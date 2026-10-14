@@ -1,0 +1,348 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "wedding-feast-at-cana",
+    "title": "The Wedding Feast at Cana",
+    "artist": "Paolo Caliari, called Veronese",
+    "year": "1562–1563",
+    "image": "/images/wedding-feast-at-cana.jpg",
+    "imageCredit": "Photo: Shonagon, 2024, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "677 × 994 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064382"
+  },
+  "speakers": {
+    "veronese": {
+      "name": "Paolo Veronese",
+      "kind": "artist",
+      "avatar": "veronese"
+    }
+  },
+  "lessons": [
+    {
+      "id": "wedding-feast-at-cana-1",
+      "order": 1,
+      "title": "A miracle at a Venetian party",
+      "start": "n1",
+      "narrator": "veronese",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "The Mona Lisa shares her room with a party almost 10 metres wide. About 130 people are eating, drinking, serving and making music. Find your way in before you ask what it means.",
+          "voice": {
+            "speaker": "veronese",
+            "kind": "quote",
+            "text": "I paint and make figures.",
+            "cite": "Veronese before the Inquisition, Venice, 18 July 1573 (trans. P. H. D. Kaplan, in E. C. Childs (ed.), Suspended License, 1997, p. 108); the same words in the 1963 Thames and Hudson translation",
+            "source": "https://www.laphamsquarterly.org/node/4311"
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where did your eye land first?",
+          "choices": [
+            {
+              "label": "Christ, at the centre",
+              "next": "b1a"
+            },
+            {
+              "label": "The band in front",
+              "next": "b1b"
+            },
+            {
+              "label": "A man checking his wine",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Most people find him fast. Christ sits at the centre of the table with his mother Mary beside him, a calm point in the middle of all that noise.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Good eye. A band plays in the foreground, just below Christ. Hold on to them: an old tradition says they're painters.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "You found the plot. Somewhere in the crowd a man holds up a glass to look at the wine, wine that a moment ago, in the story, was water.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "It's the Gospel wedding at Cana. The wine ran out, Jesus had the servants fill the jars with water, and the man running the feast tasted wine. Veronese dressed the story as a party of his own day.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "So where did this huge canvas first hang?",
+          "choices": [
+            {
+              "label": "Over a church altar",
+              "next": "b2a"
+            },
+            {
+              "label": "In a monastery's dining hall",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "In a palace banquet hall",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "A natural guess for a Gospel scene, but no: it was never an altarpiece.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It's a miracle from the Gospels, and it's enormous, so the altar of a church feels like its natural home.",
+            "truth": "Benedictine monks of San Giorgio Maggiore in Venice ordered it in 1562 for their refectory, the monastery's dining hall.",
+            "evidence": "The Louvre's record: painted 1562-1563 for the Benedictines' refectory. The Cini Foundation: it filled the refectory's entire rear wall."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. In 1562 the Benedictine monks of San Giorgio Maggiore, an island in Venice, ordered it for their refectory: the dining hall designed by Andrea Palladio. It filled the whole end wall.",
+          "voice": {
+            "speaker": "veronese",
+            "kind": "imagined",
+            "text": "The Benedictines of San Giorgio ordered it in 1562, for the end wall of the hall where they ate."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "It does look like a nobleman's party, but no.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Not quite",
+            "tempting": "Columns, silks, servants and a band: everything says rich Venetian host, so a palace banquet hall seems obvious.",
+            "truth": "It was painted for monks: the Benedictines of San Giorgio Maggiore, for the dining hall of their monastery.",
+            "evidence": "The Louvre's record and the Cini Foundation both place it in the San Giorgio refectory; Rmn-Grand Palais adds that Palladio built the room."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "So the monks ate their meals facing a painted banquet: about seventy square metres of canvas across the end wall of their dining hall.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "He painted it in 1562 and 1563, with costly pigments. X-rays taken for the restoration that ended in 1992 show him changing his mind as he worked: figures altered, moved, even added.",
+          "voice": {
+            "speaker": "veronese",
+            "kind": "quote",
+            "text": "... if in a picture space is provided I adorn it with figures",
+            "cite": "Veronese before the Inquisition, Venice, 18 July 1573, about another feast (trans. P. H. D. Kaplan, in E. C. Childs (ed.), Suspended License, 1997, p. 110)",
+            "source": "https://warwick.ac.uk/fac/arts/ren/jhu/summerschool2019/reading/day_2-paul_kaplan_veronese_and_the_inquisition._the_geopolitcal_context.pdf"
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Now look straight down the middle. Above Christ's head, behind the balustrade, a servant is carving meat. Below Christ, on the musicians' table, stands an hourglass.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Two scholars link the hourglass to one line of John's story. Which?",
+          "choices": [
+            {
+              "label": "‘Thou hast kept the good wine until now’",
+              "next": "b3a"
+            },
+            {
+              "label": "‘Mine hour is not yet come’",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "‘Fill the waterpots with water’",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "A real line from the story, and the one everyone remembers, but not this one.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Wine is the whole miracle, and the steward's praise of the good wine is the story's punchline.",
+            "truth": "Rosand and Bassano link the hourglass to John 2:4, Jesus telling Mary 'mine hour is not yet come'.",
+            "evidence": "Hanson (2010), citing Rosand (1997); Bassano, Historic Brass Society Journal (1994): 'The hourglass is a reference to John 2: 4'."
+          },
+          "next": "n5"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. In the story Mary tells Jesus the wine has run out, and he answers, 'mine hour is not yet come'. David Rosand and Peter Bassano both read the hourglass as that hour.",
+          "next": "n5"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "The jars are in the story, but the hourglass points elsewhere.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The water jars are the heart of the miracle, and servants are busy all over the canvas.",
+            "truth": "Rosand and Bassano link the hourglass to John 2:4, Jesus telling Mary 'mine hour is not yet come'.",
+            "evidence": "Hanson (2010), citing Rosand (1997); Bassano, Historic Brass Society Journal (1994): 'The hourglass is a reference to John 2: 4'."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "That's a reading, not a label. Rosand sees carver, Christ and hourglass lined up as a hint of the sacrifice to come. Hornik and Parsons ask whether the carved meat recalls the 'Lamb of God'.",
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "Back to the band. Since the 17th century a tradition has named four of them as famous painters, with Veronese himself as the player in white, holding a viol.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "So is the band really four famous painters?",
+          "choices": [
+            {
+              "label": "Yes, all four",
+              "next": "b4a"
+            },
+            {
+              "label": "Veronese and Titian, not the other two",
+              "next": "b4b"
+            },
+            {
+              "label": "Experts disagree",
+              "next": "b4c",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "That's the tradition, but it isn't settled.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Not settled",
+            "tempting": "It's a lovely story, told for centuries, and it would put four famous painters in one band.",
+            "truth": "The names come from a 17th-century tradition. One study doubts two of them; the Louvre's 1992 study set the old identifications aside as undocumented.",
+            "evidence": "Bassano (1994) on the tradition and its doubts; Waźbiński (1995), reviewing Habert and Volle's 1992 Louvre book on the painting."
+          },
+          "next": "n6"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "That's one serious position, not a settled fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A 1994 study matches the man in white to an engraving of Veronese, and another player to Titian's late self-portrait.",
+            "truth": "That's Bassano's argument. The Louvre's 1992 study went further, naming only a few figures and setting the old identifications aside as undocumented.",
+            "evidence": "Bassano, Historic Brass Society Journal 6 (1994), p. 12; Waźbiński's 1995 review of Habert and Volle (1992)."
+          },
+          "next": "n6"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Right. The names come from a 17th-century tradition. A 1994 study backs Veronese and Titian but doubts the other two; the Louvre's 1992 study set the old identifications aside as undocumented.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Whoever they are, the band plays in the foreground right below Christ, at the heart of the feast. Who they were is still an open question.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "The canvas hung with the monks for more than two centuries. In 1797 Napoleon's troops took it; it was cut or torn as it came down, rolled up, and reached the Louvre in 1798.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "In 1815 most looted paintings went back to Italy. Why not this one?",
+          "choices": [
+            {
+              "label": "It had been cut apart",
+              "next": "b5a"
+            },
+            {
+              "label": "It was judged too fragile to travel",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "France had bought it from Venice",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "It really was damaged in 1797, but that wasn't the reason given.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The canvas was cut or torn when it came off the wall in 1797, so old damage sounds like the reason.",
+            "truth": "In 1815 the worry was the journey back: the huge canvas was judged too fragile to be returned to Venice.",
+            "evidence": "The Louvre: 'it was feared that the return journey would damage this large work'. Factum's 2008 paper: judged 'too fragile to be returned'."
+          },
+          "next": "n7"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Right. After Napoleon's fall the canvas was judged too fragile for the trip home, so it stayed in Paris, and Venice was given a feast painted by Charles Le Brun instead.",
+          "next": "n7"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "It was never bought.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Not quite",
+            "tempting": "It has hung in Paris for more than two centuries, in the Mona Lisa's room, so it feels like a purchase.",
+            "truth": "It was taken by force: the Louvre records its acquisition as 'military conquest', 1798.",
+            "evidence": "Louvre record: 'conquête militaire'. Cini Foundation: seized in 1797 'as war reparations'. Hornik and Parsons: 'confiscated'."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "Paris kept Veronese's feast and moved it to safety in the wars of 1870 and 1939-45. Since 2007 a full-size facsimile by Factum Arte has filled the monks' wall again. So, in room 711: a Gospel miracle staged as a Venetian banquet."
+        }
+      },
+      "takeaway": "A Gospel miracle staged as a Venetian banquet for monks to dine facing: Christ at the centre, a band below him that tradition calls painters, and an hourglass for his hour.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010064382",
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+        "https://louvre.fr/en/explore/visitor-trails/beyonce-and-jay-z-s-louvre-highlights/the-wedding-feast-at-cana",
+        "https://www.cini.it/en/?p=89200",
+        "https://www.cini.it/en/?p=513",
+        "https://factumfoundation.org/wp-content/uploads/Returning_Les_Noces_de_Cana_2008.pdf",
+        "https://www.historynewsnetwork.org/article/43256",
+        "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+        "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf",
+        "https://bazhum.muzhp.pl/media/texts/ochrona-zabytkow/1995-tom-48-numer-2-189/ochrona_zabytkow-r1995-t48-n2_189-s239-240.pdf",
+        "https://www.christiancentury.org/artsculture/on-art/wedding-cana-paolo-veronese",
+        "https://www.nybooks.com/articles/2021/10/21/veronese-wedding-feast-napoleons-greatest-trophy/",
+        "https://www.washingtonindependentreviewofbooks.com/bookreview/plunder",
+        "https://kirkusreviews.com/book-reviews/cynthia-saltzman/plunder-theft/print",
+        "https://artsandculture.google.com/asset/7AEwlrXUn2yPcw",
+        "https://www.larousse.fr/encyclopedie/peinture/V%C3%A9ron%C3%A8se/154806",
+        "https://warwick.ac.uk/fac/arts/ren/jhu/summerschool2019/reading/day_2-paul_kaplan_veronese_and_the_inquisition._the_geopolitcal_context.pdf",
+        "https://www.laphamsquarterly.org/node/4311",
+        "https://smarthistory.org/?p=4599",
+        "https://www.biblegateway.com/passage/?search=John+2%3A1-11&version=KJV",
+        "P. H. D. Kaplan, 'Veronese and the Inquisition: The Geopolitical Context', in E. C. Childs (ed.), Suspended License: Censorship and the Visual Arts (Seattle and London: University of Washington Press, 1997), appendix pp. 108–112: translation of the record of 18 July 1573"
+      ]
+    }
+  ]
+}

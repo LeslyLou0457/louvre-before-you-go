@@ -1,0 +1,339 @@
+{
+  "artworkId": "wedding-feast-at-cana",
+  "zoomImage": {
+    "file": "Les Noces de Cana - Paolo Veronese - Musée du Louvre Peintures INV 142 ; MR 384.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg",
+    "width": 10068,
+    "height": 6742,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "Photo: Shonagon, 2024, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/wedding-feast-at-cana/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "wedding-feast-at-cana-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: the band and the carver",
+      "narrator": "veronese",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.355,
+            "y": 0.66,
+            "w": 0.26,
+            "h": 0.29,
+            "label": "The foreground band: the player in white with his viol, left, beside the musicians' table",
+            "image": "/images/challenge/wedding-feast-at-cana/c1.jpg"
+          },
+          "text": "Level one: a tradition says the band are painters. Zoom in on the player in white, at the front, with his viol.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.355,
+            "y": 0.66,
+            "w": 0.26,
+            "h": 0.29,
+            "label": "The foreground band: the player in white with his viol, left, beside the musicians' table",
+            "image": "/images/challenge/wedding-feast-at-cana/c1.jpg"
+          },
+          "text": "Which painter does the old tradition see in him?",
+          "choices": [
+            {
+              "label": "Veronese himself",
+              "role": "right",
+              "next": "c1a",
+              "correct": true
+            },
+            {
+              "label": "Titian",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "Tintoretto",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Peter Bassano (Head of Brass, Royal College of Music), 'A Second Miracle at Cana: Recent Musical Discoveries in Veronese's Wedding Feast', Historic Brass Society Journal 6 (1994), pp. 11-18",
+              "url": "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf"
+            },
+            {
+              "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+              "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html"
+            },
+            {
+              "title": "Zygmunt Waźbiński, review of J. Habert and N. Volle, Les Noces de Cana de Véronèse. Une œuvre et sa restauration (Paris, RMN, 1992), Ochrona Zabytków 48/2 (1995), pp. 239-240 (Polish; our translations)",
+              "url": "https://bazhum.muzhp.pl/media/texts/ochrona-zabytkow/1995-tom-48-numer-2-189/ochrona_zabytkow-r1995-t48-n2_189-s239-240.pdf"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "The man in white is Veronese by tradition: a lovely story, still argued over."
+        },
+        "c1a": {
+          "text": "Yes. The 17th-century tradition makes him Veronese, painting himself into his own feast. Bassano backs it; the Louvre's 1992 study called the old names undocumented.",
+          "type": "branch",
+          "next": "c1m"
+        },
+        "c1b": {
+          "text": "Titian is in the tradition's band, but not in white.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Titian is the biggest name in the tradition's band, so he seems the obvious guess.",
+            "truth": "The tradition places Titian elsewhere in the band; the player in white is the one it calls Veronese.",
+            "evidence": "Bassano (1994), quoting the 1674 source: the one in white with the viola is Paolo himself. Hanson (2010): 'Veronese in white'."
+          },
+          "type": "branch",
+          "next": "c1m"
+        },
+        "c1c": {
+          "text": "Tintoretto is in the tradition too, just not in white.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Tintoretto is one of the tradition's four names, so he's a fair guess.",
+            "truth": "The tradition calls the player in white Veronese; Tintoretto is said to be another player, and even that is doubted.",
+            "evidence": "Bassano (1994), citing Richard Cocke, doubts the Tintoretto name. Hanson (2010): 'Veronese in white'."
+          },
+          "type": "branch",
+          "next": "c1m"
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.46,
+            "y": 0.4,
+            "w": 0.1,
+            "h": 0.225,
+            "label": "Behind the balustrade, directly above Christ's haloed head",
+            "image": "/images/challenge/wedding-feast-at-cana/c2.jpg"
+          },
+          "text": "Level one: carver, Christ and hourglass share one line. Here's the top of it, just above Christ's head, behind the balustrade.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.46,
+            "y": 0.4,
+            "w": 0.1,
+            "h": 0.225,
+            "label": "Behind the balustrade, directly above Christ's haloed head",
+            "image": "/images/challenge/wedding-feast-at-cana/c2.jpg"
+          },
+          "text": "What is the man up here doing?",
+          "choices": [
+            {
+              "label": "Pouring the new wine",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Carving meat",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "Playing music",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+              "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html"
+            },
+            {
+              "title": "Mikeal C. Parsons and Heidi J. Hornik (Baylor University), 'Wedding at Cana, by Paolo Veronese', The Christian Century, 6 Jan 2016 issue ('On Art')",
+              "url": "https://www.christiancentury.org/artsculture/on-art/wedding-cana-paolo-veronese"
+            },
+            {
+              "title": "Peter Bassano (Head of Brass, Royal College of Music), 'A Second Miracle at Cana: Recent Musical Discoveries in Veronese's Wedding Feast', Historic Brass Society Journal 6 (1994), pp. 11-18",
+              "url": "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Carver above, Christ in the middle, hourglass below: one line, and one well-known reading."
+        },
+        "c2a": {
+          "text": "The new wine is in the picture, but not up here.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The new wine is the miracle, so a servant with a jug feels like the right guess.",
+            "truth": "Above Christ's head a servant chops meat; the new wine is tasted elsewhere, down in the crowd.",
+            "evidence": "Hanson (2010): a carver 'chops lamb' above Christ's head. Hornik and Parsons (2016): a servant 'slices meat' behind Christ."
+          },
+          "type": "branch",
+          "next": "c2m"
+        },
+        "c2b": {
+          "text": "Yes. A servant chops meat right above Christ's head. Rosand reads the carver-to-hourglass line as a hint of sacrifice; Hornik and Parsons ask, 'Lamb of God?'",
+          "type": "branch",
+          "next": "c2m"
+        },
+        "c2c": {
+          "text": "The music is lower down, in the foreground.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The band sits on the same central line, so music up here would fit the pattern.",
+            "truth": "The band plays in the foreground below Christ; up here, behind the balustrade, a servant carves meat.",
+            "evidence": "Bassano (1994): the musicians in the foreground, below Christ. Hanson, and Hornik and Parsons: meat carved above and behind Christ."
+          },
+          "type": "branch",
+          "next": "c2m"
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "q4",
+          "b1b",
+          "n5b",
+          "n6"
+        ],
+        "concept": "The band and the 17th-century tradition that names them as painters"
+      },
+      "framing": "tradition-and-debate",
+      "what_you_learn": "The player in white is the one the 17th-century tradition calls Veronese; Titian and Tintoretto are other players in that tradition, and the identifications are debated.",
+      "regionSources": [
+        {
+          "title": "Peter Bassano (Head of Brass, Royal College of Music), 'A Second Miracle at Cana: Recent Musical Discoveries in Veronese's Wedding Feast', Historic Brass Society Journal 6 (1994), pp. 11-18",
+          "url": "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf",
+          "quote": "In the foreground ... there is a group of five musicians",
+          "supports": "Places the band in the foreground (p. 11); note 1 quotes Boschini: the fourth, in white, playing the viola, is Paolo himself.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+        },
+        {
+          "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+          "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+          "quote": "the four musicians have been identified as Veronese in white",
+          "supports": "The player in white is the one the tradition calls Veronese.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+        }
+      ],
+      "choiceSources": {
+        "c1b": [
+          {
+            "title": "Peter Bassano (Head of Brass, Royal College of Music), 'A Second Miracle at Cana: Recent Musical Discoveries in Veronese's Wedding Feast', Historic Brass Society Journal 6 (1994), pp. 11-18",
+            "url": "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf",
+            "quote": "In 1674 Marco Boschini identified four of the musicians as painters, the so called \"Circle of Gold\"",
+            "supports": "The tradition puts Titian in the band (p. 12); note 1: the one in white with the viola is Paolo himself.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          },
+          {
+            "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+            "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+            "quote": "the four musicians have been identified as Veronese in white",
+            "supports": "The man in white is Veronese in the tradition, not Titian.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Peter Bassano (Head of Brass, Royal College of Music), 'A Second Miracle at Cana: Recent Musical Discoveries in Veronese's Wedding Feast', Historic Brass Society Journal 6 (1994), pp. 11-18",
+            "url": "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf",
+            "quote": "Boschini is wrong in identifying the violinist as Tintoretto",
+            "supports": "Bassano (p. 12), citing Richard Cocke: Tintoretto is another player in the tradition, and doubted.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          },
+          {
+            "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+            "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+            "quote": "the four musicians have been identified as Veronese in white",
+            "supports": "The man in white is Veronese in the tradition, not Tintoretto.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          }
+        ]
+      },
+      "confidence": "Medium-high: two sources place the white-clad player in the foreground band and report the tradition; the tradition itself is contested (merge line says so).",
+      "notes": "From the approved plan (content-plans/chapter-09/PLAN-cana.html, plan-cana.json); claims C13, C24, C25, C26. Check the crop shows one clearly white-clad viol player; the 'man in white' and his instrument must be unmistakable at ~1200 px.",
+      "quoteCheck": "2026-10-14: quotations as recorded in the plan (WebFetch, short quotations); Polish passages are the plan's own translations.",
+      "cropCheck": "2026-10-14: box measured on the full reference image (Shonagon's 2024 photo, 10068 x 6742, after the 1992 restoration); crop checked by eye at full size against the region the sources describe. Shows the foreground band: the bald, bearded player in white silk with his viol and bow (left), the players behind him, the musicians' table with the hourglass and partbook, and the violone in front of the player in red (right edge)."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n4",
+          "n5"
+        ],
+        "concept": "The central line of carver, Christ and hourglass, and the sacrifice reading"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "At the top of the central line, behind the balustrade above Christ's head, a servant carves meat; Rosand reads the line as a hint of sacrifice, Hornik and Parsons ask about the Lamb of God.",
+      "regionSources": [
+        {
+          "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+          "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+          "quote": "a carver busily chops lamb ... above the balustrade and Christ's head",
+          "supports": "Places the carver above the balustrade and Christ's head.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+        },
+        {
+          "title": "Mikeal C. Parsons and Heidi J. Hornik (Baylor University), 'Wedding at Cana, by Paolo Veronese', The Christian Century, 6 Jan 2016 issue ('On Art')",
+          "url": "https://www.christiancentury.org/artsculture/on-art/wedding-cana-paolo-veronese",
+          "quote": "Directly behind Christ in the background, a servant slices meat",
+          "supports": "Same place, independently.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+            "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+            "quote": "a carver busily chops lamb ... above the balustrade and Christ's head",
+            "supports": "Above Christ's head a carver chops meat, not wine.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          },
+          {
+            "title": "Mikeal C. Parsons and Heidi J. Hornik (Baylor University), 'Wedding at Cana, by Paolo Veronese', The Christian Century, 6 Jan 2016 issue ('On Art')",
+            "url": "https://www.christiancentury.org/artsculture/on-art/wedding-cana-paolo-veronese",
+            "quote": "A surprised nobleman, standing behind the servant, examines a glass of wine (John 2:9-10).",
+            "supports": "The new wine is examined down in the crowd.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Peter Bassano (Head of Brass, Royal College of Music), 'A Second Miracle at Cana: Recent Musical Discoveries in Veronese's Wedding Feast', Historic Brass Society Journal 6 (1994), pp. 11-18",
+            "url": "https://test.historicbrass.org/edocman/hbj-1994/HBSJ_1994_JL01_002_Bassano.pdf",
+            "quote": "In the foreground ... there is a group of five musicians",
+            "supports": "The band plays in the foreground, below Christ (p. 11).",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          },
+          {
+            "title": "Kate H. Hanson, 'The Language of the Banquet: Reconsidering Paolo Veronese's Wedding at Cana', InVisible Culture 14 (University of Rochester, 2010); cites D. Rosand, Painting in Cinquecento Venice (Cambridge UP, 1997), p. 122, and the contract as printed in J. Habert, Arte Veneta 44 (1993), pp. 89-90",
+            "url": "https://www.rochester.edu/in_visible_culture/Issue_14/hanson/index.html",
+            "quote": "central axis of the carver, Christ's head, and an hourglass (on the musicians' table)",
+            "supports": "The musicians' table is at the bottom of the axis; the carver at the top.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026; plan-cana.json)"
+          }
+        ]
+      },
+      "confidence": "High for the region (two independent sources place the carver above/behind Christ); the meaning stays an attributed reading.",
+      "notes": "From the approved plan (content-plans/chapter-09/PLAN-cana.html, plan-cana.json); claims C12, C13, C14, C15, C17. Check the carver and his knife/meat read clearly in the crop and that he is directly above Christ in the chosen photo. The crop's label (also its alt text and caption) names only the place, not what the man is doing, so it doesn't give the answer away.",
+      "quoteCheck": "2026-10-14: quotations as recorded in the plan (WebFetch, short quotations); Polish passages are the plan's own translations.",
+      "cropCheck": "2026-10-14: box measured on the full reference image (Shonagon's 2024 photo); crop checked by eye at full size against the region the sources describe. Shows the servant in green behind the balustrade raising a cleaver over meat laid on the balustrade, with Christ's haloed head (down to his eyes) at the bottom edge, directly below him (x about 0.50 in both). The level's n4 line also checked: carver, Christ's head and the hourglass on the musicians' table sit on one vertical line (x about 0.50)."
+    }
+  }
+}
