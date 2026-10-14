@@ -37,8 +37,24 @@ export function isOffView(w: Pick<BookWork, "display">): boolean {
 
 export type Progress = {
   completed: Set<string>;
+  /** Saved places of levels and close-up rounds, by lesson id. */
   places: Record<string, SavedPlace | null>;
+  /** Close-up rounds: how many times each has been finished. */
+  plays: Record<string, number>;
 };
+
+/**
+ * A work's close-up round (PRODUCT.md "Close-ups per work"): it opens as soon
+ * as the work's level is met. locked · open (not started) · cont (a saved place) · done.
+ */
+export type RoundState = "locked" | "open" | "cont" | "done";
+
+export function roundState(w: BookWork, p: Progress): RoundState | null {
+  if (!w.round || !w.level) return null;
+  if (p.completed.has(w.round.id)) return p.places[w.round.id] ? "cont" : "done";
+  if (!p.completed.has(w.level.id)) return "locked";
+  return p.places[w.round.id] ? "cont" : "open";
+}
 
 /** A level's state wins over display: a work with a level can always be played. */
 export function workState(w: BookWork, p: Progress): WorkState {

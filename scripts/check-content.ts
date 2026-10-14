@@ -5,6 +5,8 @@
 // Then the Close-Up Challenge files in content/challenge/ (see
 // src/lib/validate-challenge.ts), with each round's reading time.
 // Then the 0.6 catalogue, content/modules.json (see src/lib/validate-modules.ts).
+// Time budgets (src/lib/level-time.ts): every level's slowest path within 7
+// minutes, and each work's level plus its heaviest close-up pair within 10.
 // Runs with plain Node (type stripping), no extra packages.
 
 import fs from "node:fs";
@@ -12,6 +14,9 @@ import path from "node:path";
 import { sortContentFiles, validateContent } from "../src/lib/validate.ts";
 import { validateChallenge, type BaseInfo } from "../src/lib/validate-challenge.ts";
 import { validateCatalogue } from "../src/lib/validate-modules.ts";
+import { LEVEL_TIME_MODEL, levelTime } from "../src/lib/level-time.ts";
+import type { LessonNode } from "../src/lib/types.ts";
+import { isTrailLevel } from "../src/lib/trail.ts";
 
 const root = process.cwd();
 const contentDir = path.join(root, "content");
@@ -23,6 +28,9 @@ const ids = new Set<string>();
 const base = new Map<string, BaseInfo>();
 /** Level lesson id -> its file's artwork.id, for the catalogue's levelId links. */
 const levelArtwork = new Map<string, string>();
+/** Artwork id -> its level's slowest path in seconds, for the per-work budget. */
+const levelWorst = new Map<string, number>();
+const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
 
 for (const file of files) {
   let data: unknown;
@@ -54,11 +62,26 @@ for (const file of files) {
   if (d.artwork?.image && !fs.existsSync(path.join(root, "public", d.artwork.image))) {
     report.warnings.push(`${file}: image ${d.artwork.image} not in public/ (placeholder shown)`);
   }
+  const times: string[] = [];
+  if (!report.errors.length) {
+    for (const l of (d.lessons ?? []) as { id: string; start?: string; nodes?: Record<string, LessonNode> }[]) {
+      const t = l.nodes && l.start ? levelTime(l.nodes, l.start) : null;
+      if (!t) continue;
+      times.push(`        ${l.id}: ${t.screens} screens on the slowest path, ${fmt(t.right)} all right, ${fmt(t.worst)} all wrong`);
+      if (t.worst > LEVEL_TIME_MODEL.capSeconds) {
+        report.errors.push(`${file}: lesson ${l.id} takes ${fmt(t.worst)} on the slowest path (cap ${fmt(LEVEL_TIME_MODEL.capSeconds)})`);
+      } else if (t.right > LEVEL_TIME_MODEL.rightWarnSeconds) {
+        report.warnings.push(`${file}: lesson ${l.id} takes ${fmt(t.right)} with every answer right (aim for about 5:00)`);
+      }
+      if (d.artwork?.id) levelWorst.set(d.artwork.id, Math.max(levelWorst.get(d.artwork.id) ?? 0, t.worst));
+    }
+  }
   report.errors.forEach((m) => console.log(`ERROR ${m}`));
   report.warnings.forEach((m) => console.log(`warn  ${m}`));
   errors += report.errors.length;
   warnings += report.warnings.length;
   if (!report.errors.length) console.log(`ok    ${file}`);
+  times.forEach((t) => console.log(t));
 }
 
 // Close-Up Challenge files.
@@ -95,13 +118,29 @@ for (const file of challengeFiles) {
     console.log(`        play ${t.play}: ${t.pair.join(" + ")}  ${t.right} s all right, ${t.worst} s all wrong`);
   }
   if (report.times.length) {
-    allWorst += Math.max(...report.times.map((t) => t.worst));
-    allRight += Math.max(...report.times.map((t) => t.right));
+    const roundWorst = Math.max(...report.times.map((t) => t.worst));
+    // The 12-minute cap is for the trail's Close-Up Challenge (its five rounds);
+    // rounds of later works open per work in their chapter.
+    const onTrail = [...levelArtwork].some(([lesson, art]) => art === d.artworkId && isTrailLevel(lesson));
+    if (onTrail) {
+      allWorst += roundWorst;
+      allRight += Math.max(...report.times.map((t) => t.right));
+    }
+    // One work: its level plus its close-up round (PRODUCT.md "Three details").
+    const lw = d.artworkId ? levelWorst.get(d.artworkId) : undefined;
+    if (lw !== undefined) {
+      const total = lw + roundWorst;
+      console.log(`        work total (level + heaviest pair, all wrong): ${fmt(total)} (cap ${fmt(LEVEL_TIME_MODEL.workCapSeconds)})`);
+      if (total > LEVEL_TIME_MODEL.workCapSeconds) {
+        console.log(`ERROR ${name}: level plus close-up round can take ${fmt(total)} (cap ${fmt(LEVEL_TIME_MODEL.workCapSeconds)})`);
+        errors++;
+      }
+    }
   }
 }
 if (challengeFiles.length) {
   console.log(
-    `\nClose-Up Challenge, heaviest pair of each round: ${(allRight / 60).toFixed(1)} min all right, ${(allWorst / 60).toFixed(1)} min all wrong (cap 12)`,
+    `\nClose-Up Challenge on the trail, heaviest pair of each round: ${(allRight / 60).toFixed(1)} min all right, ${(allWorst / 60).toFixed(1)} min all wrong (cap 12)`,
   );
   if (allWorst > 720) {
     console.log("ERROR the whole challenge can take more than 12 minutes");

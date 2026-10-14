@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { ContentFile, Level, Speaker } from "./types";
+import { isTrailLevel, TRAIL_LEVEL_IDS } from "./trail";
 import { sortContentFiles, validateContent } from "./validate";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -70,8 +71,20 @@ export type JourneyItem = {
   questionCount: number;
 };
 
+/** The "Start here" trail: the five 0.5 levels in route order (lib/trail). */
+export function getTrailLevels(): Level[] {
+  return TRAIL_LEVEL_IDS.flatMap((id) => getLevels().filter((l) => l.lesson.id === id));
+}
+
+/** The level after this one: on the trail, the next trail level; otherwise none. */
+export function nextTrailLevel(level: Level): Level | undefined {
+  if (!isTrailLevel(level.lesson.id)) return undefined;
+  const trail = getTrailLevels();
+  return trail[trail.findIndex((l) => l.lesson.id === level.lesson.id) + 1];
+}
+
 export function getJourney(): JourneyItem[] {
-  return getLevels().map((l) => ({
+  return getTrailLevels().map((l) => ({
     id: l.lesson.id,
     title: l.lesson.title,
     artworkTitle: l.artwork.title,

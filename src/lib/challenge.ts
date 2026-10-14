@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getLevels } from "./content";
+import { isTrailLevel } from "./trail";
 import type { ChallengeFile, Round, SourceRef, Speaker, StoryNode } from "./types";
 import { sortContentFiles } from "./validate";
 import { validateChallenge, type BaseInfo } from "./validate-challenge";
@@ -58,6 +59,16 @@ export function getRound(id: string): Round | undefined {
   return getRounds().find((r) => r.lesson.id === id);
 }
 
+/** The round of a level's artwork, if it has one. */
+export function getRoundForLevel(levelId: string): Round | undefined {
+  return getRounds().find((r) => r.levelId === levelId);
+}
+
+/** The trail's Close-Up Challenge: the rounds of the five trail levels, in route order. */
+export function getTrailRounds(): Round[] {
+  return getRounds().filter((r) => isTrailLevel(r.levelId));
+}
+
 /** Challenge summary passed to the home page (no node text). */
 export type ChallengeItem = {
   id: string;
@@ -70,7 +81,7 @@ export type ChallengeItem = {
 };
 
 export function getChallenge(): ChallengeItem[] {
-  return getRounds().map((r) => ({
+  return getTrailRounds().map((r) => ({
     id: r.lesson.id,
     title: r.lesson.title,
     artworkTitle: r.artwork.title,

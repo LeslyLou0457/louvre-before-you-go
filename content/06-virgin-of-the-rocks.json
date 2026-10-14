@@ -1,0 +1,297 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "virgin-of-the-rocks",
+    "title": "The Virgin of the Rocks",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1483–1494",
+    "image": "/images/virgin-of-the-rocks.jpg",
+    "imageCredit": "TBD: photo pending its rights check",
+    "medium": "Oil on canvas, transferred from wood",
+    "dimensions": "199.5 × 122 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062373"
+  },
+  "speakers": {
+    "leonardo": {
+      "name": "Leonardo da Vinci",
+      "kind": "artist",
+      "avatar": "leonardo"
+    }
+  },
+  "lessons": [
+    {
+      "id": "virgin-of-the-rocks-1",
+      "order": 1,
+      "title": "One contract, two paintings",
+      "start": "n1",
+      "narrator": "leonardo",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Step into a cave. Rocks close in on every side and plants sprout from the stone. In a pool of light, four figures: Mary at the centre, a baby on each side of her, an angel on the right.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Look before you ask. Who kneels? Who blesses? Where does each hand point? In a picture, the gestures tell the story."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where did your eye land first?",
+          "choices": [
+            {
+              "label": "The angel's pointing hand",
+              "next": "b1a"
+            },
+            {
+              "label": "Mary's raised hand",
+              "next": "b1b"
+            },
+            {
+              "label": "The dark rocks",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Good eye. The angel turns to look out at you while its finger points across the group. Hold on to that angel: Leonardo changed its pose.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Few people start there. Mary's left hand floats above the baby on the right, fingers spread. Keep it in mind; it's one of the picture's quiet gestures.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "The rocks hem everyone in, and light picks the figures out against the dark stone. Modelling forms with light and dark like this is called chiaroscuro.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "So who's who? Mary kneels at the centre, her arm round the kneeling baby on the left: John the Baptist. The baby on the right, steadied by the angel, is Jesus, raising his hand to bless John.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "This was ordered as an altarpiece. On 25 April 1483, in Milan, Leonardo signed a contract with two local painters, the brothers Ambrogio and Evangelista de Predis, for a chapel in the church of San Francesco Grande.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Milan, 1483. I signed with the de Predis brothers: a painting for a chapel at San Francesco Grande."
+          },
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "The chapel belonged to a confraternity. What was it devoted to?",
+          "choices": [
+            {
+              "label": "The Immaculate Conception",
+              "next": "b2a",
+              "correct": true
+            },
+            {
+              "label": "The Adoration of the Child",
+              "next": "b2b"
+            },
+            {
+              "label": "Saint John the Baptist",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Yes. The Immaculate Conception means Mary was conceived without the stain of original sin. The painting sat at the heart of a big carved and gilded altarpiece made for that chapel.",
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Good instinct: that's what you see. But it isn't what the chapel was devoted to.",
+          "next": "n3",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Everyone in the picture kneels before the child Jesus, so it looks like a straightforward Adoration.",
+            "truth": "The scene is an adoration, but the confraternity that ordered it was devoted to the Immaculate Conception: Mary conceived without original sin.",
+            "evidence": "The Louvre and London's National Gallery both name the client: the Confraternity of the Immaculate Conception at San Francesco Grande, Milan."
+          }
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Fair guess: John is right there, and the angel points at him. But no.",
+          "next": "n3",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "John kneels in the front of the picture and the angel's finger points at him, so he looks like the star.",
+            "truth": "John matters in this painting, but the confraternity that ordered it was devoted to the Immaculate Conception of the Virgin.",
+            "evidence": "The Louvre and the National Gallery both name the Confraternity of the Immaculate Conception as the client for the chapel."
+          }
+        },
+        "n3": {
+          "type": "story",
+          "text": "Then came trouble. Leonardo and Ambrogio said the agreed fee was too low for the work, and asked the confraternity for more money.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "The quarrel dragged on for more than twenty years. Along the way Leonardo probably sold this first picture, and a second version was painted for the chapel. That one hangs in London's National Gallery today.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "We asked for more money, and the quarrel outlived my first years in Milan. They called me back in 1506 to finish."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "So why are there two Virgins of the Rocks?",
+          "choices": [
+            {
+              "label": "The money quarrel",
+              "next": "b3a"
+            },
+            {
+              "label": "The first didn't suit the altarpiece",
+              "next": "b3b"
+            },
+            {
+              "label": "Nobody knows for sure",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "The quarrel is real, but it doesn't explain the second picture.",
+          "next": "n4",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A fight over pay lasting more than twenty years looks like the obvious cause of everything that followed.",
+            "truth": "The quarrel is documented, but no source says it caused the second version. Historians have offered conflicting explanations.",
+            "evidence": "The National Gallery: \"It is not clear why two versions were made.\" The Louvre: historians have given \"explications contradictoires\"."
+          }
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "That's one serious argument, not a settled fact.",
+          "next": "n4",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In London the figures are bigger and closer, as if built to hold their own inside a heavy carved frame.",
+            "truth": "That's an argument the National Gallery puts forward, not a proven reason. Neither museum claims to know why two versions exist.",
+            "evidence": "The National Gallery says the London figures \"appear bigger and closer\", yet also that \"It is not clear why two versions were made.\""
+          }
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Right. The National Gallery says plainly it isn't clear why two versions were made, and the Louvre says historians give conflicting explanations. Each idea has some evidence; none settles it.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "What both museums agree on: this Paris picture came first. Even its dates differ, though: about 1483 to 1494 for the Louvre, about 1483 to 1485 for the National Gallery. And who painted most of London is still argued.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "Now compare the angels. In London, the angel looks down into the group and steadies Jesus; it doesn't point. Here, the angel turns to look at you and points across at John.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Was this pointing, outward-looking angel Leonardo's first idea?",
+          "choices": [
+            {
+              "label": "Yes, planned from the start",
+              "next": "b4a"
+            },
+            {
+              "label": "No, he changed the pose",
+              "next": "b4b",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "It looks planned, but no: the pose was a change of mind.",
+          "next": "n5",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The gesture is so natural, and links you to the scene so neatly, that it seems designed from day one.",
+            "truth": "Leonardo altered the angel's pose from his first plan. The figure that looks out and points was not there from the start.",
+            "evidence": "The Louvre and the Grand Palais's art-history site, Panorama de l'art, both say Leonardo modified the angel's attitude from his initial design."
+          }
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Right. Leonardo altered this angel's pose from his first plan. As painted, it looks out of the picture at you and points across to John.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "So the final angel is your guide into the scene: its eyes find you, and its finger points you to John.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Follow a figure's eyes, then its hand. That's how a painting tells you where to look."
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "The label says oil on canvas. Did Leonardo paint it on canvas?",
+          "choices": [
+            {
+              "label": "No: wood, moved to canvas later",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "Yes, on canvas from the start",
+              "next": "b5b"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Right. Leonardo painted it on a wooden panel. Later it was transferred from wood to canvas, which is why the Louvre records it as oil on canvas today.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Read the label to the end: there's a second half.",
+          "next": "n6",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Louvre's own label starts with \"oil on canvas\", so canvas from the start seems obvious.",
+            "truth": "The label goes on: transferred from wood to canvas. Leonardo painted on a wooden panel; the move to canvas came later.",
+            "evidence": "Louvre record: \"Huile sur toile (transposition de bois sur toile)\". The National Gallery's technical study: oil on wood, transferred to canvas."
+          }
+        },
+        "n6": {
+          "type": "story",
+          "text": "It later entered the French royal collection; exactly how is uncertain. So in room 710 you meet the first of a famous pair: a cave of light and shade, and an angel Leonardo rethought to point you in."
+        }
+      },
+      "takeaway": "Paris has the first Virgin of the Rocks: light picking four figures out of a dark cave, an angel Leonardo rethought to point you to John, and a twin in London.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+        "https://www.nationalgallery.org.uk/paintings/NG1093",
+        "https://www.nationalgallery.org.uk/exhibitions/past/leonardo-experience-a-masterpiece/the-lost-altarpiece",
+        "https://www.nationalgallery.org.uk/upload/pdf/keith_roy_morrison_schade2011.pdf",
+        "https://panoramadelart.com/analyse/la-vierge-aux-rochers",
+        "https://www.nationalgallery.org.uk/paintings/glossary/immaculate-conception-of-the-virgin",
+        "https://www.nationalgallery.org.uk/paintings/glossary/chiaroscuro"
+      ]
+    }
+  ]
+}

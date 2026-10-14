@@ -3,19 +3,27 @@
 // the real photo on a white mat, straight edges, never moving. A work
 // without a level gets a labelled placeholder, never a drawing of the work.
 
-import { CheckDoodle, ClockDoodle, EyeOffDoodle, PictureDoodle, PlayDoodle } from "@/doodles";
+import { CheckDoodle, ClockDoodle, EyeOffDoodle, PictureDoodle, PlayDoodle, ZoomDoodle } from "@/doodles";
 import { OFF_LABEL, type WorkState } from "@/lib/book";
 import type { BookWork } from "@/lib/catalogue";
 import { withBase } from "@/lib/paths";
 import type { SavedPlace } from "@/lib/progress";
 
-export function StatusChip({ work, state, place }: { work: BookWork; state: WorkState; place?: SavedPlace | null }) {
+type ChipProps = { work: BookWork; state: WorkState; place?: SavedPlace | null; closeUpDone?: boolean };
+
+export function StatusChip({ work, state, place, closeUpDone }: ChipProps) {
   const off = OFF_LABEL[work.display];
   return (
     <>
       {state === "met" && (
         <span className="chip chip-met">
           <CheckDoodle /> Met
+        </span>
+      )}
+      {/* "Close-up done": a second mark beside "Met" (PRODUCT.md "Level state"). */}
+      {closeUpDone && (
+        <span className="chip chip-met">
+          <ZoomDoodle /> Close-up done
         </span>
       )}
       {state === "cont" && (

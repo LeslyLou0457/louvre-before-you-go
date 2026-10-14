@@ -17,6 +17,7 @@ import ProgressBar from "./ProgressBar";
 import Stage from "./Stage";
 import { CloseDoodle } from "@/doodles";
 import { moodFor, useScreenMotion } from "@/lib/motion";
+import { originHref, originQuery, readOrigin, TRAIL, type Origin } from "@/lib/origin";
 import { clearPlace, finishRound, getPlace, getPlays, savePlace } from "@/lib/progress";
 import { roundPair } from "@/lib/rotation";
 import type { Artwork as ArtworkT, ChallengeLesson, LessonNode, Speaker, StoryNode, ZoomImage } from "@/lib/types";
@@ -43,11 +44,14 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
   const [picked, setPicked] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
   const [resumed, setResumed] = useState(false);
+  // Where the round was opened from: the trail, or a chapter (`?from=09`), which it returns to.
+  const [origin, setOrigin] = useState<Origin>(TRAIL);
   const cardRef = useRef<HTMLDivElement>(null);
   const total = pair.length;
 
   // Which pair this play shows, then pick up a saved spot inside that pair.
   useEffect(() => {
+    setOrigin(readOrigin());
     const p = roundPair(lesson.pool, getPlays(lesson.id), lesson.roundSize);
     setPair(p);
     const ids = p.flatMap((s) => family(lesson.nodes, s));
@@ -116,7 +120,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
       return;
     }
     finishRound(lesson.id);
-    router.push(`/challenge/${lesson.id}/done/`);
+    router.push(`/challenge/${lesson.id}/done/${originQuery(origin)}`);
   }
 
   function choose(label: string, next: string) {
@@ -159,7 +163,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
     <main className="flex min-h-dvh flex-col pb-6">
       <header className="sticky top-0 z-10 flex items-center gap-3 bg-paper py-3">
         <Link
-          href="/start/"
+          href={originHref(origin)}
           aria-label="Exit round"
           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-mat"
         >
