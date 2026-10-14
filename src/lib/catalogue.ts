@@ -20,8 +20,10 @@ const CATALOGUE_FILE = path.join(process.cwd(), "content", "modules.json");
 export type BookWork = {
   id: string;
   title: string;
+  titleFr?: string;
   artist: string;
   date: string;
+  medium: string;
   department: string;
   inventory: string;
   location: {
@@ -41,7 +43,6 @@ export type BookWork = {
     id: string;
     /** Path under public/ (no basePath), or null when the photo file is missing. */
     image: string | null;
-    medium?: string;
     questionCount: number;
     /** For checking a saved mid-level spot against the current content. */
     nodeIds: string[];
@@ -91,8 +92,10 @@ export function getBook(): Book {
     return {
       id: w.id,
       title: w.title,
+      ...(w.titleFr ? { titleFr: w.titleFr } : {}),
       artist: w.artist,
       date: w.date,
+      medium: w.medium,
       department: w.department,
       inventory: w.inventory,
       location: w.location
@@ -114,7 +117,6 @@ export function getBook(): Book {
             level: {
               id: level.lesson.id,
               image: level.imageAvailable ? level.artwork.image : null,
-              ...(level.artwork.medium ? { medium: level.artwork.medium } : {}),
               questionCount: level.questionCount,
               nodeIds: Object.keys(level.lesson.nodes),
             },
