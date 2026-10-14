@@ -29,6 +29,15 @@
    ]
   }
  },
- "images": [],
+ "images": [
+  {
+   "id": "virgin-of-the-rocks",
+   "file": "File:Leonardo Da Vinci - Vergine delle Rocce (Louvre).jpg"
+  },
+  {
+   "id": "virgin-and-child-with-saint-anne",
+   "file": "File:La Vierge, l'Enfant Jésus et sainte Anne, by Leonardo da Vinci, from C2RMF.jpg"
+  }
+ ],
  "crops": []
 }
