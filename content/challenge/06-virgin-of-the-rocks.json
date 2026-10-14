@@ -1,0 +1,502 @@
+{
+  "artworkId": "virgin-of-the-rocks",
+  "zoomImage": {
+    "file": "Leonardo Da Vinci - Vergine delle Rocce (Louvre).jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg",
+    "width": 3460,
+    "height": 5487,
+    "licence": "Public domain (faithful reproduction of a 2D public-domain work)",
+    "credit": "Reproduction via Wikimedia Commons (from gallerix.ru) · Public Domain",
+    "overview": "/images/challenge/virgin-of-the-rocks/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "virgin-of-the-rocks-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: what the hands say",
+      "narrator": "leonardo",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.53,
+            "y": 0.52,
+            "w": 0.33,
+            "h": 0.19,
+            "label": "The angel: its face turned out of the picture and its pointing right hand",
+            "image": "/images/challenge/virgin-of-the-rocks/c1.jpg"
+          },
+          "text": "Level one: Leonardo changed this angel's pose. Now look closely: its eyes and its finger aim in two different directions.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.53,
+            "y": 0.52,
+            "w": 0.33,
+            "h": 0.19,
+            "label": "The angel: its face turned out of the picture and its pointing right hand",
+            "image": "/images/challenge/virgin-of-the-rocks/c1.jpg"
+          },
+          "text": "Who is the angel's finger pointing at?",
+          "choices": [
+            {
+              "label": "John, the kneeling baby",
+              "role": "right",
+              "next": "c1a",
+              "correct": true
+            },
+            {
+              "label": "Jesus, the baby beside it",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "You, outside the picture",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+              "url": "https://www.nationalgallery.org.uk/paintings/NG1093"
+            },
+            {
+              "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+              "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers"
+            },
+            {
+              "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Eyes on you, finger on John: Leonardo's rethought angel links you to the scene."
+        },
+        "c1a": {
+          "text": "Yes. The angel's eyes look out at you, but its finger points across the group to John, the baby Mary draws in with her arm.",
+          "type": "branch",
+          "next": "c1m"
+        },
+        "c1b": {
+          "text": "Close: Jesus sits beside the angel, but he isn't the target.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Jesus sits right by the angel, who steadies him, so the hand seems to belong to him.",
+            "truth": "The finger points away from Jesus, across to John, the kneeling baby Jesus is blessing.",
+            "evidence": "National Gallery and Grand Palais: the Paris angel points to Saint John the Baptist. The Louvre: Jesus blesses his cousin."
+          },
+          "type": "branch",
+          "next": "c1m"
+        },
+        "c1c": {
+          "text": "Half right: the eyes are for you, the finger isn't.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The angel turns and looks straight out at you, so the gesture feels addressed to you.",
+            "truth": "Its gaze is on you; its finger points across the group to John.",
+            "evidence": "The National Gallery: in the Paris version the angel \"looks out at us and points towards Saint John the Baptist\"."
+          },
+          "type": "branch",
+          "next": "c1m"
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.34,
+            "y": 0.33,
+            "w": 0.32,
+            "h": 0.2,
+            "label": "Mary's head and the dark space above it, with no halo",
+            "image": "/images/challenge/virgin-of-the-rocks/c2.jpg"
+          },
+          "text": "Level one: Paris came first and London followed. Look at the space just above Mary's head. London's twin does something different here.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.34,
+            "y": 0.33,
+            "w": 0.32,
+            "h": 0.2,
+            "label": "Mary's head and the dark space above it, with no halo",
+            "image": "/images/challenge/virgin-of-the-rocks/c2.jpg"
+          },
+          "text": "What does London's version add above these heads?",
+          "choices": [
+            {
+              "label": "Thin gold halos",
+              "role": "right",
+              "next": "c2a",
+              "correct": true
+            },
+            {
+              "label": "A gilded cross",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "More open sky",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+              "url": "https://www.nationalgallery.org.uk/paintings/NG1093"
+            },
+            {
+              "title": "National Gallery, London, 'Leonardo: Experience a Masterpiece' (2019), The lost altarpiece",
+              "url": "https://www.nationalgallery.org.uk/exhibitions/past/leonardo-experience-a-masterpiece/the-lost-altarpiece"
+            },
+            {
+              "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373"
+            },
+            {
+              "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+              "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers"
+            },
+            {
+              "title": "L. Keith, A. Roy, R. Morrison, P. Schade, 'Leonardo da Vinci's Virgin of the Rocks: Treatment, Technique and Display', National Gallery Technical Bulletin 32 (2011)",
+              "url": "https://www.nationalgallery.org.uk/upload/pdf/keith_roy_morrison_schade2011.pdf"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "London adds halos, John's cross and bigger figures; Paris, the first version, leaves its heads bare."
+        },
+        "c2a": {
+          "text": "Yes. In London all but the angel wear the thinnest gold rings as halos. Here in Paris, look again: the heads are bare.",
+          "type": "branch",
+          "next": "c2m"
+        },
+        "c2b": {
+          "text": "London does add a cross, just not up here.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "London's John carries a gilded cross, so a golden addition near the heads sounds right.",
+            "truth": "London's cross is tucked under John's arm. Above the heads, London adds thin gold halos.",
+            "evidence": "National Gallery: John carries \"a gilded cross under his arm\", and the figures wear \"the thinnest of gold rings as halos\"."
+          },
+          "type": "branch",
+          "next": "c2m"
+        },
+        "c2c": {
+          "text": "The opposite, in fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The London picture feels roomier and lighter, so you might expect more sky.",
+            "truth": "London cuts down the sky at the top, so the figures look bigger and closer.",
+            "evidence": "National Gallery: London's figures \"appear bigger and closer\" after cutting down the sky. Grand Palais: \"les figures sont plus grandes\"."
+          },
+          "type": "branch",
+          "next": "c2m"
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.48,
+            "y": 0.53,
+            "w": 0.26,
+            "h": 0.27,
+            "label": "Mary's raised left hand above the baby Jesus",
+            "image": "/images/challenge/virgin-of-the-rocks/c3.jpg"
+          },
+          "text": "In level one you may have spotted Mary's left hand, floating above the baby on the right, fingers spread. Here it is up close.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.48,
+            "y": 0.53,
+            "w": 0.26,
+            "h": 0.27,
+            "label": "Mary's raised left hand above the baby Jesus",
+            "image": "/images/challenge/virgin-of-the-rocks/c3.jpg"
+          },
+          "text": "What is Mary's raised hand doing?",
+          "choices": [
+            {
+              "label": "Shielding her son",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "Blessing John",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "Pointing to heaven",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373"
+            },
+            {
+              "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+              "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers"
+            },
+            {
+              "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+              "url": "https://www.nationalgallery.org.uk/paintings/NG1093"
+            },
+            {
+              "title": "National Gallery, London, NG6337, The Burlington House Cartoon",
+              "url": "https://www.nationalgallery.org.uk/paintings/NG6337"
+            }
+          ]
+        },
+        "c3m": {
+          "type": "story",
+          "text": "One hand draws John in, the other shields Jesus: Mary gathers both children."
+        },
+        "c3a": {
+          "text": "Yes. The Louvre says her hand, reaching towards her son, seems meant to protect him; the Grand Palais says Mary protects Jesus with her left hand.",
+          "type": "branch",
+          "next": "c3m"
+        },
+        "c3b": {
+          "text": "Someone blesses here, but not Mary.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Raised hands often bless in religious pictures, and a blessing really is happening in this scene.",
+            "truth": "The blessing comes from Jesus, raising his hand towards John. Mary's hand hovers over Jesus, protecting him.",
+            "evidence": "The Louvre: the Child \"bénit son cousin\". The National Gallery: his right hand is raised \"in a blessing motion towards John\"."
+          },
+          "type": "branch",
+          "next": "c3m"
+        },
+        "c3c": {
+          "text": "A Leonardo gesture, but not this one.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Leonardo loved pointing hands: the angel points here, and Saint Anne points upward in his London cartoon.",
+            "truth": "Mary's hand doesn't point; its open palm hovers over Jesus's head, as if to shield him.",
+            "evidence": "Grand Palais: Mary protects Jesus with her left hand, \"posée au-dessus de sa tête\". National Gallery: \"palm down, in a protective gesture\"."
+          },
+          "type": "branch",
+          "next": "c3m"
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "b1a",
+          "n2",
+          "n4b",
+          "q4",
+          "b4b",
+          "n5"
+        ],
+        "concept": "The angel's changed pose; who's who; gaze versus gesture"
+      },
+      "framing": "where-it-points",
+      "what_you_learn": "The angel's gaze and finger do different jobs: eyes on the viewer, finger on John; and which baby is which.",
+      "regionSources": [
+        {
+          "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+          "url": "https://www.nationalgallery.org.uk/paintings/NG1093",
+          "quote": "the angel, who in the Paris version looks out at us and points towards Saint John the Baptist",
+          "supports": "Places the pointing hand and outward gaze in the angel.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+        },
+        {
+          "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+          "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers",
+          "quote": "À droite, un personnage ailé se tourne vers nous avec un léger sourire et nous désigne du doigt saint Jean Baptiste.",
+          "supports": "Same, independently (our translation: on the right, a winged figure turns to us and points at Saint John the Baptist).",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+        }
+      ],
+      "choiceSources": {
+        "c1b": [
+          {
+            "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+            "quote": "L'Enfant est soutenu par un ange et bénit son cousin.",
+            "supports": "Jesus is the baby by the angel, blessing John (our translation: the Child is supported by an angel and blesses his cousin).",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          },
+          {
+            "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+            "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers",
+            "quote": "Marie, agenouillée au centre, présente le petit saint Jean à l'Enfant Jésus, qui le bénit.",
+            "supports": "Who's who.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+            "url": "https://www.nationalgallery.org.uk/paintings/NG1093",
+            "quote": "looks out at us and points towards Saint John the Baptist",
+            "supports": "Gaze to the viewer, finger to John.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          }
+        ]
+      },
+      "confidence": "High: three institutions agree on the gesture and on who's who.",
+      "notes": "Replaces the plan's 'Was this pointing hand in the first painting?': the hand's absence in the first state rests on the Louvre alone.",
+      "quoteCheck": "2026-10-14: quotes read in the sources via WebFetch (short quotations).",
+      "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Shows the angel's face turned out and its pointing right hand."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n4",
+          "n3b"
+        ],
+        "concept": "Two versions: what London changes"
+      },
+      "framing": "compare",
+      "what_you_learn": "London adds halos and John's cross and enlarges the figures; the first, Paris version has none of these.",
+      "regionSources": [
+        {
+          "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+          "url": "https://www.nationalgallery.org.uk/paintings/NG1093",
+          "quote": "All but the Angel have the thinnest of gold rings as halos",
+          "supports": "London's halos over the heads.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+        },
+        {
+          "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+          "quote": "dans le panneau de Londres, les protagonistes sont dotés d'une auréole",
+          "supports": "Same (our translation: in the London panel the figures have halos).",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+        }
+      ],
+      "choiceSources": {
+        "c2b": [
+          {
+            "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+            "url": "https://www.nationalgallery.org.uk/paintings/NG1093",
+            "quote": "a gilded cross under his arm",
+            "supports": "Where London's cross is.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          },
+          {
+            "title": "L. Keith, A. Roy, R. Morrison, P. Schade, 'Leonardo da Vinci's Virgin of the Rocks: Treatment, Technique and Display', National Gallery Technical Bulletin 32 (2011)",
+            "url": "https://www.nationalgallery.org.uk/upload/pdf/keith_roy_morrison_schade2011.pdf",
+            "quote": "the cross was an original feature of the composition",
+            "supports": "The cross's place in London (Technical Bulletin 32, p. 48).",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "National Gallery, London, 'Leonardo: Experience a Masterpiece' (2019), The lost altarpiece",
+            "url": "https://www.nationalgallery.org.uk/exhibitions/past/leonardo-experience-a-masterpiece/the-lost-altarpiece",
+            "quote": "By cutting down the sky at the top and the water at the bottom of the London picture, the figures appear bigger and closer",
+            "supports": "London has less sky.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          },
+          {
+            "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+            "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers",
+            "quote": "les figures sont plus grandes dans un paysage plus clair",
+            "supports": "Bigger figures in London.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          }
+        ]
+      },
+      "confidence": "High for London; the Paris absence of halos is confirmed by eye on the reference image (2026-10-14).",
+      "notes": "The plan's 'An arched top' option was removed: the London panel is arched (Technical Bulletin 32, p. 43).",
+      "quoteCheck": "2026-10-14: WebFetch, short quotations.",
+      "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Mary's head is bare: no halo in the Paris panel."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1b",
+          "n2"
+        ],
+        "concept": "Mary's gestures"
+      },
+      "framing": "what-it-does",
+      "what_you_learn": "Mary's raised left hand shields Jesus; the blessing comes from Jesus.",
+      "regionSources": [
+        {
+          "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+          "quote": "Sa main gauche avancée vers son Fils semble vouloir le protéger",
+          "supports": "Places the protective gesture in Mary's left hand (our translation: her left hand, reaching towards her Son, seems meant to protect him).",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+        },
+        {
+          "title": "Colette Féraudet, 'La Vierge aux rochers', Panorama de l'art (Rmn-Grand Palais), 27 Mar 2023",
+          "url": "https://panoramadelart.com/analyse/la-vierge-aux-rochers",
+          "quote": "Il s'agit de Jésus, que Marie protège de sa main gauche, posée au-dessus de sa tête.",
+          "supports": "Same, independently.",
+          "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Louvre collection record, INV 777, La Vierge aux rochers (commentary by Vincent Delieuvin, 2021)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+            "quote": "L'Enfant est soutenu par un ange et bénit son cousin.",
+            "supports": "Jesus blesses.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          },
+          {
+            "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+            "url": "https://www.nationalgallery.org.uk/paintings/NG1093",
+            "quote": "His right hand is held up in a blessing motion towards John the Baptist.",
+            "supports": "Jesus blesses (London; composition almost identical).",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "National Gallery, London, NG6337, The Burlington House Cartoon",
+            "url": "https://www.nationalgallery.org.uk/paintings/NG6337",
+            "quote": "points upwards to the heavens, indicating the child's divinity",
+            "supports": "Saint Anne's pointing gesture in the London cartoon.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          },
+          {
+            "title": "National Gallery, London, NG1093, The Virgin of the Rocks (collection page)",
+            "url": "https://www.nationalgallery.org.uk/paintings/NG1093",
+            "quote": "palm down, in a protective gesture above the infant Christ",
+            "supports": "Mary's hand does not point.",
+            "readVia": "WebFetch, short quotations only (14 Oct 2026)"
+          }
+        ]
+      },
+      "confidence": "High: two independent sources place the gesture; the plan held it for want of a second source, now found (Panorama de l'art).",
+      "notes": "",
+      "quoteCheck": "2026-10-14: WebFetch, short quotations.",
+      "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Shows Mary's raised left hand, palm down, above the infant Jesus."
+    }
+  }
+}
