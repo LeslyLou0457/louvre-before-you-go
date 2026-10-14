@@ -1,0 +1,111 @@
+/*
+ * The map (PRODUCT.md "The map"; drawing in src/doodles/map.ts). Ported from
+ * Map A in the approved prototype (project files, framework/prototype.html).
+ * Everything is scoped to .lmap so the drawing's class names never leak.
+ *
+ * Motion: the map is the one approved exception to "at most one loop per
+ * screen" (PRODUCT.md "Motion and accessibility"): the water shimmer, the
+ * boat, the walkers, the glint on the Pyramid and the floating pin all loop,
+ * and pause while a wing is zoomed. The zoom is one transform on .mapz; the
+ * chosen wing lifts only after the zoom lands. Reduced motion: nothing moves,
+ * the zoom is instant, the ink is shown drawn.
+ */
+
+.lmap { position: relative; overflow: hidden; width: 100%; max-width: 100%; container-type: inline-size; }
+.lmap .mapz { position: absolute; inset: 0; transform-origin: 0 0; transition: transform 520ms var(--ease-out); }
+.lmap .mapz svg { width: 100%; height: 100%; display: block; touch-action: manipulation; }
+
+/* HTML labels over the drawing, sized in view-box units (--u), so the zoom never re-lays out SVG text */
+.lmap .mlabels { position: absolute; inset: 0; pointer-events: none; }
+.lmap .ml { position: absolute; transform: translate(var(--tx), -50%); white-space: nowrap; font-size: calc(var(--fs) * var(--u)); line-height: 1.05; transition: opacity 220ms ease-out, translate 300ms var(--ease-pop); }
+.lmap .ml > span { display: block; transform-origin: 50% 60%; }
+.lmap .mnote { font-family: var(--font-read); font-weight: 600; color: #5b5750; }
+.lmap .mhand { font-family: var(--font-hand); font-weight: 700; color: var(--color-ink); }
+.lmap .ml.halo { text-shadow: 0 0 2px var(--color-paper), 0 0 2px var(--color-paper), 0 0 3px var(--color-paper), 0 0 1px var(--color-paper); }
+.lmap .bnt { padding-top: calc(1 * var(--u)); }
+.lmap .ml.sel.bnl { translate: 0 calc(-3 * var(--u)); transition-delay: 0s, 500ms; }
+.lmap .ml.bnt.sel { color: #fff; }
+.lmap .ml.dim { opacity: .3; }
+.lmap .ml.wsub { background: var(--color-mat); border: 1px solid var(--color-ink); border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px; padding: calc(.6 * var(--u)) calc(3 * var(--u)); color: var(--color-ink); opacity: 0; transition: opacity 250ms ease-out 200ms; }
+.lmap .ml.wsub.sel { opacity: 1; }
+
+/* illustration palette: slate roofs, warm stone, crayon greens, Seine blue */
+.lmap svg { --slate-1: #B9C5D5; --slate-2: #9DACC2; --slate-3: #8292AB; --slate-4: #6B7A95; --stone-1: #F4EAD3; --stone-2: #E7D6B2; --stone-3: #CDB78C;
+  --pave: #EEE5D2; --pave-2: #E9DFC8; --road: #E6DCC7; --lawn: #D5DFAA; --leaf-1: #A6C178; --leaf-2: #8BAA62; --leaf-3: #5F7F43; --water: #B3CDDA; --glass: #DCE8EE; --marble: #EBC2B0; }
+.lmap .g-paper { fill: var(--color-paper); } .lmap .g-road { fill: var(--road); } .lmap .g-lawn { fill: var(--lawn); } .lmap .g-pave { fill: var(--pave); } .lmap .g-pave2 { fill: var(--pave-2); } .lmap .g-water { fill: var(--water); }
+.lmap .g-basin { fill: var(--water); stroke: #1F1F1F; stroke-width: .6; }
+.lmap .g-hedge { fill: none; stroke: var(--leaf-2); stroke-width: 1.6; stroke-linecap: round; opacity: .8; }
+.lmap .f-ww { fill: var(--stone-1); } .lmap .f-ws { fill: var(--stone-2); }
+.lmap .f-rn { fill: var(--slate-3); } .lmap .f-re { fill: var(--slate-4); } .lmap .f-rw { fill: var(--slate-1); } .lmap .f-rs { fill: var(--slate-2); } .lmap .f-rt { fill: var(--slate-1); }
+.lmap .f-dm { fill: var(--stone-1); } .lmap .f-gl { fill: var(--glass); } .lmap .f-ct { fill: var(--pave); } .lmap .f-mat { fill: var(--color-mat); }
+.lmap .f-aw { fill: #F3D3C5; } .lmap .f-as { fill: var(--marble); } .lmap .f-at { fill: #DDAE9A; } .lmap .f-ad { fill: #9C7466; opacity: .7; } .lmap .f-qd { fill: #9A8456; }
+.lmap .f-br { fill: #DCCDB0; } .lmap .f-bi { fill: #CDBFA4; }
+.lmap .f-pn { fill: #B4C9D8; } .lmap .f-pe { fill: #9DB7CA; } .lmap .f-pw { fill: #E8F1F6; } .lmap .f-ps { fill: #C9DCE8; }
+.lmap .f-l1 { fill: var(--leaf-1); } .lmap .f-l2 { fill: var(--leaf-2); } .lmap .f-l3 { fill: var(--leaf-3); opacity: .45; }
+.lmap .ink-h, .lmap .ink-i, .lmap .ink-g, .lmap .ink-gw, .lmap .ink-p, .lmap .ink-l, .lmap .ink-w, .lmap .ink-c, .lmap .ink-tr, .lmap .rip-l, .lmap .rip-d { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.lmap .ink-h { stroke: #1F1F1F; stroke-width: 1.5; }
+.lmap .ink-i { stroke: #1F1F1F; stroke-width: .75; }
+.lmap .ink-w { stroke: #1F1F1F; stroke-width: .6; opacity: .42; }
+.lmap .ink-g { stroke: #8f887b; stroke-width: 1.2; }
+.lmap .ink-gw { stroke: #4f6f86; stroke-width: 1.3; }
+.lmap .ink-p { stroke: #1F1F1F; stroke-width: 1.1; }
+.lmap .ink-l { stroke: #4b6274; stroke-width: .5; opacity: .7; }
+.lmap .ink-c { stroke: #1F1F1F; stroke-width: 1.8; }
+.lmap .ink-t { stroke: #1F1F1F; stroke-width: .8; }
+.lmap .ink-tr { stroke: #5b4a35; stroke-width: 1.2; }
+.lmap .ink-n { fill: none; stroke: #1F1F1F; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.lmap .rip-l { stroke: #FFFDF8; stroke-width: 1.1; opacity: .9; }
+.lmap .rip-d { stroke: #6E95AC; stroke-width: .9; }
+.lmap .ppl-b { stroke-width: 1.8; stroke-linecap: round; fill: none; }
+.lmap .ppl-h { fill: #1F1F1F; }
+.lmap .spark { fill: #FFFDF8; stroke: #1F1F1F; stroke-width: .6; transform-box: fill-box; transform-origin: center; }
+.lmap .tail { fill: #E6DCC6; stroke: #1F1F1F; stroke-width: 1.1; } .lmap .fold { fill: #B9AD95; }
+.lmap .body { fill: var(--color-mat); stroke: #1F1F1F; stroke-width: 1.4; }
+
+/* wings: tap targets, dim / select, a crayon wash and a small lift for the selected wing */
+.lmap .wing { cursor: pointer; transition: opacity 220ms ease-out; }
+.lmap .wing:focus { outline: none; }
+.lmap .wing .lift, .lmap .bn .lift2 { transition: transform 300ms var(--ease-pop); }
+/* the wing lifts once the zoom has landed, so the two never move in the same frame */
+.lmap .wing.sel .lift, .lmap .bn.sel .lift2 { transform: translateY(-3px); transition-delay: 500ms; }
+.lmap .wshadow { fill: #1F1F1F; opacity: 0; transition: opacity 220ms ease-out; }
+.lmap .wing.sel .wshadow { opacity: .14; }
+.lmap .wash2 { fill: url(#m-wash); opacity: 0; transition: opacity 220ms ease-out; pointer-events: none; }
+.lmap .wing.sel .wash2 { opacity: .8; }
+.lmap .w-focus { fill: none; stroke: #2A3F8F; stroke-width: 3; opacity: 0; pointer-events: none; }
+.lmap .wing.sel .w-focus { opacity: 1; stroke-width: 1.8; }
+.lmap .wing:focus-visible .w-focus { opacity: 1; stroke-width: 3.2; }
+/* a little extra hit area round each wing, so even its narrowest part is a 48 px target */
+.lmap .w-hit { fill: transparent; }
+.lmap .wing.dim, .lmap .bn.dim { opacity: .3; }
+.lmap .bn { cursor: pointer; transition: opacity 220ms ease-out; }
+.lmap .bn.sel .body { fill: #2A3F8F; } .lmap .bn.sel .tail { fill: #4A5DA6; } .lmap .bn.sel .fold { fill: #1C2A63; }
+.lmap .scen { transition: opacity 220ms ease-out; }
+.lmap.zoomed .deco { opacity: .6; }
+.lmap .pin { transition: opacity 220ms ease-out; } .lmap.zoomed .pin { opacity: .35; }
+
+/* draw-in, the first map visit of a session (the line classes come from motion.css) */
+@keyframes m-map-fade { from { opacity: 0; } to { opacity: 1; } }
+.lmap .m-fadein { animation: m-map-fade var(--d, 300ms) ease-out var(--dl, 0ms) both; }
+.lmap .m-pop { animation: m-pop 240ms var(--ease-pop) var(--dl, 0ms) both; }
+.lmap.drawn .m-fadein, .lmap.drawn .m-pop, .lmap.drawn .m-draw { animation: none; }
+
+/* idle: water shimmer, a passing boat, a few walkers, a glint on the Pyramid, the floating pin (paused while zoomed) */
+@keyframes m-shim { 0%, 100% { transform: translateX(0); opacity: 1; } 50% { transform: translateX(2.5px); opacity: .35; } }
+@keyframes m-boat { from { transform: translateX(0); } to { transform: translateX(-470px); } }
+@keyframes m-walk { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(var(--wx, 6px)); } }
+@keyframes m-spark { 0%, 62%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); } 74% { opacity: 1; transform: scale(1) rotate(20deg); } 86% { opacity: 0; transform: scale(.5) rotate(40deg); } }
+.lmap .shim { animation: m-shim 4.2s var(--ease-io) infinite; }
+.lmap .shim2 { animation: m-shim 5.4s var(--ease-io) -2.1s infinite reverse; }
+.lmap .boat { animation: m-boat 64s linear -24s infinite; }
+.lmap .walk { animation: m-walk var(--wd, 8s) var(--ease-io) infinite; }
+.lmap .spark { animation: m-spark 4.8s ease-out 1.6s infinite; opacity: 0; }
+.lmap.zoomed .idle, .lmap.zooming .idle, .lmap.zoomed .pin .m-float { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lmap .mapz, .lmap .ml, .lmap .wing, .lmap .bn, .lmap .scen, .lmap .wash2, .lmap .wshadow, .lmap .wing .lift, .lmap .bn .lift2, .lmap .pin { transition: none !important; }
+  .lmap .idle { animation: none !important; }
+  .lmap .spark { opacity: 1; transform: none; }
+  .lmap .m-fadein, .lmap .m-pop { animation: m-map-fade 150ms ease-out both !important; }
+  .lmap .m-draw { animation: none !important; stroke-dashoffset: 0; }
+}

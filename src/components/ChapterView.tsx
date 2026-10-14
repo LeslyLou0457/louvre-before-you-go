@@ -8,13 +8,14 @@
 // Progress is read from the existing keys only (lib/book-progress).
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LabelSheet from "./LabelSheet";
-import { TAB_BAR_SPACE } from "./TabBar";
+import TabBar, { TAB_BAR_SPACE } from "./TabBar";
 import { PhotoTile, ProgressDots, StatusChip } from "./WorkBits";
 import { BackDoodle, NextDoodle } from "@/doodles";
 import { floorLabel, formatDate, isOffView, nextUpId, summary, workState, type Progress } from "@/lib/book";
 import { useProgress } from "@/lib/book-progress";
+import { FROM_CONTENTS, readChapterOrigin } from "@/lib/chapter-origin";
 import type { BookChapter, BookWork } from "@/lib/catalogue";
 
 type Group = { key: string; works: BookWork[] };
@@ -34,6 +35,9 @@ function roomGroups(works: BookWork[]): Group[] {
 export default function ChapterView({ chapter }: { chapter: BookChapter }) {
   const progress = useProgress(chapter.works);
   const [open, setOpen] = useState<BookWork | null>(null);
+  // Back returns to where the chapter was opened from: the contents, or a wing and floor of the map.
+  const [origin, setOrigin] = useState(FROM_CONTENTS);
+  useEffect(() => setOrigin(readChapterOrigin()), []);
 
   const states = chapter.works.map((w) => workState(w, progress));
   const nextUp = nextUpId(chapter.works, states);
@@ -56,7 +60,7 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
   return (
     <main className={`soft-fade ${TAB_BAR_SPACE}`}>
       <div className="sticky top-0 z-10 -mx-4 flex min-h-[52px] items-center gap-1.5 bg-paper px-2 py-1">
-        <Link href="/contents/" aria-label="Back to contents" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+        <Link href={origin.href} aria-label={origin.label} className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
           <BackDoodle className="h-[26px] w-[26px]" />
         </Link>
         <span className="min-w-0 flex-1 truncate font-hand text-[1.4rem] font-bold">{name}</span>
@@ -135,6 +139,7 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
       )}
 
       <LabelSheet work={open} eyebrow={name} onClose={() => setOpen(null)} />
+      <TabBar active={origin.tab} />
     </main>
   );
 }
