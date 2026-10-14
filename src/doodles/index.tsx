@@ -205,3 +205,26 @@ export function PictureDoodle(p: DoodleProps) {
     </Svg>
   );
 }
+
+/** Open book, the "Cover" tab. */
+export function CoverDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path d="M4 5.5 Q8 4 12 6.5 Q16 4 20 5.5 L20 19 Q16 17.6 12 19.6 Q8 17.6 4 19 Z M12 6.5 L12 19.6" {...stroke} strokeWidth={2.2} stroke="currentColor" />
+    </Svg>
+  );
+}
+
+/** Three lines with dots, the "Contents" tab. */
+export function ContentsDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path
+        d="M4 6.2 L5.5 6.2 M9 6 Q14 6.4 20 6 M4 12.1 L5.5 12.1 M9 12 Q14 12.3 20 11.9 M4 18 L5.5 18 M9 18 Q14 17.7 20 18.1"
+        {...stroke}
+        strokeWidth={2.2}
+        stroke="currentColor"
+      />
+    </Svg>
+  );
+}

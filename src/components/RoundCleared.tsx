@@ -76,11 +76,11 @@ export default function RoundCleared({ id, pool, roundSize, merges, artwork, mus
         ) : (
           <p className="text-center font-hand text-xl">That was the last close-up. You&apos;ve looked hard at all five.</p>
         )}
-        <Link href="/" className="btn-primary w-full">
+        <Link href="/start/" className="btn-primary w-full">
           Back to the journey
         </Link>
         {next && (
-          <Link href={`/challenge/${next.id}/`} className="font-hand text-lg text-ultramarine underline">
+          <Link href={`/challenge/${next.id}/`} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
             Start the next close-up now
           </Link>
         )}

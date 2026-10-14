@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <main className="soft-fade py-6">
       <Link href="/" className="inline-flex min-h-12 items-center gap-2 font-hand text-lg">
-        <BackDoodle className="h-6 w-6" /> Back to the journey
+        <BackDoodle className="h-6 w-6" /> Back to the cover
       </Link>
 
       <h1 className="mt-4 font-hand text-[2.4rem] font-bold leading-none">About &amp; sources</h1>

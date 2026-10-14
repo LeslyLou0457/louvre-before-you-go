@@ -136,4 +136,15 @@ body {
   .dots i.ready { border-color: var(--color-ultramarine); border-width: 2px; }
   .dots i.soon { border-style: dashed; border-color: #9a948a; background: transparent; }
   .dots i.off { border-color: var(--color-line); background: var(--color-stage); }
+
+  /* The cover's sticker book: the same five states as the dots, one size up. */
+  .stickers { display: flex; flex-wrap: wrap; gap: 4px; }
+  .stickers i, .stickers-legend i { display: inline-block; flex: none; width: 17px; height: 17px; border: 1.8px solid var(--color-ink); background: var(--color-mat); border-radius: 52% 46% 50% 48% / 47% 53% 46% 52%; }
+  .stickers-legend i { width: 14px; height: 14px; }
+  .stickers i.met, .stickers-legend i.met { background: var(--color-gold); }
+  .stickers i.cont, .stickers-legend i.cont { background: linear-gradient(90deg, var(--color-ultramarine) 50%, var(--color-mat) 50%); }
+  .stickers i.ready, .stickers-legend i.ready { border-color: var(--color-ultramarine); border-width: 2.5px; }
+  .stickers i.soon, .stickers-legend i.soon { border-style: dashed; border-color: #9a948a; background: transparent; }
+  .stickers i.off, .stickers-legend i.off { border-color: var(--color-line); background: var(--color-stage); }
+  .sticker-empty { display: inline-block; height: 17px; padding: 0 6px; border: 1.8px dashed var(--color-line); border-radius: 8px; font-size: 11px; line-height: 13px; color: var(--color-muted); }
 }

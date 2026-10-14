@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MuseumLabel from "@/components/MuseumLabel";
+import ReturnLink from "@/components/ReturnLink";
 import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
@@ -63,11 +64,9 @@ export default async function DonePage({ params }: Params) {
         ) : (
           <p className="text-center font-hand text-xl">That was the last one. You&apos;re ready for the Louvre.</p>
         )}
-        <Link href="/" className="btn-primary w-full">
-          Back to the journey
-        </Link>
+        <ReturnLink className="btn-primary w-full" />
         {next && (
-          <Link href={`/lesson/${next.lesson.id}/`} className="font-hand text-lg text-ultramarine underline">
+          <Link href={`/lesson/${next.lesson.id}/`} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
             Start the next level now
           </Link>
         )}
