@@ -1108,7 +1108,7 @@
           "title": "The Wedding Feast at Cana",
           "titleFr": "Les Noces de Cana",
           "artist": "Paolo Caliari, called Veronese",
-          "date": "16th century",
+          "date": "1562–1563",
           "medium": "Oil on canvas",
           "department": "Paintings",
           "inventory": "INV 142",
@@ -1119,8 +1119,9 @@
             "roomName": "Salle des États"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064382"
+          "checkedOn": "2026-10-14",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010064382",
+          "levelId": "wedding-feast-at-cana-1"
         },
         {
           "id": "woman-with-a-mirror",
