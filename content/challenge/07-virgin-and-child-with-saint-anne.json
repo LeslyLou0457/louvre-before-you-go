@@ -1,12 +1,12 @@
 {
   "artworkId": "virgin-and-child-with-saint-anne",
   "zoomImage": {
-    "file": "La Vierge, l'Enfant Jésus et sainte Anne, by Leonardo da Vinci, from C2RMF.jpg",
-    "commons": "https://commons.wikimedia.org/wiki/File:La_Vierge,_l%27Enfant_J%C3%A9sus_et_sainte_Anne,_by_Leonardo_da_Vinci,_from_C2RMF.jpg",
-    "width": 13972,
-    "height": 18032,
-    "licence": "Public domain (faithful reproduction of a 2D public-domain work)",
-    "credit": "C2RMF scan via Wikimedia Commons (uncropped) · Public Domain",
+    "file": "The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci,_Louvre.jpg",
+    "width": 7716,
+    "height": 11375,
+    "licence": "CC0",
+    "credit": "Photo: Wilfredor, 2024, after the 2011 cleaning, via Wikimedia Commons · CC0",
     "overview": "/images/challenge/virgin-and-child-with-saint-anne/overview.jpg"
   },
   "lessons": [
@@ -32,10 +32,10 @@
         "c1": {
           "type": "story",
           "zoom": {
-            "x": 0.53,
-            "y": 0.46,
-            "w": 0.36,
-            "h": 0.36,
+            "x": 0.56,
+            "y": 0.45,
+            "w": 0.38,
+            "h": 0.39,
             "label": "The child Jesus gripping the lamb, lower right",
             "image": "/images/challenge/virgin-and-child-with-saint-anne/c1.jpg"
           },
@@ -45,10 +45,10 @@
         "c1q": {
           "type": "question",
           "zoom": {
-            "x": 0.53,
-            "y": 0.46,
-            "w": 0.36,
-            "h": 0.36,
+            "x": 0.56,
+            "y": 0.45,
+            "w": 0.38,
+            "h": 0.39,
             "label": "The child Jesus gripping the lamb, lower right",
             "image": "/images/challenge/virgin-and-child-with-saint-anne/c1.jpg"
           },
@@ -128,24 +128,24 @@
         "c2": {
           "type": "story",
           "zoom": {
-            "x": 0.22,
-            "y": 0.34,
-            "w": 0.4,
-            "h": 0.3,
-            "label": "Mary's right arm in its transparent sleeve, from wrist to shoulder",
+            "x": 0.19,
+            "y": 0.33,
+            "w": 0.46,
+            "h": 0.32,
+            "label": "Mary's right arm in its transparent sleeve",
             "image": "/images/challenge/virgin-and-child-with-saint-anne/c2.jpg"
           },
-          "text": "Mary reaches down with her right arm. Look at the cloth over it: thin, see-through folds, wrapping the arm from wrist to shoulder.",
+          "text": "Mary reaches down with her right arm. Look at the cloth over it: thin, see-through folds, wrapping the arm from the wrist up.",
           "next": "c2q"
         },
         "c2q": {
           "type": "question",
           "zoom": {
-            "x": 0.22,
-            "y": 0.34,
-            "w": 0.4,
-            "h": 0.3,
-            "label": "Mary's right arm in its transparent sleeve, from wrist to shoulder",
+            "x": 0.19,
+            "y": 0.33,
+            "w": 0.46,
+            "h": 0.32,
+            "label": "Mary's right arm in its transparent sleeve",
             "image": "/images/challenge/virgin-and-child-with-saint-anne/c2.jpg"
           },
           "text": "How did Leonardo work out these folds?",
@@ -192,7 +192,7 @@
         },
         "c2m": {
           "type": "story",
-          "text": "This arm got its own study: transparent folds, wrist to shoulder. The sheet is at Windsor."
+          "text": "This arm's transparent folds got their own study. The sheet is at Windsor."
         },
         "c2a": {
           "text": "Yes. He drew this arm's drapery on its own sheet, now in the Royal Collection at Windsor; the Louvre showed it in 2019.",
@@ -224,10 +224,10 @@
         "c3": {
           "type": "story",
           "zoom": {
-            "x": 0.08,
-            "y": 0.55,
-            "w": 0.42,
-            "h": 0.35,
+            "x": 0.05,
+            "y": 0.58,
+            "w": 0.45,
+            "h": 0.33,
             "label": "Saint Anne's dress over her legs, lower left of centre",
             "image": "/images/challenge/virgin-and-child-with-saint-anne/c3.jpg"
           },
@@ -237,10 +237,10 @@
         "c3q": {
           "type": "question",
           "zoom": {
-            "x": 0.08,
-            "y": 0.55,
-            "w": 0.42,
-            "h": 0.35,
+            "x": 0.05,
+            "y": 0.58,
+            "w": 0.45,
+            "h": 0.33,
             "label": "Saint Anne's dress over her legs, lower left of centre",
             "image": "/images/challenge/virgin-and-child-with-saint-anne/c3.jpg"
           },
@@ -378,7 +378,7 @@
       "confidence": "High for the 1501 lamb (Louvre and Popham & Pouncey via the British Museum). The merge line's 'which came first' is the NG/Louvre dating debate.",
       "notes": "Right-answer source: British Museum record quoting Popham & Pouncey (1950), Novellara's Italian 'piglia uno agnello et pare che lo strìnga' (our translation).",
       "quoteCheck": "2026-10-14: WebFetch, short quotations.",
-      "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Shows the child gripping the lamb."
+      "cropCheck": "2026-10-14: box re-measured on the full reference image (Wilfredor's 2024 photo, after the 2011 cleaning); crop checked by eye at full size against the region the sources describe. Shows the child gripping the lamb."
     },
     "c2q": {
       "extends": {
@@ -442,9 +442,9 @@
         ]
       },
       "confidence": "High; the arm shown is Mary's right arm, confirmed by eye on the reference image (2026-10-14).",
-      "notes": "Replaces the plan's billowing-drapery question (the 2019 guide says that design was abandoned).",
+      "notes": "Replaces the plan's billowing-drapery question (the 2019 guide says that design was abandoned). 2026-10-14: the label, intro and merge line no longer say 'to shoulder': in the painting the red puffed sleeve covers the shoulder, so they describe only what the crop shows (the Royal Collection quote is about the drawing).",
       "quoteCheck": "2026-10-14: WebFetch, short quotations.",
-      "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Shows Mary's right arm (the extended arm, nearer the viewer) in its transparent sleeve, from the wrist up to the red sleeve at the shoulder."
+      "cropCheck": "2026-10-14: box re-measured on the full reference image (Wilfredor's 2024 photo, after the 2011 cleaning); crop checked by eye at full size against the region the sources describe. Shows Mary's right arm (the extended arm, nearer the viewer) in its transparent sleeve, from the wrist up to the red puffed sleeve, which covers the shoulder."
     },
     "c3q": {
       "extends": {
@@ -496,7 +496,7 @@
       "confidence": "Held: one institution only.",
       "notes": "Held until an independent second source places the underlayer in Anne's robe.",
       "quoteCheck": "2026-10-14",
-      "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Shows Anne's dark, flat robe over her legs beside Mary's blue drapery (question still held for its source)."
+      "cropCheck": "2026-10-14: box re-measured on the full reference image (Wilfredor's 2024 photo, after the 2011 cleaning); crop checked by eye at full size against the region the sources describe. Shows Anne's dark, flat robe over her legs beside Mary's blue drapery (question still held for its source)."
     }
   }
 }
