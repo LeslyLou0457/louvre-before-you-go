@@ -237,7 +237,8 @@ function CloseUps({ chapterId, works, progress }: { chapterId: string; works: Bo
                     </span>
                   )}
                   {s === "done" && (
-                    <span className="chip chip-met">
+                    // The only chip with a long hint: it may wrap so it never pushes the page sideways.
+                    <span className="chip chip-met whitespace-normal py-1">
                       <CheckDoodle /> Close-up done{r.poolSize > 2 ? ` · played ${Math.max(1, plays)}×, tap for the next pair` : ""}
                     </span>
                   )}
