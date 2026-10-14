@@ -1,0 +1,63 @@
+name: Chapter 09 fetch (temporary)
+
+# TEMPORARY: only on branch claude/ch09-fetch-tmp, deleted when the
+# Chapter 09 batch 1 PR (#16) is final. Downloads the Commons originals (cached,
+# never committed), writes measuring copies and crops, fetches the source
+# pages (committed only encrypted), and commits the results to this branch.
+# Pushes made with GITHUB_TOKEN never start workflows, so it can't loop.
+
+on:
+  push:
+    branches: [claude/ch09-fetch-tmp]
+    paths:
+      - tmp-fetch/config.json
+      - tmp-fetch/fetch.py
+      - tmp-fetch/run.txt
+      - .github/workflows/ch09-fetch.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ch09-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: originals
+          key: commons-originals-ch09-v1
+      - run: pip install pillow beautifulsoup4 pdfminer.six
+      - run: sudo apt-get install -y poppler-utils >/dev/null 2>&1 || true
+      - run: python tmp-fetch/fetch.py $(cat tmp-fetch/run.txt 2>/dev/null)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ch09-fetch-out
+          path: |
+            tmp-fetch/out
+            public/images/virgin-of-the-rocks.jpg
+            public/images/virgin-and-child-with-saint-anne.jpg
+            public/images/challenge/virgin-of-the-rocks
+            public/images/challenge/virgin-and-child-with-saint-anne
+          if-no-files-found: warn
+          retention-days: 3
+      - name: Commit results
+        run: |
+          set +e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "::warning::out: $(ls -R tmp-fetch/out 2>&1 | tr '\n' ' ' | head -c 900)"
+          git add -f -A tmp-fetch/out 2>/tmp/add.err || echo "::warning::add failed: $(cat /tmp/add.err | tr '\n' ' ')"
+          git add -A public/images
+          if git diff --cached --quiet; then echo "::warning::nothing new"; exit 0; fi
+          git commit -q -m "Temporary: ch09 fetch results" > /tmp/c.out 2>&1 || echo "::warning::commit failed: $(cat /tmp/c.out | tr '\n' ' ')"
+          git push > /tmp/p.out 2>&1 || echo "::warning::push failed: $(cat /tmp/p.out | tr '\n' ' ' | head -c 900)"
+          echo "::warning::done $(git log --oneline -1)"
