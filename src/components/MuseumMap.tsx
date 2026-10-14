@@ -16,7 +16,7 @@
 // zoomed. Reduced motion: nothing moves and the zoom is instant (map.css).
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ProgressDots } from "./WorkBits";
 import { NextDoodle } from "@/doodles";
 import type { Box } from "@/doodles/map";
@@ -118,9 +118,12 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
       const w = wings.find((x) => x.id === id) ?? null;
       const f = w ? ((fromHash ? floorFromHash(w) : null) ?? bestFloor(w)) : null;
       wingRef.current = id;
-      setWing(id);
-      setFloor(f);
+      // Start the camera first; the lists below re-render in a transition, in small slices, so the zoom keeps its frames.
       frame(id, instant);
+      startTransition(() => {
+        setWing(id);
+        setFloor(f);
+      });
       try {
         const anchor = w?.floors.find((x) => x.floor === f)?.anchor;
         window.history.replaceState(window.history.state, "", withBase(w ? `/map/${w.id}/#${anchor}` : "/map/"));
