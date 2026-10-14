@@ -1,6 +1,7 @@
 // Where each artwork photo in public/images/ comes from: its Wikimedia
 // Commons file page, where the author and licence can be checked. Paintings
-// are faithful public-domain reproductions; the sculpture photos are CC0.
+// are faithful public-domain reproductions, except The Virgin and Child with
+// Saint Anne, a CC0 photo (Wilfredor, 2024); the sculpture photos are CC0.
 // Files were downloaded at about 2000 px on the long edge and only resized
 // or recompressed to stay light on phones (no crops, no filters).
 //
@@ -20,5 +21,5 @@ export const IMAGE_SOURCE: Record<string, string> = {
   "virgin-of-the-rocks":
     "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg",
   "virgin-and-child-with-saint-anne":
-    "https://commons.wikimedia.org/wiki/File:La_Vierge,_l%27Enfant_J%C3%A9sus_et_sainte_Anne,_by_Leonardo_da_Vinci,_from_C2RMF.jpg",
+    "https://commons.wikimedia.org/wiki/File:The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci,_Louvre.jpg",
 };

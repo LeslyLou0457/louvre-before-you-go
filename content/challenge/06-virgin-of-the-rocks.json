@@ -136,10 +136,10 @@
             "label": "Mary's head and the dark space above it, with no halo",
             "image": "/images/challenge/virgin-of-the-rocks/c2.jpg"
           },
-          "text": "What does London's version add above these heads?",
+          "text": "What does London's version add above her head?",
           "choices": [
             {
-              "label": "Thin gold halos",
+              "label": "A thin gold halo",
               "role": "right",
               "next": "c2a",
               "correct": true
@@ -183,7 +183,7 @@
           "text": "London adds halos, John's cross and bigger figures; Paris, the first version, leaves its heads bare."
         },
         "c2a": {
-          "text": "Yes. In London all but the angel wear the thinnest gold rings as halos. Here in Paris, look again: the heads are bare.",
+          "text": "Yes. In London all but the angel wear the thinnest gold rings as halos. Here in Paris, look again: her head is bare.",
           "type": "branch",
           "next": "c2m"
         },
@@ -191,8 +191,8 @@
           "text": "London does add a cross, just not up here.",
           "correction": {
             "kind": "near-miss",
-            "tempting": "London's John carries a gilded cross, so a golden addition near the heads sounds right.",
-            "truth": "London's cross is tucked under John's arm. Above the heads, London adds thin gold halos.",
+            "tempting": "London's John carries a gilded cross, so a golden addition near her head sounds right.",
+            "truth": "London's cross is tucked under John's arm. Above her head, London adds a thin gold halo.",
             "evidence": "National Gallery: John carries \"a gilded cross under his arm\", and the figures wear \"the thinnest of gold rings as halos\"."
           },
           "type": "branch",
@@ -428,7 +428,7 @@
         ]
       },
       "confidence": "High for London; the Paris absence of halos is confirmed by eye on the reference image (2026-10-14).",
-      "notes": "The plan's 'An arched top' option was removed: the London panel is arched (Technical Bulletin 32, p. 43).",
+      "notes": "The plan's 'An arched top' option was removed: the London panel is arched (Technical Bulletin 32, p. 43). 2026-10-14: the question, the right option and the cross correction say 'her head' / 'a thin gold halo', since the crop shows only Mary's head (Mary is among the London figures with halos: 'All but the Angel').",
       "quoteCheck": "2026-10-14: WebFetch, short quotations.",
       "cropCheck": "2026-10-14: box measured on the full reference image; crop checked by eye against the region the sources describe. Mary's head is bare: no halo in the Paris panel."
     },
