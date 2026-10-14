@@ -9,6 +9,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { getRoundForLevel } from "./challenge";
 import { getLevels } from "./content";
 import type { Catalogue, CatalogueWork, DisplayStatus, WingId } from "./types";
 import { floorLabel, isOffView } from "./book";
@@ -45,6 +46,14 @@ export type BookWork = {
     image: string | null;
     questionCount: number;
     /** For checking a saved mid-level spot against the current content. */
+    nodeIds: string[];
+  };
+  /** The work's close-up round, when one exists; it opens once the level is met. */
+  round?: {
+    id: string;
+    title: string;
+    /** Rounds with a pool bigger than two show a new pair on replay. */
+    poolSize: number;
     nodeIds: string[];
   };
 };
@@ -89,6 +98,7 @@ export function getBook(): Book {
 
   const toWork = (w: CatalogueWork): BookWork => {
     const level = w.levelId ? levels.find((l) => l.lesson.id === w.levelId) : undefined;
+    const round = level ? getRoundForLevel(level.lesson.id) : undefined;
     return {
       id: w.id,
       title: w.title,
@@ -119,6 +129,16 @@ export function getBook(): Book {
               image: level.imageAvailable ? level.artwork.image : null,
               questionCount: level.questionCount,
               nodeIds: Object.keys(level.lesson.nodes),
+            },
+          }
+        : {}),
+      ...(round
+        ? {
+            round: {
+              id: round.lesson.id,
+              title: round.lesson.title,
+              poolSize: round.lesson.pool.length,
+              nodeIds: Object.keys(round.lesson.nodes),
             },
           }
         : {}),
@@ -154,6 +174,15 @@ export function getBook(): Book {
 
 export function getChapter(id: string): BookChapter | undefined {
   return getBook().chapters.find((c) => c.id === id);
+}
+
+/** The chapter holding a work, and the next work after it (in module order) that has a level. */
+export function nextInChapter(workId: string): { chapterId: string; next?: BookWork } | undefined {
+  for (const c of getBook().chapters) {
+    const i = c.works.findIndex((w) => w.id === workId);
+    if (i >= 0) return { chapterId: c.id, next: c.works.slice(i + 1).find((w) => w.level) };
+  }
+  return undefined;
 }
 
 /** Wings in order of first appearance in the chapter, each with its floors, low to high. */

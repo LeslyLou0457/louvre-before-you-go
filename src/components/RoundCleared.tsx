@@ -2,13 +2,16 @@
 
 // Close-Up Challenge cleared page: repeats the merge lines of the two
 // questions just played (the pair is worked out from the play counter, which
-// moved on when the round was finished), then points to the next round.
+// moved on when the round was finished), then points to the next round. A
+// round opened from a chapter (`?from=09`) goes back to that chapter instead
+// (lib/origin); the trail's "next close-up" only shows on the trail.
 
 import Link from "next/link";
 import { type CSSProperties, useEffect, useState } from "react";
 import MuseumLabel from "./MuseumLabel";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
+import { originHref, originLabel, readOrigin, TRAIL, type Origin } from "@/lib/origin";
 import { getPlays } from "@/lib/progress";
 import { roundPair } from "@/lib/rotation";
 import type { Artwork, Speaker } from "@/lib/types";
@@ -24,14 +27,19 @@ type Props = {
   next?: { id: string; title: string };
   /** The round's narrator, who hops once above the stars. */
   narrator?: Speaker;
+  /** One of the trail's five rounds (the "next close-up" line belongs to the trail). */
+  onTrail: boolean;
 };
 
-export default function RoundCleared({ id, pool, roundSize, merges, artwork, museumUrl, next, narrator }: Props) {
+export default function RoundCleared({ id, pool, roundSize, merges, artwork, museumUrl, next, narrator, onTrail }: Props) {
   const [pair, setPair] = useState<string[] | null>(null);
+  const [origin, setOrigin] = useState<Origin>(TRAIL);
 
   useEffect(() => {
     setPair(roundPair(pool, Math.max(0, getPlays(id) - 1), roundSize));
+    setOrigin(readOrigin());
   }, [id, pool, roundSize]);
+  const trailView = onTrail && origin.kind === "trail";
 
   return (
     <main className="soft-fade flex min-h-dvh flex-col gap-6 py-8">
@@ -69,17 +77,18 @@ export default function RoundCleared({ id, pool, roundSize, merges, artwork, mus
       </div>
 
       <div className="mt-auto flex flex-col items-center gap-3">
-        {next ? (
-          <p className="text-center font-hand text-xl">
-            Next close-up: <span className="font-bold">{next.title}</span>
-          </p>
-        ) : (
-          <p className="text-center font-hand text-xl">That was the last close-up. You&apos;ve looked hard at all five.</p>
-        )}
-        <Link href="/start/" className="btn-primary w-full">
-          Back to the journey
+        {trailView &&
+          (next ? (
+            <p className="text-center font-hand text-xl">
+              Next close-up: <span className="font-bold">{next.title}</span>
+            </p>
+          ) : (
+            <p className="text-center font-hand text-xl">That was the last close-up. You&apos;ve looked hard at all five.</p>
+          ))}
+        <Link href={originHref(origin)} className="btn-primary w-full">
+          {originLabel(origin)}
         </Link>
-        {next && (
+        {trailView && next && (
           <Link href={`/challenge/${next.id}/`} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
             Start the next close-up now
           </Link>

@@ -6,7 +6,10 @@ import ReturnLink from "@/components/ReturnLink";
 import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
-import { getLevel, getLevels, museumLink, narratorOf } from "@/lib/content";
+import { nextInChapter } from "@/lib/catalogue";
+import { getRoundForLevel } from "@/lib/challenge";
+import { getLevel, getLevels, museumLink, narratorOf, nextTrailLevel } from "@/lib/content";
+import { isTrailLevel } from "@/lib/trail";
 
 export const dynamicParams = false;
 
@@ -24,7 +27,16 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function DonePage({ params }: Params) {
   const level = getLevel((await params).id);
   if (!level) notFound();
-  const next = getLevels()[level.index + 1];
+  // On the trail, the next trail level unlocks. A level that lives only in a
+  // chapter points to the next level in that chapter instead (chapters are free to play).
+  const trail = isTrailLevel(level.lesson.id);
+  const nextTrail = nextTrailLevel(level);
+  const inChapter = trail ? undefined : nextInChapter(level.artwork.id);
+  const next = nextTrail
+    ? { title: nextTrail.artwork.title, href: `/lesson/${nextTrail.lesson.id}/` }
+    : inChapter?.next?.level
+      ? { title: inChapter.next.title, href: `/lesson/${inChapter.next.level.id}/?from=${inChapter.chapterId}` }
+      : undefined;
   const narrator = narratorOf(level);
 
   return (
@@ -59,14 +71,20 @@ export default async function DonePage({ params }: Params) {
       <div className="mt-auto flex flex-col items-center gap-3">
         {next ? (
           <p className="text-center font-hand text-xl">
-            Unlocked: <span className="font-bold">{next.artwork.title}</span>
+            {trail ? "Unlocked:" : `Next in Chapter ${inChapter?.chapterId}:`} <span className="font-bold">{next.title}</span>
           </p>
-        ) : (
+        ) : trail ? (
           <p className="text-center font-hand text-xl">That was the last one. You&apos;re ready for the Louvre.</p>
+        ) : (
+          <p className="text-center font-hand text-xl">
+            {getRoundForLevel(level.lesson.id)
+              ? `Its close-up round is open now, at the bottom of Chapter ${inChapter?.chapterId}.`
+              : `That's the last level in Chapter ${inChapter?.chapterId} for now.`}
+          </p>
         )}
         <ReturnLink className="btn-primary w-full" />
         {next && (
-          <Link href={`/lesson/${next.lesson.id}/`} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
+          <Link href={next.href} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
             Start the next level now
           </Link>
         )}

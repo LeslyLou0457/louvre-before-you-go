@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import RoundCleared from "@/components/RoundCleared";
-import { getRound, getRounds, mergeLines } from "@/lib/challenge";
+import { getRound, getRounds, getTrailRounds, mergeLines } from "@/lib/challenge";
 import { museumLink, getLevel } from "@/lib/content";
 
 export const dynamicParams = false;
@@ -20,7 +20,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function ChallengeDonePage({ params }: Params) {
   const round = getRound((await params).id);
   if (!round) notFound();
-  const next = getRounds()[round.index + 1];
+  // The trail's rounds go on to the next trail round; a chapter's round returns to its chapter.
+  const trail = getTrailRounds();
+  const at = trail.findIndex((r) => r.lesson.id === round.lesson.id);
+  const next = at >= 0 ? trail[at + 1] : undefined;
   const level = getLevel(round.levelId);
   return (
     <RoundCleared
@@ -31,6 +34,7 @@ export default async function ChallengeDonePage({ params }: Params) {
       artwork={round.artwork}
       museumUrl={level ? museumLink(level) : undefined}
       next={next ? { id: next.lesson.id, title: next.artwork.title } : undefined}
+      onTrail={at >= 0}
       narrator={round.lesson.narrator ? round.speakers[round.lesson.narrator] : undefined}
     />
   );

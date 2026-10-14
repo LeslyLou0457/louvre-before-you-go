@@ -1059,8 +1059,9 @@
             "roomName": "Grande Galerie"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066107"
+          "checkedOn": "2026-10-14",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066107",
+          "levelId": "virgin-and-child-with-saint-anne-1"
         },
         {
           "id": "virgin-of-the-rocks",
@@ -1078,8 +1079,9 @@
             "roomName": "Grande Galerie"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062373"
+          "checkedOn": "2026-10-14",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+          "levelId": "virgin-of-the-rocks-1"
         },
         {
           "id": "mona-lisa",

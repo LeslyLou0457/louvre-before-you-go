@@ -1,0 +1,270 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "virgin-and-child-with-saint-anne",
+    "title": "The Virgin and Child with Saint Anne",
+    "artist": "Leonardo da Vinci",
+    "year": "1503–1519",
+    "image": "/images/virgin-and-child-with-saint-anne.jpg",
+    "imageCredit": "C2RMF scan via Wikimedia Commons (panel edges trimmed) · Public Domain",
+    "medium": "Oil on poplar panel",
+    "dimensions": "168 × 130 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066107"
+  },
+  "speakers": {
+    "leonardo": {
+      "name": "Leonardo da Vinci",
+      "kind": "artist",
+      "avatar": "leonardo"
+    }
+  },
+  "lessons": [
+    {
+      "id": "virgin-and-child-with-saint-anne-1",
+      "order": 1,
+      "title": "The painting he never let go",
+      "start": "n1",
+      "narrator": "leonardo",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Three people stacked into one group. Mary sits on the lap of her mother, Saint Anne, and leans down towards her little son, Jesus, who has grabbed a lamb. Grandmother, mother, child.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "I kept this panel with me for years. I was still working on it in France."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where did your eye land first?",
+          "choices": [
+            {
+              "label": "The lamb",
+              "next": "b1a"
+            },
+            {
+              "label": "The faces",
+              "next": "b1b"
+            },
+            {
+              "label": "The mountains",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Good start: the lamb is the key to this story. The child is play-fighting with it, as London's National Gallery puts it. Hold that thought.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Follow the faces downwards: Anne at the top, Mary in the middle, the child at the bottom. The whole group leans one way, towards the lamb.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Behind them, mountains and water stretch far away, pale and hazy, a little like the landscape behind the Mona Lisa. Now come back down to the figures.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Look at what's happening. The child has climbed down to the ground and grabbed the lamb, and Mary leans down, reaching for him.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "The child hugs a lamb. What does the lamb stand for?",
+          "choices": [
+            {
+              "label": "His future sacrifice",
+              "next": "b2a",
+              "correct": true
+            },
+            {
+              "label": "His cousin, John the Baptist",
+              "next": "b2b"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Yes. A lamb was an animal for sacrifice, so here it points to the child's own death, what Christians call the Passion. He's hugging his fate.",
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Good instinct, and not random: John really did stand here once.",
+          "next": "n3",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In Leonardo's London cartoon, a large drawing of this group, little John the Baptist stands right where this lamb is.",
+            "truth": "In the painting Leonardo put a lamb in John's place, and the lamb carries its own meaning: the child's future sacrifice.",
+            "evidence": "The National Gallery: the lamb \"appears in the place of\" John. The Louvre and a British Museum catalogue read it as sacrifice, the Passion."
+          }
+        },
+        "n3": {
+          "type": "story",
+          "text": "So the child reaches for his fate while Mary reaches for him. Leonardo tried this group out in several designs, some with little John, some with the lamb.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "I tried this group many ways, with little John and with a lamb."
+          },
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "Now a puzzle: when did Leonardo start this panel? You'd think the museums would agree.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "When did Leonardo begin this painting?",
+          "choices": [
+            {
+              "label": "Around 1503",
+              "next": "b3a"
+            },
+            {
+              "label": "Around 1508–1510",
+              "next": "b3b"
+            },
+            {
+              "label": "Experts disagree",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "That's one side of the argument, not the answer.",
+          "next": "n4",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Louvre says Leonardo had started by October 1503 at the latest, and the National Gallery agrees on around 1503.",
+            "truth": "Other specialists date the start later: the Royal Collection to around 1508, the Met's Carmen Bambach to about 1508–12. It's an open debate.",
+            "evidence": "Louvre: under way \"au plus tard en octobre 1503\". Royal Collection: \"begun around 1508\". The Met: \"ca. 1508–12\"."
+          }
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "That's the other side, not a settled answer.",
+          "next": "n4",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Royal Collection says it was begun around 1508, and the Met dates it about 1508–12.",
+            "truth": "The Louvre and the National Gallery put the start around 1503. Specialists still disagree.",
+            "evidence": "National Gallery: \"begun in around 1503\". Louvre: under way by October 1503 at the latest."
+          }
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Right. The Louvre and London's National Gallery say around 1503. The Royal Collection says around 1508, and the Met's Carmen Bambach about 1508 to 1512. Same panel, different readings of the evidence.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "The London cartoon has its own dating fight: about 1500 for the Louvre, about 1506 to 1508 for the National Gallery. Either way, it was never used to transfer a design to a panel: it isn't pricked or incised.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "What's certain is how long he held on. In 1517, two years before he died, a visitor saw this panel in Leonardo's studio in France, still in progress.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "In France I was still studying the folds of Anne's dress."
+          },
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "When Leonardo died in 1519, was it finished?",
+          "choices": [
+            {
+              "label": "No, still unfinished",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "Yes; the softness is sfumato",
+              "next": "b4b"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Right. He died before it was finished. His drapery studies for it, now in the Royal Collection, are the last drawings he made towards any painting.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "The softness is real, but that's not the answer.",
+          "next": "n5",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "You met sfumato in the Mona Lisa: soft edges painted on purpose. So soft, misty passages here look finished too.",
+            "truth": "Leonardo was still working on this panel when he died in 1519, and it stayed unfinished.",
+            "evidence": "The Louvre: he died before his last idea reached the panel, \"which remained unfinished\". AFP (2012): he was still working on it at his death."
+          }
+        },
+        "n5": {
+          "type": "story",
+          "text": "It entered the collection of the French king, François I. Then, in 2011, it caused a very modern row.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "In 2011 its cleaning split experts. Would you have cleaned it?",
+          "choices": [
+            {
+              "label": "Yes: thin the old varnish",
+              "next": "b5a"
+            },
+            {
+              "label": "No: do less, leave it be",
+              "next": "b5b"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "That was the Louvre's case. The plan thinned layers of 19th- and 20th-century varnish; the museum held that the cleaning was needed and the painting was not at risk.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "That was the critics' case. Two advisory committee members, Ségolène Bergeon Langle and Jean-Pierre Cuzin, resigned; critics feared the solvents could harm the original paint and its soft sfumato.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "The cleaning went ahead. In room 710, look for the lamb, three generations stacked into one group, and a painting Leonardo never let go."
+        }
+      },
+      "takeaway": "Three generations and one lamb: the child hugs his future sacrifice, in a painting Leonardo was still working on when he died, and whose dates and cleaning have been argued over.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066107",
+        "https://www.nationalgallery.org.uk/paintings/NG6337",
+        "https://www.nationalgallery.org.uk/paintings/glossary/immaculate-conception-of-the-virgin",
+        "https://col.rct.uk/collection/912527/the-drapery-of-st-annes-legs",
+        "https://www.britishmuseum.org/collection/object/P_1875-0612-17",
+        "https://www.metmuseum.org/art/collection/search/337496",
+        "https://mini-site.louvre.fr/trimestriel/2019/l%c3%a9onard_de_vinciGB/104/",
+        "https://mini-site.louvre.fr/trimestriel/2019/l%c3%a9onard_de_vinciGB/105/",
+        "https://smarthistory.org/leonardo-virgin-and-child-st-anne-st-john-the-baptist-cartoon/",
+        "https://www.theartnewspaper.com/archive/louvre-s-leonardo-plan-leads-to-resignation",
+        "https://www.thelocal.fr/20120123/2353",
+        "https://resources.culturalheritage.org/conservators-converse/?p=2288"
+      ]
+    }
+  ]
+}

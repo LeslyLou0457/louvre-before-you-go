@@ -6,14 +6,16 @@
 // right now". A work with a level is a link to that level; any other work
 // opens its museum label. The first unmet level is marked "Next up".
 // Progress is read from the existing keys only (lib/book-progress).
+// At the bottom, the chapter's close-up rounds in module order (PRODUCT.md
+// "Close-ups per work"): each opens as soon as its work's level is met.
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import LabelSheet from "./LabelSheet";
 import TabBar, { TAB_BAR_SPACE } from "./TabBar";
 import { PhotoTile, ProgressDots, StatusChip } from "./WorkBits";
-import { BackDoodle, NextDoodle } from "@/doodles";
-import { floorLabel, formatDate, isOffView, nextUpId, summary, workState, type Progress } from "@/lib/book";
+import { BackDoodle, CheckDoodle, LockDoodle, NextDoodle, ZoomDoodle } from "@/doodles";
+import { floorLabel, formatDate, isOffView, nextUpId, roundState, summary, workState, type Progress } from "@/lib/book";
 import { useProgress } from "@/lib/book-progress";
 import { FROM_CONTENTS, readChapterOrigin } from "@/lib/chapter-origin";
 import type { BookChapter, BookWork } from "@/lib/catalogue";
@@ -138,6 +140,8 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
         </section>
       )}
 
+      <CloseUps chapterId={chapter.id} works={chapter.works.filter((w) => w.round)} progress={progress} />
+
       <LabelSheet work={open} eyebrow={name} onClose={() => setOpen(null)} />
       <TabBar active={origin.tab} />
     </main>
@@ -157,7 +161,12 @@ function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
           {work.artist} · {work.date}
         </span>
         <span className="mt-2 flex flex-wrap items-center gap-1.5">
-          <StatusChip work={work} state={state} place={work.level ? progress.places[work.level.id] : null} />
+          <StatusChip
+            work={work}
+            state={state}
+            place={work.level ? progress.places[work.level.id] : null}
+            closeUpDone={!!work.round && progress.completed.has(work.round.id)}
+          />
           {nextUp && (
             <span className="inline-flex items-center gap-0.5 font-hand text-lg font-bold leading-none text-ultramarine">
               <NextDoodle className="h-4 w-4" /> Next up
@@ -182,5 +191,91 @@ function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
         </button>
       )}
     </li>
+  );
+}
+
+/** The chapter's close-up rounds, one per work that has one, in module order. */
+function CloseUps({ chapterId, works, progress }: { chapterId: string; works: BookWork[]; progress: Progress }) {
+  const [hint, setHint] = useState<{ id: string; n: number } | null>(null);
+  if (works.length === 0) return null;
+  return (
+    <section className="mt-8" aria-labelledby="closeups">
+      <div className="flex flex-wrap items-baseline gap-x-2 border-b-[1.5px] border-dashed border-[#b9b09f] pb-1.5">
+        <h2 id="closeups" className="flex items-center gap-1.5 font-hand text-2xl font-bold leading-none">
+          <ZoomDoodle className="h-6 w-6" /> Close-ups
+        </h2>
+        <span className="text-[12.5px] text-muted">two harder questions on zoomed-in details; each opens once its level is met</span>
+      </div>
+      <ul>
+        {works.map((w) => {
+          const r = w.round!;
+          const s = roundState(w, progress);
+          const place = progress.places[r.id];
+          const plays = progress.plays[r.id] ?? 0;
+          const body = (
+            <>
+              <span
+                className={`wobbly-circle flex h-12 w-12 shrink-0 items-center justify-center border-2 border-ink ${
+                  s === "done" ? "bg-gold text-ink" : "bg-mat text-ink"
+                } ${s === "locked" ? "opacity-45" : ""}`}
+                aria-hidden="true"
+              >
+                {s === "locked" ? <LockDoodle className="h-5 w-5" /> : s === "done" ? <CheckDoodle className="h-6 w-6" /> : <ZoomDoodle className="h-6 w-6" />}
+              </span>
+              <span className="min-w-0">
+                <span className={`block font-hand text-[1.3rem] font-bold leading-[1.05] ${s === "locked" ? "text-muted" : ""}`}>{w.title}</span>
+                <span className="mt-0.5 block text-[13.5px] leading-snug text-muted">{r.title}</span>
+                <span className="mt-2 flex flex-wrap items-center gap-1.5">
+                  {s === "open" && (
+                    <span className="chip chip-ready">
+                      <ZoomDoodle /> Start
+                    </span>
+                  )}
+                  {s === "cont" && (
+                    <span className="chip chip-ready">
+                      <ZoomDoodle /> Continue · {place?.answered ?? 0} of 2
+                    </span>
+                  )}
+                  {s === "done" && (
+                    <span className="chip chip-met">
+                      <CheckDoodle /> Close-up done{r.poolSize > 2 ? ` · played ${Math.max(1, plays)}×, tap for the next pair` : ""}
+                    </span>
+                  )}
+                  {s === "locked" && <span className="text-[13px] leading-snug text-muted">Meet the work first: finish its level</span>}
+                </span>
+              </span>
+            </>
+          );
+          const cls =
+            "grid min-h-16 w-full grid-cols-[48px_1fr] items-start gap-3 py-3 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-ultramarine";
+          return (
+            <li key={r.id} className="border-b-[1.5px] border-line">
+              {s === "locked" ? (
+                <button
+                  type="button"
+                  className={cls}
+                  aria-describedby={`closeup-hint-${r.id}`}
+                  onClick={() => setHint((h) => ({ id: r.id, n: (h?.n ?? 0) + 1 }))}
+                >
+                  {body}
+                </button>
+              ) : (
+                // The round returns here when it is finished or left (lib/origin).
+                <Link href={`/challenge/${r.id}/?from=${chapterId}`} className={cls}>
+                  {body}
+                </Link>
+              )}
+              <p id={`closeup-hint-${r.id}`} aria-live="polite" className="pb-1 pl-[60px] font-hand text-lg text-muted">
+                {hint?.id === r.id && (
+                  <span key={hint.n} className="m-hint">
+                    Finish the level of {w.title} first
+                  </span>
+                )}
+              </p>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }
