@@ -46,8 +46,10 @@ export default function Cover() {
         </p>
       </header>
 
-      {/* Build step 4 adds "Open the map" here, as the main button above Contents. */}
       <div className="mt-5 grid gap-2.5">
+        <Link href="/map/" className="btn-primary w-full">
+          Open the map
+        </Link>
         <Link href="/contents/" className="btn-option justify-center font-bold">
           Contents
         </Link>

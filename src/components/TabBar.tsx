@@ -3,18 +3,16 @@
 // Shown on the cover, the "Start here" trail, the contents and the chapter
 // pages; levels and close-up rounds keep the whole screen.
 //
-// The Map tab arrives with the map itself (build step 4): add its entry to
-// TABS between Cover and Contents, with a MapDoodle icon. Until then there is
-// no Map tab at all, rather than one that leads nowhere.
+// The map pages and a chapter opened from the map light up the Map tab.
 
 import Link from "next/link";
-import { ContentsDoodle, CoverDoodle } from "@/doodles";
+import { ContentsDoodle, CoverDoodle, MapDoodle } from "@/doodles";
 
-export type Tab = "cover" | "contents";
+export type Tab = "cover" | "map" | "contents";
 
 const TABS: { id: Tab; href: string; label: string; Icon: typeof CoverDoodle }[] = [
   { id: "cover", href: "/", label: "Cover", Icon: CoverDoodle },
-  // Build step 4: { id: "map", href: "/map/", label: "Map", Icon: MapDoodle },
+  { id: "map", href: "/map/", label: "Map", Icon: MapDoodle },
   { id: "contents", href: "/contents/", label: "Contents", Icon: ContentsDoodle },
 ];
 

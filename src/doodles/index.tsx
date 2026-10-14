@@ -228,3 +228,12 @@ export function ContentsDoodle(p: DoodleProps) {
     </Svg>
   );
 }
+
+/** Folded map, the "Map" tab. */
+export function MapDoodle(p: DoodleProps) {
+  return (
+    <Svg viewBox="0 0 24 24" {...p}>
+      <path d="M3.5 6 L9 4 L15 6.2 L20.5 4.2 L20.5 18 L15 20 L9 17.8 L3.5 19.8 Z M9 4 L9 17.8 M15 6.2 L15 20" {...stroke} strokeWidth={2.2} stroke="currentColor" />
+    </Svg>
+  );
+}

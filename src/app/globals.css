@@ -1,6 +1,8 @@
 @import "tailwindcss";
 /* Restrained motion for the narrator heads and the doodle chrome (PRODUCT.md "Motion"). */
 @import "./motion.css";
+/* The map drawing and its own motion (PRODUCT.md "The map"). */
+@import "./map.css";
 
 /*
  * Design tokens from PRODUCT.md "Design": doodle chrome, painted heads,
