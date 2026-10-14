@@ -1,0 +1,101 @@
+{
+ "images": {
+  "virgin-and-child-with-saint-anne": {
+   "title": "File:The Virgin and Child with Saint Anne by Leonardo da Vinci, Louvre.jpg",
+   "width": 7716,
+   "height": 11375,
+   "bytes": 49134172,
+   "mime": "image/jpeg",
+   "sha1": "1950aeae40ad34a73882f8c793d76e42e2c0804b",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci,_Louvre.jpg",
+   "author": "Wilfredor",
+   "licence": "CC0",
+   "credit": "Own work",
+   "date": "2024-01-29 08:43:54",
+   "exifOrientation": null,
+   "orientedSize": [
+    7716,
+    11375
+   ],
+   "hasIcc": true
+  }
+ },
+ "crops": [
+  {
+   "dest": "public/images/virgin-and-child-with-saint-anne.jpg",
+   "srcPx": [
+    0,
+    0,
+    7716,
+    11375
+   ],
+   "outPx": [
+    1302,
+    1920
+   ],
+   "quality": 88,
+   "bytes": 366257
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/overview.jpg",
+   "srcPx": [
+    0,
+    0,
+    7716,
+    11375
+   ],
+   "outPx": [
+    678,
+    1000
+   ],
+   "quality": 88,
+   "bytes": 110279
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/c1.jpg",
+   "srcPx": [
+    4321,
+    5119,
+    2932,
+    4436
+   ],
+   "outPx": [
+    793,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 142147
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/c2.jpg",
+   "srcPx": [
+    1466,
+    3754,
+    3549,
+    3640
+   ],
+   "outPx": [
+    1170,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 215894
+  },
+  {
+   "dest": "public/images/challenge/virgin-and-child-with-saint-anne/c3.jpg",
+   "srcPx": [
+    386,
+    6598,
+    3472,
+    3753
+   ],
+   "outPx": [
+    1110,
+    1200
+   ],
+   "quality": 88,
+   "bytes": 213472
+  }
+ ]
+}
