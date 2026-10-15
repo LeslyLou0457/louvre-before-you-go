@@ -11,6 +11,7 @@
 > Revised 2026-10-13 (0.6, museum framework): the Louvre's content becomes a book: a cover, a contents page, 15 modules and an appendix holding 100 works, and a schematic map of the three wings, from the approved framework design and the product owner's decisions (modules free to open with "Next up", a close-up round opens per work, works not on view stay in their module, listed last). See "0.6 · Museum framework" and "Catalogue file"; "Museum maps" moves out of "Not doing" for a schematic map used to find modules.
 > Revised 2026-10-14 (build steps 6 and 8, first Chapter 09 batch): close-up rounds open per work on the chapter pages; the "Start here" trail stays the five 0.5 levels and their all-five gate, and levels added later live in their chapters only; the content check now also times every level and every work (see "Three details"). No data-format change: new levels and rounds use the existing level and challenge formats.
 > Revised 2026-10-15 (speaker heads, the product owner's decisions): Leonardo's head is the benchmark, and every head is a flat painted head in the After Hours manner, head only, known at a glance by one or two exaggerated documented traits; the marble block is gone, and works whose maker is unknown or left no documented words are narrated by Lesly, a young museum guide with her own head (speaker kind `guide`; a tuxedo cat dressed after Vermeer's Girl with a Pearl Earring), in the third person; every head opens and closes its mouth while it talks, and the narrator also "says" each question; the chapter page shows the narrator's head on each work that has a level; the cover's yellow star becomes a small flat drawing of the Louvre with "LOUVRE" and "PARIS" in handwriting; the content check fails an avatar id with no drawing (see "How to write", "Data format", "Character layer" and "Motion").
+> Revised 2026-10-15 (flexible question counts, the product owner's decision): the number of questions is flexible per work, more for a rich work and fewer for a thin one; there is no fixed 5 per level or 2 per close-up round. A level needs at least 3 questions and a close-up round shows 1 to 4; the hard limits are the time budgets: a level about 5 minutes and never more than 7, a work's level plus its close-up round within 10 minutes, and the trail's whole Close-Up Challenge within 12. The five levels and eight rounds written so far keep their 5 and 2 (see "Rules for one level", "Three details" and "Rules for the challenge").
 
 **Duolingo for art history. See it before you go; recognise it when you're there.**
 Five minutes a day, one level, one small story about one artwork.
@@ -95,14 +96,14 @@ Venus de Milo and Winged Victory are sculptures, so their lesson pages show a ph
 
 ## 02 · 0.5 · How a level plays — tell a story, ask, branch, return
 
-**Flow of one level · a loop of 5 questions**
+**Flow of one level · a loop of questions (how many depends on the work)**
 
 ```
 Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬→ back to main line
                                           └─ pick B → branch B ─┘     │
                                              (a wrong answer never blocks you)
-        ↑──────────── next question (5 per level) ─────────────────────┤
-                                                                       └─ 5 answered → level cleared, next unlocked
+        ↑──────────── next question (3 or more per level) ─────────────┤
+                                                                       └─ all answered → level cleared, next unlocked
 ```
 
 ### Rules for one level
@@ -110,13 +111,13 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 1. The main line tells a short story: one to three screens between questions, each 2–4 sentences.
 2. A question appears, with 2–3 options.
 3. The choice leads to a short branch (1–3 sentences), then back to the main line.
-4. Repeat 5 times, clear the level, unlock the next.
+4. Repeat for every question, clear the level, unlock the next. The number of questions is flexible per work (since 2026-10-15): more for a rich work, fewer for a thin one, at least 3; the time budget below is the only cap. The first eight levels have 5.
 
 ### Three details
 
 - **A wrong answer never blocks you, and it is always corrected.** A wrong pick opens its own branch. The branch says plainly that the answer isn't right, then a correction card explains why the idea is tempting, what is actually true, and the evidence (a detail in the work or a documented fact) that settles it. Never shown in red. A wrong answer is another chance to tell a story.
 - **Some questions have no right answer.** For example, "Where did your eye land first?": each option leads to a different branch.
-- **A level takes about 5 minutes, never more than 7.** Since the 2026-10-09 depth revision a level is about 17–21 short screens: roughly 4–5 minutes when your answers are right, a little more when you get them wrong and read the corrections. One screen shows one passage or one question; tap to move on. Everything about one work, its level plus its close-up round (see "Close-Up Challenge"), stays within 10 minutes. `npm run check-content` times every level with the challenge's reading model (0.3 s a word, counting each screen's text, voice line, options and, on a wrong branch, its correction card; plus a 1 s tap per screen and 5 s per question to choose): it fails a level whose slowest path (every answer wrong, every card read) is over 7 minutes, warns when the all-right path is over 6, and fails a work whose level plus its heaviest close-up pair is over 10 minutes.
+- **A level takes about 5 minutes, never more than 7.** Since the 2026-10-09 depth revision a level is about 17–21 short screens: roughly 4–5 minutes when your answers are right, a little more when you get them wrong and read the corrections. One screen shows one passage or one question; tap to move on. Everything about one work, its level plus its close-up round (see "Close-Up Challenge"), stays within 10 minutes. `npm run check-content` times every level with the challenge's reading model (0.3 s a word, counting each screen's text, voice line, options and, on a wrong branch, its correction card; plus a 1 s tap per screen and 5 s per question to choose): it fails a level whose slowest path (every answer wrong, every card read) is over 7 minutes, warns when the all-right path is over 6, and fails a work whose level plus its heaviest close-up play is over 10 minutes. The build runs the same checks, so a level over budget can't ship.
 
 > **Audio waits for 1.0:** 0.5 is text only; get the story and pacing right first. Write it the way people speak, so the 1.0 voice-over needs no rewrite.
 
@@ -145,10 +146,10 @@ After a player has finished all 5 levels, a **Close-Up Challenge** unlocks below
 
 1. **Unlock:** all 5 levels finished. Before that, the challenge is shown locked with one line saying why ("Finish all five levels to unlock the close-ups"), not a pop-up.
 2. **One round per artwork,** in route order, like the levels: the first unfinished round is current, later ones are locked, finished rounds can be replayed.
-3. **2 questions per round.** Each artwork keeps an ordered **pool** of fully sourced questions. Play *k* (0, 1, 2, …) shows pool items 2*k* and 2*k*+1, counted round the pool (indices modulo the pool size), so the first play is always the first two and a replay shows the next pair. One play counter per artwork in localStorage; it moves on when a round is finished. A pool of 3 repeats a question on the third play; a pool of 2 shows the same pair every time.
+3. **A few questions per round, flexible per work** (since 2026-10-15): each round sets its `roundSize`, from 1 to 4 (the first eight rounds use 2), within the time budget below. Each artwork keeps an ordered **pool** of fully sourced questions, at least `roundSize` long. Play *k* (0, 1, 2, …) shows pool items *k*·size to *k*·size + size − 1 (2*k* and 2*k*+1 for a round of 2), counted round the pool (indices modulo the pool size), so the first play is always the first ones and a replay shows the next. One play counter per artwork in localStorage; it moves on when a round is finished. A pool of 3 repeats a question on the third play; a pool of 2 shows the same pair every time.
 4. **One question is 4 screens,** the usual loop: an intro with the zoomed crop, the question with 3 options, the branch (a wrong pick gets the usual correction card), and the merge line every player sees. The crop stays on screen for the whole question, with a small "see where" thumbnail of the whole work with the region outlined, so the player knows where they are; tapping the crop opens it full screen, tapping the thumbnail opens the whole work with the outline. After the second merge line, the round's cleared page repeats both merge lines.
 5. **Sources on screen:** each question's merge screen lists its sources in small print, with links.
-6. **Saved like a level:** leaving or reloading mid-round picks up at the same screen of the same pair, with "Start over"; the place is cleared when the round is finished.
+6. **Saved like a level:** leaving or reloading mid-round picks up at the same screen of the same questions, with "Start over"; the place is cleared when the round is finished.
 
 ### Options: one right answer, two near misses
 
@@ -167,9 +168,9 @@ After a player has finished all 5 levels, a **Close-Up Challenge** unlocks below
 
 ### Time budget
 
-The whole challenge, all 5 rounds, takes at most **12 minutes** (720 s), so a round takes at most **144 s**, even when every answer is wrong and every correction card is read.
+The trail's whole challenge, all 5 rounds, takes at most **12 minutes** (720 s), even when every answer is wrong and every correction card is read; that is 144 s a round on average. Every work's level plus its close-up round stays within **10 minutes** (see "Three details"). These two are the hard limits; a single round over 144 s only gets a warning.
 
-Model (also used by the content check): reading at 200 words per minute (0.3 s a word, the low end of adult silent reading; Brysbaert 2019, *Journal of Memory and Language* 109, 104047); per question 6 s looking at the zoom, 5 s choosing and 4 taps of 1 s (15 s); per round, the title and the cleared page's two merge lines plus 2 taps.
+Model (also used by the content check): reading at 200 words per minute (0.3 s a word, the low end of adult silent reading; Brysbaert 2019, *Journal of Memory and Language* 109, 104047); per question 6 s looking at the zoom, 5 s choosing and 4 taps of 1 s (15 s); per round, the title and the cleared page's merge lines plus 2 taps.
 
 Word caps per question (tighter than a level's):
 
@@ -184,7 +185,7 @@ Word caps per question (tighter than a level's):
 | Merge line | 18 |
 | Round title | 8 |
 
-At the caps the worst path is 160 words (63 s) and the right path 105 words (46.5 s) per question, so 2 questions fit (141 s a round, 11.8 minutes for all five) and 3 don't. The content check computes every pair the rotation can show and fails any round over 144 s.
+At the caps the worst path is 160 words (63 s) and the right path 105 words (46.5 s) per question, so 2 questions fit a 144 s share (141 s a round, 11.8 minutes for all five) and a 3- or 4-question round needs a lighter level or lighter questions. The content check computes every set of questions the rotation can show, warns when one is over 144 s, and fails a work whose level plus its heaviest play is over 10 minutes and a trail whose five heaviest plays are over 12.
 
 ### Images
 
@@ -314,7 +315,7 @@ Every work is shown and says what it is. Two independent facts make up its statu
 
 ### Close-ups per work
 
-Each work keeps one close-up round, in the current format (two questions on real crops; see "Close-Up Challenge"). In a module, **a work's round opens as soon as that work's level is done**, not behind a gate for the whole module (a growing module would re-lock). The module page lists its rounds in module order. The "all five levels" gate stays only on the "Start here" trail, so nothing changes for current players. A round opened from a chapter (`?from=09`) returns there when it is left or finished; its cleared page shows no "next close-up", which belongs to the trail. The challenge file's `unlock` stays `"all-base-levels"`: it names the trail gate, and the chapter page applies the per-work rule.
+Each work keeps one close-up round, in the current format (a few questions on real crops, usually two; see "Close-Up Challenge"). In a module, **a work's round opens as soon as that work's level is done**, not behind a gate for the whole module (a growing module would re-lock). The module page lists its rounds in module order. The "all five levels" gate stays only on the "Start here" trail, so nothing changes for current players. A round opened from a chapter (`?from=09`) returns there when it is left or finished; its cleared page shows no "next close-up", which belongs to the trail. The challenge file's `unlock` stays `"all-base-levels"`: it names the trail gate, and the chapter page applies the per-work rule.
 
 ### Motion and accessibility
 
@@ -355,7 +356,7 @@ Small PRs, each run and checked on a 375 px phone before committing.
 - 0.5 content is written in English.
 - Talk like a friend telling you a story in front of the artwork: "you", short sentences, spoken style. A main-line passage is at most 45 words, a branch at most 40, a question at most 15.
 - One level, one through-line. Each level follows one question about the work, and goes deep on it rather than listing facts.
-- **Depth standard.** Conversational doesn't mean shallow. "Observe and describe" is the starting point, never the whole level. Across its five rounds, every level must cover, in plain spoken language:
+- **Depth standard.** Conversational doesn't mean shallow. "Observe and describe" is the starting point, never the whole level. Across its questions, every level must cover, in plain spoken language:
   1. Context: the historical and political moment, and who commissioned, paid for or bought the work (or that nobody knows).
   2. Form, explained as why it matters: composition, space, light, colour, line, scale, viewpoint. Not "there is a triangle" but what the triangle does to you.
   3. Technique and materials: how it was physically made, and what that tells us.
@@ -431,7 +432,7 @@ One file per artwork in `content/challenge/`, named like the level files (`01-mo
 | top level | `artworkId` | The level file's `artwork.id`; title, museum label, credit and speakers come from that file |
 | top level | `zoomImage` | The reference image: `file` (Commons file name), `commons` (its file page), `width` and `height` in pixels, `licence`, `credit`, and `overview` (path of the "see where" image under `public/`) |
 | `lessons[]` | `kind`, `unlock` | `"challenge"` and `"all-base-levels"` |
-| `lessons[]` | `roundSize` | `2` |
+| `lessons[]` | `roundSize` | Questions per play, 1 to 4 (flexible per work since 2026-10-15; the first eight rounds use `2`) |
 | `lessons[]` | `pool` | Ordered intro-node ids of the questions in the rotation. Replaces `start` |
 | `lessons[]` | `held` | `[{ "start", "why" }]`: sourced questions kept out of the rotation, with the reason |
 | `lessons[]` | (no `takeaway`) | The cleared page shows the round's two merge lines instead |
@@ -441,7 +442,7 @@ One file per artwork in `content/challenge/`, named like the level files (`01-mo
 | merge node | (no `next`) | The player goes on to the round's next question, or the cleared page |
 | top level | `review` | Per question node id (`c1q`, …): `extends` (`nodes` in the level file, `concept`), `framing`, `what_you_learn`, `regionSources` and `choiceSources` (title, URL, the exact quoted passage, a translation marked "our translation" if not English, what it supports; `choiceSources` keyed by wrong-branch id), `confidence`, `notes`, `quoteCheck` and `cropCheck` (when and how quotes and crop were checked), and `exception` where an approved exception (a `myth` option) applies. Ignored by the app: it is the audit trail |
 
-Node ids per question: `cN` intro, `cNq` question, `cNa`/`cNb`/`cNc` branches in option order, `cNm` merge. `npm run check-content` also checks challenge files: 3 options with one `right` and two wrong (`near-miss`, or `myth` where approved); a `correction` and a `choiceSources` entry for every wrong option; at least one `regionSources` quote; a `zoom` inside 0–1 on intro and question, the same on both, and its crop file in `public/`; every branch leads to the question's merge line; the word caps; every round the rotation can show within 144 s; and every node named in `review.extends` exists in the level file.
+Node ids per question: `cN` intro, `cNq` question, `cNa`/`cNb`/`cNc` branches in option order, `cNm` merge. `npm run check-content` also checks challenge files: 3 options with one `right` and two wrong (`near-miss`, or `myth` where approved); a `correction` and a `choiceSources` entry for every wrong option; at least one `regionSources` quote; a `zoom` inside 0–1 on intro and question, the same on both, and its crop file in `public/`; every branch leads to the question's merge line; the word caps; `roundSize` from 1 to 4 and a pool at least that long; every play the rotation can show timed (a warning over 144 s), with the work's level plus its heaviest play within 10 minutes; and every node named in `review.extends` exists in the level file.
 
 ### Catalogue file
 

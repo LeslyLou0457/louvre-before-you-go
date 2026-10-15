@@ -54,8 +54,10 @@ export type BookWork = {
   round?: {
     id: string;
     title: string;
-    /** Rounds with a pool bigger than two show a new pair on replay. */
+    /** Rounds with a pool bigger than the round show new questions on replay. */
     poolSize: number;
+    /** Questions in one play of the round. */
+    roundSize: number;
     nodeIds: string[];
   };
 };
@@ -141,6 +143,7 @@ export function getBook(): Book {
               id: round.lesson.id,
               title: round.lesson.title,
               poolSize: round.lesson.pool.length,
+              roundSize: Math.min(round.lesson.roundSize, round.lesson.pool.length),
               nodeIds: Object.keys(round.lesson.nodes),
             },
           }

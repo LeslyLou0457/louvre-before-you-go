@@ -1,7 +1,7 @@
 "use client";
 
-// Plays one level: story → question → branch → back to the main line, five
-// times. A wrong pick is never shown as wrong (no red); it simply opens its
+// Plays one level: story → question → branch → back to the main line, once
+// per question (the count varies by work). A wrong pick is never shown as wrong (no red); it simply opens its
 // branch. The player's spot is saved to localStorage as they go (lib/progress),
 // so leaving or reloading mid-level resumes it, with a "Start over" link.
 // Leaving or finishing goes back to where the level was opened from: its

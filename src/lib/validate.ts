@@ -1,12 +1,18 @@
 // Content checks shared by the build (src/lib/content.ts) and
 // `npm run check-content` (scripts/check-content.ts).
-// Keep this file free of runtime imports other than ./avatar-ids.ts so Node
-// can run it directly.
+// Keep this file free of runtime imports other than ./avatar-ids.ts and
+// ./level-time.ts so Node can run it directly.
 
 import type { Correction, ContentFile, LessonNode, Voice as LessonNodeVoice } from "./types";
 import { AVATAR_IDS } from "./avatar-ids.ts";
+import { LEVEL_TIME_MODEL, levelTime } from "./level-time.ts";
 
-export const QUESTIONS_PER_LEVEL = 5;
+/**
+ * Question counts are flexible per work (2026-10-15): more for a rich work,
+ * fewer for a thin one. A level needs at least this many questions; there is
+ * no maximum, because the time budget below caps its length.
+ */
+export const MIN_QUESTIONS_PER_LEVEL = 3;
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
 export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;
 export const CORRECTION_WORD_LIMITS = { verdict: 6, tempting: 30, truth: 35, evidence: 35 } as const;
@@ -170,8 +176,18 @@ export function validateContent(data: unknown, file: string): Report {
         err(`${at}: next "${node.next}" is not a node`);
       }
     }
-    if (questions !== QUESTIONS_PER_LEVEL) {
-      err(`${where}: has ${questions} questions, expected ${QUESTIONS_PER_LEVEL}`);
+    if (questions < MIN_QUESTIONS_PER_LEVEL) {
+      err(`${where}: has ${questions} questions, needs at least ${MIN_QUESTIONS_PER_LEVEL}`);
+    }
+    // Time budget (PRODUCT.md "Three details"): about 5 minutes, never more than 7.
+    const t = levelTime(nodes as Record<string, LessonNode>, lesson.start);
+    if (t) {
+      const fmt = (x: number) => `${Math.floor(x / 60)}:${String(Math.round(x % 60)).padStart(2, "0")}`;
+      if (t.worst > LEVEL_TIME_MODEL.capSeconds) {
+        err(`${where}: takes ${fmt(t.worst)} on the slowest path (cap ${fmt(LEVEL_TIME_MODEL.capSeconds)})`);
+      } else if (t.right > LEVEL_TIME_MODEL.rightWarnSeconds) {
+        warn(`${where}: takes ${fmt(t.right)} with every answer right (aim for about 5:00)`);
+      }
     }
     if (ends === 0) err(`${where}: no end node (a story or branch without "next")`);
 

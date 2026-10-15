@@ -1,5 +1,5 @@
 // Content check: `npm run check-content`.
-// Every `next` exists, every node is reachable, 5 questions per level,
+// Every `next` exists, every node is reachable, at least 3 questions per level,
 // 2–3 choices per question, sources not empty, word budgets (warnings),
 // and whether each artwork's image file is in public/.
 // Then the Close-Up Challenge files in content/challenge/ (see
@@ -67,13 +67,14 @@ for (const file of files) {
     for (const l of (d.lessons ?? []) as { id: string; start?: string; nodes?: Record<string, LessonNode> }[]) {
       const t = l.nodes && l.start ? levelTime(l.nodes, l.start) : null;
       if (!t) continue;
-      times.push(`        ${l.id}: ${t.screens} screens on the slowest path, ${fmt(t.right)} all right, ${fmt(t.worst)} all wrong`);
-      if (t.worst > LEVEL_TIME_MODEL.capSeconds) {
-        report.errors.push(`${file}: lesson ${l.id} takes ${fmt(t.worst)} on the slowest path (cap ${fmt(LEVEL_TIME_MODEL.capSeconds)})`);
-      } else if (t.right > LEVEL_TIME_MODEL.rightWarnSeconds) {
-        report.warnings.push(`${file}: lesson ${l.id} takes ${fmt(t.right)} with every answer right (aim for about 5:00)`);
+      // The 7-minute cap and the 6-minute warning are checked in validateContent.
+      const qn = Object.values(l.nodes ?? {}).filter((n) => n.type === "question").length;
+      times.push(`        ${l.id}: ${qn} questions, ${t.screens} screens on the slowest path, ${fmt(t.right)} all right, ${fmt(t.worst)} all wrong`);
+      if (d.artwork?.id) {
+        levelWorst.set(d.artwork.id, Math.max(levelWorst.get(d.artwork.id) ?? 0, t.worst));
+        const b = base.get(d.artwork.id);
+        if (b) b.levelWorstSeconds = levelWorst.get(d.artwork.id);
       }
-      if (d.artwork?.id) levelWorst.set(d.artwork.id, Math.max(levelWorst.get(d.artwork.id) ?? 0, t.worst));
     }
   }
   report.errors.forEach((m) => console.log(`ERROR ${m}`));
@@ -130,11 +131,8 @@ for (const file of challengeFiles) {
     const lw = d.artworkId ? levelWorst.get(d.artworkId) : undefined;
     if (lw !== undefined) {
       const total = lw + roundWorst;
-      console.log(`        work total (level + heaviest pair, all wrong): ${fmt(total)} (cap ${fmt(LEVEL_TIME_MODEL.workCapSeconds)})`);
-      if (total > LEVEL_TIME_MODEL.workCapSeconds) {
-        console.log(`ERROR ${name}: level plus close-up round can take ${fmt(total)} (cap ${fmt(LEVEL_TIME_MODEL.workCapSeconds)})`);
-        errors++;
-      }
+      // The 10-minute cap itself is checked in validateChallenge.
+      console.log(`        work total (level + heaviest play, all wrong): ${fmt(total)} (cap ${fmt(LEVEL_TIME_MODEL.workCapSeconds)})`);
     }
   }
 }

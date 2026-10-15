@@ -3,7 +3,7 @@
 // The Close-Up Challenge on the home page, under the level route
 // (PRODUCT.md "Close-Up Challenge"). Locked until all five levels are done,
 // with one line saying why. Then one round per artwork in route order, like
-// the levels: done (gold tick, replayable with the next pair of questions),
+// the levels: done (gold tick, replayable with the next questions),
 // current ("Start"), any round left mid-way ("Continue"), later ones locked.
 //
 // Motion (PRODUCT.md "Motion"), all one-shots: on the first home visit after
@@ -105,7 +105,7 @@ export default function ChallengeRoute({ items, levelIds }: { items: ChallengeIt
 
   useEffect(() => {
     const completedNow = getCompleted();
-    const placesNow = Object.fromEntries(items.map((i) => [i.id, getPlace(i.id, i.nodeIds, 2)]));
+    const placesNow = Object.fromEntries(items.map((i) => [i.id, getPlace(i.id, i.nodeIds, i.roundSize)]));
     setCompleted(completedNow);
     setPlaces(placesNow);
     setPlays(Object.fromEntries(items.map((i) => [i.id, getPlays(i.id)])));
@@ -147,7 +147,7 @@ export default function ChallengeRoute({ items, levelIds }: { items: ChallengeIt
       </div>
       <UnderlineDoodle className="mt-1 h-3 w-44" />
       <p className="mt-3 text-muted">
-        Two harder questions per work, on zoomed-in details of the real thing. About two minutes a round.
+        Harder questions per work, on zoomed-in details of the real thing. A couple of minutes a round.
       </p>
       {!unlocked && (
         <p className="mt-2 flex items-center gap-2 font-hand text-xl">
@@ -179,7 +179,7 @@ export default function ChallengeRoute({ items, levelIds }: { items: ChallengeIt
               </span>
               <span className="block text-sm text-muted">
                 {item.title}
-                {s === "done" && !place && <span className="sr-only"> (finished, tap to play the next pair)</span>}
+                {s === "done" && !place && <span className="sr-only"> (finished, tap to play the next questions)</span>}
                 {place && <span className="sr-only"> (in progress, tap to continue)</span>}
                 {!open && <span className="sr-only"> (locked)</span>}
               </span>
@@ -215,7 +215,7 @@ export default function ChallengeRoute({ items, levelIds }: { items: ChallengeIt
                   <Link href={`/challenge/${item.id}/`} className="btn-primary">
                     Continue
                   </Link>
-                  <span className="font-hand text-lg text-muted">{place.answered} of 2 answered</span>
+                  <span className="font-hand text-lg text-muted">{place.answered} of {item.roundSize} answered</span>
                 </div>
               ) : s === "current" ? (
                 <div className="mt-2 pl-[64px]">
@@ -229,9 +229,9 @@ export default function ChallengeRoute({ items, levelIds }: { items: ChallengeIt
                 </div>
               ) : (
                 s === "done" &&
-                item.pool.length > 2 && (
+                item.pool.length > item.roundSize && (
                   <p className="pl-[64px] font-hand text-lg text-muted">
-                    Played {plays[item.id] ?? 1}× · tap for the next pair
+                    Played {plays[item.id] ?? 1}× · tap for the next questions
                   </p>
                 )
               )}

@@ -1,10 +1,11 @@
 // Checks for Close-Up Challenge files (content/challenge/*.json), shared by
 // the build (src/lib/challenge.ts) and `npm run check-content`.
 // PRODUCT.md "Close-Up Challenge" and "Challenge files" are the spec.
-// Keep this file free of runtime imports other than ./rotation.ts so Node can
-// run it directly.
+// Keep this file free of runtime imports other than ./rotation.ts and
+// ./level-time.ts so Node can run it directly.
 
 import type { BranchNode, ChallengeFile, LessonNode, QuestionNode, StoryNode, Zoom } from "./types";
+import { LEVEL_TIME_MODEL } from "./level-time.ts";
 import { allRounds, TIME_MODEL } from "./rotation.ts";
 
 export const CHALLENGE_WORD_CAPS = {
@@ -27,7 +28,12 @@ export type BaseInfo = {
   /** Node ids of the artwork's level. */
   nodeIds: Set<string>;
   speakers: Record<string, unknown>;
+  /** The level's slowest path in seconds (lib/level-time), for the 10-minute work budget. */
+  levelWorstSeconds?: number;
 };
+
+/** Close-up questions in one play of a round: flexible per work (2026-10-15). */
+export const ROUND_SIZE = { min: 1, max: 4 } as const;
 
 export type RoundTime = { play: number; pair: string[]; right: number; worst: number };
 
@@ -98,7 +104,9 @@ export function validateChallenge(
     if (!isText(lesson?.id)) err(`${where}: id is missing`);
     if (lesson?.kind !== "challenge") err(`${where}: kind must be "challenge"`);
     if (lesson?.unlock !== "all-base-levels") err(`${where}: unlock must be "all-base-levels"`);
-    if (lesson?.roundSize !== 2) err(`${where}: roundSize must be 2`);
+    if (!Number.isInteger(lesson?.roundSize) || lesson.roundSize < ROUND_SIZE.min || lesson.roundSize > ROUND_SIZE.max) {
+      err(`${where}: roundSize must be a whole number from ${ROUND_SIZE.min} to ${ROUND_SIZE.max}`);
+    }
     if (typeof lesson?.order !== "number") err(`${where}: order must be a number`);
     if (!isText(lesson?.title)) err(`${where}: title is missing`);
     cap(`${where}: title`, lesson?.title, CHALLENGE_WORD_CAPS.title);
@@ -295,7 +303,11 @@ export function validateChallenge(
       };
       times.push(t);
       if (t.worst > TIME_MODEL.roundCapSeconds) {
-        err(`${where}: play ${play} (${pair.join(" + ")}) takes ${t.worst} s on the slowest path (cap ${TIME_MODEL.roundCapSeconds} s)`);
+        warn(`${where}: play ${play} (${pair.join(" + ")}) takes ${t.worst} s on the slowest path, over a trail round's ${TIME_MODEL.roundCapSeconds} s share of 12 minutes`);
+      }
+      const lw = baseInfo?.levelWorstSeconds;
+      if (lw !== undefined && lw + t.worst > LEVEL_TIME_MODEL.workCapSeconds) {
+        err(`${where}: play ${play} (${pair.join(" + ")}) plus the level can take ${round1(lw + t.worst)} s on the slowest path (cap ${LEVEL_TIME_MODEL.workCapSeconds} s for one work)`);
       }
     }
   }

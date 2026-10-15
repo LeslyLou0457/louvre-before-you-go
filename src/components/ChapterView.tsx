@@ -214,7 +214,7 @@ function CloseUps({ chapterId, works, progress }: { chapterId: string; works: Bo
         <h2 id="closeups" className="flex items-center gap-1.5 font-hand text-2xl font-bold leading-none">
           <ZoomDoodle className="h-6 w-6" /> Close-ups
         </h2>
-        <span className="text-[12.5px] text-muted">two harder questions on zoomed-in details; each opens once its level is met</span>
+        <span className="text-[12.5px] text-muted">harder questions on zoomed-in details; each opens once its level is met</span>
       </div>
       <ul>
         {works.map((w) => {
@@ -243,13 +243,13 @@ function CloseUps({ chapterId, works, progress }: { chapterId: string; works: Bo
                   )}
                   {s === "cont" && (
                     <span className="chip chip-ready">
-                      <ZoomDoodle /> Continue · {place?.answered ?? 0} of 2
+                      <ZoomDoodle /> Continue · {place?.answered ?? 0} of {r.roundSize}
                     </span>
                   )}
                   {s === "done" && (
                     // The only chip with a long hint: it may wrap so it never pushes the page sideways.
                     <span className="chip chip-met whitespace-normal py-1">
-                      <CheckDoodle /> Close-up done{r.poolSize > 2 ? ` · played ${Math.max(1, plays)}×, tap for the next pair` : ""}
+                      <CheckDoodle /> Close-up done{r.poolSize > r.roundSize ? ` · played ${Math.max(1, plays)}×, tap for the next questions` : ""}
                     </span>
                   )}
                   {s === "locked" && <span className="text-[13px] leading-snug text-muted">Meet the work first: finish its level</span>}

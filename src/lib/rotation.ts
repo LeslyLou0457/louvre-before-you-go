@@ -4,7 +4,8 @@
 
 /**
  * Which pool questions play number `play` (0, 1, 2, …) shows: pool items
- * 2k and 2k+1 for a round size of 2, counted round the pool. A pool no
+ * k·size to k·size + size − 1 (2k and 2k+1 for a round size of 2), counted
+ * round the pool. A pool no
  * bigger than the round shows the whole pool every time.
  */
 export function roundPair(pool: string[], play: number, size = 2): string[] {
@@ -35,6 +36,11 @@ export const TIME_MODEL = {
   secondsPerQuestion: 15,
   /** Taps on the cleared page. */
   secondsPerRound: 2,
-  /** 12 minutes for all five rounds. */
+  /**
+   * The trail's five rounds share 12 minutes, 144 s each on average. Since the
+   * 2026-10-15 flexible-count revision this is a warning per round; the hard
+   * limits are a work's level plus its close-up round within 10 minutes and
+   * the trail's whole challenge within 12.
+   */
   roundCapSeconds: 144,
 } as const;

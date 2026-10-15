@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getLevels } from "./content";
+import { levelTime } from "./level-time";
 import { isTrailLevel } from "./trail";
 import type { ChallengeFile, Round, SourceRef, Speaker, StoryNode } from "./types";
 import { sortContentFiles } from "./validate";
@@ -20,7 +21,15 @@ export function getRounds(): Round[] {
   if (cache) return cache;
   const levels = getLevels();
   const base = new Map<string, BaseInfo>(
-    levels.map((l) => [l.artwork.id, { file: l.file, nodeIds: new Set(Object.keys(l.lesson.nodes)), speakers: l.speakers }]),
+    levels.map((l) => [
+      l.artwork.id,
+      {
+        file: l.file,
+        nodeIds: new Set(Object.keys(l.lesson.nodes)),
+        speakers: l.speakers,
+        levelWorstSeconds: levelTime(l.lesson.nodes, l.lesson.start)?.worst,
+      },
+    ]),
   );
   const exists = (p: string) => fs.existsSync(path.join(PUBLIC_DIR, p));
 
@@ -78,6 +87,8 @@ export type ChallengeItem = {
   pool: string[];
   /** For checking a saved mid-round spot against the current content. */
   nodeIds: string[];
+  /** Questions in one play of the round (its roundSize, or the whole pool when smaller). */
+  roundSize: number;
 };
 
 export function getChallenge(): ChallengeItem[] {
@@ -88,6 +99,7 @@ export function getChallenge(): ChallengeItem[] {
     narrator: r.lesson.narrator ? r.speakers[r.lesson.narrator] : undefined,
     pool: r.lesson.pool,
     nodeIds: Object.keys(r.lesson.nodes),
+    roundSize: Math.min(r.lesson.roundSize, r.lesson.pool.length),
   }));
 }
 
