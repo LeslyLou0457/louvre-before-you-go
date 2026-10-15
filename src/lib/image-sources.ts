@@ -24,4 +24,8 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:The_Virgin_and_Child_with_Saint_Anne_by_Leonardo_da_Vinci,_Louvre.jpg",
   "wedding-feast-at-cana":
     "https://commons.wikimedia.org/wiki/File:Les_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_;_MR_384.jpg",
+  "portrait-of-baldassare-castiglione":
+    "https://commons.wikimedia.org/wiki/File:Baldassare_Castiglione,_by_Raffaello_Sanzio,_from_C2RMF_retouched.jpg",
+  "coronation-of-napoleon":
+    "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg",
 };

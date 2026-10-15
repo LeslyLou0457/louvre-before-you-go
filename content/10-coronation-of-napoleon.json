@@ -1,0 +1,413 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "coronation-of-napoleon",
+    "title": "The Coronation of Napoleon",
+    "artist": "Jacques-Louis David",
+    "year": "1807",
+    "image": "/images/coronation-of-napoleon.jpg",
+    "imageCredit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "621 × 979 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065720"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "coronation-of-napoleon-1",
+      "order": 1,
+      "title": "Whose coronation is it?",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "About 190 people crowd Notre-Dame de Paris on 2 December 1804, Pope Pius VII among them. At the centre, Napoleon stands on the altar steps, a crown raised in both hands.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Before the names and the politics, just look at the centre. Whose head is that crown for?"
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Who is the crown in his hands for?",
+          "choices": [
+            {
+              "label": "His own head",
+              "next": "b1a"
+            },
+            {
+              "label": "Josephine, kneeling before him",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "The pope, to crown him",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "He did crown himself that day, but that's not this moment.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Everyone calls it Napoleon's coronation, and he really did crown himself in Notre-Dame.",
+            "truth": "David shows the next moment: already crowned, Napoleon is about to crown the kneeling Josephine.",
+            "evidence": "Louvre record: having crowned himself, he is about to place the crown on his wife's head. Château de Versailles: it 'actually shows the coronation of Empress Josephine'."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. Napoleon has already crowned himself; now he's about to crown his wife, Josephine. So in the picture everyone calls Napoleon's coronation, the crown coming down is the empress's.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "The pope is there, but he isn't crowning anyone.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The pope came all the way to Paris for the ceremony, so you'd expect him to do the crowning.",
+            "truth": "Napoleon crowned himself and then his wife; Pius VII only blessed the crown.",
+            "evidence": "Jérémie Benoît (Histoire par l'image, 2020): Pius VII only blessed the crown. Madame de Rémusat, who was there: it was decided the pope would only give his blessing."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "See which way he faces: his back to the pope, his eyes on his wife. The picture is often called Le Sacre, the consecration, but David painted the crowning instead.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "That May, the Senate had entrusted the French Republic to an emperor: Napoleon Bonaparte, until then First Consul. To make a monarchy acceptable again, the new Empire leaned on the memory of Charlemagne.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Why did Pius VII come? One historian calls it a bargain over France's bishops; a Philadelphia museum says Napoleon forced him."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "And the painter? Jacques-Louis David, leader of Neoclassicism, art modelled on ancient Greece and Rome, had been a revolutionary deputy. In January 1793 he voted for Louis XVI's death; after Robespierre fell, he was jailed.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "Now he was the emperor's First Painter. Napoleon ordered this picture before the ceremony had even happened, one of four on the coronation; only two were ever painted.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "How did David plan where all those people stood?",
+          "choices": [
+            {
+              "label": "He sketched it all live, on the day",
+              "next": "b2a"
+            },
+            {
+              "label": "A model with small dressed dolls",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "His assistants arranged the crowd",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "He did draw on the day, but that's not how he placed them.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "David was in Notre-Dame on 2 December and made drawings on the spot.",
+            "truth": "To fix where each figure stood and how it was seen, the Louvre says he used a three-dimensional model with small dressed dolls.",
+            "evidence": "Louvre record: a three-dimensional model and small dressed dolls. The historian Frédéric Masson (1908) reports costumed figurines in a large box, as hearsay."
+          },
+          "next": "n4"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes, says the Louvre: a three-dimensional model with small dressed dolls, to fix where each figure stood and from what angle it was seen. The historian Frédéric Masson heard the same in 1908.",
+          "next": "n4"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "They helped, but the placing came from somewhere else.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He had help: his pupil Georges Rouget, and the theatre designer Ignazio Degotti for the architecture and perspective.",
+            "truth": "For the figures' places and viewing angles, the Louvre says David used a three-dimensional model with small dressed dolls.",
+            "evidence": "Louvre record, on Rouget, Degotti and the model. Masson (1908), on Degotti's perspectives and the costumed figurines."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "He painted in a disused chapel near the Sorbonne, lent by the State, and began the canvas itself only on 21 December 1805, a year after the ceremony. The pope himself sat for him.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "But the Napoleon you see now is not the one David first painted on this canvas.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "What did David first paint at the centre?",
+          "choices": [
+            {
+              "label": "Napoleon crowning himself",
+              "next": "b3a",
+              "correct": true
+            },
+            {
+              "label": "The pope crowning Napoleon",
+              "next": "b3b"
+            },
+            {
+              "label": "The anointing with holy oil",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Yes. In his drawings and then on the canvas, Napoleon held the crown over his own head, gripping his sword with his other hand. David scraped that figure off and painted the one you see.",
+          "next": "n5"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "That's not what David first had in mind.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A pope crowning an emperor would echo old ceremonies, and Pius VII is sitting right there.",
+            "truth": "David's first idea, in drawings and then on the canvas, was Napoleon crowning himself, the crown above his own head.",
+            "evidence": "Louvre record: the self-crowning pose was painted, then entirely effaced. Masson (1908) quotes David's programme describing it. A drawing signed and dated 1805 shows it."
+          },
+          "next": "n5"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "That's what the nickname suggests, but no.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The picture is nicknamed Le Sacre, and the ceremony did borrow the anointing of the kings of France.",
+            "truth": "The picture shows a crowning. David's first version showed Napoleon crowning himself; he later scraped it off and repainted it.",
+            "evidence": "Louvre record: it 'in reality represents the coronation'; the self-crowning pose was painted, then effaced. Masson (1908) quotes David's programme for the first pose."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Why change such a striking gesture? The Louvre says the new pose is calmer, better suited to the moment, and sets off his wife; Masson called the old one 'pictorially absurd'.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "So who talked David out of the self-crowning?",
+          "choices": [
+            {
+              "label": "The painter François Gérard",
+              "next": "b4a"
+            },
+            {
+              "label": "Napoleon himself",
+              "next": "b4b"
+            },
+            {
+              "label": "Nobody knows for sure",
+              "next": "b4c",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "That's the name most often given, but it isn't proven.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Not proven",
+            "tempting": "Two historians, Masson in 1908 and the Louvre curator Sylvain Laveissière in 2004, both name Gérard.",
+            "truth": "The Louvre's director of paintings says only 'perhaps' Gérard, or Josephine herself, and none of these accounts cites a document recording who first proposed it.",
+            "evidence": "Masson (1908) and Laveissière (2004): Gérard. Louvre director of paintings (2026): perhaps Gérard, or Josephine. Delécluze (1855): no change at all. Hyperallergic (2022): Napoleon's request."
+          },
+          "next": "n6"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "One account says so, but it isn't settled.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Not settled",
+            "tempting": "A 2022 review on Hyperallergic says David changed it at Napoleon's request, and his pupil Delécluze said Napoleon planned it all.",
+            "truth": "Others name the painter Gérard, or perhaps Josephine; and David's drawings and scraped canvas show he really did plan the self-crowning first.",
+            "evidence": "Masson (1908) and Laveissière (2004): Gérard. Louvre director of paintings (2026): perhaps Gérard, or Josephine. Louvre record: the self-crowning pose was painted, then effaced."
+          },
+          "next": "n6"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Right. Masson and the Louvre's Laveissière name the painter Gérard; the Louvre's director of paintings says perhaps Gérard, or Josephine; others say Napoleon. No document in these accounts settles it.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Gérard is the name most often given, and that's as far as the evidence goes. On 4 January 1808 Napoleon came to David's studio to see the picture, with Josephine and his court.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "David's pupil Delécluze, who had it from people who were there, tells how Napoleon walked before it for over half an hour, then raised his hat: 'David, I salute you.'",
+          "next": "n6c"
+        },
+        "n6c": {
+          "type": "story",
+          "text": "Now look up into the central box, behind the altar steps. The woman seated in front is Napoleon's mother, Letizia Bonaparte, known as Madame Mère.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Where was Napoleon's mother during the ceremony?",
+          "choices": [
+            {
+              "label": "In that box, watching",
+              "next": "b5a"
+            },
+            {
+              "label": "Not at the ceremony at all",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "That's what the picture says, but she wasn't there.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Painted in",
+            "tempting": "She sits in the front of the box, right in your line of sight, as if she'd watched it all.",
+            "truth": "She was absent from the ceremony; David painted her in anyway.",
+            "evidence": "Jérémie Benoît (Histoire par l'image): in reality absent. Fondation Napoléon: absent from the ceremony, yet she dominates the tribune. The Louvre's record agrees."
+          },
+          "next": "n7"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Right. She wasn't at the ceremony, yet she has a front seat in David's picture. The Louvre, the Fondation Napoléon and the historian Jérémie Benoît all point it out.",
+          "next": "n7"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "The record is clear on this one.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "With about 190 people painted, it's hard to believe anyone could check who was really there.",
+            "truth": "Independent sources agree that she was absent from the ceremony and that David painted her in anyway.",
+            "evidence": "Louvre record; Fondation Napoléon ('absent from the ceremony'); Jérémie Benoît, Histoire par l'image ('in reality absent', our translation)."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "So it's a portrait of a court as much as a record of a day: David himself called it a 'peinture-portrait', a portrait-painting. He even painted himself up in a gallery, drawing.",
+          "next": "n7b"
+        },
+        "n7b": {
+          "type": "story",
+          "text": "After Napoleon's fall David went into exile in Brussels, where he died in 1825. Years later, a king gave his great picture a new home.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Where did it go on show in 1837?",
+          "choices": [
+            {
+              "label": "Brussels, with David",
+              "next": "b6a"
+            },
+            {
+              "label": "Notre-Dame, where it happened",
+              "next": "b6b"
+            },
+            {
+              "label": "Versailles, in Louis-Philippe's galleries",
+              "next": "b6c",
+              "correct": true
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "David did go to Brussels, but the original didn't hang there.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "David went into exile in Brussels in 1816, and finished a full-size second version of the picture there in 1822.",
+            "truth": "The original went on show at Versailles, in King Louis-Philippe's historical galleries, opened in 1837. The second version is at Versailles today too.",
+            "evidence": "Louvre record and Château de Versailles: the original in the Salle du Sacre from 1837 to 1889; the second version, begun 1808, finished in Brussels in 1822."
+          },
+          "next": "n8"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "A fitting idea, but no.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It shows Notre-Dame on the great day, so hanging it there would seem natural.",
+            "truth": "King Louis-Philippe placed it in his historical galleries at Versailles, opened in 1837. In 1889 it left for Paris and the Louvre.",
+            "evidence": "Louvre record and Château de Versailles: the Salle du Sacre at Versailles until 1889. Delécluze (1855): 'placed today in the historical galleries of Versailles'."
+          },
+          "next": "n8"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Yes. King Louis-Philippe hung it in his historical galleries at Versailles, opened on 10 June 1837, in a room given over to Napoleon. It stayed there until 1889.",
+          "next": "n8"
+        },
+        "n8": {
+          "type": "story",
+          "text": "Since 1890 it has hung in the Louvre, except during the two world wars. So: Josephine's crowning, ordered before the event, rewritten on the canvas, with a mother who wasn't there."
+        }
+      },
+      "takeaway": "Napoleon crowns Josephine, not himself: a picture ordered before the event, reworked on the canvas, with his absent mother painted into a front seat.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+        "https://histoire-image.org/etudes/sacre-napoleon",
+        "https://www.napoleon.org/en/history-of-the-two-empires/paintings/5-the-sacre-or-coronation/",
+        "https://www.napoleon.org/histoire-des-2-empires/tableaux/5-le-sacre/",
+        "https://www.napoleon.org/histoire-des-2-empires/iconographie/sacre-de-lempereur-napoleon-ier-et-couronnement-de-limperatrice-josephine-dans-la-cathedrale-notre-dame-de-paris-le-2-decembre-1804-detail/",
+        "https://www.napoleon.org/histoire-des-2-empires/tableaux/le-sacre-ou-le-couronnement-dessin-preparatoire-david/",
+        "https://en.chateauversailles.fr/discover/estate/palace/coronation-room",
+        "https://www.chateauversailles.fr/decouvrir/domaine/chateau/salle-sacre",
+        "https://philamuseum.org/collection/object/67205",
+        "https://www.nationalgallery.org.uk/artists/jacques-louis-david",
+        "https://www.getty.edu/art/exhibitions/david/extra_david.html",
+        "https://hyperallergic.com/712955/was-jacques-louis-david-really-that-radical/",
+        "https://legrandcontinent.eu/fr/dimanches/sacre-napoleon/",
+        "https://www.gutenberg.org/ebooks/31441",
+        "https://archive.org/details/lesacreetlecouro00mass",
+        "https://www.gutenberg.org/ebooks/33894"
+      ]
+    }
+  ]
+}

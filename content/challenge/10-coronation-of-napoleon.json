@@ -1,0 +1,339 @@
+{
+  "artworkId": "coronation-of-napoleon",
+  "zoomImage": {
+    "file": "Le Sacre de Napoléon - Jacques-Louis David - Musée du Louvre Peintures INV 3699 ; MR 1437.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg",
+    "width": 11058,
+    "height": 6874,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/coronation-of-napoleon/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "coronation-of-napoleon-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: bees and laurels",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.546,
+            "y": 0.712,
+            "w": 0.062,
+            "h": 0.105,
+            "label": "Napoleon's crimson mantle, below his waist",
+            "image": "/images/challenge/coronation-of-napoleon/c1.jpg"
+          },
+          "text": "Level one: Napoleon at the centre, in his great crimson velvet mantle. Zoom in on the small gold shapes scattered over it.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.546,
+            "y": 0.712,
+            "w": 0.062,
+            "h": 0.105,
+            "label": "Napoleon's crimson mantle, below his waist",
+            "image": "/images/challenge/coronation-of-napoleon/c1.jpg"
+          },
+          "text": "What are the little gold shapes on the mantle?",
+          "choices": [
+            {
+              "label": "Imperial eagles",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Gold bees",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Laurel leaves",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720"
+            },
+            {
+              "title": "Mémoires de madame de Rémusat 1802-1808, ed. Paul de Rémusat (Paris: Calmann Lévy, 1880), vol. II (lady-in-waiting to Josephine, an eyewitness; our translations)",
+              "url": "https://www.gutenberg.org/ebooks/33894"
+            },
+            {
+              "title": "Jérémie Benoît, 'Le Sacre de Napoléon', Histoire par l'image (histoire-image.org), September 2020 (our translations)",
+              "url": "https://histoire-image.org/etudes/sacre-napoleon"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Gold bees on crimson velvet: on his mantle, and on Josephine's cushion too."
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Eagles were an Empire emblem, but not these.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Empire had its eagles: David's other coronation picture is the Distribution of the Eagles.",
+            "truth": "The mantle is crimson velvet strewn with gold bees, as the official 1808 booklet described it.",
+            "evidence": "1808 booklet, quoted in the Louvre record: a mantle 'strewn with gold bees'. Madame de Rémusat, an eyewitness: a purple mantle 'sown with bees'."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes: gold bees on crimson velvet, as the 1808 booklet lists them. The cushion Josephine kneels on is sown with bees too.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Laurel is on his head, not scattered here.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He wears a wreath of gold laurels, so laurel embroidery would match.",
+            "truth": "The shapes on the mantle are bees: crimson velvet 'strewn with gold bees', in the 1808 booklet's words.",
+            "evidence": "1808 booklet, quoted in the Louvre record. Madame de Rémusat, who was there: a purple mantle 'sown with bees'."
+          }
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.525,
+            "y": 0.552,
+            "w": 0.085,
+            "h": 0.08,
+            "label": "Napoleon's head and the crown he holds up",
+            "image": "/images/challenge/coronation-of-napoleon/c2.jpg"
+          },
+          "text": "Level one: Napoleon has already crowned himself. Zoom in on his head, just beside the crown he holds up.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.525,
+            "y": 0.552,
+            "w": 0.085,
+            "h": 0.08,
+            "label": "Napoleon's head and the crown he holds up",
+            "image": "/images/challenge/coronation-of-napoleon/c2.jpg"
+          },
+          "text": "What is Napoleon wearing on his own head?",
+          "choices": [
+            {
+              "label": "Nothing yet",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A gold laurel wreath",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "The imperial crown",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720"
+            },
+            {
+              "title": "Mémoires de madame de Rémusat 1802-1808, ed. Paul de Rémusat (Paris: Calmann Lévy, 1880), vol. II (lady-in-waiting to Josephine, an eyewitness; our translations)",
+              "url": "https://www.gutenberg.org/ebooks/33894"
+            },
+            {
+              "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. X (our translations)",
+              "url": "https://www.gutenberg.org/ebooks/31441"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Golden laurels on his head; the crown in his hands goes to Josephine."
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "He's past that moment already.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He's still holding a crown up, as if the crowning were yet to come.",
+            "truth": "He has already crowned himself: on his head is his crown of golden laurels; the raised crown is for Josephine.",
+            "evidence": "Louvre record: he put on his crown of golden laurels, then took the empress's crown. Delécluze (1855): Napoleon 'already crowned'."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes: a crown of golden laurels. Madame de Rémusat, who was there, said it was formed like the Caesars' crown of laurel.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "The crown in his hands is for someone else.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A new emperor would surely wear the grandest crown he had.",
+            "truth": "On his head is a wreath of golden laurels; the crown he holds up is about to crown Josephine.",
+            "evidence": "Louvre record: the golden laurels on his head, the empress's crown in his hands. Madame de Rémusat: a simple laurel crown encircled his head."
+          }
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "b1b"
+        ],
+        "concept": "The emblems on the coronation robes"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Napoleon's crimson velvet mantle is strewn with gold bees (and so is Josephine's cushion); eagles and laurels are other emblems of the day, elsewhere.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+          "quote": "il est revêtu d'une robe de satin blanc, un grand manteau de velours cramoisi, parsemé d'abeilles d'or",
+          "supports": "Our translation: he wears a robe of white satin, a great mantle of crimson velvet strewn with gold bees (the 1808 booklet's description of the painting, quoted in the record).",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        },
+        {
+          "title": "Mémoires de madame de Rémusat 1802-1808, ed. Paul de Rémusat (Paris: Calmann Lévy, 1880), vol. II (lady-in-waiting to Josephine, an eyewitness; our translations)",
+          "url": "https://www.gutenberg.org/ebooks/33894",
+          "quote": "un manteau de pourpre semé d'abeilles",
+          "supports": "Our translation: a purple mantle sown with bees (the real mantle, seen by an eyewitness).",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+            "quote": "un grand manteau de velours cramoisi, parsemé d'abeilles d'or",
+            "supports": "Our translation: bees, not eagles, on the mantle.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "Jérémie Benoît, 'Le Sacre de Napoléon', Histoire par l'image (histoire-image.org), September 2020 (our translations)",
+            "url": "https://histoire-image.org/etudes/sacre-napoleon",
+            "quote": "il avait à peindre la distribution des aigles, l'arrivée à l'Hôtel de Ville et l'intronisation de Napoléon. Seuls les deux premiers furent réalisés.",
+            "supports": "Our translation: the Distribution of the Eagles was among David's coronation pictures (also Louvre record, Delécluze, Masson: four were ordered).",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+            "quote": "il s'est coiffé de sa couronne de lauriers d'or",
+            "supports": "Our translation: the laurels are on his head.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "Mémoires de madame de Rémusat 1802-1808, ed. Paul de Rémusat (Paris: Calmann Lévy, 1880), vol. II (lady-in-waiting to Josephine, an eyewitness; our translations)",
+            "url": "https://www.gutenberg.org/ebooks/33894",
+            "quote": "un manteau de pourpre semé d'abeilles",
+            "supports": "Our translation: the mantle was sown with bees.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the fact (the 1808 description of the painting and an eyewitness of the robe); the region is the mantle the booklet describes.",
+      "notes": "Ledger claims coronation-060 (bees), coronation-041 (the Eagles), coronation-059 (laurels). What the bees meant is unsourced in the ledger, so neither the question nor its branches explain it.",
+      "quoteCheck": "2026-10-15: quotations as logged in the research ledger from the saved Louvre JSON and the Gutenberg text of Rémusat.",
+      "cropCheck": "2026-10-15: box measured on the full reference image (Shonagon's 2025 photo, 11058 x 6874); crop checked by eye at full size: the crimson velvet with several small gold bees, the gold embroidered border and the ermine lining."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1b",
+          "b1a"
+        ],
+        "concept": "Napoleon already crowned: the laurel wreath on his head, the crown for Josephine"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "On Napoleon's own head is the crown of golden laurels he put on himself; the crown he raises is Josephine's.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+          "quote": "Napoléon s'est approché de l'autel, il s'est coiffé de sa couronne de lauriers d'or, a saisi ensuite la couronne de l'impératrice",
+          "supports": "Our translation: he put on his crown of golden laurels, then took the empress's crown.",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        },
+        {
+          "title": "Mémoires de madame de Rémusat 1802-1808, ed. Paul de Rémusat (Paris: Calmann Lévy, 1880), vol. II (lady-in-waiting to Josephine, an eyewitness; our translations)",
+          "url": "https://www.gutenberg.org/ebooks/33894",
+          "quote": "Une simple couronne de laurier ceignait sa tête; il ressemblait à une médaille antique.",
+          "supports": "Our translation: a simple laurel crown encircled his head; he looked like an ancient medal. Elsewhere: 'sa couronne formée d'une branche de laurier comme celle des Césars'.",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+            "quote": "L'empereur Napoléon, après s'être couronné lui-même, va poser la couronne sur la tête de son épouse Joséphine.",
+            "supports": "Our translation: having crowned himself, he is about to crown Josephine.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. X (our translations)",
+            "url": "https://www.gutenberg.org/ebooks/31441",
+            "quote": "montrer Napoléon déjà couronné, imposant la couronne sur la tête de Joséphine",
+            "supports": "Our translation: to show Napoleon already crowned, placing the crown on Josephine's head.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Musée du Louvre, collection record INV 3699, 'Le Couronnement de l'empereur Napoléon Ier et de l'impératrice Joséphine...' (commentary by Côme Fabre, 2025; description quoting the 1808 Salon booklet; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+            "quote": "il s'est coiffé de sa couronne de lauriers d'or, a saisi ensuite la couronne de l'impératrice",
+            "supports": "Our translation: laurels on his head; the empress's crown in his hands.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "Mémoires de madame de Rémusat 1802-1808, ed. Paul de Rémusat (Paris: Calmann Lévy, 1880), vol. II (lady-in-waiting to Josephine, an eyewitness; our translations)",
+            "url": "https://www.gutenberg.org/ebooks/33894",
+            "quote": "Une simple couronne de laurier ceignait sa tête",
+            "supports": "Our translation: a simple laurel crown encircled his head.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record and an eyewitness agree; the photograph shows the wreath clearly.",
+      "notes": "Ledger claims coronation-059, coronation-006, coronation-033. The Caesar comparison is Rémusat's own (attributed on screen).",
+      "quoteCheck": "2026-10-15: quotations as logged in the research ledger from the saved Louvre JSON, Delécluze and Rémusat (Gutenberg texts).",
+      "cropCheck": "2026-10-15: box measured on the full reference image; crop checked by eye at full size: Napoleon's profile with the gold laurel wreath, his raised hands and the crown."
+    }
+  }
+}

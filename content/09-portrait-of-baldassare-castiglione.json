@@ -1,0 +1,370 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "portrait-of-baldassare-castiglione",
+    "title": "Portrait of Baldassare Castiglione",
+    "artist": "Raphael",
+    "year": "c. 1514–1515",
+    "image": "/images/portrait-of-baldassare-castiglione.jpg",
+    "imageCredit": "C2RMF scan via Wikimedia Commons (retouched) · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "82 × 67 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066418"
+  },
+  "speakers": {
+    "castiglione": {
+      "name": "Baldassare Castiglione",
+      "kind": "person",
+      "avatar": "castiglione"
+    }
+  },
+  "lessons": [
+    {
+      "id": "portrait-of-baldassare-castiglione-1",
+      "order": 1,
+      "title": "A friend's portrait, made for home",
+      "start": "n1",
+      "narrator": "castiglione",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "No landscape, no props, almost no colour: just a man in black and grey, close to you. Raphael painted him, and the two were friends. Look before you read on.",
+          "voice": {
+            "speaker": "castiglione",
+            "kind": "quote",
+            "text": "I send you this book as a picture of the Court of Urbino, not by the hand of Raphael or Michelangelo, but of a humble painter",
+            "cite": "The Book of the Courtier, dedication (trans. L. E. Opdycke, 1901)",
+            "source": "https://www.gutenberg.org/cache/epub/67799/pg67799.txt"
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where did your eye land first?",
+          "choices": [
+            {
+              "label": "His blue eyes",
+              "next": "b1a"
+            },
+            {
+              "label": "The big black hat",
+              "next": "b1b"
+            },
+            {
+              "label": "His hands",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Most people go there. The Open University calls them cold blue; Julia Cartwright, his biographer in 1908, wrote of their 'clear, intense blue'.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Good eye. In the 1880s the art historians Crowe and Cavalcaselle described 'the large black hat which surrounds the head'; in 1908 Julia Cartwright admired its 'sweeping curves'.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Few people start there. Look right at the bottom edge: his hands are joined there, only partly in the picture, cut off by the frame.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "He's Baldassare Castiglione, born in 1478 near Mantua. From 1513 to 1516 he lived in Rome as the Duke of Urbino's envoy at the pope's court, and Raphael was his friend.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "He became famous for a book, The Book of the Courtier: a conversation set at the court of Urbino, printed in Venice in 1528. One of its rules: make hard things look easy.",
+          "voice": {
+            "speaker": "castiglione",
+            "kind": "quote",
+            "text": "to practise in everything a certain nonchalance that shall conceal design and show that what is done and said is done without effort and almost without thought",
+            "cite": "The Book of the Courtier, I.26, a speaker in the dialogue (trans. L. E. Opdycke, 1901)",
+            "source": "https://www.gutenberg.org/cache/epub/67799/pg67799.txt"
+          },
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "So who was this portrait painted for?",
+          "choices": [
+            {
+              "label": "The Duke of Urbino, his master",
+              "next": "b2a"
+            },
+            {
+              "label": "Castiglione himself, for his home",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "Pope Leo X",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "A fair guess for an envoy, but no.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He worked in Rome as the Duke of Urbino's envoy, so a portrait for his master sounds natural.",
+            "truth": "It was made for the sitter: the Louvre's list of owners begins with the Castiglione house in Mantua and his son, and the Open University says it would have hung in his home.",
+            "evidence": "Louvre record: 'Castiglione house, Mantua; C. Castiglione, son of the sitter'. OpenLearn: it would have hung in his home. Crowe and Cavalcaselle: 'the pride of its owner'."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. It was painted for the sitter and stayed with his family: the Louvre's list of owners begins with the Castiglione house in Mantua and his son Camillo. A friend's portrait, made for home.",
+          "voice": {
+            "speaker": "castiglione",
+            "kind": "imagined",
+            "text": "Raphael painted me for my own house in Mantua, not for any lord."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "He worked at the pope's court, but the picture wasn't for the pope.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He spent those years at Leo X's court in Rome, so a papal commission seems likely.",
+            "truth": "It was made for the sitter: the Louvre's list of owners begins with the Castiglione house in Mantua and his son, and the Open University says it would have hung in his home.",
+            "evidence": "Louvre record: 'Castiglione house, Mantua; C. Castiglione, son of the sitter'. OpenLearn: it would have hung in his home. Crowe and Cavalcaselle: 'the pride of its owner'."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "In 1516 he married Ippolita Torelli. A Latin poem survives in her voice: she writes to her husband in Rome that only Raphael's painted image of his face eases her cares.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "She plays with the picture, smiles at it, talks to it as if it could answer, and their little boy knows his father and greets him with babbling. So the portrait hung at home in Mantua.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "So who wrote Ippolita's poem?",
+          "choices": [
+            {
+              "label": "Ippolita herself",
+              "next": "b3a"
+            },
+            {
+              "label": "Castiglione, in her voice",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Scholars once believed that, but no.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "An old mistake",
+            "tempting": "It speaks as her letter, in her voice, and earlier scholars took it for her own work.",
+            "truth": "Castiglione wrote it in her name. The 1733 editors of his works corrected the old mistake, saying he followed the example of the Roman poet Propertius.",
+            "evidence": "Volpi edition (Padua, 1733): written in Ippolita's name, after Propertius' example. Crowe and Cavalcaselle: 'the verses placed in his wife's mouth by Castiglione'."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. Castiglione wrote it in Ippolita's name. Its title in the 1733 edition of his works says so: the elegy in which he imagines his Ippolita writing to him.",
+          "voice": {
+            "speaker": "castiglione",
+            "kind": "imagined",
+            "text": "I wrote it as Ippolita. In my poem our little son knows his father's painted face and greets it."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "It's settled, in fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A poem in a wife's voice, once credited to the wife: it sounds like a puzzle nobody could settle.",
+            "truth": "The evidence exists: the 1733 edition of his works prints it as his, written in her name, and later scholars agree.",
+            "evidence": "Volpi (1733): 'the elegy in which he imagines his Ippolita writing to him'. Crowe and Cavalcaselle, and Cartwright (1908): lines he 'puts in the mouth of his wife'."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Now his clothes: black, grey fur, a white shirt. Crowe and Cavalcaselle called the picture 'a melody in silvery tones'; Cartwright praised 'the silvery tones of the grey pelisse', his fur-lined coat.",
+          "voice": {
+            "speaker": "castiglione",
+            "kind": "quote",
+            "text": "I think black is more suitable for garments than any other colour is; and if it is not black, let it at least be somewhat dark.",
+            "cite": "The Book of the Courtier, II.27, a speaker in the dialogue (trans. L. E. Opdycke, 1901)",
+            "source": "https://www.gutenberg.org/cache/epub/67799/pg67799.txt"
+          },
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "Did the painter dress his friend by the book? No source we know says so; compare for yourself. Step closer, too: Cartwright saw 'broad, rapid strokes', and loose brushwork lets the canvas weave show.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "In April 1516 their friend Pietro Bembo joked in a letter that Raphael's portrait of Castiglione looked like apprentice work beside his portrait of their friend Tebaldeo. So a portrait existed by then. But is it this one?",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "So when was this portrait painted?",
+          "choices": [
+            {
+              "label": "About 1514–15, as the Louvre says",
+              "next": "b4a"
+            },
+            {
+              "label": "In 1519",
+              "next": "b4b"
+            },
+            {
+              "label": "Experts disagree",
+              "next": "b4c",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "That's the Louvre's date, and a strong one, but not the only one.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Not settled",
+            "tempting": "It's the museum's own label, and Bembo's letter shows Raphael had portrayed Castiglione by April 1516.",
+            "truth": "London's National Gallery dated this very picture 1519 in its 2022 Raphael exhibition, and the Royal Collection Trust also says 1519.",
+            "evidence": "Louvre record: about 1514–1515. National Gallery, 'Raphael' (2022): 1519. Royal Collection Trust: 'a painting by Raphael (1519) now in the Musée du Louvre'."
+          },
+          "next": "n6"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "That's one serious answer, not a settled one.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Not settled",
+            "tempting": "London's National Gallery showed it as 1519 in its 2022 Raphael exhibition, and the Royal Collection Trust agrees.",
+            "truth": "The Louvre says about 1514–15 and the Courtauld around 1514; Bembo's letter shows Raphael had portrayed Castiglione by April 1516, though not that it's this picture.",
+            "evidence": "Louvre record; Courtauld label ('around 1514'); Bembo to Cardinal Bibbiena, 19 April 1516, printed in the 1733 edition and in Crowe and Cavalcaselle."
+          },
+          "next": "n6"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Right. The Louvre says about 1514–15; London's National Gallery in 2022 and the Royal Collection Trust say 1519. Bembo's letter shows Raphael had painted Castiglione by 1516, but not which picture.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "So it's still an open question: is this the portrait Bembo joked about in 1516, or a later one? The picture itself doesn't say.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "The family kept it in Mantua. By April 1639 it was in Amsterdam, sold at the auction of Lucas van Uffelen's collection, and a famous painter in the room made a quick sketch of it.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Which painter sketched it at the sale?",
+          "choices": [
+            {
+              "label": "Rembrandt",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "Rubens",
+              "next": "b5b"
+            },
+            {
+              "label": "Joachim von Sandrart",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Yes. Rembrandt sketched it on the spot and noted the price: 3,500 guilders, paid by the collector Alfonso Lopez. The drawing, dated 1639, is now in the Albertina in Vienna.",
+          "next": "n7"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Rubens did copy it, but not at the sale.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Rubens painted a copy of this very portrait, now in the Courtauld Gallery in London.",
+            "truth": "The quick sketch made at the 1639 sale is Rembrandt's, now in Vienna. Where Rubens saw the picture is still argued.",
+            "evidence": "Royal Collection Trust: Rembrandt sketched it at the 1639 van Uffelen sale. The Courtauld: Rubens more likely worked from other copies or prints."
+          },
+          "next": "n7"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Close: he did draw it, but for a print.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The German painter Joachim von Sandrart was in Amsterdam then, and he made a drawing of this portrait.",
+            "truth": "Sandrart's drawing became a print engraved by Reinier van Persyn and dedicated to the buyer, Alfonso Lopez. The sketch made at the sale is Rembrandt's.",
+            "evidence": "Sandrart.net and the Royal Collection Trust: the print after Sandrart's drawing, dedicated to Lopez. Royal Collection Trust: Rembrandt sketched it at the 1639 sale."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "A year later Rembrandt painted his Self Portrait at the Age of 34. London's National Gallery says the shape of the figure and the colours are close to this Raphael, which he had sketched the year before.",
+          "next": "n7b"
+        },
+        "n7b": {
+          "type": "story",
+          "text": "Lopez later sold the portrait to Cardinal Mazarin in Paris; after the cardinal's death his heirs sold it to King Louis XIV. So a friend's picture, made for a house in Mantua, came to Paris.",
+          "next": "n8"
+        },
+        "n8": {
+          "type": "story",
+          "text": "So: a friend's portrait in black and grey, made for home, praised in a poem he wrote in his wife's voice, and still argued over by date. Find his blue eyes, then the hands at the bottom edge."
+        }
+      },
+      "takeaway": "A friend's portrait of the man who wrote the rules of effortless grace: painted in greys for his own home, sketched by Rembrandt, and still argued over by date.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066418",
+        "https://www.gutenberg.org/cache/epub/67799/pg67799.txt",
+        "https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/",
+        "https://archive.org/details/bub_gb_QfC5Ij26oC0C",
+        "https://archive.org/details/raphaelhislifewo02crowuoft",
+        "https://archive.org/details/baldassarecastig02adyjuoft",
+        "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1",
+        "https://www.nationalgallery.org.uk/exhibitions/past/the-credit-suisse-exhibition-raphael",
+        "https://gallerycollections.courtauld.ac.uk/object-p-1978-pg-373",
+        "https://albert.rct.uk/collections/raphael-collection/portraits/portrait-of-baldassare-castiglione",
+        "https://albert.rct.uk/collections/raphael-collection/portraits/portrait-of-baldassare-castiglione-after-raphael-with-notes",
+        "https://rembrandtcatalogue.net/catalogue-benesch-451-500/",
+        "http://ta.sandrart.net/en/text/142",
+        "https://ta.sandrart.net/en/artwork/view/591",
+        "https://www.nationalgallery.org.uk/paintings/rembrandt-self-portrait-at-the-age-of-34",
+        "https://www.theguardian.com/culture/2003/sep/13/art"
+      ]
+    }
+  ]
+}

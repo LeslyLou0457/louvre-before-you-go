@@ -30,6 +30,10 @@
 //   veronese   ochre skin, a tall bald dome, dark tufts at the sides and a big
 //              bushy dark beard (his presumed self-portraits, and the bald,
 //              bearded player in white that tradition names as him);
+//   castiglione  Baldassare Castiglione, narrator of Raphael's portrait of
+//              him: peach skin, a big full rounded beard and a huge soft
+//              black beret over a dark headcloth, blue eyes
+//              (all from the Louvre portrait itself);
 //   guide      Lesly, the museum guide who narrates works whose maker is
 //              unknown or left no documented words: a tuxedo cat dressed after
 //              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
@@ -202,6 +206,45 @@ const AVATARS: Record<AvatarId, Drawing> = {
     eyes: dots(29.8),
     mouthClosed: line("M29.8 44.6 Q32 45.4 34.4 44.4", "#d0573f"),
     mouthOpen: oval(32, 44.9),
+  },
+  // Baldassare Castiglione, from Raphael's portrait: the huge soft black beret,
+  // puffed and notched, over a dark headcloth, a big
+  // full beard, round and soft, and blue eyes.
+  castiglione: {
+    tilt: 4,
+    head: (
+      <>
+        <ellipse cx="19.6" cy="34" rx="2.4" ry="3.4" fill="#e3a07a" />
+        <ellipse cx="44.4" cy="34" rx="2.4" ry="3.4" fill="#e3a07a" />
+        <path d="M32 19.4 C39.6 19.2 44 24.6 44 32 C44 39.8 41.4 46.4 36.6 49.4 C33.8 51.2 30.2 51.2 27.4 49.4 C22.6 46.4 20 39.8 20 32 C20 24.6 24.4 19.6 32 19.4 Z" fill="#f2bf98" />
+        {/* the dark headcloth under the beret, showing at the temples */}
+        <path d="M19.4 31.6 C18.4 25.4 21.6 21 27 19.8 L37 19.8 C42.4 21 45.6 25.4 44.6 31.6 C43 27.4 40.2 25 36.4 24.6 C33.4 25.8 30.6 25.8 27.6 24.6 C23.8 25 21 27.4 19.4 31.6 Z" fill="#2c2724" />
+        {/* the beret: a huge soft black cap, puffed and notched, sitting low */}
+        <path d="M11.4 22.6 C9.6 15.2 14 8.4 21.6 5.8 C27 3.8 34.4 3.4 40.6 5.2 C48.6 7.6 54.2 13.4 53 20.6 C52.6 23.4 50.6 25.2 48 25.4 C46.6 27.6 44.6 28.6 43 27.6 C41.4 24.4 37 22.6 32 22.6 C26.6 22.6 22.2 24.6 20.6 27.6 C18 28.4 15.6 27 14.6 25 C12.8 25 11.8 24 11.4 22.6 Z" fill="#141414" />
+        {brush("M16 15.6 Q25 9.6 34.6 10.4", "#3b3b3b", 1.1)}
+        {brush("M38.4 9.4 Q46.6 11.4 49.6 17.6", "#3b3b3b", 1.1)}
+        <path d="M45.6 16.4 L50.4 19.8 L46.2 21.2 Z" fill="#2c2c2c" />
+        {brush("M24.2 29 Q27 27.6 29.8 28.6", "#4a3322", 1.5)}
+        {brush("M34.2 28.6 Q37 27.6 39.8 29", "#4a3322", 1.5)}
+        <path d="M32.2 30.4 L34.8 38.6 Q32.4 39.8 29.8 38.8 Z" fill="#dc9a74" />
+        {/* the big full beard, round and soft, and the moustache */}
+        <path d="M19.6 34.4 C17.2 42.4 17.8 51.4 22.8 57 C25.8 60.4 29 61.6 32 62 C35 61.6 38.2 60.4 41.2 57 C46.2 51.4 46.8 42.4 44.4 34.4 C42.8 39.6 40.2 42.8 37.4 43.6 C34.8 42.6 29.2 42.6 26.6 43.6 C23.8 42.8 21.2 39.6 19.6 34.4 Z" fill="#7d5a3c" />
+        {brush("M23.4 47.6 Q24.4 52.4 23.2 56", "#97765a", 1.1)}
+        {brush("M40.6 47.6 Q39.6 52.4 40.8 56", "#97765a", 1.1)}
+        {brush("M32 50.4 L32 59", "#97765a", 1.1)}
+        <path d="M26 42.6 Q32 38.8 38 42.6 Q35 43.8 32 42.8 Q29 43.8 26 42.6 Z" fill="#634530" />
+      </>
+    ),
+    eyes: (
+      <>
+        <circle cx="27" cy="31.6" r="1.8" fill="#5b8fd0" />
+        <circle cx="37" cy="31.6" r="1.8" fill="#5b8fd0" />
+        <circle cx="27.1" cy="31.7" r="0.85" fill={INK} />
+        <circle cx="37.1" cy="31.7" r="0.85" fill={INK} />
+      </>
+    ),
+    mouthClosed: line("M29.8 46 Q32 46.8 34.2 45.8", "#c25a44"),
+    mouthOpen: oval(32, 46.3, 1.9, 1.5),
   },
   // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
   // with a Pearl Earring (our own drawing): an ultramarine headwrap with the
