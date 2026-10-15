@@ -18,7 +18,7 @@
 // - features as a few thin dark brush marks: dot eyes, line brows, a small
 //   line mouth; simple ear blobs; the nose one flat shape in a deeper tone of
 //   the skin or a warm terracotta (Leonardo keeps his orange one);
-// - little or no neck (Lesly keeps a short one for her guide's badge).
+// - little or no neck.
 // The ink line belongs to the frame (the hand-drawn circle), never to the
 // head's outline.
 //   leonardo   the original head, with its long flowing grey hair and long
@@ -30,10 +30,10 @@
 //   veronese   ochre skin, a tall bald dome, dark tufts at the sides and a big
 //              bushy dark beard (his presumed self-portraits, and the bald,
 //              bearded player in white that tradition names as him);
-//   guide      Lesly, the young museum guide who narrates works whose maker is
-//              unknown or left no documented words: an elegant young woman
-//              with long flowing hair, a big baby-blue bow, freckles across
-//              her nose and a baby-blue lanyard with a guide's badge.
+//   guide      Lesly, the museum guide who narrates works whose maker is
+//              unknown or left no documented words: a tuxedo cat dressed after
+//              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
+//              cloth, amber eyes, pearl earring), our own drawing.
 //
 // Layers (PRODUCT.md "Motion"; the full contract for the illustrator is in
 // the project files, animation/PLAN.md §4). Motion moves boxes and named
@@ -54,7 +54,6 @@ import type { Speaker } from "@/lib/types";
 const INK = "#1f1f1f";
 const LIP = "#b8433a";
 const MOUTH = "#5e1f1b";
-const BABY_BLUE = "#a9d3f2";
 
 type Drawing = {
   /** Degrees the whole head leans, for a livelier, less rigid pose. */
@@ -204,51 +203,59 @@ const AVATARS: Record<AvatarId, Drawing> = {
     mouthClosed: line("M29.8 44.6 Q32 45.4 34.4 44.4", "#d0573f"),
     mouthOpen: oval(32, 44.9),
   },
-  // Lesly, the young museum guide: elegant and pretty, long flowing hair, a
-  // big baby-blue bow, freckles across her nose, a baby-blue lanyard and badge.
+  // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
+  // with a Pearl Earring (our own drawing): an ultramarine headwrap with the
+  // pale-yellow cloth falling behind, ears poking out, big round amber eyes, a
+  // tiny pink nose and a pearl earring, the head turned a little.
   guide: {
-    tilt: 4,
+    tilt: -7,
     head: (
       <>
-        <path d="M16.4 30 C15 17 22 10.6 32 10.6 C42 10.6 49 17 47.6 30 C47 38 50 44 48.4 51 C47.4 56 49.6 59 51 61.6 L40.6 61.6 C41 56 40.4 52 40.4 49 L23.6 49 C23.6 52 23 56 23.4 61.6 L13 61.6 C14.4 59 16.6 56 15.6 51 C14 44 17 38 16.4 30 Z" fill="#5a3426" />
-        <path d="M28.4 43.6 L35.6 43.6 L35.9 52 L28.1 52 Z" fill="#ecae98" />
-        <path d="M28.2 45.2 L29.8 44.8 L32.8 51.2 L31.4 51.8 Z M35.8 45.2 L34.2 44.8 L31.2 51.2 L32.6 51.8 Z" fill={BABY_BLUE} />
-        <path d="M27.4 50.6 Q32 50 36.6 50.6 L36.4 57.8 Q32 58.4 27.6 57.8 Z" fill={BABY_BLUE} />
-        <path d="M28.8 52.8 L35.2 52.8 L35.1 56.4 L28.9 56.4 Z" fill="#fffdf8" />
-        <path d="M32 14.8 C39.8 14.6 44.6 19.8 44.6 27.4 C44.6 35.4 42 42.4 37.2 46 C34.6 48 29.4 48 26.8 46 C22 42.4 19.4 35.4 19.4 27.4 C19.4 19.8 24.2 15 32 14.8 Z" fill="#f8cbb5" />
-        <path d="M19.2 30 C18 19 24 12.6 33 12.4 C41.4 12.2 46.4 18.4 44.8 28.6 C43 23 39.6 19.6 35 18.8 C30.4 23 25 24.6 19.2 30 Z" fill="#5a3426" />
-        {brush("M37 21.6 Q41 23.6 43.4 28", "#7a4a37", 1)}
-        {/* big baby-blue bow */}
-        <path d="M22.6 13.2 C18.6 7.4 12.4 9.2 14 13.8 C15.2 16.8 20 15.8 22.6 14.4 Z M23.6 13.4 C26.8 7.4 32.8 8.6 31.6 13.4 C30.8 16.6 26 15.8 23.6 14.4 Z M22.2 15 L19.4 21.2 L21.6 20.4 L23 22.2 L23.6 15.4 Z" fill={BABY_BLUE} />
-        <ellipse cx="23.1" cy="14" rx="2" ry="1.8" fill="#86bde6" />
-        {brush("M23.8 26.4 Q26.6 25 29.4 26", "#5a3426", 1)}
-        {brush("M34.6 26 Q37.4 25 40.2 26.4", "#5a3426", 1)}
-        <path d="M32.2 30 L33.8 35.4 Q32.2 36.2 30.6 35.6 Z" fill="#e5937f" />
-        <g fill="#b87a5c">
-          <circle cx="27.4" cy="35" r="0.6" />
-          <circle cx="28.9" cy="36.3" r="0.55" />
-          <circle cx="26.2" cy="36.6" r="0.55" />
-          <circle cx="36.6" cy="35" r="0.6" />
-          <circle cx="35.1" cy="36.3" r="0.55" />
-          <circle cx="37.8" cy="36.6" r="0.55" />
-        </g>
-        <ellipse cx="24.2" cy="38.2" rx="2.2" ry="1.2" fill="#f4a8a4" />
-        <ellipse cx="39.8" cy="38.2" rx="2.2" ry="1.2" fill="#f4a8a4" />
+        {/* the pale-yellow cloth, rising from the wrap and falling behind */}
+        <path d="M21.6 15.6 C25 8.4 35 5.2 42.6 7.4 C48.6 9.2 52 14 52.4 20.4 C52.8 31 51.6 44 54.6 62 L42.4 62 C43.2 50 42.6 38 40.4 27 C34 23 27 19.6 21.6 15.6 Z" fill="#efdc9a" />
+        <path d="M42.6 55.6 Q48.6 54.6 54 55 L54.8 62 L42.4 62 Z" fill="#5d70b4" />
+        {brush("M46.8 20 Q48.4 34 47.8 50", "#d8c27c", 1.1)}
+        {/* ears poking out of the wrap */}
+        <path d="M17.4 25.4 L18.4 12.6 L27 18.8 Z M38.6 18 L46.8 12.4 L47 25 Z" fill="#262326" />
+        <path d="M19.4 21 L19.8 15.6 L23.4 18.6 Z M42.4 18.2 L45.6 15.8 L45.6 21 Z" fill="#e9a0a8" />
+        {/* the face: white fur with black tuxedo patches over the eyes and ears */}
+        <path d="M32 18.4 C42.4 18.4 48 24.4 48 32.4 C48 41.4 41.4 48 32 48 C22.6 48 16 41.4 16 32.4 C16 24.4 21.6 18.4 32 18.4 Z" fill="#f1eee8" />
+        <path d="M16.2 31 C16.2 24 21.8 18.8 32 18.8 C42.2 18.8 47.8 24 47.8 31 C47.8 35.2 47 38.2 45.4 40.4 C43.2 36.4 40.2 33.6 37 33.2 C35 33 33.4 34.2 32 36.2 C30.6 34.2 29 33 27 33.2 C23.8 33.6 20.8 36.4 18.6 40.4 C17 38.2 16.2 35.2 16.2 31 Z" fill="#262326" />
+        <path d="M32 36.2 C30.2 32 29.8 27 30.8 22.4 L33.2 22.4 C34.2 27 33.8 32 32 36.2 Z" fill="#f1eee8" />
+        {/* the ultramarine headwrap */}
+        <path d="M15.4 24.6 C17.6 17.4 24.8 13.2 33 13.4 C41.2 13.6 47.4 17.4 49 23.4 C49.4 26 48.8 27.4 47.8 28.4 C41.2 25 23 24.8 16.4 28.8 C15.4 27.4 15 26.2 15.4 24.6 Z" fill="#2a3f8f" />
+        {brush("M19.6 22.4 Q32 17.2 45.2 21.4", "#4a5fae", 1.2)}
+        <path d="M30.6 37.6 L33.4 37.6 L32 39.2 Z" fill="#f09aa6" />
+        {/* whiskers */}
+        {brush("M23.4 40.4 L13.6 39.4 M23.6 42 L14.4 43.2", "#b6b1aa", 0.7)}
+        {brush("M40.6 40.4 L50.4 39.4 M40.4 42 L49.6 43.2", "#b6b1aa", 0.7)}
+        {/* the pearl earring */}
+        <circle cx="45.4" cy="45.4" r="2.1" fill="#f6f4ee" />
+        <path d="M43.4 46 A2.1 2.1 0 0 0 47.4 46 A2.4 1.6 0 0 1 43.4 46 Z" fill="#c4c8d2" />
+        <circle cx="44.8" cy="44.7" r="0.6" fill="#fff" />
       </>
     ),
     eyes: (
       <>
-        <ellipse cx="26.6" cy="29.6" rx="1.6" ry="1.2" fill={INK} />
-        <ellipse cx="37.4" cy="29.6" rx="1.6" ry="1.2" fill={INK} />
-        {brush("M24.4 28.8 Q26.6 27.6 28.6 28.6", INK, 0.8)}
-        {brush("M35.4 28.6 Q37.4 27.6 39.6 28.8", INK, 0.8)}
+        <circle cx="25.6" cy="31.2" r="3.6" fill="#e9a227" />
+        <circle cx="38.4" cy="31.2" r="3.6" fill="#e9a227" />
+        <circle cx="25.8" cy="31.4" r="2" fill={INK} />
+        <circle cx="38.6" cy="31.4" r="2" fill={INK} />
+        <circle cx="26.6" cy="30.4" r="0.75" fill="#fff" />
+        <circle cx="39.4" cy="30.4" r="0.75" fill="#fff" />
       </>
     ),
-    mouthClosed: <path d="M29 40.8 Q30.6 39.8 32 40.6 Q33.4 39.8 35 40.8 Q32 43 29 40.8 Z" fill="#cf5f6a" />,
+    mouthClosed: (
+      <>
+        {brush("M32 39.2 L32 40.4", "#7a5252", 0.8)}
+        {brush("M29.8 40.4 Q30.9 41.5 32 40.4 Q33.1 41.5 34.2 40.4", "#7a5252", 0.85)}
+      </>
+    ),
     mouthOpen: (
       <>
-        <ellipse cx="32" cy="41.2" rx="2.5" ry="1.9" fill="#cf5f6a" />
-        <ellipse cx="32" cy="41.3" rx="1.6" ry="1.1" fill={MOUTH} />
+        {brush("M32 39.2 L32 40", "#7a5252", 0.8)}
+        <ellipse cx="32" cy="41.4" rx="1.7" ry="1.5" fill="#c4505c" />
+        <ellipse cx="32" cy="41.6" rx="1" ry="0.8" fill={MOUTH} />
       </>
     ),
   },

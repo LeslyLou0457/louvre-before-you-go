@@ -28,7 +28,7 @@ export type Speaker = {
   name: string;
   /**
    * "artist"; "person" for another documented figure; "guide" for Lesly, the
-   * young museum guide who narrates works whose maker is unknown or left no
+   * museum guide (a cat) who narrates works whose maker is unknown or left no
    * documented words.
    */
   kind: "artist" | "person" | "guide";
