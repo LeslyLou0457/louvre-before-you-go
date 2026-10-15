@@ -1,0 +1,349 @@
+{
+  "artworkId": "portrait-of-baldassare-castiglione",
+  "zoomImage": {
+    "file": "Baldassare Castiglione, by Raffaello Sanzio, from C2RMF retouched.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Baldassare_Castiglione,_by_Raffaello_Sanzio,_from_C2RMF_retouched.jpg",
+    "width": 15566,
+    "height": 19363,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "C2RMF scan (Elsa Lambert, 2010) via Wikimedia Commons (retouched) · Public Domain",
+    "overview": "/images/challenge/portrait-of-baldassare-castiglione/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "portrait-of-baldassare-castiglione-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: hat, beard and eyes",
+      "narrator": "castiglione",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.24,
+            "y": 0.07,
+            "w": 0.52,
+            "h": 0.48,
+            "label": "His head: the black hat above, the beard below",
+            "image": "/images/challenge/portrait-of-baldassare-castiglione/c1.jpg"
+          },
+          "text": "Level one: in all this black and grey, look at the shapes. Zoom in on the hat above his face and the beard below it.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.24,
+            "y": 0.07,
+            "w": 0.52,
+            "h": 0.48,
+            "label": "His head: the black hat above, the beard below",
+            "image": "/images/challenge/portrait-of-baldassare-castiglione/c1.jpg"
+          },
+          "text": "What do old writers see in the hat and beard?",
+          "choices": [
+            {
+              "label": "Crisp, sharp outlines",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "One grand, sweeping curve",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Bright, rich colour",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+              "url": "https://archive.org/details/raphaelhislifewo02crowuoft"
+            },
+            {
+              "title": "Julia Cartwright, Baldassare Castiglione, the Perfect Courtier: His Life and Letters, vol. II (London: John Murray, 1908), pp. 448-449",
+              "url": "https://archive.org/details/baldassarecastig02adyjuoft"
+            },
+            {
+              "title": "Jonathan Jones, 'Baldassare Castiglione, Raphael (c1514-15)', The Guardian, 13 September 2003",
+              "url": "https://www.theguardian.com/culture/2003/sep/13/art"
+            },
+            {
+              "title": "The Open University, OpenLearn, 'Artists and authorship: the case of Raphael', section 2.10.1 'Raphael paints Castiglione'",
+              "url": "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Hat and beard: one soft, grand sweep framing his face."
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Look again: the edges soften.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Black against pale grey reads like a hard edge at first glance.",
+            "truth": "Writers stress softness: Jones calls the hat 'velvety' and the beard 'round and blurred'; Crowe and Cavalcaselle see one grand sweep.",
+            "evidence": "The Guardian (Jones, 2003): 'dark velvety hat', beard 'round and blurred'. Crowe and Cavalcaselle (1880s): beard and hat in one grand sweep."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Crowe and Cavalcaselle saw the beard sweep round his jaw 'as grand as that of the large black hat'; Cartwright, the hat's 'sweeping curves'.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Not colour: here it's black, grey and brown.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Velvet and fur sound like colourful finery.",
+            "truth": "The palette is almost monochrome; what the writers stress is shape: hat and beard in one grand, soft sweep.",
+            "evidence": "OpenLearn: a dignified, monochrome palette. Crowe and Cavalcaselle: 'a melody in silvery tones'; the beard's sweep 'as grand as' the hat's."
+          }
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.34,
+            "y": 0.235,
+            "w": 0.26,
+            "h": 0.115,
+            "label": "His eyes, under the brim of the hat",
+            "image": "/images/challenge/portrait-of-baldassare-castiglione/c2.jpg"
+          },
+          "text": "Level one: his face turns a little. Now zoom in on the eyes, just under the brim of the hat.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.34,
+            "y": 0.235,
+            "w": 0.26,
+            "h": 0.115,
+            "label": "His eyes, under the brim of the hat",
+            "image": "/images/challenge/portrait-of-baldassare-castiglione/c2.jpg"
+          },
+          "text": "Where do his eyes look?",
+          "choices": [
+            {
+              "label": "Off to the side, with his face",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Down, towards his hands",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Straight out, at you",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+              "url": "https://archive.org/details/raphaelhislifewo02crowuoft"
+            },
+            {
+              "title": "The Open University, OpenLearn, 'Artists and authorship: the case of Raphael', section 2.10.1 'Raphael paints Castiglione'",
+              "url": "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1"
+            },
+            {
+              "title": "Julia Cartwright, Baldassare Castiglione, the Perfect Courtier: His Life and Letters, vol. II (London: John Murray, 1908), pp. 448-449",
+              "url": "https://archive.org/details/baldassarecastig02adyjuoft"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Face turned a little, blue eyes straight at you."
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "His face turns, but his eyes don't follow.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His face is turned slightly to one side, so the eyes might follow.",
+            "truth": "The face turns a little, but the eyes look straight out of the picture, at the viewer.",
+            "evidence": "Crowe and Cavalcaselle: face 'slightly turned to the left', eyes 'looking out of the picture'. OpenLearn: his blue eyes address the viewer."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "His hands are lower down, but his eyes aren't on them.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His hands are joined at the bottom edge, so a downward glance would fit.",
+            "truth": "The eyes look straight out of the picture, at the viewer, not down.",
+            "evidence": "Crowe and Cavalcaselle: eyes 'looking out of the picture'. OpenLearn: his blue eyes address the viewer."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. Crowe and Cavalcaselle saw his eyes 'looking out of the picture'; the Open University says his cold blue eyes address the viewer.",
+          "next": "c2m"
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "b1b",
+          "n4"
+        ],
+        "concept": "Form: the soft, sweeping shapes of hat and beard in an almost colourless picture"
+      },
+      "framing": "form",
+      "what_you_learn": "Hat and beard make one grand, soft sweep around the face (Crowe and Cavalcaselle, Cartwright, Jones); the picture's interest is shape and tone, not colour.",
+      "regionSources": [
+        {
+          "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+          "url": "https://archive.org/details/raphaelhislifewo02crowuoft",
+          "quote": "a gracefully trimmed beard encases the jaw and chin with a sweep as grand as that of the large black hat which surrounds the head",
+          "supports": "Places beard (jaw and chin) and hat (round the head) together and calls them one grand sweep.",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        },
+        {
+          "title": "Julia Cartwright, Baldassare Castiglione, the Perfect Courtier: His Life and Letters, vol. II (London: John Murray, 1908), pp. 448-449",
+          "url": "https://archive.org/details/baldassarecastig02adyjuoft",
+          "quote": "the sweeping curves of the large black velvet hat, and the blond, carefully trimmed beard",
+          "supports": "Independent description of the same hat and beard, with 'sweeping curves'.",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        },
+        {
+          "title": "Jonathan Jones, 'Baldassare Castiglione, Raphael (c1514-15)', The Guardian, 13 September 2003",
+          "url": "https://www.theguardian.com/culture/2003/sep/13/art",
+          "quote": "his dark velvety hat and not least his beard, trimmed but round and blurred",
+          "supports": "Hat and beard as soft, rounded shapes (a critic's reading).",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Jonathan Jones, 'Baldassare Castiglione, Raphael (c1514-15)', The Guardian, 13 September 2003",
+            "url": "https://www.theguardian.com/culture/2003/sep/13/art",
+            "quote": "his dark velvety hat and not least his beard, trimmed but round and blurred",
+            "supports": "Soft, blurred edges, not crisp ones.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+            "url": "https://archive.org/details/raphaelhislifewo02crowuoft",
+            "quote": "with a sweep as grand as that of the large black hat",
+            "supports": "One grand sweep.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "The Open University, OpenLearn, 'Artists and authorship: the case of Raphael', section 2.10.1 'Raphael paints Castiglione'",
+            "url": "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1",
+            "quote": "Raphael depicts the sitter in a dignified, monochrome palette.",
+            "supports": "Almost no colour (paraphrased on screen, not quoted: fetch-tool return).",
+            "readVia": "WebFetch return, 15 Oct 2026 (site refuses raw requests); paraphrased on screen"
+          },
+          {
+            "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+            "url": "https://archive.org/details/raphaelhislifewo02crowuoft",
+            "quote": "which is a melody in silvery tones",
+            "supports": "Greys, not bright colour.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the region (three independent writers describe hat and beard together); 'soft' is a reading the three share.",
+      "notes": "Ledger claims cast-009 (Crowe and Cavalcaselle + Cartwright), cast-045 (Jones), cast-010 (OpenLearn palette). The crop's label names the place only, not the answer.",
+      "quoteCheck": "2026-10-15: quotations checked against the saved source texts (Crowe and Cavalcaselle p. 326 and Cartwright pp. 448-449 OCR; Guardian page text).",
+      "cropCheck": "2026-10-15: box measured on Commons' 3840 x 4777 rendering of the C2RMF file (the 100 MB original was refused with HTTP 429); crop checked by eye at full size: the whole beret, the face and the full beard down to the collar."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1a"
+        ],
+        "concept": "The gaze: a face turned slightly, eyes looking straight out"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "His face turns slightly to the left, but his blue eyes look straight out of the picture at the viewer.",
+      "regionSources": [
+        {
+          "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+          "url": "https://archive.org/details/raphaelhislifewo02crowuoft",
+          "quote": "His face is slightly turned to the left, his eyes looking out of the picture",
+          "supports": "Places the eyes and says where they look.",
+          "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+        },
+        {
+          "title": "The Open University, OpenLearn, 'Artists and authorship: the case of Raphael', section 2.10.1 'Raphael paints Castiglione'",
+          "url": "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1",
+          "quote": "the sitter's cold blue eyes address the spectator",
+          "supports": "Same, independently (paraphrased on screen, not quoted: fetch-tool return).",
+          "readVia": "WebFetch return, 15 Oct 2026 (site refuses raw requests); paraphrased on screen"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+            "url": "https://archive.org/details/raphaelhislifewo02crowuoft",
+            "quote": "His face is slightly turned to the left, his eyes looking out of the picture",
+            "supports": "The face turns; the eyes look out.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "The Open University, OpenLearn, 'Artists and authorship: the case of Raphael', section 2.10.1 'Raphael paints Castiglione'",
+            "url": "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1",
+            "quote": "the sitter's cold blue eyes address the spectator",
+            "supports": "The eyes address the viewer.",
+            "readVia": "WebFetch return, 15 Oct 2026; paraphrased on screen"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "J. A. Crowe and G. B. Cavalcaselle, Raphael: His Life and Works, vol. II (London: John Murray, 1885), ch. VI, p. 326",
+            "url": "https://archive.org/details/raphaelhislifewo02crowuoft",
+            "quote": "his eyes looking out of the picture",
+            "supports": "Not down at the hands.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "The Open University, OpenLearn, 'Artists and authorship: the case of Raphael', section 2.10.1 'Raphael paints Castiglione'",
+            "url": "https://www.open.edu/openlearn/history-the-arts/artists-and-authorship-the-case-raphael/content-section-2.10.1",
+            "quote": "the sitter's cold blue eyes address the spectator",
+            "supports": "The eyes address the viewer.",
+            "readVia": "WebFetch return, 15 Oct 2026; paraphrased on screen"
+          }
+        ]
+      },
+      "confidence": "High: two independent sources say the eyes look out at the viewer; the photograph agrees.",
+      "notes": "Ledger claims cast-009, cast-010. The level's q1/b1a name the blue eyes but never say where they look; this question adds the gaze. The crop's label names the place only.",
+      "quoteCheck": "2026-10-15: Crowe and Cavalcaselle checked against the saved OCR (p. 326); OpenLearn wording is a fetch-tool return and is paraphrased on screen.",
+      "cropCheck": "2026-10-15: box measured on Commons' 3840 x 4777 rendering of the C2RMF file; crop checked by eye: both eyes, the brows and the shadow of the brim."
+    }
+  }
+}

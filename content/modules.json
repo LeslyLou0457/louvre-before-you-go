@@ -1178,8 +1178,9 @@
             "roomName": "Grande Galerie, Tribune"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066418"
+          "checkedOn": "2026-10-15",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010066418",
+          "levelId": "portrait-of-baldassare-castiglione-1"
         },
         {
           "id": "la-belle-ferronniere",
@@ -1294,8 +1295,9 @@
             "roomName": "Salle Daru"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065720"
+          "checkedOn": "2026-10-15",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+          "levelId": "coronation-of-napoleon-1"
         },
         {
           "id": "la-grande-odalisque",
