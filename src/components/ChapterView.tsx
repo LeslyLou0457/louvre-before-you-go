@@ -8,6 +8,8 @@
 // Progress is read from the existing keys only (lib/book-progress).
 // At the bottom, the chapter's close-up rounds in module order (PRODUCT.md
 // "Close-ups per work"): each opens as soon as its work's level is met.
+// A work with a level shows its narrator's head at the end of its row (still,
+// like the heads on the trail card); works without a level show none.
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -15,6 +17,7 @@ import LabelSheet from "./LabelSheet";
 import TabBar, { TAB_BAR_SPACE } from "./TabBar";
 import { PhotoTile, ProgressDots, StatusChip } from "./WorkBits";
 import { BackDoodle, CheckDoodle, LockDoodle, NextDoodle, ZoomDoodle } from "@/doodles";
+import { Avatar } from "@/doodles/avatars";
 import { floorLabel, formatDate, isOffView, nextUpId, roundState, summary, workState, type Progress } from "@/lib/book";
 import { useProgress } from "@/lib/book-progress";
 import { FROM_CONTENTS, readChapterOrigin } from "@/lib/chapter-origin";
@@ -152,6 +155,7 @@ type RowProps = { chapterId: string; work: BookWork; progress: Progress; nextUp:
 
 function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
   const state = workState(work, progress);
+  const narrator = work.level?.narrator;
   const body = (
     <>
       <PhotoTile work={work} />
@@ -174,10 +178,16 @@ function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
           )}
         </span>
       </span>
+      {narrator && (
+        // Decorative: the artist is already named on the row.
+        <span aria-hidden="true" className="pt-0.5">
+          <Avatar speaker={narrator} size={40} />
+        </span>
+      )}
     </>
   );
   const cls =
-    "grid min-h-16 w-full grid-cols-[72px_1fr] items-start gap-3 py-3 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-ultramarine";
+    `grid min-h-16 w-full ${narrator ? "grid-cols-[72px_1fr_40px]" : "grid-cols-[72px_1fr]"} items-start gap-3 py-3 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-ultramarine`;
   return (
     <li className="border-b-[1.5px] border-line">
       {work.level ? (

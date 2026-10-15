@@ -3,6 +3,10 @@
 // (handwriting); an imagined line is tagged as such, a quote shows quotation
 // marks and its citation. A node without a voice shows the level's narrator
 // with no bubble. No narrator and no voice: no stage.
+// On a question screen the question is the narrator's spoken line: the
+// player passes it as `talk`, so the narrator's mouth moves while it is new,
+// with no bubble and no new words (the question is printed below the stage);
+// the head is then drawn at the talking size, 56 px, so the mouth can be seen.
 //
 // Motion (PRODUCT.md "Motion"): the head rises in on the first screen of a
 // visit or when the speaker changes (`enter`), reacts to the answer (`mood`),
@@ -19,6 +23,8 @@ type Props = {
   speakers: Record<string, Speaker>;
   enter?: boolean;
   mood?: Mood;
+  /** No-voice stage only: the line the narrator is saying (the question prompt). */
+  talk?: string;
 };
 
 /** Who is on the stage for this node: the voice's speaker, else the narrator. */
@@ -26,14 +32,14 @@ export function stageSpeakerId(narratorId: string | undefined, voice: Voice | un
   return voice ? voice.speaker : narratorId;
 }
 
-export default function Stage({ narrator, voice, speakers, enter, mood }: Props) {
+export default function Stage({ narrator, voice, speakers, enter, mood, talk }: Props) {
   const speaker = voice ? speakers[voice.speaker] : narrator;
   if (!speaker) return null;
 
   if (!voice) {
     return (
       <div className="flex items-center gap-3 bg-stage px-3 py-2">
-        <Head speaker={speaker} size={44} enter={enter} mood={mood} />
+        <Head speaker={speaker} size={talk ? 56 : 44} enter={enter} mood={mood} talk={talk} />
         <span className="font-hand text-lg leading-tight text-muted">{speaker.name}</span>
       </div>
     );

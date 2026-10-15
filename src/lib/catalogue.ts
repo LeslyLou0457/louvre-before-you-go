@@ -10,8 +10,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getRoundForLevel } from "./challenge";
-import { getLevels } from "./content";
-import type { Catalogue, CatalogueWork, DisplayStatus, WingId } from "./types";
+import { getLevels, narratorOf } from "./content";
+import type { Catalogue, CatalogueWork, DisplayStatus, Speaker, WingId } from "./types";
 import { floorLabel, isOffView } from "./book";
 import { validateCatalogue } from "./validate-modules";
 
@@ -47,6 +47,8 @@ export type BookWork = {
     questionCount: number;
     /** For checking a saved mid-level spot against the current content. */
     nodeIds: string[];
+    /** The level's narrator, whose head shows on the work's row. */
+    narrator?: Speaker;
   };
   /** The work's close-up round, when one exists; it opens once the level is met. */
   round?: {
@@ -129,6 +131,7 @@ export function getBook(): Book {
               image: level.imageAvailable ? level.artwork.image : null,
               questionCount: level.questionCount,
               nodeIds: Object.keys(level.lesson.nodes),
+              ...(narratorOf(level) ? { narrator: narratorOf(level) } : {}),
             },
           }
         : {}),

@@ -16,10 +16,10 @@
     "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010252531"
   },
   "speakers": {
-    "victory": {
-      "name": "Winged Victory of Samothrace",
-      "kind": "artwork",
-      "avatar": "marble-block"
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
     }
   },
   "lessons": [
@@ -28,15 +28,15 @@
       "order": 3,
       "title": "Look down first",
       "start": "n1",
-      "narrator": "victory",
+      "narrator": "guide",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "At the top of a grand staircase, a winged woman leans into the wind. The goddess alone is 3.28 metres tall; with her stone ship, the monument reaches 5.64. Her head and arms are gone.",
           "voice": {
-            "speaker": "victory",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Look down before you look up. My head, my arms, my sculptor's name: all lost."
+            "text": "Look down before you look up. Her head, her arms, her sculptor's name: all lost."
           },
           "next": "q1"
         },
@@ -72,9 +72,9 @@
           "type": "branch",
           "text": "Sharp eye. Most visitors never look down, and what's down there is the key to the whole monument.",
           "voice": {
-            "speaker": "victory",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Yes, look down. I stand on the prow of a warship, carved in stone."
+            "text": "Yes, look down. She stands on the prow of a warship, carved in stone."
           },
           "next": "n2"
         },
@@ -165,9 +165,9 @@
           "type": "story",
           "text": "She's engineering as much as carving: torso and wings made separately and attached; a base of 17 blocks in three courses (one never left Samothrace), slabs marked with Greek letters for assembly. The whole monument weighs about 32 tonnes.",
           "voice": {
-            "speaker": "victory",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Alpha, beta, gamma: letters on my slabs told the builders where each one went. All of me weighs about thirty-two tonnes."
+            "text": "Alpha, beta, gamma: letters on her slabs told the builders where each one went. All of her weighs about thirty-two tonnes."
           },
           "next": "q4"
         },
@@ -218,9 +218,9 @@
           "type": "branch",
           "text": "Right. Rhodes around 190 BCE, Rome after its victory over Macedon, a defeat of Philip V of Macedon: each idea has defenders. The Louvre writes \"Rhodes (?)\" and c. 200–175 BCE.",
           "voice": {
-            "speaker": "victory",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Which battle? Which city or king paid for me? Scholars still argue, and I can't settle it."
+            "text": "Which battle? Which city or king paid for her? Scholars still argue, and I can't settle it."
           },
           "next": "n5"
         },
@@ -274,9 +274,9 @@
           "type": "story",
           "text": "In 1950 the palm of her right hand turned up on Samothrace. The 2013–14 restoration cleaned her and set her directly on her ship again. Take the ship away and she still means victory, but not where it was won.",
           "voice": {
-            "speaker": "victory",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "I was dug up on Samothrace in 1863. Only later did anyone see that the grey blocks nearby were my ship."
+            "text": "She was dug up on Samothrace in 1863. Only later did anyone see that the grey blocks nearby were her ship."
           }
         }
       },

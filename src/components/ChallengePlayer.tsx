@@ -92,7 +92,8 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
   const sources = question?.type === "question" ? (question.sources ?? []) : [];
   const narrator = lesson.narrator ? speakers[lesson.narrator] : undefined;
   // Motion (PRODUCT.md "Motion"): the same head motion as a level; the crops stay still.
-  // (The challenge stage shows the narrator only, never a voice line.)
+  // (The challenge stage shows the narrator only, never a voice line; on the
+  // question screen the narrator says the question, so its mouth moves.)
   const motion = useScreenMotion(ready, nodeId, lesson.narrator, answered);
   const mood = moodFor(lesson.nodes, nodeId);
 
@@ -213,7 +214,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
       >
         {node.type === "question" ? (
           <>
-            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} />
+            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} talk={node.text} />
             <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
             <div className="flex flex-col gap-3">
               {node.choices.map((c, i) => (

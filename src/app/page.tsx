@@ -2,7 +2,7 @@ import Link from "next/link";
 import StickerBook from "@/components/StickerBook";
 import TabBar, { TAB_BAR_SPACE } from "@/components/TabBar";
 import TrailCard from "@/components/TrailCard";
-import { StarDoodle, UnderlineDoodle } from "@/doodles";
+import { LouvreDoodle, UnderlineDoodle } from "@/doodles";
 import { formatDate } from "@/lib/book";
 import { getBook } from "@/lib/catalogue";
 import { getChallenge } from "@/lib/challenge";
@@ -28,7 +28,9 @@ export default function Cover() {
   return (
     <main className={`soft-fade pt-6 ${TAB_BAR_SPACE}`}>
       <header>
-        <div className="flex items-start justify-between gap-3">
+        {/* The Louvre drawing floats top right, beside the eyebrow and the first title line only. */}
+        <div className="flow-root">
+          <LouvreDoodle className="float-right -mt-3 ml-3 h-auto w-[78px]" />
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.08em] text-muted">The Louvre · Paris</p>
             <h1 className="mt-1.5 font-hand text-[2.75rem] font-bold leading-[0.95]">
@@ -37,7 +39,6 @@ export default function Cover() {
               Before You Go
             </h1>
           </div>
-          <StarDoodle className="h-12 w-12 shrink-0" />
         </div>
         <UnderlineDoodle className="mt-1 h-3 w-48" />
         <p className="mt-3 text-[16.5px] leading-[1.6] text-[#3d3a35]">

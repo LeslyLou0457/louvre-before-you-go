@@ -1,15 +1,17 @@
 // Content checks shared by the build (src/lib/content.ts) and
 // `npm run check-content` (scripts/check-content.ts).
-// Keep this file free of runtime imports so Node can run it directly.
+// Keep this file free of runtime imports other than ./avatar-ids.ts so Node
+// can run it directly.
 
 import type { Correction, ContentFile, LessonNode, Voice as LessonNodeVoice } from "./types";
+import { AVATAR_IDS } from "./avatar-ids.ts";
 
 export const QUESTIONS_PER_LEVEL = 5;
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
 export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;
 export const CORRECTION_WORD_LIMITS = { verdict: 6, tempting: 30, truth: 35, evidence: 35 } as const;
 const CORRECTION_KINDS = ["near-miss", "myth"];
-const SPEAKER_KINDS = ["artist", "artwork", "person"];
+const SPEAKER_KINDS = ["artist", "person", "guide"];
 
 export type Report = { errors: string[]; warnings: string[] };
 
@@ -49,6 +51,9 @@ export function validateContent(data: unknown, file: string): Report {
     for (const [id, sp] of Object.entries(speakers)) {
       if (!isNonEmptyString(sp?.name)) err(`speakers.${id}.name is missing`);
       if (!isNonEmptyString(sp?.avatar)) err(`speakers.${id}.avatar is missing`);
+      else if (!(AVATAR_IDS as readonly string[]).includes(sp.avatar)) {
+        err(`speakers.${id}.avatar "${sp.avatar}" has no drawing in src/doodles/avatars.tsx (known: ${AVATAR_IDS.join(", ")})`);
+      }
       if (!SPEAKER_KINDS.includes(sp?.kind)) err(`speakers.${id}.kind must be one of ${SPEAKER_KINDS.join(", ")}`);
     }
   }

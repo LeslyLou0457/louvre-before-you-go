@@ -1,48 +1,108 @@
-// PLACEHOLDER AVATARS (artist heads and doodled objects).
+// SPEAKER HEADS (hand-typed SVG, not AI art).
 //
 // Content files name an avatar per speaker (`speakers.<id>.avatar`). Each id
-// maps to one drawing here. These are deliberately crude geometric stand-ins
-// typed by hand, not portraits and not AI art. When the hand-drawn SVG
+// maps to one drawing here; the ids are listed in src/lib/avatar-ids.ts so
+// the content check can fail a speaker with no drawing. These are friendly
+// flat heads typed by hand, not portraits. When a person's hand-drawn SVG
 // arrives, replace the shapes for that id and keep the id.
 //
-// PRODUCT.md "Design":
-// - Artists are flat painted heads: blocks of colour, no outlines, features as
-//   a few small dark marks.
-// - An artwork that speaks (a statue with no known maker) is a doodled object,
-//   default a marble block on a plinth, never a drawing of the artwork.
-// - The ink line belongs to the frame (the hand-drawn circle), never to the head.
+// Style (PRODUCT.md "Design", in the manner of After Hours, never its
+// drawings): flat painted heads, blocks of colour with no outlines, head
+// only. Leonardo's head is the benchmark (the product owner's favourite):
+// - slightly irregular, hand-painted shapes, not perfect geometric circles;
+// - skin in varied flat tones (pink, peach, ochre, orange);
+// - like a child's drawing (the HeyTea reference): each head has its own face
+//   shape, a slight tilt and uneven placement, and one or two documented
+//   traits exaggerated so it is recognisable at a glance from its silhouette
+//   alone, even at 44 px (hair, beard, whiskers, skin, freckles, a bow);
+// - features as a few thin dark brush marks: dot eyes, line brows, a small
+//   line mouth; simple ear blobs; the nose one flat shape in a deeper tone of
+//   the skin or a warm terracotta (Leonardo keeps his orange one);
+// - little or no neck.
+// The ink line belongs to the frame (the hand-drawn circle), never to the
+// head's outline.
+//   leonardo   the original head, with its long flowing grey hair and long
+//              pale beard exaggerated: the old sage;
+//   delacroix  olive skin, a tall mass of dark wavy hair swept up, strong
+//              side whiskers, heavy brows, a thin moustache (his self-portraits);
+//   gericault  pale and young, a long face under a big auburn mop of curls,
+//              long side whiskers, clean-shaven (the portraits of him);
+//   veronese   ochre skin, a tall bald dome, dark tufts at the sides and a big
+//              bushy dark beard (his presumed self-portraits, and the bald,
+//              bearded player in white that tradition names as him);
+//   guide      Lesly, the museum guide who narrates works whose maker is
+//              unknown or left no documented words: a tuxedo cat dressed after
+//              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
+//              cloth, amber eyes, pearl earring), our own drawing.
 //
 // Layers (PRODUCT.md "Motion"; the full contract for the illustrator is in
 // the project files, animation/PLAN.md §4). Motion moves boxes and named
 // layers, never a particular drawing:
 // - `head`: the whole drawing (required). Everything that moves together.
-// - `eyes`: both eyes and nothing else (recommended); they blink.
-// - `mouthClosed` / `mouthOpen`: optional pair, swapped while the head talks.
+// - `eyes`: both eyes and nothing else; they blink.
+// - `mouthClosed` / `mouthOpen`: swapped about six times a second while the
+//   head talks (src/app/motion.css). Every head has both.
 // A delivered SVG names these as `<g id="head">`, `<g id="eyes">`,
 // `<g id="mouth-closed">`, `<g id="mouth-open">`; here they become
 // `data-part` attributes, because ids must be unique on a page that shows the
-// same head twice. Doodled objects have only `head`.
+// same head twice.
 
 import type { CSSProperties, ReactNode } from "react";
+import type { AvatarId } from "@/lib/avatar-ids";
 import type { Speaker } from "@/lib/types";
 
 const INK = "#1f1f1f";
+const LIP = "#b8433a";
+const MOUTH = "#5e1f1b";
 
 type Drawing = {
+  /** Degrees the whole head leans, for a livelier, less rigid pose. */
+  tilt?: number;
   head: ReactNode;
-  eyes?: ReactNode;
-  mouthClosed?: ReactNode;
-  mouthOpen?: ReactNode;
+  eyes: ReactNode;
+  mouthClosed: ReactNode;
+  mouthOpen: ReactNode;
 };
 
+/** Thin brush marks (brows, lines in the face). */
+const brush = (d: string, color = INK, w = 1.1) => (
+  <path d={d} fill="none" stroke={color} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
+);
+
+/** Two small dot eyes. */
+const dots = (y: number, l = 26.6, r = 37.4, size = 1.25) => (
+  <>
+    <circle cx={l} cy={y} r={size} fill={INK} />
+    <circle cx={r} cy={y} r={size} fill={INK} />
+  </>
+);
+
+/** A closed mouth: one small brush line. */
+const line = (d: string, color = LIP) => brush(d, color, 1.2);
+
+/** An open mouth: a small dark oval with a lip-coloured rim. */
+const oval = (cx: number, cy: number, rx = 2.1, ry = 1.7) => (
+  <>
+    <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill={LIP} />
+    <ellipse cx={cx} cy={cy + 0.1} rx={rx - 0.7} ry={ry - 0.6} fill={MOUTH} />
+  </>
+);
+
 // All drawings share a 64×64 canvas, centred in the circle.
-const AVATARS: Record<string, Drawing> = {
+const AVATARS: Record<AvatarId, Drawing> = {
+  // The benchmark: the original head (face, cap, beard, orange nose, eyes),
+  // with his long flowing grey hair and long beard exaggerated so he reads at
+  // a glance as the old sage.
   leonardo: {
     head: (
       <>
+        <path d="M18.6 21 C14.6 28 13.8 39 15.2 49 C15.8 54.6 14.6 58.4 13 61.6 L22.4 61.6 C21.2 52 20.6 40 21.2 29 Z M45.4 21 C49.4 28 50.2 39 48.8 49 C48.2 54.6 49.4 58.4 51 61.6 L41.6 61.6 C42.8 52 43.4 40 42.8 29 Z" fill="#8c8f9b" />
         <ellipse cx="32" cy="28" rx="13" ry="14" fill="#f4a7b9" />
         <path d="M18 20 Q32 7 46 20 L46 25 Q32 16 18 25 Z" fill="#8c8f9b" />
-        <path d="M19 31 Q21 56 32 58 Q43 56 45 31 Q39 40 32 40 Q25 40 19 31 Z" fill="#d9d6cf" />
+        <path d="M19 31 Q17.6 50 23.6 58.4 Q27.6 63.4 32 64.6 Q36.4 63.4 40.4 58.4 Q46.4 50 45 31 Q39 40 32 40 Q25 40 19 31 Z" fill="#d9d6cf" />
+        {brush("M26.6 45 Q25.4 51 27.4 57", "#bdb9b1", 1)}
+        {brush("M37.4 45 Q38.6 51 36.6 57", "#bdb9b1", 1)}
+        {brush("M32 47 L32 60", "#bdb9b1", 1)}
         <ellipse cx="32" cy="31" rx="3" ry="4.6" fill="#f08a3c" />
       </>
     ),
@@ -52,67 +112,151 @@ const AVATARS: Record<string, Drawing> = {
         <circle cx="37.5" cy="26" r="1.7" fill={INK} />
       </>
     ),
+    mouthClosed: line("M29.8 37.7 Q32 38.6 34.2 37.5"),
+    mouthOpen: oval(32, 38.1, 2, 1.6),
   },
+  // Olive skin, a tall mass of dark wavy hair swept up, strong side whiskers,
+  // heavy straight brows, a thin moustache.
   delacroix: {
+    tilt: -4,
     head: (
       <>
-        <ellipse cx="32" cy="33" rx="13" ry="16" fill="#f6c6a8" />
-        <path d="M18 27 Q19 12 32 12 Q46 12 46 27 Q40 18 32 19 Q24 18 18 27 Z" fill="#2b2622" />
-        <path d="M25 41 Q32 37 39 41 Q32 44 25 41 Z" fill="#2b2622" />
-        <ellipse cx="32" cy="34" rx="2.8" ry="4.3" fill="#3f6fd8" />
+        <ellipse cx="19.8" cy="33" rx="2.4" ry="3.4" fill="#c49660" />
+        <ellipse cx="44.4" cy="33" rx="2.4" ry="3.4" fill="#c49660" />
+        <path d="M32 15.5 C39 15.2 43.6 20 44 28 C44.4 37 42.6 46 37.6 50.6 C35 53 29.6 53 27 50.4 C22 45.6 20 37 20.2 28.4 C20.4 20.4 25 15.8 32 15.5 Z" fill="#dcb27e" />
+        <path d="M19.6 31 C16 22 17 13 23 8.6 C27 7 33 6 38.6 7.2 C44.6 8.6 48.6 13 48 18.6 C47.6 22.4 46 25.6 44.4 28 C43.4 23.6 40.4 20.4 36 19.6 C34.2 22 30.6 22.8 27.4 21.8 C24.6 23 22 26 21.4 31 Z" fill="#231b18" />
+        {brush("M23.4 13 Q29.6 8.2 36 10 Q41.4 11.4 44.4 15.6", "#4c3c34", 1.3)}
+        {brush("M21.6 19.6 Q25 15.6 30 15.4", "#4c3c34", 1.1)}
+        <path d="M20.4 26 C19 32 19.6 39.4 22.8 45.6 C23.8 42 23.6 36 24 30 Z M43.8 26 C45.2 32 44.6 39.4 41.4 45.6 C40.4 42 40.6 36 40.2 30 Z" fill="#231b18" />
+        {brush("M23.6 28.8 L29.6 27.9", "#231b18", 2.1)}
+        {brush("M34.6 27.7 L40.6 28.5", "#231b18", 2.1)}
+        <path d="M32.6 29 L35.8 39.8 Q33 41 30.4 40 Z" fill="#b07a46" />
+        <path d="M28 42.6 Q30.6 41.2 32.6 42 Q34.6 41.2 37 42.6 Q34.6 43.2 32.6 42.8 Q30.6 43.2 28 42.6 Z" fill="#231b18" />
       </>
     ),
     eyes: (
       <>
-        <circle cx="26.5" cy="29" r="1.7" fill={INK} />
-        <circle cx="37.5" cy="29" r="1.7" fill={INK} />
+        <ellipse cx="26.8" cy="31.4" rx="1.5" ry="1.05" fill={INK} />
+        <ellipse cx="37.6" cy="31.2" rx="1.5" ry="1.05" fill={INK} />
       </>
     ),
+    mouthClosed: line("M30 45.2 Q32.4 46 35 45", "#9c3b30"),
+    mouthOpen: oval(32.4, 45.5),
   },
+  // Pale and young, a long face under a big auburn mop of curls falling on the
+  // forehead, long side whiskers, clean-shaven.
   gericault: {
+    tilt: 3,
     head: (
       <>
-        <ellipse cx="32" cy="34" rx="13" ry="15" fill="#f9d3c0" />
-        <circle cx="22" cy="19" r="6.5" fill="#7a4a2a" />
-        <circle cx="32" cy="15" r="7.5" fill="#7a4a2a" />
-        <circle cx="42" cy="19" r="6.5" fill="#7a4a2a" />
-        <path d="M19 25 L22.5 25 L22.5 40 Q19.5 36 19 31 Z M45 25 L41.5 25 L41.5 40 Q44.5 36 45 31 Z" fill="#7a4a2a" />
-        <ellipse cx="32" cy="35" rx="2.8" ry="4.3" fill="#3fa37a" />
+        <g fill="#b4572c">
+          <circle cx="16" cy="25" r="6" />
+          <circle cx="18.4" cy="17" r="6.2" />
+          <circle cx="24.6" cy="12" r="6.6" />
+          <circle cx="32.4" cy="10.4" r="6.6" />
+          <circle cx="40.2" cy="11.8" r="6.6" />
+          <circle cx="46.2" cy="17" r="6.2" />
+          <circle cx="48.4" cy="25" r="5.6" />
+          <circle cx="15.8" cy="32" r="4.8" />
+          <circle cx="48.4" cy="32" r="4.6" />
+        </g>
+        <path d="M32 15 C39.4 14.8 44 20 44.2 28.6 C44.4 37.6 42.4 46 37.4 50.6 C34.8 52.8 29.4 52.8 26.8 50.6 C21.8 46 19.8 37.6 20 28.6 C20.2 20 24.8 15.2 32 15 Z" fill="#f7dccd" />
+        <g fill="#b4572c">
+          <circle cx="24.6" cy="17.4" r="3.8" />
+          <circle cx="31" cy="15.4" r="4.2" />
+          <circle cx="37.6" cy="16.6" r="3.6" />
+          <circle cx="42.4" cy="20" r="2.8" />
+          <path d="M20.4 27 L23 27 L23.8 44.6 Q20.8 41.4 20.4 36 Z M43.6 27 L41 27 L40.2 44.6 Q43.2 41.4 43.6 36 Z" />
+        </g>
+        {brush("M24.8 27.6 Q27.2 26.4 29.6 27.2", "#8a3c1c", 1.3)}
+        {brush("M34.8 27.2 Q37.2 26.4 39.6 27.6", "#8a3c1c", 1.3)}
+        <path d="M32.2 29.6 L34.6 37.8 Q32.4 38.8 30 38 Z" fill="#e09e8a" />
+        <ellipse cx="25.6" cy="37.6" rx="2" ry="1.2" fill="#f2b6a6" />
+        <ellipse cx="38.8" cy="37.6" rx="2" ry="1.2" fill="#f2b6a6" />
       </>
     ),
-    eyes: (
-      <>
-        <circle cx="26.5" cy="30" r="1.7" fill={INK} />
-        <circle cx="37.5" cy="30" r="1.7" fill={INK} />
-      </>
-    ),
+    eyes: dots(30.6, 27.2, 37.2),
+    mouthClosed: line("M29.6 42.6 Q32.2 43.6 34.8 42.2"),
+    mouthOpen: oval(32.2, 43),
   },
+  // Ochre skin, a tall bald dome with a shine, bushy dark tufts at the sides
+  // and a big bushy beard.
   veronese: {
+    tilt: -3,
     head: (
       <>
-        <ellipse cx="32" cy="31" rx="13" ry="15" fill="#f7b89a" />
-        <path d="M18 26 Q18 12 32 12 Q46 12 46 26 Q40 19 32 19.5 Q24 19 18 26 Z" fill="#3a2a20" />
-        <path d="M19 33 Q20 55 32 57 Q44 55 45 33 Q41 43 32 43 Q23 43 19 33 Z" fill="#3a2a20" />
-        <ellipse cx="32" cy="32" rx="2.8" ry="4.3" fill="#7b62c9" />
+        <ellipse cx="18.4" cy="34" rx="2.6" ry="3.6" fill="#d98c4c" />
+        <ellipse cx="45.6" cy="34" rx="2.6" ry="3.6" fill="#d98c4c" />
+        <path d="M32 9.5 C40.5 9.3 45.6 17 45.6 27.5 C45.6 37 43.4 45 38 49 C35 51.2 29 51.2 26 49 C20.6 45 18.4 37 18.4 27.5 C18.4 17 23.5 9.7 32 9.5 Z" fill="#eea25f" />
+        <ellipse cx="27.6" cy="15.4" rx="4.4" ry="2.2" fill="#f6bf86" transform="rotate(-24 27.6 15.4)" />
+        <path d="M18.4 33.6 C16.6 31.4 16.8 27.6 18.8 26 C18.4 24.4 19.8 23.2 21.4 23.8 C21.4 27 21.8 30.4 21.8 33.6 Z M45.6 33.6 C47.4 31.4 47.2 27.6 45.2 26 C45.6 24.4 44.2 23.2 42.6 23.8 C42.6 27 42.2 30.4 42.2 33.6 Z" fill="#3a2a22" />
+        {brush("M23.2 26.8 Q26.4 25 29.4 26.4", "#2f211b", 1.9)}
+        {brush("M34.6 26.4 Q37.6 25 40.8 26.8", "#2f211b", 1.9)}
+        <path d="M32 28 L35.2 37.4 Q32.4 38.8 29.4 37.6 Z" fill="#c9743a" />
+        <path d="M17.6 33 C16 42 17.4 50.6 22.4 55.8 C25.6 59.2 28.8 59.8 32 61.4 C35.2 59.8 38.4 59.2 41.6 55.8 C46.6 50.6 48 42 46.4 33 C44.6 38.4 41.6 41.6 38 42.6 C35 41.4 29 41.4 26 42.6 C22.4 41.6 19.4 38.4 17.6 33 Z" fill="#2f211b" />
+        {brush("M24 48 Q25 52 23.6 55.4", "#4a372d", 1)}
+        {brush("M40 48 Q39 52 40.4 55.4", "#4a372d", 1)}
+        <path d="M26.4 41.2 Q32 37.8 37.6 41.2 Q34.8 42.3 32 41.4 Q29.2 42.3 26.4 41.2 Z" fill="#2f211b" />
+      </>
+    ),
+    eyes: dots(29.8),
+    mouthClosed: line("M29.8 44.6 Q32 45.4 34.4 44.4", "#d0573f"),
+    mouthOpen: oval(32, 44.9),
+  },
+  // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
+  // with a Pearl Earring (our own drawing): an ultramarine headwrap with the
+  // pale-yellow cloth falling behind, ears poking out, big round amber eyes, a
+  // tiny pink nose and a pearl earring, the head turned a little.
+  guide: {
+    tilt: -7,
+    head: (
+      <>
+        {/* the pale-yellow cloth, rising from the wrap and falling behind */}
+        <path d="M21.6 15.6 C25 8.4 35 5.2 42.6 7.4 C48.6 9.2 52 14 52.4 20.4 C52.8 31 51.6 44 54.6 62 L42.4 62 C43.2 50 42.6 38 40.4 27 C34 23 27 19.6 21.6 15.6 Z" fill="#efdc9a" />
+        <path d="M42.6 55.6 Q48.6 54.6 54 55 L54.8 62 L42.4 62 Z" fill="#5d70b4" />
+        {brush("M46.8 20 Q48.4 34 47.8 50", "#d8c27c", 1.1)}
+        {/* ears poking out of the wrap */}
+        <path d="M17.4 25.4 L18.4 12.6 L27 18.8 Z M38.6 18 L46.8 12.4 L47 25 Z" fill="#262326" />
+        <path d="M19.4 21 L19.8 15.6 L23.4 18.6 Z M42.4 18.2 L45.6 15.8 L45.6 21 Z" fill="#e9a0a8" />
+        {/* the face: white fur with black tuxedo patches over the eyes and ears */}
+        <path d="M32 18.4 C42.4 18.4 48 24.4 48 32.4 C48 41.4 41.4 48 32 48 C22.6 48 16 41.4 16 32.4 C16 24.4 21.6 18.4 32 18.4 Z" fill="#f1eee8" />
+        <path d="M16.2 31 C16.2 24 21.8 18.8 32 18.8 C42.2 18.8 47.8 24 47.8 31 C47.8 35.2 47 38.2 45.4 40.4 C43.2 36.4 40.2 33.6 37 33.2 C35 33 33.4 34.2 32 36.2 C30.6 34.2 29 33 27 33.2 C23.8 33.6 20.8 36.4 18.6 40.4 C17 38.2 16.2 35.2 16.2 31 Z" fill="#262326" />
+        <path d="M32 36.2 C30.2 32 29.8 27 30.8 22.4 L33.2 22.4 C34.2 27 33.8 32 32 36.2 Z" fill="#f1eee8" />
+        {/* the ultramarine headwrap */}
+        <path d="M15.4 24.6 C17.6 17.4 24.8 13.2 33 13.4 C41.2 13.6 47.4 17.4 49 23.4 C49.4 26 48.8 27.4 47.8 28.4 C41.2 25 23 24.8 16.4 28.8 C15.4 27.4 15 26.2 15.4 24.6 Z" fill="#2a3f8f" />
+        {brush("M19.6 22.4 Q32 17.2 45.2 21.4", "#4a5fae", 1.2)}
+        <path d="M30.6 37.6 L33.4 37.6 L32 39.2 Z" fill="#f09aa6" />
+        {/* whiskers */}
+        {brush("M23.4 40.4 L13.6 39.4 M23.6 42 L14.4 43.2", "#b6b1aa", 0.7)}
+        {brush("M40.6 40.4 L50.4 39.4 M40.4 42 L49.6 43.2", "#b6b1aa", 0.7)}
+        {/* the pearl earring */}
+        <circle cx="45.4" cy="45.4" r="2.1" fill="#f6f4ee" />
+        <path d="M43.4 46 A2.1 2.1 0 0 0 47.4 46 A2.4 1.6 0 0 1 43.4 46 Z" fill="#c4c8d2" />
+        <circle cx="44.8" cy="44.7" r="0.6" fill="#fff" />
       </>
     ),
     eyes: (
       <>
-        <circle cx="26.5" cy="27" r="1.7" fill={INK} />
-        <circle cx="37.5" cy="27" r="1.7" fill={INK} />
+        <circle cx="25.6" cy="31.2" r="3.6" fill="#e9a227" />
+        <circle cx="38.4" cy="31.2" r="3.6" fill="#e9a227" />
+        <circle cx="25.8" cy="31.4" r="2" fill={INK} />
+        <circle cx="38.6" cy="31.4" r="2" fill={INK} />
+        <circle cx="26.6" cy="30.4" r="0.75" fill="#fff" />
+        <circle cx="39.4" cy="30.4" r="0.75" fill="#fff" />
       </>
     ),
-  },
-  // Doodled object (ink line + a crayon touch), for an artwork that speaks.
-  // Only a `head` layer: the whole object lifts and chatters when it speaks.
-  "marble-block": {
-    head: (
-      <g fill="none" stroke={INK} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" transform="translate(32 34) scale(1.3) translate(-32 -33)">
-        <path d="M22 17 L42 16.5 L42.5 38 L21.6 38.4 Z" fill="#fffdf8" />
-        <path d="M27 22 Q31 26 29 31 M36 20 Q34 24 37 27" strokeWidth="1.3" stroke="#9a948a" />
-        <path d="M17 38.5 L47 38 L46.5 44 L17.4 44.5 Z" fill="#f2c14e" />
-        <path d="M20 44.5 L20.5 50 L43.6 49.6 L43.8 44.2" />
-      </g>
+    mouthClosed: (
+      <>
+        {brush("M32 39.2 L32 40.4", "#7a5252", 0.8)}
+        {brush("M29.8 40.4 Q30.9 41.5 32 40.4 Q33.1 41.5 34.2 40.4", "#7a5252", 0.85)}
+      </>
+    ),
+    mouthOpen: (
+      <>
+        {brush("M32 39.2 L32 40", "#7a5252", 0.8)}
+        <ellipse cx="32" cy="41.4" rx="1.7" ry="1.5" fill="#c4505c" />
+        <ellipse cx="32" cy="41.6" rx="1" ry="0.8" fill={MOUTH} />
+      </>
     ),
   },
 };
@@ -121,16 +265,15 @@ const AVATARS: Record<string, Drawing> = {
 const GENERIC: Drawing = {
   head: (
     <>
-      <ellipse cx="32" cy="33" rx="13" ry="15" fill="#f4a7b9" />
-      <ellipse cx="32" cy="34" rx="2.8" ry="4.3" fill="#e8836b" />
+      <ellipse cx="18.6" cy="31" rx="2.6" ry="3.6" fill="#e9949f" />
+      <ellipse cx="45.4" cy="31" rx="2.6" ry="3.6" fill="#e9949f" />
+      <path d="M32 15 C40 14.8 45.2 20 45.2 28 C45.2 36.4 42.6 44.2 37.4 48 C34.6 50 29.4 50 26.6 48 C21.4 44 18.8 36.4 18.8 28.2 C18.8 20.2 24 15.2 32 15 Z" fill="#f4a7b9" />
+      <path d="M32 27.4 L34.6 36 Q32.2 37.2 29.6 36.2 Z" fill="#e07a6a" />
     </>
   ),
-  eyes: (
-    <>
-      <circle cx="26.5" cy="29" r="1.7" fill={INK} />
-      <circle cx="37.5" cy="29" r="1.7" fill={INK} />
-    </>
-  ),
+  eyes: dots(29),
+  mouthClosed: line("M29.6 41 Q32 41.9 34.4 40.8"),
+  mouthOpen: oval(32, 41.3),
 };
 
 const CIRCLE = "M32 3.5 Q59.5 3 60.5 32 Q60 60.5 32 60.5 Q3.5 60.8 3.5 32 Q3.2 3.8 32 3.5 Z";
@@ -148,7 +291,7 @@ type Props = {
 
 /** A speaker's avatar inside a hand-drawn ink circle. */
 export function Avatar({ speaker, size = 56, ring = false, ringDrawDelay, className = "" }: Props) {
-  const d = AVATARS[speaker.avatar] ?? GENERIC;
+  const d = (AVATARS as Record<string, Drawing>)[speaker.avatar] ?? GENERIC;
   const clipId = `clip-${speaker.avatar}`;
   const drawRing = ring && ringDrawDelay !== undefined;
   return (
@@ -168,10 +311,12 @@ export function Avatar({ speaker, size = 56, ring = false, ringDrawDelay, classN
       <path d={CIRCLE} fill="#fffdf8" />
       <g clipPath={`url(#${clipId})`}>
         <g data-part="head">
-          {d.head}
-          {d.eyes && <g data-part="eyes">{d.eyes}</g>}
-          {d.mouthClosed && <g data-part="mouth-closed">{d.mouthClosed}</g>}
-          {d.mouthOpen && <g data-part="mouth-open">{d.mouthOpen}</g>}
+          <g transform={d.tilt ? `rotate(${d.tilt} 32 34)` : undefined}>
+            {d.head}
+            <g data-part="eyes">{d.eyes}</g>
+            <g data-part="mouth-closed">{d.mouthClosed}</g>
+            <g data-part="mouth-open">{d.mouthOpen}</g>
+          </g>
         </g>
       </g>
       {(!ring || drawRing) && (
