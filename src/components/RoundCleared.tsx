@@ -1,6 +1,6 @@
 "use client";
 
-// Close-Up Challenge cleared page: repeats the merge lines of the two
+// Close-Up Challenge cleared page: repeats the merge lines of the
 // questions just played (the pair is worked out from the play counter, which
 // moved on when the round was finished), then points to the next round. A
 // round opened from a chapter (`?from=09`) goes back to that chapter instead
@@ -94,7 +94,7 @@ export default function RoundCleared({ id, pool, roundSize, merges, artwork, mus
           </Link>
         )}
         {pool.length > roundSize && (
-          <p className="text-center font-hand text-lg text-muted">Play this one again for a different pair of close-ups.</p>
+          <p className="text-center font-hand text-lg text-muted">Play this one again for different close-ups.</p>
         )}
       </div>
     </main>

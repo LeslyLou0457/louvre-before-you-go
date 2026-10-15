@@ -21,9 +21,9 @@ export function useProgress(works: BookWork[]): Progress {
     const plays: Record<string, number> = {};
     for (const w of works) {
       if (w.level) places[w.level.id] = getPlace(w.level.id, w.level.nodeIds, w.level.questionCount);
-      // Close-up rounds save their place under their own lesson id, two questions a round.
+      // Close-up rounds save their place under their own lesson id, roundSize questions a round.
       if (w.round) {
-        places[w.round.id] = getPlace(w.round.id, w.round.nodeIds, 2);
+        places[w.round.id] = getPlace(w.round.id, w.round.nodeIds, w.round.roundSize);
         plays[w.round.id] = getPlays(w.round.id);
       }
     }

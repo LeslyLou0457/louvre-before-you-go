@@ -1,8 +1,8 @@
 "use client";
 
-// Plays one Close-Up Challenge round (PRODUCT.md "Close-Up Challenge"): two
-// questions from the artwork's pool, picked by the play counter (play k shows
-// pool items 2k and 2k+1). Each question is the usual loop, intro → question
+// Plays one Close-Up Challenge round (PRODUCT.md "Close-Up Challenge"): the
+// round's `roundSize` questions from the artwork's pool, picked by the play
+// counter (play k shows pool items k·size to k·size + size − 1). Each question is the usual loop, intro → question
 // → branch (with its correction card on a wrong pick) → merge line, while the
 // zoomed crop and the "see where" thumbnail stay on screen. The spot is saved
 // like a level's, so leaving or reloading resumes it.
