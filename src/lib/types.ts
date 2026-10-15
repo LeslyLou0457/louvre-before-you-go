@@ -26,9 +26,13 @@ export type Artwork = {
 export type Speaker = {
   /** Shown under the head. */
   name: string;
-  /** "artwork" when a statue with no known maker speaks; "person" for another documented figure. */
-  kind: "artist" | "artwork" | "person";
-  /** Id of the drawing in src/doodles/avatars.tsx. */
+  /**
+   * "artist"; "person" for another documented figure; "guide" for Lesly, the
+   * young museum guide who narrates works whose maker is unknown or left no
+   * documented words.
+   */
+  kind: "artist" | "person" | "guide";
+  /** Id of the drawing in src/doodles/avatars.tsx (listed in src/lib/avatar-ids.ts). */
   avatar: string;
 };
 

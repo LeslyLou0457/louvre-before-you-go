@@ -16,10 +16,10 @@
     "museumUrl": "https://collections.louvre.fr/ark:/53355/cl010277627"
   },
   "speakers": {
-    "venus": {
-      "name": "Venus de Milo",
-      "kind": "artwork",
-      "avatar": "marble-block"
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
     }
   },
   "lessons": [
@@ -28,15 +28,15 @@
       "order": 2,
       "title": "An old ideal, made new",
       "start": "n1",
-      "narrator": "venus",
+      "narrator": "guide",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "Forget the missing arms for a minute. Walk round her: just over two metres of marble, a goddess bare to the hips, a heavy cloak slipping down her legs. She changes as you move.",
           "voice": {
-            "speaker": "venus",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Walk round me slowly. Two metres of Parian marble. And my sculptor's name? Even that is still argued over."
+            "text": "Walk round her slowly. Two metres of Parian marble. And her sculptor's name? Even that is still argued over."
           },
           "next": "q1"
         },
@@ -109,9 +109,9 @@
           "type": "branch",
           "text": "Exactly. One leg carries the weight, the other relaxes, and the whole body answers: hips tilt, shoulders tilt back. Art historians call it contrapposto, roughly \"counterpose\".",
           "voice": {
-            "speaker": "venus",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "One leg holds my weight; the other rests. Everything above answers that choice, right up to my shoulders."
+            "text": "One leg holds her weight; the other rests. Everything above answers that choice, right up to her shoulders."
           },
           "next": "n3"
         },
@@ -181,9 +181,9 @@
           "type": "story",
           "text": "And that signed base? A drawing shows it fitted to her plinth in 1821. Then it vanished inside the Louvre. Was it hidden because it spoiled the Classical story? Some suspect so. Nobody has proved it.",
           "voice": {
-            "speaker": "venus",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "My signed base was drawn in 1821, then lost. Whether it truly belonged to me is still argued."
+            "text": "Her signed base was drawn in 1821, then lost. Whether it truly belonged to her is still argued."
           },
           "next": "q4"
         },
@@ -227,9 +227,9 @@
           "type": "story",
           "text": "Where did she stand? Witnesses in 1820 described a niche, her in the middle, herms on either side, near an inscription in which a gymnasium official dedicated a hall. Kousser argues she stood in Melos's civic gymnasium, among young men.",
           "voice": {
-            "speaker": "venus",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Where did I first stand? A niche, with herms beside me. The gymnasium is a strong argument, but still a theory."
+            "text": "Where did she first stand? A niche, with herms beside her. The gymnasium is a strong argument, but still a theory."
           },
           "next": "q5"
         },
@@ -273,9 +273,9 @@
           "type": "story",
           "text": "Casts spread to Berlin and London. What survives: two blocks joined at the hips, holes for a metal headband and bracelet, a plaster nose tip. What's lost: the arms, the left foot, and the gesture that told her story.",
           "voice": {
-            "speaker": "venus",
+            "speaker": "guide",
             "kind": "imagined",
-            "text": "Found on Melos in 1820, in the Louvre by 1821. My arms are lost, and with them, whatever I was doing."
+            "text": "Found on Melos in 1820, in the Louvre by 1821. Her arms are lost, and with them, whatever she was doing."
           }
         }
       },

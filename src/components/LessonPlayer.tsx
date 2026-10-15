@@ -147,7 +147,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
       >
         {node.type === "question" ? (
           <>
-            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} />
+            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} talk={node.text} />
             <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
             <div className="flex flex-col gap-3">
               {node.choices.map((c, i) => (
