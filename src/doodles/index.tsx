@@ -107,6 +107,59 @@ export function StarDoodle(p: DoodleProps) {
   );
 }
 
+/**
+ * The cover's sticker: the Louvre, our own flat drawing (hand-typed, not
+ * traced from any image). The glass pyramid in front of a simple palace
+ * front (cream walls, blue-grey roofs, the domed centre pavilion and two end
+ * pavilions), a loose pale-blue swash of sky behind, and one ink line for
+ * the ground, like the other doodles. No text.
+ */
+export function LouvreDoodle(p: DoodleProps) {
+  const wall = "#efdcbb";
+  const roof = "#8297c2";
+  const win = "#4f5566";
+  return (
+    <Svg viewBox="0 0 64 48" {...p}>
+      {/* sky swash */}
+      <path d="M5 17 C10 9.5 24 6.5 38 7.2 C48 7.6 58 9.6 59.4 14.4 C57 15.8 52 14.6 47 15.6 C40 17 33 15.4 26 16.6 C18 18 10 20.6 5 17 Z" fill="#c4dcf2" />
+      <path d="M12 11.6 C20 9.6 30 9 37 9.6 M41 11 C47 10.8 53 11.6 56.6 13" fill="none" stroke="#fffdf8" strokeWidth="1.2" strokeLinecap="round" />
+      {/* end pavilions */}
+      <path d="M5.4 19 L7.6 12.8 L13.4 12.8 L15.6 19 Z M48.4 19 L50.6 12.8 L56.4 12.8 L58.6 19 Z" fill={roof} />
+      <rect x="6" y="19" width="9" height="19.4" fill={wall} />
+      <rect x="49" y="19" width="9" height="19.4" fill={wall} />
+      {/* main wing and roof */}
+      <path d="M14 23.4 L15.6 19.6 L48.4 19.6 L50 23.4 Z" fill={roof} />
+      <rect x="15" y="23.4" width="34" height="15" fill={wall} />
+      {/* domed centre pavilion */}
+      <rect x="27" y="15.6" width="10" height="8" fill={wall} />
+      <path d="M27.6 15.8 Q32 9.4 36.4 15.8 Z" fill={roof} />
+      <rect x="31.2" y="9.6" width="1.6" height="1.6" fill={win} />
+      {/* windows */}
+      <g fill={win}>
+        {[8, 11.4, 51, 54.4].map((x) => (
+          <g key={x}>
+            <rect x={x} y="22" width="1.6" height="2.8" rx="0.8" />
+            <rect x={x} y="27.4" width="1.6" height="2.8" rx="0.8" />
+            <rect x={x} y="32.8" width="1.6" height="2.8" rx="0.8" />
+          </g>
+        ))}
+        {[17, 20, 23, 39.4, 42.4, 45.4].map((x) => (
+          <g key={x}>
+            <rect x={x} y="26" width="1.6" height="2.8" rx="0.8" />
+            <rect x={x} y="31.4" width="1.6" height="2.8" rx="0.8" />
+          </g>
+        ))}
+      </g>
+      {/* the glass pyramid */}
+      <path d="M17.6 38.6 L32 18.6 L46.4 38.6 Z" fill="#9db4da" />
+      <path d="M27.4 25 L36.6 25 M22.8 31.6 L41.2 31.6 M24.8 38.6 L36.6 25 M39.2 38.6 L27.4 25 M32 38.6 L41.2 31.6 M32 38.6 L22.8 31.6" fill="none" stroke="#e8f0fa" strokeWidth="0.75" strokeLinecap="round" />
+      <path d="M28.8 38.6 L32 35.2 L35.2 38.6 Z" fill="#3c4357" />
+      {/* the ground: one ink line */}
+      <path d="M2.5 39 Q20 38.2 32 38.8 T61.5 38.6" {...stroke} strokeWidth={2.2} />
+    </Svg>
+  );
+}
+
 /** Hand-drawn underline under a headline. `draw`: it draws itself once, left to right. */
 export function UnderlineDoodle(p: DoodleProps & { draw?: boolean }) {
   const { draw, ...rest } = p;

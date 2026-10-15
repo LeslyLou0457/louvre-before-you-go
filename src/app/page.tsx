@@ -2,7 +2,7 @@ import Link from "next/link";
 import StickerBook from "@/components/StickerBook";
 import TabBar, { TAB_BAR_SPACE } from "@/components/TabBar";
 import TrailCard from "@/components/TrailCard";
-import { StarDoodle, UnderlineDoodle } from "@/doodles";
+import { LouvreDoodle, UnderlineDoodle } from "@/doodles";
 import { formatDate } from "@/lib/book";
 import { getBook } from "@/lib/catalogue";
 import { getChallenge } from "@/lib/challenge";
@@ -37,7 +37,7 @@ export default function Cover() {
               Before You Go
             </h1>
           </div>
-          <StarDoodle className="h-12 w-12 shrink-0" />
+          <LouvreDoodle className="h-12 w-16 shrink-0" />
         </div>
         <UnderlineDoodle className="mt-1 h-3 w-48" />
         <p className="mt-3 text-[16.5px] leading-[1.6] text-[#3d3a35]">
