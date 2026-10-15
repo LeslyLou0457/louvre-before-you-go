@@ -36,6 +36,6 @@ For a new artwork, put its photo at the path in its JSON's `artwork.image`, unde
 Every doodle and every artist head is a placeholder in `src/doodles/`:
 
 - `src/doodles/index.tsx`: buttons' icons, route line, stars, underline.
-- `src/doodles/avatars.tsx`: flat painted heads in Leonardo's style (the artists, and Lesly, the young museum guide, avatar `guide`), one per `avatar` id used in `speakers`, each with `eyes`, `mouth-closed` and `mouth-open` layers. A new id must also be added to `src/lib/avatar-ids.ts`; `npm run check-content` fails a speaker whose avatar has no drawing.
+- `src/doodles/avatars.tsx`: flat painted heads drawn Leonardo's way, just a head with its hair and beard (the artists, and Lesly, the young museum guide, avatar `guide`), one per `avatar` id used in `speakers`, each with `eyes`, `mouth-closed` and `mouth-open` layers. A new id must also be added to `src/lib/avatar-ids.ts`; `npm run check-content` fails a speaker whose avatar has no drawing.
 
 Replace the shapes inside a component with the hand-drawn SVG and keep its name; nothing else needs to change.

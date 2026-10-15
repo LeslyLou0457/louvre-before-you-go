@@ -6,29 +6,31 @@
 // flat heads typed by hand, not portraits. When a person's hand-drawn SVG
 // arrives, replace the shapes for that id and keep the id.
 //
-// The style standard is Leonardo's head (the product owner's choice,
-// 15 Oct 2026). Every head follows it:
-// - Flat painted blocks of colour, no outlines, features as a few small dark
-//   marks (PRODUCT.md "Design"). The ink line belongs to the frame (the
-//   hand-drawn circle), never to the head.
-// - One geometry on the 64×64 canvas: face ellipse at (32, 28), 13 × 14;
-//   eyes at y 26, 11 apart; a playful coloured nose at (32, 31); the mouth
-//   just under it, at y ≈ 37.5. Below the face, a beard or the shoulders.
-// - Each artist gets one nose colour of their own and only documented
-//   features (hair, beard, clothes), drawn simply:
-//   leonardo   grey hair and a long beard, as in the portraits of him in
-//              old age (Melzi's profile drawing, the Turin red-chalk head);
-//   delacroix  dark hair with side whiskers, a thin moustache, a high white
-//              collar and cravat, dark coat and the green waistcoat of his
-//              Louvre self-portrait (c. 1837);
-//   gericault  chestnut curls and side whiskers, clean-shaven, an open white
-//              shirt collar under a dark coat (the Romantic portraits of him);
-//   veronese   balding with dark hair at the sides, a dark full beard and
-//              dark clothes, as in his presumed self-portraits (and the bald,
-//              bearded player in white that tradition names as him);
-//   guide      Lesly, the young museum guide who narrates works whose maker
-//              is unknown or left no documented words: a kid with a bob, a
-//              hair clip, rosy cheeks, and a lanyard with a guide's badge.
+// The style follows the product owner's choices (15 Oct 2026):
+// - Leonardo's way: just a head, no neck, shoulders or clothes. Who it is
+//   comes from personal features only: hairstyle, beard, moustache (and, for
+//   later speakers, glasses or a hat), from documented appearance.
+// - Cute and round: a round face, round eyes with a small highlight, soft
+//   blush, a small smile; no coloured nose (only a faint skin-tone dot).
+// - One soft, warm palette that sits on the beige page and stage: warm skin
+//   tones, muted greys and browns for hair. Flat blocks of colour, no
+//   outlines (PRODUCT.md "Design"); the ink line belongs to the frame.
+// - One geometry on the 64×64 canvas: face at (32, 30), about 14 × 14.5;
+//   eyes at y 30, 11 apart; blush at y 34.5; mouth at y ≈ 39–42.
+//   leonardo   long grey hair and a big soft beard, as in the portraits of
+//              him in old age (Melzi's profile drawing, the Turin red-chalk head);
+//   delacroix  dark hair swept up, side whiskers and a thin moustache, as in
+//              his self-portraits;
+//   gericault  chestnut curls and side whiskers, clean-shaven, as in the
+//              portraits of him;
+//   veronese   balding with dark hair at the sides and a dark full beard, as in
+//              his presumed self-portraits (and the bald, bearded player in
+//              white that tradition names as him);
+//   guide      Lesly, the young museum guide who narrates works whose maker is
+//              unknown or left no documented words: long soft waves in a low
+//              ponytail with a baby-blue ribbon, lashes, rosy cheeks, and a
+//              baby-blue lanyard with a guide's badge (the one head that shows
+//              a little neck, so the badge has somewhere to hang).
 //
 // Layers (PRODUCT.md "Motion"; the full contract for the illustrator is in
 // the project files, animation/PLAN.md §4). Motion moves boxes and named
@@ -47,7 +49,10 @@ import type { AvatarId } from "@/lib/avatar-ids";
 import type { Speaker } from "@/lib/types";
 
 const INK = "#1f1f1f";
-const TONGUE = "#e8836b";
+const MOUTH = "#3a2522";
+const TONGUE = "#ef8f86";
+const BLUSH = "#f3a8a0";
+const BABY_BLUE = "#a8d2f0";
 
 type Drawing = {
   head: ReactNode;
@@ -56,159 +61,160 @@ type Drawing = {
   mouthOpen: ReactNode;
 };
 
-/** Two dot eyes on the standard line. */
-const eyes = (y = 26, r = 1.7, dx = 5.5) => (
+/** Two round eyes with a small highlight. */
+const eyes = (y = 30, dx = 5.5, r = 2) => (
   <>
     <circle cx={32 - dx} cy={y} r={r} fill={INK} />
     <circle cx={32 + dx} cy={y} r={r} fill={INK} />
+    <circle cx={32 - dx + 0.7} cy={y - 0.7} r={0.65} fill="#fff" />
+    <circle cx={32 + dx + 0.7} cy={y - 0.7} r={0.65} fill="#fff" />
   </>
 );
 
-/** A closed mouth: one short dark mark. */
-const closed = (y: number, w = 5.2) => <rect x={32 - w / 2} y={y} width={w} height={1.5} rx={0.75} fill={INK} />;
+/** Soft blush and a faint skin-tone nose: the only marks on the face besides eyes and mouth. */
+const cheeks = (nose: string, y = 34.5, dx = 8.2) => (
+  <>
+    <ellipse cx={32 - dx} cy={y} rx="2.6" ry="1.7" fill={BLUSH} />
+    <ellipse cx={32 + dx} cy={y} rx="2.6" ry="1.7" fill={BLUSH} />
+    <ellipse cx="32" cy={y - 0.4} rx="1.3" ry="0.9" fill={nose} />
+  </>
+);
 
-/** An open mouth: a small dark "D" with a hint of tongue. */
+/** A closed mouth: a small smile. */
+const smile = (y: number, w = 5) => (
+  <path d={`M${32 - w / 2} ${y} Q32 ${y + 2.6} ${32 + w / 2} ${y} Q32 ${y + 1.3} ${32 - w / 2} ${y} Z`} fill={MOUTH} />
+);
+
+/** An open mouth: a small round "D" with a hint of tongue. */
 const open = (y: number) => (
   <>
-    <path d={`M28.8 ${y} Q32 ${y - 0.4} 35.2 ${y} Q34.9 ${y + 4.4} 32 ${y + 4.4} Q29.1 ${y + 4.4} 28.8 ${y} Z`} fill={INK} />
-    <ellipse cx="32" cy={y + 3.3} rx="1.7" ry="0.85" fill={TONGUE} />
-  </>
-);
-
-/** Neck and shoulders, behind the face. */
-const bust = (skin: string, cloth: string) => (
-  <>
-    <path d="M27 38 L37 38 L37.5 48 L26.5 48 Z" fill={skin} />
-    <path d="M7 64 Q8 50 25 46.5 L39 46.5 Q56 50 57 64 Z" fill={cloth} />
+    <path d={`M29 ${y} Q32 ${y - 0.4} 35 ${y} Q34.7 ${y + 4.2} 32 ${y + 4.2} Q29.3 ${y + 4.2} 29 ${y} Z`} fill={MOUTH} />
+    <ellipse cx="32" cy={y + 3.1} rx="1.6" ry="0.85" fill={TONGUE} />
   </>
 );
 
 // All drawings share a 64×64 canvas, centred in the circle.
 const AVATARS: Record<AvatarId, Drawing> = {
-  // The standard. Unchanged except for the mouth, which now opens in the gap
-  // between the nose and the beard.
   leonardo: {
     head: (
       <>
-        <ellipse cx="32" cy="28" rx="13" ry="14" fill="#f4a7b9" />
-        <path d="M18 20 Q32 7 46 20 L46 25 Q32 16 18 25 Z" fill="#8c8f9b" />
-        <path d="M19 31 Q21 56 32 58 Q43 56 45 31 Q39 40 32 40 Q25 40 19 31 Z" fill="#d9d6cf" />
-        <ellipse cx="32" cy="31" rx="3" ry="4.6" fill="#f08a3c" />
+        {/* long hair, behind the face */}
+        <path d="M16.5 31 Q15 14 32 13.5 Q49 14 47.5 31 L48.5 45 Q44.5 49 41 44 L23 44 Q19.5 49 15.5 45 Z" fill="#b7b1ad" />
+        <ellipse cx="32" cy="30" rx="14" ry="14.5" fill="#f6cbb7" />
+        <path d="M18 26.5 Q18.5 14.5 32 14.5 Q45.5 14.5 46 26.5 Q40.5 20.5 32 21 Q23.5 20.5 18 26.5 Z" fill="#b7b1ad" />
+        {cheeks("#e8ae98")}
+        {/* big soft beard and moustache */}
+        <path d="M18.4 34.5 Q18 51 25 55.5 Q32 60 39 55.5 Q46 51 45.6 34.5 Q42.5 41 37.5 41.6 Q34.5 40.4 32 41.8 Q29.5 40.4 26.5 41.6 Q21.5 41 18.4 34.5 Z" fill="#e2ddd7" />
+        <path d="M26 40.6 Q32 36.8 38 40.6 Q35 41.8 32 40.2 Q29 41.8 26 40.6 Z" fill="#cfc9c2" />
       </>
     ),
     eyes: eyes(),
-    mouthClosed: closed(37.4),
-    mouthOpen: open(36.9),
+    mouthClosed: smile(42.4, 4.6),
+    mouthOpen: open(42),
   },
   delacroix: {
     head: (
       <>
-        {bust("#e9b08e", "#2b2e3b")}
-        {/* green waistcoat, white high collar, black cravat */}
-        <path d="M26 46.5 L32 60 L38 46.5 Z" fill="#4f8a4a" />
-        <path d="M26.5 45.5 L32 52 L37.5 45.5 L36.2 42.8 L32 47.6 L27.8 42.8 Z" fill="#fffdf8" />
-        <path d="M28.4 47.4 Q32 49.6 35.6 47.4 L34.8 50.4 Q32 49.2 29.2 50.4 Z" fill="#1d1b1a" />
-        <ellipse cx="32" cy="28" rx="13" ry="14" fill="#f6c6a8" />
-        {/* dark hair, parted to one side, and side whiskers */}
-        <path d="M18.2 26 Q16.5 11.5 31 11 Q46.5 10.5 46 25 Q43.5 18.5 37 17.5 Q30.5 16 25 18.5 Q20.5 20.5 18.2 26 Z" fill="#241f1c" />
-        <path d="M18.4 23 L21.6 23 L21.8 35.5 Q19.4 33.5 18.8 30 Z M45.6 23 L42.4 23 L42.2 35.5 Q44.6 33.5 45.2 30 Z" fill="#241f1c" />
+        <ellipse cx="32" cy="30" rx="14" ry="14.5" fill="#f4c6ad" />
+        {/* dark hair swept up, side whiskers */}
+        <path d="M17.6 29 Q15 13 31 12.4 Q48 12.4 46.6 28 Q44.2 20.6 38 19.6 Q31 17.6 25 21 Q20.2 23.6 17.6 29 Z" fill="#4b3b34" />
+        <ellipse cx="27.5" cy="15.6" rx="8.4" ry="4.6" fill="#4b3b34" />
+        <path d="M17.8 25 L21.6 25 L21.8 37.5 Q18.8 35.5 18.2 31.5 Z M46.2 25 L42.4 25 L42.2 37.5 Q45.2 35.5 45.8 31.5 Z" fill="#4b3b34" />
+        {cheeks("#e6aa92", 34.5, 7.6)}
         {/* thin moustache */}
-        <path d="M27.4 37 Q32 34.6 36.6 37 Q34.2 37.7 32 36.6 Q29.8 37.7 27.4 37 Z" fill="#241f1c" />
-        <ellipse cx="32" cy="31" rx="3" ry="4.6" fill="#3f6fd8" />
+        <path d="M27.4 39 Q32 36.6 36.6 39 Q34.2 39.8 32 38.7 Q29.8 39.8 27.4 39 Z" fill="#4b3b34" />
       </>
     ),
     eyes: eyes(),
-    mouthClosed: closed(38.4, 4.6),
-    mouthOpen: open(38.1),
+    mouthClosed: smile(40.6, 4.4),
+    mouthOpen: open(40.3),
   },
   gericault: {
     head: (
       <>
-        {bust("#edbfa9", "#3b3631")}
-        {/* open white shirt collar, no cravat */}
-        <path d="M24.5 45.5 L32 57 L39.5 45.5 L36.5 44 L32 51 L27.5 44 Z" fill="#fffdf8" />
-        <path d="M27.5 44 L32 51 L36.5 44 Z" fill="#edbfa9" />
-        <ellipse cx="32" cy="28" rx="13" ry="14" fill="#f9d3c0" />
+        <ellipse cx="32" cy="30" rx="14" ry="14.5" fill="#f8d2be" />
         {/* chestnut curls and side whiskers */}
-        <g fill="#7a4a2a">
-          <circle cx="20.5" cy="20" r="5.8" />
-          <circle cx="25.5" cy="14.8" r="6.2" />
-          <circle cx="32" cy="12.6" r="6.4" />
-          <circle cx="38.5" cy="14.8" r="6.2" />
-          <circle cx="43.5" cy="20" r="5.8" />
-          <circle cx="28.2" cy="19.4" r="3" />
-          <circle cx="35.6" cy="19" r="2.8" />
-          <path d="M18.6 23 L22 23 L22.2 37 Q19.6 35 19 31 Z M45.4 23 L42 23 L41.8 37 Q44.4 35 45 31 Z" />
+        <g fill="#9a6a4c">
+          <circle cx="19.6" cy="22.4" r="5.4" />
+          <circle cx="23.6" cy="16.6" r="5.8" />
+          <circle cx="30" cy="13.8" r="6" />
+          <circle cx="36.6" cy="14.4" r="5.8" />
+          <circle cx="42.4" cy="18" r="5.6" />
+          <circle cx="45" cy="23.6" r="4.6" />
+          <circle cx="27.4" cy="20.4" r="3.2" />
+          <circle cx="34.6" cy="20" r="3" />
+          <path d="M17.8 25 L21.8 25 L22 37.5 Q19 35.5 18.4 31.5 Z M46.2 25 L42.2 25 L42 37.5 Q45 35.5 45.6 31.5 Z" />
         </g>
-        <ellipse cx="32" cy="31" rx="3" ry="4.6" fill="#3fa37a" />
+        {cheeks("#ebb39c", 34.5, 7.6)}
       </>
     ),
     eyes: eyes(),
-    mouthClosed: closed(37.4),
-    mouthOpen: open(36.9),
+    mouthClosed: smile(38.8),
+    mouthOpen: open(38.4),
   },
   veronese: {
     head: (
       <>
-        {bust("#e8a888", "#232227")}
-        {/* a narrow white collar at the neck of his dark clothes */}
-        <path d="M24.6 46.4 Q32 50.4 39.4 46.4 L40.2 48.4 Q32 52.8 23.8 48.4 Z" fill="#fffdf8" />
-        <ellipse cx="32" cy="28" rx="13" ry="14" fill="#f7b89a" />
-        {/* balding: hair only at the sides */}
-        <path d="M18.6 31 Q17.4 21 21.8 17 Q21 23.5 22.6 31 Z M45.4 31 Q46.6 21 42.2 17 Q43 23.5 41.4 31 Z" fill="#3a2a20" />
+        <ellipse cx="32" cy="30" rx="14" ry="14.5" fill="#f2bfa3" />
+        {/* balding: soft tufts at the sides */}
+        <path d="M18 32 Q16.4 22 21.6 17.6 Q22.6 20 21.4 23 Q23.4 27 22.4 32 Z M46 32 Q47.6 22 42.4 17.6 Q41.4 20 42.6 23 Q40.6 27 41.6 32 Z" fill="#5b4336" />
+        {cheeks("#e2a68b", 34.2, 7.8)}
         {/* dark full beard and moustache */}
-        <path d="M19 30 Q19.5 49 32 52.5 Q44.5 49 45 30 Q41 39 36 39.6 Q32 40.4 28 39.6 Q23 39 19 30 Z" fill="#3a2a20" />
-        <path d="M27 37 Q32 34.6 37 37 Q34.5 37.8 32 36.8 Q29.5 37.8 27 37 Z" fill="#3a2a20" />
-        <ellipse cx="32" cy="31" rx="3" ry="4.6" fill="#7b62c9" />
+        <path d="M18.4 33.5 Q18 50 32 54 Q46 50 45.6 33.5 Q42.4 41 37.4 41.6 Q32 43.2 26.6 41.6 Q21.6 41 18.4 33.5 Z" fill="#5b4336" />
+        <path d="M27 39.2 Q32 36.6 37 39.2 Q34.5 40 32 38.9 Q29.5 40 27 39.2 Z" fill="#5b4336" />
       </>
     ),
     eyes: eyes(),
-    mouthClosed: closed(38.1, 4.6),
-    mouthOpen: open(37.9),
+    mouthClosed: smile(40.2, 4.4),
+    mouthOpen: open(39.9),
   },
-  // Lesly, the young museum guide: same style, a child's proportions (rounder
-  // face, bigger eyes, narrower shoulders), and a lanyard with a guide's badge.
+  // Lesly, the young museum guide: elegant and sweet, with baby blue as her colour.
   guide: {
     head: (
       <>
-        {/* bob, behind the face */}
-        <path d="M17 38 Q14 13 32 12.2 Q50 13 47 38 Q45 40.5 42 39.5 L22 39.5 Q19 40.5 17 38 Z" fill="#4a2f25" />
-        <path d="M28 38 L36 38 L36.4 46 L27.6 46 Z" fill="#efae90" />
-        <path d="M10 64 Q11 50 25 46 L39 46 Q53 50 54 64 Z" fill="#2f9e8f" />
-        {/* lanyard and badge */}
-        <path d="M26.2 46.3 L28.2 45.9 L32.6 53 L31 53.6 Z M37.8 46.3 L35.8 45.9 L31.4 53 L33 53.6 Z" fill="#d9483b" />
-        <rect x="27.8" y="52.4" width="8.4" height="6.6" rx="0.8" fill="#fffdf8" />
-        <rect x="27.8" y="52.4" width="8.4" height="1.9" fill="#f2c14e" />
-        <rect x="29.4" y="55.6" width="5.2" height="0.9" fill={INK} />
-        <rect x="29.4" y="57.2" width="3.4" height="0.9" fill={INK} />
-        <ellipse cx="32" cy="28.5" rx="13.5" ry="13.5" fill="#fbc3a6" />
-        {/* fringe and hair clip */}
-        <path d="M18.6 25 Q18.6 13.4 32 13.3 Q45.4 13.4 45.4 25 Q41 21.8 36.4 22.4 Q33.2 20.4 30 22 Q24 20.8 18.6 25 Z" fill="#4a2f25" />
-        <rect x="38.4" y="17.6" width="6.4" height="2.6" rx="1.3" fill="#f2c14e" transform="rotate(-22 41.6 18.9)" />
-        {/* rosy cheeks */}
-        <circle cx="23.6" cy="32.6" r="2.4" fill="#f4978e" />
-        <circle cx="40.4" cy="32.6" r="2.4" fill="#f4978e" />
-        <ellipse cx="32" cy="31.4" rx="2.4" ry="3.2" fill="#e8836b" />
+        {/* long soft waves, behind the face and neck */}
+        <path d="M16 30 Q15 12.5 32 12.4 Q49 12.5 48 30 Q50 37 47.6 42 Q50.4 47.6 46.8 52 Q44.4 54.4 42.6 51.6 Q41.4 48 42 44 L22 44 Q22.6 48 21.4 51.6 Q19.6 54.4 17.2 52 Q13.6 47.6 16.4 42 Q14 37 16 30 Z" fill="#8a5c45" />
+        {/* a little neck, with the baby-blue lanyard and badge */}
+        <path d="M28 41 L36 41 L36.3 49.5 L27.7 49.5 Z" fill="#f2c2ac" />
+        <path d="M27.8 42.6 L29.4 42.2 L32.8 48.8 L31.4 49.4 Z M36.2 42.6 L34.6 42.2 L31.2 48.8 L32.6 49.4 Z" fill={BABY_BLUE} />
+        <rect x="27.4" y="48.2" width="9.2" height="7.8" rx="1.6" fill={BABY_BLUE} />
+        <rect x="28.5" y="50.4" width="7" height="4.6" rx="0.8" fill="#fffdf8" />
+        <rect x="29.7" y="52.2" width="4.6" height="1" rx="0.5" fill="#7d8796" />
+        <ellipse cx="32" cy="30.5" rx="13.4" ry="14" fill="#fad3c2" />
+        {/* side-parted waves over the forehead */}
+        <path d="M18.4 30 Q16.6 14.6 31 13.6 Q46.4 13.2 46 28 Q43 20.6 37.6 19.4 Q33 22.6 26.6 22.4 Q21.6 23.6 18.4 30 Z" fill="#8a5c45" />
+        {/* baby-blue ribbon */}
+        <path d="M42 15.4 Q46.4 10.6 48.4 14.2 Q47.8 17.4 43.6 17.4 Z M43.4 17.6 Q47.6 19.6 46.4 22.8 Q43.4 22.8 42.4 18.6 Z" fill={BABY_BLUE} />
+        <circle cx="43" cy="17.2" r="1.6" fill="#86bde6" />
+        {cheeks("#eeb7a2", 35, 7.8)}
       </>
     ),
-    eyes: eyes(27, 2, 5.2),
-    mouthClosed: <path d="M28.8 36.4 Q32 40.2 35.2 36.4 Q32 38.4 28.8 36.4 Z" fill={INK} />,
-    mouthOpen: open(36.3),
+    eyes: (
+      <>
+        <ellipse cx="26.6" cy="30.4" rx="2" ry="2.3" fill={INK} />
+        <ellipse cx="37.4" cy="30.4" rx="2" ry="2.3" fill={INK} />
+        <circle cx="27.3" cy="29.6" r="0.7" fill="#fff" />
+        <circle cx="38.1" cy="29.6" r="0.7" fill="#fff" />
+        {/* lashes */}
+        <path d="M24.8 29.6 Q23.2 29.2 22.6 27.8 Q24 28.7 25.2 28.8 Z M25.6 28.5 Q24.7 27.6 24.7 26.4 Q25.6 27.5 26.4 27.9 Z M39.2 29.6 Q40.8 29.2 41.4 27.8 Q40 28.7 38.8 28.8 Z M38.4 28.5 Q39.3 27.6 39.3 26.4 Q38.4 27.5 37.6 27.9 Z" fill={INK} />
+      </>
+    ),
+    mouthClosed: smile(38.6, 5.2),
+    mouthOpen: open(38.2),
   },
 };
 
-/** For a speaker whose avatar has no drawing yet: a plain painted face on the standard geometry. */
+/** For a speaker whose avatar has no drawing yet: a plain face on the standard geometry. */
 const GENERIC: Drawing = {
   head: (
     <>
-      {bust("#e8949f", "#8c8f9b")}
-      <ellipse cx="32" cy="28" rx="13" ry="14" fill="#f4a7b9" />
-      <ellipse cx="32" cy="31" rx="3" ry="4.6" fill="#e8836b" />
+      <ellipse cx="32" cy="30" rx="14" ry="14.5" fill="#f6cbb7" />
+      {cheeks("#e8ae98")}
     </>
   ),
   eyes: eyes(),
-  mouthClosed: closed(37.4),
-  mouthOpen: open(36.9),
+  mouthClosed: smile(39),
+  mouthOpen: open(38.6),
 };
 
 const CIRCLE = "M32 3.5 Q59.5 3 60.5 32 Q60 60.5 32 60.5 Q3.5 60.8 3.5 32 Q3.2 3.8 32 3.5 Z";
