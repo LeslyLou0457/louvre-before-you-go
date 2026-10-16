@@ -1,0 +1,355 @@
+{
+  "artworkId": "oath-of-the-horatii",
+  "zoomImage": {
+    "file": "Le Serment des Horaces - Jacques-Louis David - Musée du Louvre Peintures INV 3692 ; MR 1432.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
+    "width": 10051,
+    "height": 7794,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/oath-of-the-horatii/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "oath-of-the-horatii-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: a signature and a silence",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.002,
+            "y": 0.905,
+            "w": 0.1,
+            "h": 0.07,
+            "label": "The stone floor at the bottom left corner",
+            "image": "/images/challenge/oath-of-the-horatii/c1.jpg"
+          },
+          "text": "Level one: David went back to Rome to paint it. Now zoom into the bottom left corner, on the stone floor: there's writing.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.002,
+            "y": 0.905,
+            "w": 0.1,
+            "h": 0.07,
+            "label": "The stone floor at the bottom left corner",
+            "image": "/images/challenge/oath-of-the-horatii/c1.jpg"
+          },
+          "text": "What place and year does David's inscription give?",
+          "choices": [
+            {
+              "label": "Rome, 1785",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Rome, 1784",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Paris, 1785",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record INV 3692, 'Le serment des Horaces, entre les mains de leur père' (inscription and history; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010062239"
+            },
+            {
+              "title": "Barthélémy Jobert, 'Le Serment des Horaces (J. L. David)', Encyclopædia Universalis (our translations)",
+              "url": "https://www.universalis.fr/encyclopedie/le-serment-des-horaces/"
+            },
+            {
+              "title": "The National Gallery, London, 'Jacques-Louis David' (artist page)",
+              "url": "https://www.nationalgallery.org.uk/artists/jacques-louis-david"
+            },
+            {
+              "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. V (our translations)",
+              "url": "https://www.gutenberg.org/ebooks/31441"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Rome, 1784, says the canvas; the Louvre's history says finished in July 1785. Why, nobody knows."
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Right city, but read the numerals again.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Louvre's history says he finished it in July 1785, and London's National Gallery dates it 1785.",
+            "truth": "The inscription reads 'L. David faciebat ROMAE anno MDCCLXXXIV': David was making it in Rome, in 1784.",
+            "evidence": "Louvre record: the inscription, painted lower left. Jobert (Encyclopædia Universalis) also dates the picture 1784."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes: 'L. David faciebat ROMAE anno MDCCLXXXIV', David was making it in Rome in the year 1784. MDCCLXXXIV is 1784 in Roman numerals.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Paris saw it in 1785, but it wasn't made there.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It triumphed at the Paris Salon of 1785, where most people first heard of it.",
+            "truth": "David painted it in Rome, and the inscription says so: ROMAE, in Rome, with the year 1784.",
+            "evidence": "Louvre record: the inscription, painted lower left. National Gallery and Jobert: David went back to Rome to paint it, 1784–85."
+          }
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.6,
+            "y": 0.55,
+            "w": 0.4,
+            "h": 0.38,
+            "label": "The women and children on the right",
+            "image": "/images/challenge/oath-of-the-horatii/c2.jpg"
+          },
+          "text": "Level one: the women belong to both families. Now zoom in on them, on the right, while the men swear on the left.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.6,
+            "y": 0.55,
+            "w": 0.4,
+            "h": 0.38,
+            "label": "The women and children on the right",
+            "image": "/images/challenge/oath-of-the-horatii/c2.jpg"
+          },
+          "text": "What are the women doing while the men swear?",
+          "choices": [
+            {
+              "label": "Watching the swords",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Slumped in grief",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "Begging the men to stop",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Toledo Museum of Art, 'The Oath of the Horatii', 1786, Jacques-Louis David (its replica, 'close to the original'), description on Google Arts & Culture",
+              "url": "https://artsandculture.google.com/asset/the-oath-of-the-horatii/pQHdi199vQiPkw"
+            },
+            {
+              "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. V (our translations)",
+              "url": "https://www.gutenberg.org/ebooks/31441"
+            },
+            {
+              "title": "Barthélémy Jobert, 'Le Serment des Horaces (J. L. David)', Encyclopædia Universalis (our translations)",
+              "url": "https://www.universalis.fr/encyclopedie/le-serment-des-horaces/"
+            },
+            {
+              "title": "Utpictura18, Aix-Marseille University, notice 013608, 'Le serment des Horaces - David' (our translations)",
+              "url": "https://utpictura18.univ-amu.fr/notice/13608-serment-horaces-david"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Taut men on the left, women slumped in grief on the right: two groups, two feelings."
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Look at their eyes: none is on the swords.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The raised swords are the centre of the picture, and the men all reach towards them.",
+            "truth": "The women look down or close their eyes, leaning together: Toledo's museum calls them 'slumped in grief and resignation'.",
+            "evidence": "Toledo Museum of Art, on its replica. Delécluze (1855), quoting a critic: the 'fear and anguish' of 'a mother, a beloved and children'."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. Toledo's museum calls them 'slumped in grief and resignation'; a critic quoted by Delécluze saw 'fear and anguish'. Not one of them looks at the swords.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Not here: they sit apart, already grieving.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "With the men about to fight to the death, you'd expect wives and sisters to try to stop them.",
+            "truth": "They sit apart from the men, slumped and still: in Toledo's words, 'grief and resignation', not protest.",
+            "evidence": "Toledo Museum of Art. Jobert: the men on one side, the women and children on the other, in two separate groups."
+          }
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n3",
+          "q4",
+          "b4b"
+        ],
+        "concept": "Painted in Rome: the place and year David wrote on the canvas, against the Louvre's own July 1785"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "David's inscription at lower left says he made it in Rome in 1784, while the Louvre's history has it finished in July 1785 and London dates it 1785; why he wrote 1784 is unknown.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record INV 3692, 'Le serment des Horaces, entre les mains de leur père' (inscription and history; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010062239",
+          "quote": "Signature : ; \"L. David faciebat/ ROMAE anno/ MDCCLXXXIV.\" (peint en bas à gauche)",
+          "supports": "Our translation: signature 'L. David was making [it] in Rome in the year 1784', painted lower left. Places the inscription in this corner.",
+          "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026; also saved in the research folder, 15 Oct 2026"
+        },
+        {
+          "title": "Barthélémy Jobert, 'Le Serment des Horaces (J. L. David)', Encyclopædia Universalis (our translations)",
+          "url": "https://www.universalis.fr/encyclopedie/le-serment-des-horaces/",
+          "quote": "il fit le choix de revenir à Rome pour peindre afin de se retremper dans l'inspiration antique, et il y passa près d'un an à compter de l'automne 1784",
+          "supports": "Our translation: he chose to return to Rome to paint, and spent nearly a year there from autumn 1784. Jobert dates the picture 'Le Serment des Horaces (1784)'.",
+          "readVia": "Saved source text in the research folder (raw HTML, visible text), 15 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record INV 3692 (history; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010062239",
+            "quote": "peint à Rome probablement durant le premier semestre de l'année 1785 et achevé en juillet 1785",
+            "supports": "Our translation: painted in Rome probably during the first half of 1785 and finished in July 1785.",
+            "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026"
+          },
+          {
+            "title": "The National Gallery, London, 'Jacques-Louis David' (artist page)",
+            "url": "https://www.nationalgallery.org.uk/artists/jacques-louis-david",
+            "quote": "'The Oath of the Horatii' (Paris, Louvre, 1785)",
+            "supports": "London dates the picture 1785.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. V (our translations)",
+            "url": "https://www.gutenberg.org/ebooks/31441",
+            "quote": "L'artiste en conçut la composition à Paris, et partit pour Rome où il l'exécuta. [...] revint à Paris pour y montrer son tableau, qui excita un transport universel au Salon du Louvre, à l'exposition de 1785",
+            "supports": "Our translation: he conceived the composition in Paris and left for Rome, where he executed it; he came back to Paris to show it, and it aroused universal rapture at the Salon of 1785.",
+            "readVia": "Saved source text in the research folder (Gutenberg text, verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "The National Gallery, London, 'Jacques-Louis David' (artist page)",
+            "url": "https://www.nationalgallery.org.uk/artists/jacques-louis-david",
+            "quote": "before spending the years 1775-80 in Rome, where he returned during 1784-5",
+            "supports": "He was back in Rome in 1784-85, when the picture was painted.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the inscription (the Louvre's transcription, legible in the photo) and for Rome (four independent sources). The 1784/1785 gap is a documented conflict, stated as such; why David wrote 1784 is unknown.",
+      "notes": "Ledger claims horatii-002 (inscription, Louvre record), horatii-003 (dating conflict: Louvre record and drawing record, National Gallery, Jobert), horatii-026 (Rome), horatii-030 (Salon of 1785), horatii-061 (inscription visible at lower left). The crop's label names the place only, not the answer.",
+      "quoteCheck": "2026-10-16: the Louvre quotations re-read in the live record JSON (modified 2026-08-11); the others as logged in the research ledger from the saved source texts.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 2978 rendering of Shonagon's file (the 10051 x 7794 original was refused with HTTP 429); crop checked by eye at full size: the three lines 'L. David faciebat / Roma[e] anno / MDCCLXXXIV' on the grey stone slab, a sandalled foot at the right edge. Small (384 px wide, never upscaled) but legible."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n5b",
+          "q5",
+          "b5b"
+        ],
+        "concept": "The women's group: from who they are (level) to what their bodies do (close-up)"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The women and children sit apart on the right, slumped in grief and resignation; none of them looks at the swords.",
+      "regionSources": [
+        {
+          "title": "Utpictura18, Aix-Marseille University, notice 013608, 'Le serment des Horaces - David' (our translations)",
+          "url": "https://utpictura18.univ-amu.fr/notice/13608-serment-horaces-david",
+          "quote": "Or leurs sœurs représentées à droites, sont les épouses des Curiaces.",
+          "supports": "Our translation: their sisters, shown on the right, are the wives of the Curiatii. Places the women on the right. (Text as returned by the fetch tool; the raw page refused scripts.)",
+          "readVia": "Saved fetch-tool output in the research folder, 15 Oct 2026"
+        },
+        {
+          "title": "Toledo Museum of Art, 'The Oath of the Horatii', 1786, Jacques-Louis David (its replica, 'close to the original'), description on Google Arts & Culture",
+          "url": "https://artsandculture.google.com/asset/the-oath-of-the-horatii/pQHdi199vQiPkw",
+          "quote": "Their tense stances contrast with the fluid contours of the women, slumped in grief and resignation.",
+          "supports": "The women slumped in grief and resignation, against the men's tense stances (said of Toledo's replica, which the museum calls close to the original).",
+          "readVia": "Saved source text in the research folder (raw HTML, verbatim), 15 Oct 2026"
+        },
+        {
+          "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. V (our translations)",
+          "url": "https://www.gutenberg.org/ebooks/31441",
+          "quote": "que le groupe des femmes, entièrement séparé de celui des hommes [...] la crainte et les angoisses qu'éprouvent près de ces guerriers une mère, une amante et des enfants",
+          "supports": "Our translation: the women's group, entirely separate from the men's; the fear and anguish felt beside these warriors by a mother, a beloved and children (a critic Delécluze quotes, on the Louvre picture).",
+          "readVia": "Saved source text in the research folder (Gutenberg text, verbatim), 15 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Toledo Museum of Art, 'The Oath of the Horatii', 1786 (description on Google Arts & Culture)",
+            "url": "https://artsandculture.google.com/asset/the-oath-of-the-horatii/pQHdi199vQiPkw",
+            "quote": "the women, slumped in grief and resignation",
+            "supports": "Not watching: slumped in grief. That none of them looks at the swords is our own looking, checkable in the crop.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. V (our translations)",
+            "url": "https://www.gutenberg.org/ebooks/31441",
+            "quote": "la crainte et les angoisses qu'éprouvent près de ces guerriers une mère, une amante et des enfants",
+            "supports": "Our translation: the fear and anguish of a mother, a beloved and children beside these warriors.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Toledo Museum of Art, 'The Oath of the Horatii', 1786 (description on Google Arts & Culture)",
+            "url": "https://artsandculture.google.com/asset/the-oath-of-the-horatii/pQHdi199vQiPkw",
+            "quote": "slumped in grief and resignation",
+            "supports": "Resignation, not protest.",
+            "readVia": "Saved source text in the research folder (verbatim), 15 Oct 2026"
+          },
+          {
+            "title": "Barthélémy Jobert, 'Le Serment des Horaces (J. L. David)', Encyclopædia Universalis (our translations)",
+            "url": "https://www.universalis.fr/encyclopedie/le-serment-des-horaces/",
+            "quote": "la séparation en deux groupes, les hommes d'un côté (les trois Horaces et leur père), les femmes et les enfants de l'autre",
+            "supports": "Our translation: two separate groups, the men on one side, the women and children on the other.",
+            "readVia": "Saved source text in the research folder (raw HTML, visible text), 15 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the posture (Toledo, Delécluze's quoted critic, and the photo agree); the place 'on the right' is Utpictura18's, and plain in the photo.",
+      "notes": "Ledger claims horatii-039 (Toledo, Jobert, Delécluze), horatii-006 (our looking: none looks at the swords), horatii-018 (both families, used in the level). Toledo's wording describes its replica, which it calls close to the original apart from an added distaff. The 'begging' option is a real alternative (wives and sisters of fighting men), not a sourced claim about this picture; its card states only sourced facts.",
+      "quoteCheck": "2026-10-16: quotations as logged in the research ledger from the saved Toledo, Universalis and Gutenberg texts and the Utpictura18 fetch-tool output.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 2978 rendering; crop checked by eye at full size: the older woman in a blue cloak bending over two children, the two young women leaning together with eyes closed, part of the father's red cloak at the left edge. No woman looks at the swords; one child looks out at the viewer."
+    }
+  }
+}
