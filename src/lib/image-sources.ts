@@ -1,7 +1,8 @@
 // Where each artwork photo in public/images/ comes from: its Wikimedia
 // Commons file page, where the author and licence can be checked. Paintings
 // are faithful public-domain reproductions, except The Virgin and Child with
-// Saint Anne, a CC0 photo (Wilfredor, 2024); the sculpture photos are CC0.
+// Saint Anne and The Intervention of the Sabine Women, CC0 photos (Wilfredor,
+// 2024); the sculpture photos are CC0.
 // Files were downloaded at about 2000 px on the long edge and only resized
 // or recompressed to stay light on phones (no crops, no filters).
 //
@@ -32,4 +33,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg",
   "oath-of-the-horatii":
     "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
+  "intervention-of-the-sabine-women":
+    "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
 };
