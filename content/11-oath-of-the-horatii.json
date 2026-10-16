@@ -141,9 +141,9 @@
           "text": "He took liberties with it, but it was an order.",
           "correction": {
             "kind": "near-miss",
-            "tempting": "David changed so much of what he was given that it can look like his own project.",
+            "tempting": "He chose a scene Livy never told and painted it far away in Rome, so it can look like his own project.",
             "truth": "It was a royal commission: Louis XVI ordered it through d'Angiviller, director of the King's Buildings.",
-            "evidence": "Louvre record: ordered by King Louis XVI through d'Angiviller. Toledo Museum of Art, Jobert, and David's pupil Delécluze (1855): commissioned for Louis XVI."
+            "evidence": "Louvre record: ordered by King Louis XVI through d'Angiviller. Toledo Museum of Art and Jobert: commissioned by Louis XVI. David's pupil Delécluze (1855): ordered by one of the king's ministers."
           },
           "next": "n3"
         },
