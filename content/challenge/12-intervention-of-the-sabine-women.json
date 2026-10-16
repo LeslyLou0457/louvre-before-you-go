@@ -1,0 +1,354 @@
+{
+  "artworkId": "intervention-of-the-sabine-women",
+  "zoomImage": {
+    "file": "The Intervention of the Sabine Women - David (Louvre INV 3691).jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
+    "width": 9837,
+    "height": 7396,
+    "licence": "CC0",
+    "credit": "Photo: Wilfredor, 2024, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/intervention-of-the-sabine-women/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "intervention-of-the-sabine-women-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: a sword and a standard",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.77,
+            "y": 0.35,
+            "w": 0.18,
+            "h": 0.26,
+            "label": "A grey-bearded rider among the horses on the right",
+            "image": "/images/challenge/intervention-of-the-sabine-women/c1.jpg"
+          },
+          "text": "Level one: the battle stops. Now zoom in on the right, among the horses: an old rider has his hand on his sword.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.77,
+            "y": 0.35,
+            "w": 0.18,
+            "h": 0.26,
+            "label": "A grey-bearded rider among the horses on the right",
+            "image": "/images/challenge/intervention-of-the-sabine-women/c1.jpg"
+          },
+          "text": "What is he doing with his sword?",
+          "choices": [
+            {
+              "label": "Drawing it to attack",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Putting it back in its sheath",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Handing it over to surrender",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "J. L. Jules David, Le peintre Louis David, vol. 1 (Paris, 1880), ch. VI, reprinting J.-L. David's 1799 leaflet 'Le Tableau des Sabines' (our translations)",
+              "url": "https://archive.org/details/gri_33125007941194"
+            },
+            {
+              "title": "Musée du Louvre, collection record INV 3691, 'Les Sabines' (description quoting the Luxembourg museum catalogue of 1820; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426"
+            },
+            {
+              "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. VII (our translations)",
+              "url": "https://www.gutenberg.org/ebooks/31441"
+            },
+            {
+              "title": "Livy, The History of Rome, book I, ch. 13, translated by D. Spillan (London: Bohn, 1853), Project Gutenberg",
+              "url": "https://www.gutenberg.org/ebooks/19725"
+            },
+            {
+              "title": "Plutarch, Life of Romulus, translated by John Dryden (The Internet Classics Archive, MIT)",
+              "url": "https://classics.mit.edu/Plutarch/romulus.html"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "In the middle of a battle, a commander puts his sword away: the peace has begun."
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "In a battle that's the instinct, but this blade is going in.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His fist is raised high on the hilt in the thick of a battle, as if pulling the blade out.",
+            "truth": "He is putting it away. David's leaflet calls him the general of the cavalry; the 1820 catalogue says the gesture signals the peace.",
+            "evidence": "David's 1799 leaflet; the 1820 catalogue quoted in the Louvre record; Delécluze (1855): 'the general of the cavalry putting his sword back in its sheath'."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. David's leaflet calls him the general of the cavalry, putting his sword back in its sheath; the 1820 catalogue says he signals the peace.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "The fighting is ending, but this isn't a surrender.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His head is bowed and his blade is coming down, as if he were giving up.",
+            "truth": "He is sheathing it to signal peace. In the legend, both sides make a truce and become one people.",
+            "evidence": "David's leaflet and the 1820 catalogue: he puts his sword back in its sheath, signalling peace. Livy and Plutarch: a truce, then one state."
+          }
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.72,
+            "y": 0.05,
+            "w": 0.185,
+            "h": 0.25,
+            "label": "High above the spears on the right",
+            "image": "/images/challenge/intervention-of-the-sabine-women/c2.jpg"
+          },
+          "text": "Level one: Romulus stands on the right with his Romans. Now look up, above their spears: a bundle of hay, tied to a pole.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.72,
+            "y": 0.05,
+            "w": 0.185,
+            "h": 0.25,
+            "label": "High above the spears on the right",
+            "image": "/images/challenge/intervention-of-the-sabine-women/c2.jpg"
+          },
+          "text": "Why would soldiers carry a bundle of hay on a pole?",
+          "choices": [
+            {
+              "label": "Fodder for the horses",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A standard to rally round",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "An offering to Jupiter",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record INV 3691, 'Les Sabines' (description quoting the Luxembourg museum catalogue of 1820; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426"
+            },
+            {
+              "title": "Plutarch, Life of Romulus, translated by John Dryden (The Internet Classics Archive, MIT)",
+              "url": "https://classics.mit.edu/Plutarch/romulus.html"
+            },
+            {
+              "title": "Livy, The History of Rome, book I, ch. 12, translated by D. Spillan (London: Bohn, 1853), Project Gutenberg",
+              "url": "https://www.gutenberg.org/ebooks/19725"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "David's Romans fight under one of their very first standards: a bundle of hay."
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Horses rear just below it, but it isn't for them.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Horses rear just below it, and hay is what horses eat.",
+            "truth": "It's a standard: the 1820 catalogue calls it one of the Romans' first standards, and Plutarch explains the custom.",
+            "evidence": "1820 catalogue, quoted in the Louvre record: 'one of the first standards of this people'. Plutarch: captains carried bundles of grass on poles, called manipuli."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. Plutarch says Romulus's captains each carried 'a small bundle of grass and shrubs tied to a pole', called manipuli. The 1820 catalogue calls it an early Roman standard.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Romulus does pray to Jupiter in this battle, but this isn't an offering.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In the legend, Romulus prays to Jupiter during this very battle and vows him a temple.",
+            "truth": "The hay is a military standard: Plutarch says Romulus's captains carried bundles of grass on poles, called manipuli.",
+            "evidence": "Plutarch, Life of Romulus (Dryden's translation). The 1820 catalogue, quoted in the Louvre record: 'one of the first standards' of the Romans."
+          }
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n2",
+          "q1",
+          "b1b"
+        ],
+        "concept": "The battle stops: from the women's intervention (level) to the gesture that signals the peace (close-up)"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Among the horses on the right, the general of the cavalry puts his sword back in its sheath: the gesture that signals the peace.",
+      "regionSources": [
+        {
+          "title": "J. L. Jules David, Le peintre Louis David, vol. 1 (1880), ch. VI, p. 357, reprinting J.-L. David's 1799 leaflet (our translations)",
+          "url": "https://archive.org/details/gri_33125007941194",
+          "quote": "Le général de la cavalerie remet son épée dans le fourreau",
+          "supports": "Our translation: the general of the cavalry puts his sword back in its sheath. David's own description of this figure; he is the only rider in the picture sheathing a sword, so the figure places the region.",
+          "readVia": "Internet Archive OCR text, saved in the research folder (sources/JDAVID-1880_vol1_excerpts.txt), 16 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record INV 3691, 'Les Sabines' (description field quoting the Luxembourg catalogue of 1820; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426",
+          "quote": "un vieux commandant de l'armée romaine signale la paix en remettant son sabre dans son fourreau",
+          "supports": "Our translation: an old commander of the Roman army signals the peace by putting his sabre back in its sheath. The crop shows a grey-bearded rider with a curved blade above a blue scabbard.",
+          "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026 (record modified 2026-08-11)"
+        },
+        {
+          "title": "E.-J. Delécluze, Louis David, son école et son temps. Souvenirs (Paris: Didier, 1855), ch. VII (our translations)",
+          "url": "https://www.gutenberg.org/ebooks/31441",
+          "quote": "le général de la cavalerie remettant son épée dans le fourreau",
+          "supports": "Our translation: the general of the cavalry putting his sword back in its sheath (one of the figures the public admired).",
+          "readVia": "Saved source text in the research folder (Gutenberg text, verbatim), 16 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "J. L. Jules David (1880), reprinting David's 1799 leaflet (our translation)",
+            "url": "https://archive.org/details/gri_33125007941194",
+            "quote": "Le général de la cavalerie remet son épée dans le fourreau",
+            "supports": "Our translation: he puts his sword back in its sheath, not out of it.",
+            "readVia": "Saved OCR text in the research folder, 16 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record INV 3691 (1820 catalogue; our translation)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426",
+            "quote": "signale la paix en remettant son sabre dans son fourreau",
+            "supports": "Our translation: signals the peace by putting his sabre back in its sheath.",
+            "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record INV 3691 (1820 catalogue; our translation)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426",
+            "quote": "Enfin la suspension est proclamée [...] un vieux commandant de l'armée romaine signale la paix en remettant son sabre dans son fourreau",
+            "supports": "Our translation: at last the truce is proclaimed [...] an old commander signals the peace by sheathing his sabre. A truce, not a surrender.",
+            "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026"
+          },
+          {
+            "title": "Livy, The History of Rome, book I, ch. 13, translated by D. Spillan (1853)",
+            "url": "https://www.gutenberg.org/ebooks/19725",
+            "quote": "they not only conclude a peace, but form one state out of two",
+            "supports": "In the legend the outcome is peace and union, not surrender (Plutarch agrees: the Romans and Sabines inhabit the city together).",
+            "readVia": "Saved source text in the research folder (Gutenberg text, verbatim), 16 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: three independent texts (David's leaflet, the 1820 catalogue, Delécluze) single out this gesture, and the photo shows one rider with a blade above a scabbard.",
+      "notes": "Ledger claims sabines-008 (leaflet, 1820 catalogue, Delécluze), sabines-016 (truce and union: Livy and Plutarch). Which rider he is, is our reading of the photograph (the ledger says so); no source gives left or right, but no other figure sheathes a sword. The 1820 catalogue's 'vieux commandant' and the grey beard in the crop agree. Delécluze's note that the public admired this figure is single-source and is not used on screen. The crop's label names the place only.",
+      "quoteCheck": "2026-10-16: the Louvre quotations re-read in the live record JSON (modified 2026-08-11); the leaflet, Delécluze and Livy quotations checked against the saved source texts in the research folder.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 2887 rendering of Wilfredor's file (the 9837 x 7396 original not downloaded); crop (691 x 751 px, never upscaled) checked by eye: a grey-bearded rider in a steel helmet, his raised fist on the hilt of a curved blade whose lower end is at the mouth of a blue scabbard; the horses' heads, a boy holding the brown horse and a 'ROMA' standard round him."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "n1b"
+        ],
+        "concept": "Iconography: from who is who (level) to the oldest emblem in the picture, a bundle of hay as a Roman standard"
+      },
+      "framing": "why-is-it-there",
+      "what_you_learn": "The bundle of hay on a lance above the Roman ranks is one of Rome's first standards: Plutarch says Romulus's captains carried bundles of grass on poles, called manipuli.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record INV 3691, 'Les Sabines' (description field quoting the Luxembourg catalogue of 1820; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426",
+          "quote": "Parmi les enseignes des Romains on remarque la louve, et une botte de foin, attachée à une lance, qui était une des premières enseignes de ce peuple",
+          "supports": "Our translation: among the Romans' standards one notices the wolf, and a bundle of hay tied to a lance, which was one of the first standards of this people. Places the hay among the Roman standards; it is the only bundle of hay in the picture.",
+          "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026 (record modified 2026-08-11)"
+        },
+        {
+          "title": "Plutarch, Life of Romulus, translated by John Dryden (The Internet Classics Archive, MIT)",
+          "url": "https://classics.mit.edu/Plutarch/romulus.html",
+          "quote": "every captain carrying a small bundle of grass and shrubs tied to a pole. The Latins call such bundles manipuli",
+          "supports": "The custom: bundles of grass on poles carried by Romulus's captains, called manipuli.",
+          "readVia": "Saved source text in the research folder (raw HTML, text extracted, verbatim), 16 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record INV 3691 (1820 catalogue; our translation)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065426",
+            "quote": "une botte de foin, attachée à une lance, qui était une des premières enseignes de ce peuple",
+            "supports": "Our translation: a bundle of hay tied to a lance, one of the first standards of this people. A standard, not fodder.",
+            "readVia": "Louvre record JSON (raw), re-read 16 Oct 2026"
+          },
+          {
+            "title": "Plutarch, Life of Romulus (Dryden's translation)",
+            "url": "https://classics.mit.edu/Plutarch/romulus.html",
+            "quote": "every captain carrying a small bundle of grass and shrubs tied to a pole. The Latins call such bundles manipuli",
+            "supports": "The custom of carrying bundles of grass on poles as a mark of each company.",
+            "readVia": "Saved source text in the research folder, 16 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Livy, The History of Rome, book I, ch. 12, translated by D. Spillan (1853)",
+            "url": "https://www.gutenberg.org/ebooks/19725",
+            "quote": "Here I solemnly vow to build a temple to thee as Jupiter Stator",
+            "supports": "The tempting part: in this battle Romulus prays to Jupiter and vows him a temple (Plutarch agrees: 'he prayed to Jupiter to stop the army').",
+            "readVia": "Saved source text in the research folder (Gutenberg text, verbatim), 16 Oct 2026"
+          },
+          {
+            "title": "Plutarch, Life of Romulus (Dryden's translation)",
+            "url": "https://classics.mit.edu/Plutarch/romulus.html",
+            "quote": "every captain carrying a small bundle of grass and shrubs tied to a pole. The Latins call such bundles manipuli",
+            "supports": "What the hay actually is: a company's standard, not an offering.",
+            "readVia": "Saved source text in the research folder, 16 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the meaning (the 1820 catalogue and Plutarch agree independently); the picture's standard matches the catalogue's 'bundle of hay tied to a lance'. Plutarch places the custom in Romulus's band before Rome was founded; the screen says only that his captains carried such bundles.",
+      "notes": "Ledger claims sabines-011 (1820 catalogue and Plutarch: the common core, a hay bundle on a pole as an early Roman standard), sabines-009 (our looking: the bundle over the crowd at right), sabines-010 (the catalogue places it among the Roman standards; single, used only for placement), sabines-015 (Romulus's prayer to Jupiter Stator, Livy and Plutarch). The wolf standard is cut out of the crop. The fodder and offering options are real alternatives a viewer reaches for; their cards state only sourced facts.",
+      "quoteCheck": "2026-10-16: the Louvre quotation re-read in the live record JSON (modified 2026-08-11); Plutarch and Livy checked against the saved source texts in the research folder.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 2887 rendering of Wilfredor's file; crop (710 x 722 px, never upscaled) checked by eye: a bundle of straw-coloured hay tied with red cord to a lance with a dark spear point, against the sky, the tops of two other standards at the bottom edge."
+    }
+  }
+}

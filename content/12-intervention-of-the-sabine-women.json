@@ -1,0 +1,395 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "intervention-of-the-sabine-women",
+    "title": "The Intervention of the Sabine Women",
+    "artist": "Jacques-Louis David",
+    "year": "1799",
+    "image": "/images/intervention-of-the-sabine-women.jpg",
+    "imageCredit": "Photo: Wilfredor, 2024, via Wikimedia Commons · CC0",
+    "medium": "Oil on canvas",
+    "dimensions": "385 × 522 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065426"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "intervention-of-the-sabine-women-1",
+      "order": 1,
+      "title": "The battle that stops",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "In the middle, a young woman in white throws her arms wide between two naked warriors. On the left, a bearded man raises his shield. On the right, a man in a crested helmet draws back his spear.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Before the story, just look: her arms open wide, one towards each man, right between their weapons."
+          },
+          "next": "n1b"
+        },
+        "n1b": {
+          "type": "story",
+          "text": "David's own leaflet of 1799 names them, and a catalogue of 1820 agrees: Hersilia, Romulus's wife, between Tatius, king of the Sabines, and Romulus, king of Rome, about to throw his javelin.",
+          "next": "n1c"
+        },
+        "n1c": {
+          "type": "story",
+          "text": "The legend comes from the Roman historian Livy and the Greek writer Plutarch. Rome had too few women, so Romulus held games, and at a signal the young Romans carried off the Sabine girls.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "So is this the abduction of the Sabine women?",
+          "choices": [
+            {
+              "label": "Yes, the famous abduction",
+              "next": "b1a"
+            },
+            {
+              "label": "No, a battle that came later",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "That's the part of the story everyone knows, but it isn't this moment.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The Louvre calls the picture simply Les Sabines, the Sabine women, and their legend starts with the abduction.",
+            "truth": "David painted what came after: the Sabine women, by now mothers, stopping the battle between their Sabine fathers and their Roman husbands.",
+            "evidence": "David's 1799 leaflet: Poussin had painted the abduction; he 'dared to treat the sequel' (our translation). The Louvre's exhibition page makes the same contrast with Poussin."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. In his leaflet David notes that Poussin had painted the abduction, and that he dared to paint the sequel: the women coming between the two armies. The Louvre makes the same contrast today.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "We can tell: David said so in print.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Spears, soldiers and women in distress could belong to either part of the legend.",
+            "truth": "It's the sequel: the women stopping the battle between their fathers and their husbands, not the abduction itself.",
+            "evidence": "David's 1799 leaflet, reprinted by his grandson in 1880: Poussin painted the abduction, he 'dared to treat the sequel' (our translation). The Louvre's exhibition page says the same."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "In Livy and Plutarch, the women rush between the weapons with their hair loose, begging their fathers on one side and their husbands on the other. The fighting stops, and the two peoples become one.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "See the babies? David's leaflet and the 1820 catalogue both describe them: mothers lay their children at the soldiers' feet, or lift them up among the spears.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Now the painter. Jacques-Louis David had taken an active part in the French Revolution. Then, in 1794 or 1795, he was put in prison.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Where was the idea for this picture born?",
+          "choices": [
+            {
+              "label": "In his studio in the Louvre",
+              "next": "b2a"
+            },
+            {
+              "label": "In prison",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "Nobody knows: the sources disagree",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "He did paint it there, but the idea came first.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He painted it in a studio inside the Louvre, so it's natural to think it started there.",
+            "truth": "The idea was born earlier, while he was held prisoner in the Luxembourg palace in Paris. The painting itself was done later, in the Louvre.",
+            "evidence": "Louvre record and David's pupil Delécluze (1855): conceived during his captivity in the Luxembourg; both place the studio in the Louvre."
+          },
+          "next": "n4"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. The Louvre's record and David's pupil Étienne-Jean Delécluze both say it: the idea came to him while he was held prisoner in the Luxembourg palace in Paris.",
+          "next": "n4"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "They disagree on when, not on where.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The dates really do clash: the Louvre's record, its 2025 exhibition page and Delécluze's memoir each date it differently.",
+            "truth": "On the place they agree: the idea came to David while he was held prisoner in the Luxembourg palace.",
+            "evidence": "Louvre record: born 'during David's captivity at the Luxembourg'. Delécluze (1855): 'it was in the Luxembourg that he conceived' it (our translations)."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "So a prisoner began planning a picture of a battle that stops. Out of prison, he painted it in a studio inside the Louvre.",
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "On 21 December 1799 it went on show in a room of its own, in the Louvre: the former meeting room of the Academy of Architecture. But it wasn't free.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Where did David get the idea of charging for entry?",
+          "choices": [
+            {
+              "label": "From the ancient Greeks",
+              "next": "b3a"
+            },
+            {
+              "label": "From England",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "Nobody knows",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "A fair guess for a painter of ancient heroes, but no.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The picture tells an ancient legend, so an ancient model sounds likely.",
+            "truth": "His model was modern: the paid 'exhibitions' of England, with a price at the door.",
+            "evidence": "Delécluze (1855): he had heard of English 'exhibitions' and resolved to try them in France. David's leaflet: in England the practice 'is called exhibition' (our translations)."
+          },
+          "next": "n5"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. Delécluze says David had heard of English 'exhibitions', with a price paid at the door, and decided to try them in France. His own leaflet says the practice is English.",
+          "next": "n5"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "We know: two sources point the same way.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It sounds like the kind of business detail nobody writes down.",
+            "truth": "It was written down: the model was England's paid 'exhibitions', with a price at the door.",
+            "evidence": "Delécluze (1855): he had heard of English 'exhibitions' and resolved to try them in France. David's leaflet: in England the practice 'is called exhibition' (our translations)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "England, then. For 1 franc 80 centimes you got your ticket and a printed leaflet explaining the picture. Inside the room, the painting had company.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "What stood facing the painting?",
+          "choices": [
+            {
+              "label": "Another of David's paintings",
+              "next": "b4a"
+            },
+            {
+              "label": "A large mirror",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "One did join it later, but that's not what faced it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His Bonaparte Crossing the Alps really did join the Sabines in the same paid show.",
+            "truth": "That came later. Facing the picture stood a large mirror that reflected it.",
+            "evidence": "Louvre record and Jules David, the painter's grandson (1880): a large mirror reflected it. Louvre exhibition page and Jules David: Bonaparte Crossing the Alps joined the show."
+          },
+          "next": "n6"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. The Louvre's record calls it a vast mirror; Jules David, the painter's grandson, a large cheval glass that reflected the picture.",
+          "next": "n6"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Two independent accounts tell us.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The room has changed since 1799, and David's leaflet is about the picture, not the room.",
+            "truth": "A large mirror stood before the picture and reflected it.",
+            "evidence": "Louvre record: shown 'in front of a vast mirror'. Jules David (1880): 'a large cheval glass, by reflecting it' (our translations)."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "A mirror, then, reflecting the whole picture. Why it was there, the Louvre and Jules David explain differently.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "Look again at the heroes: apart from helmets and shields, they're naked, and the horses have no bridles. The nudity was planned: David told his pupils so, and defended 'the nudity of my heroes' in his leaflet.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Many visitors were puzzled anyway. What had they come expecting?",
+          "choices": [
+            {
+              "label": "Heroes with clothes on",
+              "next": "b5a"
+            },
+            {
+              "label": "A picture of the Revolution",
+              "next": "b5b"
+            },
+            {
+              "label": "The abduction",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Maybe, but the sources point somewhere else.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "David himself expected objections to his naked heroes, and wrote a note to answer them.",
+            "truth": "Delécluze and Jules David both say many visitors came expecting the abduction, which made the scene hard to understand.",
+            "evidence": "Delécluze (1855): most expected the abduction of the Sabine women. Jules David (1880): many expected the abduction rather than the intervention (our translations)."
+          },
+          "next": "n7"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "A fair guess about a revolutionary painter, but no.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "David had taken an active part in the Revolution, and had been in prison.",
+            "truth": "What people expected was the abduction, and that made the moment David chose hard to understand.",
+            "evidence": "Delécluze (1855): most expected the abduction of the Sabine women. Jules David (1880): many expected the abduction rather than the intervention (our translations)."
+          },
+          "next": "n7"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. Delécluze says most visitors expected the abduction of the Sabine women, which got in the way of understanding the scene. Jules David says the same.",
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "So people came for an abduction and found a truce. Writing in 1880, Jules David said it was conceived 'in a spirit of appeasement and concord'. The Louvre says David was calling the French to reconcile.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Did David mean it as a call for reconciliation in France?",
+          "choices": [
+            {
+              "label": "Yes, he said so",
+              "next": "b6a"
+            },
+            {
+              "label": "No, it's only a Roman legend",
+              "next": "b6b"
+            },
+            {
+              "label": "Nobody knows for sure",
+              "next": "b6c",
+              "correct": true
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "A popular reading, but not in his own words.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Not proven",
+            "tempting": "Jules David and the Louvre both read it as a call for concord among the French.",
+            "truth": "His leaflet tells the legend, ending with Romans and Sabines who 'form no more than one people'. In the reprint we read, it never ties the story to the France of his day.",
+            "evidence": "David's 1799 leaflet, reprinted in 1880 (our translation). No statement by David in these sources links the subject to French politics."
+          },
+          "next": "n8"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "That's what his leaflet tells, but it doesn't settle the meaning.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Not settled",
+            "tempting": "His leaflet tells the ancient story, ending with two peoples becoming one.",
+            "truth": "Readings differ: Jules David and the Louvre see a call for concord among the French, and no words from David settle it either way.",
+            "evidence": "Jules David (1880): 'conceived in a spirit of appeasement and concord'. Louvre exhibition page (2025): an appeal for reconciliation among the French (our translations)."
+          },
+          "next": "n8"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Right. Jules David and the Louvre read a call for reconciliation. But David's own leaflet tells only the legend, and none of these sources has him tying it to the France of his day.",
+          "next": "n8"
+        },
+        "n8": {
+          "type": "story",
+          "text": "So: the legend's sequel, not its abduction; an idea born in prison; a paid show with a leaflet and a mirror; and a meaning still argued over. In Room 702, start with Hersilia's open arms."
+        }
+      },
+      "takeaway": "David painted the sequel, not the abduction: an idea born in prison, shown in a paid room with a leaflet and a mirror, and still read, without proof, as a call for reconciliation.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065426",
+        "https://www.louvre.fr/expositions-et-evenements/expositions/jacques-louis-david/oeuvres-en-lumiere/un-appel-a-la-reconciliation",
+        "https://archive.org/details/gri_33125007941194",
+        "https://www.gutenberg.org/ebooks/31441",
+        "https://www.gutenberg.org/ebooks/19725",
+        "https://www.thelatinlibrary.com/livy/liv.1.shtml",
+        "https://classics.mit.edu/Plutarch/romulus.html",
+        "https://agorha.inha.fr/ark:/54721/955c8e30-7e21-4711-94cc-73ecf2561383",
+        "https://www.nationalgallery.org.uk/artists/jacques-louis-david"
+      ]
+    }
+  ]
+}
