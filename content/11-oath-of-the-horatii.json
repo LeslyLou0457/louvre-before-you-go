@@ -77,7 +77,7 @@
         },
         "b1b": {
           "type": "branch",
-          "text": "Yes. In Livy the oath seals the treaty: a priest asks Jupiter to strike the Romans if they break it, as he strikes a pig, and kills the pig with a flint.",
+          "text": "Yes. In Livy, the oath sworn before the fight seals the treaty between Rome and Alba, and he describes it at length. The sons' oath to their father isn't there.",
           "next": "n2"
         },
         "b1c": {
@@ -289,14 +289,14 @@
           "correction": {
             "kind": "near-miss",
             "tempting": "The fight decides which city will rule the other, so any Roman would fear defeat.",
-            "truth": "The families are tied together: the young men were married or engaged to each other's sisters. Whichever side wins, these women lose someone.",
+            "truth": "The families are tied together: the young men were married or engaged to each other's sisters.",
             "evidence": "Toledo Museum of Art: the young men were married or betrothed to each other's sisters. Jobert: the mother, Camilla the sister and Sabina the sister-in-law."
           },
           "next": "n6"
         },
         "b5b": {
           "type": "branch",
-          "text": "Yes. The young men were married or engaged to each other's sisters. The historian Jobert names the mother, Camilla the sister and Sabina the sister-in-law. Whichever side wins, they lose someone.",
+          "text": "Yes. The young men were married or engaged to each other's sisters. The historian Jobert names the mother, Camilla the sister and Sabina the sister-in-law.",
           "next": "n6"
         },
         "b5c": {
