@@ -215,7 +215,7 @@
         },
         "n5": {
           "type": "story",
-          "text": "England, then. For 1 franc 80 centimes you got your ticket and a printed leaflet explaining the picture. Inside the room, the painting had company.",
+          "text": "England, then. A ticket cost 1 franc 80 centimes, and David had a leaflet about the picture printed. Inside the room, the painting had company.",
           "next": "q4"
         },
         "q4": {
