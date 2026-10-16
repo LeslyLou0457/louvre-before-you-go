@@ -1,0 +1,390 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "oath-of-the-horatii",
+    "title": "The Oath of the Horatii",
+    "artist": "Jacques-Louis David",
+    "year": "1784",
+    "image": "/images/oath-of-the-horatii.jpg",
+    "imageCredit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "330 × 425 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062239"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "oath-of-the-horatii-1",
+      "order": 1,
+      "title": "An oath Livy never told",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "In the middle, an old man lifts three swords. On the left, three young men in helmets stretch out their arms towards them. On the right, women and children sit with their heads bowed.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Before the story, just look: arms reaching for the swords on one side, heads bowed on the other."
+          },
+          "next": "n1b"
+        },
+        "n1b": {
+          "type": "story",
+          "text": "It's a Roman legend. Rome and its neighbour Alba agreed to settle their quarrel with one fight: three brothers on each side. For Rome, the Horatii; for Alba, the Curiatii. Here the Horatii swear to win or die.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Livy, the Roman historian, tells this story. What oath does he describe?",
+          "choices": [
+            {
+              "label": "The sons swearing to their father",
+              "next": "b1a"
+            },
+            {
+              "label": "A treaty sworn between Rome and Alba",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "That's the oath you see, but it isn't in Livy.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The painting's own French title says it: the oath of the Horatii, between their father's hands.",
+            "truth": "In Livy, the oath before the fight seals the treaty between Rome and Alba. He tells no scene of the brothers swearing to their father.",
+            "evidence": "Livy, History of Rome, book I, chapters 24 to 26. Utpictura18, Aix-Marseille University's image database: Livy dwells at length on the oath that sealed the treaty."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. In Livy, the oath sworn before the fight seals the treaty between Rome and Alba, and he describes it at length. The sons' oath to their father isn't there.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "We can tell: Livy's text survives.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It's an ancient legend, and old stories often survive only in pieces.",
+            "truth": "Livy's account survives in full. His oath is the treaty between Rome and Alba; there's no scene of the brothers swearing to their father.",
+            "evidence": "Livy, History of Rome I.24 to 26, in Latin and in D. Spillan's 1853 translation. Utpictura18 (Aix-Marseille University): Livy dwells on the oath that sealed the treaty."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "So the moment you're looking at, three sons swearing to their father, isn't in Livy. David painted a scene the old history doesn't tell.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "Jacques-Louis David later threw himself into the French Revolution of 1789. So it's tempting to see this oath as revolutionary art. Check who ordered it first.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "So who ordered the painting?",
+          "choices": [
+            {
+              "label": "The revolutionaries",
+              "next": "b2a"
+            },
+            {
+              "label": "King Louis XVI",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "Nobody: David painted it for himself",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "A popular idea, but the dates don't fit.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "David later took an active part in the Revolution, so his famous Roman oath gets read as a call to it.",
+            "truth": "King Louis XVI ordered it, through the comte d'Angiviller, director of the King's Buildings, and it was finished years before the Revolution of 1789.",
+            "evidence": "Louvre record: ordered by King Louis XVI through d'Angiviller. Toledo Museum of Art and the historian Barthélémy Jobert: Louis XVI commissioned it."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. King Louis XVI ordered it, through the comte d'Angiviller, director of the King's Buildings. A royal commission, years before the Revolution of 1789.",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "He took liberties with it, but it was an order.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He chose a scene Livy never told and painted it far away in Rome, so it can look like his own project.",
+            "truth": "It was a royal commission: Louis XVI ordered it through d'Angiviller, director of the King's Buildings.",
+            "evidence": "Louvre record: ordered by King Louis XVI through d'Angiviller. Toledo Museum of Art and Jobert: commissioned by Louis XVI. David's pupil Delécluze (1855): ordered by one of the king's ministers."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "A king's order, then. To paint it, David went back to Rome, where he had already spent five years as a young painter. He stayed almost a year, from the autumn of 1784.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "The order had fixed the size of the canvas. Look how wide the picture is.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "What did David send back?",
+          "choices": [
+            {
+              "label": "Exactly the size ordered",
+              "next": "b3a"
+            },
+            {
+              "label": "A larger canvas than ordered",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "A smaller canvas, easier to ship",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "A loyal painter might have, but David didn't.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was the king's order, with the size written down in advance.",
+            "truth": "David changed the size of the canvas: it came out larger than the one he had been given.",
+            "evidence": "Louvre record: he changed the dimensions of the canvas. His pupil Delécluze (1855): painted 'in a larger size than the one prescribed to him' (our translation)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. The Louvre's history says he changed the canvas size, and his pupil Étienne-Jean Delécluze wrote that it came out larger than prescribed.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "It did travel from Rome to Paris, but it wasn't made smaller.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was painted in Rome, then carried all the way to Paris for the Salon.",
+            "truth": "It came out larger than ordered, not smaller.",
+            "evidence": "Louvre record: he changed the dimensions of the canvas. Delécluze (1855): 'in a larger size than the one prescribed to him' (our translation)."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "The result is 3.3 metres high and 4.25 metres wide, a wall of a picture. And before Paris saw it, someone else did.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Where did the public first see the finished picture?",
+          "choices": [
+            {
+              "label": "At the Paris Salon of 1785",
+              "next": "b4a"
+            },
+            {
+              "label": "In David's studio in Rome",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "In the king's palace",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "It triumphed there, but that came second.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Salon of 1785, the big public exhibition in the Louvre, is where it made its name in Paris.",
+            "truth": "It was first shown to the public in David's studio in Rome, with great success, and only then went on to the Paris Salon.",
+            "evidence": "Louvre record: shown in his Roman studio, then the 1785 Salon. Jobert and Utpictura18: shown first in Rome, then a triumph at the Salon of 1785."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. David showed it in his own studio in Rome, and it was a great success there before it went on to Paris.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "It was the king's, but it didn't go to a palace.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was a royal order, so you'd expect it to go straight to the king.",
+            "truth": "Rome saw it first, then the 1785 Salon in Paris; afterwards it hung for years in David's own studio in the Louvre palace.",
+            "evidence": "Louvre record: Roman studio, 1785 Salon, then David's own studio in the Louvre. Delécluze (1855) describes 'the famous studio of the Horatii' (our translation)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Then Paris. At the Salon of 1785 it was a triumph, hailed as a masterpiece. Afterwards David kept it for years in his own studio in the Louvre palace, known as the studio of the Horatii.",
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "Now compare the two sides. David splits the picture in two: the father and sons on one side, the women and children apart on the other.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Why might the women be grieving before the fight has even begun?",
+          "choices": [
+            {
+              "label": "They fear Rome will lose",
+              "next": "b5a"
+            },
+            {
+              "label": "They belong to both families",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Rome's fate matters, but there's more at stake.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The fight decides which city will rule the other, so any Roman would fear defeat.",
+            "truth": "The families are tied together: the young men were married or engaged to each other's sisters.",
+            "evidence": "Toledo Museum of Art: the young men were married or betrothed to each other's sisters. Jobert: the mother, Camilla the sister and Sabina the sister-in-law."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Yes. The young men were married or engaged to each other's sisters. The historian Jobert names the mother, Camilla the sister and Sabina the sister-in-law.",
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "The sources do say why.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Nobody in the picture is labelled, and the women don't even look at the men.",
+            "truth": "Which woman is which isn't stated, but the bond is: the young men were married or engaged to each other's sisters.",
+            "evidence": "Toledo Museum of Art: married or betrothed to each other's sisters. Jobert: the mother, Camilla the sister and Sabina the sister-in-law."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "That split is the point: Toledo's museum contrasts the men's tense stances with the women's fluid contours. Jobert calls the picture a summary of Neoclassicism: a Roman subject, heroic virtue, a pared-down composition read at a glance.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "Neoclassicism looked back to the art of ancient Greece and Rome, and London's National Gallery calls David its leading painter in France. Later, he took an active part in the Revolution. So people ask what this oath meant.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Did David mean it as a political message?",
+          "choices": [
+            {
+              "label": "Yes, a call to revolution",
+              "next": "b6a"
+            },
+            {
+              "label": "No, it was simply the king's picture",
+              "next": "b6b"
+            },
+            {
+              "label": "Nobody knows",
+              "next": "b6c",
+              "correct": true
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "A popular reading, but it isn't proven.",
+          "correction": {
+            "kind": "myth",
+            "verdict": "Not proven",
+            "tempting": "Toledo's museum says it urged sacrifice for the state in the unrest before 1789, and David later joined the Revolution.",
+            "truth": "It was a royal commission, and none of these sources has words from David in 1784 or 1785 explaining a political aim.",
+            "evidence": "Louvre record and Jobert: ordered by Louis XVI. Toledo Museum of Art: a reading of sacrifice for the state. National Gallery: he joined the Revolution later."
+          },
+          "next": "n7"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "It was the king's order, but that doesn't settle its meaning.",
+          "correction": {
+            "kind": "near-miss",
+            "verdict": "Not settled",
+            "tempting": "Louis XVI ordered it, through his director of buildings, so it can't have been against him.",
+            "truth": "Readings differ: Toledo's museum sees an appeal to sacrifice for the state; the Louvre's director of paintings says that from this picture on, painting was David's way of acting in history.",
+            "evidence": "Toledo Museum of Art, description of its replica. Louvre director of paintings, essay in Le Grand Continent (2026). No words from David in 1784–85 settle it."
+          },
+          "next": "n7"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Right. It was the king's order. Toledo's museum reads an appeal to sacrifice for the state; the Louvre's director of paintings sees David acting in history. No words from David in 1784–85 settle it.",
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "So: an oath Livy never told, ordered by a king, painted in Rome, larger than asked, and still argued over. In Room 702, look at the arms on the left, then the bowed heads on the right."
+        }
+      },
+      "takeaway": "David painted an oath Livy never told: a king's order, painted larger than asked in Rome, shown there first, and still argued over as a political picture.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010062239",
+        "https://www.gutenberg.org/ebooks/19725",
+        "https://www.thelatinlibrary.com/livy/liv.1.shtml",
+        "https://utpictura18.univ-amu.fr/notice/13608-serment-horaces-david",
+        "https://artsandculture.google.com/asset/the-oath-of-the-horatii/pQHdi199vQiPkw",
+        "https://www.universalis.fr/encyclopedie/le-serment-des-horaces/",
+        "https://www.nationalgallery.org.uk/artists/jacques-louis-david",
+        "https://www.gutenberg.org/ebooks/31441",
+        "https://legrandcontinent.eu/fr/dimanches/sacre-napoleon/"
+      ]
+    }
+  ]
+}
