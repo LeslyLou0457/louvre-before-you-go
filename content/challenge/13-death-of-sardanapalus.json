@@ -1,0 +1,352 @@
+{
+  "artworkId": "death-of-sardanapalus",
+  "zoomImage": {
+    "file": "La Mort de Sardanapale - Eugène Delacroix - Musée du Louvre Peintures RF 2346.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg",
+    "width": 9842,
+    "height": 7703,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/death-of-sardanapalus/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "death-of-sardanapalus-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: a horse and a watcher",
+      "narrator": "delacroix",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0,
+            "y": 0.5,
+            "w": 0.42,
+            "h": 0.36,
+            "label": "A white horse in a jewelled harness, at the bottom left",
+            "image": "/images/challenge/death-of-sardanapalus/c1.jpg"
+          },
+          "text": "Level one: the king orders his women and pages killed. Now zoom into the bottom left: a white horse in a jewelled harness, pulled by its reins.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0,
+            "y": 0.5,
+            "w": 0.42,
+            "h": 0.36,
+            "label": "A white horse in a jewelled harness, at the bottom left",
+            "image": "/images/challenge/death-of-sardanapalus/c1.jpg"
+          },
+          "text": "Why is a horse here, among the women and the gold?",
+          "choices": [
+            {
+              "label": "The rebels rode in",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "His horses must die too",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "It's being led to safety",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record RF 2346, 'Mort de Sardanapale' (the Salon booklet's text, quoted in the record; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757"
+            },
+            {
+              "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844, Eugène Delacroix (label text of its replica)",
+              "url": "https://www.philamuseum.org/collection/object/82626"
+            },
+            {
+              "title": "A. Jal, Esquisses, croquis, pochades ... sur le Salon de 1827 (Paris, 1828), p. 313 (our translations)",
+              "url": "https://archive.org/details/esquissescroquis00jala"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Nothing that pleased the king may outlive him: not his women, not even his horses."
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "The rebels are outside; this is the king's own household.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The booklet says rebels besiege the palace, and smoke rises beyond the room.",
+            "truth": "The booklet says the king orders even his favourite horses killed: nothing that served his pleasures may survive him.",
+            "evidence": "Salon booklet text, quoted in the Louvre record. Philadelphia Museum of Art: he orders even his horses and dogs destroyed."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. The booklet says he orders even his favourite horses and dogs killed, so that nothing that served his pleasures outlives him.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "He's pulling it, but not to safety.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The man pulls it forward by its reins, away from the bed.",
+            "truth": "The booklet's king orders even his favourite horses killed, so that nothing that served his pleasures survives him.",
+            "evidence": "Salon booklet text, quoted in the Louvre record. Philadelphia Museum of Art: he orders even his horses and dogs destroyed."
+          }
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.12,
+            "y": 0.09,
+            "w": 0.26,
+            "h": 0.22,
+            "label": "The bearded man in a turban at the top left, on the bed",
+            "image": "/images/challenge/death-of-sardanapalus/c2.jpg"
+          },
+          "text": "Level one: from his bed, the king gives the orders. Now zoom into the top left, at the head of the bed: the king himself.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.12,
+            "y": 0.09,
+            "w": 0.26,
+            "h": 0.22,
+            "label": "The bearded man in a turban at the top left, on the bed",
+            "image": "/images/challenge/death-of-sardanapalus/c2.jpg"
+          },
+          "text": "What is the king doing while his orders are carried out?",
+          "choices": [
+            {
+              "label": "Shouting more orders",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Lying back, watching",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "Lighting the pyre",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record RF 2346, 'Mort de Sardanapale' (the Salon booklet's text, quoted in the record; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757"
+            },
+            {
+              "title": "A. Jal, Esquisses, croquis, pochades ... sur le Salon de 1827 (Paris, 1828), p. 313 (our translations)",
+              "url": "https://archive.org/details/esquissescroquis00jala"
+            },
+            {
+              "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844, Eugène Delacroix (label text of its replica)",
+              "url": "https://www.philamuseum.org/collection/object/82626"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Others do the killing; the king, on his pyre, only lies back and watches."
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "He gave the orders, but he isn't shouting now.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The booklet says he orders his household killed.",
+            "truth": "He lies back, head propped on his hand, and watches. Jal wrote that his eyes 'feast' on the scene (our translation).",
+            "evidence": "Salon booklet, in the Louvre record: lying on a superb bed. Jal (1828). Philadelphia Museum of Art: destroyed 'in his presence'."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. He lies back, head propped on his hand. The critic Jal wrote that his eyes 'feast' on the cruel pleasures before closing for ever (our translation).",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "The pyre is there, but he isn't lighting it.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The booklet puts his bed on top of an immense pyre.",
+            "truth": "He lies still, head on his hand, watching the killing done 'in his presence', as Philadelphia's museum puts it.",
+            "evidence": "Philadelphia Museum of Art. Jal (1828): his eyes 'feast' on the scene (our translation). The pose is plain in the crop."
+          }
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "n1b"
+        ],
+        "concept": "From the women and pages the level names to the horses: why a horse stands among the killing"
+      },
+      "framing": "why-it-is-there",
+      "what_you_learn": "The horse is there because the booklet's king orders even his favourite horses and dogs killed, so that nothing that served his pleasures survives him.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record RF 2346, 'Mort de Sardanapale' (description field: extract of the second supplement to the Salon booklet of 1827-1828; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+          "quote": "Sardanapale donne l'ordre à ses eunuques et aux officiers du palais, d'égorger ses femmes, ses pages, jusqu'à ses chevaux et ses chiens favoris ; aucun des objets qui avaient servi à ses plaisirs ne devait lui survivre",
+          "supports": "Our translation: Sardanapalus orders his eunuchs and palace officers to cut the throats of his women, his pages, even his favourite horses and dogs; none of the objects that had served his pleasures was to survive him. Gives the reason a horse is in the scene.",
+          "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026 (modified 2026-08-11); also saved in the research folder"
+        },
+        {
+          "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844 (label text)",
+          "url": "https://www.philamuseum.org/collection/object/82626",
+          "quote": "first orders his officers to destroy all his favorite possessions in his presence—his wives, pages, and even his horses and dogs.",
+          "supports": "The same subject, independently: even his horses are destroyed.",
+          "readVia": "Saved source text in the research folder (raw HTML, label text verbatim), 16 Oct 2026"
+        },
+        {
+          "title": "A. Jal, Esquisses, croquis, pochades ... sur le Salon de 1827 (Paris, 1828), p. 313 (our translations)",
+          "url": "https://archive.org/details/esquissescroquis00jala",
+          "quote": "pour une tête de cheval d'un ton fin et brillant",
+          "supports": "Our translation: for a horse's head of a fine and brilliant tone. A critic of 1828 singles out a horse's head in this picture; the crop shows the only horse in it.",
+          "readVia": "Saved Internet Archive OCR text in the research folder, 16 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record RF 2346 (Salon booklet text; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+            "quote": "Les révoltés l'assiégèrent dans son palais",
+            "supports": "Our translation: the rebels besieged him in his palace. The rebels are outside; the killing is ordered by the king.",
+            "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026"
+          },
+          {
+            "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844 (label text)",
+            "url": "https://www.philamuseum.org/collection/object/82626",
+            "quote": "Finding his palace besieged by enemies, Sardanapalus decides to kill himself, but first orders his officers to destroy all his favorite possessions",
+            "supports": "Besieged by enemies; the destruction is the king's own order.",
+            "readVia": "Saved source text in the research folder (verbatim), 16 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record RF 2346 (Salon booklet text; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+            "quote": "jusqu'à ses chevaux et ses chiens favoris ; aucun des objets qui avaient servi à ses plaisirs ne devait lui survivre",
+            "supports": "Our translation: even his favourite horses and dogs; none of the objects that had served his pleasures was to survive him. The horse is not being saved.",
+            "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026"
+          },
+          {
+            "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844 (label text)",
+            "url": "https://www.philamuseum.org/collection/object/82626",
+            "quote": "and even his horses and dogs",
+            "supports": "The horses are among the possessions to be destroyed.",
+            "readVia": "Saved source text in the research folder (verbatim), 16 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the reason (the booklet's text via the Louvre record and the Philadelphia Museum of Art's label agree). The region: the white horse is the only horse in the picture, so the booklet's horses and Jal's horse's head can only be this one; no source gives its position in words, which is plain in the photo.",
+      "notes": "Ledger claims sardan-006 (booklet subject: Louvre record + PMA), sardan-029 (Jal's horse's head), sardan-005 (our looking: a servant drags a white horse in jewelled harness at lower left). The level's n1b deliberately names only the women and pages, so the horses are new here. 'Rebels' and 'safety' are real readings of what is in the crop (the siege, the man pulling the reins), not sourced claims about this horse; their cards state only sourced facts. Not used: the man's identity (eunuch, officer or slave), which no source gives.",
+      "quoteCheck": "2026-10-16: the Louvre quotation re-read in the live record JSON (modified 2026-08-11); PMA and Jal as logged in the research ledger and re-read in the saved source texts.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 3005 rendering of Shonagon's file (the 9842 x 7703 original was refused with HTTP 429); crop 1613 x 1082 px there, saved at 1200 px wide. Checked by eye at full size: the white horse's head in a gold, jewelled bridle with red tassels, a dark-skinned man in a red turban pulling its red reins, a dagger hilt below the horse's head."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1b",
+          "q1"
+        ],
+        "concept": "From the king who gives the orders (level) to what he does while they are carried out"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The king does no killing and lights nothing: he lies back on his bed, head on his hand, and watches, the destruction done in his presence.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record RF 2346, 'Mort de Sardanapale' (Salon booklet text; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+          "quote": "Couché sur un lit superbe, au sommet d'un immense bûcher, Sardanapale donne l'ordre",
+          "supports": "Our translation: lying on a superb bed, at the top of an immense pyre, Sardanapalus gives the order. Places the king lying on the bed.",
+          "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026"
+        },
+        {
+          "title": "A. Jal, Esquisses, croquis, pochades ... sur le Salon de 1827 (Paris, 1828), p. 313 (our translations)",
+          "url": "https://archive.org/details/esquissescroquis00jala",
+          "quote": "il a voulu nous effrayer au spectacle des voluptés barbares dont les yeux de Sardanapale se rassasient avant de se fermer pour toujours",
+          "supports": "Our translation: he wanted to frighten us with the spectacle of the barbaric pleasures on which Sardanapalus's eyes feast before closing for ever. The king watches.",
+          "readVia": "Saved Internet Archive OCR text in the research folder, 16 Oct 2026"
+        },
+        {
+          "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844 (label text)",
+          "url": "https://www.philamuseum.org/collection/object/82626",
+          "quote": "orders his officers to destroy all his favorite possessions in his presence",
+          "supports": "The destruction happens in his presence.",
+          "readVia": "Saved source text in the research folder (verbatim), 16 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record RF 2346 (Salon booklet text; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+            "quote": "Couché sur un lit superbe, au sommet d'un immense bûcher, Sardanapale donne l'ordre à ses eunuques et aux officiers du palais",
+            "supports": "Our translation: lying on a superb bed ... Sardanapalus gives the order to his eunuchs and palace officers. He gives the order lying down.",
+            "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026"
+          },
+          {
+            "title": "A. Jal, Esquisses, croquis, pochades ... sur le Salon de 1827 (Paris, 1828), p. 313 (our translations)",
+            "url": "https://archive.org/details/esquissescroquis00jala",
+            "quote": "dont les yeux de Sardanapale se rassasient",
+            "supports": "Our translation: on which Sardanapalus's eyes feast. He watches.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, 16 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Philadelphia Museum of Art, 'The Death of Sardanapalus', 1844 (label text)",
+            "url": "https://www.philamuseum.org/collection/object/82626",
+            "quote": "orders his officers to destroy all his favorite possessions in his presence",
+            "supports": "Others act; he is present.",
+            "readVia": "Saved source text in the research folder (verbatim), 16 Oct 2026"
+          },
+          {
+            "title": "A. Jal, Esquisses, croquis, pochades ... sur le Salon de 1827 (Paris, 1828), p. 313 (our translations)",
+            "url": "https://archive.org/details/esquissescroquis00jala",
+            "quote": "La destruction de tant d'êtres vivans sur le bûcher du tyran",
+            "supports": "Our translation: the destruction of so many living beings on the tyrant's pyre. The pyre is there (also in the booklet), but the king's eyes 'feast': he watches.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, 16 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the booklet (lying on his bed), Jal (his eyes feast on the scene) and the Philadelphia label (in his presence) agree, and the pose is plain in the crop. That this bearded, turbaned man is the king is our identification from the booklet (the man lying on the bed) and Jal ('the pose of Sardanapalus'); no source names his position in words.",
+      "notes": "Ledger claims sardan-006 (booklet + PMA), sardan-029 (Jal), sardan-004 (our looking: the bearded, turbaned king at upper left, head propped on his hand). Who finally lights the pyre in the booklet (Baleah, sardan-007) is Louvre-only and NOT said; the c2c card says only that he lies still and watches. The level never describes his pose, so the close-up is new.",
+      "quoteCheck": "2026-10-16: the Louvre quotation re-read in the live record JSON (modified 2026-08-11); Jal and PMA re-read in the saved source texts.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 3005 rendering; crop 998 x 662 px (never upscaled). Checked by eye at full size: the bearded king in a white turban with a gold band, an earring, his right hand propping his head, lying on the red bed in a white robe, eyes turned down to the right; a gold ewer at the lower left edge."
+    }
+  }
+}

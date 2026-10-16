@@ -1,0 +1,404 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "death-of-sardanapalus",
+    "title": "The Death of Sardanapalus",
+    "artist": "Eugène Delacroix",
+    "year": "1827",
+    "image": "/images/death-of-sardanapalus.jpg",
+    "imageCredit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "392 × 496 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065757"
+  },
+  "speakers": {
+    "delacroix": {
+      "name": "Eugène Delacroix",
+      "kind": "artist",
+      "avatar": "delacroix"
+    }
+  },
+  "lessons": [
+    {
+      "id": "death-of-sardanapalus-1",
+      "order": 1,
+      "title": "A veritable fiasco?",
+      "start": "n1",
+      "narrator": "delacroix",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A huge red bed slants across the canvas. Around it: a woman held at knifepoint, a man dragging a white horse, gold and jewels heaped on the floor. Beyond, smoke.",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "imagined",
+            "text": "Before the story, just look. Let the red bed carry your eye from the top left down to the bottom right."
+          },
+          "next": "n1b"
+        },
+        "n1b": {
+          "type": "story",
+          "text": "Somewhere in this chaos is Sardanapalus, an ancient king of Assyria. The Salon booklet explained the scene: rebels besiege his palace, and from his bed, on top of an immense pyre, he orders his women and pages killed.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where did Delacroix find this story?",
+          "choices": [
+            {
+              "label": "In the ancient historian Diodorus",
+              "next": "b1a"
+            },
+            {
+              "label": "In Lord Byron's play",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Nobody knows",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Right king, but Delacroix started from a newer book.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The old story of Sardanapalus and his pyre is told by the ancient historian Diodorus of Sicily.",
+            "truth": "Delacroix took it from Lord Byron's play Sardanapalus, published in 1821. Byron himself had drawn on Diodorus.",
+            "evidence": "Philadelphia Museum of Art: 'inspired by Lord Byron's dramatic poem of 1821'. Moreau-Nélaton (1916) and Charles Rivet (printed 1865): from Byron. Byron's preface and his editor Coleridge: Diodorus."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. Three independent writers name Byron's play of 1821: the Philadelphia Museum of Art, the biographer Étienne Moreau-Nélaton, and Charles Rivet, in an article printed in 1865.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "We do know: three writers name the same play.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Sardanapalus's story has more than one teller, from the ancient historian Diodorus to Lord Byron.",
+            "truth": "Three independent writers say Delacroix took it from Lord Byron's play Sardanapalus, published in 1821.",
+            "evidence": "Philadelphia Museum of Art. Étienne Moreau-Nélaton, Delacroix raconté par lui-même (1916). Charles Rivet's article, printed by Achille Piron (1865)."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Byron's play came out in 1821. Delacroix turned it into a canvas almost four metres high and five wide. How long do you think that took?",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "How long did the big canvas take him?",
+          "choices": [
+            {
+              "label": "About three years",
+              "next": "b2a"
+            },
+            {
+              "label": "About six months",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "A few frantic weeks",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "There was earlier work, but not on this canvas.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A smaller oil sketch of the whole composition goes back to 1826–1827.",
+            "truth": "The big canvas itself was painted in the second half of 1827: about six months.",
+            "evidence": "Louvre record: painted in the second half of 1827. Delacroix, letter of 6 February 1828: 'six months of work' (our translation). Sketch: Louvre record and Robaut (1885)."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. The Louvre dates it to the second half of 1827, and Delacroix himself wrote, in February 1828, of 'six months of work' (our translation).",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Longer than that.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He had a deadline: the Salon of 1827 opened on 4 November.",
+            "truth": "He spent about six months on it, the second half of 1827.",
+            "evidence": "Louvre record: painted in the second half of 1827. Delacroix, letter of 6 February 1828: 'six months of work' (our translation)."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Six months on a wall of paint. Early biographers saw England in it: Philippe Burty, Maurice Tourneux and Étienne Moreau-Nélaton each linked it to English painting or to his trip to London.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "He meant it for the Salon of 1827, the big public art exhibition in Paris. It opened on 4 November 1827.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "When could Salon visitors first see this picture?",
+          "choices": [
+            {
+              "label": "On opening day, 4 November 1827",
+              "next": "b3a"
+            },
+            {
+              "label": "Only from February 1828",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "Never: the jury refused it",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "That was the plan, but he missed it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It's catalogued as a picture of the Salon of 1827, and that Salon opened on 4 November.",
+            "truth": "It wasn't ready in time. It went on show only in early February 1828, when the Salon renewed its pictures.",
+            "evidence": "Moreau-Nélaton (1916): not ready for 4 November. Louvre record: shown from early February 1828. Delacroix, 6 February 1828: the Salon 'reopened this morning' (our translation)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. It wasn't ready in time. The Salon renewed its pictures early in 1828, and this one went on show in early February.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "It caused a storm, but it got in.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Critics hated it, so you might expect the jury to shut it out.",
+            "truth": "The jury admitted it, and it hung at the Salon from early February 1828.",
+            "evidence": "Louvre record: admitted by the jury, shown from February 1828. Delacroix, letter of 6 February 1828: his picture is 'placed the best in the world' (our translation)."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "It came so late that the booklet lists it only in a second supplement. Now Paris could judge it.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "How did the critics take it?",
+          "choices": [
+            {
+              "label": "As a masterpiece",
+              "next": "b4a"
+            },
+            {
+              "label": "Harshly",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "They barely noticed it",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Not in 1828.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Today it hangs among the Louvre's great Romantic pictures, in the Salle Mollien.",
+            "truth": "In 1828 the reviews were harsh. The critic Augustin Jal wrote that in this picture 'the beauties do not exist' (our translation).",
+            "evidence": "Jal, Salon review, 1828. Philadelphia Museum of Art: it 'received harsh criticism'. Louvre: judged shocking at the time."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. The Philadelphia Museum of Art says it 'received harsh criticism'. The critic Augustin Jal went further: in this picture, 'the beauties do not exist' (our translation).",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "They noticed, and they struck.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It arrived late, tucked into a supplement of the booklet.",
+            "truth": "Critics attacked it. The Louvre says it was judged shocking at the time; Jal wrote that 'the beauties do not exist' (our translation).",
+            "evidence": "Louvre, 2023 activity report. Augustin Jal, Salon review, 1828. Philadelphia Museum of Art: 'harsh criticism'."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "In March 1828, Delacroix wrote to Charles Soulier about the Salon.",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "quote",
+            "text": "They will end by persuading me that I have made a veritable fiasco … that the death of Sardanapalus is the death of the Romantics — since romantics there are.",
+            "cite": "Letter to Charles Soulier, 11 March 1828 (English translation: Dorothy Bussy, 1907)",
+            "source": "https://archive.org/details/in.ernet.dli.2015.87474"
+          },
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "The State had bought his earlier big picture, the Massacre at Chios, straight away. What would happen to this one?",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "What happened to the picture after the Salon?",
+          "choices": [
+            {
+              "label": "The State bought it",
+              "next": "b5a"
+            },
+            {
+              "label": "Nobody bought it",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "A collector snapped it up",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Not this time.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The State had bought his Massacre at Chios at once.",
+            "truth": "No buyer came. Delacroix kept it in his studio until 1846.",
+            "evidence": "Louvre record: he failed to sell it. Tourneux (1902): it went back to his studio and stayed a long time. Philadelphia Museum of Art: sold in 1846."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Yes. Nobody bought it. Delacroix kept it in his studio until 1846, when the collector Daniel Wilson finally bought it.",
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "A collector came, but much later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A private collector, Daniel Wilson, did buy it from Delacroix.",
+            "truth": "But only in 1846. Until then it stayed, unsold, in Delacroix's studio.",
+            "evidence": "Louvre record: sold to Daniel Wilson in 1846. Editors of his Journal (1893): Wilson bought it. Tourneux (1902): it stayed in his studio a long time."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Years later, in notes printed after his death, he looked back on the time after this Salon.",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "quote",
+            "text": "You may judge what such enforced idleness meant for me … at a moment when I felt myself capable of covering a whole town with my paintings.",
+            "cite": "His notes, printed by Piron, 1865 (English translation: Dorothy Bussy, 1907)",
+            "source": "https://archive.org/details/in.ernet.dli.2015.87474"
+          },
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "He didn't drop the subject: in 1844 he painted a small replica, now in Philadelphia. And before the big canvas, he had made studies for it.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Delacroix's will left the painter Maréchal several studies for it. What were they?",
+          "choices": [
+            {
+              "label": "Pastels",
+              "next": "b6a",
+              "correct": true
+            },
+            {
+              "label": "The oil sketch",
+              "next": "b6b"
+            },
+            {
+              "label": "The finished picture",
+              "next": "b6c"
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Yes: 'several pastel studies for Sardanapalus', says the will (our translation). One of them, a study of a slipper, is now in the Louvre.",
+          "next": "n7"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "It exists, but it went elsewhere.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Delacroix did make a smaller oil sketch of the whole composition.",
+            "truth": "The will left Maréchal pastel studies. The oil sketch went to the Rivet family, and it is in the Louvre now too.",
+            "evidence": "Delacroix's will, printed by Burty (1878). Louvre records of the sketch and of a pastel bequeathed to Maréchal. Robaut (1885): sketch owned by the baronne Rivet."
+          },
+          "next": "n7"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "He had parted with that long before.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He had kept the big canvas in his studio for years.",
+            "truth": "He sold it to Daniel Wilson in 1846. The will left Maréchal 'several pastel studies' for it (our translation).",
+            "evidence": "Louvre record and Philadelphia Museum of Art: sold in 1846. Delacroix's will, printed by Burty (1878)."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "So: Byron's play, six months of work, a late arrival, harsh reviews, years unsold. Today it hangs in Room 700, the Salle Mollien. Let the red bed lead your eye, and judge for yourself."
+        }
+      },
+      "takeaway": "Delacroix turned Byron's play into six months of work that arrived late at the Salon, was savaged in 1828 and stayed unsold in his studio until 1846.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+        "https://mini-site.louvre.fr/trimestriel/2024/Trajectoires_2023/18/",
+        "https://www.louvre.fr/decouvrir/vie-du-musee/sardanapale-revele-un-chef-d-oeuvre-a-la-vivacite-retrouvee",
+        "https://collections.louvre.fr/en/ark:/53355/cl010059724",
+        "https://collections.louvre.fr/en/ark:/53355/cl020031743",
+        "https://www.philamuseum.org/collection/object/82626",
+        "https://www.gutenberg.org/ebooks/23475",
+        "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/2A*.html",
+        "https://archive.org/details/esquissescroquis00jala",
+        "https://archive.org/details/lettresdeeugened00dela",
+        "https://archive.org/details/eugnedelacroixs00pirogoog",
+        "https://archive.org/details/loeuvrecompletde00roba_0",
+        "https://archive.org/details/delacroixraconte01more",
+        "https://archive.org/details/eugnedelacroix00touruoft",
+        "https://archive.org/details/in.ernet.dli.2015.87474",
+        "https://www.gutenberg.org/ebooks/54421"
+      ]
+    }
+  ]
+}
