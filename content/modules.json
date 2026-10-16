@@ -1315,8 +1315,9 @@
             "roomName": "Salle Daru"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065566"
+          "checkedOn": "2026-10-16",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+          "levelId": "la-grande-odalisque-1"
         },
         {
           "id": "oath-of-the-horatii",

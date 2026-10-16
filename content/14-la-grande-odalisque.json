@@ -1,0 +1,416 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "la-grande-odalisque",
+    "title": "La Grande Odalisque",
+    "artist": "Jean-Auguste-Dominique Ingres",
+    "year": "1814",
+    "image": "/images/la-grande-odalisque.jpg",
+    "imageCredit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "91 × 162 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065566"
+  },
+  "speakers": {
+    "ingres": {
+      "name": "Jean-Auguste-Dominique Ingres",
+      "kind": "artist",
+      "avatar": "ingres"
+    }
+  },
+  "lessons": [
+    {
+      "id": "la-grande-odalisque-1",
+      "order": 1,
+      "title": "Three vertebrae too many?",
+      "start": "n1",
+      "narrator": "ingres",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A woman lies with her back to you, then turns her head and looks straight out of the picture. Her outline runs from her neck, down that long back, all the way to her feet at the far right.",
+          "voice": {
+            "speaker": "ingres",
+            "kind": "imagined",
+            "text": "Before anything else, draw her with your eyes: from her neck to her toes, in one line, without stopping."
+          },
+          "next": "n1b"
+        },
+        "n1b": {
+          "type": "story",
+          "text": "Ingres painted her in Rome and finished her in 1814. The title calls her an odalisque: a woman of a harem. But she began as an order from a royal patron.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Who ordered this painting?",
+          "choices": [
+            {
+              "label": "The king of Naples",
+              "next": "b1a"
+            },
+            {
+              "label": "The queen of Naples",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Nobody: he painted it for himself",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Close: the order came from his court, but not from him.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "King Joachim Murat had already bought a sleeping nude from Ingres, about 1809.",
+            "truth": "This one was ordered in 1813 by his wife, Caroline Murat, queen of Naples, to hang as its pair.",
+            "evidence": "Louvre: painted for Caroline Murat, commissioned in 1813. Delaborde (1870) and Lapauze (1911): a pendant to the king's sleeping nude."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. In 1813 Caroline Murat, queen of Naples, ordered it as a pendant: a picture made to hang as a pair with another, here a sleeping nude her husband had bought.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "It did end up his, but it began as an order.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "For years after 1814 the picture stayed in Ingres's own studio in Rome.",
+            "truth": "Caroline Murat, queen of Naples, commissioned it in 1813. It stayed with him only after her family fell from power.",
+            "evidence": "Louvre: painted for Caroline Murat, commissioned in 1813. Delaborde (1870) and Lapauze (1911): left on his hands when the Murats fell."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "So the king's sleeping woman would hang beside this wakeful one. The sleeping picture is now lost. Then politics struck: the Murats fell from power at Naples.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "What happened to the queen's picture?",
+          "choices": [
+            {
+              "label": "It went to Naples anyway",
+              "next": "b2a"
+            },
+            {
+              "label": "It stayed with Ingres in Rome",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "It was lost, like its pair",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "It never got there.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was made for the queen of Naples, and finished in 1814.",
+            "truth": "When the Murats fell, the picture stayed on Ingres's hands, in his studio in Rome.",
+            "evidence": "Delaborde (1870), Lapauze (1911) and Boyer d'Agen's edition of Ingres's letters (1909)."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. It never reached Naples. Ingres later wrote that the Murats' fall ruined him, through pictures lost or returned without being paid (our translation).",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Its pair was lost, but not this one.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The sleeping nude it was meant to hang beside is lost.",
+            "truth": "This picture survived: it stayed in Ingres's studio in Rome, and today it hangs in the Louvre.",
+            "evidence": "Delaborde, Blanc (both 1870) and Lapauze (1911): the sleeping nude is lost. Delaborde and Lapauze: the Odalisque stayed with Ingres."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "With his royal patrons gone, Ingres drew small pencil portraits in Rome to make a living. One day a visitor knocked and asked for the man who draws portraits.",
+          "voice": {
+            "speaker": "ingres",
+            "kind": "quote",
+            "text": "No, sir … he who lives here is a painter.",
+            "cite": "As told by Henri Delaborde, 1870 (English: Masters in Art, 1906)",
+            "source": "https://www.gutenberg.org/ebooks/47704"
+          },
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "In 1819 the Odalisque finally reached Paris, for the Salon, the city's big public art exhibition. She hung in one of its most visible places. Now the critics could judge her.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Two critics that year compared her with an old master. Which one?",
+          "choices": [
+            {
+              "label": "Raphael",
+              "next": "b3a"
+            },
+            {
+              "label": "Titian",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "His teacher, David",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Ingres's own hero, but not the critics' pick.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Ingres revered Raphael above all other painters.",
+            "truth": "Both critics reached for Titian, the Venetian master: Kératry sensed 'something of Titian', and David's pupils said her pose recalled a Titian (our translations).",
+            "evidence": "A.-H. de Kératry, letters on the Salon of 1819. Lettres à David (1819), by pupils of David."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. The critic Kératry sensed 'something of Titian' in her, and a group of David's pupils said her pose recalled a Titian (our translations). Both still found fault with her colour.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Close to home, but no.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Ingres had trained in David's studio, and one of the reviews was written by David's own pupils.",
+            "truth": "Even those pupils reached for Titian: they said her pose recalled one of his pictures. Kératry, too, sensed 'something of Titian' (our translations).",
+            "evidence": "Lettres à David (1819). A.-H. de Kératry, letters on the Salon of 1819. Delécluze (1855) and Blanc (1870): Ingres trained with David."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Both reviews faulted her colour, and the public paid her little kind attention. Ingres, in his notes, sounded sure that time was on his side.",
+          "voice": {
+            "speaker": "ingres",
+            "kind": "quote",
+            "text": "I count on my old age to avenge me.",
+            "cite": "His notes, printed by Henri Delaborde, 1870 (English: Masters in Art, 1906)",
+            "source": "https://www.gutenberg.org/ebooks/47704"
+          },
+          "next": "n4b"
+        },
+        "n4b": {
+          "type": "story",
+          "text": "Decades later came the most famous jab of all: that she has 'three vertebrae too many'. Vertebrae are the small bones that stack up to make your spine.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Where does the 'three vertebrae too many' line come from?",
+          "choices": [
+            {
+              "label": "A printed 1819 review",
+              "next": "b4a"
+            },
+            {
+              "label": "A remark in conversation",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "Doctors who measured her",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Not from a printed review.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "The critic behind it, Kératry, did review the Salon of 1819, and he attacked the picture.",
+            "truth": "He said it later, in conversation, to Ingres's pupil Amaury-Duval, who recalled it in his memoir of 1878.",
+            "evidence": "Amaury-Duval, L'atelier d'Ingres (1878). Journal of the Royal Society of Medicine (2004): Kératry 'told Ingres' student Amaury-Duval'."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. Ingres's pupil Amaury-Duval recalled, in 1878, that the critic Kératry once said it to him. One witness, remembering decades later.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "They came much later, to test it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In 2004, three researchers in Paris did measure her back.",
+            "truth": "They were testing the old remark, which Amaury-Duval recalled in 1878. By their measurements the extra length was nearer five vertebrae than three.",
+            "evidence": "Maigne, Chatellier and Norlöff, Journal of the Royal Society of Medicine (2004). Amaury-Duval, L'atelier d'Ingres (1878)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Those 2004 researchers measured nine models posed like her, then a reproduction of the painting. By their measurements, her back and pelvis together are longer by nearly five vertebrae, not three.",
+          "next": "n5b"
+        },
+        "n5b": {
+          "type": "story",
+          "text": "Was it a slip? Ingres's pencil studies for her survive, in the Louvre and at the Courtauld in London. And he held that 'drawing was the probity of art': its honesty.",
+          "voice": {
+            "speaker": "ingres",
+            "kind": "quote",
+            "text": "I shall write over the door of my studio, 'School of Drawing,' and I shall make painters.",
+            "cite": "His teaching, as quoted by Charles Blanc, 1870 (English: Masters in Art, 1906)",
+            "source": "https://www.gutenberg.org/ebooks/47704"
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "So why did Ingres make her back so long?",
+          "choices": [
+            {
+              "label": "He couldn't draw backs",
+              "next": "b5a"
+            },
+            {
+              "label": "His model was built that way",
+              "next": "b5b"
+            },
+            {
+              "label": "Nobody knows for sure",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Hardly: drawing was his great pride.",
+          "correction": {
+            "kind": "myth",
+            "tempting": "Critics in 1819 attacked her drawing, and the vertebrae joke makes it sound like a slip.",
+            "truth": "Ingres put drawing above everything, and he made pencil studies for this very figure. But no letter or note of his that we've found says why he stretched her.",
+            "evidence": "Delaborde (1870) and Masters in Art (1906): drawing, 'the probity of art'. The Louvre and the Courtauld: his studies for her."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "No real body matched her.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The 2004 study did start from real women, posed like her.",
+            "truth": "None of its nine models matched: her back and pelvis came out longer, and her twist could not be reproduced.",
+            "evidence": "Journal of the Royal Society of Medicine (2004). Museum of the History of Medicine, Warsaw: her curve and pelvic turn are 'impossible to recreate'."
+          },
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Right. No letter or note of Ingres's that we've found explains it. His pupil Amaury-Duval thought the long torso gave her a striking serpentine line; the 2004 researchers suggested a psychological reason. Both are guesses.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Whatever the reason, she kept her place: shown again at the Exposition universelle of 1855, and in the Louvre today. In 1989 she even put on a gorilla mask.",
+          "next": "n6b"
+        },
+        "n6b": {
+          "type": "story",
+          "text": "The artists' group the Guerrilla Girls put her, masked, on a poster asking: 'Do women have to be naked to get into the Met. Museum?'",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Where did that poster end up?",
+          "choices": [
+            {
+              "label": "Inside the Met",
+              "next": "b6a"
+            },
+            {
+              "label": "On New York buses",
+              "next": "b6b",
+              "correct": true
+            },
+            {
+              "label": "Nowhere: it was rejected",
+              "next": "b6c"
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Not inside the museum it asked about.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The poster's question names the Metropolitan Museum.",
+            "truth": "It was made for a Public Art Fund campaign in New York. Rejected, it ran on New York buses instead.",
+            "evidence": "MACBA, Barcelona, and the Musée Ingres Bourdelle, Montauban: their records of the poster."
+          },
+          "next": "n7"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "Yes. It was made for New York's Public Art Fund, which turned it down. So the Guerrilla Girls rented advertising space on the city's buses, until the bus company cancelled the contract.",
+          "next": "n7"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "It was rejected, but it still ran.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "New York's Public Art Fund did turn it down.",
+            "truth": "The artists then rented advertising space on New York buses, until the bus company cancelled the contract.",
+            "evidence": "MACBA, Barcelona, and the Musée Ingres Bourdelle, Montauban: their records of the poster."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "A queen's order, a fallen throne, cool reviews, a famous jab and a bus poster. Today she's in Room 702, the Salle Daru. Follow her line from neck to toes, and decide for yourself."
+        }
+      },
+      "takeaway": "A queen ordered her in 1813, she stayed on Ingres's hands when the Murats fell, and her famous long back is still argued over: why he drew it so, nobody knows.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+        "https://collections.louvre.fr/en/ark:/53355/cl020113120",
+        "https://gallerycollections.courtauld.ac.uk/object-d-1995-xx-1",
+        "https://archive.org/details/ingressaviesestr00delauoft",
+        "https://archive.org/details/ingressavieetse00blangoog",
+        "https://archive.org/details/ingressaviesonuv00lapauoft",
+        "https://archive.org/details/ingresdaprsuneco00ingr",
+        "https://archive.org/details/latelierdingress00amau",
+        "https://archive.org/details/annuairedelecole00kera",
+        "https://archive.org/details/gri_33125011174741",
+        "https://www.gutenberg.org/ebooks/31441",
+        "https://www.gutenberg.org/ebooks/47704",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1079534/",
+        "https://teatranatomiczny.wum.edu.pl/en/2020/11/jean-auguste-dominique-ingres-grande-odalisque-1814-louvre/",
+        "https://www.macba.cat/en/obra/r1953-do-women-have-to-be-naked-to-get-into-the-met-museum/",
+        "https://musees-occitanie.fr/oeuvre/est-ce-que-les-femmes-doivent-etre-nues-pour-entrer-au-metropolitan-museum/"
+      ]
+    }
+  ]
+}

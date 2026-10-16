@@ -34,6 +34,11 @@
 //              him: peach skin, a big full rounded beard and a huge soft
 //              black beret over a dark headcloth, blue eyes
 //              (all from the Louvre portrait itself);
+//   ingres     Jean-Auguste-Dominique Ingres, from his Self-Portrait at
+//              Twenty-Four (1804, Musée Condé, Chantilly): a big tousled mop
+//              of black curls tumbling onto the forehead, short dark
+//              sideburns, heavy arched black brows, large dark eyes glancing
+//              aside, rosy cheeks, clean-shaven;
 //   guide      Lesly, the museum guide who narrates works whose maker is
 //              unknown or left no documented words: a tuxedo cat dressed after
 //              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
@@ -245,6 +250,48 @@ const AVATARS: Record<AvatarId, Drawing> = {
     ),
     mouthClosed: line("M29.8 46 Q32 46.8 34.2 45.8", "#c25a44"),
     mouthOpen: oval(32, 46.3, 1.9, 1.5),
+  },
+  // Jean-Auguste-Dominique Ingres, from his Self-Portrait at Twenty-Four
+  // (1804, Musée Condé, Chantilly), the look closest to the man who painted
+  // the Grande Odalisque ten years later: the big tousled mop of black curls,
+  // tumbling onto the forehead, exaggerated; short dark sideburns, heavy
+  // arched brows, large dark eyes glancing aside, rosy cheeks, no beard.
+  // Our own drawing, not traced.
+  ingres: {
+    tilt: 5,
+    head: (
+      <>
+        <ellipse cx="20.2" cy="34.4" rx="2.4" ry="3.4" fill="#e3a586" />
+        <ellipse cx="44.2" cy="34" rx="2.4" ry="3.4" fill="#e3a586" />
+        {/* the back of the black mop, wide and high */}
+        <path d="M17.6 33.6 C13.4 29.6 12.6 22.6 15.4 17.8 C14.6 12.6 18.6 8.4 23.6 8.6 C26 5 31.6 3.8 35.6 5.8 C40 4.2 45.4 6.6 46.8 11 C51.2 12.4 52.8 17.6 50.4 21.4 C52.4 25.6 50.6 30.6 46.4 32.8 C45.6 27 43 22.6 38.6 21 C32 19.4 25 20.4 21 24.4 C19 26.8 18.2 30 17.6 33.6 Z" fill="#17110f" />
+        <path d="M32.2 18.2 C39.4 18 43.6 23.2 43.8 30.6 C44 39 42 46.4 37.2 50.6 C34.6 52.8 29.8 52.8 27.2 50.6 C22.4 46.4 20.4 39 20.6 30.8 C20.8 23.4 25 18.4 32.2 18.2 Z" fill="#f4d1b6" />
+        {/* short sideburns, hugging the cheeks */}
+        <path d="M20.9 26.8 C20.3 31.2 20.7 35.8 21.9 39.6 C22.7 39.4 23 38.4 23 37.2 C22.7 33.8 22.7 30.4 23.2 27 Z M43.5 26.8 C44.1 31.2 43.7 35.8 42.5 39.6 C41.7 39.4 41.4 38.4 41.4 37.2 C41.7 33.8 41.7 30.4 41.2 27 Z" fill="#17110f" />
+        {/* curls tumbling onto the forehead */}
+        <path d="M21.4 26.2 C21.4 21.6 24.6 18.6 28.4 18.6 C27.4 21 27.8 23 29.4 24 C30 21.4 32 19.6 34.6 19.8 C33.8 22 34.4 23.8 36 24.6 C36.8 22.2 39 20.8 41.4 21.6 C40.4 23 40.6 24.8 42.2 26.2 C43.2 22.4 42 18.6 38.4 16.6 C34 14.4 27.4 14.8 23.8 18 C21.6 20 20.8 23 21.4 26.2 Z" fill="#17110f" />
+        <path d="M25.2 24.4 C24.2 26.2 24.8 28 26.4 28.6 C25.8 27.2 26 25.8 27.2 24.8 Z" fill="#17110f" />
+        {brush("M17.6 18 Q20 13.6 24.4 12.6", "#3d2f29", 1.1)}
+        {brush("M28.4 9.4 Q32.6 7.6 36.4 9", "#3d2f29", 1.1)}
+        {brush("M41.4 11.6 Q45.6 13 47 17", "#3d2f29", 1.1)}
+        {brush("M46.6 22.6 Q48.6 25.6 47.6 29", "#3d2f29", 1.1)}
+        {brush("M23.8 30 Q26.6 27.4 30 28.6", "#17110f", 1.9)}
+        {brush("M34.4 28.4 Q37.8 27.2 40.6 29.6", "#17110f", 1.9)}
+        <ellipse cx="26.4" cy="40.2" rx="2.3" ry="1.5" fill="#ee9f8f" />
+        <ellipse cx="38.4" cy="40" rx="2.3" ry="1.5" fill="#ee9f8f" />
+        <path d="M32.4 31.2 L35 40.2 Q32.6 41.4 30 40.4 Z" fill="#d9907a" />
+      </>
+    ),
+    eyes: (
+      <>
+        <ellipse cx="27" cy="32.6" rx="2.6" ry="1.7" fill="#fdf8ef" />
+        <ellipse cx="37.6" cy="32.4" rx="2.6" ry="1.7" fill="#fdf8ef" />
+        <circle cx="26.2" cy="32.7" r="1.45" fill={INK} />
+        <circle cx="36.8" cy="32.5" r="1.45" fill={INK} />
+      </>
+    ),
+    mouthClosed: line("M29.8 45.2 Q32.2 45.9 34.6 45", "#b8433a"),
+    mouthOpen: oval(32.2, 45.6, 2.1, 1.7),
   },
   // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
   // with a Pearl Earring (our own drawing): an ultramarine headwrap with the
