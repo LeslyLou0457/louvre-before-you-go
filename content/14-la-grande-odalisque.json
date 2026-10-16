@@ -219,7 +219,7 @@
         },
         "n4b": {
           "type": "story",
-          "text": "Decades later came the most famous jab of all: that she has 'three vertebrae too many'. Vertebrae are the small bones that stack up to make your spine.",
+          "text": "Decades later came the most famous jab of all: that she has 'three vertebrae too many' (our translation). Vertebrae are the small bones that stack up to make your spine.",
           "next": "q4"
         },
         "q4": {
@@ -227,7 +227,7 @@
           "text": "Where does the 'three vertebrae too many' line come from?",
           "choices": [
             {
-              "label": "A printed 1819 review",
+              "label": "Kératry's 1819 review",
               "next": "b4a"
             },
             {
@@ -236,7 +236,7 @@
               "correct": true
             },
             {
-              "label": "Doctors who measured her",
+              "label": "David's pupils, in 1819",
               "next": "b4c"
             }
           ]
@@ -248,7 +248,7 @@
             "kind": "myth",
             "tempting": "The critic behind it, Kératry, did review the Salon of 1819, and he attacked the picture.",
             "truth": "He said it later, in conversation, to Ingres's pupil Amaury-Duval, who recalled it in his memoir of 1878.",
-            "evidence": "Amaury-Duval, L'atelier d'Ingres (1878). Journal of the Royal Society of Medicine (2004): Kératry 'told Ingres' student Amaury-Duval'."
+            "evidence": "Kératry, letters on the Salon of 1819 (1820). Amaury-Duval, L'atelier d'Ingres (1878): Kératry 'said to me one day' (our translation)."
           },
           "next": "n5"
         },
@@ -259,23 +259,18 @@
         },
         "b4c": {
           "type": "branch",
-          "text": "They came much later, to test it.",
+          "text": "They wrote about her, but not that.",
           "correction": {
             "kind": "near-miss",
-            "tempting": "In 2004, three researchers in Paris did measure her back.",
-            "truth": "They were testing the old remark, which Amaury-Duval recalled in 1878. By their measurements the extra length was nearer five vertebrae than three.",
-            "evidence": "Maigne, Chatellier and Norlöff, Journal of the Royal Society of Medicine (2004). Amaury-Duval, L'atelier d'Ingres (1878)."
+            "tempting": "David's pupils published letters on the Salon of 1819, and they wrote about this very picture.",
+            "truth": "They compared her pose with a Titian. The vertebrae line came later, from Kératry in conversation, as Amaury-Duval recalled in 1878.",
+            "evidence": "Lettres à David (1819); Kératry (1820) also named Titian. Amaury-Duval, L'atelier d'Ingres (1878)."
           },
           "next": "n5"
         },
         "n5": {
           "type": "story",
-          "text": "Those 2004 researchers measured nine models posed like her, then a reproduction of the painting. By their measurements, her back and pelvis together are longer by nearly five vertebrae, not three.",
-          "next": "n5b"
-        },
-        "n5b": {
-          "type": "story",
-          "text": "Was it a slip? Ingres's pencil studies for her survive, in the Louvre and at the Courtauld in London. And he held that 'drawing was the probity of art': its honesty.",
+          "text": "Was it a slip? Ingres's pencil studies for her survive, in the Louvre and at the Courtauld in London. And he held that 'drawing was the probity of art'.",
           "voice": {
             "speaker": "ingres",
             "kind": "quote",
@@ -294,7 +289,7 @@
               "next": "b5a"
             },
             {
-              "label": "His model was built that way",
+              "label": "To copy a Titian",
               "next": "b5b"
             },
             {
@@ -317,18 +312,18 @@
         },
         "b5b": {
           "type": "branch",
-          "text": "No real body matched her.",
+          "text": "Titian came up for her pose, not her back.",
           "correction": {
             "kind": "near-miss",
-            "tempting": "The 2004 study did start from real women, posed like her.",
-            "truth": "None of its nine models matched: her back and pelvis came out longer, and her twist could not be reproduced.",
-            "evidence": "Journal of the Royal Society of Medicine (2004). Museum of the History of Medicine, Warsaw: her curve and pelvic turn are 'impossible to recreate'."
+            "tempting": "Two critics in 1819 saw something of Titian in her.",
+            "truth": "David's pupils meant her pose, not a long back. No letter or note of Ingres's that we've found explains the length.",
+            "evidence": "Kératry, letters on the Salon of 1819 (1820). Lettres à David (1819): the pose recalls a Titian. Amaury-Duval (1878) could only guess at the reason."
           },
           "next": "n6"
         },
         "b5c": {
           "type": "branch",
-          "text": "Right. No letter or note of Ingres's that we've found explains it. His pupil Amaury-Duval thought the long torso gave her a striking serpentine line; the 2004 researchers suggested a psychological reason. Both are guesses.",
+          "text": "Right. No letter or note of Ingres's that we've found explains it. His pupil Amaury-Duval wondered whether the long torso is what gives her a striking serpentine line, but he could only guess.",
           "next": "n6"
         },
         "n6": {
@@ -407,7 +402,6 @@
         "https://www.gutenberg.org/ebooks/31441",
         "https://www.gutenberg.org/ebooks/47704",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC1079534/",
-        "https://teatranatomiczny.wum.edu.pl/en/2020/11/jean-auguste-dominique-ingres-grande-odalisque-1814-louvre/",
         "https://www.macba.cat/en/obra/r1953-do-women-have-to-be-naked-to-get-into-the-met-museum/",
         "https://musees-occitanie.fr/oeuvre/est-ce-que-les-femmes-doivent-etre-nues-pour-entrer-au-metropolitan-museum/"
       ]
