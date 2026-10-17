@@ -33,6 +33,11 @@
         "n1": {
           "type": "story",
           "text": "Smoke, a barricade, and a woman with a flag stepping over the dead, a crowd surging behind her. The canvas is over three metres wide. Delacroix painted it in about four months, September to December 1830.",
+          "voice": {
+            "speaker": "delacroix",
+            "kind": "imagined",
+            "text": "Take a breath before I explain anything. Smoke, rubble, a raised flag. Just look, and notice where your eye lands first."
+          },
           "next": "q1"
         },
         "q1": {

@@ -33,6 +33,11 @@
         "n1": {
           "type": "story",
           "text": "Nearly five metres high, more than seven wide. The raft's corner points straight at you, low in the middle, as if you could step aboard. Bodies at the bottom left; at the top right, a man waves a cloth.",
+          "voice": {
+            "speaker": "gericault",
+            "kind": "imagined",
+            "text": "Don't look for the story yet. Bodies, a waving man, sea and sky: let your eye go where it wants, and notice where."
+          },
           "next": "q1"
         },
         "q1": {
