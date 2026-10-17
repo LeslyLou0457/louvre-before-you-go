@@ -111,8 +111,17 @@ export function getPlace(lessonId: string, nodeIds?: string[], questionCount?: n
 
 export function savePlace(lessonId: string, place: SavedPlace): void {
   const places = readPlaces();
+  // Re-inserted so the most recently played level is always last (the cover's "Continue" reads that order).
+  delete places[lessonId];
   places[lessonId] = place;
   writePlaces(places);
+}
+
+/** Of the given lesson ids, the ones with a saved place, most recently played first. */
+export function placedByRecency(lessonIds: string[]): string[] {
+  return Object.keys(readPlaces())
+    .filter((id) => lessonIds.includes(id))
+    .reverse();
 }
 
 export function clearPlace(lessonId: string): void {

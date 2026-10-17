@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CoverContinue, { type ChapterLevel } from "@/components/CoverContinue";
 import StickerBook from "@/components/StickerBook";
 import TabBar, { TAB_BAR_SPACE } from "@/components/TabBar";
 import TrailCard from "@/components/TrailCard";
@@ -7,6 +8,7 @@ import { formatDate } from "@/lib/book";
 import { getBook } from "@/lib/catalogue";
 import { getChallenge } from "@/lib/challenge";
 import { getJourney } from "@/lib/content";
+import { isTrailLevel } from "@/lib/trail";
 
 // The cover, home since 0.6 build step 3 (PRODUCT.md "Structure and
 // navigation"): the title, the cover copy, the way into the book, the
@@ -20,6 +22,15 @@ export default function Cover() {
   // "04, 09 and 10": the chapters holding a work with a level.
   const withLevel = book.chapters.filter((c) => !c.appendix && c.works.some((w) => w.level)).map((c) => c.id);
   const chapters = withLevel.length > 1 ? `${withLevel.slice(0, -1).join(", ")} and ${withLevel.at(-1)}` : withLevel.join("");
+
+  // Chapter levels (not the five trail levels, which the "Start here" card resumes), for "Continue".
+  const chapterLevels: ChapterLevel[] = book.chapters.flatMap((c) =>
+    c.works.flatMap((w) =>
+      w.level && !isTrailLevel(w.level.id)
+        ? [{ levelId: w.level.id, title: w.title, chapterId: c.id, nodeIds: w.level.nodeIds, questionCount: w.level.questionCount }]
+        : [],
+    ),
+  );
 
   const dates = works.map((w) => w.checkedOn).sort();
   const checked =
@@ -54,6 +65,7 @@ export default function Cover() {
         <Link href="/contents/" className="btn-option justify-center font-bold">
           Contents
         </Link>
+        <CoverContinue levels={chapterLevels} />
       </div>
 
       <TrailCard items={journey} roundIds={getChallenge().map((r) => r.id)} chapters={chapters} />
