@@ -16,10 +16,10 @@
     "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065426"
   },
   "speakers": {
-    "guide": {
-      "name": "Lesly",
-      "kind": "guide",
-      "avatar": "guide"
+    "david": {
+      "name": "Jacques-Louis David",
+      "kind": "artist",
+      "avatar": "david"
     }
   },
   "lessons": [
@@ -28,15 +28,15 @@
       "order": 1,
       "title": "The battle that stops",
       "start": "n1",
-      "narrator": "guide",
+      "narrator": "david",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "In the middle, a young woman in white throws her arms wide between two naked warriors. On the left, a bearded man raises his shield. On the right, a man in a crested helmet draws back his spear.",
           "voice": {
-            "speaker": "guide",
+            "speaker": "david",
             "kind": "imagined",
-            "text": "Before the story, just look: her arms open wide, one towards each man, right between their weapons."
+            "text": "Look first; the story can wait. I put her right between their weapons, her arms open wide, one towards each man."
           },
           "next": "n1b"
         },

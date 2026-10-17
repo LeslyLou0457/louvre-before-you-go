@@ -16,10 +16,10 @@
     "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010065720"
   },
   "speakers": {
-    "guide": {
-      "name": "Lesly",
-      "kind": "guide",
-      "avatar": "guide"
+    "david": {
+      "name": "Jacques-Louis David",
+      "kind": "artist",
+      "avatar": "david"
     }
   },
   "lessons": [
@@ -28,15 +28,15 @@
       "order": 1,
       "title": "Whose coronation is it?",
       "start": "n1",
-      "narrator": "guide",
+      "narrator": "david",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "About 190 people crowd Notre-Dame de Paris on 2 December 1804, Pope Pius VII among them. At the centre, Napoleon stands on the altar steps, a crown raised in both hands.",
           "voice": {
-            "speaker": "guide",
+            "speaker": "david",
             "kind": "imagined",
-            "text": "Before the names and the politics, just look at the centre. Whose head is that crown for?"
+            "text": "Look first; the names and the politics can wait. At the centre of my canvas, a crown is raised. Whose head is it for?"
           },
           "next": "q1"
         },
@@ -93,11 +93,11 @@
         },
         "n2b": {
           "type": "story",
-          "text": "That May, the Senate had entrusted the French Republic to an emperor: Napoleon Bonaparte, until then First Consul. To make a monarchy acceptable again, the new Empire leaned on the memory of Charlemagne.",
+          "text": "That May, the Senate had entrusted the French Republic to an emperor: Napoleon Bonaparte, until then First Consul. The Empire leaned on Charlemagne's memory to make monarchy acceptable. Why did Pius VII come? A bargain over bishops, says one historian; force, says a Philadelphia museum.",
           "voice": {
-            "speaker": "guide",
+            "speaker": "david",
             "kind": "imagined",
-            "text": "Why did Pius VII come? One historian calls it a bargain over France's bishops; a Philadelphia museum says Napoleon forced him."
+            "text": "Pius VII was there that day, and later he sat for me himself. Why he came to Paris, I leave to others."
           },
           "next": "n3"
         },
