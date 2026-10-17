@@ -13,6 +13,7 @@
 > Revised 2026-10-15 (speaker heads, the product owner's decisions): Leonardo's head is the benchmark, and every head is a flat painted head in the After Hours manner, head only, known at a glance by one or two exaggerated documented traits; the marble block is gone, and works whose maker is unknown or left no documented words are narrated by Lesly, a young museum guide with her own head (speaker kind `guide`; a tuxedo cat dressed after Vermeer's Girl with a Pearl Earring), in the third person; every head opens and closes its mouth while it talks, and the narrator also "says" each question; the chapter page shows the narrator's head on each work that has a level; the cover's yellow star becomes a small flat drawing of the Louvre with "LOUVRE" and "PARIS" in handwriting; the content check fails an avatar id with no drawing (see "How to write", "Data format", "Character layer" and "Motion").
 > Revised 2026-10-15 (flexible question counts, the product owner's decision): the number of questions is flexible per work, more for a rich work and fewer for a thin one; there is no fixed 5 per level or 2 per close-up round. A level needs at least 3 questions and a close-up round shows 1 to 4; the hard limits are the time budgets: a level about 5 minutes and never more than 7, a work's level plus its close-up round within 10 minutes, and the trail's whole Close-Up Challenge within 12. The five levels and eight rounds written so far keep their 5 and 2 (see "Rules for one level", "Three details" and "Rules for the challenge").
 > Revised 2026-10-17 (navigation fixes after a pre-test): a level-cleared page in a chapter points to the chapter's "Next up" (its first level not met yet), or says the chapter is done and offers the next chapter with a level to play; a "Start here" level opened from a chapter (`?from=09`) gets that chapter's cleared page, while from the trail or the cover it unlocks the next trail level as before; the cover shows "Continue · <work>" for the chapter level most recently left mid-way (see "Structure and navigation" and "Progress, 'Next up' and seals").
+> Revised 2026-10-17 (floor wording, the product owner's decision): on screen the museum's floors are called "Floor", not "Level" ("Floor 1", "Floors −1 to 1"), so they never clash with the game's levels; the Louvre's numbering stays (see "Words used in this section").
 
 **Duolingo for art history. See it before you go; recognise it when you're there.**
 Five minutes a day, one level, one small story about one artwork.
@@ -204,7 +205,7 @@ Added 2026-10-13, from the approved framework design (project files: `framework/
 ### Words used in this section
 
 - **Module:** a group of neighbouring rooms of one region or period, in the product owner's own curatorial structure, not an official Louvre route. On screen it is called a chapter ("Chapter 09"), as in the design's book: the cover, the contents page and room numbers used as page numbers.
-- **Floor:** one of the Louvre's levels, −1 to 2. On screen it is labelled the way the Louvre labels it ("Level 1"); this spec and the data say "floor" so it is never confused with a game level.
+- **Floor:** one of the Louvre's floors, −1 to 2, keeping the Louvre's own numbering. On screen it is labelled "Floor 1", never "Level 1"; the screen, this spec and the data all say "floor" so it is never confused with a game level.
 - **Level:** as in 0.5, the 5-question game about one work.
 
 ### Structure and navigation
@@ -220,7 +221,7 @@ Cover → "Start here" trail → the 5 existing levels (today's route, unchanged
 | Cover (home) | `/` | The title with a small flat drawing of the Louvre at its right (the palace and the glass pyramid against a pale-blue swash of sky, with "LOUVRE" on the ground and "PARIS" below in the handwriting font; our own drawing, in place of the old yellow star), the cover copy (below), "Open the map", "Contents", the "Start here" card (continue where you left off), a "Continue · <work>" button when a chapter level is left mid-way (the one most recently played, opened in its chapter), and the sticker book: one mark per work, module by module. Replaces the level route as home |
 | Start here | `/start/` | Today's level route and Close-Up Challenge, unchanged, moved from `/` |
 | Map | `/map/` | The three wings, tappable (see "The map") |
-| Wing | `/map/denon/`, `/map/sully/`, `/map/richelieu/` | The map zoomed to one wing and its floors, top floor first, each with its module and work counts and room range. Picking a floor (page state, with a `#level-1` anchor) lists the modules with works on that floor, with "also on Sully, Level 0"-style notes when a module continues elsewhere. Static pages, so they can be linked |
+| Wing | `/map/denon/`, `/map/sully/`, `/map/richelieu/` | The map zoomed to one wing and its floors, top floor first, each with its module and work counts and room range. Picking a floor (page state, with a `#level-1` anchor) lists the modules with works on that floor, with "also on Sully, Floor 0"-style notes when a module continues elsewhere. Static pages, so they can be linked |
 | Contents | `/contents/` | All 15 modules and the appendix: number, title, wings and floors, progress, and the room range on the right like page numbers in a book; a wing filter |
 | Module | `/chapter/01/` … `/chapter/15/`, `/chapter/beyond/` | Number, title, wings and floors, room range, progress dots, the "not a walking route" line, then the works under room headings ("Room 711") in module order, works not on view last under "Not on view right now", and the module's close-up rounds at the bottom. A work with a level shows its narrator's head, small and still, at the end of its row; a work without one shows no head. Generated from `content/modules.json` |
 | Work | label sheet on the module page | The work's museum label: artist, title, date, where (wing, floor, room), display status with the date checked, and "View at the Louvre →". A work with a level opens its level |
@@ -235,7 +236,7 @@ Cover → "Start here" trail → the 5 existing levels (today's route, unchanged
 - **Behaviour:** the three wings, Denon, Sully and Richelieu, are tappable buttons; the Cour Carrée, the Pyramid, rue de Rivoli and the Seine are drawn only to orient. Tapping a wing zooms the map to it, fades the other wings and shows its floors, top floor first, like a cross-section of the building. Picking a floor lists its modules; picking a module opens it.
 - **Honest:** labelled "Schematic, not to scale". It draws no rooms, no routes, no walking times and no artworks, so it can never send anyone the wrong way. It is for finding modules before the trip, not for guiding on site.
 - **Visual style:** Map A from the prototype (decided by the product owner, 14 Oct 2026): an illustrated bird's-eye doodle of the palace seen from above the Seine, with slate roofs, warm stone, crayon greens and a blue Seine, hand-lettered banners for the three wings, and labels as HTML laid over the drawing so the zoom never re-lays out text. Whatever the style, the drawing lives in one swappable component, like the other doodles, so a person's illustration drops in without code changes, and it follows the three-layer rule in "03 · DESIGN".
-- **A list for every map:** the contents page and the wing's floor list hold everything the map does; the map is never the only way in. Each wing is a real button with a spoken name built from the data, like "Denon wing: 6 chapters, 29 works on view, levels −1 to 1", reachable by keyboard, with tap targets of at least 48 px.
+- **A list for every map:** the contents page and the wing's floor list hold everything the map does; the map is never the only way in. Each wing is a real button with a spoken name built from the data, like "Denon wing: 6 chapters, 29 works on view, floors −1 to 1", reachable by keyboard, with tap targets of at least 48 px.
 
 ### The 15 modules
 
@@ -339,7 +340,7 @@ Small PRs, each run and checked on a 375 px phone before committing.
 | 5 | Motion for the new screens, with reduced motion; the `moments:v1` additions | Motion |
 | 6 | Close-ups per work in modules; the trail keeps its all-five gate | Close-ups |
 | 7 | Recheck routine: a script lists works whose `checkedOn` is older than 90 days; a person rechecks the records before a release | None |
-| 8 | Content in batches: first modules 09 and 10 (the same Denon level 1 rooms as four existing levels), then 04 and 03. Each work: record recheck, rights-checked photo, level, close-up round | New levels |
+| 8 | Content in batches: first modules 09 and 10 (the same Denon floor 1 rooms as four existing levels), then 04 and 03. Each work: record recheck, rights-checked photo, level, close-up round | New levels |
 
 ### Not in 0.6
 
