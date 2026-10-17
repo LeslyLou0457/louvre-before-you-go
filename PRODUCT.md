@@ -304,6 +304,7 @@ Every work is shown and says what it is. Two independent facts make up its statu
 - Every status carries the date it was checked. Never red: these are facts, not errors. State is never colour alone: each chip has a word and a mark.
 - No fake levels and no drawn stand-ins: a work gets its photo only when its level ships, after the same rights check as the first five.
 - Room data is soft: the Louvre's own records warn room data may be out of date. Every work's record is rechecked before its level ships, and a work checked more than 90 days ago is flagged by the content check.
+- **Record recheck tool:** `npm run recheck-records` fetches every work's collections.louvre.fr record as JSON (`<record url>.json`, one request per second, a User-Agent naming this repo) and prints a Markdown report, also saved under `scratch/` (not committed): per work, ours against the record for room, display status (the record has no on-display field, so it is read from `currentLocation`, `room` and `longTermLoanTo`), inventory number, date, and for works with a level the dimensions and image credit, plus the record's last-modified date against `checkedOn`, with a count of mismatches. Works with no Louvre record are skipped and listed. It is read-only: a person reads the report and edits `content/` by hand. Metadata is the Musée du Louvre's, under the Etalab Open Licence; the report says so and gives the records' update dates.
 
 ### Progress, "Next up" and seals
 
