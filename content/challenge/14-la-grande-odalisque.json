@@ -1,0 +1,371 @@
+{
+  "artworkId": "la-grande-odalisque",
+  "zoomImage": {
+    "file": "La grande odalisque - Jean-Auguste Dominique Ingres - Musée du Louvre Peintures RF 1158.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:La_grande_odalisque_-_Jean-Auguste_Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1158.jpg",
+    "width": 9311,
+    "height": 5196,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/la-grande-odalisque/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "la-grande-odalisque-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: the mattress edge and the fan",
+      "narrator": "ingres",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.655,
+            "y": 0.875,
+            "w": 0.28,
+            "h": 0.12,
+            "label": "The lower edge of the mattress, bottom right, with painted lettering",
+            "image": "/images/challenge/la-grande-odalisque/c1.jpg"
+          },
+          "text": "Level one: Ingres painted her for the queen of Naples. Now zoom into the bottom right, along the edge of the mattress: there's writing.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.655,
+            "y": 0.875,
+            "w": 0.28,
+            "h": 0.12,
+            "label": "The lower edge of the mattress, bottom right, with painted lettering",
+            "image": "/images/challenge/la-grande-odalisque/c1.jpg"
+          },
+          "text": "Where does Ingres's signature say he painted her?",
+          "choices": [
+            {
+              "label": "Naples",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Rome",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Paris",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record RF 1158, 'Une odalisque, dite La grande odalisque' (signature and history; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566"
+            },
+            {
+              "title": "Henri Delaborde, Ingres, sa vie, ses travaux, sa doctrine (Paris, 1870), catalogue no. 75 (our translations)",
+              "url": "https://archive.org/details/ingressaviesestr00delauoft"
+            },
+            {
+              "title": "Henry Lapauze, Ingres, sa vie et son œuvre (Paris, 1911) (our translations)",
+              "url": "https://archive.org/details/ingressaviesonuv00lapauoft"
+            }
+          ]
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Ordered for Naples, signed in Rome in 1814, first shown in Paris in 1819."
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Naples is where she was meant to go.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Caroline Murat, queen of Naples, ordered the picture in 1813.",
+            "truth": "The signature ends 'Rom', for Rome, where Ingres worked. The picture never reached Naples.",
+            "evidence": "Louvre record: the signature at lower right. Delaborde (1870) and Lapauze (1911): it stayed on his hands in Rome."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. The Louvre transcribes it 'J.A.Ingres. Pxit 1814.Rom': his name, the year 1814, and Rom, for Rome. You can read 'ROM' at the end.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Paris saw her first, but five years later.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She was first shown in public at the Paris Salon of 1819.",
+            "truth": "The signature says 1814 and Rom, for Rome, where Ingres was then working.",
+            "evidence": "Louvre record: signature, and the Salon of 1819. Delaborde (1870): painted in 1814, shown in 1819."
+          }
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.5,
+            "y": 0.52,
+            "w": 0.17,
+            "h": 0.38,
+            "label": "Her right hand with gold bracelets, holding a fan of peacock feathers against her leg",
+            "image": "/images/challenge/la-grande-odalisque/c2.jpg"
+          },
+          "text": "Level one: the title calls her an odalisque, a woman of a harem. Now zoom into her right hand, resting on her leg: a fan of peacock feathers.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.5,
+            "y": 0.52,
+            "w": 0.17,
+            "h": 0.38,
+            "label": "Her right hand with gold bracelets, holding a fan of peacock feathers against her leg",
+            "image": "/images/challenge/la-grande-odalisque/c2.jpg"
+          },
+          "text": "What do props like this fan and her turban do?",
+          "choices": [
+            {
+              "label": "Echo a Titian",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Make her an 'odalisque'",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "Record a real harem",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record RF 1158 (the cataloguer's description; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566"
+            },
+            {
+              "title": "Henry Lapauze, Ingres, sa vie et son œuvre (Paris, 1911), pp. 159-160 (our translations)",
+              "url": "https://archive.org/details/ingressaviesonuv00lapauoft"
+            },
+            {
+              "title": "The Courtauld, London, 'Study for La Grande Odalisque', D.1995.XX.1 (label text, 2023)",
+              "url": "https://gallerycollections.courtauld.ac.uk/object-d-1995-xx-1"
+            },
+            {
+              "title": "Charles Blanc, Ingres, sa vie et ses ouvrages (Paris, 1870), pp. 27-28 (our translations)",
+              "url": "https://archive.org/details/ingressavieetse00blangoog"
+            },
+            {
+              "title": "Lettres à David, sur le Salon de 1819, par quelques élèves de son école (Paris, 1819), pp. 71-72 (our translations)",
+              "url": "https://archive.org/details/gri_33125011174741"
+            },
+            {
+              "title": "J.-Y. Maigne, G. Chatellier and H. Norlöff, 'Extra vertebrae in Ingres' La Grande Odalisque', Journal of the Royal Society of Medicine 97 (2004)",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1079534/"
+            }
+          ]
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Lapauze put it plainly: without her Eastern props, she would be no odalisque."
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Titian came up for her pose, not her props.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In 1819, critics compared her with Titian.",
+            "truth": "David's pupils said her pose recalled a Titian. The props do another job: they make her 'Eastern'.",
+            "evidence": "Lettres à David (1819). Lapauze (1911): an odalisque only by her Eastern props. The Courtauld: the props 'orientalised' her."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. For Lapauze (1911) she is an odalisque only through her Eastern props, and owes her name to them. The Courtauld says the turban and props 'orientalised' the subject.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "They suggest one, but they're a borrowed decor.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The title's word, odalisque, means a woman of a harem.",
+            "truth": "Lapauze called the props a decor borrowed from 'Turkey in Asia'; for the Courtauld, they 'orientalised' the subject.",
+            "evidence": "Henry Lapauze, Ingres (1911), our translation. The Courtauld, London: label for Ingres's study for the painting (2023)."
+          }
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1b",
+          "q2",
+          "b2b"
+        ],
+        "concept": "From 'painted in Rome' and 'it stayed with Ingres in Rome' (level) to the place Ingres wrote on the canvas himself"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Ingres signed and dated the picture along the lower edge of the mattress, at lower right: 'J.A.Ingres. Pxit 1814.Rom', his name, 1814 and Rome.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record RF 1158 (inscriptions field; our translation)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+          "quote": "Signé, daté, en bas à droite: J.A.Ingres. Pxit 1814.Rom",
+          "supports": "Our translation: signed and dated, lower right: J.A.Ingres. Pxit 1814.Rom. Places the signature at lower right and gives its text.",
+          "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026 (modified 2026-08-11); also saved in the research folder"
+        },
+        {
+          "title": "Henri Delaborde, Ingres (Paris, 1870), catalogue no. 75 (our translation)",
+          "url": "https://archive.org/details/ingressaviesestr00delauoft",
+          "quote": "Peinte en 1814 et exposée au Salon de 1819 [...] Acquise en 1816, à Rome, par M. le comte Pourtalès",
+          "supports": "Our translation: painted in 1814 and shown at the Salon of 1819 [...] acquired in 1816, in Rome, by the comte Pourtalès. Independently gives 1814 and Rome. (The 1816 date and buyer are a sources-disagree point and are not used.)",
+          "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Henri Delaborde, Ingres (Paris, 1870), catalogue no. 75 (our translation)",
+            "url": "https://archive.org/details/ingressaviesestr00delauoft",
+            "quote": "devait, originairement, appartenir à la reine Caroline Murat, qui, en 1813 avait commandé ce tableau à Ingres",
+            "supports": "Our translation: was originally to belong to Queen Caroline Murat, who in 1813 had commissioned it from Ingres.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+          },
+          {
+            "title": "Henry Lapauze, Ingres (Paris, 1911) (our translation)",
+            "url": "https://archive.org/details/ingressaviesonuv00lapauoft",
+            "quote": "par l'Odalisque couchée, qui lui était restée pour compte, en 1814, dans le désastre des Murat",
+            "supports": "Our translation: the reclining Odalisque, which had been left on his hands in 1814, in the disaster of the Murats. It did not go to Naples.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record RF 1158 (history field)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+            "quote": "Peint pour Caroline Murat, reine de Naples. Salon de 1819.",
+            "supports": "Our translation: painted for Caroline Murat, queen of Naples. Salon of 1819.",
+            "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026 (modified 2026-08-11); also saved in the research folder"
+          },
+          {
+            "title": "Henri Delaborde, Ingres (Paris, 1870), catalogue no. 75 (our translation)",
+            "url": "https://archive.org/details/ingressaviesestr00delauoft",
+            "quote": "Peinte en 1814 et exposée au Salon de 1819",
+            "supports": "Our translation: painted in 1814 and shown at the Salon of 1819.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record gives the signature's text and position (lower right), and the lettering is legible in the crop ('I A INGRES P[xi]t 1814 ROM'); Delaborde and Lapauze independently give 1814 and Rome. The record's own transcription is quoted as the Louvre's.",
+      "notes": "Ledger claims odalisque-002 (signature, Louvre record; POP is the same Louvre data and reads 'Pat' for 'Pxit'), odalisque-005 (our looking: the signature along the lower edge of the mattress at right), odalisque-007, -013, -017. 'Pxit' is not expanded or translated, since no source we read glosses it. The level says she was painted in Rome (n1b) and stayed there (q2); the close-up adds that Ingres wrote the place on the canvas, and the Naples/Paris near misses are real places in the picture's story.",
+      "quoteCheck": "2026-10-16: the Louvre inscription re-read in the live record JSON (modified 2026-08-11); Delaborde and Lapauze re-read in the saved OCR texts.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 2143 rendering of Shonagon's file (the 9311 x 5196 original was refused with HTTP 429); crop 1075 x 257 px there, never upscaled. Checked by eye at full size: the dark lettering 'I A INGRES P[xi]t 1814 ROM' along the lower edge of the blue mattress, between two dark seams; her heel at upper right, the fur pelt's edge at upper left."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1b"
+        ],
+        "concept": "From the title's word, odalisque (level), to what actually makes her one: the Eastern props"
+      },
+      "framing": "why-it-is-there",
+      "what_you_learn": "The fan, the turban and the other props are what make this nude an 'odalisque': Lapauze says she is one only through her Eastern accessories, and the Courtauld that they orientalised the subject.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record RF 1158 (description field; our translation)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+          "quote": "la main droite tenant un éventail en plumes de paon, posée sur la jambe gauche repliée",
+          "supports": "Our translation: the right hand holding a fan of peacock feathers, resting on the bent left leg. Places the fan exactly where the crop is.",
+          "readVia": "Louvre record JSON (raw), re-read live 16 Oct 2026 (modified 2026-08-11); also saved in the research folder"
+        },
+        {
+          "title": "Charles Blanc, Ingres, sa vie et ses ouvrages (Paris, 1870), pp. 27-28 (our translation)",
+          "url": "https://archive.org/details/ingressavieetse00blangoog",
+          "quote": "retenant de la main un éventail de plume",
+          "supports": "Our translation: holding in her hand a feather fan. Independently names the fan in her hand.",
+          "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+        },
+        {
+          "title": "Henry Lapauze, Ingres (Paris, 1911), pp. 159-160 (our translation)",
+          "url": "https://archive.org/details/ingressaviesonuv00lapauoft",
+          "quote": "Ingres, ayant emprunté son décor à la Turquie d'Asie, — avec le narghilé, le tabouret incrusté, le turban, l'éventail, le chapelet d'ambre, — appela sa femme couchée : l'Odalisque. [...] La célèbre figure n'a de l'odalisque que ses accessoires orientaux, et son nom, qu'elle doit à ses accessoires mêmes.",
+          "supports": "Our translation: Ingres, having borrowed his decor from Turkey in Asia (the narghile, the inlaid stool, the turban, the fan, the amber rosary), called his reclining woman the Odalisque. [...] The famous figure has nothing of the odalisque but her oriental accessories, and her name, which she owes to those accessories.",
+          "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+        },
+        {
+          "title": "The Courtauld, London, 'Study for La Grande Odalisque', D.1995.XX.1 (label text, 2023)",
+          "url": "https://gallerycollections.courtauld.ac.uk/object-d-1995-xx-1",
+          "quote": "Devoid of the contextual details of textiles, turban and props, which orientalised the subject in the finished painting",
+          "supports": "Independently: the turban and props orientalised the subject of the painting.",
+          "readVia": "Saved source text in the research folder (verbatim), 16 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Lettres à David, sur le Salon de 1819, par quelques élèves de son école (Paris, 1819), pp. 71-72 (our translation)",
+            "url": "https://archive.org/details/gri_33125011174741",
+            "quote": "Cette figure dont la pose rappelle la maîtresse de Philippe II par le Titien",
+            "supports": "Our translation: this figure, whose pose recalls Titian's mistress of Philip II. The comparison is about her pose.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+          },
+          {
+            "title": "Henry Lapauze, Ingres (Paris, 1911), p. 160 (our translation)",
+            "url": "https://archive.org/details/ingressaviesonuv00lapauoft",
+            "quote": "La célèbre figure n'a de l'odalisque que ses accessoires orientaux",
+            "supports": "Our translation: the famous figure has nothing of the odalisque but her oriental accessories.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Henry Lapauze, Ingres (Paris, 1911), pp. 159-160 (our translation)",
+            "url": "https://archive.org/details/ingressaviesonuv00lapauoft",
+            "quote": "Ingres, ayant emprunté son décor à la Turquie d'Asie",
+            "supports": "Our translation: Ingres, having borrowed his decor from Turkey in Asia.",
+            "readVia": "Saved Internet Archive OCR text in the research folder, re-read 16 Oct 2026"
+          },
+          {
+            "title": "The Courtauld, London, 'Study for La Grande Odalisque' (label text, 2023)",
+            "url": "https://gallerycollections.courtauld.ac.uk/object-d-1995-xx-1",
+            "quote": "textiles, turban and props, which orientalised the subject in the finished painting",
+            "supports": "The props orientalise the subject: a decor, not a record.",
+            "readVia": "Saved source text in the research folder (verbatim), 16 Oct 2026"
+          },
+          {
+            "title": "J.-Y. Maigne, G. Chatellier, H. Norlöff, 'Extra vertebrae in Ingres' La Grande Odalisque', JRSM 97 (2004)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1079534/",
+            "quote": "a woman kept in a sultan's harem",
+            "supports": "The gloss of 'odalisque' used in the tempting line (with Lapauze's harem setting).",
+            "readVia": "Saved PMC text in the research folder, 16 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the region (the Louvre record places the peacock-feather fan in her right hand on her bent left leg; Blanc names the feather fan in her hand; the eye-spots are plain in the crop). The reason is two attributed readings that agree (Lapauze 1911, the Courtauld 2023), framed as theirs; neither is Ingres's own statement.",
+      "notes": "Ledger claims odalisque-003 (Louvre description), -006 (Lapauze), -040 (Courtauld), -062 (JRSM gloss), -021 (Lettres à David on the pose). Not used: the Courtauld's 'Ingres never travelled outside of Europe' (Courtauld only), Lapauze's 'Venus' remark (Lapauze only), and the Montauban record's report that the bus company thought she held 'something other than a fan' (Montauban only). Crop framed on the hand, fan and leg; it shows no more of the nude than the hand and leg.",
+      "quoteCheck": "2026-10-16: the Louvre description re-read in the live record JSON; Blanc, Lapauze and the Lettres à David re-read in the saved OCR texts; the Courtauld label re-read in its saved page text.",
+      "cropCheck": "2026-10-16: box measured on Commons' 3840 x 2143 rendering; crop 653 x 815 px, never upscaled. Checked by eye at full size: her right hand with coiled gold bracelets resting on her leg, holding the jewelled red handle of a fan of peacock feathers with four eye-spots; the white-and-gold pipe stem at top right."
+    }
+  }
+}
