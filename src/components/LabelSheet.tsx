@@ -112,13 +112,13 @@ export default function LabelSheet({ work, eyebrow, onClose }: Props) {
   );
 }
 
-/** "Denon · Level 1 · Room 711 (Salle des États)"; French room names carry lang="fr". */
+/** "Denon · Floor 1 · Room 711 (Salle des États)"; French room names carry lang="fr". */
 function Where({ work }: { work: BookWork }) {
   const l = work.location;
   if (!l) return <>Not on view right now</>;
   return (
     <>
-      {l.wingName} · Level {floorLabel(l.floor)} · {l.room ? `Room ${l.room}` : l.place}
+      {l.wingName} · Floor {floorLabel(l.floor)} · {l.room ? `Room ${l.room}` : l.place}
       {l.room && l.roomName && (
         <>
           {" ("}

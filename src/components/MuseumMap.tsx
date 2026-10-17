@@ -184,7 +184,7 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
       <header className="pt-6">
         <h1 className="font-hand text-[2.15rem] font-bold leading-none">{current ? `${current.name} wing` : "Three wings"}</h1>
         <p className="mt-1 text-sm leading-normal text-muted" aria-live="polite">
-          {current ? "Pick a level, then a chapter." : "Tap a wing to zoom in and see its levels."}
+          {current ? "Pick a floor, then a chapter." : "Tap a wing to zoom in and see its floors."}
         </p>
       </header>
 
@@ -220,7 +220,7 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
                   <span>
                     <span className="block font-hand text-[1.6rem] font-bold leading-none">{w.name}</span>
                     <span className="mt-1 block text-sm leading-snug text-muted">
-                      Levels {[...w.floors].reverse().map((f) => floorLabel(f.floor)).join(", ")} · {w.chapters} chapters · {w.works} works
+                      Floors {[...w.floors].reverse().map((f) => floorLabel(f.floor)).join(", ")} · {w.chapters} chapters · {w.works} works
                     </span>
                   </span>
                   <NextDoodle className="h-[22px] w-[22px]" />
@@ -239,12 +239,12 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
       ) : (
         <>
           <div className="mt-3 flex items-baseline justify-between gap-2.5">
-            <h2 className="font-hand text-[2rem] font-bold leading-none">Levels</h2>
+            <h2 className="font-hand text-[2rem] font-bold leading-none">Floors</h2>
             <button type="button" onClick={() => choose(null)} className="min-h-11 text-sm font-bold text-ultramarine underline">
               All wings
             </button>
           </div>
-          <div className="mt-2.5 grid gap-1.5" role="group" aria-label={`${current.name} levels, top floor first`}>
+          <div className="mt-2.5 grid gap-1.5" role="group" aria-label={`${current.name} floors, top floor first`}>
             {current.floors.map((f, i) => {
               const on = f.floor === floor;
               const nch = f.chapters.length;
@@ -260,7 +260,7 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
                   }`}
                   style={{ ["--i" as string]: i }}
                 >
-                  <span className="whitespace-nowrap font-hand text-[1.4rem] font-bold leading-none">Level {floorLabel(f.floor)}</span>
+                  <span className="whitespace-nowrap font-hand text-[1.4rem] font-bold leading-none">Floor {floorLabel(f.floor)}</span>
                   <span className={`text-sm leading-snug ${on ? "text-[#dfe4f5]" : "text-muted"}`}>
                     {nch} chapter{nch > 1 ? "s" : ""} · {f.works} work{f.works > 1 ? "s" : ""}
                   </span>
@@ -271,7 +271,7 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
           </div>
 
           {shown && (
-            <ul className="mt-3.5 grid gap-2.5" aria-label={`Chapters on ${current.name}, Level ${floorLabel(shown.floor)}`}>
+            <ul className="mt-3.5 grid gap-2.5" aria-label={`Chapters on ${current.name}, Floor ${floorLabel(shown.floor)}`}>
               {shown.chapters.map((ch, i) => {
                 const chapter = data.chapters.find((c) => c.id === ch.id)!;
                 const states = chapter.works.map((w) => workState(w, progress));
@@ -303,7 +303,7 @@ export default function MuseumMap({ data, initialWing }: { data: MapData; initia
             </ul>
           )}
           <p className="mt-2.5 text-[12.5px] leading-normal text-muted">
-            Levels with no work from the 100 on view are not shown. Room order is not a walking route; check on the day.
+            Floors with no work from the 100 on view are not shown. Room order is not a walking route; check on the day.
           </p>
         </>
       )}

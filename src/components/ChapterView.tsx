@@ -122,7 +122,7 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
                       <span lang="fr">{l.roomName}</span> ·{" "}
                     </>
                   )}
-                  {l.wingName} · Level {floorLabel(l.floor)}
+                  {l.wingName} · Floor {floorLabel(l.floor)}
                 </span>
               )}
             </div>
