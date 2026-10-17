@@ -30,7 +30,11 @@ const base = new Map<string, BaseInfo>();
 const levelArtwork = new Map<string, string>();
 /** Artwork id -> its level's slowest path in seconds, for the per-work budget. */
 const levelWorst = new Map<string, number>();
-const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+// Round to whole seconds first, so 419.6 s reads 7:00, never 6:60.
+const fmt = (s: number) => {
+  const t = Math.round(s);
+  return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
+};
 
 for (const file of files) {
   let data: unknown;

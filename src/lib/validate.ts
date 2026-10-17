@@ -182,7 +182,11 @@ export function validateContent(data: unknown, file: string): Report {
     // Time budget (PRODUCT.md "Three details"): about 5 minutes, never more than 7.
     const t = levelTime(nodes as Record<string, LessonNode>, lesson.start);
     if (t) {
-      const fmt = (x: number) => `${Math.floor(x / 60)}:${String(Math.round(x % 60)).padStart(2, "0")}`;
+      // Whole seconds first, so 419.6 s reads 7:00, never 6:60.
+      const fmt = (x: number) => {
+        const r = Math.round(x);
+        return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`;
+      };
       if (t.worst > LEVEL_TIME_MODEL.capSeconds) {
         err(`${where}: takes ${fmt(t.worst)} on the slowest path (cap ${fmt(LEVEL_TIME_MODEL.capSeconds)})`);
       } else if (t.right > LEVEL_TIME_MODEL.rightWarnSeconds) {

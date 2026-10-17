@@ -9,8 +9,9 @@
 // - MOMENTS_KEY (added with motion, PRODUCT.md "Motion"): the two one-shot
 //   moments on the route: `justCompleted` (the level or round finished for the
 //   first time, set by markComplete, read and cleared by the route) and
-//   `challengeUnlockSeen` (the "Close-ups unlocked" moment has played). Losing
-//   it only replays or skips a small animation; progress never depends on it.
+//   `challengeUnlockSeen` (the "Close-ups unlocked" moment has played), and
+//   `leslyMet` (Lesly's one-time introduction has been shown). Losing it only
+//   replays or skips a small moment; progress never depends on it.
 // Challenge rounds use KEY and PLACE_KEY too, under their own lesson ids.
 
 const KEY = "louvre-before-you-go:progress:v1";
@@ -164,7 +165,7 @@ export function finishRound(roundId: string): void {
 }
 
 /** One-shot moments on the route (PRODUCT.md "Motion"). */
-type Moments = { justCompleted?: string; challengeUnlockSeen?: boolean };
+type Moments = { justCompleted?: string; challengeUnlockSeen?: boolean; leslyMet?: boolean };
 
 function readMoments(): Moments {
   try {
@@ -175,6 +176,7 @@ function readMoments(): Moments {
     return {
       ...(typeof m.justCompleted === "string" ? { justCompleted: m.justCompleted } : {}),
       ...(m.challengeUnlockSeen === true ? { challengeUnlockSeen: true } : {}),
+      ...(m.leslyMet === true ? { leslyMet: true } : {}),
     };
   } catch {
     return {};
@@ -210,4 +212,13 @@ export function challengeUnlockSeen(): boolean {
 
 export function markChallengeUnlockSeen(): void {
   writeMoments({ ...readMoments(), challengeUnlockSeen: true });
+}
+
+/** Whether the player has already met Lesly, the guide (her one-time introduction). */
+export function leslyMet(): boolean {
+  return readMoments().leslyMet === true;
+}
+
+export function markLeslyMet(): void {
+  writeMoments({ ...readMoments(), leslyMet: true });
 }
