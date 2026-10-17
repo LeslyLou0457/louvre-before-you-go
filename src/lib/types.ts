@@ -28,8 +28,7 @@ export type Speaker = {
   name: string;
   /**
    * "artist"; "person" for another documented figure; "guide" for Lesly, the
-   * museum guide (a cat) who narrates works whose maker is unknown or left no
-   * documented words.
+   * museum guide (a cat) who narrates works whose maker is unknown.
    */
   kind: "artist" | "person" | "guide";
   /** Id of the drawing in src/doodles/avatars.tsx (listed in src/lib/avatar-ids.ts). */

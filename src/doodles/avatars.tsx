@@ -39,8 +39,14 @@
 //              of black curls tumbling onto the forehead, short dark
 //              sideburns, heavy arched black brows, large dark eyes glancing
 //              aside, rosy cheeks, clean-shaven;
+//   david      Jacques-Louis David, from his Self-Portrait of 1794 (Louvre):
+//              a big wild mass of unpowdered chestnut hair, tufts falling
+//              freely on the forehead, exaggerated; and, drawn gently, the
+//              swelling low on his left cheek (a benign tumour, said to follow
+//              a fencing wound), which the portrait keeps in shadow. Sources:
+//              project files, content-plans/artist-voices/DAVID_HEAD.md;
 //   guide      Lesly, the museum guide who narrates works whose maker is
-//              unknown or left no documented words: a tuxedo cat dressed after
+//              unknown: a tuxedo cat dressed after
 //              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
 //              cloth, amber eyes, pearl earring), our own drawing.
 //
@@ -292,6 +298,46 @@ const AVATARS: Record<AvatarId, Drawing> = {
     ),
     mouthClosed: line("M29.8 45.2 Q32.2 45.9 34.6 45", "#b8433a"),
     mouthOpen: oval(32.2, 45.6, 2.1, 1.7),
+  },
+  // Jacques-Louis David, from his Self-Portrait of 1794 (Louvre, INV 3705):
+  // the big wild mass of unpowdered chestnut hair, abundant and curly, its
+  // tufts falling freely on the forehead, exaggerated; a fierce, bright gaze
+  // under slanting brows; and the swelling low on his left cheek (the
+  // viewer's right), drawn gently as a fuller jaw in a soft shadow tone, as
+  // the portrait itself keeps it in shadow. Our own drawing, not traced.
+  david: {
+    tilt: -5,
+    head: (
+      <>
+        {/* the back of the wild chestnut mass, tufts sticking out all round */}
+        <path d="M18.6 36.4 Q13.2 34.6 9.6 30.6 Q12.2 28.6 13.6 26.4 Q9 23.4 7.8 18.6 Q12 18.2 14.6 17 Q11.8 12.6 12.2 8.6 Q16.8 9.6 20 11.6 Q20.2 6.6 22.4 3 Q25.6 5.6 27.6 8.4 Q30.2 4.4 33.4 1.8 Q35.4 5 36.6 8 Q39.6 4.2 43.8 2.8 Q44.6 6.8 44.6 10 Q48.6 8.2 53.2 8.6 Q51.4 12.8 49.8 15.6 Q53.6 17.2 56.4 20.6 Q53.4 22.6 50.8 23.8 Q54 27.4 55.2 31.8 Q50.8 32.8 46 35.4 C45.6 28.8 42.8 23.6 38.2 22 C32.2 20.2 25.8 21 22.2 24.8 C19.8 27.4 18.6 31.6 18.6 36.4 Z" fill="#5f3319" stroke="#5f3319" strokeWidth={2.6} strokeLinejoin="round" />
+        {brush("M13.6 21.6 Q16.4 15.6 21.8 13.2", "#8d5631", 1.2)}
+        {brush("M26.6 9.6 Q31.8 7 37.4 9.2", "#8d5631", 1.2)}
+        {brush("M42.6 11.6 Q48.2 13.4 50 18.6", "#8d5631", 1.2)}
+        {brush("M49.2 25 Q51.4 28.6 49.8 32.4", "#8d5631", 1.2)}
+        <ellipse cx="19.8" cy="34.6" rx="2.4" ry="3.4" fill="#e3937c" />
+        <ellipse cx="45" cy="33" rx="2.2" ry="3.2" fill="#e3937c" />
+        {/* the face, its lower left cheek (the viewer's right) fuller */}
+        <path d="M32 17.6 C39.4 17.4 43.8 22.4 44.2 29.6 C44.4 33.6 46 36.2 46.4 40 C46.8 44.6 43.8 48.8 39.4 50.6 C35.6 52.4 29.8 52.6 26.8 50.6 C22.2 47.2 20.2 39.4 20.4 30.6 C20.6 22.6 24.8 17.8 32 17.6 Z" fill="#f5b49c" />
+        {/* the swelling kept in soft shadow, as in the self-portrait */}
+        <path d="M41.6 39.4 C44 39 46 40.6 46.2 42.8 C46.2 45.4 44.2 47.6 41.6 48.2 C40.6 46.6 40.2 44.4 40.4 42.4 C40.6 41 41 40 41.6 39.4 Z" fill="#eda58c" />
+        {/* unpowdered locks falling freely on the forehead, every which way */}
+        <path d="M20.6 30.4 C19.8 22.8 24.4 17.6 31 17.2 C37.8 16.8 43.4 20.4 44.4 27.4 C43 26 41.4 25.6 40 26.2 L40.6 22.8 L37 26.6 C35.8 25.4 34.2 25.2 32.8 25.8 L30.6 22.2 L29.6 26.6 C27.8 25.8 26.2 26.2 25 27.4 L23.4 24.2 Z" fill="#5f3319" stroke="#5f3319" strokeWidth={1.2} strokeLinejoin="round" />
+        {brush("M23.4 30.2 Q26.6 28.2 30 29.6", "#4a2a17", 1.8)}
+        {brush("M34.4 29.4 Q37.8 28 40.8 29.8", "#4a2a17", 1.8)}
+        <path d="M32.4 31.2 L35.2 39.8 Q32.6 41 30 40 Z" fill="#d27458" />
+      </>
+    ),
+    eyes: (
+      <>
+        <circle cx="27" cy="32.6" r="1.6" fill={INK} />
+        <circle cx="37.6" cy="32.4" r="1.6" fill={INK} />
+        <circle cx="27.5" cy="32.1" r="0.5" fill="#fff" />
+        <circle cx="38.1" cy="31.9" r="0.5" fill="#fff" />
+      </>
+    ),
+    mouthClosed: line("M29.2 45.2 Q31.6 46 34.2 44.9", "#b8433a"),
+    mouthOpen: oval(31.7, 45.5, 2, 1.6),
   },
   // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
   // with a Pearl Earring (our own drawing): an ultramarine headwrap with the
