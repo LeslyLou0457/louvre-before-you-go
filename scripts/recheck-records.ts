@@ -28,8 +28,21 @@ type LouvreRecord = {
   arkId?: string;
   [key: string]: unknown;
 };
-type Match = "yes" | "NO" | "check" | "info";
-type Row = { work: string; field: string; ours: string; louvre: string; match: Match };
+type Match = "yes" | "NO" | "check" | "info" | "OK (known exception)";
+type Row = { id: string; work: string; field: string; ours: string; louvre: string; match: Match };
+
+/**
+ * Known exceptions: a "NO" that a person has already checked and found right.
+ * Keyed by work id and field; applies only while our value is still `ours`.
+ */
+const KNOWN_EXCEPTIONS: { work: string; field: string; ours: string; note: string }[] = [
+  {
+    work: "virgin-and-child-with-saint-anne",
+    field: "dimensions",
+    ours: "168 × 130 cm",
+    note: "The record page notes the panel was enlarged later: 1.13 m wide originally, 1.3 m today (\"agrandi plus tard : 1,3m actuellement\"; not in the JSON). Our 130 cm is the present width.",
+  },
+];
 
 const root = process.cwd();
 const contentDir = path.join(root, "content");
@@ -244,22 +257,31 @@ async function main() {
     const inv = compareInventory(w.inventory, r);
     const date = compareDate(w.date, r);
     const art = artworks.get(w.id);
-    rows.push({ work: label, field: "room", ours: oursRoom(w), louvre: str(r.room) || "not in record", match: compareRoom(w, r) });
-    rows.push({ work: label, field: "display", ours: w.display + (w.displayNote ? ` (${w.displayNote})` : ""), louvre: disp.words, match: compareDisplay(w.display, disp.status) });
-    rows.push({ work: label, field: "inventory", ours: w.inventory, louvre: inv.live, match: inv.match });
-    rows.push({ work: label, field: "date", ours: w.date, louvre: date.live, match: date.match });
+    rows.push({ id: w.id, work: label, field: "room", ours: oursRoom(w), louvre: str(r.room) || "not in record", match: compareRoom(w, r) });
+    rows.push({ id: w.id, work: label, field: "display", ours: w.display + (w.displayNote ? ` (${w.displayNote})` : ""), louvre: disp.words, match: compareDisplay(w.display, disp.status) });
+    rows.push({ id: w.id, work: label, field: "inventory", ours: w.inventory, louvre: inv.live, match: inv.match });
+    rows.push({ id: w.id, work: label, field: "date", ours: w.date, louvre: date.live, match: date.match });
     if (art) {
       const dim = compareDimensions(art.dimensions, r);
-      rows.push({ work: label, field: "dimensions", ours: art.dimensions ?? "—", louvre: dim.live, match: dim.match });
+      rows.push({ id: w.id, work: label, field: "dimensions", ours: art.dimensions ?? "—", louvre: dim.live, match: dim.match });
       const imgs = Array.isArray(r.image) ? (r.image as { copyright?: string }[]) : [];
       // Our photos come from Wikimedia Commons, not the Louvre's own images: shown for reference only.
-      rows.push({ work: label, field: "image credit", ours: art.imageCredit ?? "—", louvre: imgs[0]?.copyright ?? "not in record", match: "info" });
+      rows.push({ id: w.id, work: label, field: "image credit", ours: art.imageCredit ?? "—", louvre: imgs[0]?.copyright ?? "not in record", match: "info" });
     }
     const changed = mod && mod > w.checkedOn;
     if (changed) changedSince.push(`${w.title}: record modified ${mod}, we checked ${w.checkedOn}`);
-    rows.push({ work: label, field: "record modified", ours: `checkedOn ${w.checkedOn}`, louvre: mod || "not in record", match: changed ? "check" : "yes" });
+    rows.push({ id: w.id, work: label, field: "record modified", ours: `checkedOn ${w.checkedOn}`, louvre: mod || "not in record", match: changed ? "check" : "yes" });
   }
 
+  for (const r of rows) {
+    if (r.match !== "NO") continue;
+    const x = KNOWN_EXCEPTIONS.find((e) => e.work === r.id && e.field === r.field && e.ours === r.ours);
+    if (x) {
+      r.match = "OK (known exception)";
+      r.louvre += ` · Known exception: ${x.note}`;
+    }
+  }
+  const known = rows.filter((r) => r.match === "OK (known exception)");
   const no = rows.filter((r) => r.match === "NO");
   const toCheck = rows.filter((r) => r.match === "check");
   const byField = new Map<string, number>();
@@ -283,15 +305,17 @@ async function main() {
     "",
     `- Works in the catalogue: ${works.length}; records checked: ${checked}; skipped (no Louvre record): ${skipped.length}; failed to fetch: ${failed.length}.`,
     `- Mismatches ("NO"): **${no.length}**${no.length ? ` (${[...byField].map(([f, n]) => `${f} ${n}`).join(", ")})` : ""}.`,
+    `- Known exceptions (a person checked these and our value is right): ${known.length}${known.length ? ` (${known.map((r) => `${r.work}: ${r.field}`).join("; ")})` : ""}.`,
     `- For a person to judge ("check"): ${toCheck.length}, of which ${changedSince.length} are records modified after our \`checkedOn\`.`,
     `- Works with a level (${live.length}) with a mismatch: ${liveHit.length ? liveHit.join("; ") : "none"}.`,
     "",
-    "How to read it: \"yes\" agrees; \"NO\" disagrees; \"check\" the record can't settle it automatically (a status the record has no field for, a century or approximate date, a spot without a room number, or a record changed since we checked); \"info\" is shown for reference (our photos are from Wikimedia Commons, so their credit is not the Louvre's). The record has no on-display field: display is read from `currentLocation` (\"non exposé\"), `room` and `longTermLoanTo`. The Louvre warns room data may be out of date.",
+    "How to read it: \"yes\" agrees; \"NO\" disagrees; \"check\" the record can't settle it automatically (a status the record has no field for, a century or approximate date, a spot without a room number, or a record changed since we checked); \"OK (known exception)\" disagrees with the record JSON, but a person checked it and our value is right (the reason is in the row); \"info\" is shown for reference (our photos are from Wikimedia Commons, so their credit is not the Louvre's). The record has no on-display field: display is read from `currentLocation` (\"non exposé\"), `room` and `longTermLoanTo`. The Louvre warns room data may be out of date.",
     "",
   ];
   if (skipped.length) lines.push("## Skipped", "", ...skipped.map((s) => `- ${s}`), "");
   if (failed.length) lines.push("## Failed to fetch", "", ...failed.map((s) => `- ${s}`), "");
   lines.push("## Mismatches", "", ...(no.length ? table(no) : ["None."]), "");
+  if (known.length) lines.push("## Known exceptions", "", ...table(known), "");
   if (changedSince.length) lines.push("## Records modified since our check", "", ...changedSince.map((s) => `- ${s}`), "");
   lines.push("## Full comparison", "", ...table(rows), "");
   const report = lines.join("\n");
