@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import MuseumLabel from "@/components/MuseumLabel";
-import ReturnLink from "@/components/ReturnLink";
+import ClearedNext, { type ChapterLevels } from "@/components/ClearedNext";
 import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
-import { nextInChapter } from "@/lib/catalogue";
+import { getBook } from "@/lib/catalogue";
 import { getRoundForLevel } from "@/lib/challenge";
 import { getLevel, getLevels, museumLink, narratorOf, nextTrailLevel } from "@/lib/content";
 import { isTrailLevel } from "@/lib/trail";
@@ -27,16 +26,18 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function DonePage({ params }: Params) {
   const level = getLevel((await params).id);
   if (!level) notFound();
-  // On the trail, the next trail level unlocks. A level that lives only in a
-  // chapter points to the next level in that chapter instead (chapters are free to play).
+  // The next trail level, used when the level is played on the trail; the
+  // chapter's levels, used for chapter levels and for trail levels opened
+  // from a chapter (ClearedNext picks by the URL's `?from` and progress).
   const trail = isTrailLevel(level.lesson.id);
   const nextTrail = nextTrailLevel(level);
-  const inChapter = trail ? undefined : nextInChapter(level.artwork.id);
-  const next = nextTrail
-    ? { title: nextTrail.artwork.title, href: `/lesson/${nextTrail.lesson.id}/` }
-    : inChapter?.next?.level
-      ? { title: inChapter.next.title, href: `/lesson/${inChapter.next.level.id}/?from=${inChapter.chapterId}` }
-      : undefined;
+  const chapters: ChapterLevels[] = getBook()
+    .chapters.map((c) => ({
+      id: c.id,
+      levels: c.works.flatMap((w) => (w.level ? [{ levelId: w.level.id, title: w.title }] : [])),
+    }))
+    .filter((c) => c.levels.length > 0);
+  const chapter = chapters.find((c) => c.levels.some((l) => l.levelId === level.lesson.id));
   const narrator = narratorOf(level);
 
   return (
@@ -68,27 +69,14 @@ export default async function DonePage({ params }: Params) {
         <MuseumLabel artwork={level.artwork} museumUrl={museumLink(level)} />
       </div>
 
-      <div className="mt-auto flex flex-col items-center gap-3">
-        {next ? (
-          <p className="text-center font-hand text-xl">
-            {trail ? "Unlocked:" : `Next in Chapter ${inChapter?.chapterId}:`} <span className="font-bold">{next.title}</span>
-          </p>
-        ) : trail ? (
-          <p className="text-center font-hand text-xl">That was the last one. You&apos;re ready for the Louvre.</p>
-        ) : (
-          <p className="text-center font-hand text-xl">
-            {getRoundForLevel(level.lesson.id)
-              ? `Its close-up round is open now, at the bottom of Chapter ${inChapter?.chapterId}.`
-              : `That's the last level in Chapter ${inChapter?.chapterId} for now.`}
-          </p>
-        )}
-        <ReturnLink className="btn-primary w-full" />
-        {next && (
-          <Link href={next.href} className="inline-flex min-h-11 items-center font-hand text-lg text-ultramarine underline">
-            Start the next level now
-          </Link>
-        )}
-      </div>
+      <ClearedNext
+        levelId={level.lesson.id}
+        trail={trail}
+        trailNext={nextTrail ? { title: nextTrail.artwork.title, href: `/lesson/${nextTrail.lesson.id}/` } : undefined}
+        chapter={chapter}
+        chapters={chapters}
+        hasRound={!!getRoundForLevel(level.lesson.id)}
+      />
     </main>
   );
 }
