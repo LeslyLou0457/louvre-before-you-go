@@ -37,4 +37,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
   "intervention-of-the-sabine-women":
     "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
+  "plaque-of-the-ergastines-parthenon-frieze":
+    "https://commons.wikimedia.org/wiki/File:Plaque_des_Ergastines_-_Mus%C3%A9e_du_Louvre_AGER_MR_825_;_N_1700_;_N_1279_;_Ma_738.jpg",
 };

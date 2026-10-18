@@ -537,7 +537,7 @@
           "id": "plaque-of-the-ergastines-parthenon-frieze",
           "title": "Plaque of the Ergastines (Parthenon frieze)",
           "titleFr": "Plaque des Ergastines, bloc 7 de la frise Est des Grandes Panathénées",
-          "artist": "Greek, Classical; Phidias (record)",
+          "artist": "Greek, Classical period",
           "date": "445–438 BC",
           "medium": "Pentelic marble",
           "department": "Greek, Etruscan and Roman Antiquities",
@@ -549,8 +549,9 @@
             "roomName": "Salle de Diane"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
+          "checkedOn": "2026-10-18",
           "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279036",
+          "levelId": "plaque-of-the-ergastines-1",
           "note": "Record lists the wing as Denon; room 347 sits between Sully 345 and 348."
         },
         {
