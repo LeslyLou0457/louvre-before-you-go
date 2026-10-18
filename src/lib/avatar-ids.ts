@@ -3,6 +3,6 @@
 // fail a speaker whose avatar has no drawing. avatars.tsx types its map as
 // Record<AvatarId, …>, so TypeScript fails the build if the two lists drift.
 
-export const AVATAR_IDS = ["leonardo", "delacroix", "gericault", "veronese", "castiglione", "ingres", "david", "guide"] as const;
+export const AVATAR_IDS = ["leonardo", "delacroix", "gericault", "veronese", "castiglione", "ingres", "david", "caravaggio", "titian", "guide"] as const;
 
 export type AvatarId = (typeof AVATAR_IDS)[number];

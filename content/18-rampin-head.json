@@ -1,0 +1,314 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "rampin-head",
+    "title": "Rampin Head",
+    "artist": "Greek, Archaic period",
+    "year": "c. 560–540 BC",
+    "image": "/images/rampin-head.jpg",
+    "imageCredit": "Photo: Marie-Lan Nguyen, 2006, via Wikimedia Commons · Public domain",
+    "medium": "Marble",
+    "dimensions": "Height 27 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "rampin-head-1",
+      "order": 1,
+      "title": "Half in Paris, half in Athens",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A smiling young man with a short beard, and traces of red paint. Around 550 BC he was carved as a rider on his horse. Only his head is here.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Look low, at the base of his neck. There is a line there. Remember it."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where is the rest of the statue?",
+          "choices": [
+            {
+              "label": "In Athens",
+              "next": "b1a",
+              "correct": true
+            },
+            {
+              "label": "Lost for ever",
+              "next": "b1b"
+            },
+            {
+              "label": "In the Louvre's storerooms",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Yes. The Acropolis Museum in Athens has his marble body and horse. The Louvre shows its head on a plaster cast of them, and Athens shows them with a plaster copy of the head.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "It survives, in another museum.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Only a head sits in the case.",
+            "truth": "His marble body and horse are in the Acropolis Museum in Athens.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          },
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Below the neck, this is plaster.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The body under the head looks complete.",
+            "truth": "That body is a cast. The marble body and horse are in Athens.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "The head was found in Athens in 1877, long before anyone matched it to the rider. In time it came to the Louvre.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Why is he called Rampin?",
+          "choices": [
+            {
+              "label": "The sculptor's name",
+              "next": "b2a"
+            },
+            {
+              "label": "The rider's name",
+              "next": "b2b"
+            },
+            {
+              "label": "A collector's name",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Nobody knows the sculptor's name.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many works carry their maker's name.",
+            "truth": "The sculptor is unknown. Scholars call him the Rampin Master, after this statue.",
+            "evidence": "The Acropolis Museum; Wagner (1997)."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "No inscription names him.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A statue of a rider might carry his name.",
+            "truth": "The name comes from the collector who owned the head.",
+            "evidence": "The Acropolis Museum; Lechat (1900); the Louvre record."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. Georges Rampin bought the head soon after it was found and left it to the Louvre. The name is modern.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "For decades nobody linked the head in Paris to the headless rider in Athens. Then, by 1936, the British archaeologist Humfry Payne did.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Head in Paris, body in Athens. How do you test a fit across two countries?"
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "How did Payne show head and body belonged together?",
+          "choices": [
+            {
+              "label": "He read an inscription",
+              "next": "b3a"
+            },
+            {
+              "label": "He matched plaster casts",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "He took the head to Athens",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "There is none.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Inscriptions often identify statues.",
+            "truth": "No inscription names the rider. Payne fitted a cast of the head to a cast of the neck.",
+            "evidence": "The Louvre record; Lemerle (1936); the British School at Athens (1936)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. A cast of the Paris head fitted a cast of the neck of the rider in Athens.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "The marble stayed put.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The two halves had to meet somehow.",
+            "truth": "He tested casts, and the Louvre still has the marble head.",
+            "evidence": "The British School at Athens (1936); Wagner (1997); the Louvre record."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "He is the earliest of the marble horsemen found on the Acropolis. Look at the wreath on his head.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "What does his wreath most probably mean?",
+          "choices": [
+            {
+              "label": "He was a king",
+              "next": "b4a"
+            },
+            {
+              "label": "Just decoration",
+              "next": "b4b"
+            },
+            {
+              "label": "He won a horse contest",
+              "next": "b4c",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "A wreath, not a crown.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Kings wear things on their heads.",
+            "truth": "Most scholars read the wreath as a prize for winning a contest with horses.",
+            "evidence": "The Acropolis Museum; the British School at Athens (1936); Lemerle (1936)."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "It means more than that.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It looks like a pretty headband.",
+            "truth": "Most scholars read the wreath as a victor's prize, won in a contest with horses.",
+            "evidence": "The Acropolis Museum; the British School at Athens (1936); Lemerle (1936)."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Most likely. Most scholars read the wreath as a victor's prize. Which games he won, and which plant the wreath shows, scholars still disagree.",
+          "next": "n5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Where did the statue first stand?",
+          "choices": [
+            {
+              "label": "On the Athens Acropolis",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "At Olympia",
+              "next": "b5b"
+            },
+            {
+              "label": "In Rampin's house",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Yes. The Louvre records the head as found on the Acropolis, and the body and horse were found there too, in pieces.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "He may have won there; he stood in Athens.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His wreath may come from the games.",
+            "truth": "The statue stood on the Acropolis of Athens, where its body and horse were found.",
+            "evidence": "The Louvre record; the Acropolis Museum; Lemerle (1936)."
+          },
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "He only owned the head, much later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The statue carries his name.",
+            "truth": "The head was found in Athens in 1877 and bought by Rampin. The statue had stood on the Acropolis.",
+            "evidence": "Lemerle (1936); Lechat (1900); the Louvre record."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "One rider, two cities. His head is here in Room 170, on Floor −1 of the Denon wing; his body and horse are in Athens. Plaster casts join them in both museums."
+        },
+        "n5": {
+          "type": "story",
+          "text": "Statues like his were offerings, dedicated to the gods.",
+          "next": "q5"
+        }
+      },
+      "takeaway": "The Louvre has only the head of this Athenian rider; his body and horse are in Athens, and plaster casts reunite them in both museums.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+        "https://www.theacropolismuseum.gr/en/node/22377",
+        "https://ora.ox.ac.uk/objects/uuid:6f2e2c02-7bc0-43c0-843c-cc76217c1485",
+        "https://www.persee.fr/doc/bch_0007-4217_1936_num_60_1_22154",
+        "https://digital.bsa.ac.uk/results.php?irn=163014&locality-irn=12&start=701",
+        "https://www.persee.fr/doc/piot_1148-6023_1900_num_7_2_1184"
+      ]
+    }
+  ]
+}

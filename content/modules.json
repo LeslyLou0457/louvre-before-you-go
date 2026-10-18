@@ -464,7 +464,7 @@
           "id": "lady-of-auxerre",
           "title": "Lady of Auxerre",
           "titleFr": "Dame d'Auxerre",
-          "artist": "Greek, Daedalic style",
+          "artist": "Greek, Archaic period",
           "date": "c. 640–620 BC",
           "medium": "Limestone",
           "department": "Greek, Etruscan and Roman Antiquities",
@@ -475,16 +475,17 @@
             "room": "170"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+          "levelId": "lady-of-auxerre-1"
         },
         {
           "id": "rampin-head",
           "title": "Rampin Head",
           "titleFr": "Tête du cavalier Rampin",
-          "artist": "Greek, Archaic, Athens",
+          "artist": "Greek, Archaic period",
           "date": "c. 560–540 BC",
-          "medium": "Pentelic marble, painted",
+          "medium": "Marble",
           "department": "Greek, Etruscan and Roman Antiquities",
           "inventory": "Ma 3104",
           "location": {
@@ -493,8 +494,9 @@
             "room": "170"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+          "levelId": "rampin-head-1"
         },
         {
           "id": "kore-of-samos-hera-of-samos",
@@ -1140,8 +1142,9 @@
             "roomName": "Salle des États"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062292"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062292",
+          "levelId": "woman-with-a-mirror-1"
         },
         {
           "id": "death-of-the-virgin",
@@ -1159,8 +1162,9 @@
             "roomName": "Grande Galerie"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
+          "checkedOn": "2026-10-18",
           "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062304",
+          "levelId": "death-of-the-virgin-1",
           "note": "Baroque (c. 1601–1606), not Renaissance; kept here because it hangs in Room 712."
         },
         {
