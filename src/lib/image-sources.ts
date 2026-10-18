@@ -50,4 +50,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Plaque_des_Ergastines_-_Mus%C3%A9e_du_Louvre_AGER_MR_825_;_N_1700_;_N_1279_;_Ma_738.jpg",
   "head-from-keros-cycladic-idol":
     "https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_figurine_f%C3%A9minine_-_Mus%C3%A9e_du_Louvre_AGER_MNB_509_;_Ma_2709.jpg",
+  "la-belle-ferronniere":
+    "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Woman_-_Leonardo_da_Vinci_-_Louvre_INV_778.jpg",
 };

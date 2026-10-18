@@ -1,0 +1,477 @@
+{
+  "artworkId": "la-belle-ferronniere",
+  "zoomImage": {
+    "file": "Portrait of a Woman - Leonardo da Vinci - Louvre INV 778.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Woman_-_Leonardo_da_Vinci_-_Louvre_INV_778.jpg",
+    "width": 3059,
+    "height": 4469,
+    "licence": "Public domain (PD-Art); the photographer also releases it as CC0",
+    "credit": "Photo: Wilfredor, 2024, via Wikimedia Commons · Public domain",
+    "overview": "/images/challenge/la-belle-ferronniere/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "la-belle-ferronniere-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: brow, arm and lower edge",
+      "narrator": "leonardo",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.19,
+            "w": 0.26,
+            "h": 0.1,
+            "label": "Her forehead, between the parted hair and the eyes",
+            "image": "/images/challenge/la-belle-ferronniere/c1.jpg"
+          },
+          "text": "Level one: her clothes date her. Now zoom to her forehead.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.19,
+            "w": 0.26,
+            "h": 0.1,
+            "label": "Her forehead, between the parted hair and the eyes",
+            "image": "/images/challenge/la-belle-ferronniere/c1.jpg"
+          },
+          "text": "What crosses her forehead?",
+          "choices": [
+            {
+              "label": "A strand of her hair",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "A crack in the paint",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "A band with a jewel",
+              "role": "right",
+              "next": "c1c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+              "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/"
+            },
+            {
+              "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+              "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Her hair is parted and drawn back.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It runs between the two sides of her hair.",
+            "truth": "It is a thin band with a single jewel, worn across the forehead.",
+            "evidence": "National Gallery, London; National Art Center, Tokyo."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Too even to be a crack.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old paint does crack, as her skin shows.",
+            "truth": "It is a band worn across the forehead, with a jewel in the middle.",
+            "evidence": "National Gallery, London; National Art Center, Tokyo."
+          }
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Yes. A thin band with a single jewel crosses her forehead, a north Italian court fashion of the 1490s.",
+          "next": "c1m"
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A thin band with one jewel: 1490s court fashion."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.62,
+            "y": 0.53,
+            "w": 0.32,
+            "h": 0.17,
+            "label": "Her upper arm on our right, where sleeve meets dress",
+            "image": "/images/challenge/la-belle-ferronniere/c2.jpg"
+          },
+          "text": "Level one: her sleeves are part of the fashion. Now zoom to the top of the sleeve on our right.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.62,
+            "y": 0.53,
+            "w": 0.32,
+            "h": 0.17,
+            "label": "Her upper arm on our right, where sleeve meets dress",
+            "image": "/images/challenge/la-belle-ferronniere/c2.jpg"
+          },
+          "text": "What holds her sleeve to the dress?",
+          "choices": [
+            {
+              "label": "Ribbons tied in bows",
+              "role": "right",
+              "next": "c2a",
+              "correct": true
+            },
+            {
+              "label": "Metal buttons",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Nothing: it is one dress",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+              "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/"
+            },
+            {
+              "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+              "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Yes. The sleeve is a separate piece, tied to the dress with ribbons, with white linen puffing through the gap.",
+          "next": "c2m"
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "No buttons: the ties are cloth.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Something round seems to fasten it.",
+            "truth": "The sleeve is tied to the dress with ribbons, the fashion of the 1490s.",
+            "evidence": "National Art Center, Tokyo; National Gallery, London."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "The sleeve is a separate piece.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The red cloth looks continuous.",
+            "truth": "Sleeves were tied on with ribbons; you can see the gap and the ties.",
+            "evidence": "National Art Center, Tokyo; National Gallery, London."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Ribboned sleeves, tied on at the shoulder."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.84,
+            "w": 1.0,
+            "h": 0.16,
+            "label": "The bottom band of the painting, below her waist",
+            "image": "/images/challenge/la-belle-ferronniere/c3.jpg"
+          },
+          "text": "Level one: she is seen to the waist. Now zoom to the bottom of the picture.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.84,
+            "w": 1.0,
+            "h": 0.16,
+            "label": "The bottom band of the painting, below her waist",
+            "image": "/images/challenge/la-belle-ferronniere/c3.jpg"
+          },
+          "text": "What runs across the bottom?",
+          "choices": [
+            {
+              "label": "A table top",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "A stone ledge",
+              "role": "right",
+              "next": "c3b",
+              "correct": true
+            },
+            {
+              "label": "The picture frame",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "National Gallery, London, 'Leonardo da Vinci: Painter at the Court of Milan', exhibition guide (2011), cat. 19",
+              "url": "https://www.nationalgallery.org.uk/media/15705/exhibition-guide_leonardo-da-vinci.pdf"
+            },
+            {
+              "title": "The Barber Institute of Fine Arts, Birmingham, Ingres, 'La belle Ferronnière' (drawing, about 1802-6)",
+              "url": "https://barber.org.uk/jean-auguste-dominique-ingres-1780-1867-2/"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "No table: it is a stone ledge.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is flat and wide, like a table.",
+            "truth": "It is a parapet, a stone ledge across the front of the picture.",
+            "evidence": "National Gallery, London (2011); the Barber Institute."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Yes. A stone ledge, or parapet, runs across the front of the picture, between her and us.",
+          "next": "c3m"
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "It is painted, inside the picture.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It runs right along the edge.",
+            "truth": "The ledge is painted as part of the picture: a parapet in front of her.",
+            "evidence": "National Gallery, London (2011); the Barber Institute."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A ledge between her world and ours."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n4"
+        ],
+        "concept": "From the list of her clothes (level) to the band itself: thin, with one jewel in the middle"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "A thin band with a jewel crosses her forehead, a 1490s north Italian fashion.",
+      "regionSources": [
+        {
+          "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+          "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+          "quote": "the narrow decorative hairband worn across the forehead | the squared necklines and the sleeves connected to the bodice by ribbons",
+          "supports": "A narrow band across the forehead; sleeves tied to the bodice with ribbons. (Co-organised with the Louvre: counted with the Louvre.)",
+          "readVia": "Saved page text (research/works/belle-ferronniere/sources/NACT-2026_louvre-renaissance.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+          "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+          "quote": "A delicate band around her forehead secures an embroidered cap on the back of her head. | as were the ribboned sleeves slashed down the back. They are worn by Beatrice d’Este in the Pala Sforzesca (Pinacoteca di Brera, Milan) and by the lady in Leonardo da Vinci’s La bell",
+          "supports": "The forehead band and ribboned sleeves of 1490s north Italian courts, worn by the lady in this painting.",
+          "readVia": "Saved page text (research/works/belle-ferronniere/sources/NG-BONA.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+            "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+            "quote": "A delicate band around her forehead secures an embroidered cap on the back of her head. | as were the ribboned sleeves slashed down the back. They are worn by Beatrice d’Este in the Pala Sforzesca (Pinacoteca di Brera, Milan) and by the lady in Leonardo da Vinci’s La bell",
+            "supports": "The forehead band and ribboned sleeves of 1490s north Italian courts, worn by the lady in this painting.",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NG-BONA.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+            "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+            "quote": "the narrow decorative hairband worn across the forehead | the squared necklines and the sleeves connected to the bodice by ribbons",
+            "supports": "A narrow band across the forehead; sleeves tied to the bodice with ribbons. (Co-organised with the Louvre: counted with the Louvre.)",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NACT-2026_louvre-renaissance.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1b": [
+          {
+            "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+            "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+            "quote": "A delicate band around her forehead secures an embroidered cap on the back of her head. | as were the ribboned sleeves slashed down the back. They are worn by Beatrice d’Este in the Pala Sforzesca (Pinacoteca di Brera, Milan) and by the lady in Leonardo da Vinci’s La bell",
+            "supports": "The forehead band and ribboned sleeves of 1490s north Italian courts, worn by the lady in this painting.",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NG-BONA.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+            "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+            "quote": "the narrow decorative hairband worn across the forehead | the squared necklines and the sleeves connected to the bodice by ribbons",
+            "supports": "A narrow band across the forehead; sleeves tied to the bodice with ribbons. (Co-organised with the Louvre: counted with the Louvre.)",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NACT-2026_louvre-renaissance.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop; NACT and the National Gallery both describe the forehead band in this fashion.",
+      "notes": "Ledger bf-010. \"A single jewel\" is visible in the crop (NACT also says \"a single gem in the center\").",
+      "quoteCheck": "2026-10-18: NACT and NG Bona texts re-read in the saved files.",
+      "cropCheck": "2026-10-18: box measured on images/belle-ferronniere/main.jpg (1920 × 2805); crop 499 × 280 px, never upscaled. Checked by eye: the parted hair, the thin dark band with a jewel at the centre, the top of the eyes below."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n4"
+        ],
+        "concept": "From \"sleeves tied on with ribbons\" (level) to seeing the ties and the gap"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Her sleeve is a separate piece tied to the dress with ribbons; linen shows through the gap.",
+      "regionSources": [
+        {
+          "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+          "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+          "quote": "the narrow decorative hairband worn across the forehead | the squared necklines and the sleeves connected to the bodice by ribbons",
+          "supports": "A narrow band across the forehead; sleeves tied to the bodice with ribbons. (Co-organised with the Louvre: counted with the Louvre.)",
+          "readVia": "Saved page text (research/works/belle-ferronniere/sources/NACT-2026_louvre-renaissance.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+          "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+          "quote": "A delicate band around her forehead secures an embroidered cap on the back of her head. | as were the ribboned sleeves slashed down the back. They are worn by Beatrice d’Este in the Pala Sforzesca (Pinacoteca di Brera, Milan) and by the lady in Leonardo da Vinci’s La bell",
+          "supports": "The forehead band and ribboned sleeves of 1490s north Italian courts, worn by the lady in this painting.",
+          "readVia": "Saved page text (research/works/belle-ferronniere/sources/NG-BONA.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2b": [
+          {
+            "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+            "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+            "quote": "the narrow decorative hairband worn across the forehead | the squared necklines and the sleeves connected to the bodice by ribbons",
+            "supports": "A narrow band across the forehead; sleeves tied to the bodice with ribbons. (Co-organised with the Louvre: counted with the Louvre.)",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NACT-2026_louvre-renaissance.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+            "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+            "quote": "A delicate band around her forehead secures an embroidered cap on the back of her head. | as were the ribboned sleeves slashed down the back. They are worn by Beatrice d’Este in the Pala Sforzesca (Pinacoteca di Brera, Milan) and by the lady in Leonardo da Vinci’s La bell",
+            "supports": "The forehead band and ribboned sleeves of 1490s north Italian courts, worn by the lady in this painting.",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NG-BONA.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "The National Art Center, Tokyo, 'Masterpieces of the Renaissance from the Musée du Louvre' (2026), Fashion Characteristics",
+            "url": "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+            "quote": "the narrow decorative hairband worn across the forehead | the squared necklines and the sleeves connected to the bodice by ribbons",
+            "supports": "A narrow band across the forehead; sleeves tied to the bodice with ribbons. (Co-organised with the Louvre: counted with the Louvre.)",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NACT-2026_louvre-renaissance.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "National Gallery, London, 'Italian, Milanese: Bona of Savoy (?)', collection page",
+            "url": "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+            "quote": "A delicate band around her forehead secures an embroidered cap on the back of her head. | as were the ribboned sleeves slashed down the back. They are worn by Beatrice d’Este in the Pala Sforzesca (Pinacoteca di Brera, Milan) and by the lady in Leonardo da Vinci’s La bell",
+            "supports": "The forehead band and ribboned sleeves of 1490s north Italian courts, worn by the lady in this painting.",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/NG-BONA.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop; NACT (\"sleeves connected to the bodice by ribbons\") and the National Gallery (\"ribboned sleeves\") agree.",
+      "notes": "Ledger bf-010. \"White linen\" through the gap: visible; NACT also says the gaps reveal a white blouse.",
+      "quoteCheck": "2026-10-18: NACT and NG Bona texts re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1920 × 2805); crop 615 × 477 px, never upscaled. Checked by eye: a knotted ribbon bow, white cloth puffing out, red sleeve below."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From \"behind a stone ledge\" (level) to the ledge itself, painted across the whole width"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "A painted stone ledge (parapet) runs across the bottom of the picture.",
+      "regionSources": [
+        {
+          "title": "National Gallery, London, 'Leonardo da Vinci: Painter at the Court of Milan', exhibition guide (2011), cat. 19",
+          "url": "https://www.nationalgallery.org.uk/media/15705/exhibition-guide_leonardo-da-vinci.pdf",
+          "quote": "Her static pose behind a plinth-like parapet",
+          "supports": "A stone ledge (parapet) runs in front of her.",
+          "readVia": "Saved PDF text (research/works/belle-ferronniere/sources/NG-GUIDE-2011.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "The Barber Institute of Fine Arts, Birmingham, Ingres, 'La belle Ferronnière' (drawing, about 1802-6)",
+          "url": "https://barber.org.uk/jean-auguste-dominique-ingres-1780-1867-2/",
+          "quote": "it omits the parapet at the bottom of the original painting",
+          "supports": "The original painting has a parapet at the bottom.",
+          "readVia": "Saved page text (research/works/belle-ferronniere/sources/BARBER_ingres-belle-ferronniere.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "National Gallery, London, 'Leonardo da Vinci: Painter at the Court of Milan', exhibition guide (2011), cat. 19",
+            "url": "https://www.nationalgallery.org.uk/media/15705/exhibition-guide_leonardo-da-vinci.pdf",
+            "quote": "Her static pose behind a plinth-like parapet",
+            "supports": "A stone ledge (parapet) runs in front of her.",
+            "readVia": "Saved PDF text (research/works/belle-ferronniere/sources/NG-GUIDE-2011.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "The Barber Institute of Fine Arts, Birmingham, Ingres, 'La belle Ferronnière' (drawing, about 1802-6)",
+            "url": "https://barber.org.uk/jean-auguste-dominique-ingres-1780-1867-2/",
+            "quote": "it omits the parapet at the bottom of the original painting",
+            "supports": "The original painting has a parapet at the bottom.",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/BARBER_ingres-belle-ferronniere.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "National Gallery, London, 'Leonardo da Vinci: Painter at the Court of Milan', exhibition guide (2011), cat. 19",
+            "url": "https://www.nationalgallery.org.uk/media/15705/exhibition-guide_leonardo-da-vinci.pdf",
+            "quote": "Her static pose behind a plinth-like parapet",
+            "supports": "A stone ledge (parapet) runs in front of her.",
+            "readVia": "Saved PDF text (research/works/belle-ferronniere/sources/NG-GUIDE-2011.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "The Barber Institute of Fine Arts, Birmingham, Ingres, 'La belle Ferronnière' (drawing, about 1802-6)",
+            "url": "https://barber.org.uk/jean-auguste-dominique-ingres-1780-1867-2/",
+            "quote": "it omits the parapet at the bottom of the original painting",
+            "supports": "The original painting has a parapet at the bottom.",
+            "readVia": "Saved page text (research/works/belle-ferronniere/sources/BARBER_ingres-belle-ferronniere.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop; the National Gallery and the Barber Institute both name the parapet.",
+      "notes": "Ledger bf-011 (the NG's sculpture reading is not used), the Barber Institute names the parapet of the original.",
+      "quoteCheck": "2026-10-18: NG guide and Barber texts re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1920 × 2805); crop 1920 × 449 px, never upscaled. Checked by eye: the grey stone ledge across the full width, the bottom of her red dress above it."
+    }
+  }
+}

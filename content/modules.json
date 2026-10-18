@@ -1200,9 +1200,10 @@
           "inventory": "INV 778",
           "location": null,
           "display": "not-on-display",
-          "displayNote": "Record: current location \"non exposé\".",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062372"
+          "displayNote": "Record: current location \"non exposé\". On loan to the National Art Center, Tokyo, 9 Sep – 13 Dec 2026.",
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062372",
+          "levelId": "la-belle-ferronniere-1"
         },
         {
           "id": "pastoral-concert",
