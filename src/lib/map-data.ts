@@ -19,7 +19,7 @@ export type MapChapterRow = {
   here: number;
   /** "Room 703", "Rooms 700–702", or a place with no number. */
   rooms: string;
-  /** "Sully, Level 0", for the chapter's works on view elsewhere. */
+  /** "Sully, Floor 0", for the chapter's works on view elsewhere. */
   also: string[];
 };
 
@@ -40,7 +40,7 @@ export type MapWing = {
   floors: MapFloor[];
   chapters: number;
   works: number;
-  /** "Denon wing: 6 chapters, 30 works on view, levels −1 to 1". */
+  /** "Denon wing: 6 chapters, 30 works on view, floors −1 to 1". */
   ariaLabel: string;
 };
 
@@ -94,7 +94,7 @@ export function getMapData(): MapData {
           const chapter = chapters.find((c) => c.id === id)!;
           const works = here.filter((x) => x.chapter.id === id).map((x) => x.w);
           const elsewhere = onMap.filter((x) => x.chapter.id === id && !(x.w.location!.wing === wing.id && x.w.location!.floor === floor));
-          const also = [...new Set(elsewhere.map((x) => `${x.w.location!.wingName}, Level ${floorLabel(x.w.location!.floor)}`))];
+          const also = [...new Set(elsewhere.map((x) => `${x.w.location!.wingName}, Floor ${floorLabel(x.w.location!.floor)}`))];
           return { id, title: chapter.title, here: works.length, rooms: roomsText(works), also };
         }),
       };
@@ -107,7 +107,7 @@ export function getMapData(): MapData {
       floors,
       chapters: nChapters,
       works: mine.length,
-      ariaLabel: `${name} wing: ${nChapters} chapters, ${mine.length} works on view, levels ${floorLabel(lo)} to ${floorLabel(hi)}`,
+      ariaLabel: `${name} wing: ${nChapters} chapters, ${mine.length} works on view, floors ${floorLabel(lo)} to ${floorLabel(hi)}`,
     };
   });
 
@@ -115,7 +115,7 @@ export function getMapData(): MapData {
     WING_NAMES.map((n) => {
       const w = wings.find((x) => x.name === n)!;
       const lo = Math.min(...w.floors.map((f) => f.floor)), hi = Math.max(...w.floors.map((f) => f.floor));
-      return [n, { ariaLabel: w.ariaLabel, levels: `Levels ${floorLabel(lo)} to ${floorLabel(hi)}` }];
+      return [n, { ariaLabel: w.ariaLabel, levels: `Floors ${floorLabel(lo)} to ${floorLabel(hi)}` }];
     }),
   ) as Record<WingName, { ariaLabel: string; levels: string }>;
 
