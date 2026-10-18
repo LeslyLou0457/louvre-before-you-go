@@ -35,6 +35,8 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg",
   "oath-of-the-horatii":
     "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
+  "death-of-the-virgin":
+    "https://commons.wikimedia.org/wiki/File:La_Mort_de_la_Vierge_-_Le_Caravage_-_Mus%C3%A9e_du_Louvre_Peintures_INV_54.jpg",
   "intervention-of-the-sabine-women":
     "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
 };
