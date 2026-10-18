@@ -1,0 +1,315 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "kore-of-samos-hera-of-samos",
+    "title": "Kore of Samos",
+    "artist": "Greek, Archaic period",
+    "year": "c. 570–560 BC",
+    "image": "/images/kore-of-samos.jpg",
+    "imageCredit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "medium": "Marble",
+    "dimensions": "192 × 58 × 38 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "kore-of-samos-1",
+      "order": 1,
+      "title": "A gift that speaks",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A headless marble woman, 1.92 m tall with her round base, shaped almost like a column. She was made on Samos around 570–560 BC.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "She has lost her head. Now look closely for a line of small Greek letters."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Who gave this statue to the goddess?",
+          "choices": [
+            {
+              "label": "A man named Cheramyes",
+              "next": "b1a",
+              "correct": true
+            },
+            {
+              "label": "The sculptor",
+              "next": "b1b"
+            },
+            {
+              "label": "The island of Samos",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Yes. The inscription names him as the giver, and names Hera as the goddess who received her.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Nobody knows who carved her.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Artists often signed their work.",
+            "truth": "The inscription names the giver, Cheramyes, not the sculptor.",
+            "evidence": "Inscriptiones Graecae; the Louvre record."
+          },
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "One man, named on the statue.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She was made on Samos.",
+            "truth": "The inscription names a man, Cheramyes, as the giver.",
+            "evidence": "Inscriptiones Graecae; the Louvre record."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Her inscription reads: Cheramyes dedicated me to Hera as an offering.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "In the inscription, who is 'me'?",
+          "choices": [
+            {
+              "label": "Cheramyes",
+              "next": "b2a"
+            },
+            {
+              "label": "The goddess Hera",
+              "next": "b2b"
+            },
+            {
+              "label": "The statue herself",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "He is the one who gives.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "People usually write about themselves.",
+            "truth": "'Me' is the statue. Cheramyes is the giver; Hera receives the gift.",
+            "evidence": "Inscriptiones Graecae; the Louvre record."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Hera receives the gift.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her name is in the sentence.",
+            "truth": "'Me' is the statue, given to Hera.",
+            "evidence": "Inscriptiones Graecae; the Louvre record."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. The statue speaks in her own voice, telling you who gave her and to whom.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "For a long time she was called the Hera of Samos, as if she were the goddess herself.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Why do scholars no longer call her Hera?",
+          "choices": [
+            {
+              "label": "Her head was found",
+              "next": "b3a"
+            },
+            {
+              "label": "She is a gift to Hera",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "The inscription says Athena",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Her head is still missing.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A face would settle it.",
+            "truth": "The head is lost. The inscription names Hera only as the one who receives the gift.",
+            "evidence": "The Louvre record; Touchais (1985); Inscriptiones Graecae."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. The inscription gives her to Hera, so she is a gift, not the goddess. Hera of Samos is now only a so-called name.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "It names Hera.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Athena is another famous goddess.",
+            "truth": "The inscription names Hera, as the goddess who received her.",
+            "evidence": "Inscriptiones Graecae; the Louvre record."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "In 1984 excavators on Samos found her twin, carrying the same words.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Two statues, broken in the same places, carrying the same words."
+          },
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "How many statues did Cheramyes give to Hera?",
+          "choices": [
+            {
+              "label": "Just this one",
+              "next": "b4a"
+            },
+            {
+              "label": "Exactly two",
+              "next": "b4b"
+            },
+            {
+              "label": "At least four",
+              "next": "b4c",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "There were more.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Only one stands in Paris.",
+            "truth": "He dedicated at least four statues with his inscription, including her twin.",
+            "evidence": "Inscriptiones Graecae; Treccani (2005)."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Two twins, but more besides.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "You have just met the twin.",
+            "truth": "He dedicated at least four statues, not only the two korai.",
+            "evidence": "Inscriptiones Graecae; Treccani (2005)."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Yes. Four statues carry his inscription, among them this kore and her twin.",
+          "next": "n5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Where was she found?",
+          "choices": [
+            {
+              "label": "In Hera's sanctuary on Samos",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "In Athens",
+              "next": "b5b"
+            },
+            {
+              "label": "In the sea",
+              "next": "b5c"
+            }
+          ]
+        },
+        "n5": {
+          "type": "story",
+          "text": "Look again at her rounded, column-like body and its even pleats. They mark her East Greek style.",
+          "next": "q5"
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Yes. She was found in the Heraion, Hera's great sanctuary on Samos, where her twin turned up too.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Wrong island, wrong city.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many Greek statues come from Athens.",
+            "truth": "She was found in Hera's sanctuary on Samos.",
+            "evidence": "The Louvre record; Girard (1880); Touchais (1985)."
+          },
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "She was found on land.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Samos is an island.",
+            "truth": "She was found in the Heraion, Hera's sanctuary on Samos.",
+            "evidence": "The Louvre record; Girard (1880); Touchais (1985)."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "One gift, two museums. She stands here in Room 170, on Floor −1 of the Denon wing; her twin is on Samos. Both still say who gave them."
+        }
+      },
+      "takeaway": "She is not the goddess Hera but a gift to her, and her inscription, in her own voice, names the man who gave her.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+        "https://www.louvre.fr/en/the-kore-of-samos",
+        "https://xmlpublic.bbaw.de/legacy/apps/ig/IG%20XII%206%2C%202%2C%20558",
+        "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348",
+        "https://www.persee.fr/doc/bch_0007-4217_1985_num_109_2_17389",
+        "https://www.latsis-foundation.org/content/elib/book_19/samos_en.pdf",
+        "https://www.treccani.it/enciclopedia/i-greci-in-asia_(Il-Mondo-dell'Archeologia)/"
+      ]
+    }
+  ]
+}

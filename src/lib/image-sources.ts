@@ -44,4 +44,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
   "lady-of-auxerre":
     "https://commons.wikimedia.org/wiki/File:Dame_d%27Auxerre_-_Mus%C3%A9e_du_Louvre_AGER_MND_847_;_Ma_3098.jpg",
   "rampin-head": "https://commons.wikimedia.org/wiki/File:Rampin_rider_Louvre_Ma3104.jpg",
+  "kore-of-samos-hera-of-samos":
+    "https://commons.wikimedia.org/wiki/File:H%C3%A9ra_de_Samos_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_grecques_Ma_686.jpg",
 };
