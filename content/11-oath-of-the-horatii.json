@@ -16,10 +16,10 @@
     "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062239"
   },
   "speakers": {
-    "guide": {
-      "name": "Lesly",
-      "kind": "guide",
-      "avatar": "guide"
+    "david": {
+      "name": "Jacques-Louis David",
+      "kind": "artist",
+      "avatar": "david"
     }
   },
   "lessons": [
@@ -28,15 +28,15 @@
       "order": 1,
       "title": "An oath Livy never told",
       "start": "n1",
-      "narrator": "guide",
+      "narrator": "david",
       "nodes": {
         "n1": {
           "type": "story",
           "text": "In the middle, an old man lifts three swords. On the left, three young men in helmets stretch out their arms towards them. On the right, women and children sit with their heads bowed.",
           "voice": {
-            "speaker": "guide",
+            "speaker": "david",
             "kind": "imagined",
-            "text": "Before the story, just look: arms reaching for the swords on one side, heads bowed on the other."
+            "text": "Look first; the story can wait. On one side of my canvas, arms reach for the swords; on the other, heads bow."
           },
           "next": "n1b"
         },

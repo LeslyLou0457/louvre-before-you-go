@@ -114,6 +114,9 @@ export function validateContent(data: unknown, file: string): Report {
           if (isNonEmptyString(voice.text) && words(voice.text) > VOICE_WORD_LIMITS[voice.kind]) {
             warn(`${at}: voice has ${words(voice.text)} words (limit ${VOICE_WORD_LIMITS[voice.kind]})`);
           }
+          if (voice.kind === "imagined" && isNonEmptyString(voice.text) && /["\u201c\u201d\u00ab\u00bb]/.test(voice.text)) {
+            err(`${at}: an imagined line must not contain quotation marks (it is never presented as a real quote)`);
+          }
           if (voice.kind === "quote") {
             if (!isNonEmptyString(voice.cite)) err(`${at}: a quote needs voice.cite`);
             if (!isNonEmptyString(voice.source)) err(`${at}: a quote needs voice.source`);

@@ -23,7 +23,7 @@ Optional fields the site understands (see PRODUCT.md "Data format"; files withou
 
 - `artwork.medium`, `artwork.dimensions`, `artwork.museumUrl`: the museum label. Missing ones show "TBD"; without `museumUrl`, the label links to the level's first `collections.louvre.fr` source.
 - `speakers` (top level) and `lessons[].narrator`: who can speak, and the level's narrator, shown on the route and the level page.
-- `voice` on a story or branch node: the speaker's line in a speech bubble beside their head. `imagined` lines get an "Imagined voice" tag; `quote` lines show quotation marks and their `cite`, and their `source` must be in the level's `sources`.
+- `voice` on a story or branch node: the speaker's line in a speech bubble beside their head. `imagined` lines get a tag ("Imagined voice · not his own words" for an artist or a person, "Imagined voice, built from sourced facts" for Lesly, the guide) and may not contain quotation marks (`npm run check-content` fails them); `quote` lines show quotation marks and their `cite`, and their `source` must be in the level's `sources`.
 
 ## Add the artwork photos
 

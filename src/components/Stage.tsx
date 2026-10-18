@@ -1,6 +1,6 @@
 // The character layer: the beige "stage" under the artwork. A node with a
 // `voice` shows the speaker's head and an ink speech bubble with their line
-// (handwriting); an imagined line is tagged as such, a quote shows quotation
+// (handwriting); an imagined line is tagged as not the speaker's own words, a quote shows quotation
 // marks and its citation. A node without a voice shows the level's narrator
 // with no bubble. No narrator and no voice: no stage.
 // On a question screen the question is the narrator's spoken line: the
@@ -32,6 +32,15 @@ type Props = {
   /** A one-time line introducing the speaker, shown under the head. */
   intro?: string;
 };
+
+/**
+ * The tag under an imagined line (PRODUCT.md "Data format"): an artist's or
+ * a person's line says plainly that the words are not theirs; Lesly, the guide
+ * we invented, keeps the older tag, since every line of hers is ours.
+ */
+export function imaginedTag(speaker: Pick<Speaker, "kind">): string {
+  return speaker.kind === "guide" ? "Imagined voice, built from sourced facts" : "Imagined voice · not his own words";
+}
 
 /** Who is on the stage for this node: the voice's speaker, else the narrator. */
 export function stageSpeakerId(narratorId: string | undefined, voice: Voice | undefined): string | undefined {
@@ -83,7 +92,7 @@ export default function Stage({ narrator, voice, speakers, enter, mood, talk, in
       <figcaption className="pl-1 text-xs leading-snug text-muted">
         <span className="font-hand text-base text-ink">{speaker.name}</span>
         <br />
-        {isQuote ? <cite className="not-italic">{voice.cite ?? "Source TBD"}</cite> : "Imagined voice, built from sourced facts"}
+        {isQuote ? <cite className="not-italic">{voice.cite ?? "Source TBD"}</cite> : imaginedTag(speaker)}
       </figcaption>
       {introLine}
     </figure>
