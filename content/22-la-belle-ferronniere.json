@@ -1,0 +1,270 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "la-belle-ferronniere",
+    "title": "La Belle Ferronnière",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1490–1497",
+    "image": "/images/la-belle-ferronniere.jpg",
+    "imageCredit": "Photo: Wilfredor, 2024, via Wikimedia Commons · Public domain",
+    "medium": "Oil on walnut panel",
+    "dimensions": "63 × 45 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062372"
+  },
+  "speakers": {
+    "leonardo": {
+      "name": "Leonardo da Vinci",
+      "kind": "artist",
+      "avatar": "leonardo"
+    }
+  },
+  "lessons": [
+    {
+      "id": "la-belle-ferronniere-1",
+      "order": 1,
+      "title": "A name that is not hers",
+      "start": "n1",
+      "narrator": "leonardo",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A young woman in red, seen to the waist behind a stone ledge, against a black background. Leonardo painted her in Milan in the 1490s.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Come close and take your time. A portrait is a meeting, and she will not hurry."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "In Milan then, how were most portraits posed?",
+          "choices": [
+            {
+              "label": "In strict profile",
+              "next": "b1a",
+              "correct": true
+            },
+            {
+              "label": "Turned three-quarters, like her",
+              "next": "b1b"
+            },
+            {
+              "label": "Full face, staring straight out",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Yes. Milan's elite liked strict profiles. Leonardo turned this sitter three-quarters instead: her body one way, her head back the other.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "That was Leonardo's change, not the custom.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She is posed that way.",
+            "truth": "Milanese portraits were mostly in strict profile. Leonardo broke the habit with a three-quarter turn.",
+            "evidence": "National Gallery, London (2011); the Louvre."
+          },
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Not the custom in Milan.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She nearly faces us here.",
+            "truth": "The Milanese custom was strict profile, like a head on a coin. Leonardo chose a three-quarter turn.",
+            "evidence": "National Gallery, London (2011); the Louvre."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Leonardo wrote it down as a rule for painters: never turn the head the same way as the body. Here her shoulders angle one way and her face turns back.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "Turn the body one way and the head the other. A figure that turns has somewhere to look."
+          },
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Where does her famous name, La Belle Ferronnière, come from?",
+          "choices": [
+            {
+              "label": "Her family name",
+              "next": "b2a"
+            },
+            {
+              "label": "Leonardo's own title",
+              "next": "b2b"
+            },
+            {
+              "label": "A French legend",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "It was never her name.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It sounds like a surname.",
+            "truth": "It comes from a French legend about an ironmonger's wife who became a mistress of King Francis I.",
+            "evidence": "The Louvre; the Barber Institute, Birmingham."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Leonardo did not give it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Artists often name their works.",
+            "truth": "The name comes from a later French legend. The Louvre's own title says it is wrong.",
+            "evidence": "The Louvre; the Barber Institute, Birmingham."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. Legend told of an ironmonger's wife who became a mistress of King Francis I. The Louvre's title calls the name wrong: \"dit à tort\".",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "So who was she really? Scholars disagree. The names proposed most often are Lucrezia Crivelli, Beatrice d'Este and Isabella of Aragon, all from the court of Milan.",
+          "voice": {
+            "speaker": "leonardo",
+            "kind": "imagined",
+            "text": "You want a name. Look at her instead: the face, the gaze, the turn. That is what I painted."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Has anyone proven who sat for this portrait?",
+          "choices": [
+            {
+              "label": "Yes: Lucrezia Crivelli",
+              "next": "b3a"
+            },
+            {
+              "label": "No, it is still debated",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "Yes: Beatrice d'Este",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "She is the favourite, not a proven answer.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A poem of the time praises a portrait of a Lucrezia by Leonardo.",
+            "truth": "The poem does not describe this panel. Many scholars favour Lucrezia, but nothing proves it.",
+            "evidence": "The Louvre; Galerie magazine (2026); the poems in Richter's edition (1883)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. Many favour Lucrezia Crivelli because of a poem praising a Leonardo portrait of a Lucrezia; others prefer Beatrice or Isabella. Nothing settles it.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "One proposal among three.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The National Gallery in London suggested her in 2011.",
+            "truth": "Others prefer Lucrezia or Isabella. No identification has been proven.",
+            "evidence": "The National Art Center, Tokyo (2026); Galerie magazine (2026)."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Now her clothes: a thin band across her forehead, hair gathered behind, a square neckline, sleeves tied on with ribbons.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "What can her clothes tell us?",
+          "choices": [
+            {
+              "label": "Her name",
+              "next": "b4a"
+            },
+            {
+              "label": "When and where she lived",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "That she was French",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Clothes date her; they cannot name her.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The jewel on her forehead looks personal.",
+            "truth": "Other women at the court wore the same fashion, Beatrice d'Este among them.",
+            "evidence": "The National Gallery, London; the National Art Center, Tokyo."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. Her band, hairstyle, neckline and ribboned sleeves were the fashion of north Italian courts in the 1490s.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Her fashion is Italian.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her nickname is French.",
+            "truth": "Her dress and hair follow north Italian court fashion of the 1490s.",
+            "evidence": "The National Gallery, London; the National Art Center, Tokyo."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "From the French royal collection she passed to the Louvre in 1793. In 2026 she travelled to Tokyo, her first time in Japan. Her real name is still unknown."
+        }
+      },
+      "takeaway": "Leonardo painted this young woman in Milan in the 1490s, turning her head against her body; her famous name comes from a French legend, and nobody has proven who she was.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010062372",
+        "https://www.nationalgallery.org.uk/media/15705/exhibition-guide_leonardo-da-vinci.pdf",
+        "https://www.nationalgallery.org.uk/about-us/press-and-media/press-releases-archive/leonardo-da-vinci-painter-at-the-court-of-milan",
+        "https://www.nationalgallery.org.uk/paintings/italian-milanese-bona-of-savoy",
+        "https://galeriemagazine.com/louvre-loans-leonardo-to-japan-for-the-first-time-in-52-years/",
+        "https://barber.org.uk/jean-auguste-dominique-ingres-1780-1867-2/",
+        "https://www.gutenberg.org/ebooks/5000",
+        "https://www.nact.jp/english/exhibition_special/2026/louvre2026/"
+      ]
+    }
+  ]
+}
