@@ -482,9 +482,9 @@
           "id": "rampin-head",
           "title": "Rampin Head",
           "titleFr": "Tête du cavalier Rampin",
-          "artist": "Greek, Archaic, Athens",
+          "artist": "Greek, Archaic period",
           "date": "c. 560–540 BC",
-          "medium": "Pentelic marble, painted",
+          "medium": "Marble",
           "department": "Greek, Etruscan and Roman Antiquities",
           "inventory": "Ma 3104",
           "location": {
@@ -493,8 +493,9 @@
             "room": "170"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+          "levelId": "rampin-head-1"
         },
         {
           "id": "kore-of-samos-hera-of-samos",
