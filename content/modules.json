@@ -1217,8 +1217,9 @@
           "location": null,
           "display": "not-on-display",
           "displayNote": "Record: current location \"non exposé\".",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062281"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062281",
+          "levelId": "pastoral-concert-1"
         }
       ]
     },
