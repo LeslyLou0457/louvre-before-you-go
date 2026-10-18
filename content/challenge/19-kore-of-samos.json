@@ -1,0 +1,638 @@
+{
+  "artworkId": "kore-of-samos-hera-of-samos",
+  "zoomImage": {
+    "file": "Héra de Samos - Musée du Louvre Antiquités grecques Ma 686.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:H%C3%A9ra_de_Samos_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_grecques_Ma_686.jpg",
+    "width": 3024,
+    "height": 4032,
+    "licence": "CC0 1.0 (the photographer's own release)",
+    "credit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/kore-of-samos/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "kore-of-samos-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: letters, toes, cloak and break",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.49,
+            "y": 0.44,
+            "w": 0.16,
+            "h": 0.34,
+            "label": "A narrow strip down the front edge of her veil, beside the fine pleats",
+            "image": "/images/challenge/kore-of-samos/c1.jpg"
+          },
+          "text": "Level one: she speaks in her own words. Now zoom to the front edge of her veil.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.49,
+            "y": 0.44,
+            "w": 0.16,
+            "h": 0.34,
+            "label": "A narrow strip down the front edge of her veil, beside the fine pleats",
+            "image": "/images/challenge/kore-of-samos/c1.jpg"
+          },
+          "text": "What runs down the edge of her veil?",
+          "choices": [
+            {
+              "label": "Cracks in the stone",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "A line of Greek letters",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Carved pleats",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+            },
+            {
+              "title": "Inscriptiones Graecae XII 6, 2, 558, 'Weihinschrift des Cheramyes' (Berlin-Brandenburg Academy, digital edition; our translation)",
+              "url": "https://xmlpublic.bbaw.de/legacy/apps/ig/IG%20XII%206%2C%202%2C%20558"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Look: they are letters.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "They are small and worn.",
+            "truth": "They are carved Greek letters: the dedication.",
+            "evidence": "The crop; the Louvre record; Inscriptiones Graecae."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. This is the inscription: Cheramyes dedicated me to Hera as an offering.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "The pleats are beside them.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Pleats run down her body too.",
+            "truth": "Next to the pleats runs a line of letters.",
+            "evidence": "The crop; the Louvre record; Inscriptiones Graecae."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Small letters, big message."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.34,
+            "y": 0.86,
+            "w": 0.34,
+            "h": 0.12,
+            "label": "The hem of her tunic and the round base",
+            "image": "/images/challenge/kore-of-samos/c2.jpg"
+          },
+          "text": "Level one: she stands on a round base. Now zoom to the bottom of her tunic.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.34,
+            "y": 0.86,
+            "w": 0.34,
+            "h": 0.12,
+            "label": "The hem of her tunic and the round base",
+            "image": "/images/challenge/kore-of-samos/c2.jpg"
+          },
+          "text": "What peeps out under her hem?",
+          "choices": [
+            {
+              "label": "Sandals",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A row of beads",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Bare toes",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Paul Girard, 'Statue de style archaïque trouvée dans l'île de Samos', Bulletin de correspondance hellénique 4 (1880) (our translation)",
+              "url": "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "No straps: she is barefoot.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many statues wear sandals.",
+            "truth": "Her toes are bare, resting on the round base.",
+            "evidence": "The crop; Girard (1880); the Louvre record."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Look again: toes.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "They are rounded and in a row.",
+            "truth": "They are her toes, on the round base.",
+            "evidence": "The crop; Girard (1880); the Louvre record."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. Bare toes on a round base, carved from the same block as the statue.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Bare toes on a round base."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.33,
+            "y": 0.12,
+            "w": 0.36,
+            "h": 0.28,
+            "label": "Her chest and shoulders, with folds of cloth",
+            "image": "/images/challenge/kore-of-samos/c3.jpg"
+          },
+          "text": "Level one: her body is shaped almost like a column. Now zoom to her chest.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.33,
+            "y": 0.12,
+            "w": 0.36,
+            "h": 0.28,
+            "label": "Her chest and shoulders, with folds of cloth",
+            "image": "/images/challenge/kore-of-samos/c3.jpg"
+          },
+          "text": "What crosses her chest on a slant?",
+          "choices": [
+            {
+              "label": "A thick wool cloak",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "Her long hair",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "Her veil",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, 'The Kore of Samos' (louvre.fr feature page)",
+              "url": "https://www.louvre.fr/en/the-kore-of-samos"
+            },
+            {
+              "title": "Konstantinos Tsakos and Maria Viglaki-Sofianou, Samos: The Archaeological Museums (Athens: Latsis Foundation, 2012)",
+              "url": "https://www.latsis-foundation.org/content/elib/book_19/samos_en.pdf"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes: the himation, slung across her right shoulder and chest, over a fine linen tunic.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Cloth, not hair.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The lines curve like locks.",
+            "truth": "The slanting folds are her cloak, the himation.",
+            "evidence": "The Louvre; the Samos museum book (2012)."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "The veil falls behind.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She does wear a veil.",
+            "truth": "The veil falls over her back and left leg; across the chest is the cloak.",
+            "evidence": "The Louvre; the Louvre record; the Samos museum book (2012)."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Three layers: tunic, cloak, veil."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.32,
+            "y": 0.07,
+            "w": 0.38,
+            "h": 0.15,
+            "label": "The top of the statue, where her head and shoulders were",
+            "image": "/images/challenge/kore-of-samos/c4.jpg"
+          },
+          "text": "Level one: she has lost her head. Now zoom to her shoulders.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.32,
+            "y": 0.07,
+            "w": 0.38,
+            "h": 0.15,
+            "label": "The top of the statue, where her head and shoulders were",
+            "image": "/images/challenge/kore-of-samos/c4.jpg"
+          },
+          "text": "What else has broken away?",
+          "choices": [
+            {
+              "label": "Her round base",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Her left shoulder and arm",
+              "role": "right",
+              "next": "c4b",
+              "correct": true
+            },
+            {
+              "label": "Her right arm",
+              "role": "near-miss",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+            },
+            {
+              "title": "Gilles Touchais, 'Chronique des fouilles: Samos', Bulletin de correspondance hellénique 109.2 (1985), p. 842 (our translation)",
+              "url": "https://www.persee.fr/doc/bch_0007-4217_1985_num_109_2_17389"
+            },
+            {
+              "title": "Paul Girard, 'Statue de style archaïque trouvée dans l'île de Samos', Bulletin de correspondance hellénique 4 (1880) (our translation)",
+              "url": "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "She still stands on it.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old statues often lose their bases.",
+            "truth": "Her round base survives, carved in one piece with the statue.",
+            "evidence": "Girard (1880); the Louvre record."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. With her head went part of her left shoulder and arm. Her twin is broken in the same places.",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "Her right arm is still there.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her arms are hard to make out under the cloth.",
+            "truth": "Her right arm runs down her side. The missing parts are on her left.",
+            "evidence": "The Louvre record; Touchais (1985); the photo."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "Headless and one-armed, like her twin."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n2",
+          "q2",
+          "b2c"
+        ],
+        "concept": "From what the inscription says (level) to where it is carved: down the front edge of her veil"
+      },
+      "framing": "where",
+      "what_you_learn": "Her dedication is carved in a single line of Greek letters down the front edge of her veil.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+          "quote": "Chèramyès m'a dédiée à Héra comme offrande) ; gravée le long du bord du voile à l'avant",
+          "supports": "Our translation: Cheramyes dedicated me to Hera as an offering; cut along the front edge of the veil.",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Inscriptiones Graecae XII 6, 2, 558, 'Weihinschrift des Cheramyes' (Berlin-Brandenburg Academy, digital edition; our translation)",
+          "url": "https://xmlpublic.bbaw.de/legacy/apps/ig/IG%20XII%206%2C%202%2C%20558",
+          "quote": "Cheramyes hat geweiht der Hera mich, das Standbild.",
+          "supports": "Our translation: Cheramyes dedicated me, the statue, to Hera. The words are a carved inscription.",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/IG-XII-6-2-558.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "Chèramyès m'a dédiée à Héra comme offrande) ; gravée le long du bord du voile à l'avant",
+            "supports": "Our translation: Cheramyes dedicated me to Hera as an offering; cut along the front edge of the veil.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Inscriptiones Graecae XII 6, 2, 558, 'Weihinschrift des Cheramyes' (Berlin-Brandenburg Academy, digital edition; our translation)",
+            "url": "https://xmlpublic.bbaw.de/legacy/apps/ig/IG%20XII%206%2C%202%2C%20558",
+            "quote": "Cheramyes hat geweiht der Hera mich, das Standbild.",
+            "supports": "Our translation: Cheramyes dedicated me, the statue, to Hera. The words are a carved inscription.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/IG-XII-6-2-558.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "Chèramyès m'a dédiée à Héra comme offrande) ; gravée le long du bord du voile à l'avant",
+            "supports": "Our translation: Cheramyes dedicated me to Hera as an offering; cut along the front edge of the veil.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Inscriptiones Graecae XII 6, 2, 558, 'Weihinschrift des Cheramyes' (Berlin-Brandenburg Academy, digital edition; our translation)",
+            "url": "https://xmlpublic.bbaw.de/legacy/apps/ig/IG%20XII%206%2C%202%2C%20558",
+            "quote": "Cheramyes hat geweiht der Hera mich, das Standbild.",
+            "supports": "Our translation: Cheramyes dedicated me, the statue, to Hera. The words are a carved inscription.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/IG-XII-6-2-558.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the record places the inscription on the front edge of the veil, and the letters are visible in the crop.",
+      "notes": "Ledger sam-007. The level's n1 voice only asks the player to look for letters.",
+      "quoteCheck": "2026-10-18: record JSON and IG text re-read.",
+      "cropCheck": "2026-10-18: box measured on images/kore-of-samos/main.jpg (1920 x 2560, Commons' 1920 px rendering of the 3024 x 4032 original); crop 307 x 870 px, never upscaled. Checked by eye: a single vertical line of worn letters beside the fine pleats."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From 'her round base' (level) to what stands on it: bare toes, carved from the same block"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Her bare toes peep out under the hem, resting on a round base carved in one piece with the statue.",
+      "regionSources": [
+        {
+          "title": "Paul Girard, 'Statue de style archaïque trouvée dans l'île de Samos', Bulletin de correspondance hellénique 4 (1880) (our translation)",
+          "url": "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348",
+          "quote": "Elle repose sur une plinthe de forme circulaire [...] Plinthe et statue sont d'un seul morceau.",
+          "supports": "Our translation: she rests on a circular plinth; plinth and statue are one piece.",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/GIRARD-1880.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+          "quote": "korê (chitôn, ceinture, himation, court, transversal, voile, debout, sur, plinthe, rond)",
+          "supports": "Our translation of the record's index terms: kore (chiton, belt, himation, short, slanting, veil, standing, on, plinth, round).",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Paul Girard, 'Statue de style archaïque trouvée dans l'île de Samos', Bulletin de correspondance hellénique 4 (1880) (our translation)",
+            "url": "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348",
+            "quote": "Elle repose sur une plinthe de forme circulaire [...] Plinthe et statue sont d'un seul morceau.",
+            "supports": "Our translation: she rests on a circular plinth; plinth and statue are one piece.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/GIRARD-1880.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "korê (chitôn, ceinture, himation, court, transversal, voile, debout, sur, plinthe, rond)",
+            "supports": "Our translation of the record's index terms: kore (chiton, belt, himation, short, slanting, veil, standing, on, plinth, round).",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Paul Girard, 'Statue de style archaïque trouvée dans l'île de Samos', Bulletin de correspondance hellénique 4 (1880) (our translation)",
+            "url": "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348",
+            "quote": "Elle repose sur une plinthe de forme circulaire [...] Plinthe et statue sont d'un seul morceau.",
+            "supports": "Our translation: she rests on a circular plinth; plinth and statue are one piece.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/GIRARD-1880.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "korê (chitôn, ceinture, himation, court, transversal, voile, debout, sur, plinthe, rond)",
+            "supports": "Our translation of the record's index terms: kore (chiton, belt, himation, short, slanting, veil, standing, on, plinth, round).",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the toes are visible in the crop (ledger sam-030, our looking); the base is described by Girard and the record.",
+      "notes": "Ledger sam-026, sam-030.",
+      "quoteCheck": "2026-10-18: Girard and the record re-read.",
+      "cropCheck": "2026-10-18: box measured on images/kore-of-samos/main.jpg (1920 x 2560, Commons' 1920 px rendering of the 3024 x 4032 original); crop 653 x 307 px, never upscaled. Checked by eye: ten bare toes under the pleated hem, on a round plinth."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "n5"
+        ],
+        "concept": "From her column-like body (level) to the layers of cloth on it: the cloak across her chest"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "A thick wool cloak (himation) crosses her chest on a slant, over a fine pleated tunic; her veil falls behind.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, 'The Kore of Samos' (louvre.fr feature page)",
+          "url": "https://www.louvre.fr/en/the-kore-of-samos",
+          "quote": "a delicately pleated linen tunic, a thicker woollen cloak draped across the right shoulder and torso, and a smooth veil flowing over the back and left leg",
+          "supports": "Three garments: across the chest is the wool cloak; the veil falls behind.",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LOUVRE-guide-kore-of-samos.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Konstantinos Tsakos and Maria Viglaki-Sofianou, Samos: The Archaeological Museums (Athens: Latsis Foundation, 2012)",
+          "url": "https://www.latsis-foundation.org/content/elib/book_19/samos_en.pdf",
+          "quote": "the diﬀerence in texture between the coarse himation and the ﬁner chiton",
+          "supports": "A coarse cloak (himation) over a finer tunic (chiton): cloth, not hair.",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/TSAKOS-2012_pp20-22-277.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Musée du Louvre, 'The Kore of Samos' (louvre.fr feature page)",
+            "url": "https://www.louvre.fr/en/the-kore-of-samos",
+            "quote": "a delicately pleated linen tunic, a thicker woollen cloak draped across the right shoulder and torso, and a smooth veil flowing over the back and left leg",
+            "supports": "Three garments: across the chest is the wool cloak; the veil falls behind.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LOUVRE-guide-kore-of-samos.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Konstantinos Tsakos and Maria Viglaki-Sofianou, Samos: The Archaeological Museums (Athens: Latsis Foundation, 2012)",
+            "url": "https://www.latsis-foundation.org/content/elib/book_19/samos_en.pdf",
+            "quote": "the diﬀerence in texture between the coarse himation and the ﬁner chiton",
+            "supports": "A coarse cloak (himation) over a finer tunic (chiton): cloth, not hair.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/TSAKOS-2012_pp20-22-277.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Musée du Louvre, 'The Kore of Samos' (louvre.fr feature page)",
+            "url": "https://www.louvre.fr/en/the-kore-of-samos",
+            "quote": "a delicately pleated linen tunic, a thicker woollen cloak draped across the right shoulder and torso, and a smooth veil flowing over the back and left leg",
+            "supports": "Three garments: across the chest is the wool cloak; the veil falls behind.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LOUVRE-guide-kore-of-samos.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "korê (chitôn, ceinture, himation, court, transversal, voile, debout, sur, plinthe, rond)",
+            "supports": "Our translation of the record's index terms: kore (chiton, belt, himation, short, slanting, veil, standing, on, plinth, round).",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre's feature page and the Samos museum book agree, and the record lists the himation and the veil.",
+      "notes": "Ledger sam-004.",
+      "quoteCheck": "2026-10-18: Louvre feature and Tsakos re-read in the saved texts.",
+      "cropCheck": "2026-10-18: box measured on images/kore-of-samos/main.jpg (1920 x 2560, Commons' 1920 px rendering of the 3024 x 4032 original); crop 691 x 717 px, never upscaled. Checked by eye: broad curved folds sloping across the chest; the fine vertical pleats of the tunic below the curved hem."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "n4"
+        ],
+        "concept": "From 'headless' and 'broken in the same places' (level) to what else is gone: her left shoulder and arm"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Besides her head, part of her left shoulder and arm has broken away; her twin lost the head and left arm too.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+          "quote": "il manque la tête, une partie de l'épaule, du bras gauches et de la main gauche",
+          "supports": "Our translation: the head is missing, with part of the left shoulder, the left arm and the left hand. Nothing on her right side is listed.",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Gilles Touchais, 'Chronique des fouilles: Samos', Bulletin de correspondance hellénique 109.2 (1985), p. 842 (our translation)",
+          "url": "https://www.persee.fr/doc/bch_0007-4217_1985_num_109_2_17389",
+          "quote": "Les deux statues, en tout point identiques, ont été trouvées dans le même état (tête et bras gauche manquants)",
+          "supports": "Our translation: the two statues, identical in every point, were found in the same state (head and left arm missing).",
+          "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/TOUCHAIS-1985.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Paul Girard, 'Statue de style archaïque trouvée dans l'île de Samos', Bulletin de correspondance hellénique 4 (1880) (our translation)",
+            "url": "https://www.persee.fr/doc/bch_0007-4217_1880_num_4_1_4348",
+            "quote": "Elle repose sur une plinthe de forme circulaire [...] Plinthe et statue sont d'un seul morceau.",
+            "supports": "Our translation: she rests on a circular plinth; plinth and statue are one piece.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/GIRARD-1880.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "korê (chitôn, ceinture, himation, court, transversal, voile, debout, sur, plinthe, rond)",
+            "supports": "Our translation of the record's index terms: kore (chiton, belt, himation, short, slanting, veil, standing, on, plinth, round).",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 686 (MNB 3226), 'Korè de Samos' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+            "quote": "il manque la tête, une partie de l'épaule, du bras gauches et de la main gauche",
+            "supports": "Our translation: the head is missing, with part of the left shoulder, the left arm and the left hand. Nothing on her right side is listed.",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/LV-REC_cl010279000.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Gilles Touchais, 'Chronique des fouilles: Samos', Bulletin de correspondance hellénique 109.2 (1985), p. 842 (our translation)",
+            "url": "https://www.persee.fr/doc/bch_0007-4217_1985_num_109_2_17389",
+            "quote": "Les deux statues, en tout point identiques, ont été trouvées dans le même état (tête et bras gauche manquants)",
+            "supports": "Our translation: the two statues, identical in every point, were found in the same state (head and left arm missing).",
+            "readVia": "Saved text in the research folder (research/works/kore-of-samos/sources/TOUCHAIS-1985.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the record and Touchais agree; the break is visible at the top right of the crop (her left).",
+      "notes": "Ledger sam-003. Her right arm, down her side, is our own looking (sam-030).",
+      "quoteCheck": "2026-10-18: record JSON and Touchais re-read.",
+      "cropCheck": "2026-10-18: box measured on images/kore-of-samos/main.jpg (1920 x 2560, Commons' 1920 px rendering of the 3024 x 4032 original); crop 730 x 384 px, never upscaled. Checked by eye: rough broken surface at the top, curved folds round the shoulders, the deep break at her left shoulder (our right)."
+    }
+  }
+}

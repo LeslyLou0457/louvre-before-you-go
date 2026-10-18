@@ -37,4 +37,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
   "intervention-of-the-sabine-women":
     "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
+  "kore-of-samos-hera-of-samos":
+    "https://commons.wikimedia.org/wiki/File:H%C3%A9ra_de_Samos_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_grecques_Ma_686.jpg",
 };

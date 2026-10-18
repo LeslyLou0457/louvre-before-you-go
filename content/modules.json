@@ -500,7 +500,7 @@
           "id": "kore-of-samos-hera-of-samos",
           "title": "Kore of Samos (Hera of Samos)",
           "titleFr": "Korè de Samos",
-          "artist": "Greek, Archaic",
+          "artist": "Greek, Archaic period",
           "date": "c. 570–560 BC",
           "medium": "Marble",
           "department": "Greek, Etruscan and Roman Antiquities",
@@ -511,8 +511,9 @@
             "room": "170"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279000"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279000",
+          "levelId": "kore-of-samos-1"
         },
         {
           "id": "venus-de-milo",
