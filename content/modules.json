@@ -464,7 +464,7 @@
           "id": "lady-of-auxerre",
           "title": "Lady of Auxerre",
           "titleFr": "Dame d'Auxerre",
-          "artist": "Greek, Daedalic style",
+          "artist": "Greek, Archaic period",
           "date": "c. 640–620 BC",
           "medium": "Limestone",
           "department": "Greek, Etruscan and Roman Antiquities",
@@ -475,8 +475,9 @@
             "room": "170"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+          "levelId": "lady-of-auxerre-1"
         },
         {
           "id": "rampin-head",
