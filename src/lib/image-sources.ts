@@ -48,4 +48,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:H%C3%A9ra_de_Samos_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_grecques_Ma_686.jpg",
   "plaque-of-the-ergastines-parthenon-frieze":
     "https://commons.wikimedia.org/wiki/File:Plaque_des_Ergastines_-_Mus%C3%A9e_du_Louvre_AGER_MR_825_;_N_1700_;_N_1279_;_Ma_738.jpg",
+  "head-from-keros-cycladic-idol":
+    "https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_figurine_f%C3%A9minine_-_Mus%C3%A9e_du_Louvre_AGER_MNB_509_;_Ma_2709.jpg",
 };

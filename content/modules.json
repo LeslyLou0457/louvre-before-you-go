@@ -446,7 +446,7 @@
           "id": "head-from-keros-cycladic-idol",
           "title": "Head from Keros (Cycladic idol)",
           "titleFr": "Tête de Kéros, \"idole cycladique\"",
-          "artist": "Cycladic, Syros group",
+          "artist": "Cycladic, Early Bronze Age",
           "date": "c. 2600–2400 BC",
           "medium": "Marble",
           "department": "Greek, Etruscan and Roman Antiquities",
@@ -457,8 +457,9 @@
             "room": "170"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276544"
+          "checkedOn": "2026-10-18",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+          "levelId": "head-from-keros-1"
         },
         {
           "id": "lady-of-auxerre",

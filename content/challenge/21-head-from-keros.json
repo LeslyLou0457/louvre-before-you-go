@@ -1,0 +1,457 @@
+{
+  "artworkId": "head-from-keros-cycladic-idol",
+  "zoomImage": {
+    "file": "Tête de figurine féminine - Musée du Louvre AGER MNB 509 ; Ma 2709.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_figurine_f%C3%A9minine_-_Mus%C3%A9e_du_Louvre_AGER_MNB_509_;_Ma_2709.jpg",
+    "width": 2479,
+    "height": 3321,
+    "licence": "CC0 1.0 (the photographer's own release)",
+    "credit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/head-from-keros/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "head-from-keros-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: nose, cheek and neck",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.32,
+            "w": 0.3,
+            "h": 0.32,
+            "label": "The middle of the face, from the brow to below the nose",
+            "image": "/images/challenge/head-from-keros/c1.jpg"
+          },
+          "text": "Level one: the eyes and mouth were painted on. Now zoom to the one feature that was not.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.32,
+            "w": 0.3,
+            "h": 0.32,
+            "label": "The middle of the face, from the brow to below the nose",
+            "image": "/images/challenge/head-from-keros/c1.jpg"
+          },
+          "text": "How was the nose made?",
+          "choices": [
+            {
+              "label": "Painted on, like the eyes",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Carved from the marble",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Added in plaster",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Dayton Art Institute, 'Female Figure' (Cycladic, Spedos type), with a Smarthistory transcript",
+              "url": "https://whatisamasterpiece.daytonartinstitute.org/196936.html"
+            },
+            {
+              "title": "Museum of Cycladic Art, Athens, 'Exhibition Topics' (Cycladic Society 5,000 Years Ago)",
+              "url": "https://cycladic.gr/en/ektheseis/kykladiki-koinonia-5000-chronia-prin/exhibition-topics/"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "The nose stands out from the face.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The eyes were painted.",
+            "truth": "The nose is carved: it projects from the smooth face.",
+            "evidence": "The crop; Dayton Art Institute."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. The nose is cut from the same block and stands out from the face. Everything else was painted.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "It is marble, one piece.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old sculptures are often repaired.",
+            "truth": "The nose is carved from the marble; the record lists no other material.",
+            "evidence": "The Louvre record; the crop."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Carved nose, painted eyes: two techniques on one face."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.58,
+            "y": 0.54,
+            "w": 0.24,
+            "h": 0.28,
+            "label": "The edge of the face on our right, at cheek level",
+            "image": "/images/challenge/head-from-keros/c2.jpg"
+          },
+          "text": "Level one: the record calls the head incomplete. Now zoom to the cheek on our right.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.58,
+            "y": 0.54,
+            "w": 0.24,
+            "h": 0.28,
+            "label": "The edge of the face on our right, at cheek level",
+            "image": "/images/challenge/head-from-keros/c2.jpg"
+          },
+          "text": "What is this rough patch?",
+          "choices": [
+            {
+              "label": "Paint that has survived",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "The sculptor's mark",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "A chip in the marble",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "No paint shows here: it is broken stone.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The patch differs in tone from the rest.",
+            "truth": "It is a chip: a piece of the cheek has broken off.",
+            "evidence": "The Louvre record; the crop."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "No mark: it is damage.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Carvers sometimes left tool marks.",
+            "truth": "The record notes a chip on the left cheek: the stone has broken.",
+            "evidence": "The Louvre record; the crop."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. The Louvre records a chip on the head's left cheek, which is on our right as we face it.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A small chip in a smooth face."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.74,
+            "w": 0.38,
+            "h": 0.17,
+            "label": "The bottom of the head and the neck below it, on its mount",
+            "image": "/images/challenge/head-from-keros/c3.jpg"
+          },
+          "text": "Level one: the body is lost. Now zoom to where the head meets the mount.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.74,
+            "w": 0.38,
+            "h": 0.17,
+            "label": "The bottom of the head and the neck below it, on its mount",
+            "image": "/images/challenge/head-from-keros/c3.jpg"
+          },
+          "text": "What is this lower part of the neck?",
+          "choices": [
+            {
+              "label": "A later completion",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "The start of the shoulders",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "A stone stand",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544"
+            },
+            {
+              "title": "Centre Pompidou, '« Idoles », un regard moderne' (interview, 11 Dec 2023; our translation)",
+              "url": "https://www.centrepompidou.fr/fr/magazine/article/idoles-un-regard-moderne"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes. The record says the base of the neck has been completed. It does not say when, or with what.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "The body is lost: no shoulders survive.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It sits where shoulders would begin.",
+            "truth": "The record says the base of the neck was completed later.",
+            "evidence": "The Louvre record; Centre Pompidou (2023)."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "The stand is below, in dark grey.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It holds the head up.",
+            "truth": "This piece is the neck's base, completed later; the mount is underneath.",
+            "evidence": "The Louvre record; the crop."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "The base of the neck: a later completion."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1b"
+        ],
+        "concept": "From \"the features were painted\" (level) to the one carved feature: the nose stands out from the face"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The nose is carved and projects from the face; the other features were painted.",
+      "regionSources": [
+        {
+          "title": "Dayton Art Institute, 'Female Figure' (Cycladic, Spedos type), with a Smarthistory transcript",
+          "url": "https://whatisamasterpiece.daytonartinstitute.org/196936.html",
+          "quote": "Look at the shield-like shape of the face and the way that the nose projects. They’re beautiful without eyes but there were painted eyes.",
+          "supports": "On such faces the nose is carved and projects; the eyes were painted.",
+          "readVia": "Saved page text (research/works/head-from-keros/sources/DAYTON_female-figure.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Museum of Cycladic Art, Athens, 'Exhibition Topics' (Cycladic Society 5,000 Years Ago)",
+          "url": "https://cycladic.gr/en/ektheseis/kykladiki-koinonia-5000-chronia-prin/exhibition-topics/",
+          "quote": "Cycladic figurines were originally painted. Deep blue or black pigment was used for the hair, eyebrows, eyes, and pubic triangle",
+          "supports": "Features such as eyes and brows were painted, not carved.",
+          "readVia": "Saved page text (research/works/head-from-keros/sources/MCA-TOPICS.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+          "quote": "Matériau : marbre | Technique : ronde-bosse (sculpture)",
+          "supports": "Our translation: material: marble; technique: carved in the round. One block of marble, no other material recorded.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Dayton Art Institute, 'Female Figure' (Cycladic, Spedos type), with a Smarthistory transcript",
+            "url": "https://whatisamasterpiece.daytonartinstitute.org/196936.html",
+            "quote": "Look at the shield-like shape of the face and the way that the nose projects. They’re beautiful without eyes but there were painted eyes.",
+            "supports": "On such faces the nose is carved and projects; the eyes were painted.",
+            "readVia": "Saved page text (research/works/head-from-keros/sources/DAYTON_female-figure.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Museum of Cycladic Art, Athens, 'Exhibition Topics' (Cycladic Society 5,000 Years Ago)",
+            "url": "https://cycladic.gr/en/ektheseis/kykladiki-koinonia-5000-chronia-prin/exhibition-topics/",
+            "quote": "Cycladic figurines were originally painted. Deep blue or black pigment was used for the hair, eyebrows, eyes, and pubic triangle",
+            "supports": "Features such as eyes and brows were painted, not carved.",
+            "readVia": "Saved page text (research/works/head-from-keros/sources/MCA-TOPICS.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+            "quote": "Matériau : marbre | Technique : ronde-bosse (sculpture)",
+            "supports": "Our translation: material: marble; technique: carved in the round. One block of marble, no other material recorded.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop (kh-011, our looking); Dayton and the Museum of Cycladic Art agree that the nose was carved and the eyes painted.",
+      "notes": "Ledger kh-006, kh-011; the record's material field for \"one piece of marble\".",
+      "quoteCheck": "2026-10-18: Dayton, MCA and record texts re-read in the saved files.",
+      "cropCheck": "2026-10-18: box measured on images/head-from-keros/main.jpg (1920 × 2572); crop 576 × 823 px, never upscaled. Checked by eye: the wedge-shaped nose standing out from the smooth face, no eyes."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From \"a fragment of a statuette\" (level) to the head's own damage: a chip on the left cheek"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The rough patch on our right is a chip on the head's left cheek.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+          "quote": "Etat de l'oeuvre : incomplet : il présente un éclat sur la joue gauche.",
+          "supports": "Our translation: condition: incomplete: it has a chip on the left cheek.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+            "quote": "Etat de l'oeuvre : incomplet : il présente un éclat sur la joue gauche.",
+            "supports": "Our translation: condition: incomplete: it has a chip on the left cheek.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+            "quote": "Etat de l'oeuvre : incomplet : il présente un éclat sur la joue gauche.",
+            "supports": "Our translation: condition: incomplete: it has a chip on the left cheek.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: stated by the Louvre record and visible in the crop (kh-002, kh-024).",
+      "notes": "Ledger kh-002 (record) with kh-024 (our looking).",
+      "quoteCheck": "2026-10-18: record JSON re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1920 × 2572); crop 460 × 720 px, never upscaled. Checked by eye: rough, broken surface at the edge of the cheek on our right, smooth marble around it."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From \"the body is lost\" (level) to the neck: its base is a later completion"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The base of the neck was completed later; when and with what is not recorded.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+          "quote": "La base du cou a été complétée",
+          "supports": "Our translation: the base of the neck has been completed (added later; the record does not say when).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+          "quote": "statuette (fragment, tête)",
+          "supports": "Our translation: statuette (fragment, head): the head of a figure whose body is lost.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Centre Pompidou, '« Idoles », un regard moderne' (interview, 11 Dec 2023; our translation)",
+          "url": "https://www.centrepompidou.fr/fr/magazine/article/idoles-un-regard-moderne",
+          "quote": "Si la tête antique était jadis complétée par un corps",
+          "supports": "Our translation: the ancient head was once completed by a body (Ariane Coulondre, Centre Pompidou).",
+          "readVia": "Saved page text (research/works/head-from-keros/sources/CPOMPIDOU-2023_idoles-un-regard-moderne_fr.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+            "quote": "La base du cou a été complétée",
+            "supports": "Our translation: the base of the neck has been completed (added later; the record does not say when).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Centre Pompidou, '« Idoles », un regard moderne' (interview, 11 Dec 2023; our translation)",
+            "url": "https://www.centrepompidou.fr/fr/magazine/article/idoles-un-regard-moderne",
+            "quote": "Si la tête antique était jadis complétée par un corps",
+            "supports": "Our translation: the ancient head was once completed by a body (Ariane Coulondre, Centre Pompidou).",
+            "readVia": "Saved page text (research/works/head-from-keros/sources/CPOMPIDOU-2023_idoles-un-regard-moderne_fr.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 2709 (MNB 509), 'Tête de Kéros, \"idole cycladique\"' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+            "quote": "La base du cou a été complétée",
+            "supports": "Our translation: the base of the neck has been completed (added later; the record does not say when).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/head-from-keros/sources/LV-REC_cl010276544.json), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: the record states the completion; the crop shows a separate lower piece with a straight edge, but the record does not mark exactly where it begins.",
+      "notes": "Ledger kh-002, kh-016, kh-024. The branch avoids \"modern\" (the date of the completion is not recorded).",
+      "quoteCheck": "2026-10-18: record JSON and Pompidou interview re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1920 × 2572); crop 730 × 438 px, never upscaled. Checked by eye: the bottom of the face, a separate neck piece with a straight lower edge, the dark mount below."
+    }
+  }
+}

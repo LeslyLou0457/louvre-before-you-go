@@ -1,0 +1,320 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "head-from-keros-cycladic-idol",
+    "title": "Head from Keros",
+    "artist": "Cycladic, Early Bronze Age",
+    "year": "c. 2600–2400 BC",
+    "image": "/images/head-from-keros.jpg",
+    "imageCredit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "medium": "Marble",
+    "dimensions": "Height 27 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276544"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "head-from-keros-1",
+      "order": 1,
+      "title": "A face with one feature",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A white marble head, 27 cm tall, made in the Cyclades islands more than 4,000 years ago. Its face has one carved feature: a long nose.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Stand face to face with it. Count what you can see on the face, then look at what is not there."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Why does the face have no eyes or mouth?",
+          "choices": [
+            {
+              "label": "The sculptor never finished it",
+              "next": "b1a"
+            },
+            {
+              "label": "They were painted on",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Rain wore them away",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "It was finished: the face was meant to be painted.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The face looks blank, as if work stopped.",
+            "truth": "The carvers shaped the nose and painted eyes, brows and mouth on the smooth marble. The paint has worn away.",
+            "evidence": "Museum of Cycladic Art, Athens; Dayton Art Institute."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. Cycladic carvers shaped the nose and painted the rest: dark eyes and brows on the white stone. Which colours this head had is unknown.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Only the nose was ever carved.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old marble can be worn smooth.",
+            "truth": "The other features were painted, not carved, and the paint is what has gone.",
+            "evidence": "Museum of Cycladic Art, Athens; Dayton Art Institute."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "The Louvre calls it a fragment of a statuette. It is only the head: the body it belonged to is lost.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Complete figures of this type: how do they hold their arms?",
+          "choices": [
+            {
+              "label": "Raised above the head",
+              "next": "b2a"
+            },
+            {
+              "label": "Stretched out in front",
+              "next": "b2b"
+            },
+            {
+              "label": "Folded under the chest",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "The arms stay low, against the body.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The head tilts back, as if looking up.",
+            "truth": "Complete figures of this type fold their arms under the chest.",
+            "evidence": "Museum of Cycladic Art, Athens; University of Cambridge."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Nothing reaches out: the arms are folded.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A figure without a body could have held anything.",
+            "truth": "Figures of this type fold their arms under the chest, close to the body.",
+            "evidence": "Museum of Cycladic Art, Athens; University of Cambridge."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. Most such figures are nude women with the head tilted back, the arms folded under the chest and the feet pointing down.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "It was made in the Early Bronze Age, around 2600–2400 BC, on islands where nobody yet wrote things down.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Imagine the island workshop: no writing, no labels. Only the stone, and whatever the people who held it knew."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "What were figures like this made for?",
+          "choices": [
+            {
+              "label": "Toys for children",
+              "next": "b3a"
+            },
+            {
+              "label": "Nobody knows for sure",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "Portraits of island queens",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Nobody knows what they were for.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many are small enough to hold in one hand.",
+            "truth": "Their purpose is unknown. Most excavated ones come from graves, and some from settlements.",
+            "evidence": "Museum of Cycladic Art, Athens; the Louvre curator Ludovic Laugier (Centre Pompidou, 2023)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. They come from a time without writing, and many were dug up without records. Most excavated ones come from graves; some from settlements.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Nothing shows whom they represent.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Louvre describes it as a female figure.",
+            "truth": "Nobody knows whom or what these figures show, or what they were for.",
+            "evidence": "Museum of Cycladic Art, Athens; the Louvre curator Ludovic Laugier (Centre Pompidou, 2023)."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "The label says it was found on Keros, a small island now almost empty of people. Keros is famous for the \"Keros Hoard\": fragments looted in the 20th century.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Could this head be part of the looted Keros Hoard?",
+          "choices": [
+            {
+              "label": "Yes: both come from Keros",
+              "next": "b4a"
+            },
+            {
+              "label": "Nobody can tell",
+              "next": "b4b"
+            },
+            {
+              "label": "No: the dates rule it out",
+              "next": "b4c",
+              "correct": true
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Same island, different stories.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The label and the Hoard both name Keros.",
+            "truth": "The Louvre had this head by 1873. The Hoard was looted and sold in the 20th century.",
+            "evidence": "The Louvre record; Museum of Cycladic Art, Athens; University of Cambridge."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Here the dates do settle it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "So much about these figures is unknown.",
+            "truth": "The head was in the Louvre by 1873; the Hoard surfaced in the 20th century.",
+            "evidence": "The Louvre record; Museum of Cycladic Art, Athens; University of Cambridge."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Yes. Olivier Rayet gave the head to the Louvre in 1873. The Hoard reached the market in the 20th century, long after.",
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "In the 20th century, artists such as Brancusi, Modigliani, Picasso and Henry Moore admired Cycladic figures like this one.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Look at the smooth oval again. Can you see why sculptors of the 1900s found it so modern?"
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "In 2024 the Louvre lent this head to an exhibition on which sculptor?",
+          "choices": [
+            {
+              "label": "Constantin Brancusi",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "Michelangelo",
+              "next": "b5b"
+            },
+            {
+              "label": "Antonio Canova",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Yes. The Centre Pompidou in Paris showed it with Brancusi's work, so visitors could compare the ancient and the modern shapes.",
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Not Michelangelo: a modern sculptor.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The head is polished white marble.",
+            "truth": "The 2024 loan was to the Centre Pompidou's Brancusi exhibition in Paris.",
+            "evidence": "The Louvre record; Centre Pompidou (2023)."
+          },
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Not Canova: a modern sculptor.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The head is polished white marble.",
+            "truth": "The 2024 loan was to the Centre Pompidou's Brancusi exhibition in Paris.",
+            "evidence": "The Louvre record; Centre Pompidou (2023)."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "A face that lost its paint, a head that lost its body, and an island story it does not share. Today it stands in Room 170, on Floor −1 of the Denon wing."
+        }
+      },
+      "takeaway": "A marble head from the Cyclades, made around 2600–2400 BC: its makers carved only the nose and painted the rest, and nobody knows what such figures were for.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010276544",
+        "https://cycladic.gr/en/ektheseis/kykladiki-techni/visiting-guide/",
+        "https://cycladic.gr/en/ektheseis/kykladiki-koinonia-5000-chronia-prin/exhibition-topics/",
+        "https://cycladic.gr/en/essay/o-thisauros-tis-kerou/",
+        "https://www.cam.ac.uk/research/news/island-of-broken-figurines",
+        "https://whatisamasterpiece.daytonartinstitute.org/196936.html",
+        "https://www.centrepompidou.fr/fr/magazine/article/idoles-un-regard-moderne"
+      ]
+    }
+  ]
+}
