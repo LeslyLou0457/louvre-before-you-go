@@ -1,0 +1,266 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "pastoral-concert",
+    "title": "Pastoral Concert",
+    "artist": "Titian (long attributed to Giorgione)",
+    "year": "1500–1525",
+    "image": "/images/pastoral-concert.jpg",
+    "imageCredit": "Photo: C2RMF, via Wikimedia Commons · Public domain",
+    "medium": "Oil on canvas",
+    "dimensions": "105 × 137 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062281"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "pastoral-concert-1",
+      "order": 1,
+      "title": "Music, water and an argument",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Two young men in fine clothes sit on the grass making music. Two women without clothes are with them. Nobody looks surprised.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Count the people first. Then find the one who is far away, and listen for the sounds in the picture."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What is the standing woman on the left doing?",
+          "choices": [
+            {
+              "label": "Playing a pipe",
+              "next": "b1a"
+            },
+            {
+              "label": "Pouring water",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Picking fruit from the tree",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "The pipe belongs to the seated woman.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Music fills the picture.",
+            "truth": "The seated woman holds the pipe. The standing woman pours water from a glass jug into a stone basin.",
+            "evidence": "The photo; Walter Pater (1893); the Louvre."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. She tips a glass jug over a stone basin. Water and music: the sound of pouring joins the lute and the pipe.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Her hands hold a jug, not fruit.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She stands under a tree, reaching out.",
+            "truth": "She is pouring water from a glass jug into a stone basin.",
+            "evidence": "The photo; Walter Pater (1893); the Louvre."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "For a long time this picture was called a Giorgione. Louis XIV's inventory of 1683 names him, and so do writers around 1900.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Whose name does the Louvre's label give today?",
+          "choices": [
+            {
+              "label": "Giorgione",
+              "next": "b2a"
+            },
+            {
+              "label": "Sebastiano del Piombo",
+              "next": "b2b"
+            },
+            {
+              "label": "Titian",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "His name came first, but not today.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The king's inventory of 1683 says Giorgione.",
+            "truth": "The Louvre now gives it to Titian, after centuries of argument about who painted it.",
+            "evidence": "The Louvre record; the National Gallery, London."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "An old guess, long given up.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Critics of the 1800s gave it to an imitator of Sebastiano.",
+            "truth": "The Louvre now gives it to Titian, after centuries of argument.",
+            "evidence": "Walter Pater (1893); the Louvre; the National Gallery, London."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes, Titian. But it was long called Giorgione's, and who painted it has been argued over for centuries. The label keeps both names.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Titian learned from Giorgione and worked with him. Giorgione died of the plague in 1510, and Titian finished some of his unfinished pictures.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "So whose hand is this? Look closely, and do not hurry to a name."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Why is it so hard to tell their early work apart?",
+          "choices": [
+            {
+              "label": "They worked very closely",
+              "next": "b3a",
+              "correct": true
+            },
+            {
+              "label": "They shared one signature",
+              "next": "b3b"
+            },
+            {
+              "label": "Their paintings were all lost",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Yes. Titian formed his early style alongside Giorgione and even completed some of his pictures, so their hands are hard to separate.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "No: the problem is their closeness.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old inventories swap their names.",
+            "truth": "The difficulty is their closeness: Titian learned from Giorgione and finished some of his pictures.",
+            "evidence": "The National Gallery, London; the Louvre."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Paintings by both survive.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Few documents about Giorgione survive.",
+            "truth": "Their works survive; what is hard is telling them apart, because they worked so closely.",
+            "evidence": "The National Gallery, London; the Louvre."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "It belongs to a Venetian tradition: people making music outdoors, in a landscape that matters as much as the figures. Centuries later, it stood behind a famous scandal.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Manet's 1863 picnic scene drew on it and caused a scandal. Why?",
+          "choices": [
+            {
+              "label": "It mocked the emperor",
+              "next": "b4a"
+            },
+            {
+              "label": "A nude woman sat among clothed men",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "It was too big for the Salon",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "The emperor even allowed the show.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Napoleon III ruled France in 1863.",
+            "truth": "Napoleon III allowed the Salon des Refusés. The shock was a nude woman among men in modern clothes.",
+            "evidence": "W. H. Wright (1915); W. Dewhurst (1904)."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. Manet put a nude woman between men in modern black coats. Defenders pointed to this picture, then called Giorgione's; critics were not persuaded.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Size was not the issue.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The official Salon jury turned it away.",
+            "truth": "It hung in the Salon des Refusés. What shocked was the nude woman among clothed men.",
+            "evidence": "W. H. Wright (1915); W. Dewhurst (1904)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Louis XIV bought it in 1671. Long called a Giorgione, now credited to Titian, it still makes people argue about whose hand it is."
+        }
+      },
+      "takeaway": "Two clothed musicians and two nude women in a landscape: long called a Giorgione, now credited to Titian after centuries of argument, it later stood behind Manet's scandalous picnic.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010062281",
+        "https://victorianweb.org/painting/italian/titian5.html",
+        "https://www.nationalgallery.org.uk/paintings/probably-by-bernardino-da-asola-the-garden-of-love",
+        "https://www.nationalgallery.org.uk/artists/titian",
+        "https://www.nationalgallery.org.uk/artists/giorgione",
+        "https://www.gutenberg.org/ebooks/2398",
+        "https://www.gutenberg.org/ebooks/35986",
+        "https://www.gutenberg.org/ebooks/39886",
+        "https://www.gutenberg.org/ebooks/69533"
+      ]
+    }
+  ]
+}

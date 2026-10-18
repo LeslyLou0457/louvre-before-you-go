@@ -1,0 +1,428 @@
+{
+  "artworkId": "pastoral-concert",
+  "zoomImage": {
+    "file": "Le Concert champêtre, by Titian, from C2RMF.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Le_Concert_champ%C3%AAtre,_by_Titian,_from_C2RMF.jpg",
+    "width": 21872,
+    "height": 17584,
+    "licence": "Public domain (PD-Art)",
+    "credit": "Photo: C2RMF, via Wikimedia Commons · Public domain",
+    "overview": "/images/challenge/pastoral-concert/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "pastoral-concert-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: two players and a far hill",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.57,
+            "y": 0.48,
+            "w": 0.15,
+            "h": 0.2,
+            "label": "The seated woman's hands, near the middle of the picture",
+            "image": "/images/challenge/pastoral-concert/c1.jpg"
+          },
+          "text": "Level one: the standing woman pours water. Now zoom to the woman seated with her back to us.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.57,
+            "y": 0.48,
+            "w": 0.15,
+            "h": 0.2,
+            "label": "The seated woman's hands, near the middle of the picture",
+            "image": "/images/challenge/pastoral-concert/c1.jpg"
+          },
+          "text": "What does she hold?",
+          "choices": [
+            {
+              "label": "A wooden pipe",
+              "role": "right",
+              "next": "c1a",
+              "correct": true
+            },
+            {
+              "label": "A paintbrush",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "A shepherd's staff",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+              "url": "https://victorianweb.org/painting/italian/titian5.html"
+            },
+            {
+              "title": "Walter Pater, 'The School of Giorgione', The Renaissance (1893 text), Project Gutenberg #2398",
+              "url": "https://www.gutenberg.org/ebooks/2398"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Yes. She holds a pipe, a simple flute, while the man beside her plays the lute.",
+          "next": "c1m"
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "No brush: it is an instrument.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is long and thin.",
+            "truth": "It is a pipe, a simple flute.",
+            "evidence": "The crop; the Louvre; Walter Pater (1893)."
+          }
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Too short for a staff.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "There is a shepherd in the picture.",
+            "truth": "She holds a pipe; the shepherd is far off on the right.",
+            "evidence": "The crop; the Louvre; Walter Pater (1893)."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A pipe in her hands: music and water together."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.4,
+            "y": 0.53,
+            "w": 0.22,
+            "h": 0.2,
+            "label": "The hands of the man in the red cap, in the middle of the group",
+            "image": "/images/challenge/pastoral-concert/c2.jpg"
+          },
+          "text": "Level one: the men make music. Now zoom to the man in the red cap.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.4,
+            "y": 0.53,
+            "w": 0.22,
+            "h": 0.2,
+            "label": "The hands of the man in the red cap, in the middle of the group",
+            "image": "/images/challenge/pastoral-concert/c2.jpg"
+          },
+          "text": "What is he playing?",
+          "choices": [
+            {
+              "label": "A harp",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A drum",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "A lute",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+              "url": "https://victorianweb.org/painting/italian/titian5.html"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "A harp stands upright; this lies across him.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Both have strings.",
+            "truth": "He plays a lute, a round-backed string instrument held across the body.",
+            "evidence": "The crop; the Louvre."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "No drum: look for strings and a neck.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The body of it is round.",
+            "truth": "It is a lute, with a long neck and strings.",
+            "evidence": "The crop; the Louvre."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. He plays a lute, its round body against his red sleeve, its neck reaching towards his companion.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A lute: the music at the heart of the scene."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.8,
+            "y": 0.45,
+            "w": 0.19,
+            "h": 0.2,
+            "label": "The far right of the landscape, under the trees",
+            "image": "/images/challenge/pastoral-concert/c3.jpg"
+          },
+          "text": "Level one: one figure is far away. Now zoom to the right, under the trees.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.8,
+            "y": 0.45,
+            "w": 0.19,
+            "h": 0.2,
+            "label": "The far right of the landscape, under the trees",
+            "image": "/images/challenge/pastoral-concert/c3.jpg"
+          },
+          "text": "Who is out there?",
+          "choices": [
+            {
+              "label": "A hunter with his dogs",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "A shepherd and his flock",
+              "role": "right",
+              "next": "c3b",
+              "correct": true
+            },
+            {
+              "label": "A soldier on guard",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+              "url": "https://victorianweb.org/painting/italian/titian5.html"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Those animals are sheep.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A man walks with animals near a wood.",
+            "truth": "It is a shepherd with his flock.",
+            "evidence": "The crop; the Louvre."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Yes. A shepherd walks with his sheep under the trees: everyday country life behind the music.",
+          "next": "c3m"
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "No armour, no weapon: a shepherd.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He carries something on his shoulder.",
+            "truth": "He is a shepherd with his flock.",
+            "evidence": "The crop; the Louvre."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A shepherd far off, the countryside going on."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1a"
+        ],
+        "concept": "From \"the seated woman holds the pipe\" (level) to the pipe itself, held to play"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The seated woman holds a pipe (a simple flute).",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+          "url": "https://victorianweb.org/painting/italian/titian5.html",
+          "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+          "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+          "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Walter Pater, 'The School of Giorgione', The Renaissance (1893 text), Project Gutenberg #2398",
+          "url": "https://www.gutenberg.org/ebooks/2398",
+          "quote": "as the woman pours it from a pitcher with her jewelled hand in the Fete Champetre, listening, perhaps, to the cool sound as it falls, blent with the music of the pipes",
+          "supports": "Music of pipes in the picture; one woman pours water.",
+          "readVia": "Saved excerpt (research/works/pastoral-concert/sources/PATER-1893_school-of-giorgione_gutenberg2398.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1b": [
+          {
+            "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+            "url": "https://victorianweb.org/painting/italian/titian5.html",
+            "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+            "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+            "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Walter Pater, 'The School of Giorgione', The Renaissance (1893 text), Project Gutenberg #2398",
+            "url": "https://www.gutenberg.org/ebooks/2398",
+            "quote": "as the woman pours it from a pitcher with her jewelled hand in the Fete Champetre, listening, perhaps, to the cool sound as it falls, blent with the music of the pipes",
+            "supports": "Music of pipes in the picture; one woman pours water.",
+            "readVia": "Saved excerpt (research/works/pastoral-concert/sources/PATER-1893_school-of-giorgione_gutenberg2398.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+            "url": "https://victorianweb.org/painting/italian/titian5.html",
+            "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+            "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+            "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Walter Pater, 'The School of Giorgione', The Renaissance (1893 text), Project Gutenberg #2398",
+            "url": "https://www.gutenberg.org/ebooks/2398",
+            "quote": "as the woman pours it from a pitcher with her jewelled hand in the Fete Champetre, listening, perhaps, to the cool sound as it falls, blent with the music of the pipes",
+            "supports": "Music of pipes in the picture; one woman pours water.",
+            "readVia": "Saved excerpt (research/works/pastoral-concert/sources/PATER-1893_school-of-giorgione_gutenberg2398.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop; the Louvre's older commentary says she plays the flute; Pater speaks of the music of the pipes.",
+      "notes": "Ledger pc-002 (our looking), pc-012/pc-015 passages for the figures.",
+      "quoteCheck": "2026-10-18: Victorian Web copy of the Louvre text and Pater re-read.",
+      "cropCheck": "2026-10-18: box measured on images/pastoral-concert/main.jpg (3840 × 3087); crop 576 × 617 px, never upscaled. Checked by eye: her hand holding a light wooden pipe, her bare back on the right."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From \"making music\" (level) to the instrument itself"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The man in the red cap plays a lute.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+          "url": "https://victorianweb.org/painting/italian/titian5.html",
+          "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+          "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+          "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+            "url": "https://victorianweb.org/painting/italian/titian5.html",
+            "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+            "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+            "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+            "url": "https://victorianweb.org/painting/italian/titian5.html",
+            "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+            "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+            "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop; the Louvre's older commentary says he plays a lute.",
+      "notes": "Ledger pc-002 (our looking) with the Louvre's older commentary (pc-012 source).",
+      "quoteCheck": "2026-10-18: Victorian Web copy of the Louvre text re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (3840 × 3087); crop 845 × 618 px, never upscaled. Checked by eye: the round body of the lute, his hand on the strings, the red sleeve."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From \"the one who is far away\" (level voice) to the shepherd and his flock"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "A shepherd walks with his flock in the distance on the right.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+          "url": "https://victorianweb.org/painting/italian/titian5.html",
+          "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+          "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+          "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+            "url": "https://victorianweb.org/painting/italian/titian5.html",
+            "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+            "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+            "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Musée du Louvre, former website commentary on The Pastoral Concert, as reproduced by The Victorian Web",
+            "url": "https://victorianweb.org/painting/italian/titian5.html",
+            "quote": "Two young men, one dressed in a red costume with bloused sleeves and playing a lute, the other blond with bare feet and simply dressed | one stands a little distance away and pours water into a fountain; the other, seated with her back to the viewer, plays the flute. In the background, under a grove of trees, a herdsman tends his sheep.",
+            "supports": "The lute player, the woman with the flute (pipe), the herdsman with his sheep in the background.",
+            "readVia": "Saved page text (research/works/pastoral-concert/sources/VICWEB_louvre-commentary-copy.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop; the Louvre's older commentary names the herdsman and his sheep.",
+      "notes": "Ledger pc-002 (our looking).",
+      "quoteCheck": "2026-10-18: Victorian Web copy of the Louvre text re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (3840 × 3087); crop 730 × 618 px, never upscaled. Checked by eye: a man walking left with a staff over his shoulder, a flock of sheep behind him, trees above."
+    }
+  }
+}
