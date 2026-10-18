@@ -72,7 +72,7 @@ export type BookChapter = {
   status: "open" | "rooms-closed";
   closedNote?: string;
   checkedOn?: string;
-  /** "Denon · Level 1", "Denon · Levels −1, 0, 1; Sully · Level 0" (works on view only). */
+  /** "Denon · Floor 1", "Denon · Floors −1, 0, 1; Sully · Floor 0" (works on view only). */
   wingsFloors: string;
   /** Wing ids with a work placed in them, for the contents filter. */
   wings: WingId[];
@@ -203,7 +203,7 @@ function wingsFloors(works: BookWork[]): string {
   return [...byWing]
     .map(([name, floors]) => {
       const list = [...floors].sort((a, b) => a - b).map(floorLabel);
-      return `${name} · ${list.length > 1 ? "Levels" : "Level"} ${list.join(", ")}`;
+      return `${name} · ${list.length > 1 ? "Floors" : "Floor"} ${list.join(", ")}`;
     })
     .join("; ");
 }

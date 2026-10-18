@@ -12,6 +12,10 @@
 // visit or when the speaker changes (`enter`), reacts to the answer (`mood`),
 // lifts and chatters while its line is new, and floats; the bubble pops from
 // its tail with the whole line already in it. Nothing here waits.
+//
+// `intro`: the guide's one-time introduction (PRODUCT.md "0.5 pages and
+// interaction"), one extra handwritten line on the stage the first time a
+// player meets her; the player decides when, the stage only shows it.
 
 import type { CSSProperties } from "react";
 import { Head, type Mood } from "@/doodles/avatars";
@@ -25,6 +29,8 @@ type Props = {
   mood?: Mood;
   /** No-voice stage only: the line the narrator is saying (the question prompt). */
   talk?: string;
+  /** A one-time line introducing the speaker, shown under the head. */
+  intro?: string;
 };
 
 /**
@@ -41,15 +47,26 @@ export function stageSpeakerId(narratorId: string | undefined, voice: Voice | un
   return voice ? voice.speaker : narratorId;
 }
 
-export default function Stage({ narrator, voice, speakers, enter, mood, talk }: Props) {
+export default function Stage({ narrator, voice, speakers, enter, mood, talk, intro }: Props) {
   const speaker = voice ? speakers[voice.speaker] : narrator;
   if (!speaker) return null;
 
+  const introLine = intro ? (
+    <p className="border-t border-line pt-1.5 font-hand text-lg leading-snug text-ink">{intro}</p>
+  ) : null;
+
   if (!voice) {
-    return (
-      <div className="flex items-center gap-3 bg-stage px-3 py-2">
+    const row = (
+      <div className={`flex items-center gap-3 ${introLine ? "" : "bg-stage px-3 py-2"}`}>
         <Head speaker={speaker} size={talk ? 56 : 44} enter={enter} mood={mood} talk={talk} />
         <span className="font-hand text-lg leading-tight text-muted">{speaker.name}</span>
+      </div>
+    );
+    if (!introLine) return row;
+    return (
+      <div className="flex flex-col gap-1.5 bg-stage px-3 py-2">
+        {row}
+        {introLine}
       </div>
     );
   }
@@ -77,6 +94,7 @@ export default function Stage({ narrator, voice, speakers, enter, mood, talk }: 
         <br />
         {isQuote ? <cite className="not-italic">{voice.cite ?? "Source TBD"}</cite> : imaginedTag(speaker)}
       </figcaption>
+      {introLine}
     </figure>
   );
 }

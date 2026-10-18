@@ -260,9 +260,12 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
                 </ul>
               </div>
             )}
-            <button type="button" onClick={() => go(node.next)} className="btn-primary mt-auto self-end">
-              {node.next ? "Continue →" : lastQuestion ? "Finish round" : "Next close-up →"}
-            </button>
+            {/* Kept in view on a phone, as in the level player. Layout only. */}
+            <div className="sticky bottom-0 -mx-4 mt-auto flex justify-end bg-paper px-4 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+              <button type="button" onClick={() => go(node.next)} className="btn-primary">
+                {node.next ? "Continue →" : lastQuestion ? "Finish round" : "Next close-up →"}
+              </button>
+            </div>
           </>
         )}
       </section>

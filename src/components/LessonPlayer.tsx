@@ -18,8 +18,15 @@ import Stage, { stageSpeakerId } from "./Stage";
 import { CloseDoodle } from "@/doodles";
 import { moodFor, useScreenMotion } from "@/lib/motion";
 import { originHref, originLabel, originQuery, readOrigin, TRAIL, type Origin } from "@/lib/origin";
-import { clearPlace, getPlace, markComplete, savePlace } from "@/lib/progress";
+import { clearPlace, getPlace, leslyMet, markComplete, markLeslyMet, savePlace } from "@/lib/progress";
 import type { Artwork as ArtworkT, Lesson, Speaker } from "@/lib/types";
+
+/**
+ * Lesly's one-time introduction. The costume is our own drawing of our
+ * character, not a claim about any artwork.
+ */
+const LESLY_INTRO =
+  "Hello, I'm Lesly, your guide: a cat dressed up as Vermeer's Girl with a Pearl Earring. I speak for works whose makers left us no name or no words.";
 
 type Props = {
   lesson: Lesson;
@@ -102,6 +109,19 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
   const motion = useScreenMotion(ready, nodeId, stageSpeakerId(lesson.narrator, voice), answered);
   const mood = moodFor(lesson.nodes, nodeId);
 
+  // Meeting Lesly (PRODUCT.md "0.5 pages and interaction"): the first screen
+  // in any level where the guide is on the stage gets her one-time
+  // introduction; it stays on that screen and is remembered at once.
+  const stageSpeaker = speakers[stageSpeakerId(lesson.narrator, voice) ?? ""];
+  const guideOnStage = stageSpeaker?.kind === "guide";
+  const [introAt, setIntroAt] = useState<string | null>(null);
+  useEffect(() => {
+    if (!ready || !guideOnStage || introAt !== null || leslyMet()) return;
+    setIntroAt(nodeId);
+    markLeslyMet();
+  }, [ready, guideOnStage, introAt, nodeId]);
+  const intro = introAt === nodeId && stageSpeaker ? LESLY_INTRO : undefined;
+
   return (
     <main className="flex min-h-dvh flex-col pb-6">
       <header className="sticky top-0 z-10 flex items-center gap-3 bg-paper py-3">
@@ -147,7 +167,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
       >
         {node.type === "question" ? (
           <>
-            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} talk={node.text} />
+            <Stage narrator={narrator} speakers={speakers} enter={motion.enter} talk={node.text} intro={intro} />
             <h2 className="font-hand text-[1.75rem] font-bold leading-tight">{node.text}</h2>
             <div className="flex flex-col gap-3">
               {node.choices.map((c, i) => (
@@ -165,7 +185,7 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
           </>
         ) : (
           <button type="button" onClick={() => go(node.next)} className="flex flex-1 flex-col gap-4 text-left">
-            <Stage narrator={narrator} voice={node.voice} speakers={speakers} enter={motion.enter} mood={mood} />
+            <Stage narrator={narrator} voice={node.voice} speakers={speakers} enter={motion.enter} mood={mood} intro={intro} />
             {node.type === "branch" && picked && (
               <span className="flex flex-wrap items-center gap-2 font-hand text-lg text-muted">
                 You picked
@@ -174,7 +194,12 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
             )}
             <p>{node.text}</p>
             {node.type === "branch" && node.correction && <Correction correction={node.correction} />}
-            <span className="btn-primary mt-auto self-end">{node.next ? "Continue →" : "Finish level"}</span>
+            {/* Kept in view: on a phone a long correction card would push it below
+                the fold, so it sticks to the bottom edge on a paper band. Layout
+                only; nothing moves. */}
+            <span className="sticky bottom-0 -mx-4 mt-auto flex justify-end bg-paper px-4 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+              <span className="btn-primary">{node.next ? "Continue →" : "Finish level"}</span>
+            </span>
           </button>
         )}
       </section>

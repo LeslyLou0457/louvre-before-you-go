@@ -40,7 +40,7 @@ export type MapDrawing = {
   boxes: Record<WingName, Box>;
 };
 
-/** What the drawing says about each wing: its spoken name and the "Levels −1 to 1" tag under its banner. */
+/** What the drawing says about each wing: its spoken name and the "Floors −1 to 1" tag under its banner. */
 export type WingText = Record<WingName, { ariaLabel: string; levels: string }>;
 
 type Pt = [number, number];

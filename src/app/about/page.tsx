@@ -35,6 +35,10 @@ export default function AboutPage() {
           with their citation, and their sources are listed below.
         </p>
         <p>
+          Lesly is our own character: a cat dressed up as Vermeer&apos;s Girl with a Pearl Earring, drawn for this site.
+          The costume is a nod, not a claim about any artwork, and she only tells each work&apos;s sourced history.
+        </p>
+        <p>
           Artwork images are photographs of the real works, never redrawn or filtered. The doodles and artist heads are
           temporary placeholders until the hand-drawn ones arrive.
         </p>
