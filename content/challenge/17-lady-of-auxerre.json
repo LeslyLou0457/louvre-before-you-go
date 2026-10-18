@@ -1,0 +1,577 @@
+{
+  "artworkId": "lady-of-auxerre",
+  "zoomImage": {
+    "file": "Dame d'Auxerre - Musée du Louvre AGER MND 847 ; Ma 3098.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Dame_d%27Auxerre_-_Mus%C3%A9e_du_Louvre_AGER_MND_847_;_Ma_3098.jpg",
+    "width": 1516,
+    "height": 3450,
+    "licence": "CC0 1.0 (the photographer's own release)",
+    "credit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/lady-of-auxerre/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "lady-of-auxerre-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: hand, hair, face and skirt",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.18,
+            "y": 0.27,
+            "w": 0.42,
+            "h": 0.13,
+            "label": "Her bent right forearm and hand in front of her chest, above the belt",
+            "image": "/images/challenge/lady-of-auxerre/c1.jpg"
+          },
+          "text": "Level one: she stands still, feet together. Now zoom to the one diagonal in her body: her right arm.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.18,
+            "y": 0.27,
+            "w": 0.42,
+            "h": 0.13,
+            "label": "Her bent right forearm and hand in front of her chest, above the belt",
+            "image": "/images/challenge/lady-of-auxerre/c1.jpg"
+          },
+          "text": "What is her right hand doing?",
+          "choices": [
+            {
+              "label": "Holding a flower",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Lying flat on her chest",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Waving",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Étienne Michon, 'Musée du Louvre', Journal des Savants 7 (September 1909), p. 422 (our translation)",
+              "url": "https://www.persee.fr/doc/jds_0021-8103_1909_num_7_9_3446"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Her hand is empty.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The fingers curve a little.",
+            "truth": "The hand is open and lies flat on her chest.",
+            "evidence": "The crop; the Louvre's 1909 report: the right hand brought to the chest."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Her open hand lies flat across her chest, fingers together. It is the only gesture she makes.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Her arm is folded, not raised.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her hand is up near her shoulder.",
+            "truth": "The forearm crosses her body and the hand rests on her chest.",
+            "evidence": "The crop; the Louvre's 1909 report: the right hand brought to the chest."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "One hand on the chest: her only gesture."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.28,
+            "y": 0.17,
+            "w": 0.46,
+            "h": 0.11,
+            "label": "The lower ends of her long layered locks, on each side of her neck",
+            "image": "/images/challenge/lady-of-auxerre/c2.jpg"
+          },
+          "text": "Level one: her hair is cut into layers like steps. Now zoom to where the locks stop, over her chest.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.28,
+            "y": 0.17,
+            "w": 0.46,
+            "h": 0.11,
+            "label": "The lower ends of her long layered locks, on each side of her neck",
+            "image": "/images/challenge/lady-of-auxerre/c2.jpg"
+          },
+          "text": "How do her long locks end?",
+          "choices": [
+            {
+              "label": "In a necklace",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "In loose curls",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "In tied tips",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+            },
+            {
+              "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+              "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "No necklace: these are hair.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "They hang at her neck like beads.",
+            "truth": "They are the ends of her locks, tied off.",
+            "evidence": "The Louvre record; Fullerton (2016)."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Nothing is loose: every lock is tied.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Hair often ends in curls.",
+            "truth": "Each lock ends in a small tied tip.",
+            "evidence": "The Louvre record; Fullerton (2016)."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. Each layered lock tapers to a tied tip over her chest.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Layered locks, tied at the tips."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.07,
+            "w": 0.3,
+            "h": 0.13,
+            "label": "Her face, framed by the layered hair",
+            "image": "/images/challenge/lady-of-auxerre/c3.jpg"
+          },
+          "text": "Level one: nobody knows whom she shows. Now zoom to her face.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.07,
+            "w": 0.3,
+            "h": 0.13,
+            "label": "Her face, framed by the layered hair",
+            "image": "/images/challenge/lady-of-auxerre/c3.jpg"
+          },
+          "text": "What has happened to her face?",
+          "choices": [
+            {
+              "label": "Half has broken away",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "Half is veiled",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "Half was painted dark",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes. One side keeps its eye and nose; the other has broken off, leaving rough stone.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "There is no veil.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The rough side looks covered.",
+            "truth": "That side of the face is missing; the stone has broken away.",
+            "evidence": "The Louvre record; the crop."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "It is damage, not paint.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The two halves differ in tone.",
+            "truth": "The left part of her face is missing.",
+            "evidence": "The Louvre record; the crop."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A face half lost, and a name never known."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.55,
+            "w": 0.4,
+            "h": 0.22,
+            "label": "The front of her long skirt, below the knees",
+            "image": "/images/challenge/lady-of-auxerre/c4.jpg"
+          },
+          "text": "Level one: traces of red paint survive on her bust. Now zoom to the front of her long skirt.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.55,
+            "w": 0.4,
+            "h": 0.22,
+            "label": "The front of her long skirt, below the knees",
+            "image": "/images/challenge/lady-of-auxerre/c4.jpg"
+          },
+          "text": "What is cut into the front of her skirt?",
+          "choices": [
+            {
+              "label": "Letters of a name",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Squares inside squares",
+              "role": "right",
+              "next": "c4b",
+              "correct": true
+            },
+            {
+              "label": "Cracks in the stone",
+              "role": "near-miss",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+            },
+            {
+              "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+              "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "She carries no inscription.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The lines look like writing.",
+            "truth": "They are patterns on her dress; the Louvre lists no inscription.",
+            "evidence": "The Louvre record; Fullerton (2016)."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. Fine incised lines make squares inside squares down the skirt, part of the dress pattern. They were once coloured.",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "Too regular to be cracks.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Stone this old cracks.",
+            "truth": "The lines were incised on purpose to decorate the dress.",
+            "evidence": "The Louvre record; Fullerton (2016)."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "Squares cut into stone, once filled with colour."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From 'one arm bent across her body' (level) to what the hand does: it lies open and flat on her chest"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Her right hand lies open and flat across her chest, her only gesture.",
+      "regionSources": [
+        {
+          "title": "Étienne Michon, 'Musée du Louvre', Journal des Savants 7 (September 1909), p. 422 (our translation)",
+          "url": "https://www.persee.fr/doc/jds_0021-8103_1909_num_7_9_3446",
+          "quote": "la main droite ramenée sur la poitrine",
+          "supports": "Our translation: the right hand brought to the chest. A Louvre curator's 1909 description of the new acquisition.",
+          "readVia": "Saved Persée text in the research folder (sources/MICHON-1909.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Étienne Michon, 'Musée du Louvre', Journal des Savants 7 (September 1909), p. 422 (our translation)",
+            "url": "https://www.persee.fr/doc/jds_0021-8103_1909_num_7_9_3446",
+            "quote": "la main droite ramenée sur la poitrine",
+            "supports": "Our translation: the right hand brought to the chest. A Louvre curator's 1909 description of the new acquisition.",
+            "readVia": "Saved Persée text in the research folder (sources/MICHON-1909.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Étienne Michon, 'Musée du Louvre', Journal des Savants 7 (September 1909), p. 422 (our translation)",
+            "url": "https://www.persee.fr/doc/jds_0021-8103_1909_num_7_9_3446",
+            "quote": "la main droite ramenée sur la poitrine",
+            "supports": "Our translation: the right hand brought to the chest. A Louvre curator's 1909 description of the new acquisition.",
+            "readVia": "Saved Persée text in the research folder (sources/MICHON-1909.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop (ledger aux-046, our looking) and described by the Louvre's 1909 report.",
+      "notes": "Ledger aux-046 (our looking) with Michon 1909 (Louvre group). Visible facts only; no reading of the gesture's meaning is given.",
+      "quoteCheck": "2026-10-18: Michon re-read in the saved Persée text.",
+      "cropCheck": "2026-10-18: box measured on images/lady-of-auxerre/main.jpg (1280 x 2913, Commons' 1280 px rendering of the 1516 x 3450 original); crop 538 x 378 px, never upscaled. Checked by eye: forearm and long flat fingers across the chest, the patterned belt below."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From hair cut into layers (level) to how each lock ends: in a tied tip"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Each of her layered locks tapers to a tied tip over her chest.",
+      "regionSources": [
+        {
+          "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+          "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+          "quote": "the horizontally sectioned vertical locks taper to a series of bound points over the breast",
+          "supports": "The layered locks end in bound (tied) points over her chest.",
+          "readVia": "Saved text of the publisher's PDF excerpt in the research folder (sources/FULLERTON-2016_ch1-excerpt.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+          "quote": "cheveux, à étages, terminé par, ruban",
+          "supports": "Our translation of the record's index terms: hair, in tiers, ending in, ribbon. The locks end in tied tips.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+            "quote": "cheveux, à étages, terminé par, ruban",
+            "supports": "Our translation of the record's index terms: hair, in tiers, ending in, ribbon. The locks end in tied tips.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+            "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+            "quote": "the horizontally sectioned vertical locks taper to a series of bound points over the breast",
+            "supports": "The layered locks end in bound (tied) points over her chest.",
+            "readVia": "Saved text of the publisher's PDF excerpt in the research folder (sources/FULLERTON-2016_ch1-excerpt.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+            "quote": "cheveux, à étages, terminé par, ruban",
+            "supports": "Our translation of the record's index terms: hair, in tiers, ending in, ribbon. The locks end in tied tips.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+            "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+            "quote": "the horizontally sectioned vertical locks taper to a series of bound points over the breast",
+            "supports": "The layered locks end in bound (tied) points over her chest.",
+            "readVia": "Saved text of the publisher's PDF excerpt in the research folder (sources/FULLERTON-2016_ch1-excerpt.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record and Fullerton agree, and the tips are visible in the crop.",
+      "notes": "Ledger aux-035. The level's n2 no longer names the tied tips, so the close-up adds them.",
+      "quoteCheck": "2026-10-18: record JSON and Fullerton excerpt re-read in the saved files.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1280 x 2913); crop 589 x 321 px, never upscaled. Checked by eye: four tied tips on each side, the layered locks above, the neck between."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "q3",
+          "b3a"
+        ],
+        "concept": "From 'nobody knows whom she shows' (level) to the face itself: half of it is lost"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The left part of her face (on our right) has broken away; the other side keeps its eye and nose.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+          "quote": "Etat de l'oeuvre : incomplet, il manque la partie gauche du visage.",
+          "supports": "Our translation: condition: incomplete, the left part of the face is missing. Damage, not a veil or paint.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+            "quote": "Etat de l'oeuvre : incomplet, il manque la partie gauche du visage.",
+            "supports": "Our translation: condition: incomplete, the left part of the face is missing. Damage, not a veil or paint.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+            "quote": "Etat de l'oeuvre : incomplet, il manque la partie gauche du visage.",
+            "supports": "Our translation: condition: incomplete, the left part of the face is missing. Damage, not a veil or paint.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: stated by the Louvre record and visible in the crop (ledger aux-041, our looking).",
+      "notes": "Ledger aux-004 with aux-041. The game says 'one side' and 'the other' so it never has to explain her left versus ours.",
+      "quoteCheck": "2026-10-18: record JSON re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1280 x 2913); crop 384 x 379 px, never upscaled. Checked by eye: almond eye and nose on our left; rough broken surface from brow to chin on our right."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From the traces of red paint (level) to the incised pattern on the skirt, once coloured"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Incised concentric squares run down a band on the front of her skirt; the dress was both incised and painted.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+          "quote": "gravé(décor de la robe)-peinture rouge(traces sur le buste) | Décor : sur robe ; méandre ; carré (concentrique)",
+          "supports": "Our translation: incised (dress decoration), red paint (traces on the bust); decoration on the dress: meander, concentric squares.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+          "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+          "quote": "her skirt has geometric elements along its borders and on a broad paryphe",
+          "supports": "Geometric patterns run down a broad central band of the skirt: the band in the crop.",
+          "readVia": "Saved text of the publisher's PDF excerpt in the research folder (sources/FULLERTON-2016_ch1-excerpt.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+            "quote": "\"inscriptions\":\"\"",
+            "supports": "The record's inscription field is empty: no lettering is recorded on her.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+            "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+            "quote": "her skirt has geometric elements along its borders and on a broad paryphe",
+            "supports": "Geometric patterns run down a broad central band of the skirt: the band in the crop.",
+            "readVia": "Saved text of the publisher's PDF excerpt in the research folder (sources/FULLERTON-2016_ch1-excerpt.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3098 (MND 847), 'Dame d'Auxerre' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+            "quote": "gravé(décor de la robe)-peinture rouge(traces sur le buste) | Décor : sur robe ; méandre ; carré (concentrique)",
+            "supports": "Our translation: incised (dress decoration), red paint (traces on the bust); decoration on the dress: meander, concentric squares.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/lady-of-auxerre/sources/LV-REC_cl010276874.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Mark D. Fullerton, Greek Sculpture (Chichester: Wiley-Blackwell, 2016), chapter 1, publisher's excerpt",
+            "url": "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+            "quote": "revealing both painted and incised decoration; over her chest the tunic (chiton?) shows a polychrome scale pattern",
+            "supports": "The dress was both incised and painted: the lines are decoration, once coloured.",
+            "readVia": "Saved text of the publisher's PDF excerpt in the research folder (sources/FULLERTON-2016_ch1-excerpt.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for the incised squares (record and crop, ledger aux-047). 'Once coloured' rests on the record and Fullerton (painted and incised); which colours were where is unknown (ledger aux-003), so no colour is named.",
+      "notes": "Ledger aux-002, aux-003, aux-047.",
+      "quoteCheck": "2026-10-18: record JSON and Fullerton excerpt re-read.",
+      "cropCheck": "2026-10-18: box measured on main.jpg (1280 x 2913); crop 512 x 641 px, never upscaled. Checked by eye: concentric squares and horizontal lines in a vertical band."
+    }
+  }
+}
