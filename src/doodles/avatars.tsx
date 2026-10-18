@@ -45,6 +45,20 @@
 //              swelling low on his left cheek (a benign tumour, said to follow
 //              a fencing wound), which the portrait keeps in shadow. Sources:
 //              project files, content-plans/artist-voices/DAVID_HEAD.md;
+//   caravaggio Caravaggio, from Ottavio Leoni's coloured-chalk portrait of
+//              him (c. 1621, Biblioteca Marucelliana, Florence): a big
+//              shaggy mass of black hair falling over the forehead and ears,
+//              exaggerated; heavy black brows over dark eyes,
+//              exaggerated; dark skin; a broad, strong-jawed face; the
+//              drooping moustache and small pointed chin beard of the
+//              drawing. Bellori (1672): dark-skinned, dark eyes, black brows
+//              and hair. Sources: project files,
+//              content-plans/artist-voices/CARAVAGGIO_HEAD.md;
+//   titian     Titian, from his two self-portraits (Berlin, Gemäldegalerie;
+//              Madrid, Prado): seen in profile, facing left, with the black
+//              skullcap and the long white beard exaggerated, and the strong
+//              arched nose. Sources: project files,
+//              content-plans/artist-voices/TITIAN_HEAD.md;
 //   guide      Lesly, the museum guide who narrates works whose maker is
 //              unknown: a tuxedo cat dressed after
 //              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
@@ -102,6 +116,9 @@ const oval = (cx: number, cy: number, rx = 2.1, ry = 1.7) => (
     <ellipse cx={cx} cy={cy + 0.1} rx={rx - 0.7} ry={ry - 0.6} fill={MOUTH} />
   </>
 );
+
+/** Titian is drawn small in profile, then enlarged to fill the circle like the others. */
+const TITIAN_T = "translate(-5.6 -9.6) scale(1.2)";
 
 // All drawings share a 64×64 canvas, centred in the circle.
 const AVATARS: Record<AvatarId, Drawing> = {
@@ -338,6 +355,80 @@ const AVATARS: Record<AvatarId, Drawing> = {
     ),
     mouthClosed: line("M29.2 45.2 Q31.6 46 34.2 44.9", "#b8433a"),
     mouthOpen: oval(31.7, 45.5, 2, 1.6),
+  },
+  // Caravaggio, from Ottavio Leoni's chalk portrait of him (c. 1621,
+  // Biblioteca Marucelliana): the big shaggy mass of black hair, falling in
+  // locks over the forehead and down past the ears, exaggerated; heavy black
+  // brows low over dark eyes, exaggerated (Bellori, 1672: "di color
+  // fosco", dark eyes, black brows and hair); dark skin; a broad face with a
+  // strong jaw; the drooping moustache and small pointed chin beard of the
+  // drawing. Our own drawing, not traced.
+  caravaggio: {
+    tilt: -6,
+    head: (
+      <>
+        {/* the back of the shaggy black mass, ragged locks all round, long at the sides */}
+        <path d="M17.8 45 Q13.4 42.2 12.2 37.4 Q8.6 34.6 9.4 29.4 Q7 25 9.8 20.6 Q9 15 13.4 11.8 Q14.8 6.8 20.2 5.8 Q24.2 2 29.6 3.4 Q34.4 0.8 38.8 3.6 Q44.6 3 47.2 7.8 Q52.6 9.6 52.8 15.2 Q56.4 19 54.2 23.8 Q56.6 28.6 53.4 32.8 Q53.8 38.2 49.6 41.2 Q48.6 44.2 46 45.2 C45.8 37.6 45.4 30.4 43.6 25.6 C40 22 34 21.2 28.8 22 C24 23 20.6 26.2 19.6 31.2 C19 35.8 18.6 40.4 17.8 45 Z" fill="#141010" />
+        {brush("M12.6 24.4 Q14.4 16.6 20.6 12.4", "#3d3330", 1.1)}
+        {brush("M25.4 8.2 Q31.4 5.2 37.6 7.6", "#3d3330", 1.1)}
+        {brush("M43.4 9.8 Q49.6 12.6 50.8 19.4", "#3d3330", 1.1)}
+        {brush("M50.2 27.4 Q51.8 32.6 49 37.6", "#3d3330", 1.1)}
+        {brush("M13.4 31.4 Q13.6 36.4 16.4 40.6", "#3d3330", 1.1)}
+        <ellipse cx="19.4" cy="35.2" rx="2.4" ry="3.4" fill="#9d6238" />
+        <ellipse cx="44.8" cy="35" rx="2.4" ry="3.4" fill="#9d6238" />
+        {/* a broad face with a strong, squarish jaw, dark-skinned */}
+        <path d="M32 17.8 C40 17.6 44.6 22.8 44.8 30.2 C45 37.2 44.2 43.6 40.6 48 C38 51.2 35 52.2 32 52.2 C29 52.2 26 51.2 23.4 48 C19.8 43.6 19 37.2 19.2 30.2 C19.4 22.8 24 18 32 17.8 Z" fill="#b9784c" />
+        {/* ragged locks falling on the forehead, nearly to the brows */}
+        <path d="M19.6 31 C19.4 23.2 24.6 18 32 17.8 C39.4 17.6 44.8 22.6 44.8 30 L42.8 26.4 L41.8 29.4 L39 25 L37.6 28 L34.6 24 L32.8 27.4 L30.2 23.8 L28.2 27.8 L25.8 24.4 L24 28.8 L22.2 26 Z" fill="#141010" stroke="#141010" strokeWidth={0.8} strokeLinejoin="round" />
+        {/* heavy black brows, low over the eyes */}
+        {brush("M22.8 30.8 Q26.4 28.8 30.2 30.4", "#141010", 2.5)}
+        {brush("M33.8 30.4 Q37.6 28.8 41.2 30.8", "#141010", 2.5)}
+        <path d="M32.4 32.4 L35.8 41.4 Q32.8 43 29.6 41.6 Z" fill="#94573a" />
+        {/* the drooping moustache and the small pointed chin beard */}
+        <path d="M25.2 47.8 Q27.6 42.8 32 44 Q36.4 42.8 38.8 47.8 Q36.8 46 34.6 46.2 Q33.2 45.6 32 46 Q30.8 45.6 29.4 46.2 Q27.2 46 25.2 47.8 Z" fill="#141010" />
+        <path d="M29.6 50.2 Q32 49.4 34.4 50.2 L33.6 55 L32 57.8 L30.4 55 Z" fill="#141010" />
+      </>
+    ),
+    eyes: (
+      <>
+        <ellipse cx="27" cy="33.8" rx="2.4" ry="1.5" fill="#f3e9da" />
+        <ellipse cx="37" cy="33.8" rx="2.4" ry="1.5" fill="#f3e9da" />
+        <circle cx="27.3" cy="33.8" r="1.35" fill={INK} />
+        <circle cx="37.3" cy="33.8" r="1.35" fill={INK} />
+      </>
+    ),
+    mouthClosed: line("M29.8 48 Q32 48.7 34.2 47.9", "#8f3a2e"),
+    mouthOpen: oval(32, 48.4, 1.8, 1.4),
+  },
+  // Titian, from his two self-portraits (Berlin and the Prado), as Crowe and
+  // Cavalcaselle (1877) describe them: the black skullcap and the long white
+  // beard, both exaggerated; seen in profile facing left, as in the Prado
+  // picture, with the strong arched nose; white hair at the temple under the
+  // cap. Our own drawing, not traced.
+  titian: {
+    tilt: -4,
+    head: (
+      <g transform={TITIAN_T}>
+        {/* the head in profile, facing left, the nose jutting out */}
+        <path d="M25 21 C22 24 22.2 27.6 22.6 30 C20 32.4 17.6 34.4 15.6 36 C15 36.6 15.6 37.4 16.6 37.4 L21.6 37.6 C21.4 39 21.6 40.6 22.4 41.6 C24 46 30 48.4 36 47.6 C42 46.8 46.6 42 47.4 36 C48.2 29.6 47.4 24 45 20.4 C40 16.6 30 16.8 25 21 Z" fill="#eeae8c" />
+        <path d="M22.8 29.6 C20.4 32 17.8 34.2 15.4 36.2 C15.2 37 15.8 37.6 16.8 37.4 L22 37.6 C22.6 35 22.8 32.4 22.8 29.6 Z" fill="#d7805f" />
+        <ellipse cx="38.6" cy="33.4" rx="2.3" ry="3.3" fill="#de9474" />
+        {/* white hair at the temple and the back, under the cap */}
+        <path d="M41.6 24.6 C45.4 24 48.6 26 49.4 30 C50 33.6 48.8 37.2 46.4 39.6 C46.6 35.6 45.8 31.6 43.4 29.4 C42 28.2 41.2 26.4 41.6 24.6 Z" fill="#efebe3" />
+        {/* the black skullcap, big and round on the back of the head */}
+        <path d="M23 23.4 C24 12.6 33.6 8.4 41.4 10.6 C47.6 12.4 50.6 18.4 49.4 26.2 C43 22.6 31.4 21 23 23.4 Z" fill="#161414" />
+        {/* a silver brow */}
+        {brush("M23.2 27.4 Q25.8 25.8 28.8 26.6", "#a29b90", 1.6)}
+        {/* the long white beard, pointing down and forward, and the moustache */}
+        <path d="M21.6 39.4 C19.8 44.6 17.6 51.6 15.2 59.6 C21.6 59.4 28 56.4 33.4 52.4 C39 48.4 44.4 44.4 46.6 38.4 C41.4 41.8 33.6 43.2 28.2 42 C25.6 41.4 23.4 40.6 21.6 39.4 Z" fill="#efebe3" />
+        {brush("M22.4 46.6 Q21 51 19.4 55", "#cfc9bd", 1)}
+        {brush("M27.4 46 Q25.6 50.4 23.4 53.6", "#cfc9bd", 1)}
+        <path d="M19.6 39.4 Q22.8 37.4 27.4 39.2 Q24.6 40.2 22.6 39.8 Q21 40 19.6 39.4 Z" fill="#e4dfd5" />
+      </g>
+    ),
+    eyes: <circle cx="25.6" cy="30.2" r="1.35" fill={INK} transform={TITIAN_T} />,
+    mouthClosed: <g transform={TITIAN_T}>{line("M20.8 41.2 Q22.4 41.8 24.2 41.3", "#b8433a")}</g>,
+    mouthOpen: <g transform={TITIAN_T}>{oval(22.6, 41.6, 1.6, 1.25)}</g>,
   },
   // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
   // with a Pearl Earring (our own drawing): an ultramarine headwrap with the

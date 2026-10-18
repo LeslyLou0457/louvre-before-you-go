@@ -1,0 +1,319 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "woman-with-a-mirror",
+    "title": "Woman with a Mirror",
+    "artist": "Titian",
+    "year": "1525–1550",
+    "image": "/images/woman-with-a-mirror.jpg",
+    "imageCredit": "C2RMF scan via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "99 × 76 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062292"
+  },
+  "speakers": {
+    "titian": {
+      "name": "Titian",
+      "kind": "artist",
+      "avatar": "titian"
+    }
+  },
+  "lessons": [
+    {
+      "id": "woman-with-a-mirror-1",
+      "order": 1,
+      "title": "Two mirrors, no name",
+      "start": "n1",
+      "narrator": "titian",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A young woman with golden hair holds a long strand of it. Her other hand rests on a small jar. Behind her, a bearded man in red holds up two mirrors.",
+          "voice": {
+            "speaker": "titian",
+            "kind": "imagined",
+            "text": "Look past her face for a moment. Count the hands, then count the mirrors."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Why does he hold two mirrors?",
+          "choices": [
+            {
+              "label": "To show us her face",
+              "next": "b1a"
+            },
+            {
+              "label": "So she sees front and back",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "One for each of them",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "We are the ones left out.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She is looking towards the small mirror.",
+            "truth": "The small mirror faces her, so we see only its plain back. The two mirrors let her see herself front and back.",
+            "evidence": "The Louvre's gallery text (2017); Crowe and Cavalcaselle (1881); look at the photo."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. He holds a big round mirror and a small square one. Together they let her see herself from the front and from behind, like a hand mirror held up to a wall mirror.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Both mirrors are for her.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "There are two people and two mirrors.",
+            "truth": "He holds both, and they work together so that she can see her own back.",
+            "evidence": "The Louvre's gallery text (2017); Crowe and Cavalcaselle (1881)."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "He stands half in shadow. The Kunsthistorisches Museum in Vienna, which borrowed her in 2021, calls him an admiring suitor. And she? Everyone asks who she was.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "So who was she?",
+          "choices": [
+            {
+              "label": "Nobody knows",
+              "next": "b2c",
+              "correct": true
+            },
+            {
+              "label": "Titian's mistress",
+              "next": "b2a"
+            },
+            {
+              "label": "The goddess Venus",
+              "next": "b2b"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "An old title, not a fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In King Charles I's collection the picture was called 'Titian and his mistress'.",
+            "truth": "Nobody knows who she was. The Louvre names no sitter.",
+            "evidence": "The Louvre record; Crowe and Cavalcaselle (1881), who also saw no likeness of Titian in the man."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "No goddess here.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She is a golden-haired beauty with a mirror.",
+            "truth": "Nothing marks a goddess: just two people, two mirrors, a jar and a stone ledge. Her name is unknown.",
+            "evidence": "Look at the photo; the Louvre record names no sitter, and Crowe and Cavalcaselle (1881) doubted the old names."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Right. The Louvre names no sitter. She is one of Venice's ideal beauties: the Louvre calls her the model of the Venetian ideal of a woman, and Vienna's museum speaks of belle Veneziane.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "As a young painter in Venice, Titian worked close to Giorgione, whom the Louvre calls his master. The Louvre still sees Giorgione here, in the stone ledge in front and the mirror.",
+          "voice": {
+            "speaker": "titian",
+            "kind": "imagined",
+            "text": "I was born in 1488 or 1490. When I was young, Giorgione was working in Venice too."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "When did Titian paint her?",
+          "choices": [
+            {
+              "label": "Exactly 1515",
+              "next": "b3a"
+            },
+            {
+              "label": "The date is painted on it",
+              "next": "b3b"
+            },
+            {
+              "label": "Experts disagree",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "A favourite answer, not a fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Vienna museum and a Louvre gallery text both say about 1515.",
+            "truth": "Even the Louvre disagrees with itself: its record says 1525 to 1550. No date is painted on the canvas.",
+            "evidence": "The Louvre record and gallery text (2017); the Kunsthistorisches Museum (2021)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "If only it were.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A date on the canvas would settle the argument.",
+            "truth": "No signature or date is visible on it, and the Louvre record lists no inscription. So the experts argue from style.",
+            "evidence": "Look at the photo; the Louvre record. The Louvre's two dates and Vienna's show the argument."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Right. The Louvre's record says 1525 to 1550; the Louvre's own 2017 gallery text and the Vienna museum say about 1515. There is no date on the canvas.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Its later travels are better known. It belonged to King Charles I of England, whose collection called it 'Titian and his mistress'.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Who sold it to Louis XIV?",
+          "choices": [
+            {
+              "label": "Charles I of England",
+              "next": "b4a"
+            },
+            {
+              "label": "Everhard Jabach",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "Titian himself",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "He owned it, but earlier.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The king owned it before it reached France.",
+            "truth": "After Charles I, it belonged to Everhard Jabach of Paris, who sold it to Louis XIV.",
+            "evidence": "The Louvre record; Crowe and Cavalcaselle (1881)."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. After Charles I of England, the picture belonged to Everhard Jabach, a collector in Paris, who sold it to Louis XIV.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Not in its recorded history.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He painted it, so it was his to sell first.",
+            "truth": "Its recorded owners run from Charles I of England to Everhard Jabach, then Louis XIV.",
+            "evidence": "The Louvre record; Crowe and Cavalcaselle (1881)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "From the king's collection it came to the Louvre. Vienna borrowed it in 2021 for an exhibition on Titian's women.",
+          "voice": {
+            "speaker": "titian",
+            "kind": "imagined",
+            "text": "Before you go, find the brightest spot of light in the picture. It is not on her skin."
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Where does she hang today?",
+          "choices": [
+            {
+              "label": "In the Mona Lisa's room",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "In Vienna",
+              "next": "b5a"
+            },
+            {
+              "label": "In London",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Only on loan, for a few months.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Kunsthistorisches Museum showed her in 2021.",
+            "truth": "She went back to Paris. Today she hangs in the Louvre, in the room of the Mona Lisa.",
+            "evidence": "The Louvre record (exhibition list and room); the Kunsthistorisches Museum."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Yes: Room 711, the Salle des États, on Floor 1 of the Denon wing. Look for the two mirrors in the same room as the Mona Lisa.",
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "England owned her once.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "King Charles I of England owned the picture.",
+            "truth": "From Charles I it passed to Jabach and then to Louis XIV, and on to the Louvre.",
+            "evidence": "The Louvre record; Crowe and Cavalcaselle (1881)."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Two mirrors, a jar, a bare shoulder and a man in the shadows. Her name is lost and her date is argued, but she hangs in the room of the Mona Lisa. Take a minute with her."
+        }
+      },
+      "takeaway": "A man holds two mirrors so a Venetian beauty can see her back; nobody knows who she was, and even her date is argued.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010062292",
+        "https://mini-site.louvre.fr/trimestriel/2017/DRE/premiers_feux_au_musee/files/assets/common/downloads/publication.pdf",
+        "https://tiziansfrauenbild.khm.at/en/",
+        "https://archive.org/details/lifetimesoftitia01crowuoft",
+        "https://www.treccani.it/enciclopedia/tiziano-vecellio_(Dizionario-Biografico)/",
+        "https://id.smb.museum/object/872023"
+      ]
+    }
+  ]
+}
