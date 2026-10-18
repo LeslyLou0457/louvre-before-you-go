@@ -45,6 +45,11 @@
 //              swelling low on his left cheek (a benign tumour, said to follow
 //              a fencing wound), which the portrait keeps in shadow. Sources:
 //              project files, content-plans/artist-voices/DAVID_HEAD.md;
+//   titian     Titian, from his two self-portraits (Berlin, Gemäldegalerie;
+//              Madrid, Prado): seen in profile, facing left, with the black
+//              skullcap and the long white beard exaggerated, and the strong
+//              arched nose. Sources: project files,
+//              content-plans/artist-voices/TITIAN_HEAD.md;
 //   guide      Lesly, the museum guide who narrates works whose maker is
 //              unknown: a tuxedo cat dressed after
 //              Vermeer's Girl with a Pearl Earring (blue headwrap, yellow
@@ -102,6 +107,9 @@ const oval = (cx: number, cy: number, rx = 2.1, ry = 1.7) => (
     <ellipse cx={cx} cy={cy + 0.1} rx={rx - 0.7} ry={ry - 0.6} fill={MOUTH} />
   </>
 );
+
+/** Titian is drawn small in profile, then enlarged to fill the circle like the others. */
+const TITIAN_T = "translate(-5.6 -9.6) scale(1.2)";
 
 // All drawings share a 64×64 canvas, centred in the circle.
 const AVATARS: Record<AvatarId, Drawing> = {
@@ -338,6 +346,36 @@ const AVATARS: Record<AvatarId, Drawing> = {
     ),
     mouthClosed: line("M29.2 45.2 Q31.6 46 34.2 44.9", "#b8433a"),
     mouthOpen: oval(31.7, 45.5, 2, 1.6),
+  },
+  // Titian, from his two self-portraits (Berlin and the Prado), as Crowe and
+  // Cavalcaselle (1877) describe them: the black skullcap and the long white
+  // beard, both exaggerated; seen in profile facing left, as in the Prado
+  // picture, with the strong arched nose; white hair at the temple under the
+  // cap. Our own drawing, not traced.
+  titian: {
+    tilt: -4,
+    head: (
+      <g transform={TITIAN_T}>
+        {/* the head in profile, facing left, the nose jutting out */}
+        <path d="M25 21 C22 24 22.2 27.6 22.6 30 C20 32.4 17.6 34.4 15.6 36 C15 36.6 15.6 37.4 16.6 37.4 L21.6 37.6 C21.4 39 21.6 40.6 22.4 41.6 C24 46 30 48.4 36 47.6 C42 46.8 46.6 42 47.4 36 C48.2 29.6 47.4 24 45 20.4 C40 16.6 30 16.8 25 21 Z" fill="#eeae8c" />
+        <path d="M22.8 29.6 C20.4 32 17.8 34.2 15.4 36.2 C15.2 37 15.8 37.6 16.8 37.4 L22 37.6 C22.6 35 22.8 32.4 22.8 29.6 Z" fill="#d7805f" />
+        <ellipse cx="38.6" cy="33.4" rx="2.3" ry="3.3" fill="#de9474" />
+        {/* white hair at the temple and the back, under the cap */}
+        <path d="M41.6 24.6 C45.4 24 48.6 26 49.4 30 C50 33.6 48.8 37.2 46.4 39.6 C46.6 35.6 45.8 31.6 43.4 29.4 C42 28.2 41.2 26.4 41.6 24.6 Z" fill="#efebe3" />
+        {/* the black skullcap, big and round on the back of the head */}
+        <path d="M23 23.4 C24 12.6 33.6 8.4 41.4 10.6 C47.6 12.4 50.6 18.4 49.4 26.2 C43 22.6 31.4 21 23 23.4 Z" fill="#161414" />
+        {/* a silver brow */}
+        {brush("M23.2 27.4 Q25.8 25.8 28.8 26.6", "#a29b90", 1.6)}
+        {/* the long white beard, pointing down and forward, and the moustache */}
+        <path d="M21.6 39.4 C19.8 44.6 17.6 51.6 15.2 59.6 C21.6 59.4 28 56.4 33.4 52.4 C39 48.4 44.4 44.4 46.6 38.4 C41.4 41.8 33.6 43.2 28.2 42 C25.6 41.4 23.4 40.6 21.6 39.4 Z" fill="#efebe3" />
+        {brush("M22.4 46.6 Q21 51 19.4 55", "#cfc9bd", 1)}
+        {brush("M27.4 46 Q25.6 50.4 23.4 53.6", "#cfc9bd", 1)}
+        <path d="M19.6 39.4 Q22.8 37.4 27.4 39.2 Q24.6 40.2 22.6 39.8 Q21 40 19.6 39.4 Z" fill="#e4dfd5" />
+      </g>
+    ),
+    eyes: <circle cx="25.6" cy="30.2" r="1.35" fill={INK} transform={TITIAN_T} />,
+    mouthClosed: <g transform={TITIAN_T}>{line("M20.8 41.2 Q22.4 41.8 24.2 41.3", "#b8433a")}</g>,
+    mouthOpen: <g transform={TITIAN_T}>{oval(22.6, 41.6, 1.6, 1.25)}</g>,
   },
   // Lesly, the young museum guide: a tuxedo cat dressed after Vermeer's Girl
   // with a Pearl Earring (our own drawing): an ultramarine headwrap with the
