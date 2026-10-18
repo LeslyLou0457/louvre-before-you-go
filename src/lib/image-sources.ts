@@ -43,4 +43,5 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
   "lady-of-auxerre":
     "https://commons.wikimedia.org/wiki/File:Dame_d%27Auxerre_-_Mus%C3%A9e_du_Louvre_AGER_MND_847_;_Ma_3098.jpg",
+  "rampin-head": "https://commons.wikimedia.org/wiki/File:Rampin_rider_Louvre_Ma3104.jpg",
 };
