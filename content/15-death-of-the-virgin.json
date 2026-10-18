@@ -1,0 +1,389 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "death-of-the-virgin",
+    "title": "The Death of the Virgin",
+    "artist": "Caravaggio",
+    "year": "c. 1601–1606",
+    "image": "/images/death-of-the-virgin.jpg",
+    "imageCredit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "medium": "Oil on canvas",
+    "dimensions": "369 × 245 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062304"
+  },
+  "speakers": {
+    "caravaggio": {
+      "name": "Caravaggio",
+      "kind": "artist",
+      "avatar": "caravaggio"
+    }
+  },
+  "lessons": [
+    {
+      "id": "death-of-the-virgin-1",
+      "order": 1,
+      "title": "Taken down, bought by a duke",
+      "start": "n1",
+      "narrator": "caravaggio",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A huge red curtain hangs over the scene. Below it a young woman lies on a plain bed, eyes closed, bare feet sticking out at the left. Men crowd round her, hiding their faces.",
+          "voice": {
+            "speaker": "caravaggio",
+            "kind": "imagined",
+            "text": "Look up first, at the red curtain. Then down, to the woman on the bed, and the men hiding their faces."
+          },
+          "next": "n1b"
+        },
+        "n1b": {
+          "type": "story",
+          "text": "This is the Virgin Mary, at her death. Caravaggio painted it in Rome as an altarpiece, the picture above a church altar: 3.69 metres high, taller than two people standing one on the other's shoulders.",
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Who ordered this painting?",
+          "choices": [
+            {
+              "label": "The pope",
+              "next": "b1a"
+            },
+            {
+              "label": "A lawyer, for his chapel",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "The Duke of Mantua",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Rome, yes, but not the pope.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was painted for a church in Rome.",
+            "truth": "In 1601 a lawyer, Laerzio Cherubini, ordered it for his family chapel in Santa Maria della Scala, in Rome's Trastevere district.",
+            "evidence": "The Louvre's record; Keith Christiansen (2010); Claudia Renzi (2025). Every source names Cherubini."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. In 1601 the lawyer Laerzio Cherubini ordered it for his family chapel in Santa Maria della Scala, a church in Rome's Trastevere district.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "He comes into the story, but later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A Duke of Mantua did own it, from 1607.",
+            "truth": "It was ordered in 1601 by a lawyer, Laerzio Cherubini, for his chapel in Rome. The duke bought it only after the church gave it up.",
+            "evidence": "Louvre record and Christiansen: Cherubini, 1601. Baglione (1642), the Louvre and Christiansen: bought for Mantua in 1607."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "The contract asked for the Virgin's 'death or transit': in Latin, mors sive transitus. The church was run by barefoot friars, the Discalced Carmelites. Hold on to those two words.",
+          "next": "n2b"
+        },
+        "n2b": {
+          "type": "story",
+          "text": "When did he finish it? The Louvre says at the end of 1605 or early in 1606. The scholar Claudia Renzi argues for 1602, or 1603 at the latest. Scholars disagree, so the label gives a range.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "What happened once the picture went up in the church?",
+          "choices": [
+            {
+              "label": "It became the church's pride",
+              "next": "b2a"
+            },
+            {
+              "label": "It was taken down",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "It was never delivered",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Pride came later, and from collectors.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The duke's agent called it one of the best pictures Caravaggio had made.",
+            "truth": "The church took it down and refused it. Collectors and painters admired it all the same.",
+            "evidence": "Louvre record; Baglione (1642); the Mantuan agent's dispatches, published by Baschet (1867); Christiansen."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. The church took it down and refused it. By October 1606 the physician and collector Giulio Mancini was writing to his brother that it had been removed.",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "It was delivered, then removed.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Its finishing date is argued, and Caravaggio fled Rome in 1606.",
+            "truth": "It was put up in the church and then taken down. Mancini reported the removal in October 1606.",
+            "evidence": "Baglione (1642): 'fu levata via', it was taken away. Christiansen and Renzi, from Mancini's letters."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Writers gave reasons. Mancini wrote that it went too far in lasciviousness and lacked decorum, what suits a sacred picture. Baglione, in 1642, said she was swollen, with bare legs. Bellori, in 1672: he copied a swollen dead woman too closely.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "So why was it really taken down?",
+          "choices": [
+            {
+              "label": "He was wanted for murder",
+              "next": "b3a"
+            },
+            {
+              "label": "The duke offered more",
+              "next": "b3b"
+            },
+            {
+              "label": "Scholars still disagree",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Bad timing for him, but not the reason anyone gave.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "On 28 May 1606 Caravaggio killed Ranuccio Tomassoni in Rome and fled the city.",
+            "truth": "The early writers blamed the picture, not the crime: decorum, a swollen body, bare legs.",
+            "evidence": "Gregori (1985), Christiansen, Renzi: the killing. Mancini's letters, Baglione, Bellori: the reasons."
+          },
+          "next": "n3b"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "The duke bought it after it came down.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Duke of Mantua did pay well for it: 280 scudi.",
+            "truth": "The duke's side bought it in 1607, after the church had removed it.",
+            "evidence": "Christiansen and the Mantuan dispatches (Baschet): 280 scudi, February 1607. Mancini, October 1606: already removed."
+          },
+          "next": "n3b"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Right. The early writers blamed decorum and the swollen body. Renzi argues the model was recognised as a courtesan; Christiansen points to the friars' belief that Mary's death was only a passage.",
+          "next": "n3b"
+        },
+        "n3b": {
+          "type": "story",
+          "text": "Each reason has defenders, and no record of the friars' own decision has been found. So nobody can say for sure why it came down.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Refused or not, collectors wanted it. Giulio Mancini hoped to buy it himself. But it went to the Duke of Mantua, Vincenzo I Gonzaga: his side agreed a price of 280 scudi in February 1607.",
+          "voice": {
+            "speaker": "caravaggio",
+            "kind": "imagined",
+            "text": "I left Rome in a hurry in 1606. My picture stayed behind."
+          },
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Who told the duke to buy it?",
+          "choices": [
+            {
+              "label": "Peter Paul Rubens",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "Giulio Mancini",
+              "next": "b4b"
+            },
+            {
+              "label": "Caravaggio himself",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Yes. Rubens, then court painter to the Duke of Mantua, recommended the purchase. He worked for the duke's court from 1600 to 1608.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "He wanted it, but for himself.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Mancini was a keen collector who followed the picture closely and wrote about it.",
+            "truth": "Mancini hoped to buy it himself, but it went to the duke. The advice to buy came from Rubens.",
+            "evidence": "Christiansen and Renzi, from Mancini's letters; the Mantuan agent's dispatches (Baschet, 1867): Rubens."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "He wasn't there to sell it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was his own picture.",
+            "truth": "Caravaggio had fled Rome in 1606 after a killing. Rubens, the duke's court painter, recommended it.",
+            "evidence": "Gregori (1985), Christiansen, Renzi: the flight. Baschet's dispatches, Christiansen, Gregori: Rubens."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Before it left Rome, in April 1607, the duke's agent there, Giovanni Magni, kept the picture on show at his house for a whole week.",
+          "voice": {
+            "speaker": "caravaggio",
+            "kind": "imagined",
+            "text": "For one week in April, my picture was on show in Rome. Then it went north, to Mantua."
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Why show a refused picture for a whole week?",
+          "choices": [
+            {
+              "label": "To hide a scandal",
+              "next": "b5a"
+            },
+            {
+              "label": "So painters could see it",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "To sell it again",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "It was shown, not hidden.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The church had just taken it down.",
+            "truth": "The duke's agent showed it for a week so that Rome's painters could see it.",
+            "evidence": "The agent's dispatches (Baschet, 1867); Salerno (1985) and Renzi for the week's showing."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Yes. Magni let the painters of Rome see it for a week. He reported that it was held to be one of the best pictures Caravaggio had made.",
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "It was already sold.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A week on show sounds like an auction.",
+            "truth": "The duke's side had bought it in February. The week in April came just before it left for Mantua.",
+            "evidence": "Christiansen and the Mantuan dispatches (Baschet): bought in February 1607. Salerno and Renzi: shown in April."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Back in Trastevere the friars needed a new altarpiece. They turned to Carlo Saraceni, a Venetian painter working in Rome.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Did Saraceni's replacement stay on the altar?",
+          "choices": [
+            {
+              "label": "Yes, it's still there",
+              "next": "b6a"
+            },
+            {
+              "label": "No: they wanted angels",
+              "next": "b6b",
+              "correct": true
+            },
+            {
+              "label": "It went to Mantua too",
+              "next": "b6c"
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Not his first version.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was painted for that very altar, to replace Caravaggio's.",
+            "truth": "His first version left too: it is now in the Metropolitan Museum in New York. The friars wanted angels.",
+            "evidence": "The Met's record (2019.406) and Renzi: the first version. Christiansen and Renzi: the angels."
+          },
+          "next": "n7"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "Right. The friars wanted angels, and Saraceni painted another version with angels welcoming the Virgin into heaven. His first version is now in New York.",
+          "next": "n7"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Wrong city: it went to New York, much later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Caravaggio's picture went to Mantua.",
+            "truth": "Saraceni's first version is now in the Metropolitan Museum of Art in New York, given in 2019.",
+            "evidence": "The Met's record (2019.406, gift of Richard L. Feigen); Renzi."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "From Mantua it passed to King Charles I of England, then to the Paris banker Everhard Jabach, who sold it to Louis XIV in 1671. Today it hangs in the Grande Galerie, Room 712. Look for the basin."
+        }
+      },
+      "takeaway": "Painted for a lawyer's chapel in Rome, taken down by the church, bought for the Duke of Mantua on Rubens's advice: why it came down is still argued.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010062304",
+        "https://newrepublic.com/article/79749/life-art-paintings-carvaggio",
+        "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+        "https://archive.org/details/bub_gb_8jddx8VQlMIC",
+        "https://archive.org/details/levitedepittoris00bell",
+        "https://archive.org/details/gazette-des-beaux-arts_1867-04-01_22_130",
+        "https://archive.org/details/theageofcaravaggio1985",
+        "https://www.metmuseum.org/art/collection/search/438690",
+        "https://www.treccani.it/enciclopedia/vincenzo-i-gonzaga-duca-di-mantova-e-del-monferrato_(Dizionario-Biografico)/",
+        "https://books.google.com/books/about/Caravaggio_s_Death_of_the_Virgin.html?id=L8afQgAACAAJ"
+      ]
+    }
+  ]
+}
