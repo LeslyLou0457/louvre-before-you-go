@@ -134,6 +134,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 - Tapping a locked level shows a light hint, "Finish the previous level first", not a pop-up.
 - Leaving mid-level saves your place in the browser: reopening the level (or reloading the page) picks up at the same passage or question, with a small "Start over" link to replay it from the beginning. The saved place is cleared when the level is finished. Finished levels can be replayed.
 - Restrained motion (see "Motion"): the narrator rises into place, floats, talks and reacts to right and wrong answers; bubbles, options, correction cards, stars and the route move a little. Nothing ever waits for an animation, and the artwork never moves. No full-screen confetti.
+- The first time a player meets Lesly (her first screen on the stage in any level), one extra line in her handwriting under her head introduces her, once: "Hello, I'm Lesly, your guide: a cat dressed up as Vermeer's Girl with a Pearl Earring. I speak for works whose makers left us no name or no words." The costume is our own drawing of our character, not a claim about any artwork. Remembered as `leslyMet` in `louvre-before-you-go:moments:v1`; losing it only shows the line again. The About page has one line about her.
 
 ---
 
@@ -229,6 +230,7 @@ Cover → "Start here" trail → the 5 existing levels (today's route, unchanged
 - A tab bar with **Cover, Map, Contents** reaches any module in two taps. Back always returns to where the module was opened from.
 - Cover copy, exactly: "The Louvre is home to treasures from across the world and across thousands of years. Meet 100 of its masterpieces, and the stories behind them, before you go."
 - Page numbers: module number plus room number ("Chapter 09, room 711"). Room numbers are the Louvre's own, so they stay stable when works are added; positions like "4 of 9" are computed, never stored.
+- A missing page shows the static export's `404.html` (`app/not-found.tsx`, served by GitHub Pages under the base path) in the doodle chrome, with the same fonts and colours: one line saying the page isn't here, and links back to the cover and Contents.
 
 ### The map
 
@@ -501,6 +503,8 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
 | work | `museumUrl` | The collections.louvre.fr record, or `null` for a work with no Louvre record (the Gallery of Five Continents works carry Musée du quai Branly inventory numbers) |
 | work | `levelId` | Optional: the lesson id of the work's level (`"mona-lisa-1"`). Missing means "Coming soon" |
 | work | `note` | Optional editorial note on the placement, for people; not shown to players |
+
+Label format, the same in level files (`artwork.artist`, `artwork.year`) and the catalogue (`artist`, `date`): years as BC and AD, never BCE or CE; circa as "c. " with a space; a maker who is unknown is named by the culture the record gives ("Greek, Hellenistic period"), never "Unknown" or "Anonymous". Only the formatting is fixed; the values stay the record's.
 
 `npm run check-content` also checks the catalogue: every work in exactly one module or the appendix (ids unique); every label field present (`medium` may be "TBD"), and `titleFr`, when given, different from `title`; every `levelId` names an existing lesson whose `artwork.id` equals the work's `id`, and every level file's artwork is in the catalogue; module ids `01`–`15` in order, each once; `location` well formed (a known wing, a floor that wing lists, a room of digits or `null` with a `place`; `null` only for off-view works); works in module order (on view by room number, then on view without a room number, then not on view); `display` from the list, with `displayNote` when not `on-display`; `checkedOn` a real date, with a warning when it is more than 90 days old.
 
