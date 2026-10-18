@@ -46,4 +46,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
   "rampin-head": "https://commons.wikimedia.org/wiki/File:Rampin_rider_Louvre_Ma3104.jpg",
   "kore-of-samos-hera-of-samos":
     "https://commons.wikimedia.org/wiki/File:H%C3%A9ra_de_Samos_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_grecques_Ma_686.jpg",
+  "plaque-of-the-ergastines-parthenon-frieze":
+    "https://commons.wikimedia.org/wiki/File:Plaque_des_Ergastines_-_Mus%C3%A9e_du_Louvre_AGER_MR_825_;_N_1700_;_N_1279_;_Ma_738.jpg",
 };

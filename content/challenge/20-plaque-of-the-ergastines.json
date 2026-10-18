@@ -1,0 +1,637 @@
+{
+  "artworkId": "plaque-of-the-ergastines-parthenon-frieze",
+  "zoomImage": {
+    "file": "Plaque des Ergastines - Musée du Louvre AGER MR 825 ; N 1700 ; N 1279 ; Ma 738.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Plaque_des_Ergastines_-_Mus%C3%A9e_du_Louvre_AGER_MR_825_;_N_1700_;_N_1279_;_Ma_738.jpg",
+    "width": 10968,
+    "height": 6755,
+    "licence": "CC0 1.0 (the photographer's own release)",
+    "credit": "Photo: Shonagon, 2026, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/plaque-of-the-ergastines/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "plaque-of-the-ergastines-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: basket, finger, bowl and lost heads",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.06,
+            "y": 0.22,
+            "w": 0.22,
+            "h": 0.24,
+            "label": "The hands of the man at the far left, at chest height",
+            "image": "/images/challenge/plaque-of-the-ergastines/c1.jpg"
+          },
+          "text": "Level one: look at their hands. Now zoom to the man at the far left.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.06,
+            "y": 0.22,
+            "w": 0.22,
+            "h": 0.24,
+            "label": "The hands of the man at the far left, at chest height",
+            "image": "/images/challenge/plaque-of-the-ergastines/c1.jpg"
+          },
+          "text": "What is the man on the left holding?",
+          "choices": [
+            {
+              "label": "A sword",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "A scroll",
+              "role": "near-miss",
+              "next": "c1b"
+            },
+            {
+              "label": "Probably a basket",
+              "role": "right",
+              "next": "c1c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+              "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments"
+            },
+            {
+              "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+              "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Flat and wide, not a blade.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Men often carry weapons in art.",
+            "truth": "It is a flat object, probably a basket.",
+            "evidence": "The crop; the Acropolis Museum; the Strasbourg booklet (2022)."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Too flat and wide.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Officials carry documents.",
+            "truth": "It is a flat object, probably a basket.",
+            "evidence": "The crop; the Acropolis Museum; the Strasbourg booklet (2022)."
+          }
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Yes. A flat object, probably a ceremonial basket, perhaps handed over by the girls.",
+          "next": "c1m"
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A basket, probably, handed over."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.3,
+            "w": 0.2,
+            "h": 0.2,
+            "label": "The second man, in the middle of the slab, and the hand coming out of his cloak",
+            "image": "/images/challenge/plaque-of-the-ergastines/c2.jpg"
+          },
+          "text": "Level one: six women walk towards two men. Now zoom to the man in the middle.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.3,
+            "w": 0.2,
+            "h": 0.2,
+            "label": "The second man, in the middle of the slab, and the hand coming out of his cloak",
+            "image": "/images/challenge/plaque-of-the-ergastines/c2.jpg"
+          },
+          "text": "What is the man in the middle doing?",
+          "choices": [
+            {
+              "label": "Holding a cup",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Pointing",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "Waving goodbye",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+              "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments"
+            },
+            {
+              "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+              "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "His hand is empty.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Others carry vessels.",
+            "truth": "He points at the women, directing them.",
+            "evidence": "The crop; the Acropolis Museum; the Strasbourg booklet (2022)."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. He raises a finger towards the women, as if giving a signal.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "He is directing, not leaving.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His hand is raised.",
+            "truth": "He points at the women, directing them.",
+            "evidence": "The crop; the Acropolis Museum; the Strasbourg booklet (2022)."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A raised finger: a signal."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.68,
+            "y": 0.5,
+            "w": 0.12,
+            "h": 0.16,
+            "label": "The side of the second woman from the right, at hip height",
+            "image": "/images/challenge/plaque-of-the-ergastines/c3.jpg"
+          },
+          "text": "Level one: the procession brought offerings for Athena. Now zoom to a woman's side.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.68,
+            "y": 0.5,
+            "w": 0.12,
+            "h": 0.16,
+            "label": "The side of the second woman from the right, at hip height",
+            "image": "/images/challenge/plaque-of-the-ergastines/c3.jpg"
+          },
+          "text": "What round thing is this woman holding?",
+          "choices": [
+            {
+              "label": "A libation bowl",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "A shield",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "A mirror",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+              "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments"
+            },
+            {
+              "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+              "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf"
+            },
+            {
+              "title": "Musée du Louvre, Des clefs pour comprendre la Grèce antique, education dossier (2026), p. 5 (our translation)",
+              "url": "https://api-www.louvre.fr/sites/default/files/2026-02/2026_REVU_Fiches_Grece_V6.pdf"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes: a phiale, a shallow bowl for pouring offerings.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Too small, and she is no warrior.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is round.",
+            "truth": "It is a phiale, a shallow libation bowl.",
+            "evidence": "The crop; the Acropolis Museum; the Strasbourg booklet (2022)."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "A ritual bowl, not a mirror.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is round and flat.",
+            "truth": "It is a phiale, a shallow libation bowl.",
+            "evidence": "The crop; the Acropolis Museum; the Strasbourg booklet (2022)."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A bowl for pouring offerings."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.52,
+            "y": 0.22,
+            "w": 0.22,
+            "h": 0.22,
+            "label": "The shoulders of the two women in the middle of the slab",
+            "image": "/images/challenge/plaque-of-the-ergastines/c4.jpg"
+          },
+          "text": "Level one: six women walk. Now zoom to the middle pair.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.52,
+            "y": 0.22,
+            "w": 0.22,
+            "h": 0.22,
+            "label": "The shoulders of the two women in the middle of the slab",
+            "image": "/images/challenge/plaque-of-the-ergastines/c4.jpg"
+          },
+          "text": "What has happened to these two women?",
+          "choices": [
+            {
+              "label": "They wear hoods",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Their heads are lost",
+              "role": "right",
+              "next": "c4b",
+              "correct": true
+            },
+            {
+              "label": "They bow very low",
+              "role": "near-miss",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 738, 'Plaque des Ergastines' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010279036"
+            },
+            {
+              "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+              "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "Look: the neck stops at a break.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The cloth rises at the shoulders.",
+            "truth": "The upper part is broken and the heads are lost.",
+            "evidence": "The crop; the Louvre record; the Strasbourg booklet (2022)."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. The top of the slab is broken away, and these two have lost their heads.",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "The heads are missing, not lowered.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Others bow their heads a little.",
+            "truth": "The upper part is broken and the heads are lost.",
+            "evidence": "The crop; the Louvre record; the Strasbourg booklet (2022)."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "Broken at the top, heads lost."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From 'look at their hands' and the two men (level) to what the left-hand man holds"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The man at the far left holds a flat object in both hands, probably a ceremonial basket the girls handed to him.",
+      "regionSources": [
+        {
+          "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+          "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+          "quote": "the first parade marshal from the left carries with both hands a flat object, probably a ceremonial basket",
+          "supports": "The man at the left holds a flat object in both hands, probably a ceremonial basket.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+          "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+          "quote": "le second, le plus à gauche, tient une corbeille, que lui ont probablement remis les jeunes filles devant lui",
+          "supports": "Our translation: the second, furthest left, holds a basket, which the girls in front of him probably handed to him.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+            "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+            "quote": "the first parade marshal from the left carries with both hands a flat object, probably a ceremonial basket",
+            "supports": "The man at the left holds a flat object in both hands, probably a ceremonial basket.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "le second, le plus à gauche, tient une corbeille, que lui ont probablement remis les jeunes filles devant lui",
+            "supports": "Our translation: the second, furthest left, holds a basket, which the girls in front of him probably handed to him.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1b": [
+          {
+            "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+            "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+            "quote": "the first parade marshal from the left carries with both hands a flat object, probably a ceremonial basket",
+            "supports": "The man at the left holds a flat object in both hands, probably a ceremonial basket.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "le second, le plus à gauche, tient une corbeille, que lui ont probablement remis les jeunes filles devant lui",
+            "supports": "Our translation: the second, furthest left, holds a basket, which the girls in front of him probably handed to him.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium: the object is broken, and both sources say 'probably', so the right option keeps the word.",
+      "notes": "Ledger erg-007.",
+      "quoteCheck": "2026-10-18: Acropolis Museum and Strasbourg booklet re-read in the saved texts.",
+      "cropCheck": "2026-10-18: box measured on images/plaque-of-the-ergastines/main.jpg (3840 x 2365, Commons' 3840 px rendering of the 10968 x 6755 original); crop 845 x 568 px, never upscaled. Checked by eye: both hands hold a broken flat object at chest height; a girl's head at the right edge."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From the two men the women walk towards (level) to what the middle one does: points, directing them"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The man in the middle points at the women with a raised finger, apparently giving a command.",
+      "regionSources": [
+        {
+          "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+          "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+          "quote": "the second teletarch points with his left hand, apparently giving a command, to the next pair of maidens",
+          "supports": "The man in the middle points at the women, apparently giving a command.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+          "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+          "quote": "le premier les accueille d'un index levé",
+          "supports": "Our translation: the first welcomes them with a raised index finger.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+            "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+            "quote": "the second teletarch points with his left hand, apparently giving a command, to the next pair of maidens",
+            "supports": "The man in the middle points at the women, apparently giving a command.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "le premier les accueille d'un index levé",
+            "supports": "Our translation: the first welcomes them with a raised index finger.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+            "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+            "quote": "the second teletarch points with his left hand, apparently giving a command, to the next pair of maidens",
+            "supports": "The man in the middle points at the women, apparently giving a command.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "le premier les accueille d'un index levé",
+            "supports": "Our translation: the first welcomes them with a raised index finger.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: both sources, and visible in the crop.",
+      "notes": "Ledger erg-008. The level's n1 voice no longer names the pointing finger.",
+      "quoteCheck": "2026-10-18: both re-read in the saved texts.",
+      "cropCheck": "2026-10-18: box measured on images/plaque-of-the-ergastines/main.jpg (3840 x 2365, Commons' 3840 px rendering of the 10968 x 6755 original); crop 768 x 472 px, never upscaled. Checked by eye: a hand with the index finger extended towards the right, out of the folds of his cloak."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "b2a"
+        ],
+        "concept": "From the offerings in the procession (level) to one of them: a libation bowl"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "One woman holds a phiale, a shallow bowl for pouring libations.",
+      "regionSources": [
+        {
+          "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+          "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+          "quote": "The first holds a mesomphalos phiale in her right hand",
+          "supports": "One of the women holds a phiale, a shallow bowl.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+          "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+          "quote": "sa voisine à gauche porte une coupe à libation (phiale)",
+          "supports": "Our translation: her neighbour on the left carries a libation bowl (phiale).",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, Des clefs pour comprendre la Grèce antique, education dossier (2026), p. 5 (our translation)",
+          "url": "https://api-www.louvre.fr/sites/default/files/2026-02/2026_REVU_Fiches_Grece_V6.pdf",
+          "quote": "L'une d'elles tient une phiale (une coupe sans pied utilisée pour accomplir des libations)",
+          "supports": "Our translation: one of them holds a phiale (a bowl without a foot, used for libations).",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/LV-EDU-2026_p5.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+            "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+            "quote": "The first holds a mesomphalos phiale in her right hand",
+            "supports": "One of the women holds a phiale, a shallow bowl.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "sa voisine à gauche porte une coupe à libation (phiale)",
+            "supports": "Our translation: her neighbour on the left carries a libation bowl (phiale).",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Acropolis Museum, 'Parthenon. East frieze. Block 7 (VII). Fragments' (collection page)",
+            "url": "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+            "quote": "The first holds a mesomphalos phiale in her right hand",
+            "supports": "One of the women holds a phiale, a shallow bowl.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/ACROPOLIS-east-frieze-VII.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "sa voisine à gauche porte une coupe à libation (phiale)",
+            "supports": "Our translation: her neighbour on the left carries a libation bowl (phiale).",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: three sources name the phiale; in the crop it is seen edge-on, as an outline.",
+      "notes": "Ledger erg-007.",
+      "quoteCheck": "2026-10-18: all three re-read in the saved texts.",
+      "cropCheck": "2026-10-18: box measured on images/plaque-of-the-ergastines/main.jpg (3840 x 2365, Commons' 3840 px rendering of the 10968 x 6755 original); crop 461 x 379 px, never upscaled. Checked by eye: a round outline held low at the woman's side, beside the pleats of her dress."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From 'six women walk' (level) to the damage: the two in the middle have lost their heads"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The top of the slab is broken away, and the two women in the middle have lost their heads.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 738, 'Plaque des Ergastines' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010279036",
+          "quote": "Etat de l'oeuvre : incomplet : il manque la partie supérieure et les têtes.",
+          "supports": "Our translation: condition: incomplete: the upper part and the heads are missing.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/LV-REC_cl010279036.json and LV-EN.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+          "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+          "quote": "La partie supérieure est fragmentaire sur l'original, où ont disparu les têtes des deux figures féminines centrales",
+          "supports": "Our translation: the upper part is fragmentary on the original, where the heads of the two central female figures have disappeared.",
+          "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 738, 'Plaque des Ergastines' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279036",
+            "quote": "Etat de l'oeuvre : incomplet : il manque la partie supérieure et les têtes.",
+            "supports": "Our translation: condition: incomplete: the upper part and the heads are missing.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/LV-REC_cl010279036.json and LV-EN.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "La partie supérieure est fragmentaire sur l'original, où ont disparu les têtes des deux figures féminines centrales",
+            "supports": "Our translation: the upper part is fragmentary on the original, where the heads of the two central female figures have disappeared.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 738, 'Plaque des Ergastines' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010279036",
+            "quote": "Etat de l'oeuvre : incomplet : il manque la partie supérieure et les têtes.",
+            "supports": "Our translation: condition: incomplete: the upper part and the heads are missing.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/LV-REC_cl010279036.json and LV-EN.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "MISHA / Université de Strasbourg, Un laboratoire de l'archéologie classique : la collection Adolf Michaelis, exhibition booklet (2022), p. 7 (our translation)",
+            "url": "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+            "quote": "La partie supérieure est fragmentaire sur l'original, où ont disparu les têtes des deux figures féminines centrales",
+            "supports": "Our translation: the upper part is fragmentary on the original, where the heads of the two central female figures have disappeared.",
+            "readVia": "Saved text in the research folder (research/works/plaque-of-the-ergastines/sources/MISHA-2022_p7.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: both sources, and visible in the crop.",
+      "notes": "Ledger erg-002.",
+      "quoteCheck": "2026-10-18: record and Strasbourg booklet re-read.",
+      "cropCheck": "2026-10-18: box measured on images/plaque-of-the-ergastines/main.jpg (3840 x 2365, Commons' 3840 px rendering of the 10968 x 6755 original); crop 845 x 521 px, never upscaled. Checked by eye: two cloaked women, broken off at the neck, under the ragged upper edge."
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "plaque-of-the-ergastines-parthenon-frieze",
+    "title": "Plaque of the Ergastines",
+    "artist": "Greek, Classical period",
+    "year": "445–438 BC",
+    "image": "/images/plaque-of-the-ergastines.jpg",
+    "imageCredit": "Photo: Shonagon, 2026, via Wikimedia Commons · CC0",
+    "medium": "Pentelic marble",
+    "dimensions": "101 × 207 × 13 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010279036"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "plaque-of-the-ergastines-1",
+      "order": 1,
+      "title": "The procession for Athena",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Six young women walk towards two men. This marble slab comes from the Parthenon in Athens and was carved in the 440s BC.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Look at their hands. Almost every pair is doing something different."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Where on the Parthenon was this slab?",
+          "choices": [
+            {
+              "label": "Inside, round Athena's statue",
+              "next": "b1a"
+            },
+            {
+              "label": "High up, on the front",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Low, along the steps",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "It was on the outside.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The temple housed the goddess.",
+            "truth": "The frieze ran high round the outside walls; this slab was on the east side, the front.",
+            "evidence": "The Louvre record; the Acropolis Museum; the Strasbourg booklet (2022)."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. The frieze ran high round the outside of the temple, and this slab was on the east side, the front. Up there it was hard to see.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "It was high above people's heads.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Here it hangs at eye level.",
+            "truth": "The frieze ran high on the building and was hard to see from below.",
+            "evidence": "The Strasbourg booklet (2022); Roberts (2025); Spivey (2013)."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Every four years, Athens held a great festival for its goddess, Athena. A procession climbed up to the Acropolis.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "What did the procession bring to Athena?",
+          "choices": [
+            {
+              "label": "A woven robe",
+              "next": "b2a",
+              "correct": true
+            },
+            {
+              "label": "A new marble statue",
+              "next": "b2b"
+            },
+            {
+              "label": "Gold coins",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Yes: the peplos, a robe for Athena's age-old wooden statue. The frieze also shows offerings for a great sacrifice.",
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Cloth, not stone.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Parthenon is full of sculpture.",
+            "truth": "They brought the peplos, a robe for her old wooden statue.",
+            "evidence": "The Acropolis Museum; the Louvre; Roberts (2025)."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "A robe was the gift.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Temples held treasure.",
+            "truth": "The procession carried the peplos, a woven robe for the goddess.",
+            "evidence": "The Acropolis Museum; the Louvre; Roberts (2025)."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "The slab is named after the Ergastines. Look at the young women on it.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Who were the Ergastines?",
+          "choices": [
+            {
+              "label": "The sculptors",
+              "next": "b3a"
+            },
+            {
+              "label": "Priestesses of Athena",
+              "next": "b3b"
+            },
+            {
+              "label": "Girls who wove the robe",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "The name means weavers, not carvers.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The slab is named after them.",
+            "truth": "The Ergastines were girls who wove Athena's robe.",
+            "evidence": "The Louvre; the Strasbourg booklet (2022)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "The name means weavers.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "They walk in a religious procession.",
+            "truth": "The Ergastines were girls who wove the robe; the two men are the ones sometimes called priests.",
+            "evidence": "The Louvre; the Strasbourg booklet (2022)."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Yes. They wove Athena's peplos. Whether these women are Ergastines or basket-bearers, scholars disagree.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "In 1789 Fauvel recovered this slab from the Parthenon ruins, working for the French ambassador Choiseul-Gouffier. The whole frieze had been about 160 metres long.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Somebody planned all 160 metres. Scholars give that person a name."
+          },
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Who is credited with designing the frieze?",
+          "choices": [
+            {
+              "label": "Fauvel",
+              "next": "b4a"
+            },
+            {
+              "label": "Phidias",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "Choiseul-Gouffier",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "He recovered the slab, much later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His name is in the slab's history.",
+            "truth": "Fauvel recovered it from the ruins in 1789. The design is attributed to Phidias.",
+            "evidence": "The Louvre record; the Strasbourg booklet (2022); Rémond (2021); Roberts (2025)."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. The Louvre and scholars such as Roberts attribute the frieze's design to Phidias. It is an attribution, made by scholars.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "He owned the slab, centuries later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His name is in the slab's history.",
+            "truth": "He was the French ambassador it was recovered for in 1789. The design is attributed to Phidias.",
+            "evidence": "The Louvre record; Rémond (2021); Roberts (2025)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "From the ruins in Athens, the slab still had a long way to go before it reached the Louvre.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "How did the slab reach the Louvre?",
+          "choices": [
+            {
+              "label": "Captured at sea",
+              "next": "b5a"
+            },
+            {
+              "label": "Bought from Greece in 1900",
+              "next": "b5b"
+            },
+            {
+              "label": "Seized in the Revolution",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "It was seized on land, by the state.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Marble from Greece had to cross the sea.",
+            "truth": "It was seized by the revolutionary authorities with Choiseul-Gouffier's collections, and entered the Louvre in 1798.",
+            "evidence": "The Louvre record; Rémond (2021)."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "It came a century earlier.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many antiquities were bought later.",
+            "truth": "It was seized in the Revolution and entered the Louvre in 1798.",
+            "evidence": "The Louvre record; the Strasbourg booklet (2022); Rémond (2021)."
+          },
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. Choiseul-Gouffier's collections were confiscated in the French Revolution, and the slab entered the Louvre in 1798.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "It has been in Paris since 1798, now in Room 347 on Floor 0 of the Denon wing. Other slabs of the same frieze are in Athens and London."
+        }
+      },
+      "takeaway": "This slab once ran high on the front of the Parthenon, showing young women in the procession that brought a woven robe to Athena; it reached Paris through a revolutionary seizure.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010279036",
+        "https://api-www.louvre.fr/sites/default/files/2026-02/2026_REVU_Fiches_Grece_V6.pdf",
+        "https://www.theacropolismuseum.gr/en/parthenon-east-frieze-block-7-vii-fragments",
+        "https://www.misha.fr/websites/misha/images/actus-agenda/2022/02-2022/livret-expo-michaelis-web.pdf",
+        "https://www.cambridge.org/core/journals/classical-quarterly/article/reappraising-the-parthenon-frieze-divinespace-and-mortalspace/298971C0FE6CE2A7DEADB32AA6B33AA5",
+        "https://www.cambridge.org/core/books/abs/greek-sculpture/in-search-of-pheidias/B141807F4057CBB974D0CE185FB20C86",
+        "https://dante.univ-tlse2.fr/files/original/13890/Remond_Emmanuel.pdf"
+      ]
+    }
+  ]
+}
