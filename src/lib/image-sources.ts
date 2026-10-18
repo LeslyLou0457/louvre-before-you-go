@@ -35,8 +35,17 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg",
   "oath-of-the-horatii":
     "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
+  "death-of-the-virgin":
+    "https://commons.wikimedia.org/wiki/File:La_Mort_de_la_Vierge_-_Le_Caravage_-_Mus%C3%A9e_du_Louvre_Peintures_INV_54.jpg",
+  "woman-with-a-mirror":
+    "https://commons.wikimedia.org/wiki/File:Portrait_d%27une_Femme_%C3%A0_sa_Toilette,_by_Titian,_from_C2RMF.jpg",
   "intervention-of-the-sabine-women":
     "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg",
+  "lady-of-auxerre":
+    "https://commons.wikimedia.org/wiki/File:Dame_d%27Auxerre_-_Mus%C3%A9e_du_Louvre_AGER_MND_847_;_Ma_3098.jpg",
+  "rampin-head": "https://commons.wikimedia.org/wiki/File:Rampin_rider_Louvre_Ma3104.jpg",
+  "kore-of-samos-hera-of-samos":
+    "https://commons.wikimedia.org/wiki/File:H%C3%A9ra_de_Samos_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_grecques_Ma_686.jpg",
   "plaque-of-the-ergastines-parthenon-frieze":
     "https://commons.wikimedia.org/wiki/File:Plaque_des_Ergastines_-_Mus%C3%A9e_du_Louvre_AGER_MR_825_;_N_1700_;_N_1279_;_Ma_738.jpg",
 };

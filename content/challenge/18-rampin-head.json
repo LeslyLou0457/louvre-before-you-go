@@ -1,0 +1,604 @@
+{
+  "artworkId": "rampin-head",
+  "zoomImage": {
+    "file": "Rampin rider Louvre Ma3104.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Rampin_rider_Louvre_Ma3104.jpg",
+    "width": 1800,
+    "height": 2400,
+    "licence": "Public domain (PD-self: the photographer released it into the public domain)",
+    "credit": "Photo: Marie-Lan Nguyen, 2006, via Wikimedia Commons · Public domain",
+    "overview": "/images/challenge/rampin-head/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "rampin-head-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: beard, neck, wreath and eyes",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.4,
+            "w": 0.38,
+            "h": 0.14,
+            "label": "His chin and jaw, below the smiling mouth",
+            "image": "/images/challenge/rampin-head/c1.jpg"
+          },
+          "text": "Level one: a smiling young rider with a short beard. Now zoom to his chin.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.3,
+            "y": 0.4,
+            "w": 0.38,
+            "h": 0.14,
+            "label": "His chin and jaw, below the smiling mouth",
+            "image": "/images/challenge/rampin-head/c1.jpg"
+          },
+          "text": "What is his beard made of?",
+          "choices": [
+            {
+              "label": "Smooth stone",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Rows of tiny beads",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Long wavy strands",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Look closer: it is all bumps.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "From afar the beard looks like one shape.",
+            "truth": "It is carved as rows of tiny beads.",
+            "evidence": "The crop; the Louvre record lists a beard."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Each tuft is a little bead of marble, set in rows. The sculptor turned hair into pattern.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Short and beaded, not wavy.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Beards are often carved in waves.",
+            "truth": "His beard is short, carved as rows of beads.",
+            "evidence": "The crop; the Louvre record lists a beard."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A beard of beads, one by one."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.52,
+            "w": 0.42,
+            "h": 0.14,
+            "label": "The base of his neck and the top of his chest",
+            "image": "/images/challenge/rampin-head/c2.jpg"
+          },
+          "text": "Level one: his body is in Athens. Now zoom to where head meets chest.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.36,
+            "y": 0.52,
+            "w": 0.42,
+            "h": 0.14,
+            "label": "The base of his neck and the top of his chest",
+            "image": "/images/challenge/rampin-head/c2.jpg"
+          },
+          "text": "What is the line at the base of his neck?",
+          "choices": [
+            {
+              "label": "A necklace",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A modern crack",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Marble meets plaster",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+            },
+            {
+              "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+              "url": "https://www.theacropolismuseum.gr/en/node/22377"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "No jewellery: it is a join.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It runs round the neck.",
+            "truth": "It is where the original head meets the plaster cast.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "It is a join, on purpose.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is rough and uneven.",
+            "truth": "The head is original and the body is a cast; this is where they meet.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. Above the line is the ancient marble head; below it is the Louvre's cast of the body in Athens.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Ancient above, modern below."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.24,
+            "y": 0.06,
+            "w": 0.54,
+            "h": 0.13,
+            "label": "The top of his head, above the curls",
+            "image": "/images/challenge/rampin-head/c3.jpg"
+          },
+          "text": "Level one: his wreath most probably marks a victory. Now zoom to the top of his head.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.24,
+            "y": 0.06,
+            "w": 0.54,
+            "h": 0.13,
+            "label": "The top of his head, above the curls",
+            "image": "/images/challenge/rampin-head/c3.jpg"
+          },
+          "text": "What is his wreath made of?",
+          "choices": [
+            {
+              "label": "Leaves",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "Metal",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "A plain ribbon",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+            },
+            {
+              "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+              "url": "https://www.theacropolismuseum.gr/en/node/22377"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes: leaves, carved over the curls. The Louvre calls them oak; the Acropolis Museum says wild celery or oak.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Carved leaves, not metal.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It hugs the head like a band.",
+            "truth": "It is a wreath of leaves carved over the hair.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Look: it is made of little leaves.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It runs round like a headband.",
+            "truth": "It is a wreath of leaves.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Leaves, not metal: a winner's wreath."
+        },
+        "c4": {
+          "type": "story",
+          "zoom": {
+            "x": 0.26,
+            "y": 0.18,
+            "w": 0.52,
+            "h": 0.2,
+            "label": "His eyes, his ear and the curls beside it",
+            "image": "/images/challenge/rampin-head/c4.jpg"
+          },
+          "text": "Level one: traces of red paint survive on him. Now zoom to his eyes and hair.",
+          "next": "c4q"
+        },
+        "c4q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.26,
+            "y": 0.18,
+            "w": 0.52,
+            "h": 0.2,
+            "label": "His eyes, his ear and the curls beside it",
+            "image": "/images/challenge/rampin-head/c4.jpg"
+          },
+          "text": "Where can you still see red?",
+          "choices": [
+            {
+              "label": "His lips only",
+              "role": "near-miss",
+              "next": "c4a"
+            },
+            {
+              "label": "Eyes and hair",
+              "role": "right",
+              "next": "c4b",
+              "correct": true
+            },
+            {
+              "label": "Nowhere",
+              "role": "near-miss",
+              "next": "c4c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879"
+            },
+            {
+              "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+              "url": "https://www.theacropolismuseum.gr/en/node/22377"
+            }
+          ]
+        },
+        "c4a": {
+          "type": "branch",
+          "text": "The traces are in the hair, eyes and beard.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Lips are the part we expect to be red.",
+            "truth": "Red survives on the hair, irises and beard.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          }
+        },
+        "c4b": {
+          "type": "branch",
+          "text": "Yes. The Louvre records red in his hair, irises and beard; the Acropolis Museum notes colour on his face and hair.",
+          "next": "c4m"
+        },
+        "c4c": {
+          "type": "branch",
+          "text": "Look again in the curls.",
+          "next": "c4m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Marble looks white at first.",
+            "truth": "Red traces survive on the hair, irises and beard.",
+            "evidence": "The Louvre record; the Acropolis Museum."
+          }
+        },
+        "c4m": {
+          "type": "story",
+          "text": "Once painted; traces remain."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From 'a short beard' (level) to how it is carved: rows of tiny beads"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "His short beard is carved as rows of tiny beads of marble.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+          "quote": "jeune homme (cavalier, souriant, cheveux, court, boucle, frontal, barbe, couronne, feuille de chêne)",
+          "supports": "Our translation of the record's index terms: young man (rider, smiling, hair, short, curl, frontal, beard, wreath, oak leaf). He has a beard; how it is carved is our own looking at the crop.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "jeune homme (cavalier, souriant, cheveux, court, boucle, frontal, barbe, couronne, feuille de chêne)",
+            "supports": "Our translation of the record's index terms: young man (rider, smiling, hair, short, curl, frontal, beard, wreath, oak leaf). He has a beard; how it is carved is our own looking at the crop.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "jeune homme (cavalier, souriant, cheveux, court, boucle, frontal, barbe, couronne, feuille de chêne)",
+            "supports": "Our translation of the record's index terms: young man (rider, smiling, hair, short, curl, frontal, beard, wreath, oak leaf). He has a beard; how it is carved is our own looking at the crop.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: visible in the crop (ledger ram-021, our looking); the Louvre record lists the beard.",
+      "notes": "Ledger ram-021 (our looking) with the record. Rayet's 'masterpiece of hairdressing' is Lechat's alone and stays out.",
+      "quoteCheck": "2026-10-18: record JSON re-read.",
+      "cropCheck": "2026-10-18: box measured on images/rampin-head/main.jpg (1280 x 1707, Commons' 1280 px rendering of the 1800 x 2400 original); crop 486 x 239 px, never upscaled. Checked by eye: beaded beard round the chin and jaw, red traces in it, the smiling mouth above."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "b1a"
+        ],
+        "concept": "From 'his body is in Athens, the Louvre shows a cast' (level) to the join you can see"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The rough line at the base of his neck is where the ancient marble head meets the Louvre's plaster cast of the body in Athens.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+          "quote": "Complété par un moulage du torse et du cheval conservés au Musée de l'Acropole d'Athènes (n° 590)",
+          "supports": "Our translation: completed by a cast of the torso and the horse kept in the Acropolis Museum in Athens (no. 590). Below the head, the body is plaster.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+          "url": "https://www.theacropolismuseum.gr/en/node/22377",
+          "quote": "the head is a plaster copy of the original which is in the Louvre Museum in Paris",
+          "supports": "The marble head is in Paris; the body is in Athens. The two halves meet only in casts.",
+          "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "Complété par un moulage du torse et du cheval conservés au Musée de l'Acropole d'Athènes (n° 590)",
+            "supports": "Our translation: completed by a cast of the torso and the horse kept in the Acropolis Museum in Athens (no. 590). Below the head, the body is plaster.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+            "url": "https://www.theacropolismuseum.gr/en/node/22377",
+            "quote": "the head is a plaster copy of the original which is in the Louvre Museum in Paris",
+            "supports": "The marble head is in Paris; the body is in Athens. The two halves meet only in casts.",
+            "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "Complété par un moulage du torse et du cheval conservés au Musée de l'Acropole d'Athènes (n° 590)",
+            "supports": "Our translation: completed by a cast of the torso and the horse kept in the Acropolis Museum in Athens (no. 590). Below the head, the body is plaster.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+            "url": "https://www.theacropolismuseum.gr/en/node/22377",
+            "quote": "the head is a plaster copy of the original which is in the Louvre Museum in Paris",
+            "supports": "The marble head is in Paris; the body is in Athens. The two halves meet only in casts.",
+            "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the cast is stated by both museums; the join is visible (ledger ram-029, our looking).",
+      "notes": "Ledger ram-002, ram-029.",
+      "quoteCheck": "2026-10-18: record JSON and Acropolis Museum text re-read.",
+      "cropCheck": "2026-10-18: box measured on images/rampin-head/main.jpg (1280 x 1707, Commons' 1280 px rendering of the 1800 x 2400 original); crop 537 x 239 px, never upscaled. Checked by eye: smoother white plaster below an irregular seam; warmer worn marble above."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n4",
+          "q4",
+          "b4c"
+        ],
+        "concept": "From what the wreath means (level) to what it is made of: leaves, with the plant disputed"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "His wreath is made of leaves: oak for the Louvre, wild celery or oak for the Acropolis Museum.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+          "quote": "couronne, feuille de chêne",
+          "supports": "Our translation: wreath, oak leaf.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+          "url": "https://www.theacropolismuseum.gr/en/node/22377",
+          "quote": "On his head he wears a wreath made of wild celery or oak leaves",
+          "supports": "A wreath of leaves; which plant is not agreed.",
+          "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "couronne, feuille de chêne",
+            "supports": "Our translation: wreath, oak leaf.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+            "url": "https://www.theacropolismuseum.gr/en/node/22377",
+            "quote": "On his head he wears a wreath made of wild celery or oak leaves",
+            "supports": "A wreath of leaves; which plant is not agreed.",
+            "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "couronne, feuille de chêne",
+            "supports": "Our translation: wreath, oak leaf.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+            "url": "https://www.theacropolismuseum.gr/en/node/22377",
+            "quote": "On his head he wears a wreath made of wild celery or oak leaves",
+            "supports": "A wreath of leaves; which plant is not agreed.",
+            "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High that it is a wreath of leaves (both museums); which plant is a conflict (ledger ram-014), given as each museum's view. The leaves are worn, so the crop shows the band more clearly than single leaves.",
+      "notes": "Ledger ram-014, ram-021.",
+      "quoteCheck": "2026-10-18: record JSON and Acropolis Museum text re-read.",
+      "cropCheck": "2026-10-18: box measured on images/rampin-head/main.jpg (1280 x 1707, Commons' 1280 px rendering of the 1800 x 2400 original); crop 691 x 222 px, never upscaled. Checked by eye: a raised band with small leaf shapes running round the crown, above the beaded curls."
+    },
+    "c4q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From 'traces of red paint' (level) to where the red survives"
+      },
+      "framing": "where",
+      "what_you_learn": "Red traces survive in his hair, his irises and his beard.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+          "quote": "peinture rouge(traces,cheveux,iris,barbe et moustache?)",
+          "supports": "Our translation: red paint (traces: hair, irises, beard and moustache?).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+          "url": "https://www.theacropolismuseum.gr/en/node/22377",
+          "quote": "Traces of color are still preserved on the rider's face and hair",
+          "supports": "Colour survives on his face and hair.",
+          "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c4a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "peinture rouge(traces,cheveux,iris,barbe et moustache?)",
+            "supports": "Our translation: red paint (traces: hair, irises, beard and moustache?).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+            "url": "https://www.theacropolismuseum.gr/en/node/22377",
+            "quote": "Traces of color are still preserved on the rider's face and hair",
+            "supports": "Colour survives on his face and hair.",
+            "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c4c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 3104 (MNC 2128), 'Tête du cavalier Rampin' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010276879",
+            "quote": "peinture rouge(traces,cheveux,iris,barbe et moustache?)",
+            "supports": "Our translation: red paint (traces: hair, irises, beard and moustache?).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/rampin-head/sources/LV-REC_cl010276879.json, modified 2026-08-11), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Acropolis Museum, Athens, collection record Acr. 590, 'Statue of a rider. The \"Rampin Rider\"'",
+            "url": "https://www.theacropolismuseum.gr/en/node/22377",
+            "quote": "Traces of color are still preserved on the rider's face and hair",
+            "supports": "Colour survives on his face and hair.",
+            "readVia": "Saved text of the museum's page in the research folder (sources/ACROPOLIS-acr590.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: both museums, and visible in the crop.",
+      "notes": "Ledger ram-010. The record's moustache comes with a question mark, so the game leaves it out.",
+      "quoteCheck": "2026-10-18: record JSON and Acropolis Museum text re-read.",
+      "cropCheck": "2026-10-18: box measured on images/rampin-head/main.jpg (1280 x 1707, Commons' 1280 px rendering of the 1800 x 2400 original); crop 665 x 342 px, never upscaled. Checked by eye: reddish irises, red in the beaded side locks and around the ear."
+    }
+  }
+}

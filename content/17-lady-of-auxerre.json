@@ -1,0 +1,321 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "lady-of-auxerre",
+    "title": "Lady of Auxerre",
+    "artist": "Greek, Archaic period",
+    "year": "c. 640–620 BC",
+    "image": "/images/lady-of-auxerre.jpg",
+    "imageCredit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "medium": "Limestone",
+    "dimensions": "Height 75 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010276874"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "lady-of-auxerre-1",
+      "order": 1,
+      "title": "A stranger in the museum",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "She is less than a metre tall and carved in limestone. She stands very straight, feet together, one arm bent across her body.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Step close. Look at her face first, then follow her right arm across her body."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Her style is called Daedalic. Who was Daedalus?",
+          "choices": [
+            {
+              "label": "A craftsman of legend",
+              "next": "b1a",
+              "correct": true
+            },
+            {
+              "label": "Her sculptor",
+              "next": "b1b"
+            },
+            {
+              "label": "A Greek god",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Yes. Daedalus is a figure of legend. Scholars borrowed his name for a whole 7th-century style: frontal bodies, flat faces, hair in stiff rows.",
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Nobody knows who carved her.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Daedalic sounds like a signature.",
+            "truth": "Daedalic is a modern name for a 7th-century style, taken from a legendary craftsman. Her maker is unknown.",
+            "evidence": "Fullerton, Greek Sculpture (2016); the Getty Art & Architecture Thesaurus."
+          },
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Not a god: a craftsman.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Names borrowed from Greek myth often belong to gods.",
+            "truth": "Daedalus was a legendary craftsman, and scholars named the style after him.",
+            "evidence": "Fullerton, Greek Sculpture (2016); the Getty Art & Architecture Thesaurus."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Look at her hair: long locks, cut into layers like steps, falling over her chest. Traces of red paint survive on her bust.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Where was she most probably made?",
+          "choices": [
+            {
+              "label": "In Auxerre, France",
+              "next": "b2a"
+            },
+            {
+              "label": "On Crete",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "In Athens",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "She carries the town's name, but she was not made there.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She is called the Lady of Auxerre.",
+            "truth": "Scholars agree she was most probably made on Crete, far from France.",
+            "evidence": "Collignon (1913); Fullerton (2016); Viviers (2001)."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. Scholars agree on Crete. Some go further and name the town of Eleutherna: its museum says the stone matches, while the Louvre still writes a question mark.",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "She visited Athens much later.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She was shown in Athens in 2004 and 2005.",
+            "truth": "That was an exhibition loan. Scholars agree she was most probably made on Crete.",
+            "evidence": "The Louvre record; the Eleutherna museum; Collignon (1913); Fullerton (2016)."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "She was made in the 7th century BC. She probably left Crete in the late 1800s. By then she belonged to a collector named Bourgoin.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Over two thousand years old, and nobody wrote down where she was dug up."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Why is she called the Lady of Auxerre?",
+          "choices": [
+            {
+              "label": "She was a lady of Auxerre",
+              "next": "b3a"
+            },
+            {
+              "label": "Her sculptor lived there",
+              "next": "b3b"
+            },
+            {
+              "label": "She was found there",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Nobody knows whom she shows.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The title sounds like a portrait.",
+            "truth": "She is named after the town where she was found. There is no inscription and no name.",
+            "evidence": "Fullerton (2016); Rolley (1964); the Louvre record."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Auxerre is in France, far from Crete.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many works are named after their maker's town.",
+            "truth": "Her maker is unknown, and she was most probably made on Crete. Auxerre is where she was found.",
+            "evidence": "Collignon (1913); Fullerton (2016); Viviers (2001)."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Yes. In 1907 an archaeologist noticed her in the museum of Auxerre, a French town, and the town's name stuck.",
+          "next": "n4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Who recognised her in 1907?",
+          "choices": [
+            {
+              "label": "Maxime Collignon",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "The museum's curator",
+              "next": "b4b"
+            },
+            {
+              "label": "The man who dug her up",
+              "next": "b4c"
+            }
+          ]
+        },
+        "n4": {
+          "type": "story",
+          "text": "The museum in Auxerre had no record of how she arrived: the curator searched the register and the catalogue and found nothing.",
+          "next": "q4"
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Yes. The archaeologist Maxime Collignon noticed her in the Auxerre museum in 1907 and saw that she was a Greek work in the style of Crete.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "He was the one who could not find her in the books.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She stood in his museum.",
+            "truth": "A visiting archaeologist, Maxime Collignon, spotted her; the curator then searched the museum's records in vain.",
+            "evidence": "Collignon (1913), quoting the curator's letter; Rolley (1964)."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Nobody knows who that was.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Finders often recognise their finds.",
+            "truth": "No record says where or by whom she was dug up. She was already in the Auxerre museum when Collignon saw her.",
+            "evidence": "Fullerton (2016); Collignon (1913); Viviers (2001)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Collignon asked the national museums to act. In 1908 their director proposed talks with the town of Auxerre.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Auxerre owned her. The Louvre wanted her. How would you settle that?"
+          },
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "How did the Louvre get her in 1909?",
+          "choices": [
+            {
+              "label": "Bought her from Collignon",
+              "next": "b5a"
+            },
+            {
+              "label": "A gift from the town",
+              "next": "b5b"
+            },
+            {
+              "label": "Swapped a painting for her",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "She was never his.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He found her and asked the national museums to get her.",
+            "truth": "She belonged to the museum of Auxerre. The Louvre swapped a painting for her.",
+            "evidence": "Collignon (1913); the Louvre record."
+          },
+          "next": "n6"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Auxerre got something back.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The town's museum let her go to Paris.",
+            "truth": "It was an exchange: Auxerre received a landscape painting by Harpignies.",
+            "evidence": "The Louvre record and its 1909 report; Rolley (1964); Collignon (1913)."
+          },
+          "next": "n6"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. Auxerre received a landscape by the painter Harpignies, and the Louvre received the statue.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "A Cretan statue of the 7th century BC, a French town museum, a swap for a painting. Today she stands in Room 170, on Floor −1 of the Denon wing."
+        }
+      },
+      "takeaway": "A small statue, most probably made on Crete in the 7th century BC, stood unrecognised in a French town museum until 1907; the Louvre swapped a painting for her.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010276874",
+        "https://www.persee.fr/doc/jds_0021-8103_1909_num_7_9_3446",
+        "https://www.persee.fr/doc/piot_1148-6023_1913_num_20_1_1770?pageId=T1_6",
+        "https://www.persee.fr/doc/bch_0007-4217_1964_num_88_2_4975",
+        "https://catalogimages.wiley.com/images/db/pdf/9781444339796.excerpt.pdf",
+        "https://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300020208",
+        "https://mae.uoc.gr/the-sites-of-the-museum/hall-b/",
+        "https://www.persee.fr/doc/rbph_0035-0818_2001_num_79_1_7130_t1_0326_0000_2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "artworkId": "death-of-the-virgin",
+  "zoomImage": {
+    "file": "La Mort de la Vierge - Le Caravage - Musée du Louvre Peintures INV 54.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:La_Mort_de_la_Vierge_-_Le_Caravage_-_Mus%C3%A9e_du_Louvre_Peintures_INV_54.jpg",
+    "width": 7535,
+    "height": 11344,
+    "licence": "Public domain (PD-Art: faithful reproduction of a 2D public-domain work)",
+    "credit": "Photo: Shonagon, 2025, via Wikimedia Commons · Public Domain",
+    "overview": "/images/challenge/death-of-the-virgin/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "death-of-the-virgin-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: what the floor and the bed tell",
+      "narrator": "caravaggio",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.18,
+            "y": 0.88,
+            "w": 0.4,
+            "h": 0.12,
+            "label": "The floor at the bottom of the picture: a shallow copper basin, a cloth hanging over its rim",
+            "image": "/images/challenge/death-of-the-virgin/c1.jpg"
+          },
+          "text": "Level one ended with the basin. Here it is, on the floor at the bottom: a shallow copper basin, with a cloth over its rim.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.18,
+            "y": 0.88,
+            "w": 0.4,
+            "h": 0.12,
+            "label": "The floor at the bottom of the picture: a shallow copper basin, a cloth hanging over its rim",
+            "image": "/images/challenge/death-of-the-virgin/c1.jpg"
+          },
+          "text": "Two scholars link this basin to what?",
+          "choices": [
+            {
+              "label": "Holy water",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Washing the body",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Washing feet",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+              "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/"
+            },
+            {
+              "title": "Keith Christiansen, 'Low Life, High Art', The New Republic, 8 December 2010",
+              "url": "https://newrepublic.com/article/79749/life-art-paintings-carvaggio"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "A church picture, yes, but both scholars think of the body.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was painted to hang above a church altar.",
+            "truth": "Both scholars connect the basin with washing the dead woman's body.",
+            "evidence": "Renzi (2025): an allusion to washing the body. Christiansen (2010): the ritual cleansing of the body."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Renzi reads it as a hint at washing the body; Christiansen calls it a reminder of physical death and the ritual cleansing of the body.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Close, but both scholars mean the whole body.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The friars of this church went barefoot.",
+            "truth": "Both scholars connect the basin with washing the dead woman's body, not feet.",
+            "evidence": "Renzi (2025): an allusion to washing the body. Christiansen (2010): the ritual cleansing of the body."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A basin for washing the body: that is how two scholars read it."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.7,
+            "y": 0.56,
+            "w": 0.3,
+            "h": 0.16,
+            "label": "The Virgin's head at the right end of the bed, eyes closed, her left hand hanging down",
+            "image": "/images/challenge/death-of-the-virgin/c2.jpg"
+          },
+          "text": "Level one: the church took this Mary down. Now zoom to her head, at the right end of the bed, and look just around it.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.7,
+            "y": 0.56,
+            "w": 0.3,
+            "h": 0.16,
+            "label": "The Virgin's head at the right end of the bed, eyes closed, her left hand hanging down",
+            "image": "/images/challenge/death-of-the-virgin/c2.jpg"
+          },
+          "text": "What thin line circles her head?",
+          "choices": [
+            {
+              "label": "A strand of hair",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A gold halo",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "A rope of pearls",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+              "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Look again: too even and too fine for hair.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her long hair lies loose around her head.",
+            "truth": "The fine ring around her head is a thin gold halo.",
+            "evidence": "Look at the crop. Renzi (2025) describes the gold thread of the halo around her head."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes: one thin gold halo, easy to miss. Renzi calls it a thread of gold. No angels, no clouds lift her up.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Too fine for pearls: look again.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The line is very thin and catches the light.",
+            "truth": "It is a thin gold halo, around her head.",
+            "evidence": "Look at the crop. Renzi (2025) describes the gold thread of the halo around her head."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "One thin halo, nothing more. For the replacement, the friars wanted angels."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.12,
+            "y": 0.62,
+            "w": 0.3,
+            "h": 0.16,
+            "label": "The left end of the bed, below the hem of the Virgin's red dress",
+            "image": "/images/challenge/death-of-the-virgin/c3.jpg"
+          },
+          "text": "Level one: early writers gave reasons for the removal. Now zoom to the left end of the bed, below her red dress.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.12,
+            "y": 0.62,
+            "w": 0.3,
+            "h": 0.16,
+            "label": "The left end of the bed, below the hem of the Virgin's red dress",
+            "image": "/images/challenge/death-of-the-virgin/c3.jpg"
+          },
+          "text": "What did Baglione complain of in 1642?",
+          "choices": [
+            {
+              "label": "No halo",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "Too many angels",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "Bare legs",
+              "role": "right",
+              "next": "c3c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Giovanni Baglione, Le vite de' pittori scultori et architetti (Rome, 1642), p. 138 (our translation)",
+              "url": "https://archive.org/details/bub_gb_8jddx8VQlMIC"
+            },
+            {
+              "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+              "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "She has one, just a very thin one.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Her halo is hard to see.",
+            "truth": "Baglione wrote of a swollen Madonna with bare legs, painted with little decorum.",
+            "evidence": "Baglione, Lives (1642), p. 138; Renzi (2025) quotes the same passage."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "There are no angels in this picture.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Saraceni's replacement had angels.",
+            "truth": "Here there are none; Baglione wrote of a swollen Madonna with bare legs.",
+            "evidence": "Baglione, Lives (1642), p. 138; Renzi (2025) quotes the same passage."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Yes. Baglione wrote that the Madonna was painted with little decorum, swollen and with bare legs (our translation).",
+          "next": "c3m"
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Swollen, with bare legs: Baglione's words, printed in 1642. Whether that was the real reason is still argued."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n7",
+          "n3"
+        ],
+        "concept": "From 'look for the basin' at the end of the level to what two scholars read in it: the washing of the dead body"
+      },
+      "framing": "what-it-means",
+      "what_you_learn": "Renzi and Christiansen both connect the copper basin on the floor with washing the dead body; it is their reading, not a stated intention of Caravaggio's.",
+      "regionSources": [
+        {
+          "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+          "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+          "quote": "Il catino di rame in primo piano ai suoi piedi è un elemento niente affatto casuale, alludente al lavaggio del corpo",
+          "supports": "Our translation: the copper basin in the foreground at her feet is not at all a casual element, alluding to the washing of the body. Places the basin in the foreground and gives Renzi's reading.",
+          "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Keith Christiansen, 'Low Life, High Art', The New Republic, 8 December 2010",
+          "url": "https://newrepublic.com/article/79749/life-art-paintings-carvaggio",
+          "quote": "The washbasin in Caravaggio’s picture—perhaps too potent a reminder of physical death and the ritual cleansing of the body—has been replaced by two books",
+          "supports": "Christiansen's reading of the washbasin: a reminder of physical death and the ritual cleansing of the body.",
+          "readVia": "Saved text of The New Republic essay in the research folder (sources/CH.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "Il catino di rame in primo piano ai suoi piedi è un elemento niente affatto casuale, alludente al lavaggio del corpo",
+            "supports": "Our translation: the copper basin in the foreground at her feet is not at all a casual element, alluding to the washing of the body. Places the basin in the foreground and gives Renzi's reading.",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Keith Christiansen, 'Low Life, High Art', The New Republic, 8 December 2010",
+            "url": "https://newrepublic.com/article/79749/life-art-paintings-carvaggio",
+            "quote": "The washbasin in Caravaggio’s picture—perhaps too potent a reminder of physical death and the ritual cleansing of the body—has been replaced by two books",
+            "supports": "Christiansen's reading of the washbasin: a reminder of physical death and the ritual cleansing of the body.",
+            "readVia": "Saved text of The New Republic essay in the research folder (sources/CH.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "in Santa Maria della Scala a Trastevere, retta dai Carmelitani Scalzi",
+            "supports": "Our translation: in Santa Maria della Scala in Trastevere, run by the Discalced (barefoot) Carmelites. Why washing feet is tempting.",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "Il catino di rame in primo piano ai suoi piedi è un elemento niente affatto casuale, alludente al lavaggio del corpo",
+            "supports": "Our translation: the copper basin in the foreground at her feet is not at all a casual element, alluding to the washing of the body. Places the basin in the foreground and gives Renzi's reading.",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Keith Christiansen, 'Low Life, High Art', The New Republic, 8 December 2010",
+            "url": "https://newrepublic.com/article/79749/life-art-paintings-carvaggio",
+            "quote": "The washbasin in Caravaggio’s picture—perhaps too potent a reminder of physical death and the ritual cleansing of the body—has been replaced by two books",
+            "supports": "Christiansen's reading of the washbasin: a reminder of physical death and the ritual cleansing of the body.",
+            "readVia": "Saved text of The New Republic essay in the research folder (sources/CH.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: two independent scholars read the basin the same way (ledger virgin-029); no seventeenth-century text we read mentions the basin, so the answer is framed as the scholars' reading.",
+      "notes": "Ledger virgin-029 (2+), virgin-004 (our looking: a shallow metal basin with a cloth over its rim), virgin-077 (barefoot friars, for the 'washing feet' near miss). Never stated as Caravaggio's intention.",
+      "quoteCheck": "2026-10-18: Renzi and Christiansen quotes copied from the saved texts in the research folder.",
+      "cropCheck": "2026-10-18: box measured on Commons' 3840 x 5781 rendering of Shonagon's file (the app's source, images/death-of-the-virgin/main.jpg); crop 1536 x 694 px there, saved at 1200 px wide, never upscaled. Checked by eye: the copper rim catching the light, dark water, a pale cloth hanging over the right rim."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1",
+          "n1b",
+          "q6",
+          "b6b"
+        ],
+        "concept": "From 'this is the Virgin Mary' and the friars' wish for angels (level) to the one sign of holiness Caravaggio did paint: a hair-thin halo"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The only sign of holiness around the dead Virgin is a very thin gold halo; there are no angels or clouds.",
+      "regionSources": [
+        {
+          "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+          "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+          "quote": "Sappiamo che si tratta di Maria perché c’è il filo d’oro dell’aureola attorno al suo capo",
+          "supports": "Our translation: we know it is Mary because there is the gold thread of the halo around her head. Places the thin gold halo around her head (the 'how we know it is Mary' reading is Renzi's alone and is not used).",
+          "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "Sappiamo che si tratta di Maria perché c’è il filo d’oro dell’aureola attorno al suo capo",
+            "supports": "Our translation: we know it is Mary because there is the gold thread of the halo around her head. Places the thin gold halo around her head (the 'how we know it is Mary' reading is Renzi's alone and is not used).",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "Sappiamo che si tratta di Maria perché c’è il filo d’oro dell’aureola attorno al suo capo",
+            "supports": "Our translation: we know it is Mary because there is the gold thread of the halo around her head. Places the thin gold halo around her head (the 'how we know it is Mary' reading is Renzi's alone and is not used).",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the halo is visible in the crop (ledger virgin-022, our looking) and Renzi places the gold thread of the halo around her head.",
+      "notes": "Ledger virgin-022 (obs), virgin-021 (obs: nothing lifts her body upward), virgin-078 (Renzi: the gold thread of the halo; her 'how we know it is Mary' reading is single and not used), merge line virgin-060 (Christiansen, Renzi: the friars wanted angels).",
+      "quoteCheck": "2026-10-18: Renzi quote copied from the saved text in the research folder.",
+      "cropCheck": "2026-10-18: box measured on the 3840 x 5781 rendering; crop 1152 x 925 px, never upscaled. Checked by eye: her face with closed eyes, the fine gold ellipse around her head, her left hand hanging over the edge of the bed."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n3",
+          "q3",
+          "n3b"
+        ],
+        "concept": "From the early writers' reasons (level) to the exact place in the picture Baglione's complaint points at: her bare legs"
+      },
+      "framing": "why-it-is-there",
+      "what_you_learn": "Baglione (1642) wrote that the picture was taken away because the Madonna was painted with little decorum, swollen and with bare legs; the bare legs are at the left end of the bed.",
+      "regionSources": [
+        {
+          "title": "Giovanni Baglione, Le vite de' pittori scultori et architetti (Rome, 1642), p. 138 (our translation)",
+          "url": "https://archive.org/details/bub_gb_8jddx8VQlMIC",
+          "quote": "ma perche hauea fatto con poco decoro la Madonna gonfia, e con gambe scoperte, fu leuata via",
+          "supports": "Our translation: but because he had made the Madonna with little decorum, swollen, and with bare legs, it was taken away. Baglione's words, not a settled reason.",
+          "readVia": "Internet Archive scan of the 1642 edition, p. 138 (PDF page 156), read on the page image and saved transcription (sources/BAG-1642_p138.png), 18 Oct 2026"
+        },
+        {
+          "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+          "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+          "quote": "perché havea fatto con poco decoro la Madonna gonfia, e con gambe scoperte, fu levata via",
+          "supports": "Renzi quotes the same Baglione passage (modernised spelling): an independent printing of his words.",
+          "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+        },
+        {
+          "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+          "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+          "quote": "Maria e gli apostoli sono scalzi",
+          "supports": "Our translation: Mary and the apostles are barefoot. Places Mary's bare feet in the picture (Renzi's further reading, an allusion to the barefoot friars, is hers alone and is not used).",
+          "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Giovanni Baglione, Le vite de' pittori scultori et architetti (Rome, 1642), p. 138 (our translation)",
+            "url": "https://archive.org/details/bub_gb_8jddx8VQlMIC",
+            "quote": "ma perche hauea fatto con poco decoro la Madonna gonfia, e con gambe scoperte, fu leuata via",
+            "supports": "Our translation: but because he had made the Madonna with little decorum, swollen, and with bare legs, it was taken away. Baglione's words, not a settled reason.",
+            "readVia": "Internet Archive scan of the 1642 edition, p. 138 (PDF page 156), read on the page image and saved transcription (sources/BAG-1642_p138.png), 18 Oct 2026"
+          },
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "perché havea fatto con poco decoro la Madonna gonfia, e con gambe scoperte, fu levata via",
+            "supports": "Renzi quotes the same Baglione passage (modernised spelling): an independent printing of his words.",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "Sappiamo che si tratta di Maria perché c’è il filo d’oro dell’aureola attorno al suo capo",
+            "supports": "Our translation: we know it is Mary because there is the gold thread of the halo around her head. Places the thin gold halo around her head (the 'how we know it is Mary' reading is Renzi's alone and is not used).",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          }
+        ],
+        "c3b": [
+          {
+            "title": "Giovanni Baglione, Le vite de' pittori scultori et architetti (Rome, 1642), p. 138 (our translation)",
+            "url": "https://archive.org/details/bub_gb_8jddx8VQlMIC",
+            "quote": "ma perche hauea fatto con poco decoro la Madonna gonfia, e con gambe scoperte, fu leuata via",
+            "supports": "Our translation: but because he had made the Madonna with little decorum, swollen, and with bare legs, it was taken away. Baglione's words, not a settled reason.",
+            "readVia": "Internet Archive scan of the 1642 edition, p. 138 (PDF page 156), read on the page image and saved transcription (sources/BAG-1642_p138.png), 18 Oct 2026"
+          },
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "perché havea fatto con poco decoro la Madonna gonfia, e con gambe scoperte, fu levata via",
+            "supports": "Renzi quotes the same Baglione passage (modernised spelling): an independent printing of his words.",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          },
+          {
+            "title": "Claudia Renzi, 'Caravaggio, la Morte della Vergine e una cortigiana da lui amata', About Art Online, 2025 (our translations)",
+            "url": "https://www.aboutartonline.com/per-essere-stata-spropositata-di-lascivia-e-di-decoro-il-frate-scalzo-lha-fatta-levare-caravaggio-la-morte-della-vergine-e-una-cortigiana-da-lui-amata-i-veri-motivi-d/",
+            "quote": "chiesero allo stesso pittore di redigere una seconda versione (459×273 cm) con una schiera d’angeli",
+            "supports": "Our translation: they asked the same painter to make a second version with a host of angels. Saraceni's replacement had angels; this picture has none.",
+            "readVia": "Saved text of the About Art Online article in the research folder (research/works/death-of-the-virgin/sources/RENZI.txt), re-read 18 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High for what Baglione wrote (read on the 1642 scan; Renzi prints the same passage). Whether it was the real reason is a debate (ledger virgin-047) and the merge line says so.",
+      "notes": "Ledger virgin-041 (anecdote: Baglione's words, two printings), virgin-002 (obs: bare feet at the left), virgin-047 (debate). 'Swollen, with bare legs' is given as Baglione's words, never as the reason.",
+      "quoteCheck": "2026-10-18: Baglione re-read on the saved p. 138 transcription and scan; Renzi's printing copied from the saved text.",
+      "cropCheck": "2026-10-18: box measured on the 3840 x 5781 rendering; crop 1152 x 925 px, never upscaled. Checked by eye: two bare lower legs with crossed feet below the hem of her red dress, an apostle's green sleeve and hand at the top."
+    }
+  }
+}
