@@ -26,7 +26,7 @@ import type { Artwork as ArtworkT, Lesson, Speaker } from "@/lib/types";
  * character, not a claim about any artwork.
  */
 const LESLY_INTRO =
-  "Hello, I'm Lesly, your guide: a cat dressed up as Vermeer's Girl with a Pearl Earring. I speak for works whose makers left us no name or no words.";
+  "Hello, I'm Lesly, your guide: a cat dressed up as Vermeer's Girl with a Pearl Earring. I speak for works whose makers left us no name.";
 
 type Props = {
   lesson: Lesson;
