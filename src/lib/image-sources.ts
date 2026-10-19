@@ -56,4 +56,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Le_Concert_champ%C3%AAtre,_by_Titian,_from_C2RMF.jpg",
   "borghese-gladiator":
     "https://commons.wikimedia.org/wiki/File:Borghese_Gladiator_Louvre_Ma_527_n1.jpg",
+  "sleeping-hermaphroditus":
+    "https://commons.wikimedia.org/wiki/File:Borghese_Hermaphroditus_Louvre_Ma231.jpg",
 };
