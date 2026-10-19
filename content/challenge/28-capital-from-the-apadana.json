@@ -1,0 +1,503 @@
+{
+  "artworkId": "capital-from-the-apadana-of-darius-i-susa",
+  "zoomImage": {
+    "file": "Chapiteau d'une colonne de l'apadana du Palais de Darius Ier - Musée du Louvre Antiquités orientales AOD 1.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Chapiteau_d%27une_colonne_de_l%27apadana_du_Palais_de_Darius_Ier_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AOD_1.jpg",
+    "width": 2385,
+    "height": 3242,
+    "licence": "CC0 1.0 (the photographer's own release)",
+    "credit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/capital-from-the-apadana/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "capital-from-the-apadana-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: scrolls, beam and heads",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.29,
+            "y": 0.44,
+            "w": 0.42,
+            "h": 0.16,
+            "label": "The block with large scrolls just below the bulls",
+            "image": "/images/challenge/capital-from-the-apadana/c1.jpg"
+          },
+          "text": "Level one: the bulls crowned a column. Now zoom to the block just below them.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.29,
+            "y": 0.44,
+            "w": 0.42,
+            "h": 0.16,
+            "label": "The block with large scrolls just below the bulls",
+            "image": "/images/challenge/capital-from-the-apadana/c1.jpg"
+          },
+          "text": "What is this block with large scrolls?",
+          "choices": [
+            {
+              "label": "The base of the column",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Part of the capital",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "A modern stand",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record AOD 1 (English page)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688"
+            },
+            {
+              "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+              "url": "https://archive.org/details/lacropoledesused03dieu"
+            },
+            {
+              "title": "R. Schmitt and D. Stronach, 'Apadāna', Encyclopaedia Iranica",
+              "url": "https://www.iranicaonline.org/articles/apadana"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Not the base: it sat high up, under the bulls.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Column bases can be carved too.",
+            "truth": "It is the volute element that joined the bulls to the column shaft.",
+            "evidence": "Marcel Dieulafoy (1892); Encyclopaedia Iranica."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. Inside the hall, a volute element joined the bulls to the shaft. The Louvre measures it as part of the capital, 3.2 metres high.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Not modern: the excavator measured this stone in the Louvre.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Museums often add stands.",
+            "truth": "The volute element is ancient; the excavator measured it beside the bulls in 1892.",
+            "evidence": "The Louvre record; Marcel Dieulafoy (1892)."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Scrolls between the bulls and the column."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.04,
+            "y": 0.03,
+            "w": 0.92,
+            "h": 0.17,
+            "label": "The top of the capital, above the bulls' backs",
+            "image": "/images/challenge/capital-from-the-apadana/c2.jpg"
+          },
+          "text": "Level one: something heavy rested here. Now zoom to the top of the capital as it is shown today.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.04,
+            "y": 0.03,
+            "w": 0.92,
+            "h": 0.17,
+            "label": "The top of the capital, above the bulls' backs",
+            "image": "/images/challenge/capital-from-the-apadana/c2.jpg"
+          },
+          "text": "What lies across the bulls' backs today?",
+          "choices": [
+            {
+              "label": "A stone lintel",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "A wooden beam",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "A carved roof tile",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "W. Kleiss, 'Columns', Encyclopaedia Iranica",
+              "url": "https://www.iranicaonline.org/articles/columns-architectural"
+            },
+            {
+              "title": "The Metropolitan Museum of Art, 'Bull's head from column capital' (47.100.83)",
+              "url": "https://www.metmuseum.org/art/collection/search/324025"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Not stone: wood, as in the palace.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The rest of the capital is stone.",
+            "truth": "The paired bulls carried wooden ceiling or roof beams; one is laid on them here.",
+            "evidence": "Encyclopaedia Iranica; Metropolitan Museum of Art."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. A wooden beam lies on their backs, showing how the bulls carried the beams of the roof.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "A beam, not a tile.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It sits at the very top, like a roof.",
+            "truth": "The bulls carried wooden ceiling or roof beams; one lies on them here.",
+            "evidence": "Encyclopaedia Iranica; Metropolitan Museum of Art."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A wooden beam on stone bulls."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.08,
+            "y": 0.09,
+            "w": 0.84,
+            "h": 0.26,
+            "label": "Both bull heads, from one side to the other",
+            "image": "/images/challenge/capital-from-the-apadana/c3.jpg"
+          },
+          "text": "Level one: the hall was vast. Now zoom out across both heads.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.08,
+            "y": 0.09,
+            "w": 0.84,
+            "h": 0.26,
+            "label": "Both bull heads, from one side to the other",
+            "image": "/images/challenge/capital-from-the-apadana/c3.jpg"
+          },
+          "text": "How wide is the pair, forehead to forehead?",
+          "choices": [
+            {
+              "label": "About 1.5 metres",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "About 8 metres",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "About 3.7 metres",
+              "role": "right",
+              "next": "c3c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record AOD 1 (English page)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688"
+            },
+            {
+              "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+              "url": "https://archive.org/details/lacropoledesused03dieu"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Far wider.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "In a photo it looks like one column top.",
+            "truth": "The Louvre and the excavator both measured 3.74 metres.",
+            "evidence": "The Louvre record; Marcel Dieulafoy (1892)."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Too wide: less than half that.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The columns were about 20 metres tall.",
+            "truth": "The pair measures 3.74 metres across the foreheads.",
+            "evidence": "The Louvre record; Marcel Dieulafoy (1892)."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Yes. The pair measures 3.74 metres across the foreheads, as wide as a small room.",
+          "next": "c3m"
+        },
+        "c3m": {
+          "type": "story",
+          "text": "Bulls nearly four metres wide."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From \"the bulls crowned a column\" (level) to how the crown was built: a volute element under the bulls"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The scrolled block is the volute element of the capital, joining the bulls to the shaft.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record AOD 1 (English page)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+          "quote": "Hauteur : 320 cm (Elément à volutes)",
+          "supports": "Height: 320 cm (volute element), one of the two parts the Louvre measures for this capital (total height 532 cm).",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/LV-EN.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record AOD 1 (English page)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+          "quote": "Hauteur : 532 cm (hauteur totale)",
+          "supports": "Total height: 532 cm.",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/LV-EN.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+          "url": "https://archive.org/details/lacropoledesused03dieu",
+          "quote": "Pilier à volutes (Musée du Louvre).",
+          "supports": "Our translation: pillar with volutes (Musée du Louvre), measured by the excavator in 1892 with the bulls.",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+          "url": "https://archive.org/details/lacropoledesused03dieu",
+          "quote": "A rintérieur, les supports se composent d'un chapeau bicéphale raccordé avec le fût par un pilastre décoré de seize volutes et par deux campanules.",
+          "supports": "Our translation: inside, the supports consist of a double-headed capital joined to the shaft by a pilaster decorated with volutes and by two bell-shaped elements (OCR 'rintérieur' = l'intérieur).",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "R. Schmitt and D. Stronach, 'Apadāna', Encyclopaedia Iranica",
+          "url": "https://www.iranicaonline.org/articles/apadana",
+          "quote": "those columns at Persepolis with an ornate composite capital, crowned by addorsed bulls, were reserved for the hall and the principal, northern portico",
+          "supports": "At Persepolis, the ornate composite capitals crowned by back-to-back bulls were kept for the hall and the main portico.",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/IRANICA_schmitt-stronach_apadana.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+            "url": "https://archive.org/details/lacropoledesused03dieu",
+            "quote": "A rintérieur, les supports se composent d'un chapeau bicéphale raccordé avec le fût par un pilastre décoré de seize volutes et par deux campanules.",
+            "supports": "Our translation: inside, the supports consist of a double-headed capital joined to the shaft by a pilaster decorated with volutes and by two bell-shaped elements (OCR 'rintérieur' = l'intérieur).",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "R. Schmitt and D. Stronach, 'Apadāna', Encyclopaedia Iranica",
+            "url": "https://www.iranicaonline.org/articles/apadana",
+            "quote": "those columns at Persepolis with an ornate composite capital, crowned by addorsed bulls, were reserved for the hall and the principal, northern portico",
+            "supports": "At Persepolis, the ornate composite capitals crowned by back-to-back bulls were kept for the hall and the main portico.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/IRANICA_schmitt-stronach_apadana.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record AOD 1 (English page)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+            "quote": "Hauteur : 320 cm (Elément à volutes)",
+            "supports": "Height: 320 cm (volute element), one of the two parts the Louvre measures for this capital (total height 532 cm).",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/LV-EN.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+            "url": "https://archive.org/details/lacropoledesused03dieu",
+            "quote": "Pilier à volutes (Musée du Louvre).",
+            "supports": "Our translation: pillar with volutes (Musée du Louvre), measured by the excavator in 1892 with the bulls.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: the Louvre and Marcel Dieulafoy both measure the volute element as part of the capital (3.20 m); Dieulafoy and Stronach describe the composite capital of the hall. How exactly the two parts fit (232 + 320 cm against 532 cm in all) is TBD and is not asked.",
+      "notes": "Ledger ca-005, ca-018. The number of volutes (sixteen, Dieulafoy only) is not used.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on images/capital-from-the-apadana/main.jpg (1920 × 2610); crop 806 × 418 px, never upscaled. Checked by eye: four large rosette-centred scrolls on a ribbed block, under the bulls' bellies."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1b"
+        ],
+        "concept": "From \"the bulls carried roof beams\" (level) to the display: a wooden beam laid on them"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The museum lays a wooden beam across the bulls, as the roof beams once lay.",
+      "regionSources": [
+        {
+          "title": "W. Kleiss, 'Columns', Encyclopaedia Iranica",
+          "url": "https://www.iranicaonline.org/articles/columns-architectural",
+          "quote": "The two adjoined animal representations carried the ceiling or roof beams between them",
+          "supports": "The paired animals carried the ceiling or roof beams between them.",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/IRANICA_kleiss_columns.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "The Metropolitan Museum of Art, 'Bull's head from column capital' (47.100.83)",
+          "url": "https://www.metmuseum.org/art/collection/search/324025",
+          "quote": "The sculptures often consisted of the addorsed foreparts of such creatures to form a solid support for the wooden beams they held.",
+          "supports": "Back-to-back foreparts formed a support for wooden beams.",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MET_324025_bulls-head-capital.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "W. Kleiss, 'Columns', Encyclopaedia Iranica",
+            "url": "https://www.iranicaonline.org/articles/columns-architectural",
+            "quote": "The two adjoined animal representations carried the ceiling or roof beams between them",
+            "supports": "The paired animals carried the ceiling or roof beams between them.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/IRANICA_kleiss_columns.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "The Metropolitan Museum of Art, 'Bull's head from column capital' (47.100.83)",
+            "url": "https://www.metmuseum.org/art/collection/search/324025",
+            "quote": "The sculptures often consisted of the addorsed foreparts of such creatures to form a solid support for the wooden beams they held.",
+            "supports": "Back-to-back foreparts formed a support for wooden beams.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MET_324025_bulls-head-capital.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "W. Kleiss, 'Columns', Encyclopaedia Iranica",
+            "url": "https://www.iranicaonline.org/articles/columns-architectural",
+            "quote": "The two adjoined animal representations carried the ceiling or roof beams between them",
+            "supports": "The paired animals carried the ceiling or roof beams between them.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/IRANICA_kleiss_columns.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "The Metropolitan Museum of Art, 'Bull's head from column capital' (47.100.83)",
+            "url": "https://www.metmuseum.org/art/collection/search/324025",
+            "quote": "The sculptures often consisted of the addorsed foreparts of such creatures to form a solid support for the wooden beams they held.",
+            "supports": "Back-to-back foreparts formed a support for wooden beams.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MET_324025_bulls-head-capital.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: that the bulls carried wooden beams is in Kleiss (Iranica) and the Metropolitan Museum; the beam on show is our looking (ca-013). When and why the Louvre placed it is not in the opened sources, so the round does not call it ancient or modern.",
+      "notes": "Ledger ca-003, ca-013.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg (1920 × 2610); crop 1766 × 444 px, never upscaled. Checked by eye: the long dark wooden beam across the top, the bulls' horns and ears below it."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From \"the hall was vast\" (level) to the size of one capital: 3.74 m across"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The pair of bulls measures 3.74 metres across the foreheads.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record AOD 1 (English page)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+          "quote": "Largeur : 374 cm",
+          "supports": "Width: 374 cm.",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/LV-EN.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+          "url": "https://archive.org/details/lacropoledesused03dieu",
+          "quote": "Largeur maxinuiiii mesurée aux fronts 3™, 74",
+          "supports": "Our translation: maximum width measured at the foreheads, 3.74 m (OCR text as printed in the scan).",
+          "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Musée du Louvre, collection record AOD 1 (English page)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+            "quote": "Largeur : 374 cm",
+            "supports": "Width: 374 cm.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/LV-EN.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+            "url": "https://archive.org/details/lacropoledesused03dieu",
+            "quote": "Largeur maxinuiiii mesurée aux fronts 3™, 74",
+            "supports": "Our translation: maximum width measured at the foreheads, 3.74 m (OCR text as printed in the scan).",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c3b": [
+          {
+            "title": "Musée du Louvre, collection record AOD 1 (English page)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+            "quote": "Largeur : 374 cm",
+            "supports": "Width: 374 cm.",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/LV-EN.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Marcel Dieulafoy, L'Acropole de Suse (1892; our translation)",
+            "url": "https://archive.org/details/lacropoledesused03dieu",
+            "quote": "Largeur maxinuiiii mesurée aux fronts 3™, 74",
+            "supports": "Our translation: maximum width measured at the foreheads, 3.74 m (OCR text as printed in the scan).",
+            "readVia": "Saved text in the research folder (research/works/capital-from-the-apadana/sources/MDIEULAFOY-1892_acropole-de-suse_pp323-326.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record (374 cm) and Marcel Dieulafoy's 1892 measurement in the Louvre (3.74 m) agree.",
+      "notes": "Ledger ca-005. \"As wide as a small room\" is a comparison, not a fact.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg (1920 × 2610); crop 1613 × 679 px, never upscaled. Checked by eye: both heads with horns and ears, the beam end between them."
+    }
+  }
+}

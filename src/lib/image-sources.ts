@@ -62,4 +62,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Sarcophage_des_%C3%A9poux_-_Mus%C3%A9e_du_Louvre_AGER_Cp_5194.1_-_photo_3.jpg",
   "frieze-of-archers":
     "https://commons.wikimedia.org/wiki/File:Archers_frieze_Louvre_AOD488.jpg",
+  "capital-from-the-apadana-of-darius-i-susa":
+    "https://commons.wikimedia.org/wiki/File:Chapiteau_d%27une_colonne_de_l%27apadana_du_Palais_de_Darius_Ier_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_orientales_AOD_1.jpg",
 };
