@@ -1,0 +1,263 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "capital-from-the-apadana-of-darius-i-susa",
+    "title": "Capital from the Apadana",
+    "artist": "Achaemenid Persian, Susa",
+    "year": "522–486 BC",
+    "image": "/images/capital-from-the-apadana.jpg",
+    "imageCredit": "Photo: Shonagon, 2023, via Wikimedia Commons · CC0",
+    "medium": "Limestone",
+    "dimensions": "Height 532 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010170688"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "capital-from-the-apadana-1",
+      "order": 1,
+      "title": "Bulls that held up a roof",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Two bulls kneel back to back, carved in limestone. They once crowned a column of the great audience hall, the apadana, at Susa.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Look at the hollow between the two heads. Imagine what weight once rested there."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What rested between the two heads?",
+          "choices": [
+            {
+              "label": "A statue of the king",
+              "next": "b1a"
+            },
+            {
+              "label": "A great roof beam",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "A bowl for a sacred fire",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "No statue: the bulls held up the building.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A royal hall might show the king high up.",
+            "truth": "The two bulls carried the ceiling or roof beams between them.",
+            "evidence": "Encyclopaedia Iranica; Metropolitan Museum of Art."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. The paired bulls carried the wooden beams of the ceiling or roof between them. The Louvre shows one laid on their backs.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "No fire bowl: this was part of the roof's support.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The hollow looks like a cradle for a bowl.",
+            "truth": "The two bulls carried the ceiling or roof beams between them.",
+            "evidence": "Encyclopaedia Iranica; Metropolitan Museum of Art."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "The hall was vast: 36 stone columns held up its roof, each about 20 metres tall.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Where was this kind of capital invented?",
+          "choices": [
+            {
+              "label": "In Greece",
+              "next": "b2a"
+            },
+            {
+              "label": "In Egypt",
+              "next": "b2b"
+            },
+            {
+              "label": "In Persia",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "Not Greece: the double-animal capital is Persian.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Darius names Ionian stonecutters among his workers.",
+            "truth": "Scholars call the double-animal capital an Iranian invention, an entirely Achaemenid creation.",
+            "evidence": "Encyclopaedia Iranica; Metropolitan Museum of Art; the Louvre's 1992 Susa catalogue."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Not Egypt: the double-animal capital is Persian.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Darius names Egyptians among his craftsmen.",
+            "truth": "Scholars call the double-animal capital an Iranian invention, an entirely Achaemenid creation.",
+            "evidence": "Encyclopaedia Iranica; Metropolitan Museum of Art; the Louvre's 1992 Susa catalogue."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. Scholars call it an Iranian invention, an entirely Achaemenid creation, though its decoration took in ideas from the arts of the empire's many peoples.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Darius wrote that the stone columns came from Elam, and that Ionians and Sardians cut the stone.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "An inscription says the hall burned. What do scholars make of it?",
+          "choices": [
+            {
+              "label": "It was left in ruins",
+              "next": "b3a"
+            },
+            {
+              "label": "They disagree how bad it was",
+              "next": "b3b",
+              "correct": true
+            },
+            {
+              "label": "There was no fire",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "The same inscription says the hall was restored.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The inscription speaks of a fire.",
+            "truth": "Artaxerxes II's inscription says it burned and was restored. How badly it burned is debated.",
+            "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "Yes. Artaxerxes II wrote that the hall burned and that he restored it. Some scholars think it was destroyed and rebuilt; others, that it needed only repairs.",
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "The inscription does record a fire.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The bulls survived to be found.",
+            "truth": "Artaxerxes II's inscription says the hall burned under Artaxerxes I and was restored.",
+            "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Marcel Dieulafoy's French mission dug the bulls out in 1884–86 and shipped them to Paris, where they went on show in the Louvre.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "Where else can you see this kind of capital?",
+          "choices": [
+            {
+              "label": "Carved on rock-cut royal tombs",
+              "next": "b4a",
+              "correct": true
+            },
+            {
+              "label": "On Greek temples",
+              "next": "b4b"
+            },
+            {
+              "label": "On Egyptian obelisks",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Yes. The facades of the Persian royal tombs cut into the rock, as at Naqsh-e Rostam, copy a columned palace, capitals included.",
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Not on Greek temples: this form is Persian.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The scrolls below the bulls recall Greek columns.",
+            "truth": "The form is Persian; it is carved on the rock-cut royal tombs, as at Naqsh-e Rostam.",
+            "evidence": "Encyclopaedia Iranica; the Louvre's 1992 Susa catalogue; Jane Dieulafoy (1888)."
+          },
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Not on obelisks: this form is Persian.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Both are tall carved stones.",
+            "truth": "It is carved on the facades of the Persian rock-cut royal tombs, as at Naqsh-e Rostam.",
+            "evidence": "Encyclopaedia Iranica; the Louvre's 1992 Susa catalogue; Jane Dieulafoy (1888)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Bulls that held up a king's roof, now under a museum ceiling. They stand in Room 307, on Floor 0 of the Sully wing."
+        }
+      },
+      "takeaway": "Two limestone bulls that crowned a column of the audience hall at Susa: they carried the roof beams, the double-animal capital is a Persian invention, and how badly the hall burned is still debated.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010170688",
+        "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+        "https://www.iranicaonline.org/articles/capitals",
+        "https://www.iranicaonline.org/articles/columns-architectural",
+        "https://www.iranicaonline.org/articles/apadana",
+        "https://www.iranicaonline.org/articles/achaemenid-dynasty",
+        "https://archive.org/details/oldpers",
+        "https://www.metmuseum.org/art/collection/search/324025",
+        "https://www.penn.museum/sites/expedition/early-works-on-the-acropolis-at-susa/",
+        "https://www.gutenberg.org/ebooks/70821",
+        "https://archive.org/details/lacropoledesused03dieu"
+      ]
+    }
+  ]
+}
