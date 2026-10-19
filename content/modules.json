@@ -635,8 +635,9 @@
             "room": "348"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010250571"
+          "checkedOn": "2026-10-19",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+          "levelId": "sleeping-hermaphroditus-1"
         },
         {
           "id": "borghese-gladiator",

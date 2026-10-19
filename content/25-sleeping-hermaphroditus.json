@@ -1,0 +1,263 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "sleeping-hermaphroditus",
+    "title": "Sleeping Hermaphroditus",
+    "artist": "Roman Imperial",
+    "year": "AD 100–150",
+    "image": "/images/sleeping-hermaphroditus.jpg",
+    "imageCredit": "Photo: Jastrow, 2007, via Wikimedia Commons · public domain",
+    "medium": "Marble",
+    "dimensions": "Length 173.5 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010250571"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "sleeping-hermaphroditus-1",
+      "order": 1,
+      "title": "A sleeper with two sides",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A figure sleeps face down, head resting on folded arms, on a marble mattress that looks soft enough to sink into.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Walk slowly round to the far side. This figure keeps a surprise that the near side does not show."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What does the far side reveal?",
+          "choices": [
+            {
+              "label": "A second sleeper",
+              "next": "b1a"
+            },
+            {
+              "label": "A body both male and female",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "An open, watchful eye",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "There is only one figure.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The mattress is wide enough for two.",
+            "truth": "The far side shows the figure's double nature: breasts and male genitals together.",
+            "evidence": "Galleria Borghese, Rome; Metropolitan Museum of Art."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. From one side you see the back, the hips and the sleeping face. From the other, the figure is shown to be both female and male.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "The face is asleep.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The legs look tense, as if about to move.",
+            "truth": "The face suggests sleep. What the far side reveals is a body both female and male.",
+            "evidence": "Metropolitan Museum of Art; Galleria Borghese, Rome."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "This is Hermaphroditus, son of Hermes and Aphrodite. In Ovid's poem, the nymph Salmacis loved him and prayed never to be parted from him.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "How did the gods answer her prayer?",
+          "choices": [
+            {
+              "label": "They turned him to stone",
+              "next": "b2a"
+            },
+            {
+              "label": "They turned her into a spring",
+              "next": "b2b"
+            },
+            {
+              "label": "They merged their two bodies",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "No: they changed his body, not its material.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He lies as still as a stone.",
+            "truth": "The gods merged the two bodies into one being, both male and female.",
+            "evidence": "Rijksmuseum, Amsterdam; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "No: she was joined to him.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The story takes place at a spring.",
+            "truth": "As he bathed, the gods merged the two bodies into one being, both male and female.",
+            "evidence": "Rijksmuseum, Amsterdam; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. The gods joined the nymph and Hermaphroditus into one new being, both male and female. The statue shows that being, asleep.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "The statue was dug up in Rome in the early 1600s and went to Cardinal Scipione Borghese. He asked the young Gian Lorenzo Bernini to give it a new base.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Which part did Bernini carve?",
+          "choices": [
+            {
+              "label": "The mattress and pillow",
+              "next": "b3a",
+              "correct": true
+            },
+            {
+              "label": "The sleeping figure",
+              "next": "b3b"
+            },
+            {
+              "label": "The sleeper's face",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Yes. In 1620 Bernini carved the marble mattress and pillow. They seem to sink under the sleeper's weight.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "The figure is ancient: it was dug up in Rome.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The body is as finely carved as the mattress.",
+            "truth": "Bernini added the mattress and pillow in 1620; the figure is Roman.",
+            "evidence": "The Louvre record; Rijksmuseum, Amsterdam; Metropolitan Museum of Art."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Not Bernini: he made the mattress and pillow.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The face looks fresh and smooth.",
+            "truth": "Bernini carved the mattress and pillow in 1620; the figure is Roman.",
+            "evidence": "The Louvre record; Rijksmuseum, Amsterdam; Metropolitan Museum of Art."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "The pose was popular in Roman times.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Imagine meeting this sleeper again in another museum, a little different each time."
+          },
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "So is the Louvre's sleeper the one original?",
+          "choices": [
+            {
+              "label": "Yes: the others copy it",
+              "next": "b4a"
+            },
+            {
+              "label": "No: one of many Roman versions",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "No: it is a modern copy",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "No single original survives.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is the most famous of them.",
+            "truth": "It is one of many Roman versions of the type, which differ in small details.",
+            "evidence": "Galleria Borghese, Rome; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. Many Roman versions of the sleeper survive, each a little different. What the first one looked like, and who made it, scholars still debate.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "The figure is ancient, from Roman times.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Its mattress was carved in 1620.",
+            "truth": "Only the mattress, the pillow and some repairs are later. The sleeper is Roman.",
+            "evidence": "The Louvre record; Metropolitan Museum of Art."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "In 1807 Prince Camillo Borghese sold it, and it went to Paris. It sleeps today in Room 348, on Floor 0 of the Sully wing."
+        }
+      },
+      "takeaway": "A Roman marble of Hermaphroditus, from Ovid's tale, who is both male and female: one of many Roman versions of the pose, laid in 1620 on a mattress carved by Bernini.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+        "https://www.collezionegalleriaborghese.it/en/opere/sleeping-hermaphroditus",
+        "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-welcomes-greco-roman-masterpiece-from-the-louvre",
+        "https://www.metmuseum.org/art/collection/search/206698",
+        "https://www.metmuseum.org/art/collection/search/459570",
+        "https://www.treccani.it/enciclopedia/ermafrodito_%28Enciclopedia-dell%27-Arte-Antica%29/"
+      ]
+    }
+  ]
+}

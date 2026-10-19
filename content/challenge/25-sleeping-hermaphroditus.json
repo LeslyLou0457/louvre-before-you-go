@@ -1,0 +1,490 @@
+{
+  "artworkId": "sleeping-hermaphroditus",
+  "zoomImage": {
+    "file": "Borghese Hermaphroditus Louvre Ma231.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Borghese_Hermaphroditus_Louvre_Ma231.jpg",
+    "width": 3740,
+    "height": 1700,
+    "licence": "Public domain (the photographer's own release, PD-self)",
+    "credit": "Photo: Jastrow, 2007, via Wikimedia Commons · public domain",
+    "overview": "/images/challenge/sleeping-hermaphroditus/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "sleeping-hermaphroditus-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: foot, mattress and face",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.07,
+            "y": 0.4,
+            "w": 0.25,
+            "h": 0.3,
+            "label": "The raised foot at the far end of the figure",
+            "image": "/images/challenge/sleeping-hermaphroditus/c1.jpg"
+          },
+          "text": "Level one: Bernini added the mattress in 1620. Now zoom to the foot lifted in the air.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.07,
+            "y": 0.4,
+            "w": 0.25,
+            "h": 0.3,
+            "label": "The raised foot at the far end of the figure",
+            "image": "/images/challenge/sleeping-hermaphroditus/c1.jpg"
+          },
+          "text": "Is this raised foot as old as the body?",
+          "choices": [
+            {
+              "label": "Yes, all Roman",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "No, remade in 1620",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "No, added in Paris",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571"
+            },
+            {
+              "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+              "url": "https://www.metmuseum.org/art/collection/search/206698"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "Not all: this foot is a later repair.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is the same white marble as the body.",
+            "truth": "The Louvre records the left foot as remade in marble by David Larique in 1620.",
+            "evidence": "The Louvre record; Metropolitan Museum of Art."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. The Louvre records that David Larique remade this left foot in marble in 1620.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "The repair was made in Rome, before Paris.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The statue has been in Paris since the 1800s.",
+            "truth": "David Larique remade the foot in 1620, when the statue was in Rome.",
+            "evidence": "The Louvre record; Metropolitan Museum of Art."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "An ancient sleeper with a foot from 1620."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.04,
+            "y": 0.7,
+            "w": 0.5,
+            "h": 0.27,
+            "label": "The front edge of the mattress, below the hips",
+            "image": "/images/challenge/sleeping-hermaphroditus/c2.jpg"
+          },
+          "text": "Level one: Bernini carved the bed. Now zoom to its edge.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.04,
+            "y": 0.7,
+            "w": 0.5,
+            "h": 0.27,
+            "label": "The front edge of the mattress, below the hips",
+            "image": "/images/challenge/sleeping-hermaphroditus/c2.jpg"
+          },
+          "text": "What makes this mattress look soft?",
+          "choices": [
+            {
+              "label": "It is real cloth, stiffened",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Plaster over a wooden frame",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "Carved tufts and swelling",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Rijksmuseum, Amsterdam, 'Rijksmuseum welcomes Greco-Roman masterpiece from the Louvre' (press release, 2026)",
+              "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-welcomes-greco-roman-masterpiece-from-the-louvre"
+            },
+            {
+              "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+              "url": "https://www.metmuseum.org/art/collection/search/206698"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "It is marble, carved to look soft.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The folds look like fabric.",
+            "truth": "Bernini carved the mattress in marble in 1620; it only seems to give.",
+            "evidence": "The Louvre record; Rijksmuseum, Amsterdam."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "No plaster: it is carved marble.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is smoother than the figure.",
+            "truth": "The mattress and pillow are marble, carved by Bernini in 1620.",
+            "evidence": "The Louvre record; Metropolitan Museum of Art."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. Bernini carved tufts and swelling folds in the marble, so the mattress seems to give under the weight.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "Hard marble that looks soft."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.73,
+            "y": 0.25,
+            "w": 0.22,
+            "h": 0.36,
+            "label": "The head, resting on the folded arms",
+            "image": "/images/challenge/sleeping-hermaphroditus/c3.jpg"
+          },
+          "text": "Level one: the far side holds a surprise. Here, look only at the face.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.73,
+            "y": 0.25,
+            "w": 0.22,
+            "h": 0.36,
+            "label": "The head, resting on the folded arms",
+            "image": "/images/challenge/sleeping-hermaphroditus/c3.jpg"
+          },
+          "text": "What does the face suggest?",
+          "choices": [
+            {
+              "label": "Pain",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "Calm sleep",
+              "role": "right",
+              "next": "c3b",
+              "correct": true
+            },
+            {
+              "label": "Watching us",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+              "url": "https://www.metmuseum.org/art/collection/search/206698"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "The face is calm.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The body twists, and the legs look restless.",
+            "truth": "The calm face suggests sleep, though the legs look restless.",
+            "evidence": "Metropolitan Museum of Art; the Louvre record."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Yes. The face is calm and asleep, while the legs seem restless.",
+          "next": "c3m"
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "The eyes are closed in sleep.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The head is turned towards us.",
+            "truth": "The face suggests sleep; the Louvre calls the figure sleeping.",
+            "evidence": "Metropolitan Museum of Art; the Louvre record."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A calm face on a restless body."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n3",
+          "q3"
+        ],
+        "concept": "From \"Bernini made the base in 1620\" (level) to another 1620 addition: the remade left foot"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The raised left foot was remade in marble by David Larique in 1620.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+          "quote": "Le  bout du nez, le pied gauche, une partie du pied droit ont été refaits en marbre par D. Larique en 1620.",
+          "supports": "Our translation: the tip of the nose, the left foot and part of the right foot were remade in marble by D. Larique in 1620.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+        },
+        {
+          "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+          "url": "https://www.metmuseum.org/art/collection/search/206698",
+          "quote": "By early 1620, David Larique had restored the ancient sculpture",
+          "supports": "The ancient figure was restored by David Larique by early 1620.",
+          "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+            "quote": "Le  bout du nez, le pied gauche, une partie du pied droit ont été refaits en marbre par D. Larique en 1620.",
+            "supports": "Our translation: the tip of the nose, the left foot and part of the right foot were remade in marble by D. Larique in 1620.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+            "url": "https://www.metmuseum.org/art/collection/search/206698",
+            "quote": "By early 1620, David Larique had restored the ancient sculpture",
+            "supports": "The ancient figure was restored by David Larique by early 1620.",
+            "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+            "quote": "Le  bout du nez, le pied gauche, une partie du pied droit ont été refaits en marbre par D. Larique en 1620.",
+            "supports": "Our translation: the tip of the nose, the left foot and part of the right foot were remade in marble by D. Larique in 1620.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+            "url": "https://www.metmuseum.org/art/collection/search/206698",
+            "quote": "By early 1620, David Larique had restored the ancient sculpture",
+            "supports": "The ancient figure was restored by David Larique by early 1620.",
+            "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: the Louvre record names the left foot and Larique; the Metropolitan Museum confirms Larique restored the figure by early 1620. The photo shows the raised foot; the join is not visible at this size.",
+      "notes": "Ledger sh-007 (record with the Met), sh-012 (our looking: the left leg bent, foot raised). In Rome in 1620: sh-013.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on images/sleeping-hermaphroditus/main.jpg; never upscaled. Checked by eye: the raised foot, sole towards us, above the drapery."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "q3",
+          "b3a"
+        ],
+        "concept": "From \"Bernini carved the mattress\" (level) to how he made marble look soft"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The marble mattress is carved with tufts and swelling folds that make it look soft.",
+      "regionSources": [
+        {
+          "title": "Rijksmuseum, Amsterdam, 'Rijksmuseum welcomes Greco-Roman masterpiece from the Louvre' (press release, 2026)",
+          "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-welcomes-greco-roman-masterpiece-from-the-louvre",
+          "quote": "Bernini made the ancient sculpture his own by adding a contemporary marble mattress and pillow that subtly indent under the weight of Hermaphroditus.",
+          "supports": "Bernini added a marble mattress and pillow that seem to give under the figure's weight.",
+          "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/RIJKS-2026_press-release.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+          "url": "https://www.metmuseum.org/art/collection/search/206698",
+          "quote": "the young Bernini had carved and fitted to it a mattress that in its verisimilitude seems to defy the properties of marble",
+          "supports": "Bernini's marble mattress looks like the real thing.",
+          "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+          "quote": "Le montage  de  hermaphrodite sur l'oreiller et le matelas qui ont été réalisés par Gian Lorenzo Bernini, date de 1620.",
+          "supports": "Our translation: the mounting of the hermaphrodite on the pillow and the mattress, which were made by Gian Lorenzo Bernini, dates from 1620.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+            "quote": "Le montage  de  hermaphrodite sur l'oreiller et le matelas qui ont été réalisés par Gian Lorenzo Bernini, date de 1620.",
+            "supports": "Our translation: the mounting of the hermaphrodite on the pillow and the mattress, which were made by Gian Lorenzo Bernini, dates from 1620.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Rijksmuseum, Amsterdam, 'Rijksmuseum welcomes Greco-Roman masterpiece from the Louvre' (press release, 2026)",
+            "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-welcomes-greco-roman-masterpiece-from-the-louvre",
+            "quote": "Bernini made the ancient sculpture his own by adding a contemporary marble mattress and pillow that subtly indent under the weight of Hermaphroditus.",
+            "supports": "Bernini added a marble mattress and pillow that seem to give under the figure's weight.",
+            "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/RIJKS-2026_press-release.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+            "quote": "Le montage  de  hermaphrodite sur l'oreiller et le matelas qui ont été réalisés par Gian Lorenzo Bernini, date de 1620.",
+            "supports": "Our translation: the mounting of the hermaphrodite on the pillow and the mattress, which were made by Gian Lorenzo Bernini, dates from 1620.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+            "url": "https://www.metmuseum.org/art/collection/search/206698",
+            "quote": "the young Bernini had carved and fitted to it a mattress that in its verisimilitude seems to defy the properties of marble",
+            "supports": "Bernini's marble mattress looks like the real thing.",
+            "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre, the Rijksmuseum and the Metropolitan Museum agree it is Bernini's marble; the tufts are visible in the crop (sh-012).",
+      "notes": "Ledger sh-008, sh-012 (our looking: the tufted mattress).",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg; never upscaled. Checked by eye: the tufted, quilted front edge of the mattress."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From the sleeper of the level to the contrast between the calm face and the restless legs"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The face suggests sleep, while the legs look restless.",
+      "regionSources": [
+        {
+          "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+          "url": "https://www.metmuseum.org/art/collection/search/206698",
+          "quote": "A pacific face suggests sleep but is belied by flexed, restless legs.",
+          "supports": "The calm face suggests sleep, while the legs look restless.",
+          "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+          "quote": "Hermaphrodite endormi",
+          "supports": "Our translation: sleeping Hermaphrodite (the Louvre's title).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+            "url": "https://www.metmuseum.org/art/collection/search/206698",
+            "quote": "A pacific face suggests sleep but is belied by flexed, restless legs.",
+            "supports": "The calm face suggests sleep, while the legs look restless.",
+            "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+            "quote": "Hermaphrodite endormi",
+            "supports": "Our translation: sleeping Hermaphrodite (the Louvre's title).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "The Metropolitan Museum of Art, 'Giovanni Francesco Susini, Hermaphrodite' (1975.1.138)",
+            "url": "https://www.metmuseum.org/art/collection/search/206698",
+            "quote": "A pacific face suggests sleep but is belied by flexed, restless legs.",
+            "supports": "The calm face suggests sleep, while the legs look restless.",
+            "readVia": "Saved text in the research folder (research/works/sleeping-hermaphroditus/sources/MET_206698_susini-hermaphrodite.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 231, 'Hermaphrodite endormi' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010250571",
+            "quote": "Hermaphrodite endormi",
+            "supports": "Our translation: sleeping Hermaphrodite (the Louvre's title).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sleeping-hermaphroditus/sources/LV-REC_cl010250571.json), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Metropolitan Museum describes the calm face, and the Louvre titles the work \"Hermaphrodite endormi\"; the crop shows the head on the arms, eyes closed.",
+      "notes": "Ledger sh-002, sh-001, sh-012.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg; never upscaled. Checked by eye: the curly head resting on the arms, the face turned towards us with closed eyes."
+    }
+  }
+}
