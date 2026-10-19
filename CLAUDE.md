@@ -12,7 +12,7 @@ For the AI and the people working in this repo. AGENTS.md and CLAUDE.md have the
 
 ## Current scope
 
-Version 0.6 from PRODUCT.md, "0.6 · Museum framework": a cover, a contents page, 15 modules and an appendix (100 works from `content/modules.json`) and a schematic map, built one step at a time from its build steps, on top of everything in 0.5 (5 Louvre works, 1 level each, 25 questions, the Close-Up Challenge and the restrained motion in "Motion"). Build step 8 has started with the product owner's go: new levels arrive in batches, each work with a record recheck, a rights-checked photo, its level and its close-up round (first batch: Chapter 09's two Leonardo works in room 710). New levels never join the "Start here" trail. Nothing from 1.0 or later.
+Version 0.6 from PRODUCT.md, "0.6 · Museum framework": a cover, a contents page, 15 modules and an appendix (100 works from `content/modules.json`) and a schematic map, on top of everything in 0.5 (the five "Start here" levels, the Close-Up Challenge and the restrained motion in "Motion"). The framework is live; build step 8 (content in batches) is in progress, with 28 of the 100 works playable. New levels follow "Content pipeline" in PRODUCT.md: each work gets a record recheck, a rights-checked photo, its level and its close-up round, one PR per work. New levels never join the "Start here" trail. Still open from 0.6: the module seal. Nothing from 1.0 or later.
 
 ## Hard limits
 

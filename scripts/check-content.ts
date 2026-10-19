@@ -1,5 +1,6 @@
 // Content check: `npm run check-content`.
-// Every `next` exists, every node is reachable, at least 3 questions per level,
+// Every `next` exists, every node is reachable, 5–6 questions per level (fewer
+// only warns for the levels awaiting expansion, src/lib/validate.ts),
 // 2–3 choices per question, sources not empty, word budgets (warnings),
 // and whether each artwork's image file is in public/.
 // Then the Close-Up Challenge files in content/challenge/ (see

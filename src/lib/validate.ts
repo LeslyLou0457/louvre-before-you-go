@@ -8,11 +8,24 @@ import { AVATAR_IDS } from "./avatar-ids.ts";
 import { LEVEL_TIME_MODEL, levelTime } from "./level-time.ts";
 
 /**
- * Question counts are flexible per work (2026-10-15): more for a rich work,
- * fewer for a thin one. A level needs at least this many questions; there is
- * no maximum, because the time budget below caps its length.
+ * Questions per level (PRODUCT.md "Rules for one level", decided 2026-10-19):
+ * every level has 5 or 6 questions, within the time budget below. More than 6
+ * fails. Fewer than 5 fails, except for the levels built before that decision
+ * and listed in LEVELS_AWAITING_EXPANSION: they only warn until each one is
+ * expanded and taken off the list (the plan is the project file
+ * content-plans/LEVEL_EXPANSION_PLAN.md).
  */
-export const MIN_QUESTIONS_PER_LEVEL = 3;
+export const MIN_QUESTIONS_PER_LEVEL = 5;
+export const MAX_QUESTIONS_PER_LEVEL = 6;
+export const LEVELS_AWAITING_EXPANSION: ReadonlySet<string> = new Set([
+  "la-belle-ferronniere-1",
+  "pastoral-concert-1",
+  "borghese-gladiator-1",
+  "sleeping-hermaphroditus-1",
+  "sarcophagus-of-the-spouses-1",
+  "frieze-of-archers-1",
+  "capital-from-the-apadana-1",
+]);
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
 export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;
 export const CORRECTION_WORD_LIMITS = { verdict: 6, tempting: 30, truth: 35, evidence: 35 } as const;
@@ -179,8 +192,15 @@ export function validateContent(data: unknown, file: string): Report {
         err(`${at}: next "${node.next}" is not a node`);
       }
     }
-    if (questions < MIN_QUESTIONS_PER_LEVEL) {
-      err(`${where}: has ${questions} questions, needs at least ${MIN_QUESTIONS_PER_LEVEL}`);
+    const pending = LEVELS_AWAITING_EXPANSION.has(String(lesson?.id));
+    if (questions > MAX_QUESTIONS_PER_LEVEL) {
+      err(`${where}: has ${questions} questions, at most ${MAX_QUESTIONS_PER_LEVEL}`);
+    } else if (questions < MIN_QUESTIONS_PER_LEVEL && pending) {
+      warn(`${where}: has ${questions} questions, needs ${MIN_QUESTIONS_PER_LEVEL}–${MAX_QUESTIONS_PER_LEVEL} (awaiting expansion)`);
+    } else if (questions < MIN_QUESTIONS_PER_LEVEL) {
+      err(`${where}: has ${questions} questions, needs ${MIN_QUESTIONS_PER_LEVEL}–${MAX_QUESTIONS_PER_LEVEL}`);
+    } else if (pending) {
+      warn(`${where}: has ${questions} questions now; take it off LEVELS_AWAITING_EXPANSION`);
     }
     // Time budget (PRODUCT.md "Three details"): about 5 minutes, never more than 7.
     const t = levelTime(nodes as Record<string, LessonNode>, lesson.start);
