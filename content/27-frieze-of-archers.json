@@ -1,0 +1,260 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "frieze-of-archers",
+    "title": "Frieze of Archers",
+    "artist": "Achaemenid Persian, Susa",
+    "year": "522–486 BC",
+    "image": "/images/frieze-of-archers.jpg",
+    "imageCredit": "Photo: Jastrow, 2007, via Wikimedia Commons · public domain",
+    "medium": "Glazed siliceous brick",
+    "dimensions": "475 × 375 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010170854"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "frieze-of-archers-1",
+      "order": 1,
+      "title": "Guards made of glazed brick",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "Four archers march in step, two on each side of an inscription of King Darius in three languages. Every figure is built of small glazed bricks.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Run your eye along the four spears. Then compare the patterns on their robes: are any two the same?"
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What are these bricks made of?",
+          "choices": [
+            {
+              "label": "Ordinary baked clay",
+              "next": "b1a"
+            },
+            {
+              "label": "Carved and painted stone",
+              "next": "b1b"
+            },
+            {
+              "label": "A hard white body, glazed",
+              "next": "b1c",
+              "correct": true
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Not ordinary clay: a hard, white body under a glaze.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Most bricks are baked clay.",
+            "truth": "They are glazed siliceous ceramic: a white, very hard body coated with a brilliant glaze.",
+            "evidence": "The Louvre record; Marcel Dieulafoy (1893)."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Not stone: each figure is built of bricks.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The colours look as hard as stone.",
+            "truth": "Each brick was moulded, not carved, and glazed: a white siliceous body under a shiny coat.",
+            "evidence": "The Louvre record; Marcel Dieulafoy (1893); Jane Dieulafoy (1888)."
+          },
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Yes. The Louvre calls it glazed siliceous ceramic. The excavator described a white, very hard body under a brilliant glaze.",
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Marcel Dieulafoy's French mission found these bricks at Susa in 1884–86, on the mound called the Apadana.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "How were the bricks lying when they were found?",
+          "choices": [
+            {
+              "label": "Still standing in their wall",
+              "next": "b2a"
+            },
+            {
+              "label": "Scattered, many reused",
+              "next": "b2b",
+              "correct": true
+            },
+            {
+              "label": "Packed neatly in a store",
+              "next": "b2c"
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "No archer was found standing.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The panel looks complete today.",
+            "truth": "The bricks were scattered, and almost all had been reused in later buildings.",
+            "evidence": "Marcel Dieulafoy (1893); the Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "Yes. They lay in heaps, and almost all the decorated bricks had been reused in later buildings. The archers were pieced together from them.",
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Nothing was neat: the bricks were mixed up.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Each brick seems to fit perfectly in place.",
+            "truth": "They lay in tangled heaps, and most had been reused in later buildings.",
+            "evidence": "Marcel Dieulafoy (1893); the Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
+          },
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "Darius wrote that many peoples built his palace at Susa. Babylonians moulded the bricks; Ionians and Sardians cut the stone.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Who adorned the walls, according to Darius?",
+          "choices": [
+            {
+              "label": "Medes and Egyptians",
+              "next": "b3a",
+              "correct": true
+            },
+            {
+              "label": "Greek artists",
+              "next": "b3b"
+            },
+            {
+              "label": "Only Persians",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Yes. Darius says the men who adorned the wall were Medes and Egyptians. He does not say who made these particular bricks.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "He names Ionians, but as stonecutters.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Darius names Ionians among his workers.",
+            "truth": "Ionians and Sardians cut the stone; Medes and Egyptians adorned the wall.",
+            "evidence": "Kent's edition of Darius's inscription (1953); Encyclopaedia Iranica."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "He names other peoples for this work.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was a Persian king's palace.",
+            "truth": "Darius names Medes and Egyptians as the men who adorned the wall.",
+            "evidence": "Kent's edition of Darius's inscription (1953); Encyclopaedia Iranica."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "In 1886 the excavators thought the archers were the 'Immortals': the ten thousand royal guards described by the Greek historian Herodotus.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "So are they the Immortals?",
+          "choices": [
+            {
+              "label": "Yes, beyond doubt",
+              "next": "b4a"
+            },
+            {
+              "label": "Nobody has proved it",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "No: they are Greek soldiers",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "Not proven.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Their spears and jewels seemed to match Herodotus.",
+            "truth": "The Louvre's 1992 catalogue calls the identification speculative; Schmitt says it is far from proven.",
+            "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. The idea goes back to the excavators. Later scholars call it speculative, far from proven. The Louvre's label calls them simply archers.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "Their dress is Persian, not Greek.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Herodotus, who described the Immortals, was Greek.",
+            "truth": "They wear Persian dress. Whether they are the Immortals is unproven.",
+            "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Bricks from a king's palace, scattered and pieced together again. The archers stand in Room 307, on Floor 0 of the Sully wing."
+        }
+      },
+      "takeaway": "Four archers in glazed brick from Darius I's palace at Susa, pieced together from scattered bricks: Darius says Medes and Egyptians adorned his walls, and whether these guards are Herodotus's 'Immortals' is still unproven.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010170854",
+        "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+        "https://www.iranicaonline.org/articles/susa-i-excavations",
+        "https://www.iranicaonline.org/articles/achaemenid-dynasty",
+        "https://www.iranicaonline.org/articles/immortals",
+        "https://archive.org/details/oldpers",
+        "https://www.gutenberg.org/ebooks/70821",
+        "https://archive.org/details/lacropoledesused03dieu"
+      ]
+    }
+  ]
+}

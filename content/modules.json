@@ -178,7 +178,7 @@
           "id": "frieze-of-archers",
           "title": "Frieze of Archers",
           "titleFr": "Frise des archers",
-          "artist": "Achaemenid Persian, reign of Darius I",
+          "artist": "Achaemenid Persian, Susa",
           "date": "522–486 BC",
           "medium": "Glazed siliceous brick",
           "department": "Near Eastern Antiquities",
@@ -189,8 +189,9 @@
             "room": "307"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010170854"
+          "checkedOn": "2026-10-19",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010170854",
+          "levelId": "frieze-of-archers-1"
         },
         {
           "id": "capital-from-the-apadana-of-darius-i-susa",

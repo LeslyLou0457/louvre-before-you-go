@@ -1,0 +1,489 @@
+{
+  "artworkId": "frieze-of-archers",
+  "zoomImage": {
+    "file": "Archers frieze Louvre AOD488.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Archers_frieze_Louvre_AOD488.jpg",
+    "width": 3435,
+    "height": 2410,
+    "licence": "Public domain (the photographer's own release, PD-self)",
+    "credit": "Photo: Jastrow, 2007, via Wikimedia Commons · public domain",
+    "overview": "/images/challenge/frieze-of-archers/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "frieze-of-archers-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: head, shoulder and robe",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.07,
+            "y": 0.3,
+            "w": 0.16,
+            "h": 0.2,
+            "label": "The head of the archer on the far left",
+            "image": "/images/challenge/frieze-of-archers/c1.jpg"
+          },
+          "text": "Level one: four archers march in step. Now zoom to one archer's head.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.07,
+            "y": 0.3,
+            "w": 0.16,
+            "h": 0.2,
+            "label": "The head of the archer on the far left",
+            "image": "/images/challenge/frieze-of-archers/c1.jpg"
+          },
+          "text": "What is round his head?",
+          "choices": [
+            {
+              "label": "A metal helmet",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "A twisted band",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "A tall feathered crown",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+              "url": "https://www.gutenberg.org/ebooks/70821"
+            },
+            {
+              "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+              "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "No helmet: a band.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Soldiers often wear helmets.",
+            "truth": "He wears a twisted, braided band round his head.",
+            "evidence": "Jane Dieulafoy (1888); the Louvre's 1992 Susa catalogue."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. A twisted, braided band circles his head. The excavator saw it as a crown.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "No feathers: a low twisted band.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Royal guards might wear something grand.",
+            "truth": "He wears a braided band round the head.",
+            "evidence": "Jane Dieulafoy (1888); the Louvre's 1992 Susa catalogue."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A braided band, not a helmet."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.57,
+            "y": 0.3,
+            "w": 0.2,
+            "h": 0.28,
+            "label": "The shoulder and back of the third archer from the left",
+            "image": "/images/challenge/frieze-of-archers/c2.jpg"
+          },
+          "text": "Level one: they are called archers. Now zoom to what one carries on his back.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.57,
+            "y": 0.3,
+            "w": 0.2,
+            "h": 0.28,
+            "label": "The shoulder and back of the third archer from the left",
+            "image": "/images/challenge/frieze-of-archers/c2.jpg"
+          },
+          "text": "What is on his shoulder?",
+          "choices": [
+            {
+              "label": "A bow and quiver",
+              "role": "right",
+              "next": "c2a",
+              "correct": true
+            },
+            {
+              "label": "A round shield",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "A rolled cloak",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+              "url": "https://www.gutenberg.org/ebooks/70821"
+            },
+            {
+              "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+              "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Yes. Each archer carries a bow and a quiver on his shoulder, and a long spear in his hands.",
+          "next": "c2m"
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "No shield: a bow and its quiver.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Guards carried defensive weapons.",
+            "truth": "He carries a bow and a quiver on his shoulder.",
+            "evidence": "Jane Dieulafoy (1888); the Louvre's 1992 Susa catalogue."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Not a cloak: a bow and its quiver.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The shape is long and bulky.",
+            "truth": "He carries a bow and a quiver on his shoulder.",
+            "evidence": "Jane Dieulafoy (1888); the Louvre's 1992 Susa catalogue."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A bow and quiver: these are archers."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.75,
+            "y": 0.58,
+            "w": 0.19,
+            "h": 0.3,
+            "label": "The robe of the archer on the far right",
+            "image": "/images/challenge/frieze-of-archers/c3.jpg"
+          },
+          "text": "Level one: the figures were pieced together. Now zoom to one robe.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.75,
+            "y": 0.58,
+            "w": 0.19,
+            "h": 0.3,
+            "label": "The robe of the archer on the far right",
+            "image": "/images/challenge/frieze-of-archers/c3.jpg"
+          },
+          "text": "What are the thin straight lines across the robe?",
+          "choices": [
+            {
+              "label": "Folds in the cloth",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "Joints between bricks",
+              "role": "right",
+              "next": "c3b",
+              "correct": true
+            },
+            {
+              "label": "Cracks from a fire",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+              "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre"
+            },
+            {
+              "title": "Marcel Dieulafoy, L'Acropole de Suse (1893; our translation)",
+              "url": "https://archive.org/details/lacropoledesused03dieu"
+            },
+            {
+              "title": "Musée du Louvre, collection record AOD 488, 'Frise des archers' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010170854"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Not folds: the lines run straight through everything.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Robes have folds.",
+            "truth": "They are the joints between the bricks the figure is built from.",
+            "evidence": "Marcel Dieulafoy (1893); the Louvre's 1992 Susa catalogue."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Yes. Each archer is built of moulded bricks laid in courses. The joints run straight through body and robe.",
+          "next": "c3m"
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Not cracks: regular joints between bricks.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A fire is recorded at Susa.",
+            "truth": "The straight lines are joints between bricks, laid in courses.",
+            "evidence": "Marcel Dieulafoy (1893); the Louvre's 1992 Susa catalogue."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A robe made of bricks."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From the marching archers (level) to what one wears on his head: a braided band"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Each archer wears a twisted, braided band round his head.",
+      "regionSources": [
+        {
+          "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+          "url": "https://www.gutenberg.org/ebooks/70821",
+          "quote": "La tête est couronnée d'une torsade verte",
+          "supports": "Our translation: the head is crowned with a green twisted band.",
+          "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/JDIEULAFOY-1888_a-suse_excerpts.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+          "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+          "quote": "Earrings and penannular (not always clear) gold bracelets are worn, and around the head is a braided fillet.",
+          "supports": "They wear earrings and gold bracelets, and a braided band round the head.",
+          "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+            "url": "https://www.gutenberg.org/ebooks/70821",
+            "quote": "La tête est couronnée d'une torsade verte",
+            "supports": "Our translation: the head is crowned with a green twisted band.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/JDIEULAFOY-1888_a-suse_excerpts.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+            "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+            "quote": "Earrings and penannular (not always clear) gold bracelets are worn, and around the head is a braided fillet.",
+            "supports": "They wear earrings and gold bracelets, and a braided band round the head.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+            "url": "https://www.gutenberg.org/ebooks/70821",
+            "quote": "La tête est couronnée d'une torsade verte",
+            "supports": "Our translation: the head is crowned with a green twisted band.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/JDIEULAFOY-1888_a-suse_excerpts.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+            "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+            "quote": "Earrings and penannular (not always clear) gold bracelets are worn, and around the head is a braided fillet.",
+            "supports": "They wear earrings and gold bracelets, and a braided band round the head.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: Jane Dieulafoy (\"torsade\") and the Louvre's 1992 catalogue (\"braided fillet\") agree; visible in the crop.",
+      "notes": "Ledger fa-015. \"The excavator saw it as a crown\": Jane Dieulafoy's \"couronnée\", one of the details she matched to the Immortals (fa-004).",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on images/frieze-of-archers/main.jpg; never upscaled. Checked by eye: the profile head with beard and the band round the hair."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From \"four archers\" (level) to the gear that makes them archers: bow and quiver on the shoulder"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Each archer carries a bow and a quiver on his shoulder, and a long spear.",
+      "regionSources": [
+        {
+          "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+          "url": "https://www.gutenberg.org/ebooks/70821",
+          "quote": "Le tableau représente des archers vus de profil, en marche, la javeline à la main, l'arc et le carquois sur l'épaule.",
+          "supports": "Our translation: the picture shows archers seen in profile, walking, javelin in hand, bow and quiver on the shoulder.",
+          "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/JDIEULAFOY-1888_a-suse_excerpts.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+          "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+          "quote": "each armed with a long spear and a bow with its quiver",
+          "supports": "Each guard carries a long spear and a bow with its quiver.",
+          "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2b": [
+          {
+            "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+            "url": "https://www.gutenberg.org/ebooks/70821",
+            "quote": "Le tableau représente des archers vus de profil, en marche, la javeline à la main, l'arc et le carquois sur l'épaule.",
+            "supports": "Our translation: the picture shows archers seen in profile, walking, javelin in hand, bow and quiver on the shoulder.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/JDIEULAFOY-1888_a-suse_excerpts.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+            "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+            "quote": "each armed with a long spear and a bow with its quiver",
+            "supports": "Each guard carries a long spear and a bow with its quiver.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Jane Dieulafoy, A Suse. Journal des fouilles, 1884-1886 (1888; our translation)",
+            "url": "https://www.gutenberg.org/ebooks/70821",
+            "quote": "Le tableau représente des archers vus de profil, en marche, la javeline à la main, l'arc et le carquois sur l'épaule.",
+            "supports": "Our translation: the picture shows archers seen in profile, walking, javelin in hand, bow and quiver on the shoulder.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/JDIEULAFOY-1888_a-suse_excerpts.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+            "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+            "quote": "each armed with a long spear and a bow with its quiver",
+            "supports": "Each guard carries a long spear and a bow with its quiver.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: Jane Dieulafoy and the 1992 catalogue agree; visible in the crop.",
+      "notes": "Ledger fa-015.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg; never upscaled. Checked by eye: the bow curving over the shoulder and the quiver behind the back."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n2",
+          "q2"
+        ],
+        "concept": "From \"the figures were pieced together from bricks\" (level) to how that shows: joints through the robe"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The thin straight lines are joints between the bricks the figure is built from.",
+      "regionSources": [
+        {
+          "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+          "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+          "quote": "Each figure is seventeen bricks in height",
+          "supports": "Each archer is built of seventeen courses of bricks.",
+          "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Marcel Dieulafoy, L'Acropole de Suse (1893; our translation)",
+          "url": "https://archive.org/details/lacropoledesused03dieu",
+          "quote": "Les briques carrées ou barlongues, sur la tranche desquelles ils sont estampés, ont 1 pied (O'\",3o) do côté et un quart de pied d'épaisseur (joints et lits compris).",
+          "supports": "Our translation: the bricks, on whose edge the figures are stamped, measure one foot (0.33 m) a side and a quarter of a foot thick, joints and beds included.",
+          "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/MDIEULAFOY-1893_acropole-de-suse_pp280-285.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record AOD 488, 'Frise des archers' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010170854",
+          "quote": "céramique siliceuse à glaçure",
+          "supports": "Our translation: glazed siliceous ceramic.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/frieze-of-archers/sources/LV-REC_cl010170854.json), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Marcel Dieulafoy, L'Acropole de Suse (1893; our translation)",
+            "url": "https://archive.org/details/lacropoledesused03dieu",
+            "quote": "Les briques carrées ou barlongues, sur la tranche desquelles ils sont estampés, ont 1 pied (O'\",3o) do côté et un quart de pied d'épaisseur (joints et lits compris).",
+            "supports": "Our translation: the bricks, on whose edge the figures are stamped, measure one foot (0.33 m) a side and a quarter of a foot thick, joints and beds included.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/MDIEULAFOY-1893_acropole-de-suse_pp280-285.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+            "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+            "quote": "Each figure is seventeen bricks in height",
+            "supports": "Each archer is built of seventeen courses of bricks.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "Marcel Dieulafoy, L'Acropole de Suse (1893; our translation)",
+            "url": "https://archive.org/details/lacropoledesused03dieu",
+            "quote": "Les briques carrées ou barlongues, sur la tranche desquelles ils sont estampés, ont 1 pied (O'\",3o) do côté et un quart de pied d'épaisseur (joints et lits compris).",
+            "supports": "Our translation: the bricks, on whose edge the figures are stamped, measure one foot (0.33 m) a side and a quarter of a foot thick, joints and beds included.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/MDIEULAFOY-1893_acropole-de-suse_pp280-285.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "P. O. Harper, J. Aruz and F. Tallon (eds), The Royal City of Susa (Metropolitan Museum of Art, with the Louvre, 1992)",
+            "url": "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
+            "quote": "Each figure is seventeen bricks in height",
+            "supports": "Each archer is built of seventeen courses of bricks.",
+            "readVia": "Saved text in the research folder (research/works/frieze-of-archers/sources/SUSA-1992_royal-city-of-susa_excerpts.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the 1992 catalogue (seventeen bricks per figure) and Marcel Dieulafoy (brick size) with our looking (fa-013).",
+      "notes": "Ledger fa-013 (our looking), fa-028, fa-011. \"A fire is recorded at Susa\": the audience hall burned under Artaxerxes I (fa-022, 2+), used only as the tempting line.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg; never upscaled. Checked by eye: the patterned lower robe crossed by straight horizontal and vertical joints."
+    }
+  }
+}
