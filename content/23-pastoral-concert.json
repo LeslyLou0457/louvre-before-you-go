@@ -119,7 +119,7 @@
             "truth": "The Louvre now gives it to Titian, after centuries of argument about who painted it.",
             "evidence": "The Louvre record; the National Gallery, London."
           },
-          "next": "n3"
+          "next": "n6"
         },
         "b2b": {
           "type": "branch",
@@ -130,11 +130,113 @@
             "truth": "The Louvre now gives it to Titian, after centuries of argument.",
             "evidence": "Walter Pater (1893); the Louvre; the National Gallery, London."
           },
-          "next": "n3"
+          "next": "n6"
         },
         "b2c": {
           "type": "branch",
           "text": "Yes, Titian. But it was long called Giorgione's, and who painted it has been argued over for centuries. The label keeps both names.",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Part of the puzzle is Giorgione himself. Over the centuries, many famous pictures went by his name, this one included.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "How many paintings can scholars firmly agree are Giorgione's?",
+          "choices": [
+            {
+              "label": "Dozens, beyond doubt",
+              "next": "b5a"
+            },
+            {
+              "label": "Only a few, still argued over",
+              "next": "b5b",
+              "correct": true
+            },
+            {
+              "label": "None: he may be a legend",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Far fewer than that.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many famous pictures once went by his name.",
+            "truth": "Critics took most of them away. Around 1900 some accepted only one to three as certainly his, and there is still little agreement.",
+            "evidence": "Walter Pater (1893); Herbert Cook (1900); the National Gallery, London."
+          },
+          "next": "n7"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Yes. Around 1900 critics counted only one to three pictures as certainly his, and there is still little agreement today. No wonder this one changed names.",
+          "next": "n7"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "He was real.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "So little is known about his life.",
+            "truth": "Documents of his own time name him. What is uncertain is which pictures are his.",
+            "evidence": "The National Gallery, London; Herbert Cook (1900)."
+          },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "Little is known about Giorgione's life. One famous record: in late 1510, Isabella d'Este wrote to Venice, hoping to buy a picture by him.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "What answer came back from Venice?",
+          "choices": [
+            {
+              "label": "Giorgione was too busy to paint it",
+              "next": "b6a"
+            },
+            {
+              "label": "Titian had painted it, not Giorgione",
+              "next": "b6b"
+            },
+            {
+              "label": "Giorgione had died of the plague",
+              "next": "b6c",
+              "correct": true
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Not too busy: he was dead.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A sought-after painter might keep a buyer waiting.",
+            "truth": "The reply of November 1510 says Giorgione had died of the plague. These letters are how we know when he died.",
+            "evidence": "The National Gallery, London; Herbert Cook (1900), printing the 1510 letters."
+          },
+          "next": "n3"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "No: the news was his death.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Their pictures were often confused.",
+            "truth": "The reply of November 1510 says Giorgione had died of the plague. These letters are how we know when he died.",
+            "evidence": "The National Gallery, London; Herbert Cook (1900), printing the 1510 letters."
+          },
+          "next": "n3"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Yes. The reply, written in November 1510, says Giorgione had died of the plague. These letters are how we know when he died.",
           "next": "n3"
         },
         "n3": {
@@ -249,7 +351,7 @@
           "text": "Louis XIV bought it in 1671. Long called a Giorgione, now credited to Titian, it still makes people argue about whose hand it is."
         }
       },
-      "takeaway": "Two clothed musicians and two nude women in a landscape: long called a Giorgione, now credited to Titian after centuries of argument, it later stood behind Manet's scandalous picnic.",
+      "takeaway": "Two clothed musicians and two nude women in a landscape: long called a Giorgione, a painter whose few certain works are still argued over, it is now credited to Titian after centuries of argument, and it later stood behind Manet's scandalous picnic.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010062281",
         "https://victorianweb.org/painting/italian/titian5.html",
@@ -259,7 +361,8 @@
         "https://www.gutenberg.org/ebooks/2398",
         "https://www.gutenberg.org/ebooks/35986",
         "https://www.gutenberg.org/ebooks/39886",
-        "https://www.gutenberg.org/ebooks/69533"
+        "https://www.gutenberg.org/ebooks/69533",
+        "https://www.gutenberg.org/ebooks/12307"
       ]
     }
   ]

@@ -124,7 +124,7 @@
             "truth": "It comes from a French legend about an ironmonger's wife who became a mistress of King Francis I.",
             "evidence": "The Louvre; the Barber Institute, Birmingham."
           },
-          "next": "n3"
+          "next": "n6"
         },
         "b2b": {
           "type": "branch",
@@ -135,11 +135,62 @@
             "truth": "The name comes from a later French legend. The Louvre's own title says it is wrong.",
             "evidence": "The Louvre; the Barber Institute, Birmingham."
           },
-          "next": "n3"
+          "next": "n6"
         },
         "b2c": {
           "type": "branch",
           "text": "Yes. Legend told of an ironmonger's wife who became a mistress of King Francis I. The Louvre's title calls the name wrong: \"dit à tort\".",
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Her names have changed before. In the 1600s, in the French royal collection at Fontainebleau, she was described as a Duchess of Mantua.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "So how did the legend's name end up on her?",
+          "choices": [
+            {
+              "label": "A mix-up with another portrait",
+              "next": "b6a",
+              "correct": true
+            },
+            {
+              "label": "Francis I named her himself",
+              "next": "b6b"
+            },
+            {
+              "label": "A poem written about her",
+              "next": "b6c"
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Yes. The name belonged to another portrait of a woman in the royal collection. The two pictures were confused, and the name stuck to Leonardo's.",
+          "next": "n3"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "Not the king: a mix-up.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The legend is about a mistress of Francis I.",
+            "truth": "The name belonged to another portrait of a woman in the royal collection. The two were confused, and the name stuck to Leonardo's.",
+            "evidence": "The Louvre; a Christie's catalogue note on a copy of the painting."
+          },
+          "next": "n3"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "No poem gave it: a mix-up.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Poems of the time praise a portrait by Leonardo.",
+            "truth": "Those poems name a Lucrezia. The legend's name came from a mix-up with another portrait in the royal collection.",
+            "evidence": "The Louvre; a Christie's catalogue note on a copy of the painting. Richter (1883)."
+          },
           "next": "n3"
         },
         "n3": {
@@ -180,12 +231,12 @@
             "truth": "The poem does not describe this panel. Many scholars favour Lucrezia, but nothing proves it.",
             "evidence": "The Louvre; Galerie magazine (2026); the poems in Richter's edition (1883)."
           },
-          "next": "n4"
+          "next": "n7"
         },
         "b3b": {
           "type": "branch",
           "text": "Yes. Many favour Lucrezia Crivelli because of a poem praising a Leonardo portrait of a Lucrezia; others prefer Beatrice or Isabella. Nothing settles it.",
-          "next": "n4"
+          "next": "n7"
         },
         "b3c": {
           "type": "branch",
@@ -196,6 +247,57 @@
             "truth": "Others prefer Lucrezia or Isabella. No identification has been proven.",
             "evidence": "The National Art Center, Tokyo (2026); Galerie magazine (2026)."
           },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "Leonardo painted three portraits in Milan that survive: a musician, this woman, and a woman holding an ermine, the Lady with an Ermine.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Unlike this sitter, the woman with the ermine is known. Who is she?",
+          "choices": [
+            {
+              "label": "Lucrezia Crivelli",
+              "next": "b5a"
+            },
+            {
+              "label": "Beatrice d'Este",
+              "next": "b5b"
+            },
+            {
+              "label": "Cecilia Gallerani",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Not Lucrezia.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She is the favourite name for this portrait.",
+            "truth": "The Lady with an Ermine is Cecilia Gallerani. Lucrezia is only proposed for this one.",
+            "evidence": "The Louvre; the National Gallery, London (2011)."
+          },
+          "next": "n4"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Not Beatrice.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "She is one of the names proposed for this portrait.",
+            "truth": "The Lady with an Ermine is Cecilia Gallerani. Beatrice is only proposed for this one.",
+            "evidence": "The Louvre; the National Gallery, London (2011)."
+          },
+          "next": "n4"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. Cecilia Gallerani, holding her ermine. With the Musician and this portrait, she makes up Leonardo's Milan trio: one name known, one unknown.",
           "next": "n4"
         },
         "n4": {
@@ -254,7 +356,7 @@
           "text": "From the French royal collection she passed to the Louvre in 1793. In 2026 she travelled to Tokyo, her first time in Japan. Her real name is still unknown."
         }
       },
-      "takeaway": "Leonardo painted this young woman in Milan in the 1490s, turning her head against her body; her famous name comes from a French legend, and nobody has proven who she was.",
+      "takeaway": "Leonardo painted this young woman in Milan in the 1490s, one of three portraits from his Milan years, turning her head against her body; her famous name comes from a French legend and a mix-up with another portrait, and nobody has proven who she was.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010062372",
         "https://www.nationalgallery.org.uk/media/15705/exhibition-guide_leonardo-da-vinci.pdf",
@@ -263,7 +365,8 @@
         "https://galeriemagazine.com/louvre-loans-leonardo-to-japan-for-the-first-time-in-52-years/",
         "https://barber.org.uk/jean-auguste-dominique-ingres-1780-1867-2/",
         "https://www.gutenberg.org/ebooks/5000",
-        "https://www.nact.jp/english/exhibition_special/2026/louvre2026/"
+        "https://www.nact.jp/english/exhibition_special/2026/louvre2026/",
+        "https://www.christies.com.cn/lot/lot-507755"
       ]
     }
   ]

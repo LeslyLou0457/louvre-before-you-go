@@ -13,14 +13,13 @@ import { LEVEL_TIME_MODEL, levelTime } from "./level-time.ts";
  * fails. Fewer than 5 fails, except for the levels built before that decision
  * and listed in LEVELS_AWAITING_EXPANSION: they only warn until each one is
  * expanded and taken off the list (the plan is the project file
- * content-plans/LEVEL_EXPANSION_PLAN.md).
+ * content-plans/LEVEL_EXPANSION_PLAN.md). The list has been empty since all
+ * seven were expanded (19 Oct 2026); it stays so a level can be listed again
+ * if the rule ever changes.
  */
 export const MIN_QUESTIONS_PER_LEVEL = 5;
 export const MAX_QUESTIONS_PER_LEVEL = 6;
-export const LEVELS_AWAITING_EXPANSION: ReadonlySet<string> = new Set([
-  "la-belle-ferronniere-1",
-  "pastoral-concert-1",
-]);
+export const LEVELS_AWAITING_EXPANSION: ReadonlySet<string> = new Set<string>([]);
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
 export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;
 export const CORRECTION_WORD_LIMITS = { verdict: 6, tempting: 30, truth: 35, evidence: 35 } as const;
