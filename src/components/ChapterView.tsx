@@ -10,7 +10,8 @@
 // "Close-ups per work"): each opens as soon as its work's level is met.
 // A work with a level shows its narrator's head at the end of its row (still,
 // like the heads on the trail card); works without a level show none.
-// A not-on-view work shows its displayNote under its chip, level or not.
+// A not-on-view work shows its displayNote under its chip, level or not, minus the
+// record's "current location" boilerplate (nothing when that is all it says).
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -152,6 +153,11 @@ export default function ChapterView({ chapter }: { chapter: BookChapter }) {
   );
 }
 
+/** A displayNote without its record boilerplate ("Record: current location \"non exposé\"."); empty when nothing is left. */
+function rowNote(note?: string): string {
+  return (note ?? "").replace(/^Record: current location "[^"]*"\.\s*/, "").trim();
+}
+
 type RowProps = { chapterId: string; work: BookWork; progress: Progress; nextUp: boolean; onOpen: () => void };
 
 function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
@@ -178,9 +184,9 @@ function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
             </span>
           )}
         </span>
-        {/* The reason a not-on-view work is away, in the record's own words; also in its label. */}
-        {isOffView(work) && work.displayNote && (
-          <span className="mt-1 block text-[13px] leading-snug text-muted">{work.displayNote}</span>
+        {/* Why a not-on-view work is away, when it says more than the chip (the full note is in its label). */}
+        {isOffView(work) && rowNote(work.displayNote) && (
+          <span className="mt-1 block text-[13px] leading-snug text-muted">{rowNote(work.displayNote)}</span>
         )}
       </span>
       {narrator && (

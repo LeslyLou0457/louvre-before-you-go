@@ -304,7 +304,7 @@ Every work is shown and says what it is. Two independent facts make up its statu
 | `room-closed` | Grey chip "Room closed" (the room is kept) |
 | `appointment-only` | Grey chip "By appointment only" |
 
-- The last four are **not on view**: the work keeps its place in its module, is listed last, its row shows the reason (`displayNote`) in one small line under its chip, and its label gives the reason (the record's own words, `displayNote`) and the date checked. Off-view works are written last.
+- The last four are **not on view**: the work keeps its place in its module, is listed last, its row shows the reason (`displayNote`) in one small line under its chip when it says more than the chip (the record's `Record: current location "non exposé".` wording is left off the row), and its label gives the reason (the record's own words, `displayNote`) and the date checked. Off-view works are written last.
 - Every status carries the date it was checked. Never red: these are facts, not errors. State is never colour alone: each chip has a word and a mark.
 - No fake levels and no drawn stand-ins: a work gets its photo only when its level ships, after the same rights check as the first five.
 - Room data is soft: the Louvre's own records warn room data may be out of date. Every work's record is rechecked before its level ships, and a work checked more than 90 days ago is flagged by the content check.
