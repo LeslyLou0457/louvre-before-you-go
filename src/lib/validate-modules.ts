@@ -27,7 +27,7 @@ export const RECHECK_DAYS = 90;
 
 const WORK_KEYS = new Set([
   "id", "title", "titleFr", "artist", "date", "medium", "department", "inventory", "location",
-  "display", "displayNote", "checkedOn", "museumUrl", "levelId", "note",
+  "display", "displayNote", "rowNote", "checkedOn", "museumUrl", "levelId", "note",
 ]);
 const LOCATION_KEYS = new Set(["wing", "floor", "room", "roomName", "place"]);
 const MODULE_KEYS = new Set(["id", "slug", "title", "status", "closedNote", "checkedOn", "works"]);
@@ -168,6 +168,9 @@ export function validateCatalogue(
       const display = w.display;
       if (!DISPLAY_STATUSES.includes(display)) err(`${at}: display "${String(display)}" is not one of ${DISPLAY_STATUSES.join(", ")}`);
       if (display !== "on-display" && !isText(w.displayNote)) err(`${at}: display "${display}" needs a displayNote (the reason)`);
+      if (w.rowNote !== undefined && (!isText(w.rowNote) || !OFF_VIEW.includes(display))) {
+        err(`${at}: rowNote must be text, and only on a work not on view; leave it out otherwise`);
+      }
       if (OFF_VIEW.includes(display)) summary.notOnView++;
       const checked = parseDate(w.checkedOn);
       if (checked === null) err(`${at}: checkedOn must be a date, YYYY-MM-DD`);

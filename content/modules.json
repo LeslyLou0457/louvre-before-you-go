@@ -1201,6 +1201,7 @@
           "location": null,
           "display": "not-on-display",
           "displayNote": "Record: current location \"non exposé\". On loan to the National Art Center, Tokyo, 9 Sep – 13 Dec 2026.",
+          "rowNote": "On loan to the National Art Center, Tokyo, 9 Sep – 13 Dec 2026.",
           "checkedOn": "2026-10-18",
           "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010062372",
           "levelId": "la-belle-ferronniere-1"
@@ -1457,6 +1458,7 @@
           },
           "display": "room-closed",
           "displayNote": "Record says on display, but the louvre.fr 'Open rooms' page (checked 13 Oct 2026) lists the Galerie Médicis as currently closed.",
+          "rowNote": "The Galerie Médicis is closed right now (louvre.fr, checked 13 Oct 2026).",
           "checkedOn": "2026-10-13",
           "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010060820",
           "note": "Galerie Médicis listed closed on louvre.fr (13 Oct 2026)."
@@ -1919,6 +1921,7 @@
         "location": null,
         "display": "appointment-only",
         "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "rowNote": "On view by appointment in the prints and drawings reference room.",
         "checkedOn": "2026-10-13",
         "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020213445",
         "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
@@ -1935,6 +1938,7 @@
         "location": null,
         "display": "appointment-only",
         "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "rowNote": "On view by appointment in the prints and drawings reference room.",
         "checkedOn": "2026-10-13",
         "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020003018",
         "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
@@ -1951,6 +1955,7 @@
         "location": null,
         "display": "appointment-only",
         "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "rowNote": "On view by appointment in the prints and drawings reference room.",
         "checkedOn": "2026-10-13",
         "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020108533",
         "note": "Prints and Drawings: fits no chapter and is seen by appointment only."
@@ -1967,6 +1972,7 @@
         "location": null,
         "display": "appointment-only",
         "displayNote": "Record: \"This artwork is on view by appointment in the reference room for prints and drawings\".",
+        "rowNote": "On view by appointment in the prints and drawings reference room.",
         "checkedOn": "2026-10-13",
         "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl020111146",
         "note": "Prints and Drawings: fits no chapter and is seen by appointment only."

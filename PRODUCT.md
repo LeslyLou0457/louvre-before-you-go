@@ -304,7 +304,7 @@ Every work is shown and says what it is. Two independent facts make up its statu
 | `room-closed` | Grey chip "Room closed" (the room is kept) |
 | `appointment-only` | Grey chip "By appointment only" |
 
-- The last four are **not on view**: the work keeps its place in its module, is listed last, its row shows the reason (`displayNote`) in one small line under its chip when it says more than the chip (the record's `Record: current location "non exposé".` wording is left off the row), and its label gives the reason (the record's own words, `displayNote`) and the date checked. Off-view works are written last.
+- The last four are **not on view**: the work keeps its place in its module, is listed last, its row shows the reason in plain words (`rowNote`) in one small line under its chip when it says more than the chip, and its label gives the reason (the record's own words, `displayNote`) and the date checked. Off-view works are written last.
 - Every status carries the date it was checked. Never red: these are facts, not errors. State is never colour alone: each chip has a word and a mark.
 - No fake levels and no drawn stand-ins: a work gets its photo only when its level ships, after the same rights check as the first five.
 - Room data is soft: the Louvre's own records warn room data may be out of date. Every work's record is rechecked before its level ships, and a work checked more than 90 days ago is flagged by the content check.
@@ -501,6 +501,7 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
 | work | `location` | `{ wing, floor, room, roomName? }`; `room` is a string ("711"), or `null` with `place` for a spot with no room number ("Escalier Mollien (upper)"). `null` when the work is not on display, on loan or by appointment only; kept for `room-closed` |
 | work | `display` | `on-display`, `restricted`, `tbd`, `room-closed`, `not-on-display`, `on-loan` or `appointment-only` |
 | work | `displayNote` | For any `display` other than `on-display`: the reason, in the record's own words where it has them |
+| work | `rowNote` | Optional, only for a work not on view: the same reason in plain player-facing words, shown on the chapter row under the chip. Left out when it would only repeat the chip ("Not on display", "On loan"); never adds a fact the `displayNote` lacks |
 | work | `checkedOn` | The date the record was checked, `YYYY-MM-DD` |
 | work | `museumUrl` | The collections.louvre.fr record, or `null` for a work with no Louvre record (the Gallery of Five Continents works carry Musée du quai Branly inventory numbers) |
 | work | `levelId` | Optional: the lesson id of the work's level (`"mona-lisa-1"`). Missing means "Coming soon" |
@@ -508,7 +509,7 @@ Added 2026-10-13 for 0.6. One file, `content/modules.json`, holds the catalogue:
 
 Label format, the same in level files (`artwork.artist`, `artwork.year`) and the catalogue (`artist`, `date`): years as BC and AD, never BCE or CE; circa as "c. " with a space; a maker who is unknown is named by the culture the record gives ("Greek, Hellenistic period"), never "Unknown" or "Anonymous". Only the formatting is fixed; the values stay the record's.
 
-`npm run check-content` also checks the catalogue: every work in exactly one module or the appendix (ids unique); every label field present (`medium` may be "TBD"), and `titleFr`, when given, different from `title`; every `levelId` names an existing lesson whose `artwork.id` equals the work's `id`, and every level file's artwork is in the catalogue; module ids `01`–`15` in order, each once; `location` well formed (a known wing, a floor that wing lists, a room of digits or `null` with a `place`; `null` only for off-view works); works in module order (on view by room number, then on view without a room number, then not on view); `display` from the list, with `displayNote` when not `on-display`; `checkedOn` a real date, with a warning when it is more than 90 days old.
+`npm run check-content` also checks the catalogue: every work in exactly one module or the appendix (ids unique); every label field present (`medium` may be "TBD"), and `titleFr`, when given, different from `title`; every `levelId` names an existing lesson whose `artwork.id` equals the work's `id`, and every level file's artwork is in the catalogue; module ids `01`–`15` in order, each once; `location` well formed (a known wing, a floor that wing lists, a room of digits or `null` with a `place`; `null` only for off-view works); works in module order (on view by room number, then on view without a room number, then not on view); `display` from the list, with `displayNote` when not `on-display`; `rowNote`, when given, is text and only on a work not on view; `checkedOn` a real date, with a warning when it is more than 90 days old.
 
 ---
 

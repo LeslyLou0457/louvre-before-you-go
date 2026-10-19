@@ -37,6 +37,7 @@ export type BookWork = {
   } | null;
   display: DisplayStatus;
   displayNote?: string;
+  rowNote?: string;
   checkedOn: string;
   museumUrl: string | null;
   /** The work's level, when one exists. */
@@ -124,6 +125,7 @@ export function getBook(): Book {
         : null,
       display: w.display,
       ...(w.displayNote ? { displayNote: w.displayNote } : {}),
+      ...(w.rowNote ? { rowNote: w.rowNote } : {}),
       checkedOn: w.checkedOn,
       museumUrl: w.museumUrl,
       ...(level
