@@ -1,0 +1,490 @@
+{
+  "artworkId": "borghese-gladiator",
+  "zoomImage": {
+    "file": "Borghese Gladiator Louvre Ma 527 n1.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Borghese_Gladiator_Louvre_Ma_527_n1.jpg",
+    "width": 2000,
+    "height": 3008,
+    "licence": "Public domain (the photographer's own release, PD-self)",
+    "credit": "Photo: Jastrow, 2006, via Wikimedia Commons · public domain",
+    "overview": "/images/challenge/borghese-gladiator/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "borghese-gladiator-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: trunk, arm and fist",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.54,
+            "w": 0.3,
+            "h": 0.37,
+            "label": "The tree trunk beside his right leg, down to the base",
+            "image": "/images/challenge/borghese-gladiator/c1.jpg"
+          },
+          "text": "Level one: the signature is cut on this trunk. Now look at what the trunk does.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.0,
+            "y": 0.54,
+            "w": 0.3,
+            "h": 0.37,
+            "label": "The tree trunk beside his right leg, down to the base",
+            "image": "/images/challenge/borghese-gladiator/c1.jpg"
+          },
+          "text": "Why is there a tree trunk here at all?",
+          "choices": [
+            {
+              "label": "To suggest a forest",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "To hold up the marble",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Added by a later restorer",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706"
+            },
+            {
+              "title": "M. T. Amorelli, 'Agasias, 1°', Enciclopedia dell'Arte Antica (Treccani, 1958; our translation)",
+              "url": "https://www.treccani.it/enciclopedia/agasias-1_%28Enciclopedia-dell%27-Arte-Antica%29/"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "No scene is meant: the trunk does a job.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Trees can set a scene outdoors.",
+            "truth": "The Louvre lists it as a support, and a scholar notes that the marble required it.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. The Louvre calls the trunk a support, and a scholar notes that the marble required it.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "It is part of the statue: the signature is cut on it.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Old statues often carry later repairs.",
+            "truth": "The Greek signature is engraved on the trunk, and the Louvre lists it as the statue's support.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "A trunk that carries the weight, and the name."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.6,
+            "y": 0.06,
+            "w": 0.39,
+            "h": 0.17,
+            "label": "His raised left forearm and fist, with a band round the arm",
+            "image": "/images/challenge/borghese-gladiator/c2.jpg"
+          },
+          "text": "Level one: his weapons are lost. Now zoom to the arm he flings up high.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.6,
+            "y": 0.06,
+            "w": 0.39,
+            "h": 0.17,
+            "label": "His raised left forearm and fist, with a band round the arm",
+            "image": "/images/challenge/borghese-gladiator/c2.jpg"
+          },
+          "text": "What did this raised arm once carry?",
+          "choices": [
+            {
+              "label": "A spear to throw",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Nothing: it was always empty",
+              "role": "near-miss",
+              "next": "c2b"
+            },
+            {
+              "label": "A shield",
+              "role": "right",
+              "next": "c2c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+              "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706"
+            },
+            {
+              "title": "Brigitte Bourgeois, 'À propos de la restauration des marbres antiques du Louvre' (CRAI, 1997; our translation)",
+              "url": "https://www.persee.fr/doc/crai_0065-0536_1997_num_141_1_15713"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "Not a spear: this arm carried his defence.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The fist is clenched, as if gripping a shaft.",
+            "truth": "His left arm carried a shield, now lost.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "It held something, now lost.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Nothing is attached to it today.",
+            "truth": "His left arm carried a shield; the Louvre records it as missing.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          }
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "Yes. A shield hung on this raised left arm. The Louvre records it as missing.",
+          "next": "c2m"
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A raised arm with no shield on it."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.02,
+            "y": 0.41,
+            "w": 0.19,
+            "h": 0.11,
+            "label": "His lowered right hand, at hip height",
+            "image": "/images/challenge/borghese-gladiator/c3.jpg"
+          },
+          "text": "Level one: two weapons are lost. Now zoom to the hand held low behind him.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.02,
+            "y": 0.41,
+            "w": 0.19,
+            "h": 0.11,
+            "label": "His lowered right hand, at hip height",
+            "image": "/images/challenge/borghese-gladiator/c3.jpg"
+          },
+          "text": "What did this hand probably hold?",
+          "choices": [
+            {
+              "label": "A sword",
+              "role": "right",
+              "next": "c3a",
+              "correct": true
+            },
+            {
+              "label": "A second shield",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "A stone to throw",
+              "role": "near-miss",
+              "next": "c3c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+              "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/"
+            },
+            {
+              "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Yes. His right hand probably held a sword. The Louvre records the sword as missing.",
+          "next": "c3m"
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "One shield only, on the other arm.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Fighters needed protection on both sides.",
+            "truth": "The shield was on his raised left arm; this hand probably held a sword.",
+            "evidence": "Treccani's Enciclopedia dell'Arte Antica; the Louvre record."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Not a stone: a weapon now lost.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The hand is drawn back, as if to throw.",
+            "truth": "This hand probably held a sword, which the Louvre records as missing.",
+            "evidence": "Treccani's Enciclopedia dell'Arte Antica; the Louvre record."
+          }
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A hand without its sword."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From \"the signature is cut on the trunk\" (level) to what the trunk is for: a support the marble needed"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The tree trunk is a support; a marble standing figure needed one.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+          "quote": "support (tronc d'arbre)",
+          "supports": "Our translation: support (tree trunk).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+        },
+        {
+          "title": "M. T. Amorelli, 'Agasias, 1°', Enciclopedia dell'Arte Antica (Treccani, 1958; our translation)",
+          "url": "https://www.treccani.it/enciclopedia/agasias-1_%28Enciclopedia-dell%27-Arte-Antica%29/",
+          "quote": "Il tronco d'albero, aggiunta richiesta dal marmo",
+          "supports": "Our translation: the tree trunk, an addition required by the marble.",
+          "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1958_amorelli_agasias.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+            "quote": "support (tronc d'arbre)",
+            "supports": "Our translation: support (tree trunk).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "M. T. Amorelli, 'Agasias, 1°', Enciclopedia dell'Arte Antica (Treccani, 1958; our translation)",
+            "url": "https://www.treccani.it/enciclopedia/agasias-1_%28Enciclopedia-dell%27-Arte-Antica%29/",
+            "quote": "Il tronco d'albero, aggiunta richiesta dal marmo",
+            "supports": "Our translation: the tree trunk, an addition required by the marble.",
+            "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1958_amorelli_agasias.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+            "quote": "gravée sur le tronc d'arbre",
+            "supports": "Our translation: engraved on the tree trunk (the signature).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "M. T. Amorelli, 'Agasias, 1°', Enciclopedia dell'Arte Antica (Treccani, 1958; our translation)",
+            "url": "https://www.treccani.it/enciclopedia/agasias-1_%28Enciclopedia-dell%27-Arte-Antica%29/",
+            "quote": "Il tronco d'albero, aggiunta richiesta dal marmo",
+            "supports": "Our translation: the tree trunk, an addition required by the marble.",
+            "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1958_amorelli_agasias.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record lists the trunk as a support, and Amorelli (Treccani) calls it an addition required by the marble.",
+      "notes": "Ledger bg-001 (record: support, tree trunk), bg-006 (Amorelli: the trunk required by marble; his further inference about a bronze original is a debate and is not used), bg-004 (signature on the trunk), bg-025 (our looking).",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on images/borghese-gladiator/main.jpg (1920 × 2888); crop 576 × 1069 px, never upscaled. Checked by eye: the knotted trunk from hip height to the base, the right leg beside it."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1b"
+        ],
+        "concept": "From \"his weapons are lost\" (level) to where the shield was: on the raised left arm"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The raised left arm carried the shield, now lost.",
+      "regionSources": [
+        {
+          "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+          "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+          "quote": "rappresenta un combattente che imbraccia lo scudo con la sinistra e probabilinente doveva impugnare la spada nella destra",
+          "supports": "Our translation: it represents a fighter who carries the shield on his left arm and probably held the sword in his right (the source's misprint 'probabilinente' kept).",
+          "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1960_borrelli_gladiatore.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+          "quote": "incomplet : l'épée et le bouclier manquent",
+          "supports": "Our translation: incomplete: the sword and the shield are missing.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Brigitte Bourgeois, 'À propos de la restauration des marbres antiques du Louvre' (CRAI, 1997; our translation)",
+          "url": "https://www.persee.fr/doc/crai_0065-0536_1997_num_141_1_15713",
+          "quote": "Le bras gauche, celui qui tenait le bouclier, avait été exhumé en quatre fragments.",
+          "supports": "Our translation: the left arm, the one that held the shield, had been dug up in four fragments.",
+          "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/BOURGEOIS-1997_crai_pp144-155.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+            "quote": "incomplet : l'épée et le bouclier manquent",
+            "supports": "Our translation: incomplete: the sword and the shield are missing.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+            "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+            "quote": "rappresenta un combattente che imbraccia lo scudo con la sinistra e probabilinente doveva impugnare la spada nella destra",
+            "supports": "Our translation: it represents a fighter who carries the shield on his left arm and probably held the sword in his right (the source's misprint 'probabilinente' kept).",
+            "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1960_borrelli_gladiatore.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c2b": [
+          {
+            "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+            "quote": "incomplet : l'épée et le bouclier manquent",
+            "supports": "Our translation: incomplete: the sword and the shield are missing.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+            "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+            "quote": "rappresenta un combattente che imbraccia lo scudo con la sinistra e probabilinente doveva impugnare la spada nella destra",
+            "supports": "Our translation: it represents a fighter who carries the shield on his left arm and probably held the sword in his right (the source's misprint 'probabilinente' kept).",
+            "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1960_borrelli_gladiatore.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record lists the shield as missing, and Borrelli (Treccani) and Bourgeois (Louvre) place it on the left arm.",
+      "notes": "Ledger bg-002, bg-008 (record: left arm rejoined from 4 pieces), bg-009. The band round the forearm is not explained in any opened source and is not named as a strap.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg (1920 × 2888); crop 749 × 491 px, never upscaled. Checked by eye: the forearm with its band and the clenched fist against the wall."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "q1",
+          "b1b"
+        ],
+        "concept": "From \"his weapons are lost\" (level) to the second weapon: the sword probably held in the lowered right hand"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The lowered right hand probably held a sword, now missing.",
+      "regionSources": [
+        {
+          "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+          "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+          "quote": "rappresenta un combattente che imbraccia lo scudo con la sinistra e probabilinente doveva impugnare la spada nella destra",
+          "supports": "Our translation: it represents a fighter who carries the shield on his left arm and probably held the sword in his right (the source's misprint 'probabilinente' kept).",
+          "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1960_borrelli_gladiatore.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+          "quote": "incomplet : l'épée et le bouclier manquent",
+          "supports": "Our translation: incomplete: the sword and the shield are missing.",
+          "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3b": [
+          {
+            "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+            "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+            "quote": "rappresenta un combattente che imbraccia lo scudo con la sinistra e probabilinente doveva impugnare la spada nella destra",
+            "supports": "Our translation: it represents a fighter who carries the shield on his left arm and probably held the sword in his right (the source's misprint 'probabilinente' kept).",
+            "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1960_borrelli_gladiatore.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+            "quote": "incomplet : l'épée et le bouclier manquent",
+            "supports": "Our translation: incomplete: the sword and the shield are missing.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+          }
+        ],
+        "c3c": [
+          {
+            "title": "L. Vlad Borrelli, 'Gladiatore Borghese', Enciclopedia dell'Arte Antica (Treccani, 1960; our translation)",
+            "url": "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+            "quote": "rappresenta un combattente che imbraccia lo scudo con la sinistra e probabilinente doveva impugnare la spada nella destra",
+            "supports": "Our translation: it represents a fighter who carries the shield on his left arm and probably held the sword in his right (the source's misprint 'probabilinente' kept).",
+            "readVia": "Saved text in the research folder (research/works/borghese-gladiator/sources/TRECCANI-1960_borrelli_gladiatore.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Musée du Louvre, collection record Ma 527, 'Gladiateur Borghèse' (our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+            "quote": "incomplet : l'épée et le bouclier manquent",
+            "supports": "Our translation: incomplete: the sword and the shield are missing.",
+            "readVia": "Saved JSON of the record in the research folder (research/works/borghese-gladiator/sources/LV-REC_cl010278706.json), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "Medium-high: Borrelli (Treccani) says \"probably\" a sword in the right hand; the Louvre record lists the sword as missing. The right arm itself was remade in the 17th century (record), which the round does not ask.",
+      "notes": "Ledger bg-002 (Treccani-B with the record). The game keeps \"probably\".",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg (1920 × 2888); crop 365 × 318 px, never upscaled. Checked by eye: the clenched right fist, held low and back, with a hollow in it."
+    }
+  }
+}
