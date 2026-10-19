@@ -653,9 +653,10 @@
             "room": "348"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
+          "checkedOn": "2026-10-19",
           "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010278706",
-          "note": "Signed by a Greek sculptor (Agasias of Ephesus); kept with its room 348 neighbours (open question: Greece or Rome)."
+          "note": "Signed by a Greek sculptor (Agasias of Ephesus); kept with its room 348 neighbours (open question: Greece or Rome).",
+          "levelId": "borghese-gladiator-1"
         },
         {
           "id": "sarcophagus-of-the-spouses",

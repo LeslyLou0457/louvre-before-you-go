@@ -1,0 +1,275 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "borghese-gladiator",
+    "title": "Borghese Gladiator",
+    "artist": "Agasias of Ephesus",
+    "year": "c. 100 BC",
+    "image": "/images/borghese-gladiator.jpg",
+    "imageCredit": "Photo: Jastrow, 2006, via Wikimedia Commons · public domain",
+    "medium": "Pentelic marble",
+    "dimensions": "Height 173 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010278706"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "borghese-gladiator-1",
+      "order": 1,
+      "title": "A warrior without his weapons",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A nude marble fighter lunges forward. His weight is on his bent right leg, and his left arm is flung up high.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Follow one line from his back foot to his raised fist. Then look where his eyes are turned."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "Despite his famous name, what is he?",
+          "choices": [
+            {
+              "label": "A gladiator in the arena",
+              "next": "b1a"
+            },
+            {
+              "label": "A warrior in battle",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "An athlete throwing a discus",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "The name is old, but it is wrong.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is the statue's famous name.",
+            "truth": "He is a warrior in battle. A shield once hung on his raised left arm.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. The Louvre calls him a fighting warrior. His left arm carried a shield, and his right hand probably held a sword. Both are lost.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Nothing was thrown: he was fighting.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His arm is flung out like a thrower's.",
+            "truth": "His left arm carried a shield and his right hand probably a sword. Both are lost.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Beside his right leg stands a carved tree trunk. On it, the sculptor cut a signature in Greek letters.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "What does the signature tell us, besides the sculptor's name?",
+          "choices": [
+            {
+              "label": "The year he finished it",
+              "next": "b2a"
+            },
+            {
+              "label": "Who paid for the statue",
+              "next": "b2b"
+            },
+            {
+              "label": "His father and his city",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "No date: the signature names a family and a city.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Signatures today often carry a date.",
+            "truth": "It reads: Agasias, son of Dositheos, of Ephesus, made it.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "No patron is named.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many ancient works name the person who paid.",
+            "truth": "It names only the sculptor, his father and his city: Agasias, son of Dositheos, of Ephesus.",
+            "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. It reads: Agasias, son of Dositheos, of Ephesus, made it.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "The Louvre catalogues it as a Hellenistic work by Agasias, made about 100 BC. Not everyone agrees.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "A name on a statue sounds like the end of the story. Here, it is where the arguing starts."
+          },
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "Is it Agasias's own design, or a copy of an older statue?",
+          "choices": [
+            {
+              "label": "Surely his own design",
+              "next": "b3a"
+            },
+            {
+              "label": "Surely a Roman copy",
+              "next": "b3b"
+            },
+            {
+              "label": "Scholars disagree",
+              "next": "b3c",
+              "correct": true
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "That is one view, not a settled fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He signed it, so it must be his.",
+            "truth": "Some scholars think Agasias copied an older bronze; a 2009 study calls the statue a Roman copy.",
+            "evidence": "Treccani's Enciclopedia dell'Arte Antica; Metropolitan Museum Journal (2009)."
+          },
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "That is one view, not a settled fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Many marble statues in Rome are copies.",
+            "truth": "The Louvre catalogues it as Agasias's Hellenistic work of about 100 BC; others disagree.",
+            "evidence": "The Louvre record; Metropolitan Museum Journal (2009)."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "Yes. The Louvre treats it as Agasias's work of about 100 BC. Others have thought he copied an older bronze, or that this is a later Roman copy.",
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "It was found near Anzio, in Italy, and joined the collection of Cardinal Scipione Borghese in Rome. That is how it got its name.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "How did the statue come to Paris?",
+          "choices": [
+            {
+              "label": "Soldiers carried it off",
+              "next": "b4a"
+            },
+            {
+              "label": "The Louvre bought it in 1807",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "A pope gave it to France",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "No: it was paid for.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It left a Roman collection for Paris.",
+            "truth": "Prince Camillo Borghese sold it to the Louvre in 1807.",
+            "evidence": "The Louvre record; Metropolitan Museum Journal (2009)."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. Prince Camillo Borghese sold it to the Louvre in 1807, and by 1811 it was on show in Paris.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "No pope gave it away: a Borghese prince sold it.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was found in Papal Rome and kept by a cardinal.",
+            "truth": "Prince Camillo Borghese sold it to the Louvre in 1807.",
+            "evidence": "The Louvre record; Metropolitan Museum Journal (2009)."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Artists borrowed his pose for generations. Painters echoed it, and students drew small copies of him by lamplight.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Picture students sketching a small copy of him by lamplight. Which line of his body would you draw first?"
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "A warrior without his weapons, under a name that does not fit. He stands in Room 348, on Floor 0 of the Sully wing."
+        }
+      },
+      "takeaway": "A marble warrior, not a gladiator, signed in Greek by Agasias of Ephesus: scholars still argue whether he made it or copied an older statue, and the Louvre bought it in 1807.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010278706",
+        "https://www.treccani.it/enciclopedia/agasias-1_%28Enciclopedia-dell%27-Arte-Antica%29/",
+        "https://www.treccani.it/enciclopedia/gladiatore-borghese_%28Enciclopedia-dell%27-Arte-Antica%29/",
+        "https://resources.metmuseum.org/resources/metpublications/pdf/Jean_Galbert_Salvage_and_His_Anatomie_du_gladiateur_combattant_Metropolitan_Museum_Journal_v_44_2009.pdf",
+        "https://petitlouvre.louvre.fr/docs/Transcription%20-%20Guerrier.pdf",
+        "https://www.nationalgallery.org.uk/paintings/luca-giordano-perseus-turning-phineus-and-his-followers-to-stone",
+        "https://id.rijksmuseum.nl/200242135",
+        "https://www.metmuseum.org/art/collection/search/359909"
+      ]
+    }
+  ]
+}

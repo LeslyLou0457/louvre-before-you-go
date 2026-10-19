@@ -54,4 +54,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Woman_-_Leonardo_da_Vinci_-_Louvre_INV_778.jpg",
   "pastoral-concert":
     "https://commons.wikimedia.org/wiki/File:Le_Concert_champ%C3%AAtre,_by_Titian,_from_C2RMF.jpg",
+  "borghese-gladiator":
+    "https://commons.wikimedia.org/wiki/File:Borghese_Gladiator_Louvre_Ma_527_n1.jpg",
 };
