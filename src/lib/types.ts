@@ -267,6 +267,8 @@ export type CatalogueWork = {
   display: DisplayStatus;
   /** The reason, for any display other than "on-display". */
   displayNote?: string;
+  /** Optional: the reason in plain words for the chapter row, when it says more than the chip. */
+  rowNote?: string;
   /** When the record was checked, YYYY-MM-DD. */
   checkedOn: string;
   /** The collections.louvre.fr record, or null when there is none. */
