@@ -20,11 +20,6 @@ export const MAX_QUESTIONS_PER_LEVEL = 6;
 export const LEVELS_AWAITING_EXPANSION: ReadonlySet<string> = new Set([
   "la-belle-ferronniere-1",
   "pastoral-concert-1",
-  "borghese-gladiator-1",
-  "sleeping-hermaphroditus-1",
-  "sarcophagus-of-the-spouses-1",
-  "frieze-of-archers-1",
-  "capital-from-the-apadana-1",
 ]);
 export const WORD_LIMITS = { story: 45, branch: 40, question: 15 } as const;
 export const VOICE_WORD_LIMITS = { imagined: 25, quote: 30 } as const;

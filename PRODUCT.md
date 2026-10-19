@@ -80,7 +80,7 @@ The trail is the five 0.5 levels in a fixed route order, with the Close-Up Chall
 
 ### Content status (19 Oct 2026)
 
-28 works have a level and a close-up round. `content/modules.json` is the live list (a work with a `levelId` is playable), and `npm run check-content` prints the counts and every level's timing. Twenty-one levels have 5 or 6 questions; the seven 4-question levels of batches 03 and 04 (La Belle Ferronnière, Pastoral Concert, Borghese Gladiator, Sleeping Hermaphroditus, Sarcophagus of the Spouses, Frieze of Archers, Capital from the Apadana) are waiting to be expanded to 5 or 6 ("Rules for one level"), batch by batch, from facts already checked in their research ledgers where possible.
+28 works have a level and a close-up round. `content/modules.json` is the live list (a work with a `levelId` is playable), and `npm run check-content` prints the counts and every level's timing. Twenty-six levels have 5 or 6 questions (the five batch 04 levels were expanded on 19 Oct 2026); the two 4-question levels of batch 03 (La Belle Ferronnière, Pastoral Concert) are waiting to be expanded to 5 or 6 ("Rules for one level"), from facts already checked in their research ledgers where possible.
 
 | Chapter | Works with a level |
 |---|---|
@@ -111,7 +111,7 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 1. The main line tells a short story: one to three screens between questions, each 2–4 sentences.
 2. A question appears, with 2–3 options.
 3. The choice leads to a short branch (1–3 sentences), then back to the main line.
-4. Repeat for every question, then clear the level. **A level has 5 or 6 questions** (6 for a rich work), always within the time budget below; the product owner wants real learning, not three-minute fast food. `npm run check-content` fails a level with more than 6, and one with fewer than 5. The exception is temporary: the seven levels built before this rule with 4 questions (La Belle Ferronnière, Pastoral Concert, Borghese Gladiator, Sleeping Hermaphroditus, Sarcophagus of the Spouses, Frieze of Archers, Capital from the Apadana) are listed in the check's `LEVELS_AWAITING_EXPANSION` and only warn until each one is expanded and taken off the list. New questions in an expansion follow the same rules as any other ("Facts and sources"): no new question ships without its two sources.
+4. Repeat for every question, then clear the level. **A level has 5 or 6 questions** (6 for a rich work), always within the time budget below; the product owner wants real learning, not three-minute fast food. `npm run check-content` fails a level with more than 6, and one with fewer than 5. The exception is temporary: the levels built before this rule with 4 questions and not yet expanded (La Belle Ferronnière, Pastoral Concert) are listed in the check's `LEVELS_AWAITING_EXPANSION` and only warn until each one is expanded and taken off the list. New questions in an expansion follow the same rules as any other ("Facts and sources"): no new question ships without its two sources.
 
 ### Three details
 
