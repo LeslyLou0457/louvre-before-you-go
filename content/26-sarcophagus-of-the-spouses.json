@@ -68,12 +68,12 @@
             "truth": "Each leans on a cushion shaped like a wineskin, an animal skin filled with air.",
             "evidence": "The Louvre record; Report on the Campana Collection (1856); Campana's catalogue."
           },
-          "next": "n2"
+          "next": "n6"
         },
         "b1b": {
           "type": "branch",
           "text": "Yes. Each leans on a cushion shaped like a wineskin: an animal skin blown up with air.",
-          "next": "n2"
+          "next": "n6"
         },
         "b1c": {
           "type": "branch",
@@ -83,6 +83,57 @@
             "tempting": "The cushions look firm and solid.",
             "truth": "They are clay cushions shaped like wineskins, animal skins filled with air.",
             "evidence": "The Louvre record; Report on the Campana Collection (1856); Campana's catalogue."
+          },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Couch, cushions, two people side by side: they half-recline the way diners did at a banquet.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Would a real Etruscan wife recline beside her husband at a banquet?",
+          "choices": [
+            {
+              "label": "Yes: she reclined beside him",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "No: only men reclined to eat",
+              "next": "b5b"
+            },
+            {
+              "label": "No: only in the afterlife",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Yes. Rome's Villa Giulia museum describes the Etruscan woman beside the man at the banquet. A Greek source agrees: Aristotle wrote that Etruscans dine reclining with their women, under one cover.",
+          "next": "n2"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Not in Etruria: women reclined too.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Reclining to dine can sound like a man's privilege.",
+            "truth": "Etruscan women reclined beside the men. Aristotle wrote that Etruscans dine reclining with their women, under one cover.",
+            "evidence": "Villa Giulia museum, Rome; Aristotle, quoted by Athenaeus (tr. Yonge, 1854)."
+          },
+          "next": "n2"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Not only in death: it was a real custom.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "This couple lies on a tomb monument.",
+            "truth": "The tomb recalls a real custom: Etruscan women reclined beside the men at banquets.",
+            "evidence": "Villa Giulia museum, Rome; Aristotle, quoted by Athenaeus (tr. Yonge, 1854)."
           },
           "next": "n2"
         },
@@ -164,7 +215,7 @@
         "b3a": {
           "type": "branch",
           "text": "Yes. Campana was tried for embezzlement in 1857 and his collection was seized and sold. Napoleon III bought most of it, and the Louvre records this work as bought in 1861.",
-          "next": "n4"
+          "next": "n7"
         },
         "b3b": {
           "type": "branch",
@@ -175,7 +226,7 @@
             "truth": "After his trial in 1857, his collection was sold, and Napoleon III bought most of it.",
             "evidence": "The Louvre; Dizionario Biografico degli Italiani (Treccani)."
           },
-          "next": "n4"
+          "next": "n7"
         },
         "b3c": {
           "type": "branch",
@@ -186,6 +237,57 @@
             "truth": "It was found at Cerveteri and came to the Louvre with the Campana collection, bought in 1861.",
             "evidence": "The Louvre record; Dizionario Biografico degli Italiani (Treccani)."
           },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "Campana's collection was enormous: the Louvre calls it the most ambitious private collection of the 19th century.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Who bought major works from Campana's collection before Napoleon III?",
+          "choices": [
+            {
+              "label": "The pope, for the Vatican",
+              "next": "b6a"
+            },
+            {
+              "label": "No one: Napoleon III bought it all",
+              "next": "b6b"
+            },
+            {
+              "label": "Tsar Alexander II of Russia",
+              "next": "b6c",
+              "correct": true
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Not the pope: the Papal State sold the collection.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Papal State seized Campana's collection.",
+            "truth": "The Papal State sold it. In 1861 Tsar Alexander II bought major works, which went to the Hermitage.",
+            "evidence": "The Louvre; Dizionario Biografico degli Italiani (Treccani)."
+          },
+          "next": "n4"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "Not all of it: a tsar bought first.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Napoleon III bought the bulk of it.",
+            "truth": "Before his purchase, Tsar Alexander II bought major works in 1861 for the Hermitage.",
+            "evidence": "The Louvre; Dizionario Biografico degli Italiani (Treccani)."
+          },
+          "next": "n4"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Yes. In 1861 Tsar Alexander II bought major works for the Hermitage, almost six hundred pieces according to Italy's Dizionario Biografico. Napoleon III then bought the rest.",
           "next": "n4"
         },
         "n4": {
@@ -244,7 +346,7 @@
           "text": "Two figures in painted clay, still side by side. They lie in Room 663, the Salle des Séances, on Floor 1 of the Sully wing."
         }
       },
-      "takeaway": "An Etruscan couple in painted clay from Cerveteri, leaning on wineskin cushions: whether the chest held a body or ashes is still debated, and Napoleon III's purchase of the Campana collection brought it to Paris.",
+      "takeaway": "An Etruscan couple in painted clay from Cerveteri, reclining as at a banquet, as Etruscan wives really did: whether the chest held a body or ashes is still debated, and after a tsar took his pick, Napoleon III's purchase of the Campana collection brought it to Paris.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010298047",
         "https://collections.louvre.fr/en/ark:/53355/cl010298046",
@@ -252,7 +354,9 @@
         "https://archive.org/details/reportoncampana00bircgoog",
         "https://archive.org/details/cataloghidelmuse00muse",
         "https://www.treccani.it/enciclopedia/giovanni-pietro-campana_%28Dizionario-Biografico%29/",
-        "https://www.museoetru.it/works/sarcophagus-of-the-spouses"
+        "https://www.museoetru.it/works/sarcophagus-of-the-spouses",
+        "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2013.01.0003%3Abook%3D1%3Achapter%3D42",
+        "https://www.treccani.it/enciclopedia/tirreni/"
       ]
     }
   ]

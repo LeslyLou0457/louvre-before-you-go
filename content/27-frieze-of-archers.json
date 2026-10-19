@@ -221,12 +221,12 @@
             "truth": "The Louvre's 1992 catalogue calls the identification speculative; Schmitt says it is far from proven.",
             "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
           },
-          "next": "n5"
+          "next": "n6"
         },
         "b4b": {
           "type": "branch",
           "text": "Yes. The idea goes back to the excavators. Later scholars call it speculative, far from proven. The Louvre's label calls them simply archers.",
-          "next": "n5"
+          "next": "n6"
         },
         "b4c": {
           "type": "branch",
@@ -237,6 +237,108 @@
             "truth": "They wear Persian dress. Whether they are the Immortals is unproven.",
             "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
           },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "The bricks went to Paris. By the early 1890s the archers, restored, were on show in the Louvre, set inside a border.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Where did the restorers find the model for the panel's layout?",
+          "choices": [
+            {
+              "label": "Darius's building inscription",
+              "next": "b5a"
+            },
+            {
+              "label": "Herodotus's account of the guards",
+              "next": "b5b"
+            },
+            {
+              "label": "Another Susa frieze, of lions",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Not the inscription: they borrowed from another frieze.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Darius's inscription describes how his palace was built.",
+            "truth": "The restored frame copies the border round Susa's lion frieze, also found by the Dieulafoys.",
+            "evidence": "Marcel Dieulafoy (1893); the Louvre's 1992 Susa catalogue."
+          },
+          "next": "n7"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Not Herodotus: they borrowed from another frieze.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The excavators matched the archers to Herodotus's royal guards.",
+            "truth": "The restored frame copies the border round Susa's lion frieze, also found by the Dieulafoys.",
+            "evidence": "Marcel Dieulafoy (1893); the Louvre's 1992 Susa catalogue."
+          },
+          "next": "n7"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. Marcel Dieulafoy reused his reconstruction of the border round the lions. The Louvre's 1992 catalogue says the modern restoration took the lion frieze as its model.",
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "Archers were only one subject. Darius's glazed walls at Susa also showed lions, griffins, winged bulls and sphinxes.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Look at their dark brown skin. Did every guard at Susa look like this?",
+          "choices": [
+            {
+              "label": "No: guards came in two skin colours",
+              "next": "b6a",
+              "correct": true
+            },
+            {
+              "label": "Yes: all were glazed alike",
+              "next": "b6b"
+            },
+            {
+              "label": "No: each face was painted from life",
+              "next": "b6c"
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Yes. Susa's guards were made in two conventional skin colours. The excavator found a hand moulded like the dark ones but glazed white: same mould, different glaze.",
+          "next": "n5"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "Not all alike: there were two colours.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "All four archers here share one skin colour.",
+            "truth": "Susa's guards came in two conventional skin colours; a white-glazed hand was made in the same mould as the dark ones.",
+            "evidence": "Jane Dieulafoy's diary (1888); the Louvre's 1992 Susa catalogue."
+          },
+          "next": "n5"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Not portraits: the colours were set by convention.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "No two robes here share a pattern, so faces might differ too.",
+            "truth": "Skin came in two conventional colours, not portraits: a white hand was made in the same mould as the dark ones.",
+            "evidence": "Jane Dieulafoy's diary (1888); the Louvre's 1992 Susa catalogue."
+          },
           "next": "n5"
         },
         "n5": {
@@ -244,7 +346,7 @@
           "text": "Bricks from a king's palace, scattered and pieced together again. The archers stand in Room 307, on Floor 0 of the Sully wing."
         }
       },
-      "takeaway": "Four archers in glazed brick from Darius I's palace at Susa, pieced together from scattered bricks: Darius says Medes and Egyptians adorned his walls, and whether these guards are Herodotus's 'Immortals' is still unproven.",
+      "takeaway": "Four archers in glazed brick from Darius I's palace at Susa, pieced together from scattered bricks in a frame copied from the lion frieze: Darius says Medes and Egyptians adorned his walls, the guards came in two conventional skin colours, and whether they are Herodotus's 'Immortals' is still unproven.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010170854",
         "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
@@ -253,7 +355,8 @@
         "https://www.iranicaonline.org/articles/immortals",
         "https://archive.org/details/oldpers",
         "https://www.gutenberg.org/ebooks/70821",
-        "https://archive.org/details/lacropoledesused03dieu"
+        "https://archive.org/details/lacropoledesused03dieu",
+        "https://www.iranicaonline.org/articles/art-in-iran-iii-achemenian"
       ]
     }
   ]

@@ -170,12 +170,12 @@
             "truth": "Artaxerxes II's inscription says it burned and was restored. How badly it burned is debated.",
             "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
           },
-          "next": "n4"
+          "next": "n6"
         },
         "b3b": {
           "type": "branch",
           "text": "Yes. Artaxerxes II wrote that the hall burned and that he restored it. Some scholars think it was destroyed and rebuilt; others, that it needed only repairs.",
-          "next": "n4"
+          "next": "n6"
         },
         "b3c": {
           "type": "branch",
@@ -186,6 +186,57 @@
             "truth": "Artaxerxes II's inscription says the hall burned under Artaxerxes I and was restored.",
             "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica."
           },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "Picture the whole building: a square hall with a tower at each corner and porches of twelve columns on three sides.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "Darius built a hall of this kind at Persepolis too. Which came first?",
+          "choices": [
+            {
+              "label": "Persepolis: Susa copied it",
+              "next": "b5a"
+            },
+            {
+              "label": "Both at once, to one plan",
+              "next": "b5b"
+            },
+            {
+              "label": "Susa: Persepolis followed it",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "The other way round: Susa came first.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The Persepolis hall was also Darius's work.",
+            "truth": "The Louvre's 1992 catalogue calls the Persepolis hall a replica of Susa's; Stronach suggests Persepolis followed Susa's plan.",
+            "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica (Stronach)."
+          },
+          "next": "n4"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Not at once: Susa's plan was the model.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The two halls share a square plan.",
+            "truth": "Susa's hall came first: the Louvre's 1992 catalogue calls the Persepolis hall a replica, and Stronach suggests Persepolis followed Susa's plan.",
+            "evidence": "The Louvre's 1992 Susa catalogue; Encyclopaedia Iranica (Stronach)."
+          },
+          "next": "n4"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. The Louvre's 1992 catalogue calls the Persepolis hall a replica of the one at Susa, and Stronach, in Encyclopaedia Iranica, suggests Persepolis followed Susa's innovative plan.",
           "next": "n4"
         },
         "n4": {
@@ -215,7 +266,7 @@
         "b4a": {
           "type": "branch",
           "text": "Yes. The facades of the Persian royal tombs cut into the rock, as at Naqsh-e Rostam, copy a columned palace, capitals included.",
-          "next": "n5"
+          "next": "n7"
         },
         "b4b": {
           "type": "branch",
@@ -226,7 +277,7 @@
             "truth": "The form is Persian; it is carved on the rock-cut royal tombs, as at Naqsh-e Rostam.",
             "evidence": "Encyclopaedia Iranica; the Louvre's 1992 Susa catalogue; Jane Dieulafoy (1888)."
           },
-          "next": "n5"
+          "next": "n7"
         },
         "b4c": {
           "type": "branch",
@@ -237,6 +288,57 @@
             "truth": "It is carved on the facades of the Persian rock-cut royal tombs, as at Naqsh-e Rostam.",
             "evidence": "Encyclopaedia Iranica; the Louvre's 1992 Susa catalogue; Jane Dieulafoy (1888)."
           },
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "The French were not the first to dig here. In the early 1850s the geologist William Kennett Loftus had already recognised the apadana.",
+          "next": "q6"
+        },
+        "q6": {
+          "type": "question",
+          "text": "Dieulafoy published a restored plan of the buildings. How do scholars judge it?",
+          "choices": [
+            {
+              "label": "A careful record of what survived",
+              "next": "b6a"
+            },
+            {
+              "label": "Bold, but speculative",
+              "next": "b6b",
+              "correct": true
+            },
+            {
+              "label": "Proven right by later digs",
+              "next": "b6c"
+            }
+          ]
+        },
+        "b6a": {
+          "type": "branch",
+          "text": "Not a careful record: scholars call it speculative.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A plan drawn by the excavator himself sounds reliable.",
+            "truth": "Robert Dyson called it possibly one of the greatest speculative tours de force in archaeology.",
+            "evidence": "Penn Museum's Expedition (Dyson, 1968); Encyclopaedia Iranica (Gasche)."
+          },
+          "next": "n5"
+        },
+        "b6b": {
+          "type": "branch",
+          "text": "Yes. Robert Dyson wrote that Dieulafoy's bias toward architecture warped the evidence, and called his plan possibly one of the greatest speculative tours de force in archaeology.",
+          "next": "n5"
+        },
+        "b6c": {
+          "type": "branch",
+          "text": "Not proven: later scholars call it speculative.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Excavations at Susa went on for decades after him.",
+            "truth": "Later scholars judge his plan speculative; Hermann Gasche speaks of his occasionally fantastic reconstructions.",
+            "evidence": "Penn Museum's Expedition (Dyson, 1968); Encyclopaedia Iranica (Gasche)."
+          },
           "next": "n5"
         },
         "n5": {
@@ -244,7 +346,7 @@
           "text": "Bulls that held up a king's roof, now under a museum ceiling. They stand in Room 307, on Floor 0 of the Sully wing."
         }
       },
-      "takeaway": "Two limestone bulls that crowned a column of the audience hall at Susa: they carried the roof beams, the double-animal capital is a Persian invention, and how badly the hall burned is still debated.",
+      "takeaway": "Two limestone bulls that crowned a column of the audience hall at Susa, the model for Persepolis: they carried the roof beams, the double-animal capital is a Persian invention, how badly the hall burned is still debated, and Dieulafoy's restored plan is bold but speculative.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010170688",
         "https://archive.org/details/RoyalCityofSusaAncientNearEasternTreasuresintheLouvre",
@@ -256,7 +358,8 @@
         "https://www.metmuseum.org/art/collection/search/324025",
         "https://www.penn.museum/sites/expedition/early-works-on-the-acropolis-at-susa/",
         "https://www.gutenberg.org/ebooks/70821",
-        "https://archive.org/details/lacropoledesused03dieu"
+        "https://archive.org/details/lacropoledesused03dieu",
+        "https://www.iranicaonline.org/articles/susa-i-excavations"
       ]
     }
   ]

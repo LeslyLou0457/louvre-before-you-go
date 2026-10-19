@@ -226,12 +226,12 @@
             "truth": "It is one of many Roman versions of the type, which differ in small details.",
             "evidence": "Galleria Borghese, Rome; Treccani's Enciclopedia dell'Arte Antica."
           },
-          "next": "n5"
+          "next": "n6"
         },
         "b4b": {
           "type": "branch",
           "text": "Yes. Many Roman versions of the sleeper survive, each a little different. What the first one looked like, and who made it, scholars still debate.",
-          "next": "n5"
+          "next": "n6"
         },
         "b4c": {
           "type": "branch",
@@ -242,6 +242,57 @@
             "truth": "Only the mattress, the pillow and some repairs are later. The sleeper is Roman.",
             "evidence": "The Louvre record; Metropolitan Museum of Art."
           },
+          "next": "n6"
+        },
+        "n6": {
+          "type": "story",
+          "text": "The sleeper soon became famous: Bernini's mattress of 1620 caused a great stir.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "But was it the first sleeper like this seen in Rome?",
+          "choices": [
+            {
+              "label": "Yes: this was the first found",
+              "next": "b5a"
+            },
+            {
+              "label": "Only in Ovid's poem",
+              "next": "b5b"
+            },
+            {
+              "label": "No: Ghiberti saw one in the 1400s",
+              "next": "b5c",
+              "correct": true
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Not the first: one turned up two centuries earlier.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Its fame began with its discovery in the 1600s.",
+            "truth": "In the 1400s the sculptor Lorenzo Ghiberti described an ancient sleeper of this type, freshly dug up in Rome.",
+            "evidence": "Ghiberti's Commentaries (ed. Schlosser, 1912); Metropolitan Museum of Art."
+          },
+          "next": "n5"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Ovid tells the myth, not of a statue.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Ovid told the story of Hermaphroditus.",
+            "truth": "Ghiberti described an actual ancient statue of this type, freshly dug up in Rome in the 1400s.",
+            "evidence": "Ghiberti's Commentaries (ed. Schlosser, 1912); Metropolitan Museum of Art."
+          },
+          "next": "n5"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Yes. In the 1400s the sculptor Lorenzo Ghiberti wrote, in his Commentaries, of an ancient Hermaphroditus of this type, freshly dug up in Rome.",
           "next": "n5"
         },
         "n5": {
@@ -249,14 +300,16 @@
           "text": "In 1807 Prince Camillo Borghese sold it, and it went to Paris. It sleeps today in Room 348, on Floor 0 of the Sully wing."
         }
       },
-      "takeaway": "A Roman marble of Hermaphroditus, from Ovid's tale, who is both male and female: one of many Roman versions of the pose, laid in 1620 on a mattress carved by Bernini.",
+      "takeaway": "A Roman marble of Hermaphroditus, from Ovid's tale, who is both male and female: one of many Roman versions of a pose Ghiberti had already seen dug up in Rome in the 1400s, laid in 1620 on a mattress carved by Bernini.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010250571",
         "https://www.collezionegalleriaborghese.it/en/opere/sleeping-hermaphroditus",
         "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-welcomes-greco-roman-masterpiece-from-the-louvre",
         "https://www.metmuseum.org/art/collection/search/206698",
         "https://www.metmuseum.org/art/collection/search/459570",
-        "https://www.treccani.it/enciclopedia/ermafrodito_%28Enciclopedia-dell%27-Arte-Antica%29/"
+        "https://www.treccani.it/enciclopedia/ermafrodito_%28Enciclopedia-dell%27-Arte-Antica%29/",
+        "https://archive.org/details/lorenzoghibertis00ghibuoft",
+        "https://www.treccani.it/enciclopedia/lorenzo-ghiberti_%28Dizionario-Biografico%29/"
       ]
     }
   ]

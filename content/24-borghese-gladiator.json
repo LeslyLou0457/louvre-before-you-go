@@ -119,7 +119,7 @@
             "truth": "It reads: Agasias, son of Dositheos, of Ephesus, made it.",
             "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
           },
-          "next": "n3"
+          "next": "n7"
         },
         "b2b": {
           "type": "branch",
@@ -130,11 +130,62 @@
             "truth": "It names only the sculptor, his father and his city: Agasias, son of Dositheos, of Ephesus.",
             "evidence": "The Louvre record; Treccani's Enciclopedia dell'Arte Antica."
           },
-          "next": "n3"
+          "next": "n7"
         },
         "b2c": {
           "type": "branch",
           "text": "Yes. It reads: Agasias, son of Dositheos, of Ephesus, made it.",
+          "next": "n7"
+        },
+        "n7": {
+          "type": "story",
+          "text": "Now the stone. Scientists can tell one white marble from another, and trace a statue's block to the mountain it came from.",
+          "next": "q5"
+        },
+        "q5": {
+          "type": "question",
+          "text": "So where was this fighter's marble quarried?",
+          "choices": [
+            {
+              "label": "Near Athens, in Greece",
+              "next": "b5a",
+              "correct": true
+            },
+            {
+              "label": "At Carrara, in Italy",
+              "next": "b5b"
+            },
+            {
+              "label": "At Ephesus, the sculptor's city",
+              "next": "b5c"
+            }
+          ]
+        },
+        "b5a": {
+          "type": "branch",
+          "text": "Yes. The Louvre records Pentelic marble, from Mount Pentelicus near Athens: the marble of the Parthenon frieze. A sculptor from Ephesus, Athenian stone, found in Italy.",
+          "next": "n3"
+        },
+        "b5b": {
+          "type": "branch",
+          "text": "Not Italian marble: Greek.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "He was dug up in Italy.",
+            "truth": "His marble is Pentelic, from Mount Pentelicus near Athens: the marble of the Parthenon frieze.",
+            "evidence": "The Louvre record and Greece teaching file; Roworth, Metropolitan Museum Journal (2009); University of Georgia (2001)."
+          },
+          "next": "n3"
+        },
+        "b5c": {
+          "type": "branch",
+          "text": "Not from Ephesus: from near Athens.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The signature names Ephesus.",
+            "truth": "His marble is Pentelic, from Mount Pentelicus near Athens: the marble of the Parthenon frieze.",
+            "evidence": "The Louvre record and Greece teaching file; Roworth, Metropolitan Museum Journal (2009); University of Georgia (2001)."
+          },
           "next": "n3"
         },
         "n3": {
@@ -259,7 +310,7 @@
           "text": "A warrior without his weapons, under a name that does not fit. He stands in Room 348, on Floor 0 of the Sully wing."
         }
       },
-      "takeaway": "A marble warrior, not a gladiator, signed in Greek by Agasias of Ephesus: scholars still argue whether he made it or copied an older statue, and the Louvre bought it in 1807.",
+      "takeaway": "A marble warrior, not a gladiator, signed in Greek by Agasias of Ephesus and carved in Pentelic marble from near Athens: scholars still argue whether he made it or copied an older statue, and the Louvre bought it in 1807.",
       "sources": [
         "https://collections.louvre.fr/en/ark:/53355/cl010278706",
         "https://www.treccani.it/enciclopedia/agasias-1_%28Enciclopedia-dell%27-Arte-Antica%29/",
@@ -268,7 +319,9 @@
         "https://petitlouvre.louvre.fr/docs/Transcription%20-%20Guerrier.pdf",
         "https://www.nationalgallery.org.uk/paintings/luca-giordano-perseus-turning-phineus-and-his-followers-to-stone",
         "https://id.rijksmuseum.nl/200242135",
-        "https://www.metmuseum.org/art/collection/search/359909"
+        "https://www.metmuseum.org/art/collection/search/359909",
+        "https://api-www.louvre.fr/sites/default/files/2026-02/2026_REVU_Fiches_Grece_V6.pdf",
+        "https://researchmagazine.uga.edu/summer2001/rocks.html"
       ]
     }
   ]
