@@ -1,0 +1,259 @@
+{
+  "museum": {
+    "id": "louvre",
+    "name": "The Louvre",
+    "city": "Paris"
+  },
+  "artwork": {
+    "id": "sarcophagus-of-the-spouses",
+    "title": "Sarcophagus of the Spouses",
+    "artist": "Etruscan, Cerveteri (Caere)",
+    "year": "c. 520–510 BC",
+    "image": "/images/sarcophagus-of-the-spouses.jpg",
+    "imageCredit": "Photo: Shonagon, 2026, via Wikimedia Commons · CC0",
+    "medium": "Painted terracotta",
+    "dimensions": "Height 114 cm",
+    "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010298047"
+  },
+  "speakers": {
+    "guide": {
+      "name": "Lesly",
+      "kind": "guide",
+      "avatar": "guide"
+    }
+  },
+  "lessons": [
+    {
+      "id": "sarcophagus-of-the-spouses-1",
+      "order": 1,
+      "title": "A couple on a clay couch",
+      "start": "n1",
+      "narrator": "guide",
+      "nodes": {
+        "n1": {
+          "type": "story",
+          "text": "A man and a woman, life-size, half-recline side by side on a couch. They are made of painted clay.",
+          "voice": {
+            "speaker": "guide",
+            "kind": "imagined",
+            "text": "Look at his right hand resting on her shoulder. Then compare the colour of their skin."
+          },
+          "next": "q1"
+        },
+        "q1": {
+          "type": "question",
+          "text": "What are the two of them leaning on?",
+          "choices": [
+            {
+              "label": "Rolled-up cloaks",
+              "next": "b1a"
+            },
+            {
+              "label": "Cushions shaped like wineskins",
+              "next": "b1b",
+              "correct": true
+            },
+            {
+              "label": "Stone headrests",
+              "next": "b1c"
+            }
+          ]
+        },
+        "b1a": {
+          "type": "branch",
+          "text": "Not cloaks: cushions made to look like skins.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "His cloak is draped around him.",
+            "truth": "Each leans on a cushion shaped like a wineskin, an animal skin filled with air.",
+            "evidence": "The Louvre record; Report on the Campana Collection (1856); Campana's catalogue."
+          },
+          "next": "n2"
+        },
+        "b1b": {
+          "type": "branch",
+          "text": "Yes. Each leans on a cushion shaped like a wineskin: an animal skin blown up with air.",
+          "next": "n2"
+        },
+        "b1c": {
+          "type": "branch",
+          "text": "Not stone: like the rest, the cushions are clay.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The cushions look firm and solid.",
+            "truth": "They are clay cushions shaped like wineskins, animal skins filled with air.",
+            "evidence": "The Louvre record; Report on the Campana Collection (1856); Campana's catalogue."
+          },
+          "next": "n2"
+        },
+        "n2": {
+          "type": "story",
+          "text": "Some paint survives. His skin is red and hers is pale. Beneath them, the couch forms a chest.",
+          "next": "q2"
+        },
+        "q2": {
+          "type": "question",
+          "text": "Was the chest made for a body, or for ashes?",
+          "choices": [
+            {
+              "label": "Surely a coffin for a body",
+              "next": "b2a"
+            },
+            {
+              "label": "Surely an urn for ashes",
+              "next": "b2b"
+            },
+            {
+              "label": "Nobody can say for sure",
+              "next": "b2c",
+              "correct": true
+            }
+          ]
+        },
+        "b2a": {
+          "type": "branch",
+          "text": "That is one view, not a settled fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is large and is called a sarcophagus.",
+            "truth": "The Louvre puts a question mark on both 'sarcophagus' and 'urn'; Rome's Villa Giulia calls its similar couple an urn.",
+            "evidence": "The Louvre record; Villa Giulia museum, Rome."
+          },
+          "next": "n3"
+        },
+        "b2b": {
+          "type": "branch",
+          "text": "That is one view, not a settled fact.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "A similar monument in Rome is called an urn.",
+            "truth": "The Louvre puts a question mark on both words, and the 1850s catalogue called it a sarcophagus.",
+            "evidence": "The Louvre record; Campana's catalogue; Report on the Campana Collection (1856)."
+          },
+          "next": "n3"
+        },
+        "b2c": {
+          "type": "branch",
+          "text": "Yes. The Louvre records it as 'sarcophagus (?)' and 'urn (?)'. Others have called similar chests coffins, or urns for ashes.",
+          "next": "n3"
+        },
+        "n3": {
+          "type": "story",
+          "text": "It came out of the ground at Cerveteri, ancient Caere, in 1845–46, the winter the Marquis Giampietro Campana was digging there.",
+          "next": "q3"
+        },
+        "q3": {
+          "type": "question",
+          "text": "How did it reach the Louvre?",
+          "choices": [
+            {
+              "label": "Napoleon III bought it",
+              "next": "b3a",
+              "correct": true
+            },
+            {
+              "label": "Campana gave it to France",
+              "next": "b3b"
+            },
+            {
+              "label": "French archaeologists dug it up",
+              "next": "b3c"
+            }
+          ]
+        },
+        "b3a": {
+          "type": "branch",
+          "text": "Yes. Campana was tried for embezzlement in 1857 and his collection was seized and sold. Napoleon III bought most of it, and the Louvre records this work as bought in 1861.",
+          "next": "n4"
+        },
+        "b3b": {
+          "type": "branch",
+          "text": "No gift: Campana lost his collection.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It was in Campana's collection in Rome.",
+            "truth": "After his trial in 1857, his collection was sold, and Napoleon III bought most of it.",
+            "evidence": "The Louvre; Dizionario Biografico degli Italiani (Treccani)."
+          },
+          "next": "n4"
+        },
+        "b3c": {
+          "type": "branch",
+          "text": "No French dig: it was found in Italy.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is now in a French museum.",
+            "truth": "It was found at Cerveteri and came to the Louvre with the Campana collection, bought in 1861.",
+            "evidence": "The Louvre record; Dizionario Biografico degli Italiani (Treccani)."
+          },
+          "next": "n4"
+        },
+        "n4": {
+          "type": "story",
+          "text": "Some details are lost. The man's left hand is gone, and so are things the couple once held.",
+          "next": "q4"
+        },
+        "q4": {
+          "type": "question",
+          "text": "What were the holes in their hands for?",
+          "choices": [
+            {
+              "label": "Fixing the lid to the chest",
+              "next": "b4a"
+            },
+            {
+              "label": "Holding objects, now lost",
+              "next": "b4b",
+              "correct": true
+            },
+            {
+              "label": "Letting air out in the kiln",
+              "next": "b4c"
+            }
+          ]
+        },
+        "b4a": {
+          "type": "branch",
+          "text": "No: the holes are in the hands, not the edges.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The lid had to sit firmly on the chest.",
+            "truth": "Holes in the hands held objects or ornaments of another material, now lost.",
+            "evidence": "Report on the Campana Collection (1856); Campana's catalogue."
+          },
+          "next": "n5"
+        },
+        "b4b": {
+          "type": "branch",
+          "text": "Yes. The holes held objects or ornaments of another material, now lost. What they were is unknown.",
+          "next": "n5"
+        },
+        "b4c": {
+          "type": "branch",
+          "text": "They held things: objects of another material.",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "They are small, neat round holes.",
+            "truth": "The 1850s writers saw the holes as fixings for objects or ornaments, now lost.",
+            "evidence": "Report on the Campana Collection (1856); Campana's catalogue."
+          },
+          "next": "n5"
+        },
+        "n5": {
+          "type": "story",
+          "text": "Two figures in painted clay, still side by side. They lie in Room 663, the Salle des Séances, on Floor 1 of the Sully wing."
+        }
+      },
+      "takeaway": "An Etruscan couple in painted clay from Cerveteri, leaning on wineskin cushions: whether the chest held a body or ashes is still debated, and Napoleon III's purchase of the Campana collection brought it to Paris.",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+        "https://collections.louvre.fr/en/ark:/53355/cl010298046",
+        "https://www.louvre.fr/expositions-et-evenements/expositions/un-reve-d-italie",
+        "https://archive.org/details/reportoncampana00bircgoog",
+        "https://archive.org/details/cataloghidelmuse00muse",
+        "https://www.treccani.it/enciclopedia/giovanni-pietro-campana_%28Dizionario-Biografico%29/",
+        "https://www.museoetru.it/works/sarcophagus-of-the-spouses"
+      ]
+    }
+  ]
+}

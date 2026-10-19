@@ -58,4 +58,6 @@ export const IMAGE_SOURCE: Record<string, string> = {
     "https://commons.wikimedia.org/wiki/File:Borghese_Gladiator_Louvre_Ma_527_n1.jpg",
   "sleeping-hermaphroditus":
     "https://commons.wikimedia.org/wiki/File:Borghese_Hermaphroditus_Louvre_Ma231.jpg",
+  "sarcophagus-of-the-spouses":
+    "https://commons.wikimedia.org/wiki/File:Sarcophage_des_%C3%A9poux_-_Mus%C3%A9e_du_Louvre_AGER_Cp_5194.1_-_photo_3.jpg",
 };

@@ -665,7 +665,7 @@
           "titleFr": "Sarcophage des époux",
           "artist": "Etruscan, Cerveteri (Caere)",
           "date": "c. 520–510 BC",
-          "medium": "Red clay (terracotta)",
+          "medium": "Painted terracotta",
           "department": "Greek, Etruscan and Roman Antiquities",
           "inventory": "Cp 5194.2",
           "location": {
@@ -675,8 +675,9 @@
             "roomName": "Salle des Séances"
           },
           "display": "on-display",
-          "checkedOn": "2026-10-13",
-          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010298047"
+          "checkedOn": "2026-10-19",
+          "museumUrl": "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+          "levelId": "sarcophagus-of-the-spouses-1"
         },
         {
           "id": "boscoreale-treasure-skeleton-cup",

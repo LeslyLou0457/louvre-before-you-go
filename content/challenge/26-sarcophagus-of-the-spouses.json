@@ -1,0 +1,499 @@
+{
+  "artworkId": "sarcophagus-of-the-spouses",
+  "zoomImage": {
+    "file": "Sarcophage des époux - Musée du Louvre AGER Cp 5194.1 - photo 3.jpg",
+    "commons": "https://commons.wikimedia.org/wiki/File:Sarcophage_des_%C3%A9poux_-_Mus%C3%A9e_du_Louvre_AGER_Cp_5194.1_-_photo_3.jpg",
+    "width": 8657,
+    "height": 5721,
+    "licence": "CC0 1.0 (the photographer's own release)",
+    "credit": "Photo: Shonagon, 2026, via Wikimedia Commons · CC0",
+    "overview": "/images/challenge/sarcophagus-of-the-spouses/overview.jpg"
+  },
+  "lessons": [
+    {
+      "id": "sarcophagus-of-the-spouses-challenge",
+      "kind": "challenge",
+      "order": 1,
+      "title": "Close-up: shoes, couch leg and cap",
+      "narrator": "guide",
+      "unlock": "all-base-levels",
+      "roundSize": 2,
+      "pool": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "held": [],
+      "nodes": {
+        "c1": {
+          "type": "story",
+          "zoom": {
+            "x": 0.02,
+            "y": 0.44,
+            "w": 0.22,
+            "h": 0.2,
+            "label": "The woman's feet, at the left end of the couch",
+            "image": "/images/challenge/sarcophagus-of-the-spouses/c1.jpg"
+          },
+          "text": "Level one: some details are lost. Now zoom to her feet at the end of the couch.",
+          "next": "c1q"
+        },
+        "c1q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.02,
+            "y": 0.44,
+            "w": 0.22,
+            "h": 0.2,
+            "label": "The woman's feet, at the left end of the couch",
+            "image": "/images/challenge/sarcophagus-of-the-spouses/c1.jpg"
+          },
+          "text": "What is on these feet?",
+          "choices": [
+            {
+              "label": "Nothing: they are bare",
+              "role": "near-miss",
+              "next": "c1a"
+            },
+            {
+              "label": "Pointed shoes",
+              "role": "right",
+              "next": "c1b",
+              "correct": true
+            },
+            {
+              "label": "Open sandals with straps",
+              "role": "near-miss",
+              "next": "c1c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047"
+            },
+            {
+              "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+              "url": "https://archive.org/details/reportoncampana00bircgoog"
+            },
+            {
+              "title": "Cataloghi del Museo Campana (Rome, 1850s), Classe I (our translation)",
+              "url": "https://archive.org/details/cataloghidelmuse00muse"
+            }
+          ]
+        },
+        "c1a": {
+          "type": "branch",
+          "text": "They wear shoes.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Bare toes show just behind her feet.",
+            "truth": "Her own feet wear pointed shoes whose tips once turned up.",
+            "evidence": "The Louvre record; Report on the Campana Collection (1856); Campana's catalogue."
+          }
+        },
+        "c1b": {
+          "type": "branch",
+          "text": "Yes. She wears pointed shoes whose tips turned up. The curled tips have broken off.",
+          "next": "c1m"
+        },
+        "c1c": {
+          "type": "branch",
+          "text": "Closed, pointed shoes, not sandals.",
+          "next": "c1m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Lines run across the feet.",
+            "truth": "The lines are laces: she wears closed, laced shoes with pointed toes.",
+            "evidence": "Report on the Campana Collection (1856); Campana's catalogue."
+          }
+        },
+        "c1m": {
+          "type": "story",
+          "text": "Pointed shoes, their curled tips lost."
+        },
+        "c2": {
+          "type": "story",
+          "zoom": {
+            "x": 0.8,
+            "y": 0.62,
+            "w": 0.18,
+            "h": 0.36,
+            "label": "One leg of the couch, at the right end of the chest",
+            "image": "/images/challenge/sarcophagus-of-the-spouses/c2.jpg"
+          },
+          "text": "Level one: the couch forms a chest. Now zoom to one of its legs.",
+          "next": "c2q"
+        },
+        "c2q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.8,
+            "y": 0.62,
+            "w": 0.18,
+            "h": 0.36,
+            "label": "One leg of the couch, at the right end of the chest",
+            "image": "/images/challenge/sarcophagus-of-the-spouses/c2.jpg"
+          },
+          "text": "What tops this leg of the couch?",
+          "choices": [
+            {
+              "label": "A lion's paw",
+              "role": "near-miss",
+              "next": "c2a"
+            },
+            {
+              "label": "Scrolls like an Ionic capital",
+              "role": "right",
+              "next": "c2b",
+              "correct": true
+            },
+            {
+              "label": "A carved human head",
+              "role": "near-miss",
+              "next": "c2c"
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Cp 5194.1, 'Sarcophage des époux' (the chest; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010298046"
+            },
+            {
+              "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+              "url": "https://archive.org/details/reportoncampana00bircgoog"
+            },
+            {
+              "title": "Cataloghi del Museo Campana (Rome, 1850s), Classe I (our translation)",
+              "url": "https://archive.org/details/cataloghidelmuse00muse"
+            }
+          ]
+        },
+        "c2a": {
+          "type": "branch",
+          "text": "No paw: scrolls top the leg.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Furniture legs often end in animal feet.",
+            "truth": "The leg is topped by a double scroll, a volute like an Ionic capital.",
+            "evidence": "The Louvre record; Report on the Campana Collection (1856)."
+          }
+        },
+        "c2b": {
+          "type": "branch",
+          "text": "Yes. A double scroll, or volute, tops each leg. The 1850s writers compared it to an Ionic capital.",
+          "next": "c2m"
+        },
+        "c2c": {
+          "type": "branch",
+          "text": "No head: a double scroll.",
+          "next": "c2m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "The couple's faces are just above.",
+            "truth": "The leg is topped by a double volute, compared to an Ionic capital.",
+            "evidence": "The Louvre record; Campana's catalogue."
+          }
+        },
+        "c2m": {
+          "type": "story",
+          "text": "A couch leg with an Ionic scroll."
+        },
+        "c3": {
+          "type": "story",
+          "zoom": {
+            "x": 0.55,
+            "y": 0.06,
+            "w": 0.2,
+            "h": 0.3,
+            "label": "The woman's head",
+            "image": "/images/challenge/sarcophagus-of-the-spouses/c3.jpg"
+          },
+          "text": "Level one: the couple recline together. Now zoom to her head.",
+          "next": "c3q"
+        },
+        "c3q": {
+          "type": "question",
+          "zoom": {
+            "x": 0.55,
+            "y": 0.06,
+            "w": 0.2,
+            "h": 0.3,
+            "label": "The woman's head",
+            "image": "/images/challenge/sarcophagus-of-the-spouses/c3.jpg"
+          },
+          "text": "What covers her head?",
+          "choices": [
+            {
+              "label": "A metal helmet",
+              "role": "near-miss",
+              "next": "c3a"
+            },
+            {
+              "label": "Her hair, piled up",
+              "role": "near-miss",
+              "next": "c3b"
+            },
+            {
+              "label": "A close cap",
+              "role": "right",
+              "next": "c3c",
+              "correct": true
+            }
+          ],
+          "sources": [
+            {
+              "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+              "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047"
+            },
+            {
+              "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+              "url": "https://archive.org/details/reportoncampana00bircgoog"
+            }
+          ]
+        },
+        "c3a": {
+          "type": "branch",
+          "text": "Not a helmet: a soft cap.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "It is close-fitting and smooth.",
+            "truth": "She wears a close cap, with long tresses falling from beneath it.",
+            "evidence": "The Louvre record; Report on the Campana Collection (1856)."
+          }
+        },
+        "c3b": {
+          "type": "branch",
+          "text": "Her hair falls in tresses, below a cap.",
+          "next": "c3m",
+          "correction": {
+            "kind": "near-miss",
+            "tempting": "Its rounded shape looks like a hairstyle.",
+            "truth": "She wears a cap; her hair falls from under it in long tresses.",
+            "evidence": "The Louvre record; Report on the Campana Collection (1856)."
+          }
+        },
+        "c3c": {
+          "type": "branch",
+          "text": "Yes. She wears a close cap, and her long hair falls from beneath it in tresses, two of them hanging in front.",
+          "next": "c3m"
+        },
+        "c3m": {
+          "type": "story",
+          "text": "A cap, and long tresses below it."
+        }
+      }
+    }
+  ],
+  "review": {
+    "c1q": {
+      "extends": {
+        "nodes": [
+          "n4"
+        ],
+        "concept": "From \"some details are lost\" (level) to another lost detail: the curled tips of her pointed shoes"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "The woman wears pointed shoes; their curled tips are broken off.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+          "quote": "les extrémités recourbées des chaussures",
+          "supports": "Our translation: the curled tips of the shoes (listed among the missing parts).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-LID_cl010298047.json), re-read 19 Oct 2026"
+        },
+        {
+          "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+          "url": "https://archive.org/details/reportoncampana00bircgoog",
+          "quote": "On the feet are high laced buskins, with pointed toes turning up.",
+          "supports": "The woman's shoes have pointed, upturned toes.",
+          "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Cataloghi del Museo Campana (Rome, 1850s), Classe I (our translation)",
+          "url": "https://archive.org/details/cataloghidelmuse00muse",
+          "quote": "Ha i calzari ai piedi colla punta rivolta all'insù",
+          "supports": "Our translation: she has shoes on her feet with the points turned upwards.",
+          "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/CAMPANA-CAT_cataloghi-excerpt.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c1a": [
+          {
+            "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+            "quote": "les extrémités recourbées des chaussures",
+            "supports": "Our translation: the curled tips of the shoes (listed among the missing parts).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-LID_cl010298047.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+            "url": "https://archive.org/details/reportoncampana00bircgoog",
+            "quote": "On the feet are high laced buskins, with pointed toes turning up.",
+            "supports": "The woman's shoes have pointed, upturned toes.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c1c": [
+          {
+            "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+            "url": "https://archive.org/details/reportoncampana00bircgoog",
+            "quote": "On the feet are high laced buskins, with pointed toes turning up.",
+            "supports": "The woman's shoes have pointed, upturned toes.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Cataloghi del Museo Campana (Rome, 1850s), Classe I (our translation)",
+            "url": "https://archive.org/details/cataloghidelmuse00muse",
+            "quote": "Ha i calzari ai piedi colla punta rivolta all'insù",
+            "supports": "Our translation: she has shoes on her feet with the points turned upwards.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/CAMPANA-CAT_cataloghi-excerpt.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record, Birch and Newton, and Campana's catalogue all describe the pointed, upturned shoes; the record lists the curled tips as missing.",
+      "notes": "Ledger ss-017, ss-012.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on images/sarcophagus-of-the-spouses/main.jpg; never upscaled. Checked by eye: the two pointed feet at the left end of the lid."
+    },
+    "c2q": {
+      "extends": {
+        "nodes": [
+          "n2"
+        ],
+        "concept": "From \"the couch forms a chest\" (level) to how the bed is made: legs topped with Ionic-like volutes"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "Each leg of the couch is topped by a double volute, like an Ionic capital.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Cp 5194.1, 'Sarcophage des époux' (the chest; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010298046",
+          "quote": "volute (double, surmonté de)",
+          "supports": "Our translation: topped by a double volute (the chest record's description of the bed's feet).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-CHEST_cl010298046.json), re-read 19 Oct 2026"
+        },
+        {
+          "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+          "url": "https://archive.org/details/reportoncampana00bircgoog",
+          "quote": "At the head of the couch the foot is surmounted by an Ionic capital",
+          "supports": "The couch's foot is topped by an Ionic capital.",
+          "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+        },
+        {
+          "title": "Cataloghi del Museo Campana (Rome, 1850s), Classe I (our translation)",
+          "url": "https://archive.org/details/cataloghidelmuse00muse",
+          "quote": "ornati pilastrini che terminano con capitello e voluta jonìea",
+          "supports": "Our translation: decorated small pillars ending in a capital with an Ionic volute.",
+          "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/CAMPANA-CAT_cataloghi-excerpt.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c2a": [
+          {
+            "title": "Musée du Louvre, collection record Cp 5194.1, 'Sarcophage des époux' (the chest; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010298046",
+            "quote": "volute (double, surmonté de)",
+            "supports": "Our translation: topped by a double volute (the chest record's description of the bed's feet).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-CHEST_cl010298046.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+            "url": "https://archive.org/details/reportoncampana00bircgoog",
+            "quote": "At the head of the couch the foot is surmounted by an Ionic capital",
+            "supports": "The couch's foot is topped by an Ionic capital.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c2c": [
+          {
+            "title": "Musée du Louvre, collection record Cp 5194.1, 'Sarcophage des époux' (the chest; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010298046",
+            "quote": "volute (double, surmonté de)",
+            "supports": "Our translation: topped by a double volute (the chest record's description of the bed's feet).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-CHEST_cl010298046.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "Cataloghi del Museo Campana (Rome, 1850s), Classe I (our translation)",
+            "url": "https://archive.org/details/cataloghidelmuse00muse",
+            "quote": "ornati pilastrini che terminano con capitello e voluta jonìea",
+            "supports": "Our translation: decorated small pillars ending in a capital with an Ionic volute.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/CAMPANA-CAT_cataloghi-excerpt.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the chest record's \"volute (double, surmonté de)\", Birch and Newton's \"Ionic capital\" and Campana's \"voluta jonica\"; visible in the crop.",
+      "notes": "Ledger ss-024. The lower parts of the back feet were remade (ss-012, record only): not asked.",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg; never upscaled. Checked by eye: the openwork leg with its double scroll at the right end of the chest."
+    },
+    "c3q": {
+      "extends": {
+        "nodes": [
+          "n1"
+        ],
+        "concept": "From the couple on the couch (level) to what she wears: a close cap over long tresses"
+      },
+      "framing": "what-is-there",
+      "what_you_learn": "She wears a close cap; her hair falls from beneath it in tresses.",
+      "regionSources": [
+        {
+          "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+          "quote": "femme (cheveux, long, bonnet",
+          "supports": "Our translation: woman (hair, long, cap ...).",
+          "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-LID_cl010298047.json), re-read 19 Oct 2026"
+        },
+        {
+          "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+          "url": "https://archive.org/details/reportoncampana00bircgoog",
+          "quote": "The hair does not appear on the forehead, but falls from beneath the cap in long formal tresses over the back ; two detached tresses fall perpendicularly over the bosom",
+          "supports": "Her hair falls from beneath a cap, with two tresses hanging in front.",
+          "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+        }
+      ],
+      "choiceSources": {
+        "c3a": [
+          {
+            "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+            "quote": "femme (cheveux, long, bonnet",
+            "supports": "Our translation: woman (hair, long, cap ...).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-LID_cl010298047.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+            "url": "https://archive.org/details/reportoncampana00bircgoog",
+            "quote": "The hair does not appear on the forehead, but falls from beneath the cap in long formal tresses over the back ; two detached tresses fall perpendicularly over the bosom",
+            "supports": "Her hair falls from beneath a cap, with two tresses hanging in front.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+          }
+        ],
+        "c3b": [
+          {
+            "title": "Musée du Louvre, collection record Cp 5194.2, 'Sarcophage des époux' (the lid; our translations)",
+            "url": "https://collections.louvre.fr/en/ark:/53355/cl010298047",
+            "quote": "femme (cheveux, long, bonnet",
+            "supports": "Our translation: woman (hair, long, cap ...).",
+            "readVia": "Saved JSON of the record in the research folder (research/works/sarcophagus-of-the-spouses/sources/LV-REC-LID_cl010298047.json), re-read 19 Oct 2026"
+          },
+          {
+            "title": "[S. Birch and C. T. Newton], Report on the Campana Collection (London, 1856)",
+            "url": "https://archive.org/details/reportoncampana00bircgoog",
+            "quote": "The hair does not appear on the forehead, but falls from beneath the cap in long formal tresses over the back ; two detached tresses fall perpendicularly over the bosom",
+            "supports": "Her hair falls from beneath a cap, with two tresses hanging in front.",
+            "readVia": "Saved text in the research folder (research/works/sarcophagus-of-the-spouses/sources/BIRCH-NEWTON-1856_report-campana.txt), re-read 19 Oct 2026"
+          }
+        ]
+      },
+      "confidence": "High: the Louvre record (bonnet) and Birch and Newton (cap, tresses) agree; visible in the crop.",
+      "notes": "Ledger ss-026, ss-022 (our looking: a pointed cap).",
+      "quoteCheck": "2026-10-19: quoted passages re-read in the saved source files.",
+      "cropCheck": "2026-10-19: box measured on main.jpg; never upscaled. Checked by eye: her face, the cap and the two tresses in front."
+    }
+  }
+}
