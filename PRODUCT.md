@@ -80,7 +80,7 @@ The trail is the five 0.5 levels in a fixed route order, with the Close-Up Chall
 
 ### Content status (19 Oct 2026)
 
-28 works have a level and a close-up round. `content/modules.json` is the live list (a work with a `levelId` is playable), and `npm run check-content` prints the counts and every level's timing.
+28 works have a level and a close-up round. `content/modules.json` is the live list (a work with a `levelId` is playable), and `npm run check-content` prints the counts and every level's timing. Twenty-one levels have 5 or 6 questions; the seven 4-question levels of batches 03 and 04 (La Belle Ferronnière, Pastoral Concert, Borghese Gladiator, Sleeping Hermaphroditus, Sarcophagus of the Spouses, Frieze of Archers, Capital from the Apadana) are waiting to be expanded to 5 or 6 ("Rules for one level"), batch by batch, from facts already checked in their research ledgers where possible.
 
 | Chapter | Works with a level |
 |---|---|
@@ -96,13 +96,13 @@ Chapters 09 and 10 have a level for every work, and Chapter 04 for every work ex
 
 ## 02 · How a level plays — tell a story, ask, branch, return
 
-**Flow of one level · a loop of questions (how many depends on the work)**
+**Flow of one level · a loop of 5 or 6 questions**
 
 ```
 Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬→ back to main line
                                           └─ pick B → branch B ─┘     │
                                              (a wrong answer never blocks you)
-        ↑──────────── next question (3 or more per level) ─────────────┤
+        ↑──────────── next question (5 or 6 per level) ────────────────┤
                                                                        └─ all answered → level cleared
 ```
 
@@ -111,13 +111,13 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 1. The main line tells a short story: one to three screens between questions, each 2–4 sentences.
 2. A question appears, with 2–3 options.
 3. The choice leads to a short branch (1–3 sentences), then back to the main line.
-4. Repeat for every question, then clear the level. The number of questions is flexible per work: more for a rich work, fewer for a thin one, at least 3; the time budget below is the only cap. Today's levels have 4 to 6.
+4. Repeat for every question, then clear the level. **A level has 5 or 6 questions** (6 for a rich work), always within the time budget below; the product owner wants real learning, not three-minute fast food. `npm run check-content` fails a level with more than 6, and one with fewer than 5. The exception is temporary: the seven levels built before this rule with 4 questions (La Belle Ferronnière, Pastoral Concert, Borghese Gladiator, Sleeping Hermaphroditus, Sarcophagus of the Spouses, Frieze of Archers, Capital from the Apadana) are listed in the check's `LEVELS_AWAITING_EXPANSION` and only warn until each one is expanded and taken off the list. New questions in an expansion follow the same rules as any other ("Facts and sources"): no new question ships without its two sources.
 
 ### Three details
 
 - **A wrong answer never blocks you, and it is always corrected.** A wrong pick opens its own branch. The branch says plainly that the answer isn't right, then a correction card explains why the idea is tempting, what is actually true, and the evidence (a detail in the work or a documented fact) that settles it. Never shown in red. A wrong answer is another chance to tell a story.
 - **Some questions have no right answer.** For example, "Where did your eye land first?": each option leads to a different branch.
-- **A level takes about 5 minutes, never more than 7.** One screen shows one passage or one question; tap to move on. Everything about one work, its level plus its close-up round, stays within 10 minutes. `npm run check-content` times every level with the challenge's reading model (0.3 s a word, counting each screen's text, voice line, options and, on a wrong branch, its correction card; plus a 1 s tap per screen and 5 s per question to choose): it fails a level whose slowest path (every answer wrong, every card read) is over 7 minutes, warns when the all-right path is over 6, and fails a work whose level plus its heaviest close-up play is over 10 minutes. The deploy runs the same check before it builds, so a level over budget can't ship.
+- **A level takes about 5 minutes, never more than 7.** One screen shows one passage or one question; tap to move on. Everything about one work, its level plus its close-up round, stays within 10 minutes. `npm run check-content` times every level with the challenge's reading model (0.3 s a word, counting each screen's text, voice line, options and, on a wrong branch, its correction card; plus a 1 s tap per screen and 5 s per question to choose): it fails a level whose slowest path (every answer wrong, every card read) is over 7 minutes, warns when the all-right path is over 6, and fails a work whose level plus its heaviest close-up play is over 10 minutes. The deploy runs the same check before it builds, so a level over budget can't ship. Six questions fit this budget: the six live 6-question levels take 3:56–4:50 with every answer right and at most 6:05 on the slowest path. A 6-question level written at the full word cap on every screen would not fit 7 minutes, so its screens stay well under the caps.
 
 > **Audio waits for 1.0:** the product is text only for now; get the story and pacing right first. Write it the way people speak, so the 1.0 voice-over needs no rewrite.
 
@@ -209,7 +209,7 @@ From the approved framework design (project files: `framework/DESIGN.html`, its 
 
 - **Module:** a group of neighbouring rooms of one region or period, in the product owner's own curatorial structure, not an official Louvre route. On screen it is called a chapter ("Chapter 09"), as in the design's book: the cover, the contents page and room numbers used as page numbers.
 - **Floor:** one of the Louvre's floors, −1 to 2, keeping the Louvre's own numbering. On screen it is labelled "Floor 1", never "Level 1"; the screen, this spec and the data all say "floor" so it is never confused with a game level.
-- **Level:** the game about one work (at least 3 questions).
+- **Level:** the game about one work (5 or 6 questions).
 
 ### Structure and navigation
 
@@ -547,7 +547,7 @@ New levels arrive in research batches, in the order the product owner picks from
 1. **Research in.** For each work the product owner sends a research file written to the research brief (`research/brief/RESEARCH_BRIEF.pdf`): bilingual memos, a source list and a claims ledger.
 2. **Review.** Every claim is checked against two independent sources that were actually opened (the Louvre record first, via its ark URL plus `.json`); errors are fixed, what can't be verified becomes "TBD", and each work gets a change log (`research/works/<slug>/REVIEW.md`) and a checked ledger (`ledger.json`).
 3. **Batch PDF.** The batch is compiled into one bilingual PDF with every edit highlighted, for the product owner to read (`research/batches/batch-NN/`).
-4. **Question plan.** `content-plans/<slug>/QUESTIONS.md`: the label, the narrator, every screen with its ledger claim ids, what is kept out and why. It follows "Facts and sources" and "Questions and options"; it does not wait for approval.
+4. **Question plan.** `content-plans/<slug>/QUESTIONS.md`: the label, the narrator, 5 or 6 questions, every screen with its ledger claim ids, what is kept out and why. If the ledger can't support 5 sourced questions, more research comes first; the level is never padded. It follows "Facts and sources" and "Questions and options"; it does not wait for approval.
 5. **Narrator.** A known maker with a documented likeness gets a painted head (traits sourced in `content-plans/artist-voices/<NAME>_HEAD.md`); otherwise Lesly narrates.
 6. **Photos first.** All the batch's photos are fetched and rights-checked before any level is built (`images/<slug>/` with `credit.json`, and a row in `images/INDEX.md`): public domain or CC0, never credited to the Louvre or the RMN.
 7. **Build.** One pull request per work, stacked in order when they touch the same files: the level file, the challenge file and its crops, the photo, the work's `levelId`, a `content/README.md` entry. Each passes `npm run check-content`, `tsc --noEmit` and the build, and is played through at 390 and 320 px before it is opened.
@@ -778,10 +778,11 @@ The decisions behind this spec, newest first. The details live in the sections n
 
 | Date | Decision |
 |---|---|
+| 2026-10-19 | 5 or 6 questions per level, replacing the flexible "at least 3" of 15 Oct; the product owner: "I still want 5–6 questions per level, not 3–5-minute fast-food learning." Target length stays about 5 minutes and the time caps are unchanged; the seven 4-question levels only warn until they are expanded ("Rules for one level") |
 | 2026-10-19 | `rowNote`: a plain-words reason on the chapter row for works not on view ("Status"). This spec rewritten to describe the live product |
 | 2026-10-18 | Lesly's one-time introduction line ("Pages and interaction"); the standard batch pipeline for the 100 works ("Content pipeline") |
 | 2026-10-17 | More artists' voices, not only Lesly; one tag for every imagined line ("Narrators and voices"). Floors are "Floor", never "Level". Navigation fixes: chapter cleared pages, `?from`, the cover's "Continue" |
-| 2026-10-15 | Painted-head standard with Leonardo as benchmark; Lesly replaces the marble block; the cover's Louvre drawing ("03 · DESIGN"). Flexible question counts, with the time budgets as the only cap ("Rules for one level") |
+| 2026-10-15 | Painted-head standard with Leonardo as benchmark; Lesly replaces the marble block; the cover's Louvre drawing ("03 · DESIGN"). Flexible question counts, with the time budgets as the only cap (replaced on 2026-10-19 by 5 or 6 per level) |
 | 2026-10-14 | Map A with its idle loops as the one motion exception; close-ups per work in chapters; the trail stays the five 0.5 levels ("0.6 · Museum framework") |
 | 2026-10-13 | Version 0.6, the museum framework: free chapters with "Next up", per-work close-ups, off-view works stay listed last. Restrained motion in the After Hours manner ("Motion") |
 | 2026-10-09 | Depth standard and correction cards ("How to write"); the Close-Up Challenge; doodle chrome with painted heads, Gaegu and Nunito; CC0 sculpture photos (Venus de Milo by Shonagon, Winged Victory by Wilfredor) |
