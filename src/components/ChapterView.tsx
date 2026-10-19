@@ -10,6 +10,7 @@
 // "Close-ups per work"): each opens as soon as its work's level is met.
 // A work with a level shows its narrator's head at the end of its row (still,
 // like the heads on the trail card); works without a level show none.
+// A not-on-view work shows its displayNote under its chip, level or not.
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -177,6 +178,10 @@ function WorkRow({ chapterId, work, progress, nextUp, onOpen }: RowProps) {
             </span>
           )}
         </span>
+        {/* The reason a not-on-view work is away, in the record's own words; also in its label. */}
+        {isOffView(work) && work.displayNote && (
+          <span className="mt-1 block text-[13px] leading-snug text-muted">{work.displayNote}</span>
+        )}
       </span>
       {narrator && (
         // Decorative: the artist is already named on the row.
