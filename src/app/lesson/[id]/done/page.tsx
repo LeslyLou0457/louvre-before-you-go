@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import MuseumLabel from "@/components/MuseumLabel";
+import LuluFullCard from "@/components/LuluFullCard";
 import ClearedNext, { type ChapterLevels } from "@/components/ClearedNext";
 import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
-import { LuluFull } from "@/doodles/cats";
-import { fullCatLine } from "@/lib/cat-lines";
 import { getBook } from "@/lib/catalogue";
 import { getRoundForLevel } from "@/lib/challenge";
 import { getLevel, getLevels, museumLink, narratorOf, nextTrailLevel } from "@/lib/content";
@@ -62,13 +61,7 @@ export default async function DonePage({ params }: Params) {
       </div>
 
       {/* Lulu, the baguette cat, belly round (PRODUCT.md "Baguette progress"): thanks, never a fact. */}
-      <figure className="m-full flex items-center gap-3">
-        <LuluFull title="Lulu the Siamese cat, belly round and full" className="h-auto w-[92px] shrink-0" />
-        <figcaption className="wobbly relative flex-1 border-2 border-ink bg-mat px-4 py-2.5 font-hand text-xl leading-snug">
-          <span className="block text-base text-muted">Lulu says</span>
-          {fullCatLine(level.lesson.id)}
-        </figcaption>
-      </figure>
+      <LuluFullCard pickBy={level.lesson.id} />
 
       <section className="m-takeaway wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4">
         <h2 className="font-hand text-2xl font-bold">One thing to remember today</h2>

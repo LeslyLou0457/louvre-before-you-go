@@ -14,7 +14,6 @@ import Artwork from "./Artwork";
 import Correction from "./Correction";
 import MuseumLabel from "./MuseumLabel";
 import BaguetteBar from "./BaguetteBar";
-import ProgressBar from "./ProgressBar";
 import Stage, { stageSpeakerId } from "./Stage";
 import { CloseDoodle } from "@/doodles";
 import { moodFor, useScreenMotion } from "@/lib/motion";
@@ -80,8 +79,6 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
   }
 
   const node = lesson.nodes[nodeId];
-  const onQuestion = node.type === "question";
-  const current = Math.min(answered + (onQuestion ? 1 : 0), questionCount) || 1;
 
   // Bring the new passage into view on small screens.
   useEffect(() => {
@@ -133,9 +130,6 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
         >
           <CloseDoodle className="h-6 w-6" />
         </Link>
-        <div className={`flex flex-1 ${ready ? "" : "invisible"}`}>
-          <ProgressBar current={current} answered={answered} total={questionCount} filled={motion.filled} />
-        </div>
       </header>
 
       {resumed && (

@@ -13,7 +13,7 @@ import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react"
 import Artwork from "./Artwork";
 import Correction from "./Correction";
 import Locator from "./Locator";
-import ProgressBar from "./ProgressBar";
+import BaguetteBar from "./BaguetteBar";
 import Stage from "./Stage";
 import { CloseDoodle } from "@/doodles";
 import { moodFor, useScreenMotion } from "@/lib/motion";
@@ -84,10 +84,8 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
   const start = pair[qIndex];
   const zoom = useMemo(() => (lesson.nodes[start] as StoryNode).zoom!, [lesson, start]);
   const node = lesson.nodes[nodeId];
-  const onQuestion = node.type === "question";
   const isMerge = nodeId === `${start}m`;
   const lastQuestion = qIndex === total - 1;
-  const current = Math.min(answered + (onQuestion ? 1 : 0), total) || 1;
   const question = lesson.nodes[`${start}q`];
   const sources = question?.type === "question" ? (question.sources ?? []) : [];
   const narrator = lesson.narrator ? speakers[lesson.narrator] : undefined;
@@ -170,9 +168,6 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
         >
           <CloseDoodle className="h-6 w-6" />
         </Link>
-        <div className={`flex flex-1 ${ready ? "" : "invisible"}`}>
-          <ProgressBar current={current} answered={answered} total={total} filled={motion.filled} />
-        </div>
       </header>
 
       {resumed && (
@@ -261,7 +256,7 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
               </div>
             )}
             {/* Kept in view on a phone, as in the level player. Layout only. */}
-            <div className="sticky bottom-0 -mx-4 mt-auto flex justify-end bg-paper px-4 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            <div className="sticky bottom-[calc(3.5rem+env(safe-area-inset-bottom))] -mx-4 mt-auto flex justify-end bg-paper px-4 pt-2 pb-2">
               <button type="button" onClick={() => go(node.next)} className="btn-primary">
                 {node.next ? "Continue →" : lastQuestion ? "Finish round" : "Next close-up →"}
               </button>
@@ -269,6 +264,11 @@ export default function ChallengePlayer({ lesson, artwork, speakers, zoomImage }
           </>
         )}
       </section>
+
+      {/* The baguette progress bar, as in the level player (PRODUCT.md "Visit countdown and baguette progress"). */}
+      <div className={`sticky bottom-0 z-10 -mx-4 -mb-6 bg-paper px-4 pb-[env(safe-area-inset-bottom)] ${ready ? "" : "invisible"}`}>
+        <BaguetteBar answered={answered} total={total} chomp={motion.filled !== undefined} />
+      </div>
     </main>
   );
 }
