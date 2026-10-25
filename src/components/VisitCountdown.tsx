@@ -1,14 +1,14 @@
 "use client";
 
 // The visit countdown on the cover (PRODUCT.md "Visit countdown"): the
-// grey-and-white kitten holds up a sign, "N days to the Louvre", counting down
+// grey-and-white kitten TT holds up a sign, "N days to the Louvre", counting down
 // to the visit day the player picked. The picker only takes a future date.
 // No day yet: the sign asks for one. The day itself: "Louvre day!". A day
 // that has passed: a gentle line and the picker, to choose the next visit.
 // Stored only in localStorage (lib/visit); nothing renders until it is read.
 
 import { useEffect, useId, useState } from "react";
-import { SignKitten } from "@/doodles/cats";
+import { TTKitten } from "@/doodles/cats";
 import { daysUntil, formatVisit, getVisit, setVisit, tomorrowIso } from "@/lib/visit";
 
 type State = { visit: string | null; editing: boolean };
@@ -53,7 +53,7 @@ export default function VisitCountdown() {
       >
         {sign}
       </p>
-      <SignKitten className="relative z-20 -mt-4 h-auto w-[104px]" />
+      <TTKitten title="TT the kitten holds up the countdown sign" className="relative z-20 -mt-4 h-auto w-[104px]" />
 
       <div className="mt-2 w-full text-center">
         {!picking && state.visit && (

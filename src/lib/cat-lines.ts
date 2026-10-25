@@ -1,4 +1,4 @@
-// What the Siamese cat says on a level-cleared page (PRODUCT.md "Baguette
+// What Lulu, the Siamese cat, says on a level-cleared page (PRODUCT.md "Baguette
 // progress"). Warm thanks only: no art facts, nothing about the work, so a
 // line can never leak an answer or need a source. One line per level, picked
 // from this small pool by the level id, so the same level always says the

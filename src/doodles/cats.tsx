@@ -3,18 +3,21 @@
 // one stroke weight, crayon fills. They are product helpers, never narrators
 // of an artwork, and they never say an art fact.
 //
-// - SignKitten: a grey-and-white American Shorthair kitten (silver coat with
+// - TTKitten: TT, a grey-and-white American Shorthair kitten (silver coat with
 //   classic tabby swirls, white muzzle and paws), paws raised to hold up the
 //   countdown sign that sits just above it.
-// - SiameseChew: the Siamese cat's head (cream face, dark brown points, blue
+// - LuluChew: Lulu, the Siamese cat: her head (cream face, dark brown points, blue
 //   eyes) chewing the end of the baguette, for the level progress bar.
-// - SiameseFull: the same cat sitting, belly round, eyes shut happily, for
+// - LuluFull: Lulu sitting, belly round, eyes shut happily, for
 //   the level-cleared page.
 // - Baguette: the loaf the progress bar is made of.
 
 import type { CSSProperties } from "react";
 
-type DoodleProps = { className?: string; style?: CSSProperties };
+type DoodleProps = { className?: string; style?: CSSProperties; title?: string };
+
+/** Named image when a title is given, decorative otherwise. */
+const a11y = (title?: string) => (title ? { role: "img", "aria-label": title } : { "aria-hidden": true as const });
 
 const INK = "var(--color-ink)";
 const W = 2.5;
@@ -31,10 +34,10 @@ const BLUE = "#5f9bd6";
 const CRUST = "#d79b52";
 const CRUMB = "#f0cf8f";
 
-/** The countdown kitten, paws up. The sign itself is HTML just above it. */
-export function SignKitten({ className, style }: DoodleProps) {
+/** TT, the countdown kitten, paws up. The sign itself is HTML just above it. */
+export function TTKitten({ className, style, title }: DoodleProps) {
   return (
-    <svg viewBox="0 0 96 82" className={className} style={style} aria-hidden="true">
+    <svg viewBox="0 0 96 82" className={className} style={style} {...a11y(title)}>
       {/* body, cut by the bottom edge */}
       <ellipse cx="48" cy="80" rx="27" ry="13" {...line} fill={GREY} />
       <path d="M40 72 Q48 78 56 72 L55 82 L41 82 Z" fill={WHITE} />
@@ -78,10 +81,10 @@ export function SignKitten({ className, style }: DoodleProps) {
   );
 }
 
-/** The Siamese cat's head, chewing the baguette end at its right edge. */
-export function SiameseChew({ className, style }: DoodleProps) {
+/** Lulu's head, chewing the baguette end at its right edge. */
+export function LuluChew({ className, style, title }: DoodleProps) {
   return (
-    <svg viewBox="0 0 48 44" className={className} style={style} aria-hidden="true">
+    <svg viewBox="0 0 48 44" className={className} style={style} {...a11y(title)}>
       <path d="M8 18 L9 3 L20 11 Z" {...line} fill={POINT} strokeWidth={2} />
       <path d="M36 11 L44 4 L43 19 Z" {...line} fill={POINT} strokeWidth={2} />
       <ellipse cx="25" cy="24" rx="18" ry="16" {...line} fill={CREAM} strokeWidth={2} />
@@ -98,10 +101,10 @@ export function SiameseChew({ className, style }: DoodleProps) {
   );
 }
 
-/** The Siamese cat sitting, belly round and full, eyes shut with pleasure. */
-export function SiameseFull({ className, style }: DoodleProps) {
+/** Lulu sitting, belly round and full, eyes shut with pleasure. */
+export function LuluFull({ className, style, title }: DoodleProps) {
   return (
-    <svg viewBox="0 0 120 112" className={className} style={style} aria-hidden="true">
+    <svg viewBox="0 0 120 112" className={className} style={style} {...a11y(title)}>
       {/* tail curling round the side */}
       <path d="M92 96 Q114 92 108 70 Q105 60 112 54" fill="none" stroke={INK} strokeWidth="10" strokeLinecap="round" />
       <path d="M92 96 Q114 92 108 70 Q105 60 112 54" fill="none" stroke={POINT} strokeWidth="5.5" strokeLinecap="round" />
