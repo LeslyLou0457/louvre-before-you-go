@@ -55,7 +55,7 @@ export default function VisitCountdown() {
       >
         {sign}
       </p>
-      <TTKitten title="TT the kitten holds up the countdown sign" className="relative z-20 -mt-4 h-auto w-[104px]" />
+      <TTKitten title="TT the kitten holds up the countdown sign" className="relative z-20 -mt-3 h-auto w-[112px]" />
       <p className="mt-1 max-w-[300px] text-center font-hand text-xl leading-snug">
         <span className="sr-only">TT says: </span>
         {ttLine(days === null ? "none" : passed ? "passed" : days === 0 ? "today" : "days", days ?? 0)}
