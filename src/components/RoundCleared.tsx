@@ -8,6 +8,7 @@
 
 import Link from "next/link";
 import { type CSSProperties, useEffect, useState } from "react";
+import LuluFullCard from "./LuluFullCard";
 import MuseumLabel from "./MuseumLabel";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
@@ -58,6 +59,9 @@ export default function RoundCleared({ id, pool, roundSize, merges, artwork, mus
         <h1 className="font-hand text-[2.4rem] font-bold leading-none">Close-up cleared!</h1>
         <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" draw />
       </div>
+
+      {/* Lulu, full after the close-up's baguette. */}
+      <LuluFullCard pickBy={`close-up:${id}`} />
 
       {/* The merge lines arrive with the card. */}
       <section className={`wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4 ${pair ? "m-takeaway" : "invisible"}`}>

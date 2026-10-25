@@ -3,6 +3,7 @@ import CoverContinue, { type ChapterLevel } from "@/components/CoverContinue";
 import StickerBook from "@/components/StickerBook";
 import TabBar, { TAB_BAR_SPACE } from "@/components/TabBar";
 import TrailCard from "@/components/TrailCard";
+import VisitCountdown from "@/components/VisitCountdown";
 import { LouvreDoodle, UnderlineDoodle } from "@/doodles";
 import { formatDate } from "@/lib/book";
 import { getBook } from "@/lib/catalogue";
@@ -57,6 +58,8 @@ export default function Cover() {
           masterpieces, and the stories behind them, before you go.
         </p>
       </header>
+
+      <VisitCountdown />
 
       <div className="mt-5 grid gap-2.5">
         <Link href="/map/" className="btn-primary w-full">

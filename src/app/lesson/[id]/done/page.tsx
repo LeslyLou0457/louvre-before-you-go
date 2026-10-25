@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import MuseumLabel from "@/components/MuseumLabel";
+import LuluFullCard from "@/components/LuluFullCard";
 import ClearedNext, { type ChapterLevels } from "@/components/ClearedNext";
 import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
@@ -58,6 +59,9 @@ export default async function DonePage({ params }: Params) {
         <h1 className="font-hand text-[2.4rem] font-bold leading-none">Level cleared!</h1>
         <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" draw />
       </div>
+
+      {/* Lulu, the baguette cat, belly round (PRODUCT.md "Baguette progress"): thanks, never a fact. */}
+      <LuluFullCard pickBy={level.lesson.id} />
 
       <section className="m-takeaway wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4">
         <h2 className="font-hand text-2xl font-bold">One thing to remember today</h2>

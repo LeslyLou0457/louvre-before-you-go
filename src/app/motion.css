@@ -56,6 +56,7 @@
   30%, 72% { transform: rotate(-7deg) translateX(-1px); }
   100% { transform: none; }
 }
+@keyframes m-chomp { 0%, 100% { transform: none; } 35% { transform: translateY(2px) rotate(-4deg); } 70% { transform: translateY(-1px); } }
 @keyframes m-pop { from { opacity: 0; transform: scale(0.88); } to { opacity: 1; transform: none; } }
 @keyframes m-rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @keyframes m-card { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -128,6 +129,9 @@
 .m-fill { transform-origin: left center; animation: m-fill 260ms var(--ease-out) 60ms both; }
 .m-star { animation: m-star 420ms var(--ease-out) calc(var(--i, 0) * 120ms) both; }
 .m-takeaway { animation: m-rise 220ms var(--ease-out) 150ms both; }
+/* The baguette cat: one chomp per answered question; the full cat rises in on the cleared page. */
+.m-chomp { transform-origin: 50% 80%; animation: m-chomp 360ms var(--ease-io) 1; }
+.m-full { animation: m-rise 260ms var(--ease-out) 200ms both; }
 .m-tick { animation: m-pop 300ms var(--ease-pop) 100ms both; }
 .m-wiggle { animation: m-wiggle 300ms var(--ease-io); }
 .m-hint { animation: m-fade 180ms ease-out both; }
@@ -159,7 +163,8 @@ button:active > .btn-primary { transform: scale(0.97); }
   .m-wiggle,
   .m-unlock-mag,
   .m-unlock-shackle,
-  .m-unlock-flip { animation: none !important; }
+  .m-unlock-flip,
+  .m-chomp { animation: none !important; }
   .m-sparkle { display: none; }
   .m-enter,
   .m-bubble,
@@ -168,6 +173,7 @@ button:active > .btn-primary { transform: scale(0.97); }
   .m-card,
   .m-star,
   .m-takeaway,
+  .m-full,
   .m-tick,
   .m-hint,
   .m-unlock-mag-on,
