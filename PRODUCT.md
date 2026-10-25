@@ -127,8 +127,8 @@ Main line: tell a story → ask a question ─┬─ pick A → branch A ─┬�
 |---|---|---|
 | Cover (home) | `/` | See "0.6 · Museum framework" |
 | Start here | `/start/` | The trail: a vertical route of the 5 level nodes in three states (done, current, locked); the current level has "Start", a level left mid-way has "Continue". Below it, the Close-Up Challenge, locked until all 5 levels are done |
-| Lesson page | `/lesson/<id>/` | Top half: the artwork (tap to zoom). Bottom half: one passage or one question, with the narrator on the stage. Progress bar at the top ("Question 3 of 5") and an exit button |
-| Level cleared page | `/lesson/<id>/done/` | The level's narrator above the stars, then "One thing to remember today": a one-sentence summary of the level; then where to go next (see "Progress, 'Next up' and seals") |
+| Lesson page | `/lesson/<id>/` | Top half: the artwork (tap to zoom). Bottom half: one passage or one question, with the narrator on the stage. Progress bar at the top ("Question 3 of 5"), the baguette progress bar pinned to the bottom, and an exit button |
+| Level cleared page | `/lesson/<id>/done/` | The level's narrator above the stars, the full Siamese cat with its thank-you line, then "One thing to remember today": a one-sentence summary of the level; then where to go next (see "Progress, 'Next up' and seals") |
 | Close-up round | `/challenge/<id>/`, `/challenge/<id>/done/` | See "Close-up rounds" |
 | About and sources | `/about/` | Image sources and references, the voice tags, one line about Lesly |
 
@@ -323,6 +323,14 @@ Every work is shown and says what it is. Two independent facts make up its statu
 ### Close-ups per work
 
 Each work keeps one close-up round, in the format above. In a module, **a work's round opens as soon as that work's level is done**, not behind a gate for the whole module (a growing module would re-lock). The module page lists its rounds in module order. The "all five levels" gate applies only on the "Start here" trail. A round opened from a chapter (`?from=09`) returns there when it is left or finished; its cleared page shows no "next close-up", which belongs to the trail. The challenge file's `unlock` stays `"all-base-levels"`: it names the trail gate, and the chapter page applies the per-work rule.
+
+### Visit countdown and baguette progress (helper cats)
+
+Added 25 Oct 2026 (product owner): a daily level needs a reason to come back, and a level needs a visible sense of how far along you are. Two helper cats, our own hand-coded SVG doodles in the house ink-and-crayon style (`src/doodles/cats.tsx`). They are product helpers, not narrators: they never speak an art fact, so nothing they say needs a source or can leak an answer.
+
+- **Visit countdown (cover).** Under the cover copy, a grey-and-white American Shorthair kitten holds up a sign. With no day set, the sign asks "When's your Louvre day?" and a date picker that accepts only future dates (tomorrow or later) sits below; "Set my day" saves it. Then the sign reads "N days to the Louvre" ("1 day" singular), with the date and "One level a day gets you ready." and a "Change date" link that reopens the picker (with Cancel). On the day: "Louvre day is today!". Once the day has passed: "Hope the Louvre was lovely!" and a gentle line, "That visit day has passed. Planning another trip? Pick your next day.", with the picker. Days are counted in the player's own time zone. Stored as a plain date in one new localStorage key, `louvre-before-you-go:visit:v1`; losing it only asks for the day again. It does not touch progress.
+- **Baguette progress (levels only).** Pinned to the bottom edge of every level screen, a long baguette with a Siamese cat (cream coat, dark brown points, blue eyes) chewing its left end. It follows the same answered count as "Question n / N": each answered question eats one equal share, the cat moves along and the eaten part is gone, so a resumed level shows the same amount eaten. The cat gives one small chomp when a question is answered on that screen (none under reduced motion). The Continue button sits just above it. The header's "Question n / N" stays. Close-up rounds are unchanged (no baguette).
+- **Full cat (level-cleared page).** Under "Level cleared!", the Siamese cat sits with a round, full belly, eyes shut happily, beside a speech card with one warm English line of thanks ("Thank you for learning something new today. That filled me right up!"). The line comes from a small fixed pool (`src/lib/cat-lines.ts`), picked by the level id, so a level always says the same line and levels vary. Lines carry no art facts.
 
 ### Motion and accessibility
 
@@ -778,6 +786,7 @@ The decisions behind this spec, newest first. The details live in the sections n
 
 | Date | Decision |
 |---|---|
+| 2026-10-25 | Visit countdown on the cover (a kitten with "N days to the Louvre", future dates only, one new localStorage key `visit:v1`) and baguette progress in levels with a Siamese cat, full-bellied with a warm thank-you line on the level-cleared page ("Visit countdown and baguette progress") |
 | 2026-10-19 | 5 or 6 questions per level, replacing the flexible "at least 3" of 15 Oct; the product owner: "I still want 5–6 questions per level, not 3–5-minute fast-food learning." Target length stays about 5 minutes and the time caps are unchanged; the seven 4-question levels only warn until they are expanded ("Rules for one level") |
 | 2026-10-19 | `rowNote`: a plain-words reason on the chapter row for works not on view ("Status"). This spec rewritten to describe the live product |
 | 2026-10-18 | Lesly's one-time introduction line ("Pages and interaction"); the standard batch pipeline for the 100 works ("Content pipeline") |

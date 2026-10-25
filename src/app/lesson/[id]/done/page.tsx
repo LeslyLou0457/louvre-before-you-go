@@ -5,6 +5,8 @@ import ClearedNext, { type ChapterLevels } from "@/components/ClearedNext";
 import type { CSSProperties } from "react";
 import { StarDoodle, UnderlineDoodle } from "@/doodles";
 import { Head } from "@/doodles/avatars";
+import { SiameseFull } from "@/doodles/cats";
+import { fullCatLine } from "@/lib/cat-lines";
 import { getBook } from "@/lib/catalogue";
 import { getRoundForLevel } from "@/lib/challenge";
 import { getLevel, getLevels, museumLink, narratorOf, nextTrailLevel } from "@/lib/content";
@@ -58,6 +60,14 @@ export default async function DonePage({ params }: Params) {
         <h1 className="font-hand text-[2.4rem] font-bold leading-none">Level cleared!</h1>
         <UnderlineDoodle className="mx-auto mt-1 h-3 w-40" draw />
       </div>
+
+      {/* The baguette cat, belly round (PRODUCT.md "Baguette progress"): thanks, never a fact. */}
+      <figure className="m-full flex items-center gap-3">
+        <SiameseFull className="h-auto w-[92px] shrink-0" />
+        <blockquote className="wobbly relative flex-1 border-2 border-ink bg-mat px-4 py-2.5 font-hand text-xl leading-snug">
+          {fullCatLine(level.lesson.id)}
+        </blockquote>
+      </figure>
 
       <section className="m-takeaway wobbly-alt border-[2.5px] border-ink bg-mat px-5 py-4">
         <h2 className="font-hand text-2xl font-bold">One thing to remember today</h2>

@@ -13,6 +13,7 @@ import { type CSSProperties, useEffect, useRef, useState } from "react";
 import Artwork from "./Artwork";
 import Correction from "./Correction";
 import MuseumLabel from "./MuseumLabel";
+import BaguetteBar from "./BaguetteBar";
 import ProgressBar from "./ProgressBar";
 import Stage, { stageSpeakerId } from "./Stage";
 import { CloseDoodle } from "@/doodles";
@@ -197,12 +198,18 @@ export default function LessonPlayer({ lesson, artwork, speakers, imageAvailable
             {/* Kept in view: on a phone a long correction card would push it below
                 the fold, so it sticks to the bottom edge on a paper band. Layout
                 only; nothing moves. */}
-            <span className="sticky bottom-0 -mx-4 mt-auto flex justify-end bg-paper px-4 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            <span className="sticky bottom-[calc(3.5rem+env(safe-area-inset-bottom))] -mx-4 mt-auto flex justify-end bg-paper px-4 pt-2 pb-2">
               <span className="btn-primary">{node.next ? "Continue →" : "Finish level"}</span>
             </span>
           </button>
         )}
       </section>
+
+      {/* The baguette progress bar (PRODUCT.md "Baguette progress"), levels only. */}
+      {/* Pinned to the bottom edge so it is always in view; the Continue band sits just above it. */}
+      <div className={`sticky bottom-0 z-10 -mx-4 -mb-6 bg-paper px-4 pb-[env(safe-area-inset-bottom)] ${ready ? "" : "invisible"}`}>
+        <BaguetteBar answered={answered} total={questionCount} chomp={motion.filled !== undefined} />
+      </div>
     </main>
   );
 }
